@@ -1,0 +1,797 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+} 
+
+:root {
+    --FT: 'Poiret One', cursive;
+}
+
+footer{
+    position:absolute;
+    bottom:10px;
+    left:10px;
+    font-family: var(--FT);
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+a:hover{
+    color:rgb(157, 196, 241);
+}
+
+#topName {
+    display: none;
+    position: fixed;
+    left: 100px;
+    width: 75vw;
+    font-family: var(--FT);
+    color: black;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: white;
+    border-bottom: 1px solid white;
+    font-size: 2em;
+    transition: all 0.3s ease;
+    z-index:2;
+}
+
+#masterMenu {
+    display: block;
+    position: fixed;
+    height: 70px;
+    width: 70px;
+    background: black;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border-radius: 100px 0 0 100px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.menuLine {
+    height: 5px;
+    width: 40px;
+    background: white;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+#masterMenu:hover {
+    padding-left: 0;
+    padding-right: 10px;
+}
+
+#masterMenu:hover #menuLine1 {
+    width: 45px;
+    margin-left: 10px;
+}
+
+#masterMenu:hover #menuLine0 {
+    transform: rotate(-40deg);
+}
+
+#masterMenu:hover #menuLine2 {
+    transform: rotate(40deg);
+}
+
+#Xball {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    height: 70px;
+    width: 70px;
+    background: white;
+    border: 1px solid black;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border-radius: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#menuBalls {
+    display: none;
+}
+
+.menuBall {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    background: black;
+    color: white;
+    padding: 3px;
+    font-size: 1em;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: var(--FT);
+    border: 5px solid white;
+}
+
+.menuBall:hover {
+    font-weight: bold;
+    border: 0px solid white;
+    transition: all 0.3s ease;
+}
+
+#menuBall0 {
+    top: 50%;
+    right: 70px;
+    transform: translateY(-150%);
+}
+
+#menuBall1 {
+    top: 50%;
+    right: 131px;
+    transform: translateY(-100%);
+}
+
+#menuBall2 {
+    top: 50%;
+    right: 131px;
+    transform: translateY(0%);
+}
+
+#menuBall3 {
+    top: 50%;
+    right: 70px;
+    transform: translateY(50%);
+}
+
+.XballCross {
+    height: 40px;
+    width: 8px;
+    background: black;
+    position: absolute;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+#Xball:hover #XballCross0 {
+    transform: rotate(315deg);
+    background: rgb(72, 131, 25);
+}
+
+#Xball:hover #XballCross1 {
+    transform: rotate(-315deg);
+    background:rgb(72, 131, 25);
+}
+
+#XballCross0 {
+    transform: rotate(-45deg);
+}
+
+#XballCross1 {
+    transform: rotate(45deg);
+}
+
+#LANDING {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    font-size: 3em;
+    padding-right: 200px;
+    font-family: var(--FT);
+    color: black;
+    background: linear-gradient(to right, transparent, white, white);
+    z-index: -1;
+}
+
+@keyframes slideNameOpen {
+    from {
+        right: -100px;
+    }
+    to {
+        right: 80px;
+    }
+}
+
+@keyframes slideNameClose {
+    from {
+        right: 80px;
+    }
+    to {
+        right: -100px;
+    }
+}
+
+
+/*SECTIONS*/
+
+.sections {
+    display: none;
+    position: relative;
+    left: 100px;
+    width: 75vw;
+    height: 100%;
+    background: black;
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.sections>p{
+    font-family: var(--FT);
+    color:white;
+    text-align:center;
+    width:100%;
+}
+
+.sectionTitle {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    color: white;
+    font-family: var(--FT);
+    box-sizing: border-box;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    font-size: 10em;
+}
+
+#QUOTE {
+    position: fixed;
+    top: 65%;
+    width: 100vw;
+    text-align: center;
+    font-family: var(--FT);
+    font-size: 1.3em;
+    color: black;
+    font-style: italic;
+    transition: all 0.3s ease;
+}
+
+/*BIO*/
+
+#BIO{
+    height:130vh;
+}
+
+#BIOmenuWrapper{
+    display:block;
+    position:relative;
+    width:100%;
+    max-width:500px;
+    height:10px;
+    box-sizing: border-box;
+    margin:0 auto;
+    transition: all 0.3s ease;
+}
+
+#BIOmenuWrapper > img{
+    width:100%;
+    position:absolute;
+    transition: all 0.3s ease;
+    border-radius:30px 30px 0 0;
+    box-sizing: border-box;
+    border:1px solid black;
+}
+
+#BIOPICmenu{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items:center;
+    justify-items:center;
+    box-sizing: border-box;
+    padding:10px;
+    grid-gap:10px;
+    width:100%;
+    height:70px;
+    border-radius:30px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right:1px solid black;
+    position:absolute;
+    transition:all 0.3s ease;
+    font-family: var(--FT);
+    background:white;
+}
+
+img#BIOPIC{
+    border-radius: 30px 30px 0 100px;
+}
+
+#BIOPICmenu > div {
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    height:50px;
+    background:white;
+    color:black;
+    box-sizing: border-box;
+    border:1px solid black;
+    text-align:center;
+    cursor:pointer;
+    transition:all 0.3s ease-in-out;
+}
+
+#BIOPICmenu > div:hover{
+    background: black;
+    color:white;
+}
+
+#BIOPICmenu0{
+    border-radius: 100px 12px 12px 100px;
+    width:100%;
+}
+
+#BIOPICmenu1{
+    border-radius: 3px;
+    width:100%;
+}
+
+#BIOPICmenu2{
+    border-radius: 12px 100px 100px 12px;
+    width:100%;
+}
+
+.BIOcontent{
+    width:100%;
+    position:absolute;
+    transition: all 0.3s ease;
+    border-radius:30px 30px 0 0;
+    box-sizing: border-box;
+    color:white;
+    margin-top:70px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right:30px;
+    padding-bottom:90px;
+    font-family: var(--FT);
+    background: linear-gradient(to top, black, transparent);
+    display:none;
+}
+
+span.green{
+    color:rgb(115, 255, 0);
+    font-size:0.7em;
+}
+
+span.blue{
+    color: rgb(120, 172, 231);
+}
+
+/*IDEO*/
+.graphieros{
+    width:100%;
+    background:black;
+    display:grid;
+    box-sizing: border-box;
+    padding:10px;
+    grid-gap: 10px;
+    align-items:center;
+    justify-items:center;
+    grid-template-columns: auto auto;
+    font-family: var(--FT);
+}
+
+.graphierosNarrative{
+    width:100%;
+    box-sizing: border-box;
+    padding:5px;
+    background:black;
+    color:white;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    border-radius:2px;
+}
+
+.graphierosNarrative > p > a{
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+#prezGlyph{
+    background:black;
+    width:200px;
+    border:none;
+    color:white;
+}
+
+#prezGlyph2{
+    height:150px;
+    width:150px;
+}
+
+svg.glyph{
+    height:200px;
+    width:200px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background:black;
+    stroke:white;
+    fill:white;
+}
+
+#narrativePic0{
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+#mol{
+    width:100%;
+    border-radius:2px;
+}
+
+.insidePicWrapper{
+    width:100%;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+.insidePic{
+    width:100%;
+    border-radius:2px;
+}
+
+p#cleGreen{
+    color: rgb(108, 180, 48);
+}
+
+.graphierosCle{
+    width:200px;
+    height:50px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    border:1px solid white;
+    border-radius:2px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+#cleFR{
+    background: rgb(90,156,36);
+    color:black;
+}
+
+#cleFR:hover{
+    background: rgb(108, 180,48);
+}
+
+#cleEN{
+    background:black;
+    border:1px solid rgb(90,156,36);
+    color: rgb(90,156, 36);
+}
+
+#cleEN:hover{
+    border:1px solid rgb(144, 212, 88);
+    color: rgb(144, 212, 88);
+}
+
+/*GALERIE*/
+
+.galerieWrapper{
+    width:100%;
+    box-sizing: border-box;
+    padding:10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items:center;
+    justify-items:center;
+    grid-gap: 10px;
+    transition: all 0.3s ease;
+    background:black;
+}
+
+.galeriePicWrapper{
+    width:100%;
+    position:relative;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    border:1px solid white;
+    border-radius:2px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+.picCaption{
+    width:100%;
+    height:100%;
+    background: radial-gradient(white, rgba(255,255,255,0.2));
+    color:black;
+    box-sizing: border-box;
+    font-family: var(--FT);
+    text-align:center;
+    font-size:1em;
+    position:absolute;
+    border-radius:2px;
+    top:0;
+    opacity:0;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    transition: all 0.3s ease;
+}
+
+#widePic0{
+    grid-column: 1 / span 3;
+}
+
+.galeriePicWrapper > img {
+    width:100%;
+    border-radius:2px;
+    box-sizing: border-box;
+}
+
+#galerieBottom{
+    grid-column: 1 / span 3;
+    width:100%;
+    box-sizing: border-box;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+#galerieBottom>p{
+    font-family: var(--FT);
+    color:white;
+}
+
+#logoIG{
+    border-radius:13px;
+    opacity:0.75;
+    transition: all 0.3s ease;
+}
+
+#logoIG:hover{
+    opacity:1;
+    box-shadow: 0 0 10px white;
+}
+
+/*DEV*/
+.devMenuWrapper{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding:10px;
+    display: grid;
+    grid-gap:10px;
+    align-items:center;
+    justify-items:center;
+    color:white;
+    font-family: var(--FT);
+}
+
+.devMenu{
+    border:1px solid white;
+    box-sizing: border-box;
+    padding:10px;
+    border-radius:4px;
+    width:100%;
+    max-width:250px;
+    text-align:center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.devMenu:hover{
+    background:white;
+    color:black;
+}
+
+.appliWrapper{
+    display: none;
+    width:100%;
+    background:black;
+    box-sizing: border-box;
+    align-items:center;
+    justify-items:center;
+    padding:10px;
+    color: white;
+}
+
+/*APP0*/
+.wrapper{
+    height:200px;
+    width:200px;
+}
+
+svg#baseSVG{
+    height:200px;
+    width:200px;
+}
+
+circle{
+    transition: all 0.3s ease;
+}
+
+circle:hover{
+    r: 25;
+}
+
+.controls{
+    width:200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 7px;
+    align-items:center;
+    justify-items:center;
+    box-sizing: border-box;
+    padding:5px;
+    font-family: var(--FT);
+}
+
+.controlBtn{
+    box-sizing: border-box;
+    padding:3px;
+    border:1px solid white;
+    width:100%;
+    text-align:center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#CUT,
+#PRINT{
+    border-radius: 100px 2px 2px 100px;
+}
+
+#CLEAR,
+#WASH {
+    border-radius: 2px 100px 100px 2px;
+}
+
+#CUT:hover{
+    background: rgb(90,156,36);
+    color:black;
+}
+
+#PRINT:hover{
+    background: rgb(120, 172, 231);
+    color:black;
+}
+
+#CLEAR:hover{
+    background: rgb(169, 59, 179);
+}
+
+#WASH:hover{
+    background: rgb(179, 97, 59);
+}
+
+.memory{
+    border:1px solid rgb(50,50,50);
+    width:200px;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    padding:10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: greenyellow;
+    font-size:0.6em;
+}
+
+#STM{
+    height:50px;
+}
+
+#LTM{
+    height:100px;
+}
+
+#PRINTER{
+    width:200px;
+    box-sizing: border-box;
+    padding:10px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    background:white;
+    border-radius:2px;
+}
+
+p.memoryType{
+    display:grid;
+    align-items:end;
+    width:200px;
+    height:100%;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    font-size:0.6em;
+}
+
+@media screen and (max-width: 680px) {
+    #LANDING {
+        font-size: 1.3em;
+        right: -100px;
+        text-align: center;
+    }
+    @keyframes slideNameOpen {
+        from {
+            right: -100px;
+        }
+        to {
+            right: 0px;
+        }
+    }
+    @keyframes slideNameClose {
+        from {
+            right: 0px;
+        }
+        to {
+            right: -100px;
+        }
+    }
+
+    .sectionTitle{
+        font-size:6em;
+    }
+
+    .sections,
+    #topName {
+        left: 0px;
+        width: 78vw;
+    }
+    #topName {
+        font-size: 1.3em;
+    }
+    #QUOTE {
+        top: 75%;
+        font-size: 1em;
+    }
+
+    .galerieWrapper{
+        display:block;
+    }
+
+    .picCaption{
+        font-size:1.3em;
+    }
+
+    .graphieros{
+        grid-template-columns: auto;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .sectionTitle{
+        font-size:4em;
+    }
+    .galerieWrapper{
+        display:block;
+    }
+
+    .graphieros{
+        grid-template-columns: auto;
+    }
+
+    .picCaption{
+        font-size:1.3em;
+    }
+    
+}   
