@@ -615,13 +615,15 @@ p#cleGreen{
     color: white;
 }
 
-/*APP0*/
-.wrapper{
+/*APP*/
+.wrapper,
+.wrapper_F{
     height:200px;
     width:200px;
 }
 
-svg#baseSVG{
+svg#baseSVG,
+svg#baseSVG_F{
     height:200px;
     width:200px;
 }
@@ -657,31 +659,58 @@ circle:hover{
 }
 
 #CUT,
-#PRINT{
+#CUT_F,
+#PRINT,
+#PRINT_F{
     border-radius: 100px 2px 2px 100px;
 }
 
 #CLEAR,
-#WASH {
+#CLEAR_F,
+#WASH,
+#WASH_F {
     border-radius: 2px 100px 100px 2px;
 }
 
-#CUT:hover{
+#CUT:hover,
+#CUT_F:hover,
+#ZOOMIN:hover{
     background: rgb(90,156,36);
     color:black;
 }
 
-#PRINT:hover{
+#PRINT:hover,
+#PRINT_F:hover{
     background: rgb(120, 172, 231);
     color:black;
 }
 
-#CLEAR:hover{
+#CLEAR:hover,
+#CLEAR_F:hover,
+#ZOOMOUT:hover{
     background: rgb(169, 59, 179);
 }
 
-#WASH:hover{
+#WASH:hover,
+#WASH_F:hover{
     background: rgb(179, 97, 59);
+}
+
+#ZOOMIN,
+#ZOOMOUT{
+    height:50px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    transition: all 0.3s ease;
+}
+
+#ZOOMIN{
+    border-radius:100px 2px 2px 100px;
+}
+
+#ZOOMOUT{
+    border-radius:2px 100px 100px 2px;
 }
 
 .memory{
@@ -693,13 +722,16 @@ circle:hover{
     font-family: 'Courier New', Courier, monospace;
     color: greenyellow;
     font-size:0.6em;
+    border-radius:2px;
 }
 
-#STM{
+#STM,
+#STM_F{
     height:50px;
 }
 
-#LTM{
+#LTM,
+#LTM_F{
     height:100px;
 }
 
@@ -714,6 +746,18 @@ circle:hover{
     border-radius:2px;
 }
 
+#PRINTER_F{
+    width:200px;
+    height:200px;
+    background:white;
+    border-radius:2px;
+    position:relative;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    overflow:hidden;
+}
+
 p.memoryType{
     display:grid;
     align-items:end;
@@ -722,6 +766,12 @@ p.memoryType{
     font-family: 'Courier New', Courier, monospace;
     color:white;
     font-size:0.6em;
+}
+
+.outputSVG,
+.outlineSVG{
+    position:absolute;
+    transition: all 0.5s ease;
 }
 
 @media screen and (max-width: 680px) {
