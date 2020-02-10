@@ -1,0 +1,96 @@
+  a{
+    grid-column: 1 / span 5;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 5px;
+    border:1px solid cornflowerblue;
+    border-radius:100px;
+    font-family: 'Courier New', Courier, monospace;
+    background: black;
+    color:white;
+    transition: all 0.3s ease;
+  }
+
+  a:hover{
+    color: cornflowerblue;
+  }
+
+  .glyphList_wrapper{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items:center;
+    justify-items:center;
+    margin: 0 auto;
+    max-width: 400px;
+    grid-gap: 5px;
+  }
+
+  .list_title{
+    grid-column: 1 / span 5;
+    font-size: 1.3em;
+    font-weight:bold;
+    font-family: 'Poiret One', cursive;
+    text-align:center;
+  }
+
+  .storedSVG_wrapper{
+    display:grid;
+    grid-template-rows: 20px 20px 20px auto;
+    align-items:center;
+    justify-items:center;
+    border:1px solid lightgrey;
+    width:100%;
+    box-sizing: border-box;
+    border-radius:2px;
+  }
+
+  .storedSVG_wrapper>p{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.6em;
+    width:100%;
+    text-align:center;
+  }
+
+  p.french_name{
+    font-weight:bold;
+  }
+
+ .storedSVG > path {
+   fill: none;
+   stroke:black;
+   stroke-width:8px;
+   stroke-linecap:round;
+   stroke-linejoin:round;
+ }
+
+ span.green{
+   color: rgb(90,156, 36);
+ }
+
+ span.blue{
+   color: cornflowerblue;
+ }
+
+ span.tomato{
+   color: tomato;
+ }
+
+ span.gold{
+   color: gold;
+ }
+ span.bigTitle{
+   font-size:1.5em;
+ }
+
+  @media screen and (max-width: 680px) {
+    .glyphList_wrapper{
+      grid-template-columns: repeat(3,1fr);
+    }
+    .list_title,
+    a{
+      grid-column: 1 / span 3;
+    }
+    .storedSVG_wrapper>p{
+      font-size:0.75em;
+    }
+  }

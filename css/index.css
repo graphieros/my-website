@@ -26,6 +26,22 @@ a:hover{
     color:rgb(157, 196, 241);
 }
 
+span.nA{
+    color: rgb(90,156, 36);
+}
+
+span.nB{
+    color: cornflowerblue;
+}
+
+span.nC{
+    color:tomato;
+}
+
+span.nD{
+    color: gold;
+}
+
 #topName {
     display: none;
     position: fixed;
@@ -33,6 +49,7 @@ a:hover{
     width: 75vw;
     font-family: var(--FT);
     color: black;
+    font-weight:bold;
     text-align: center;
     box-sizing: border-box;
     padding-top: 10px;
@@ -81,14 +98,17 @@ a:hover{
 #masterMenu:hover #menuLine1 {
     width: 45px;
     margin-left: 10px;
+    background: radial-gradient(white, black);
 }
 
 #masterMenu:hover #menuLine0 {
     transform: rotate(-40deg);
+    background: radial-gradient(white, black);
 }
 
 #masterMenu:hover #menuLine2 {
     transform: rotate(40deg);
+    background: radial-gradient(white, black);
 }
 
 #Xball {
@@ -127,7 +147,7 @@ a:hover{
     font-size: 1em;
     box-sizing: border-box;
     opacity: 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, 0.5s box-shadow;
     cursor: pointer;
     font-family: var(--FT);
     border: 5px solid white;
@@ -136,31 +156,59 @@ a:hover{
 .menuBall:hover {
     font-weight: bold;
     border: 0px solid white;
-    transition: all 0.3s ease;
+    box-shadow: 0 0 1em 0.5em white inset;
 }
 
 #menuBall0 {
     top: 50%;
     right: 70px;
     transform: translateY(-150%);
+    background: rgb(133, 197, 37);
+    color: black;
 }
 
 #menuBall1 {
     top: 50%;
     right: 131px;
     transform: translateY(-100%);
+    background: cornflowerblue;
+    color:black;
 }
 
 #menuBall2 {
     top: 50%;
     right: 131px;
     transform: translateY(0%);
+    background:tomato;
+    color:black;
 }
 
 #menuBall3 {
     top: 50%;
     right: 70px;
     transform: translateY(50%);
+    background:gold;
+    color:black;
+}
+
+span#I{
+    color: greenyellow;
+    text-shadow: 0 0 4px white;
+}
+
+span#D{
+    color: cornflowerblue;
+    text-shadow: 0 0 4px white;
+}
+
+span#E{
+    color: tomato;
+    text-shadow: 0 0 4px white;
+}
+
+span#EE{
+    color: gold;
+    text-shadow: 0 0 4px white;
 }
 
 .XballCross {
@@ -177,12 +225,12 @@ a:hover{
 
 #Xball:hover #XballCross0 {
     transform: rotate(315deg);
-    background: rgb(72, 131, 25);
+    background: radial-gradient(white, black);
 }
 
 #Xball:hover #XballCross1 {
     transform: rotate(-315deg);
-    background:rgb(72, 131, 25);
+    background:radial-gradient(white, black);
 }
 
 #XballCross0 {
@@ -225,7 +273,6 @@ a:hover{
         right: -100px;
     }
 }
-
 
 /*SECTIONS*/
 
@@ -318,7 +365,7 @@ a:hover{
 }
 
 img#BIOPIC{
-    border-radius: 30px 30px 0 100px;
+    border-radius: 30px 30px 30px 100px;
 }
 
 #BIOPICmenu > div {
@@ -332,7 +379,7 @@ img#BIOPIC{
     border:1px solid black;
     text-align:center;
     cursor:pointer;
-    transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease, 0.3s box-shadow;
 }
 
 #BIOPICmenu > div:hover{
@@ -345,14 +392,26 @@ img#BIOPIC{
     width:100%;
 }
 
+#BIOPICmenu0:hover{
+    box-shadow: 2em 0 2em 2em black inset;
+}
+
 #BIOPICmenu1{
     border-radius: 3px;
     width:100%;
 }
 
+#BIOPICmenu1:hover{
+    box-shadow: 0em 0 2em 2em black inset;
+}
+
 #BIOPICmenu2{
     border-radius: 12px 100px 100px 12px;
     width:100%;
+}
+
+#BIOPICmenu2:hover{
+    box-shadow: -2em 0em 2em 2em black inset;
 }
 
 .BIOcontent{
@@ -372,13 +431,22 @@ img#BIOPIC{
     display:none;
 }
 
+span.gold{
+    color:gold;
+}
+
 span.green{
     color:rgb(115, 255, 0);
     font-size:0.7em;
 }
 
+span.green2{
+    color: greenyellow;
+    font-size:1em;
+}
+
 span.blue{
-    color: rgb(120, 172, 231);
+    color: cornflowerblue;
 }
 
 /*IDEO*/
@@ -430,8 +498,12 @@ svg.glyph{
     stroke-linecap: round;
     stroke-linejoin: round;
     background:black;
-    stroke:white;
-    fill:white;
+    stroke: cornflowerblue;
+    fill:cornflowerblue;
+}
+
+circle.c0:hover{
+    r:2;
 }
 
 #narrativePic0{
@@ -470,7 +542,7 @@ p#cleGreen{
     border:1px solid white;
     border-radius:2px;
     cursor:pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, 0.3s box-shadow;
 }
 
 #cleFR{
@@ -480,6 +552,7 @@ p#cleGreen{
 
 #cleFR:hover{
     background: rgb(108, 180,48);
+    box-shadow: 0 0 1em 0.5em white inset, 0 0 1em 0.2em white;
 }
 
 #cleEN{
@@ -491,6 +564,7 @@ p#cleGreen{
 #cleEN:hover{
     border:1px solid rgb(144, 212, 88);
     color: rgb(144, 212, 88);
+    box-shadow: 0 0 1em 0.5em rgb(144,212,88) inset, 0 0 1em 0.2em white;
 }
 
 /*GALERIE*/
@@ -513,7 +587,7 @@ p#cleGreen{
     position:relative;
     transition: all 0.3s ease;
     box-sizing: border-box;
-    border:1px solid white;
+    border:1px solid tomato;
     border-radius:2px;
     display:grid;
     align-items:center;
@@ -595,13 +669,15 @@ p#cleGreen{
     width:100%;
     max-width:250px;
     text-align:center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, 0.5s box-shadow;
     cursor: pointer;
+    color:gold;
 }
 
 .devMenu:hover{
-    background:white;
-    color:black;
+    background: transparent;
+    color:gold;
+    box-shadow: 0 0 0.6em 0.3em gold inset, 0 0 0.3em 0.2em gold;
 }
 
 .appliWrapper{
@@ -616,14 +692,24 @@ p#cleGreen{
 }
 
 /*APP*/
+
+p.appTitle{
+    width:300px;
+    font-family: var(--FT);
+    color: grey;
+    text-align:center;
+}
+
 .wrapper,
-.wrapper_F{
+.wrapper_F,
+.wrapper_L{
     height:200px;
     width:200px;
 }
 
 svg#baseSVG,
-svg#baseSVG_F{
+svg#baseSVG_F,
+svg#baseSVG_L{
     height:200px;
     width:200px;
 }
@@ -632,8 +718,12 @@ circle{
     transition: all 0.3s ease;
 }
 
-circle:hover{
-    r: 25;
+circle.inputCirclesF:hover{
+    r: 800;
+}
+
+circle.inputCircles:hover{
+    r:25;
 }
 
 .controls{
@@ -654,8 +744,12 @@ circle:hover{
     border:1px solid white;
     width:100%;
     text-align:center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, 0.5s box-shadow;
     cursor: pointer;
+}
+
+.controlBtn:hover{
+    box-shadow: 0 0 0.3em 0.3em rgba(255,255,255,0.5);
 }
 
 #CUT,
@@ -668,7 +762,7 @@ circle:hover{
 #CLEAR,
 #CLEAR_F,
 #WASH,
-#WASH_F {
+#WASH_F{
     border-radius: 2px 100px 100px 2px;
 }
 
@@ -681,19 +775,20 @@ circle:hover{
 
 #PRINT:hover,
 #PRINT_F:hover{
-    background: rgb(120, 172, 231);
+    background: cornflowerblue;
     color:black;
 }
 
 #CLEAR:hover,
 #CLEAR_F:hover,
 #ZOOMOUT:hover{
-    background: rgb(169, 59, 179);
+    background: tomato;
 }
 
 #WASH:hover,
 #WASH_F:hover{
-    background: rgb(179, 97, 59);
+    background: gold;
+    color:black;
 }
 
 #ZOOMIN,
@@ -774,6 +869,94 @@ p.memoryType{
     transition: all 0.5s ease;
 }
 
+#progWow{
+    width:100%;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    background:black;
+    position:relative;
+}
+
+#progWow>img{
+    width:250px;
+    border-radius:50px;
+}
+
+.cover{
+    width:250px;
+    height:100%;
+    position:absolute;
+    background: radial-gradient(transparent,black);
+}
+
+/*FORMS*/
+.form {
+    width:200px;
+    display:none;
+    align-items:center;
+    justify-items:center;
+    box-sizing: border-box;
+    text-align:center;
+    padding-top: 10px;
+    padding-bottom:10px;
+    grid-gap:5px;
+}
+
+form > input{
+    width:100%;
+    box-sizing: border-box;
+    border-radius:2px;
+    margin-top:5px;
+    background: rgb(30,30,30);
+    color:grey;
+    border:none;
+    text-align:center;
+    height:40px;
+}
+
+::placeholder {
+    color: rgb(50,50,50);
+}
+
+::-ms-input-placeholder {
+    color: rgb(50,50,50);
+  }
+
+#glyphCode{
+    display:none;
+}
+
+#inputOK{
+    color:rgb(50,50,50);
+    height:40px;
+    border-radius: 100px;
+    cursor:pointer;
+}
+
+svg.storedSVG{
+    fill:none;
+    height:50px;
+    width:50px;
+}
+
+svg.storedSVG path {
+    fill:none;
+    stroke:black;
+    stroke-width:4px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.arrow {
+    width:200px;
+    height:30px;
+    background:white;
+    border-radius: 0 0 100% 100%;
+}
+
+
+
 @media screen and (max-width: 680px) {
     #LANDING {
         font-size: 1.3em;
@@ -842,6 +1025,24 @@ p.memoryType{
 
     .picCaption{
         font-size:1.3em;
+    }
+
+    .appliWrapper{
+        display: none;
+        width:100%;
+        background:black;
+        box-sizing: border-box;
+        align-items:center;
+        justify-items:center;
+        padding:10px;
+        color: white;
+    }
+    
+    p.appTitle{
+        width:200px;
+        font-family: var(--FT);
+        color: grey;
+        text-align:center;
     }
     
 }   
