@@ -2,12 +2,24 @@
 <html lang="en"> 
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65449763-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-65449763-1');
+    </script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/linear.css">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="32x32" href="pics/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pics/favicon.ico">
 
     <title>Alec Lloyd Probert</title>
 
@@ -16,7 +28,7 @@
 </head>
 
 <body>
-    <div id="topName">Alec Lloyd Probert</div>
+    <div id="topName"><span class="nA">A</span>le<span class="nC">C</span> Lloy<span class="nD">D</span> Pro<span class="nB">B</span>ert</div>
     <div id="QUOTE"></div>
     <div id="masterMenu">
         <div id="menuLine0" class="menuLine"></div>
@@ -35,10 +47,10 @@
         <div id="menuBall3" class="menuBall">DEV</div>
     </section>
 
-    <div id="LANDING">Alec Lloyd Probert</div>
+    <div id="LANDING"><span class="nA">A</span>le<span class="nC">C</span> Lloy<span class="nD">D</span> Pro<span class="nB">B</span>ert</div>
 
     <section class="sections" id="BIO">
-        <div class="sectionTitle" id="sectionTitle0">BIO</div>
+        <div class="sectionTitle" id="sectionTitle0">B<span id="I">I</span>O</div>
         <p>Une sorte de <i>curriculum vitae</i></p>
         <p>CONTACT:<br>
             <a href="https://www.instagram.com/graphieros/?hl=fr" target="_blank"><img src="pics/logoIG.png" height="50px" id="logoIG"></a>
@@ -71,7 +83,7 @@
                 <br><span class="green">
                     JavaScript, CSS, HTML, notions de PHP en lien avec MySQL.
                     <br>
-                    <a href="https://github.com/graphieros" target="_blank"><span class="blue">Consulter ma page GITHUB</span></a>
+                    <a href="https://github.com/graphieros" target="_blank"><span class="gold">Consulter ma page GITHUB</span></a>
                 </span>
                 <br><br>
                 Maîtrise d'Excel
@@ -132,7 +144,7 @@
     </section>
 
     <section class="sections" id="IDEO">
-        <div class="sectionTitle" id="sectionTitle1">IDEO</div>
+        <div class="sectionTitle" id="sectionTitle1">I<span id="D">D</span>EO</div>
         <p>La construction d'une langue hexagonale</p>
 
         <div class="graphieros">
@@ -159,7 +171,7 @@
 
             <div class="graphierosNarrative">
                 <p>Le graphieros est une <a href="https://fr.wikipedia.org/wiki/Langue_construite" target="_blank">langue construite</a>, pour être utilisée dans mes tableaux.<br><br>
-                C'est une langue idéogrammatique, composée d'un corpus de <span class="blue">400</span> glyphes, qui représentent des concepts de base.<br><br>
+                C'est une langue idéogrammatique, composée d'un corpus de <a href="http://graphieros.atwebpages.com/php/glyphs.php"><span class="blue">400</span></a> glyphes, qui représentent des concepts de base.<br><br>
                 L'accumlulation de plusieurs glyphes permet de composer jusqu'aux idées les plus complexes.
                 </p>
             </div>
@@ -220,7 +232,7 @@
                     <br><br>
                     <span class="blue">"linéaire"</span> : de haut en bas, un glyphe après l'autre
                     <br><br>
-                    <span class="blue">"moléculaire"</span> : sous forme de modules, qui peuvent contenir jusqu'à 6 glyphes répartis autour d'un glyphe central.
+                    <span class="blue">moléculaire"</span> : sous forme de modules, qui peuvent contenir jusqu'à 6 glyphes répartis autour d'un glyphe central.
                     <br><br>
                     <span class="blue">"fractal"</span> : dans le sens de la profondeur, chaque nouveau glyphe étant inscrit dans la moitié des dimensions de son parent.
                 </p>
@@ -241,7 +253,7 @@
                 <br>
                 <a href="docs/thekey2.pdf" target="_blank">
                     <div class="graphierosCle" id="cleEN">
-                        en anglais
+                        in English
                     </div>
                 </a>
                 
@@ -252,7 +264,7 @@
     </section>
 
     <section class="sections" id="GALERIE">
-        <div class="sectionTitle" id="sectionTitle2">GALERIE</div>
+        <div class="sectionTitle" id="sectionTitle2">GALERI<span id="E">E</span></div>
         <p>Ecrire et peindre simultanément dans une langue nouvelle</p>
         <div class="galerieWrapper">
 
@@ -365,16 +377,23 @@
     </section>
 
     <section class="sections" id="DEV">
-        <div class="sectionTitle" id="sectionTitle3">DEV</div>
+        <div class="sectionTitle" id="sectionTitle3">D<span id="EE">E</span>V</div>
         <p>Programmation, idées et applications</p>
         
         <div class="devMenuWrapper">
-            <div class="devMenu" id="devMenu0">écrire en graphieros</div>
+            <div class="devMenu" id="devMenu0">tracer un glyphe</div>
             <div class="devMenu" id="devMenu1">écrire en graphieros fractal</div>
+            <div class="devMenu" id="devMenu2">écrire en graphieros linéaire</div>
         </div>
 
+        <div id="progWow">
+            <img src="pics/back.jpg">
+            <div class="cover"></div>
+        </div>
+        
+
         <div class="appliWrapper" id="app0">
-    
+            <p class="appTitle">TRACER UN GLYPHE</p>
             <div class="wrapper" id="wrapper">
                 <!-- <svg id="baseSVG" viewBox="0 0 256 256"></svg> -->
             </div>
@@ -392,32 +411,85 @@
             <div class="memory" id="LTM"></div>
 
             <div class="output" id="PRINTER"></div>
+            
+            <div class="arrow" id="arrow"></div>
+
+            <div class="form" id="form0">
+                <form method="POST" action="php/process.php">
+                    <input type="text" id="glyphCode" name="glyph_code" readonly>
+                    <input type="text" id="glyphSound" name="glyph_sound" placeholder="phonologie">
+                    <input type="text" id="glyphFrench" name="glyph_french" placeholder="en français">
+                    <input type="text" id="glyphName" name="glyph_name" placeholder="en anglais">
+                    <input type="submit" value="ok" id="inputOK">
+                </form>
+            </div>
 
         </div>
 
         <div class="appliWrapper" id="app1">
+            <p class="appTitle">ECRIRE EN GRAPHIEROS FRACTAL</p>
             <div class="wrapper" id="wrapper_F"></div>
-        <div class="controls" id="controls_F">    
-            <div class="controlBtn" id="CUT_F">CUT</div>
-            <div class="controlBtn" id="CLEAR_F">CLEAR</div>
-            <div class="controlBtn" id="PRINT_F">PRINT</div>
-            <div class="controlBtn" id="WASH_F">WASH</div>
+            <div class="controls" id="controls_F">    
+                <div class="controlBtn" id="CUT_F">CUT</div>
+                <div class="controlBtn" id="CLEAR_F">CLEAR</div>
+                <div class="controlBtn" id="PRINT_F">PRINT</div>
+                <div class="controlBtn" id="WASH_F">WASH</div>
+            </div>
+
+            <p class="memoryType">short term memory</p>
+            <div class="memory" id="STM_F"></div>
+            <p class="memoryType">long term memory</p>
+            <div class="memory" id="LTM_F"></div>
+
+            <div class="output" id="PRINTER_F"></div>
+            <div class="controls">
+                <div class="controlBtn" id="ZOOMIN">ZOOM IN</div>
+                <div class="controlBtn" id="ZOOMOUT">ZOOM OUT</div>
+            </div>
         </div>
 
-        <p class="memoryType">short term memory</p>
-        <div class="memory" id="STM_F"></div>
-        <p class="memoryType">long term memory</p>
-        <div class="memory" id="LTM_F"></div>
+        <div class="appliWrapper" id="app2">
+            <p class="appTitle">ECRIRE EN GRAPHIEROS LINEAIRE</p>
+           
+            <section class="takemall">
 
-        <div class="output" id="PRINTER_F"></div>
-        <div class="controls">
-            <div class="controlBtn" id="ZOOMIN">ZOOM IN</div>
-            <div class="controlBtn" id="ZOOMOUT">ZOOM OUT</div>
+                <section class="mainWrapper_L">
+            
+                  <div class="inputSVGwrapper_L" id="inputSVGwrapper_L">
+                  </div>
+            
+                  <div class="buttonsWrapper_L">
+                    <div class="button_L" id="CUT_L">CUT</div>
+                    <div class="button_L" id="CLEAR_L">CLEAR</div>
+                    <div class="button_L" id="LINK_L">LINK</div>
+                    <div class="button_L" id="WORD_L">WORD</div>
+                    <div class="button_L" id="WASH_L">WASH</div>
+                    <div class="button_L" id="CLEARSENTENCE">CLEAR SENTENCE</div>
+                  </div>
+            
+                  <div class="STM_L" id="STM_L"></div>
+                  <div class="LTM_L" id="LTM_L"></div>
+                  <div class="ICS_L" id="CS_L"></div>
+                  <div class="ICS_L" id="ICS_L"></div>
+            
+                  <div class="outputWrapper_L">
+                    <div id="PRINTER_L"></div>
+                  </div>
+            
+                </section>
+            
+                <section id="sentence"></section>
+            
+              </section>
+
+
         </div>
 
     </section>
 
     <script src="js/index.js"></script>
+    <script src="js/linear.js"></script>
+    <!-- <script src="js/ajax.js"></script> -->
 </body>
 
 </html>
