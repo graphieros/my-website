@@ -18,6 +18,7 @@ const GALDIV = document.getElementsByClassName("galeriePicWrapper");
 const CAPTIONS = document.getElementsByClassName("picCaption");
 const APPS = document.getElementsByClassName("appliWrapper");
 const DEVMENU = document.getElementsByClassName("devMenu");
+const WOW = document.getElementById("progWow");
 
 let i; 
 
@@ -77,9 +78,8 @@ XBALL.addEventListener("click", function() {
     closeMenu();
 })
 
-
 function closeMenu() {
-    MENU.style.zIndex = 0;
+    MENU.style.zIndex = 10;
     LANDING.style.animationName = "slideNameClose";
     LANDING.style.animationDuration = "0.5s";
     LANDING.style.animationTimingFunction = "ease-in-out";
@@ -200,15 +200,18 @@ showQuote(MENUBALL3, "Programmation, idées et applications");
 }());
 
 //DEV
-function showApp(dm, open, closed){
+function showApp(dm, open, closed0, closed1){
     dm.addEventListener("click", function(){
-        closed.style.display = "none";
+        closed0.style.display = "none";
+        closed1.style.display = "none";
         open.style.display = "grid";
+        WOW.style.display = "none";
     });
 };
 
-showApp(DEVMENU[0], APPS[0], APPS[1]);
-showApp(DEVMENU[1], APPS[1], APPS[0]);
+showApp(DEVMENU[0], APPS[0], APPS[1], APPS[2]);
+showApp(DEVMENU[1], APPS[1], APPS[0], APPS[2]);
+showApp(DEVMENU[2], APPS[2], APPS[0], APPS[1]);
 
 //APP0
 (function createSingleGlyph(){
@@ -221,6 +224,7 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
     SVG.setAttributeNS(null, "viewBox", "0 0 256 256");
     const STM = document.getElementById("STM");
     const LTM = document.getElementById("LTM");
+    const GLYPHCODE = document.getElementById("glyphCode");
     const PRINTER = document.getElementById("PRINTER");
     
     let svgWIdth = 256;
@@ -243,12 +247,14 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
         allInputCircles = [];
         drawnLines = [];
         LTM.innerHTML = "";
+        GLYPHCODE.value = "";
 
         let Xcord;
         let Ycord;
 
         Xarray.push(Xcenter);
         Yarray.push(Ycenter);
+
 
         for (i = 0; i <= sides; i += 1) {
         Xcord = Math.round((Xcenter + size * Math.cos(i * 2 * Math.PI / sides)) * 100) / 100;
@@ -276,7 +282,7 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
       for(i =0; i < allInputCircles.length; i += 1){
         let oneCircle = allInputCircles[i];
         oneCircle.addEventListener("mouseover", function(){
-          oneCircle.setAttributeNS(null, "fill", "red");
+          oneCircle.setAttributeNS(null, "fill", "tomato");
         });   
         oneCircle.addEventListener("mouseout", function(){
           oneCircle.setAttributeNS(null, "fill", "white");
@@ -355,7 +361,7 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
             printSVG.setAttributeNS(null, "stroke", "black");
 
             printSVG.innerHTML = LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
-
+            GLYPHCODE.value = LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
             PRINTER.appendChild(printSVG);
 
         })
@@ -388,21 +394,21 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
     const xmlns = "http://www.w3.org/2000/svg";
     const SVG = document.createElementNS(xmlns, "svg");
     SVG.id = "baseSVG_F";
-    SVG.setAttributeNS(null, "viewBox", "0 0 256 256");
+    SVG.setAttributeNS(null, "viewBox", "0 0 8192 8192");
     const STM = document.getElementById("STM_F");
     const LTM = document.getElementById("LTM_F");
     const PRINTER = document.getElementById("PRINTER_F");
     
     let svgWidth = 240;
     let svgHeight = 240;
-    let Xcenter = 128;
-    let Ycenter = 128;
+    let Xcenter = 4096;
+    let Ycenter = 4096;
     let circles = [];
     let Xarray = [];
     let Yarray = [];
     let allInputCircles = [];
     let drawnLines = [];
-    let size = 90;
+    let size = 2880;
 
 
     function buildCoreSVG(){
@@ -429,10 +435,10 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
 
         for(i = 0; i <= sides; i += 1){
             let circle = document.createElementNS(xmlns, "circle");
-                circle.setAttributeNS(null, "class", "inputCircles");
+                circle.setAttributeNS(null, "class", "inputCirclesF");
                 circle.setAttributeNS(null, "cx", Xarray[i]);
                 circle.setAttributeNS(null, "cy", Yarray[i]);
-                circle.setAttributeNS(null, "r", 15);
+                circle.setAttributeNS(null, "r", 480);
                 circle.setAttributeNS(null, "fill", "white");
                 circle.setAttributeNS(null, "cursor", "pointer");
                 circle.setAttributeNS(null, "transition", "all 0.3s ease");
@@ -446,7 +452,7 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
       for(i =0; i < allInputCircles.length; i += 1){
         let oneCircle = allInputCircles[i];
         oneCircle.addEventListener("mouseover", function(){
-          oneCircle.setAttributeNS(null, "fill", "red");
+          oneCircle.setAttributeNS(null, "fill", "tomato");
         });   
         oneCircle.addEventListener("mouseout", function(){
           oneCircle.setAttributeNS(null, "fill", "white");
@@ -468,12 +474,11 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
           });
         }
     
-
       function drawLine(){
         if(drawnLines.length >= 1){
           let path = document.createElementNS(xmlns, "path");
               path.setAttributeNS(null, 'stroke', "white");
-              path.setAttributeNS(null, 'stroke-width', 4);
+              path.setAttributeNS(null, 'stroke-width', 160);
               path.setAttributeNS(null, 'stroke-linejoin', "round");
               path.setAttributeNS(null, 'stroke-linecap', 'round');
               path.setAttributeNS(null, 'd', `M ${drawnLines.join(' ')}`); 
@@ -496,7 +501,7 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
         BTNCUT.addEventListener("click", function(){
           let path = document.createElementNS(xmlns, "path");
           path.setAttributeNS(null, 'stroke', "greenyellow");
-          path.setAttributeNS(null, 'stroke-width', 4);
+          path.setAttributeNS(null, 'stroke-width', 160);
           path.setAttributeNS(null, 'stroke-linejoin', "round");
           path.setAttributeNS(null, 'stroke-linecap', 'round');
           path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`); 
@@ -510,8 +515,8 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
         });
       }());
 
-    let color = 240;
-    let strokeWidth = 8;
+    let color = 220;
+    let strokeWidth = 161;
 
       (function print(){
         const BTNPRINT = document.getElementById("PRINT_F");
@@ -520,8 +525,8 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
             let outputSVG = document.createElementNS(xmlns, "svg");
             let outlineSVG = document.createElementNS(xmlns, "svg"); //thin outline to help distinguishing glyphs on zoom
         
-            outputSVG.setAttributeNS(null, "viewBox", "0 0 256 256");
-            outlineSVG.setAttributeNS(null, "viewBox", "0 0 256 256");
+            outputSVG.setAttributeNS(null, "viewBox", "0 0 8192 8192");
+            outlineSVG.setAttributeNS(null, "viewBox", "0 0 8192 8192");
         
             outputSVG.setAttributeNS(null, "width", svgWidth);
             outputSVG.setAttributeNS(null, "height", svgHeight);
@@ -529,7 +534,7 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
             outlineSVG.setAttributeNS(null, "height", svgHeight);
             
             outputSVG.setAttributeNS(null, "stroke-width", strokeWidth);
-            outlineSVG.setAttributeNS(null, "stroke-width", strokeWidth + 2);
+            outlineSVG.setAttributeNS(null, "stroke-width", strokeWidth + 20);
         
             outputSVG.setAttributeNS(null, "background", "transparent");
             outlineSVG.setAttributeNS(null, "background", "transparent");
@@ -579,8 +584,8 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
             PRINTER.innerHTML = "";
             svgWidth = 240;
             svgHeight = 240;
-            color = 240;
-            strokeWidth = 8;
+            color = 220;
+            strokeWidth = 161;
         });
       }());
 
@@ -625,4 +630,12 @@ showApp(DEVMENU[1], APPS[1], APPS[0]);
       });
       }());
 
+}());
+
+(function showForm(){
+  const FORM = document.getElementById("form0");
+  const BTNFORM = document.getElementById("arrow");
+  BTNFORM.addEventListener("click", function(){
+    FORM.style.display = "grid";
+  })
 }());
