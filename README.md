@@ -13,10 +13,12 @@ Choose templates to write either in linear mode, double-linear mode, molecular m
 SVG code of what you choose to print is displayed so that you can copy it, to use on your website, or push to a database.
 
 <b>instructions:</b><br>
-0. draw by clicking on circles
-1. click CUT to draw a new line (and click CLEAR to start all over again)
-2. click PRINT to see a preview below (and click WASH to remove it)
-3. click SAVE to display result on the side (and click DEL to delete it)
+<ul>
+  <li>0. draw by clicking on circles</li>
+  <li>1. click CUT to draw a new line (and click CLEAR to start all over again)</li>
+  <li>2. click PRINT to see a preview below (and click WASH to remove it)</li>
+  <li>3. click SAVE to display result on the side (and click DEL to delete it)</li>
+  </ul>
 
 <img src="https://github.com/graphieros/my-website/blob/master/linear.png" width="500px">
 <img src="https://github.com/graphieros/my-website/blob/master/doubleLinear.png" width="500px">
