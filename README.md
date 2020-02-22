@@ -12,7 +12,7 @@ this application allows you to write in graphieros in your browser.
 Choose templates to write either in linear mode, double-linear mode, molecular mode or free mode.
 SVG code of what you choose to print is displayed so that you can copy it, to use on your website, or push to a database.
 
-<b>instructions:</b>
+<b>instructions:</b><br>
 0. draw by clicking on circles
 1. click CUT to draw a new line (and click CLEAR to start all over again)
 2. click PRINT to see a preview below (and click WASH to remove it)
