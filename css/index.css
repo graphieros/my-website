@@ -888,6 +888,11 @@ p.memoryType{
     height:100%;
     position:absolute;
     background: radial-gradient(transparent,black);
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    font-family: var(--FT);
+    color:white;
 }
 
 /*FORMS*/
