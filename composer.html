@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65449763-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65449763-1');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/composer.css" class="css">
 </head>
 
@@ -13,12 +23,15 @@
     
     <section class="IO" id="wrapper_IO_left">
       
-      <div class="composer_title">GRAPHIEROS COMPOSER</div>
+      <div class="composer_title">GRAPHIEROS COMPOSER<br>
+      <span class="credit0">by</span><br>
+      <a href="http://graphieros.atwebpages.com" target="_blank"><span class="credit1">
+        <span class="green">A</span>le<span class="tomato">C</span> Lloy<span class="gold">D</span> Pro<span class="corn">B</span>ert</span></a></div>
       <div class="choices">
-        <div class="choice" id="choice0">linear</div>
-        <div class="choice" id="choice1">double linear</div>
-        <div class="choice" id="choice2">molecular</div>
-        <div class="choice" id="choice3">none</div>
+        <div class="choice" id="choice0">LINEAR</div>
+        <div class="choice" id="choice1">DOUBLE LINEAR</div>
+        <div class="choice" id="choice2">MOLECULAR</div>
+        <div class="choice" id="choice3">FREE</div>
       </div>
       <p id="move">the palette is draggable &#128540;</p>
       <div id="hexWrap" draggable="true">
