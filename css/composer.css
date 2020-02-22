@@ -1,11 +1,13 @@
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 #main_wrapper_molecular { 
     max-width: 675px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 500px auto;
-    border: 1px solid lightgrey;
     box-sizing: border-box;
     padding: 5px;
     border-radius: 4px;
@@ -16,7 +18,35 @@
 }
 
 .composer_title{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poiret One', cursive;
+    font-size:2.5em;
+    text-align:center;
+}
+
+span.credit0{
+    font-size:0.7em;
+    color: rgb(163, 162, 162);
+}
+
+span.credit1{
+    font-size:0.7em;
+    font-weight:bold;
+}
+
+span.green{
+    color: rgb(101, 146, 34);
+}
+
+span.tomato{
+    color: tomato;
+}
+
+span.corn{
+    color: cornflowerblue;
+}
+
+span.gold{
+    color: gold;
 }
 
 .IO {
@@ -60,7 +90,7 @@
     border: 1px solid transparent;
     box-sizing: border-box;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poiret One', cursive;
     background: black;
     color: white;
     opacity: 0.75;
@@ -118,6 +148,8 @@
     align-items: center;
     justify-items: center;
     grid-gap: 0px;
+    box-sizing: border-box;
+    padding:5px;
 }
 
 .hexagon {
@@ -126,7 +158,7 @@
     height: 36.95px;
     background-color: black;
     margin: 18.48px 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poiret One', cursive;
     cursor: pointer;
     transition: all 0.3s ease;
     opacity: 0.75;
@@ -329,37 +361,40 @@ svg.inner_SVG:hover {
     box-sizing: border-box;
     padding:20px;
     border:1px solid lightgrey;
-    border-radius:3px;
+    border-radius:10px;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    background:black;
 }
 
 .choice{
     display: grid;
     align-items:center;
     justify-items:center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size:0.8em;
+    font-family: 'Poiret One', cursive;
+    font-size:1.5em;
     box-sizing: border-box;
     padding:10px;
     width:100%;
     height:50px;
     border:1px solid lightgrey;
     border-radius:4px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, 0.5s box-shadow;
     background: black;
     color:white;
     cursor: pointer;
 }
 
 .choice:hover{
-    background: white;
-    color:black;
-    box-shadow: 0 3px 5px black;
+    background: rgb(20,20,20);
+    /* color:black; */
+    /* box-shadow: 0 3px 5px black; */
+    box-shadow: 0 0 0.3em 0.3em rgba(255,255,255,0.5),0 0 0.3em 0.3em rgba(255,255,255,0.5)inset;
 }
 
 p#move{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Poiret One', cursive;
+    font-size:1.3em;
     transition: all 0.3s ease;
 }
