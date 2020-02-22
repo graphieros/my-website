@@ -8,7 +8,8 @@ Experience is probably best on mobile.
 
 # graphieros composer
 
-this application allows you to write in graphieros in your browser.
+this application allows you to write in graphieros in your browser.<br>
+Go to http://graphieros.atwebpages.com/composer.html to give it a try.
 Choose templates to write either in linear mode, double-linear mode, molecular mode or free mode.
 SVG code of what you choose to print is displayed so that you can copy it, to use on your website, or push to a database.
 
