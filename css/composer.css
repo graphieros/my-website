@@ -1,0 +1,365 @@
+
+
+#main_wrapper_molecular { 
+    max-width: 675px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 500px auto;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 4px;
+    grid-gap: 5px;
+    align-items: center;
+    justify-items: center;
+    align-items: start;
+}
+
+.composer_title{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.IO {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border-radius: 3px;
+    grid-gap: 5px;
+    padding: 2.5px;
+    box-sizing: border-box;
+    /* margin-top:250px; */
+}
+
+#IO_SVG {
+    width: 500px;
+    height: 800px;
+    background: black;
+    border-radius: 15px;
+}
+
+#controls_molecular {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 2.5px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: transparent;
+    border-radius: 3px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+}
+
+.btn_molecular {
+    width: 100%;
+    height: 30px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    background: black;
+    color: white;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.btn_molecular:hover {
+    opacity: 1;
+    color: greenyellow;
+    border: 1px solid black;
+}
+
+.molecular_memory {
+    word-break: break-all;
+    background: black;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 0.5em;
+    color: greenyellow;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+    border-radius: 3px;
+}
+
+#molecular_printer {
+    height: 800px;
+    width: 500px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#IO_molecular_SVG {
+    height: 800px;
+    width: 500px;
+}
+
+.circles_mol_min,
+.circles_mol_max {
+    transition: all 0.3s ease;
+}
+
+.circles_mol_min:hover {
+    r: 25;
+}
+
+.circles_mol_max:hover {
+    r: 64;
+}
+
+#wrapper_IO_right {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 0px;
+}
+
+.hexagon {
+    position: absolute;
+    width: 64px;
+    height: 36.95px;
+    background-color: black;
+    margin: 18.48px 0;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.75;
+    color: white;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-sizing: border-box;
+}
+
+.hexagon:hover {
+    opacity: 1;
+}
+
+.hexagon:before,
+.hexagon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+}
+
+.hexagon:before {
+    bottom: 100%;
+    border-bottom: 18.48px solid black;
+    position: absolute;
+}
+
+.hexagon:after {
+    top: 100%;
+    width: 0;
+    border-top: 18.48px solid black;
+    position: absolute;
+}
+
+#hexWrap {
+    left: 0;
+    top: 0;
+    position:relative;
+    height: 150px;
+}
+
+#center {
+    margin-left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    background: transparent;
+    border: none;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    cursor: initial;
+    background: rgba(255, 255, 255, 0.5);
+    cursor:move;
+}
+
+svg.inner_SVG {
+    margin-top: -6px;
+    height: 50px;
+    width: 50px;
+    transition: all 0.3s ease;
+}
+
+svg.inner_SVG>path {
+    fill: none;
+    stroke: black;
+    stroke-width: 20px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#center:before,
+#center:after {
+    background: transparent;
+    border-top: none;
+    border-bottom: none;
+    z-index: -1;
+}
+
+#center:before {
+    border-bottom: 18.48px solid rgba(255, 255, 255, 0.5);
+}
+
+#center:after {
+    border-top: 18.48px solid rgba(255, 255, 255, 0.5);
+}
+
+svg.inner_SVG:hover {
+    transform: rotate(-180deg);
+}
+
+#CUT_mol {
+    left: -64px;
+    top: 38px;
+}
+
+#CUT_mol {
+    background: gold;
+    color: black;
+}
+
+#CUT_mol:after {
+    border-top: 18.48px solid gold;
+}
+
+#CUT_mol:before {
+    border-bottom: 18.48px solid gold;
+}
+
+#CLEAR_mol {
+    top: 38px;
+    color: black;
+    background: tomato;
+}
+
+#CLEAR_mol:before {
+    border-bottom: 18.48px solid tomato;
+}
+
+#CLEAR_mol:after {
+    border-top: 18.48px solid tomato;
+}
+
+#LINK_mol {
+    top: 93px;
+    left: -95px;
+    color: black;
+    background: greenyellow;
+}
+
+#LINK_mol:before {
+    border-bottom: 18.48px solid greenyellow;
+}
+
+#LINK_mol:after {
+    border-top: 18.48px solid greenyellow;
+}
+
+#MOLECULE {
+    top: 148px;
+    left: -64px;
+    background: cornflowerblue;
+    color: white;
+}
+
+#MOLECULE:before {
+    border-bottom: 18.48px solid cornflowerblue;
+}
+
+#MOLECULE:after {
+    border-top: 18.48px solid cornflowerblue;
+}
+
+#DISSOLVE_mol {
+    top: 148px;
+    background: blueviolet;
+}
+
+#DISSOLVE_mol:before {
+    border-bottom: 18.48px solid blueviolet;
+}
+
+#DISSOLVE_mol:after {
+    border-top: 18.48px solid blueviolet;
+}
+
+#WASH_mol {
+    top: 93px;
+    left: 32px;
+    background: mediumvioletred;
+}
+
+#WASH_mol:before {
+    border-bottom: 18.48px solid mediumvioletred;
+}
+
+#WASH_mol:after {
+    border-top: 18.48px solid mediumvioletred;
+}
+
+.tit {
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#title_SVG {
+    width: 400px;
+    fill: none;
+    stroke: black;
+    stroke-width: 8px;
+    stroke-linecap: round;
+}
+
+.choices{
+    width:100%;
+    box-sizing: border-box;
+    padding:20px;
+    border:1px solid lightgrey;
+    border-radius:3px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.choice{
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:0.8em;
+    box-sizing: border-box;
+    padding:10px;
+    width:100%;
+    height:50px;
+    border:1px solid lightgrey;
+    border-radius:4px;
+    transition: all 0.3s ease;
+    background: black;
+    color:white;
+    cursor: pointer;
+}
+
+.choice:hover{
+    background: white;
+    color:black;
+    box-shadow: 0 3px 5px black;
+}
+
+p#move{
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease;
+}
