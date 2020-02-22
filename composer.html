@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/composer.css" class="css">
+</head>
+
+<body>
+
+  <section id="main_wrapper_molecular">
+    
+    <section class="IO" id="wrapper_IO_left">
+      
+      <div class="composer_title">GRAPHIEROS COMPOSER</div>
+      <div class="choices">
+        <div class="choice" id="choice0">linear</div>
+        <div class="choice" id="choice1">double linear</div>
+        <div class="choice" id="choice2">molecular</div>
+        <div class="choice" id="choice3">none</div>
+      </div>
+      <p id="move">the palette is draggable &#128540;</p>
+      <div id="hexWrap" draggable="true">
+      
+        <div class="hexagon" id="center">
+          <svg class="inner_SVG" id="inner_SVG" viewbox="0 0 1024 1024">
+            <path d="M 520,504,520,504"/>
+            <path d="M 40,504,40,504"/>
+            <path d="M 1000,504,1000,504"/>
+            <path d="M 280,89,280,89"/>
+            <path d="M 760,89,760,89"/>
+            <path d="M 280,920,280,920"/>
+            <path d="M 760,920,760,920"/>
+            <path d="M 280,920,280,89,1000,504,280,920"/>
+            <path d="M 40,504,520,504,760,89"/>
+            <path d="M 760,920,520,504"/>
+            <path d="M 100,470,60,470,40,504,60,539,100,539"/>
+            <path d="M 700,124,720,89,760,89,780,124,760,158"/>
+            <path d="M 700,885,720,920,760,920,780,885,760,850"/>
+            <path d="M 520,504,100,470"/>
+            <path d="M 520,504,100,539"/>
+            <path d="M 520,504,700,124"/>
+            <path d="M 520,504,760,158"/>
+            <path d="M 520,504,700,885"/>
+            <path d="M 520,504,760,850"/>
+            <path d="M 280,89,260,124,300,885,280,920,260,885,300,124,280,89"/>
+            <path d="M 300,885,980,539,1000,504,960,504,320,920,280,920"/>
+            <path d="M 300,124,980,470,1000,504,960,504,320,89,280,89"/>
+          </svg><br><br><br><br><br>
+          
+        </div>
+  
+        <div class="hexagon" id="CUT_mol">CUT</div>
+        <div class="hexagon" id="CLEAR_mol">CLEAR</div>
+        <div class="hexagon" id="LINK_mol">PRINT</div>
+        <div class="hexagon" id="MOLECULE">SAVE</div>
+        <div class="hexagon" id="DISSOLVE_mol">DEL</div>
+        <div class="hexagon" id="WASH_mol">WASH</div>
+  
+      </div>
+      <div id="IO_SVG"></div>
+
+      
+      <!-- <div id="controls_molecular">
+        <div class="btn_molecular" id="CUT_mol">CUT</div>
+        <div class="btn_molecular" id="CLEAR_mol">CLEAR</div>
+        <div class="btn_molecular" id="LINK_mol">VIEW MOLECULE</div>
+        <div class="btn_molecular" id="MOLECULE">KEEP IT</div>
+        <div class="btn_molecular" id="WASH_mol">WASH IT</div>
+        <div class="btn_molecular" id="DISSOLVE_mol">DISSOLVE ALL</div>
+      </div> -->
+      
+      
+      
+      
+      <div class="molecular_memory" id="STM_M"></div>
+      <div class="molecular_memory" id="LTM_M"></div>
+      <div id="molecular_printer"></div>
+      
+    </section>
+
+
+    <section class="IO" id="wrapper_IO_right"></section>
+
+  </section>
+  
+  
+  <script src="js/composer.js"></script>
+</html>
