@@ -165,16 +165,11 @@ span.gold{
     font-family: 'Poiret One', cursive;
     cursor: pointer;
     transition: all 0.3s ease;
-    opacity: 0.75;
     color: white;
     display: grid;
     align-items: center;
     justify-items: center;
     box-sizing: border-box;
-}
-
-.hexagon:hover {
-    opacity: 1;
 }
 
 .hexagon:before,
@@ -258,19 +253,23 @@ svg.inner_SVG:hover {
 #CUT_mol {
     left: -64px;
     top: 38px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    grid-template-columns: repeat(2,1fr);
 }
 
 #CUT_mol {
-    background: gold;
+    background: white;
     color: black;
 }
 
 #CUT_mol:after {
-    border-top: 18.48px solid gold;
+    border-top: 18.48px solid white;
 }
 
 #CUT_mol:before {
-    border-bottom: 18.48px solid gold;
+    border-bottom: 18.48px solid white;
 }
 
 #CLEAR_mol {
@@ -431,4 +430,73 @@ p#move{
 #dicLink:hover{
     background: radial-gradient(white, gold);
     color: black;
+}
+
+#paletteWrapper{
+    width:100%;
+    height:50px;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.colorPalette{
+    width:16px;
+    height:16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index:10;
+    border-radius:100px;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    font-size:0.5em;
+    position: absolute;
+}
+.colorPalette:hover{
+    box-shadow: 0 0 1px 0px black;
+    width:30px;
+    height:30px;
+    z-index:100;
+    font-size:0.8em;
+}
+
+#cp0{
+    background: radial-gradient(white, gold);
+    margin-top:-39px;
+    margin-left:-25px;
+}
+
+#cp1{
+    background: radial-gradient(white, rgb(101, 146, 34));
+    margin-left:-45px;
+}
+
+#cp2{
+    background: radial-gradient(white, cornflowerblue);
+    margin-top:39px;
+    margin-left: -25px;
+}
+
+#cp3{
+    background: radial-gradient(white, tomato);
+    margin-top:-39px;
+    margin-left: 25px;
+}
+
+#cp4{
+    background:radial-gradient(white, black);
+    grid-column: 1/span 2;
+}
+
+#cp5{
+    background: radial-gradient(white, blueviolet);
+    margin-top: 39px;
+    margin-left: 25px;
+}
+
+#cp6{
+    background: radial-gradient(white, mediumvioletred);
+    margin-left: 45px;
 }
