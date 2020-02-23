@@ -22,6 +22,8 @@
     let CP2 = document.getElementById("cp2");
     let CP3 = document.getElementById("cp3");
     let CP4 = document.getElementById("cp4");
+    let CP5 = document.getElementById("cp5");
+    let CP6 = document.getElementById("cp6");
 
     let Xarray = [];
     let Yarray = [];
@@ -176,34 +178,11 @@
 
     createSvg();
 
-    // (function cut() {
-    //     SVG.setAttributeNS(null, "width", "500");
-    //     SVG.setAttributeNS(null, "height", "800");
-
-    //     const BTNCUT = document.getElementById("CUT_mol");
-
-    //     BTNCUT.addEventListener("click", function() {
-    //         let path = document.createElementNS(xmlns, "path");
-    //         path.setAttributeNS(null, 'stroke', "tomato");
-    //         path.setAttributeNS(null, 'stroke-width', 4);
-    //         path.setAttributeNS(null, 'stroke-linejoin', "round");
-    //         path.setAttributeNS(null, 'stroke-linecap', 'round');
-    //         path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
-    //         path.setAttributeNS(null, 'opacity', 1);
-    //         path.setAttributeNS(null, "fill", "none");
-    //         SVG.appendChild(path);
-
-    //         LTM.innerText += `<path d="M ${drawnLines}"/>`;
-    //         allInputCircles = [];
-    //         drawnLines = [];
-    //     });
-    // }());
-
-    (function cutGOLD(){
+    function CUT(B,C){
         SVG.setAttributeNS(null, "width", "500");
         SVG.setAttributeNS(null, "height", "800");
 
-        CP0.addEventListener("click", function() {
+        B.addEventListener("click", function() {
             let path = document.createElementNS(xmlns, "path");
             path.setAttributeNS(null, 'stroke', "tomato");
             path.setAttributeNS(null, 'stroke-width', 4);
@@ -214,95 +193,19 @@
             path.setAttributeNS(null, "fill", "none");
             SVG.appendChild(path);
 
-            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:gold;"/>`;
+            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C};"/>`;
             allInputCircles = [];
             drawnLines = [];
         });
-    }());
+    }
 
-    (function cutGREEN(){
-        SVG.setAttributeNS(null, "width", "500");
-        SVG.setAttributeNS(null, "height", "800");
-
-        CP1.addEventListener("click", function() {
-            let path = document.createElementNS(xmlns, "path");
-            path.setAttributeNS(null, 'stroke', "tomato");
-            path.setAttributeNS(null, 'stroke-width', 4);
-            path.setAttributeNS(null, 'stroke-linejoin', "round");
-            path.setAttributeNS(null, 'stroke-linecap', 'round');
-            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
-            path.setAttributeNS(null, 'opacity', 1);
-            path.setAttributeNS(null, "fill", "none");
-            SVG.appendChild(path);
-
-            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:rgb(101, 146, 34);"/>`;
-            allInputCircles = [];
-            drawnLines = [];
-        });
-    }());
-
-    (function cutCORN(){
-        SVG.setAttributeNS(null, "width", "500");
-        SVG.setAttributeNS(null, "height", "800");
-
-        CP2.addEventListener("click", function() {
-            let path = document.createElementNS(xmlns, "path");
-            path.setAttributeNS(null, 'stroke', "tomato");
-            path.setAttributeNS(null, 'stroke-width', 4);
-            path.setAttributeNS(null, 'stroke-linejoin', "round");
-            path.setAttributeNS(null, 'stroke-linecap', 'round');
-            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
-            path.setAttributeNS(null, 'opacity', 1);
-            path.setAttributeNS(null, "fill", "none");
-            SVG.appendChild(path);
-
-            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:cornflowerblue;"/>`;
-            allInputCircles = [];
-            drawnLines = [];
-        });
-    }());
-
-    (function cutTOMATO(){
-        SVG.setAttributeNS(null, "width", "500");
-        SVG.setAttributeNS(null, "height", "800");
-
-        CP3.addEventListener("click", function() {
-            let path = document.createElementNS(xmlns, "path");
-            path.setAttributeNS(null, 'stroke', "tomato");
-            path.setAttributeNS(null, 'stroke-width', 4);
-            path.setAttributeNS(null, 'stroke-linejoin', "round");
-            path.setAttributeNS(null, 'stroke-linecap', 'round');
-            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
-            path.setAttributeNS(null, 'opacity', 1);
-            path.setAttributeNS(null, "fill", "none");
-            SVG.appendChild(path);
-
-            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:tomato;"/>`;
-            allInputCircles = [];
-            drawnLines = [];
-        });
-    }());
-
-    (function cutBLACK(){
-        SVG.setAttributeNS(null, "width", "500");
-        SVG.setAttributeNS(null, "height", "800");
-
-        CP4.addEventListener("click", function() {
-            let path = document.createElementNS(xmlns, "path");
-            path.setAttributeNS(null, 'stroke', "tomato");
-            path.setAttributeNS(null, 'stroke-width', 4);
-            path.setAttributeNS(null, 'stroke-linejoin', "round");
-            path.setAttributeNS(null, 'stroke-linecap', 'round');
-            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
-            path.setAttributeNS(null, 'opacity', 1);
-            path.setAttributeNS(null, "fill", "none");
-            SVG.appendChild(path);
-
-            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:black;"/>`;
-            allInputCircles = [];
-            drawnLines = [];
-        });
-    }());
+    CUT(CP0, "gold");
+    CUT(CP1, "rgb(101, 146, 34)");
+    CUT(CP2, "cornflowerblue");
+    CUT(CP3, "tomato");
+    CUT(CP4, "black");
+    CUT(CP5, "blueviolet");
+    CUT(CP6, "mediumvioletred");
 
     (function print() {
         const BTNPRINT = document.getElementById("LINK_mol");
@@ -324,7 +227,6 @@
             printSVG.style.background = "white";
             printSVG.style.border = "1px solid lightgrey";
             printSVG.style.borderRadius = "15px";
-
             printSVG.innerHTML = LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
             PRINTER.appendChild(printSVG);
 
