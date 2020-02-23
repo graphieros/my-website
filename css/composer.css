@@ -3,7 +3,7 @@ a{
     color: inherit;
 }
 
-#main_wrapper_molecular { 
+#main_wrapper_molecular {
     max-width: 675px;
     margin: 0 auto;
     display: grid;
@@ -397,4 +397,33 @@ p#move{
     font-family: 'Poiret One', cursive;
     font-size:1.3em;
     transition: all 0.3s ease;
+}
+
+#dic{
+    width:100%;
+    border-radius:10px;
+    font-family: 'Poiret One', cursive;
+    text-align:center;
+    background: radial-gradient(grey, rgb(48, 48, 48));
+    display:grid;
+    align-items:center;
+    justify-items:center;
+}
+
+#dicLink{
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    width:250px;
+    height:40px;
+    border:1px solid white;
+    border-radius:5px;
+    box-shadow: 0px 0px 6px 2px black inset;
+    transition: all 0.3s ease;
+    background: radial-gradient(white, cornflowerblue);
+}
+
+#dicLink:hover{
+    background: radial-gradient(white, gold);
+    color: black;
 }
