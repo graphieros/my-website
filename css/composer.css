@@ -35,18 +35,22 @@ span.credit1{
 
 span.green{
     color: rgb(101, 146, 34);
+    font-weight:bold;
 }
 
 span.tomato{
     color: tomato;
+    font-weight:bold;
 }
 
 span.corn{
     color: cornflowerblue;
+    font-weight:bold;
 }
 
 span.gold{
     color: gold;
+    font-weight:bold;
 }
 
 .IO {
@@ -369,9 +373,10 @@ svg.inner_SVG:hover {
 }
 
 .choice{
-    display: grid;
+    /* display: grid;
     align-items:center;
-    justify-items:center;
+    justify-items:center; */
+    text-align:center;
     font-family: 'Poiret One', cursive;
     font-size:1.5em;
     box-sizing: border-box;
