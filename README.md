@@ -20,7 +20,7 @@ SVG code of what you choose to print is displayed so that you can copy it, to us
          UPDATE: the CUT button was replaced with a small palette offering the option to choose between 7 colors<br>
     <img src="https://github.com/graphieros/my-website/blob/master/palette.png" width="300px"><br>
     These colors are included in the Long term memory div which is used to print out the final result:<br>
-    <img src="https://github.com/graphieros/my-website/blob/master/codecolor.png" width="500px">
+    <img src="https://github.com/graphieros/my-website/blob/master/codecolor.png" width="700px">
   </li>
   <li>2. click PRINT to see a preview below (and click WASH to remove it)</li>
   <li>3. click SAVE to display result on the side (and click DEL to delete it)</li>
