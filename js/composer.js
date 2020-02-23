@@ -17,6 +17,12 @@
     let OPTION2 = document.getElementById("choice2");
     let OPTION3 = document.getElementById("choice3");
 
+    let CP0 = document.getElementById("cp0");
+    let CP1 = document.getElementById("cp1");
+    let CP2 = document.getElementById("cp2");
+    let CP3 = document.getElementById("cp3");
+    let CP4 = document.getElementById("cp4");
+
     let Xarray = [];
     let Yarray = [];
     let allInputCircles = [];
@@ -170,13 +176,34 @@
 
     createSvg();
 
-    (function cut() {
+    // (function cut() {
+    //     SVG.setAttributeNS(null, "width", "500");
+    //     SVG.setAttributeNS(null, "height", "800");
+
+    //     const BTNCUT = document.getElementById("CUT_mol");
+
+    //     BTNCUT.addEventListener("click", function() {
+    //         let path = document.createElementNS(xmlns, "path");
+    //         path.setAttributeNS(null, 'stroke', "tomato");
+    //         path.setAttributeNS(null, 'stroke-width', 4);
+    //         path.setAttributeNS(null, 'stroke-linejoin', "round");
+    //         path.setAttributeNS(null, 'stroke-linecap', 'round');
+    //         path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
+    //         path.setAttributeNS(null, 'opacity', 1);
+    //         path.setAttributeNS(null, "fill", "none");
+    //         SVG.appendChild(path);
+
+    //         LTM.innerText += `<path d="M ${drawnLines}"/>`;
+    //         allInputCircles = [];
+    //         drawnLines = [];
+    //     });
+    // }());
+
+    (function cutGOLD(){
         SVG.setAttributeNS(null, "width", "500");
         SVG.setAttributeNS(null, "height", "800");
 
-        const BTNCUT = document.getElementById("CUT_mol");
-
-        BTNCUT.addEventListener("click", function() {
+        CP0.addEventListener("click", function() {
             let path = document.createElementNS(xmlns, "path");
             path.setAttributeNS(null, 'stroke', "tomato");
             path.setAttributeNS(null, 'stroke-width', 4);
@@ -187,7 +214,91 @@
             path.setAttributeNS(null, "fill", "none");
             SVG.appendChild(path);
 
-            LTM.innerText += `<path d="M ${drawnLines}"/>`;
+            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:gold;"/>`;
+            allInputCircles = [];
+            drawnLines = [];
+        });
+    }());
+
+    (function cutGREEN(){
+        SVG.setAttributeNS(null, "width", "500");
+        SVG.setAttributeNS(null, "height", "800");
+
+        CP1.addEventListener("click", function() {
+            let path = document.createElementNS(xmlns, "path");
+            path.setAttributeNS(null, 'stroke', "tomato");
+            path.setAttributeNS(null, 'stroke-width', 4);
+            path.setAttributeNS(null, 'stroke-linejoin', "round");
+            path.setAttributeNS(null, 'stroke-linecap', 'round');
+            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
+            path.setAttributeNS(null, 'opacity', 1);
+            path.setAttributeNS(null, "fill", "none");
+            SVG.appendChild(path);
+
+            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:rgb(101, 146, 34);"/>`;
+            allInputCircles = [];
+            drawnLines = [];
+        });
+    }());
+
+    (function cutCORN(){
+        SVG.setAttributeNS(null, "width", "500");
+        SVG.setAttributeNS(null, "height", "800");
+
+        CP2.addEventListener("click", function() {
+            let path = document.createElementNS(xmlns, "path");
+            path.setAttributeNS(null, 'stroke', "tomato");
+            path.setAttributeNS(null, 'stroke-width', 4);
+            path.setAttributeNS(null, 'stroke-linejoin', "round");
+            path.setAttributeNS(null, 'stroke-linecap', 'round');
+            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
+            path.setAttributeNS(null, 'opacity', 1);
+            path.setAttributeNS(null, "fill", "none");
+            SVG.appendChild(path);
+
+            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:cornflowerblue;"/>`;
+            allInputCircles = [];
+            drawnLines = [];
+        });
+    }());
+
+    (function cutTOMATO(){
+        SVG.setAttributeNS(null, "width", "500");
+        SVG.setAttributeNS(null, "height", "800");
+
+        CP3.addEventListener("click", function() {
+            let path = document.createElementNS(xmlns, "path");
+            path.setAttributeNS(null, 'stroke', "tomato");
+            path.setAttributeNS(null, 'stroke-width', 4);
+            path.setAttributeNS(null, 'stroke-linejoin', "round");
+            path.setAttributeNS(null, 'stroke-linecap', 'round');
+            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
+            path.setAttributeNS(null, 'opacity', 1);
+            path.setAttributeNS(null, "fill", "none");
+            SVG.appendChild(path);
+
+            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:tomato;"/>`;
+            allInputCircles = [];
+            drawnLines = [];
+        });
+    }());
+
+    (function cutBLACK(){
+        SVG.setAttributeNS(null, "width", "500");
+        SVG.setAttributeNS(null, "height", "800");
+
+        CP4.addEventListener("click", function() {
+            let path = document.createElementNS(xmlns, "path");
+            path.setAttributeNS(null, 'stroke', "tomato");
+            path.setAttributeNS(null, 'stroke-width', 4);
+            path.setAttributeNS(null, 'stroke-linejoin', "round");
+            path.setAttributeNS(null, 'stroke-linecap', 'round');
+            path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
+            path.setAttributeNS(null, 'opacity', 1);
+            path.setAttributeNS(null, "fill", "none");
+            SVG.appendChild(path);
+
+            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:black;"/>`;
             allInputCircles = [];
             drawnLines = [];
         });
@@ -210,7 +321,8 @@
             printSVG.setAttributeNS(null, "stroke-linejoin", "round");
             printSVG.setAttributeNS(null, "fill", "none");
             printSVG.setAttributeNS(null, "stroke", color);
-            printSVG.style.background = "black";
+            printSVG.style.background = "white";
+            printSVG.style.border = "1px solid lightgrey";
             printSVG.style.borderRadius = "15px";
 
             printSVG.innerHTML = LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
@@ -282,7 +394,7 @@
         }
     }());
    
-    let mess = document.getElementById("move");
+    let mess = document.getElementById("move"); 
 
     function drag_start(event) {
         let style = window.getComputedStyle(event.target, null);
