@@ -12,7 +12,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>graphieros composer</title>
   <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/composer.css" class="css">
 </head>
@@ -37,6 +37,13 @@
         <a href="http://graphieros.atwebpages.com/php/glyphs.php" target="_blank"><p id="dicLink">GLYPH LIST</p></a>
       </div>
       <p id="move">the palette is draggable &#128540;</p>
+      <!-- <div id="paletteWrapper">
+        <div class="colorPalette" id="cp0"></div>
+        <div class="colorPalette" id="cp1"></div>
+        <div class="colorPalette" id="cp2"></div>
+        <div class="colorPalette" id="cp3"></div>
+        <div class="colorPalette" id="cp4"></div>
+      </div> -->
       <div id="hexWrap" draggable="true">
       
         <div class="hexagon" id="center">
@@ -67,7 +74,15 @@
           
         </div>
   
-        <div class="hexagon" id="CUT_mol">CUT</div>
+        <div class="hexagon" id="CUT_mol">
+          <div class="colorPalette" id="cp0">CUT</div>
+          <div class="colorPalette" id="cp1">CUT</div>
+          <div class="colorPalette" id="cp4">CUT</div>
+          <div class="colorPalette" id="cp2">CUT</div>
+          <div class="colorPalette" id="cp3">CUT</div>
+          <div class="colorPalette" id="cp5">CUT</div>
+          <div class="colorPalette" id="cp6">CUT</div>
+        </div>
         <div class="hexagon" id="CLEAR_mol">CLEAR</div>
         <div class="hexagon" id="LINK_mol">PRINT</div>
         <div class="hexagon" id="MOLECULE">SAVE</div>
