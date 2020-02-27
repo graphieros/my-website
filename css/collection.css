@@ -1,0 +1,99 @@
+body{
+  margin:0;
+  width:100vw;
+}
+
+html{
+  font-family: 'Poiret One', cursive;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+  transition: all 0.3s ease;
+}
+
+a:hover{
+  text-decoration-line: underline;
+}
+
+#pageTitle{
+  padding:20px;
+  margin:0 auto;
+  text-align:center;
+  font-size:1.5em;
+}
+
+span.green{
+  color: rgb(101, 146, 34);
+  font-weight:bold;
+}
+
+span.tomato{
+  color: tomato;
+  font-weight:bold;
+}
+
+span.corn{
+  color: cornflowerblue;
+  font-weight:bold;
+}
+
+span.gold{
+  color: gold;
+  font-weight:bold;
+}
+
+.book{
+  margin: 0 auto;
+  width:360px;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  grid-template-columns: repeat(2,160px);
+  grid-gap:10px;
+  background: white;
+  box-sizing: border-box;
+  padding:10px;
+}
+
+.collectionSVG{
+  fill:none;
+  height: 250px;
+  width:160px;
+  stroke-width:6px;
+  stroke-linecap:round;
+  stroke-linejoin: round;
+  /* border:1px solid lightgrey; */
+  border-radius:3px;
+  box-sizing: border-box;
+  padding:10px;
+}
+
+.title{
+  grid-column: 1 / span 2;
+  display:grid;
+  align-items:center;
+  justify-items:center;
+  border-bottom: 1px solid black;
+}
+
+.titleSVG{
+  fill:none;
+  width:320px;
+  stroke-width:10px;
+  stroke-linejoin:round;
+  stroke-linecap:round;
+}
+
+#signature{
+  width:200px;
+  stroke-width:6px;
+}
+
+#illustration0,
+#illustration1{
+  grid-column: 1 / span 2;
+  width:300px;
+  height:500px;
+}
