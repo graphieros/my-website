@@ -11,6 +11,7 @@
     const LTM = document.getElementById("LTM_M");
     const PRINTER = document.getElementById("molecular_printer");
     let MOLOUT = document.getElementById("wrapper_IO_right");
+    const TOGGLE = document.getElementById("toggle");
 
     let OPTION0 = document.getElementById("choice0");
     let OPTION1 = document.getElementById("choice1");
@@ -31,6 +32,15 @@
     let drawnLines = [];
     let size = SVGSIZE / 5;
 
+    (function toggleStyle(){
+        TOGGLE.addEventListener("click", function(){
+            if(TOGGLE.innerHTML === "HUMAN"){
+                TOGGLE.innerHTML = "ROBOT";
+            }else{
+                TOGGLE.innerHTML = "HUMAN";
+            }
+        })
+    }());
 
     function buildCoreSVG() {
 
@@ -154,7 +164,12 @@
             let oneY = Math.round(Yarray[i]);
 
             oneCircle.addEventListener("click", function() {
-                drawnLines.push([oneX, oneY]);
+                let rand = Math.round(Math.random()*10);
+                if(TOGGLE.innerHTML === "HUMAN"){
+                    drawnLines.push([oneX, oneY, `Q ${oneX-rand} ${oneY-rand}`]);
+                }else{
+                    drawnLines.push([oneX, oneY]);
+                }
                 drawLine();
             });
         }
@@ -163,7 +178,7 @@
         function drawLine() {
             if (drawnLines.length >= 1) {
                 let path = document.createElementNS(xmlns, "path");
-                path.setAttributeNS(null, 'stroke', "gold");
+                path.setAttributeNS(null, 'stroke', "greenyellow");
                 path.setAttributeNS(null, 'stroke-width', 4);
                 path.setAttributeNS(null, 'stroke-linejoin', "round");
                 path.setAttributeNS(null, 'stroke-linecap', 'round');
@@ -184,7 +199,7 @@
 
         B.addEventListener("click", function() {
             let path = document.createElementNS(xmlns, "path");
-            path.setAttributeNS(null, 'stroke', "tomato");
+            path.setAttributeNS(null, 'stroke', "white");
             path.setAttributeNS(null, 'stroke-width', 4);
             path.setAttributeNS(null, 'stroke-linejoin', "round");
             path.setAttributeNS(null, 'stroke-linecap', 'round');
