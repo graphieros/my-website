@@ -94,6 +94,10 @@ span.gold{
 #illustration0,
 #illustration1{
   grid-column: 1 / span 2;
-  width:300px;
-  height:500px;
+  width:200px;
+}
+
+#illustration2 {
+  grid-column: 1 / span 2;
+
 }
