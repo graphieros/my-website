@@ -501,7 +501,16 @@ p#move{
     margin-left: 45px;
 }
 
-#toggle{
+.toggles{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    position:relative;
+}
+
+#toggle,
+#toggle2{
+    width:100px;
     text-align:center;
     background: black;
     color:white;
@@ -515,13 +524,80 @@ p#move{
     transition: all 0.3s ease;
 }
 
-#toggle:hover{
+#toggle:hover,
+#toggle2:hover{
     background: white;
     color:black;
 }
 
-p#style{
-    margin-bottom:-4px;
+#hand{
+    grid-column: 1 / span 2;
+    height:20px;
+    width:20px;
+    border:1px solid black;
     font-family: 'Poiret One', cursive;
-    font-size: 0.8em;
+    font-size:0.3em;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    border-radius:2px;
+    cursor: move;
+    background: white;
+}
+
+#colorResult{
+    cursor: pointer;
+    grid-row: 1 / span 3;
+    height:100%;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    border-radius:100px;
+    box-sizing: border-box;
+    border:1px solid black;
+    font-family: 'Poiret One', cursive;
+    width:100%;
+    font-size:0.5em;
+    background:white;
+    box-shadow: 0 3px 10px black;
+}
+
+input{
+    width:50px;
+    font-family: 'Poiret One', cursive;
+    box-shadow: 0 2px 2px black inset;
+    box-sizing: border-box;
+    padding:2px;
+    font-weight: bold;
+    text-align:center;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#CS_R{
+    background:rgb(255, 0, 0);
+    color:white;
+    text-shadow: 0 1px 1px black;
+}
+
+#CS_G{
+    background: rgb(0, 255, 0);
+}
+
+#CS_B{
+    background: rgb(0, 0, 255);
+    color:white;
+    text-shadow: 0 1px 1px black;
+}
+
+.colorSpex{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column: 1 / span 2;
+    align-items:center;
+    justify-items:center;
 }
