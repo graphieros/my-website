@@ -12,6 +12,7 @@
     const PRINTER = document.getElementById("molecular_printer");
     let MOLOUT = document.getElementById("wrapper_IO_right");
     const TOGGLE = document.getElementById("toggle");
+    const TOGGLE2 = document.getElementById("toggle2");
 
     let OPTION0 = document.getElementById("choice0");
     let OPTION1 = document.getElementById("choice1");
@@ -36,8 +37,20 @@
         TOGGLE.addEventListener("click", function(){
             if(TOGGLE.innerHTML === "HUMAN"){
                 TOGGLE.innerHTML = "ROBOT";
+                TOGGLE2.style.display="initial";
             }else{
                 TOGGLE.innerHTML = "HUMAN";
+                TOGGLE2.style.display="none";
+            }
+        })
+    }());
+
+    (function toggle2Style(){
+        TOGGLE2.addEventListener("click", function(){
+            if(TOGGLE2.innerHTML === "LINE"){
+                TOGGLE2.innerHTML = "INK";
+            }else{
+                TOGGLE2.innerHTML = "LINE";
             }
         })
     }());
@@ -168,7 +181,11 @@
                 if(TOGGLE.innerHTML === "HUMAN"){
                     drawnLines.push([oneX, oneY, `Q ${oneX-rand} ${oneY-rand}`]);
                 }else{
-                    drawnLines.push([oneX, oneY]);
+                    if(TOGGLE2.innerHTML === "INK"){
+                        drawnLines.push([oneX-2, oneY-2, oneX+2, oneY+2]);
+                    }else{
+                        drawnLines.push([oneX, oneY]);
+                    }
                 }
                 drawLine();
             });
@@ -193,6 +210,31 @@
 
     createSvg();
 
+    let CS_R = document.getElementById("CS_R");
+    let CS_G = document.getElementById("CS_G");
+    let CS_B = document.getElementById("CS_B");
+    let make = document.getElementById("colorResult");
+    let outputColor;    
+
+    CS_R.addEventListener("change", function(){
+        updateColor();
+    });
+
+    CS_G.addEventListener("change", function(){
+        updateColor();
+    });
+
+    CS_B.addEventListener("change", function(){
+        updateColor();
+    });
+
+    function updateColor(){
+        outputColor = `rgb(${CS_R.value},${CS_G.value},${CS_B.value})`;
+        make.style.background = `radial-gradient(white, ${outputColor})`;
+        make.innerHTML = `rgb(${CS_R.value},${CS_G.value},${CS_B.value})`;
+        CP4.style.background = `radial-gradient(white, ${outputColor})`;
+    }
+    
     function CUT(B,C){
         SVG.setAttributeNS(null, "width", "500");
         SVG.setAttributeNS(null, "height", "800");
@@ -208,7 +250,18 @@
             path.setAttributeNS(null, "fill", "none");
             SVG.appendChild(path);
 
-            LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C};"/>`;
+            let sodit = document.getElementById("colorResult");
+            let gotit = sodit.innerHTML;
+            
+            if(B === CP4){
+                C = gotit;
+            }
+
+            if(TOGGLE2.innerHTML === "INK"){
+                LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C}; fill:${C};"/>`;
+            }else{
+                LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C};"/>`;
+            }
             allInputCircles = [];
             drawnLines = [];
         });
@@ -312,11 +365,18 @@
     }());
    
     let mess = document.getElementById("move"); 
+    let hand = document.getElementById("hand");
 
     function drag_start(event) {
         let style = window.getComputedStyle(event.target, null);
         event.dataTransfer.setData("text/plain",
         (parseInt(style.getPropertyValue("left"),10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"),10) - event.clientY));
+    } 
+
+    function drag_start2(event2) {
+        let style2 = window.getComputedStyle(event2.target, null);
+        event2.dataTransfer.setData("text/plain",
+        (parseInt(style2.getPropertyValue("left"),10) - event2.clientX) + ',' + (parseInt(style2.getPropertyValue("top"),10) - event2.clientY));
     } 
 
     function drop(event) {
@@ -328,6 +388,15 @@
         return false;
     }
 
+    function drop2(event2) {
+        var offset2 = event2.dataTransfer.getData("text/plain").split(',');
+        let dm2 = document.getElementById('toggles');
+        dm2.style.left = (event2.clientX + parseInt(offset2[0],10)) + 'px';
+        dm2.style.top = (event2.clientY + parseInt(offset2[1],10)) + 'px';
+        event2.preventDefault();
+        return false;
+    }
+
     function drag_over(event) {
         mess.innerHTML = "&#128520;";
         mess.style.fontSize = "3em";
@@ -336,10 +405,21 @@
         return false;
     } 
 
+    function drag_over2(event2) {
+        event2.preventDefault();
+        return false;
+    } 
+
     let dm = document.getElementById('hexWrap');
     dm.addEventListener('dragstart',drag_start,false);
     document.body.addEventListener('dragover',drag_over,false);
-    document.body.addEventListener('drop',drop,false); 
+    document.body.addEventListener('drop',drop,false);
+
+    let dm2 = document.getElementById('toggles');
+    dm2.addEventListener('dragstart',drag_start2,false);
+    document.body.addEventListener('dragover',drag_over2,false);
+    document.body.addEventListener('drop',drop2,false);
+    
 
     (function showLinearTemplate(){
         OPTION0.addEventListener("click", function(){
