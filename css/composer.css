@@ -543,10 +543,15 @@ p#move{
     border-radius:2px;
     cursor: move;
     background: white;
+    transition: all 0.3s ease;
+}
+
+#hand:hover{
+    transform: rotate(360deg);
+    background: tomato;
 }
 
 #colorResult{
-    cursor: pointer;
     grid-row: 1 / span 3;
     height:100%;
     display: grid;
@@ -600,4 +605,23 @@ input::-webkit-inner-spin-button {
     grid-column: 1 / span 2;
     align-items:center;
     justify-items:center;
+}
+
+.ABC{
+    padding-top:10px;
+    grid-column: 1 / span 2;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#choiceA, #choiceB, #choiceC {
+    transition: all 0.3s ease;
+}
+
+#choiceA:hover, #choiceC:hover{
+    transform: rotate(90deg);
+}
+
+#choiceB:hover {
+    transform: rotate(-90deg);
 }

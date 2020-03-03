@@ -70,6 +70,23 @@ span.gold{
   padding:10px;
 }
 
+.fractalSVG{
+  fill:none;
+  width:100%;
+  stroke-width:6px;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  box-sizing:border-box;
+  padding:0px;
+}
+
+.centerSVG{
+  fill:none;
+  stroke-width:5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .title{
   grid-column: 1 / span 2;
   display:grid;
@@ -97,7 +114,45 @@ span.gold{
   width:200px;
 }
 
-#illustration2 {
+#illustration2,
+#illustration3,
+#illustration4,
+#illustration5 {
   grid-column: 1 / span 2;
+}
 
+#illustration3 {
+  width:400px;
+}
+
+#illustration5{
+  height:400px;
+  background:black;
+  box-sizing: border-box;
+  padding:10px;
+  border-radius:3px;
+  border:10px solid rgb(212,228,76);
+}
+
+#centerSVG0{
+  grid-column: 1 / span 2;
+  height:400px;
+}
+
+#handwritten0{
+  grid-column: 1 / span 2;
+  stroke-width:4px;
+  width:360px;
+  border:1px solid tomato;
+  box-sizing: border-box;
+  padding-top:10px;
+  padding-bottom:10px;
+  border-radius:4px;
+  background: radial-gradient(circle at top left, tomato, black);
+}
+
+#illustration6{
+  grid-column: 1 / span 2;
+  width:180px;
+  transition: all 0.3s ease;
 }
