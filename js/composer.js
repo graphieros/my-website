@@ -15,8 +15,11 @@
     const TOGGLE2 = document.getElementById("toggle2");
 
     let OPTION0 = document.getElementById("choice0");
+    let OPTIONA = document.getElementById("choiceA");
     let OPTION1 = document.getElementById("choice1");
+    let OPTIONB = document.getElementById("choiceB");
     let OPTION2 = document.getElementById("choice2");
+    let OPTIONC = document.getElementById("choiceC");
     let OPTION3 = document.getElementById("choice3");
 
     let CP0 = document.getElementById("cp0");
@@ -230,7 +233,7 @@
 
     function updateColor(){
         outputColor = `rgb(${CS_R.value},${CS_G.value},${CS_B.value})`;
-        make.style.background = `radial-gradient(white, ${outputColor})`;
+        make.style.background = outputColor;
         make.innerHTML = `rgb(${CS_R.value},${CS_G.value},${CS_B.value})`;
         CP4.style.background = `radial-gradient(white, ${outputColor})`;
     }
@@ -421,8 +424,8 @@
     document.body.addEventListener('drop',drop2,false);
     
 
-    (function showLinearTemplate(){
-        OPTION0.addEventListener("click", function(){
+    function showLinearTemplate(opt){
+        opt.addEventListener("click", function(){
 
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
@@ -1027,10 +1030,13 @@
                 r3 += 5;
             }
         })
-    }());
+    };
 
-    (function showDoubleTemplate(){
-        OPTION1.addEventListener("click", function(){
+    showLinearTemplate(OPTION0);
+    showLinearTemplate(OPTIONA);
+
+    function showDoubleTemplate(opt){
+        opt.addEventListener("click", function(){
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
                 allInputCircles[i].setAttributeNS(null, "stroke", "none");
@@ -1382,10 +1388,13 @@
             }
 
         })
-    }());
+    };
 
-    (function showMolecularTemplate(){
-        OPTION2.addEventListener("click", function(){
+    showDoubleTemplate(OPTION1);
+    showDoubleTemplate(OPTIONB);
+
+    function showMolecularTemplate(opt){
+        opt.addEventListener("click", function(){
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
                 allInputCircles[i].setAttributeNS(null, "stroke", "none");
@@ -1931,7 +1940,10 @@
             allInputCircles[974].style.fill = "black";
             allInputCircles[974].setAttributeNS(null, "stroke", "cornflowerblue");
         })
-    }());
+    };
+
+    showMolecularTemplate(OPTION2);
+    showMolecularTemplate(OPTIONC);
 
     (function makeCirclesGrey(){
         OPTION3.addEventListener("click", function(){
