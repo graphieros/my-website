@@ -228,6 +228,22 @@
     let make = document.getElementById("colorResult");
     let outputColor;    
 
+    let btn_random_R = document.getElementById("randomR");
+    let btn_random_G = document.getElementById("randomG");
+    let btn_random_B = document.getElementById("randomB");
+
+    function randomColor(btnC, box){
+        btnC.addEventListener("click", function(){
+            let r = Math.random()*255;
+            box.value = Math.round(r);
+            updateColor();
+        });
+    }
+
+    randomColor(btn_random_R, CS_R);
+    randomColor(btn_random_G, CS_G);
+    randomColor(btn_random_B, CS_B);
+
     CS_R.addEventListener("change", function(){
         updateColor();
     });
