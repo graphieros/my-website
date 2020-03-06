@@ -180,7 +180,14 @@
             let oneY = Math.round(Yarray[i]);
 
             oneCircle.addEventListener("click", function() {
-                let anotherRand = Math.random()*10;
+                let anotherRand = Math.random();
+                if(structName.innerHTML === "LINEAR"){
+                    anotherRand *= 10;
+                }else if(structName.innerHTML === "DOUBLE LINEAR"){
+                    anotherRand *= 20;
+                }else{
+                    anotherRand *= 10;
+                }
                 let plusOrMinus = Math.random() < 0.5 ? -anotherRand : anotherRand;
                 let rand = Math.round(Math.random() * (plusOrMinus));
                 if(TOGGLE.innerHTML === "HUMAN"){
@@ -425,9 +432,12 @@
     document.body.addEventListener('dragover',drag_over2,false);
     document.body.addEventListener('drop',drop2,false);
     
+    let structName = document.getElementById("structName");
 
-    function showLinearTemplate(opt){
+    function showLinearTemplate(opt, text){
         opt.addEventListener("click", function(){
+
+            structName.innerHTML = text;
 
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
@@ -1034,11 +1044,14 @@
         })
     };
 
-    showLinearTemplate(OPTION0);
-    showLinearTemplate(OPTIONA);
+    showLinearTemplate(OPTION0, "LINEAR");
+    showLinearTemplate(OPTIONA, "LINEAR");
 
-    function showDoubleTemplate(opt){
+    function showDoubleTemplate(opt, text){
         opt.addEventListener("click", function(){
+
+            structName.innerHTML = text;
+
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
                 allInputCircles[i].setAttributeNS(null, "stroke", "none");
@@ -1392,11 +1405,14 @@
         })
     };
 
-    showDoubleTemplate(OPTION1);
-    showDoubleTemplate(OPTIONB);
+    showDoubleTemplate(OPTION1, "DOUBLE LINEAR");
+    showDoubleTemplate(OPTIONB, "DOUBLE LINEAR");
 
-    function showMolecularTemplate(opt){
+    function showMolecularTemplate(opt, text){
         opt.addEventListener("click", function(){
+
+            structName.innerHTML = text;
+
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
                 allInputCircles[i].setAttributeNS(null, "stroke", "none");
@@ -1944,11 +1960,14 @@
         })
     };
 
-    showMolecularTemplate(OPTION2);
-    showMolecularTemplate(OPTIONC);
+    showMolecularTemplate(OPTION2, "MOLECULAR");
+    showMolecularTemplate(OPTIONC, "MOLECULAR");
 
     (function makeCirclesGrey(){
         OPTION3.addEventListener("click", function(){
+
+            structName.innerHTML = "";
+
             for(i = 0; i < allInputCircles.length; i += 1){
                 allInputCircles[i].style.fill = "grey";
                 allInputCircles[i].setAttributeNS(null, "stroke", "none");
