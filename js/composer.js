@@ -180,7 +180,9 @@
             let oneY = Math.round(Yarray[i]);
 
             oneCircle.addEventListener("click", function() {
-                let rand = Math.round(Math.random()*10);
+                let anotherRand = Math.random()*10;
+                let plusOrMinus = Math.random() < 0.5 ? -anotherRand : anotherRand;
+                let rand = Math.round(Math.random() * (plusOrMinus));
                 if(TOGGLE.innerHTML === "HUMAN"){
                     drawnLines.push([oneX, oneY, `Q ${oneX-rand} ${oneY-rand}`]);
                 }else{
