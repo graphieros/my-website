@@ -186,7 +186,7 @@
                 }else if(structName.innerHTML === "DOUBLE LINEAR"){
                     anotherRand *= 20;
                 }else{
-                    anotherRand *= 10;
+                    anotherRand *= 15;
                 }
                 let plusOrMinus = Math.random() < 0.5 ? -anotherRand : anotherRand;
                 let rand = Math.round(Math.random() * (plusOrMinus));
