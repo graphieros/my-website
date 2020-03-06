@@ -607,6 +607,46 @@ input::-webkit-inner-spin-button {
     justify-items:center;
 }
 
+#colorSpexGrid{
+    display:grid;
+    grid-template-columns: auto 20px;
+}
+
+.randomColor{
+    font-family: 'Poiret One', cursive;
+    text-align:center;
+    border:1px solid black;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    cursor:pointer;
+}
+
+.randomColor:hover{
+    color:white;
+    text-shadow: 0 1px 1px black;
+}
+
+#randomR{
+    border-bottom: none;
+    border-radius:3px 3px 0 0;
+}
+#randomB{
+    border-top:none;
+    border-radius: 0 0 3px 3px;
+}
+
+#randomR:hover{
+    background: rgb(255,0,0);
+}
+
+#randomG:hover{
+    background: rgb(0,255,0);
+}
+
+#randomB:hover{
+    background: rgb(0,0,255);
+}
+
 .ABC{
     padding-top:10px;
     grid-column: 1 / span 2;
@@ -624,4 +664,12 @@ input::-webkit-inner-spin-button {
 
 #choiceB:hover {
     transform: rotate(-90deg);
+}
+
+#structName{
+    grid-column: 1 / span 3;
+    font-family: 'Poiret One', cursive;
+    font-size: 0.8em;
+    color: black;
+    text-align:center;
 }
