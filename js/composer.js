@@ -208,7 +208,7 @@
             if (drawnLines.length >= 1) {
                 let path = document.createElementNS(xmlns, "path");
                 path.setAttributeNS(null, 'stroke', "greenyellow");
-                path.setAttributeNS(null, 'stroke-width', 4);
+                path.setAttributeNS(null, 'stroke-width', 3);
                 path.setAttributeNS(null, 'stroke-linejoin', "round");
                 path.setAttributeNS(null, 'stroke-linecap', 'round');
                 path.setAttributeNS(null, 'd', `M ${drawnLines.join(' ')}`);
@@ -270,7 +270,7 @@
         B.addEventListener("click", function() {
             let path = document.createElementNS(xmlns, "path");
             path.setAttributeNS(null, 'stroke', "white");
-            path.setAttributeNS(null, 'stroke-width', 4);
+            path.setAttributeNS(null, 'stroke-width', 3);
             path.setAttributeNS(null, 'stroke-linejoin', "round");
             path.setAttributeNS(null, 'stroke-linecap', 'round');
             path.setAttributeNS(null, 'd', `M ${STM.innerHTML}`);
