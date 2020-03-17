@@ -280,6 +280,9 @@
 
             let sodit = document.getElementById("colorResult");
             let gotit = sodit.innerHTML;
+            if(gotit === "" || gotit === "rgb(,,)"){
+                gotit = "black";
+            }
             
             if(B === CP4){
                 C = gotit;
