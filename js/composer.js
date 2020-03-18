@@ -13,6 +13,9 @@
     let MOLOUT = document.getElementById("wrapper_IO_right");
     const TOGGLE = document.getElementById("toggle");
     const TOGGLE2 = document.getElementById("toggle2");
+    const TOGGLE3 = document.getElementById("toggle3");
+    const COPY = document.getElementById("copy");
+    const EMPTY = document.getElementById("empty");
 
     let OPTION0 = document.getElementById("choice0");
     let OPTIONA = document.getElementById("choiceA");
@@ -54,6 +57,16 @@
                 TOGGLE2.innerHTML = "INK";
             }else{
                 TOGGLE2.innerHTML = "LINE";
+            }
+        })
+    }());
+
+    (function toggle3Style(){
+        TOGGLE3.addEventListener("click", function(){
+            if(TOGGLE3.innerHTML === "NO FILL"){
+                TOGGLE3.innerHTML = "FILL";
+            }else{
+                TOGGLE3.innerHTML = "NO FILL";
             }
         })
     }());
@@ -255,7 +268,7 @@
     CS_B.addEventListener("change", function(){
         updateColor();
     });
-
+ 
     function updateColor(){
         outputColor = `rgb(${CS_R.value},${CS_G.value},${CS_B.value})`;
         make.style.background = outputColor;
@@ -291,7 +304,12 @@
             if(TOGGLE2.innerHTML === "INK"){
                 LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C}; fill:${C};"/>`;
             }else{
-                LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C};"/>`;
+                if(TOGGLE3.innerHTML === "NO FILL"){
+                    LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C};"/>`;
+                }else{
+                    LTM.innerText += `<path d="M ${drawnLines}" style="stroke:${C}; fill:${C}"/>`;
+                }
+                
             }
             allInputCircles = [];
             drawnLines = [];
@@ -363,7 +381,7 @@
             MOLOUT_SVG.setAttributeNS(null, "stroke-linejoin", "round");
             MOLOUT_SVG.setAttributeNS(null, "fill", "none");
             MOLOUT_SVG.setAttributeNS(null, "stroke", "black");
-            MOLOUT_SVG.innerHTML = LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>');;
+            MOLOUT_SVG.innerHTML = LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>');
             MOLOUT.appendChild(MOLOUT_SVG);
         });
     }());
@@ -393,7 +411,24 @@
             //     light.style.transform = "rotate(180deg)";
             // });
         }
+    }()); 
+
+    (function copySVG(){
+        COPY.addEventListener("click", function(){
+            copyTrans = document.createElement("TEXTAREA");
+            EMPTY.innerHTML = "";
+            copyTrans.innerHTML = "";
+            copyTrans.innerHTML = LTM.innerHTML;
+            EMPTY.appendChild(copyTrans);
+            copyTrans.select();
+            document.execCommand("copy");
+            EMPTY.removeChild(copyTrans);
+            SVGCOP = document.createElementNS(xmlns, "svg");
+            console.log(LTM.innerHTML);
+            EMPTY.innerHTML = `<svg id="copiedSVG" viewbox="0 0 960 1650" style="width:33%; fill:none; stroke-width:6px; stroke-linecap: round; stroke-linejoin: round;">${LTM.innerHTML.split('&lt;').join('<').split('&gt;').join('>')}</svg>`;
+        });
     }());
+
    
     let mess = document.getElementById("move"); 
     let hand = document.getElementById("hand");
