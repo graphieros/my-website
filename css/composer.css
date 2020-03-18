@@ -2,7 +2,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
-
+ 
 #main_wrapper_molecular {
     max-width: 675px;
     margin: 0 auto;
@@ -524,8 +524,24 @@ p#move{
     transition: all 0.3s ease;
 }
 
+#toggle3{
+    width:100%;
+    text-align:center;
+    background: black;
+    color:white;
+    font-family: 'Poiret One', cursive;
+    box-sizing: border-box;
+    border:1px solid grey;
+    grid-column: 1 / span 2;
+    padding:10px;
+    border-radius:3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 #toggle:hover,
-#toggle2:hover{
+#toggle2:hover,
+#toggle3:hover{
     background: white;
     color:black;
 }
@@ -619,6 +635,7 @@ input::-webkit-inner-spin-button {
     box-sizing: border-box;
     transition: all 0.3s;
     cursor:pointer;
+    background:white;
 }
 
 .randomColor:hover{
@@ -672,4 +689,36 @@ input::-webkit-inner-spin-button {
     font-size: 0.8em;
     color: black;
     text-align:center;
+    background:white;
+    border-radius:3px;
 }
+
+.copy{
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    font-family: 'Poiret One', cursive;
+    box-sizing: border-box;
+    padding:5px;
+    text-align:center;
+    border:1px solid black;
+    border-radius:3px;
+    transition: all 0.3s ease;
+    cursor:pointer;
+}
+
+.copy:hover{
+    background: black;
+    color: greenyellow;
+}
+
+.empty{
+    width:100%;
+    text-align:center;
+    transition: all 0.3s ease;
+    font-family: 'Poiret One', cursive;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+} 
+
