@@ -6,7 +6,9 @@ const SECTIONS = document.getElementsByClassName("sections");
 const MENUBALLS = document.getElementById("menuBalls");
 const MENUBALL0 = document.getElementById("menuBall0");
 const MENUBALL1 = document.getElementById("menuBall1");
+const MENUBALLGRAPHIEROS = document.getElementById("menuBallGraphieros");
 const MENUBALL2 = document.getElementById("menuBall2");
+const MENUBALLJOURNAL = document.getElementById("menuBallJournal");
 const MENUBALL3 = document.getElementById("menuBall3");
 const XBALL = document.getElementById("Xball");
 const XBALLCROSS0 = document.getElementById("XballCross0");
@@ -53,12 +55,18 @@ let i;
         setTimeout(function() {
             MENUBALL1.style.height = "70px";
             MENUBALL1.style.width = "70px";
+            MENUBALLGRAPHIEROS.style.width = "70px";
+            MENUBALLGRAPHIEROS.style.height = "70px";
             MENUBALL1.style.opacity = 1;
+            MENUBALLGRAPHIEROS.style.opacity = 1;
         }, 150);
         setTimeout(function() {
             MENUBALL2.style.height = "70px";
             MENUBALL2.style.width = "70px";
+            MENUBALLJOURNAL.style.height = "70px";
+            MENUBALLJOURNAL.style.width = "70px";
             MENUBALL2.style.opacity = 1;
+            MENUBALLJOURNAL.style.opacity = 1;
         }, 200);
         setTimeout(function() {
             MENUBALL3.style.height = "70px";
@@ -97,9 +105,11 @@ function closeMenu() {
     }, 10);
     setTimeout(function() {
         MENUBALL2.style.opacity = 0;
+        MENUBALLJOURNAL.style.opacity = 0;
     }, 20);
     setTimeout(function() {
         MENUBALL1.style.opacity = 0;
+        MENUBALLGRAPHIEROS.style.opacity = 0;
     }, 30);
     setTimeout(function() {
         MENUBALL0.style.opacity = 0;
@@ -153,7 +163,7 @@ showSection(
     SECTIONS[0],
     SECTIONS[1],
     SECTIONS[2]
-)
+) 
 
 function showQuote(menu, quote) {
     menu.addEventListener("mouseover", function() {
@@ -167,7 +177,9 @@ function showQuote(menu, quote) {
 
 showQuote(MENUBALL0, "Une sorte de curriculum vitae");
 showQuote(MENUBALL1, "La construction d'une langue hexagonale");
+showQuote(MENUBALLGRAPHIEROS, "La clé, dans sa version en graphieros");
 showQuote(MENUBALL2, "Ecrire et peindre simultanément dans une langue nouvelle");
+showQuote(MENUBALLJOURNAL, "Journal commencé le jour 0 du confinement en France")
 showQuote(MENUBALL3, "Programmation, idées et applications");
 
 //BIO
@@ -288,7 +300,7 @@ showApp(DEVMENU[2], APPS[2], APPS[0], APPS[1]);
           oneCircle.setAttributeNS(null, "fill", "white");
         });
       }
-    }
+    } 
 
     function createSvg(){
         buildCoreSVG();
