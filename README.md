@@ -1,7 +1,7 @@
 # my-website
 
 main files for my single page website, without the php files.
-take a look: http://graphieros.atwebpages.com
+take a look: http://graphieros.com
 Experience is probably best on mobile.
 
 <img src="https://github.com/graphieros/my-website/blob/master/myWebsite.png" width="500px">
@@ -9,7 +9,7 @@ Experience is probably best on mobile.
 # graphieros composer
 
 this application allows you to write in graphieros in your browser.<br>
-Go to http://graphieros.atwebpages.com/composer.html to give it a try.
+Go to http://graphieros.com/composer.html to give it a try.
 Choose templates to write either in linear mode, double-linear mode, molecular mode or free mode.
 SVG code of what you choose to print is displayed so that you can copy it, to use on your website, or push to a database.
 
