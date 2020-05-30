@@ -8,7 +8,7 @@ body {
 
 :root {
     --FT: 'Poiret One', cursive;
-}
+} 
 
 footer{
     position:absolute;
@@ -131,7 +131,7 @@ span.nD{
 
 #menuBalls {
     display: none;
-}
+} 
 
 .menuBall {
     display: grid;
@@ -145,6 +145,7 @@ span.nD{
     color: white;
     padding: 3px;
     font-size: 1em;
+    font-weight:bold;
     box-sizing: border-box;
     opacity: 0;
     transition: all 0.3s ease, 0.5s box-shadow;
@@ -172,7 +173,24 @@ span.nD{
     right: 131px;
     transform: translateY(-100%);
     background: cornflowerblue;
-    color:black;
+    color:white;
+    text-shadow: 0 1px 1px black;
+
+}
+
+#menuBallGraphieros{
+    top:50%;
+    right:192px;
+    transform: translateY(-150%);
+    background: cornflowerblue;
+}
+
+.svgCle{
+    width:100%;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width:4px;
 }
 
 #menuBall2 {
@@ -180,7 +198,17 @@ span.nD{
     right: 131px;
     transform: translateY(0%);
     background:tomato;
-    color:black;
+    color:white;
+    text-shadow: 0 1px 1px black;
+}
+
+#menuBallJournal{
+    top:50%;
+    right: 192px;
+    transform:translateY(50%);
+    background: tomato;
+    font-size:0.8em;
+    text-shadow: 0 1px 1px black;
 }
 
 #menuBall3 {
@@ -307,9 +335,14 @@ span#EE{
 }
 
 #QUOTE {
+    box-sizing: border-box;
+    padding:15px;
+    border-radius:100%;
     position: fixed;
-    top: 65%;
-    width: 100vw;
+    top: 85%;
+    margin-left:50%;
+    transform: translate(-50%);
+    width: 90vw;
     text-align: center;
     font-family: var(--FT);
     font-size: 1.3em;
@@ -380,6 +413,7 @@ img#BIOPIC{
     text-align:center;
     cursor:pointer;
     transition:all 0.3s ease, 0.3s box-shadow;
+    font-weight:bold;
 }
 
 #BIOPICmenu > div:hover{
@@ -450,6 +484,27 @@ span.blue{
 }
 
 /*IDEO*/
+
+.svgTitle{
+    fill:none;
+    stroke-width:6px;
+    stroke-linecap:round;
+    stroke-linejoin: round;
+    box-sizing: border-box;
+    height:100%;
+    transition: all 0.3s ease;
+  }
+
+  #cleGraph{
+    border:1px solid green;
+    background: white;
+    transition: all 0.3s ease;
+  }
+
+  #cleGraph:hover > svg {
+      height:120%;
+  }
+
 .graphieros{
     width:100%;
     background:black;
@@ -579,7 +634,7 @@ p#cleGreen{
     justify-items:center;
     grid-gap: 10px;
     transition: all 0.3s ease;
-    background:black;
+    background:black; 
 }
 
 .galeriePicWrapper{
@@ -610,10 +665,12 @@ p#cleGreen{
     display:grid;
     align-items:center;
     justify-items:center;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
 }
 
-#widePic0{
+#widePic0,
+#widePic1,
+#widePic2{
     grid-column: 1 / span 3;
 }
 
