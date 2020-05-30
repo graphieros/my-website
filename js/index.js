@@ -79,7 +79,7 @@ let i;
         }, 300);
 
     })
-}());
+}()); 
 
 
 XBALL.addEventListener("click", function() {
@@ -163,24 +163,54 @@ showSection(
     SECTIONS[0],
     SECTIONS[1],
     SECTIONS[2]
-) 
+)
 
-function showQuote(menu, quote) {
+function showQuote(menu, quote, col) {
+  // let k = 0;
+  
     menu.addEventListener("mouseover", function() {
         QUOTE.innerHTML = quote;
-    });
+        QUOTE.style.background = `linear-gradient(to bottom right,darkgrey,${col}, transparent, transparent, transparent, transparent, transparent, transparent, transparent`;
+    }); 
+    // menu.addEventListener("mouseover", function(){
+    //   let interval = setInterval(function(){
+    //     QUOTE.innerHTML += quote.charAt(k);
+    //     k += 1;
+    //     if(k > quote.length){
+    //       clearInterval(interval);
+    //     }
+    //   },0)
+    // }); //when clicking to quickly on another menu, loops merge and result is weird
+  // let splat = quote.split("");
+  // let k = 0;
+
+  // menu.addEventListener("mouseover", function() {
+  //     let interval = setInterval(function(){
+  //       if(splat[k] === undefined || k >= splat.length){
+  //         splat[k] = "";
+  //       }
+
+  //       QUOTE.innerHTML += splat[k];
+  //       k += 1;
+  //       if(k >= splat.length ){
+  //         clearInterval(interval);
+  //       }
+  //     },0); //better but same issue in the end
+  // }); 
+    
 
     menu.addEventListener("mouseout", function() {
         QUOTE.innerHTML = "";
+        QUOTE.style.background = "none";
     });
 }
 
-showQuote(MENUBALL0, "Une sorte de curriculum vitae");
-showQuote(MENUBALL1, "La construction d'une langue hexagonale");
-showQuote(MENUBALLGRAPHIEROS, "La clé, dans sa version en graphieros");
-showQuote(MENUBALL2, "Ecrire et peindre simultanément dans une langue nouvelle");
-showQuote(MENUBALLJOURNAL, "Journal commencé le jour 0 du confinement en France")
-showQuote(MENUBALL3, "Programmation, idées et applications");
+showQuote(MENUBALL0, "Une sorte de curriculum vitae", "rgb(90,156,36)");
+showQuote(MENUBALL1, "La construction d'une langue hexagonale", "cornflowerblue");
+showQuote(MENUBALLGRAPHIEROS, "La clé, dans sa version en graphieros", "cornflowerblue");
+showQuote(MENUBALL2, "Ecrire et peindre simultanément dans une langue nouvelle","tomato");
+showQuote(MENUBALLJOURNAL, "Journal commencé le jour 0 du confinement en France","tomato")
+showQuote(MENUBALL3, "Programmation, idées et applications", "gold");
 
 //BIO
 (function hideBioPic(){
@@ -193,6 +223,12 @@ showQuote(MENUBALL3, "Programmation, idées et applications");
             }
             BIOPIC.style.opacity = 0.2;
             content.style.display = "initial";
+            this.style.color = "greenyellow";
+        })
+
+        BIOCHOICE[i].addEventListener("mouseout", function(){
+          this.style.background = "radial-gradient(white, grey)";
+          this.style.color = "black";
         })
     }
 }());
