@@ -607,7 +607,7 @@ haha("haha", "je ne vous le dirai pas", "( ... )");
   })
 }());
 
-(function sufflePics(){
+(function shufflePics(){
 
   const OEIL = document.getElementById("oeil"),
         VISAGE = document.getElementById("visage"),
@@ -650,9 +650,13 @@ haha("haha", "je ne vous le dirai pas", "( ... )");
       BOUCHE.style.width = "100%";
 
       OEIL.style.opacity = 0;
+      OEIL.style.transform = `rotateY(40deg) translateX(-50px) translateZ(-0px)`;
       VISAGE.style.opacity = 0;
+      VISAGE.style.transform = `rotateY(-40deg) translateX(50px) translateZ(-0px)`;
       OREILLE.style.opacity = 0;
+      OREILLE.style.transform = `rotateY(-40deg) translateX(50px) translateZ(-0px)`;
       BOUCHE.style.opacity = 0;
+      BOUCHE.style.transform = `rotateY(40deg) translateX(-50px) translateZ(-0px)`;
 
       let time = 377;
 
@@ -662,6 +666,7 @@ haha("haha", "je ne vous le dirai pas", "( ... )");
         let one = PAINTINGS[i];
         let position = OPTIONS[i];
         setTimeout(() => {
+          one.style.transform = "none";
           one.style.gridColumn = position.x;
           one.style.gridRow = position.y;
           one.style.opacity = 1;
