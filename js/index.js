@@ -4,6 +4,7 @@ const LANDING = document.getElementById("LANDING");
 const QUOTE = document.getElementById("QUOTE");
 const SECTIONS = document.getElementsByClassName("sections");
 const MENUBALLS = document.getElementById("menuBalls");
+const MENUBALLBLOG = document.getElementById("menuBallBlog");
 const MENUBALL0 = document.getElementById("menuBall0");
 const MENUBALL1 = document.getElementById("menuBall1");
 const MENUBALLGRAPHIEROS = document.getElementById("menuBallGraphieros");
@@ -51,6 +52,9 @@ let i;
             MENUBALL0.style.height = "70px";
             MENUBALL0.style.width = "70px";
             MENUBALL0.style.opacity = 1;
+            MENUBALLBLOG.style.height = "70px";
+            MENUBALLBLOG.style.width = "70px";
+            MENUBALLBLOG.style.opacity = 1;
         }, 100);
         setTimeout(function() {
             MENUBALL1.style.height = "70px";
@@ -113,6 +117,7 @@ function closeMenu() {
     }, 30);
     setTimeout(function() {
         MENUBALL0.style.opacity = 0;
+        MENUBALLBLOG.style.opacity = 0;
     }, 40);
     setTimeout(function() {
         MENUBALLS.style.display = "none";
@@ -203,8 +208,9 @@ function showQuote(menu, quote, col) {
         QUOTE.innerHTML = "";
         QUOTE.style.background = "none";
     });
-}
+} 
 
+showQuote(MENUBALLBLOG, "Des pensées, des photos comme elles viennent", "rgb(90,156,36)");
 showQuote(MENUBALL0, "Une sorte de curriculum vitae", "rgb(90,156,36)");
 showQuote(MENUBALL1, "La construction d'une langue hexagonale", "cornflowerblue");
 showQuote(MENUBALLGRAPHIEROS, "La clé, dans sa version en graphieros", "cornflowerblue");
