@@ -160,6 +160,14 @@ span.nD{
     box-shadow: 0 0 1em 0.5em white inset;
 }
 
+#menuBallBlog{
+    top:50%;
+    right:70px;
+    transform: translateY(-250%);
+    background: rgb(133,197,37);
+    color:black;
+}
+
 #menuBall0 {
     top: 50%;
     right: 70px;
@@ -1075,7 +1083,7 @@ svg.storedSVG path {
         grid-template-columns: auto;
     }
 
-}
+} 
 
 @media screen and (max-width: 600px) {
     .sectionTitle{
