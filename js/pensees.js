@@ -55,7 +55,11 @@
             CLOSE_shadow: "",
             title: `${_t}${green}${_t_}PROSE${t_}`,
             content: [
-                `${_p}${green}${_p_}<img src="pics/logo_write_green.png" style="width:100%;"><br>Cette section est encore vide pour l'instant${p_}`
+                `${_p}${green}${_p_}<img src="pics/logo_write_green.png" style="width:100%;">${p_}`,
+                `${_d}${green}${_d_}14 juin 2020${d_}`,
+                `${_p}${green}${_p_}Cette sensation d'être en arrêt dans le coeur d'un cyclone maintient en suspension dans l'air un calme étranger, dont l'aspect inerte enclenche par contraste l'écoute d'un tumulte intérieur.<br><br>
+                C'est la demi-vie de la vie d'avant qui déroule sa pelote d'activité; il est encore impossible de voir plus loin que la pointe du masque. En a-t-il déjà été autrement? Je crois qu'on s'imagine que l'horizon est visible, alors qu'on ne semble voir que les ombres d'une caverne intérieure. Et peut-être qu'on s'assassinerait soi-même si l'on osait sortir par curiosité, et que l'on revenait avec la richesse insoutenable de quelque <i>vérité</i>.
+                ${p_}`,
             ]    
         },
 
@@ -118,6 +122,11 @@
             CLOSE_shadow: "",
             title: `${_t}${cornflowerblue}${_t_}IMAGE${t_}`,
             content: [
+                `${_d}${cornflowerblue}${_d_}14 juin 2020${d_}`,
+                `${_g}style="background: black; box-sizing:border-box; padding:10px; color: white;"${_g_}
+                <p style="margin:0 auto; width: 100%; max-width:500px">Impressions végétales, minérales et animales à l'été qui s'impose, au parc de Saint Cloud.</p>
+                <img src="pics/sc0.jpg"style="border-radius:15px 0 0 0;"><img src="pics/sc1.jpg"><img src="pics/sc2.jpg"><img src="pics/sc3.jpg"><img src="pics/sc4.jpg"><img src="pics/sc5.jpg"><img src="pics/sc6.jpg"><img src="pics/sc7.jpg"> 
+                ${g_}`,
                 `${_d}${cornflowerblue}${_d_}7 juin 2020${d_}`,
                 `${_p}${cornflowerblue}${_p_}Je suis parvenu à terminer cette première phase du visage préoccupé de K avant de reprendre le chemin du bureau. Allez jeter un oeil sur le journal, pour juger de mes pensées alors que j'étais à la fois libre et enfermé: <a class="inLink" target="_blank" href="journal.html">cliquez ici</a>${p_}`,
                 `${_img}k3.jpg"style="border-radius:20px 0 0 0;"${imgDiff}`,
@@ -241,15 +250,8 @@
             }
         }
 
-        function changeMeaning(mean){
-            for(let k = 0; k < categories.length; k += 1){
-                blog_tit.innerHTML = "";
-                blog_tit.innerHTML = mean;
-            }
-        }
-
     
-        function giveItColor(cat, col, mean){
+        function giveItColorAndMeaning(cat, col, mean){
 
             cat.addEventListener("mouseover", function(){
                 blog_tit.style.color = col;
@@ -262,7 +264,8 @@
                 blog_tit.style.color = "rgba(126, 106, 103, 0.11)";
                 changeOpacity(1, "opacity 1s ease");
                 blog_tit.innerHTML = "BLOG";
-            }) 
+            });
+
         }
     
 
@@ -271,7 +274,7 @@
             let that_cat = categories[i];
             let that_col = colorz[i];
             let that_mean = meaning[i]
-            giveItColor(that_cat, that_col,that_mean);
+            giveItColorAndMeaning(that_cat, that_col,that_mean);
         }
 
     }());
