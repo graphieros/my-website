@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65449763-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-65449763-3');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphieros writer</title>
+    <link rel="stylesheet" href="gwriter.css" class="css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pics/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../pics/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pics/favicon-32x32.png">
+</head>
+<body>
+    <a href="../index.html">
+        <header class="title">
+            <div>
+                <span class="a">A</span>le<span class="c">C</span> Lloy<span class="d">D</span> Pro<span class="b">B</span>ert
+            </div>
+        </header>
+    </a>
+    
+
+    <p>Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple _ka (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <i>humain</i> (pas besoin d'underscore si vous écrivez en français), et appuyez sur ENTER.<br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span></p>
+    <div class="controls">
+        <div class="toggle_color">
+            <div id="toggle">0</div>
+            <div id="info">i</div>
+        </div>
+    </div>
+    <!--for when I find a way to simulate key events with buttons without duplicating my js-->
+    <!-- <div class="touch_controls">
+        <div class="tcc">
+            <div id="enter">ENTER</div>
+            <div id="left">&#8678;</div>
+            <div id="top">&#8679;</div>
+            <div id="right">&#8680;</div>
+        </div>
+    </div> -->
+    
+    <div class="svg_container" id="svg_container">
+    </div>
+    
+    <div class="inputs">
+        <textarea placeholder="écrivez ici... ajoutez un _ devant la phono, mais pas devant un mot en français" id="writing_area"></textarea>
+         <button id="clean">effacer l'ardoise</button>
+    </div>
+    
+    <div id="trad"></div>
+    
+    <div class="end"></div>
+    <script src="gwriter.js"></script>
+</body>
+</html>
