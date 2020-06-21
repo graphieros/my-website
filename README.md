@@ -2,7 +2,7 @@
 
 main files for my single page website, without the php files.
 take a look: https://graphieros.com
-Experience is especially nice on a smartphone.
+Experience is especially nice on a smartphone, except for https://graphieros.com/gwriter/grwiter.html which only works with a physical keyboard (and with some advanced knowledge of graphieros too...)
 
 <img src="https://github.com/graphieros/my-website/blob/master/myWebsite.png" width="500px">
 
