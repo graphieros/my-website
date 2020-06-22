@@ -74,6 +74,46 @@ let memory = [];
                 path: [],
             },
             {
+                name: '_kadwa',
+                fr: 'jour',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_left,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_mid,y_mid,x_left_mid,y_bot]],
+            },
+            {
+                name: '_3go',
+                fr: 'jouer',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_right_mid,y_top],[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_ntew',
+                fr: 'interrompre',
+                path: [[x_left,y_mid,x_mid,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid,x_right,y_mid,x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_nsa',
+                fr: 'intérieur',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_kea',
+                fr: 'intelligence',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_top,x_left,y_mid,x_mid,y_mid,x_right_mid,y_top],[x_left_mid,y_top,x_right,y_mid,x_left_mid,y_bot,x_left_mid,y_top]],
+            },
+            {
+                name: '_chra',
+                fr: 'insulter',
+                path: [[x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_pse',
+                fr: 'insuffire',
+                path: [[x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_skew',
+                fr: 'insecte',
+                path: [[x_mid,y_mid,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
                 name: '_nfo',
                 fr: 'informer',
                 path: [[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_bot,x_right,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_top]],
