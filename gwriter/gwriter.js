@@ -1,6 +1,4 @@
-/**
- * //functionalities to add: translator, sequence of glyph formation (add matrices in glyph objects)
- */
+//functionalities to add: translator, sequence of glyph formation (add matrices in glyph objects)
 
 
 //initial y glyph coordinates
@@ -85,15 +83,24 @@ function erase_input(){
 
 (function main(){
 
-
     document.body.onkeyup = function(e){
         
 
         let glyph_database = [
             {
-                name: '_',
-                fr: '',
-                path: [[]],
+                name: '_lse',
+                fr: 'perdre',
+                path: [[x_right_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot],[x_left,y_mid,x_right_mid,y_bot,x_right,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_dri',
+                fr: 'percer',
+                path: [[x_right,y_mid,x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right,y_mid,x_left,y_mid]],
+            },
+            {
+                name: '_hia',
+                fr: 'penser',
+                path: [[x_mid,y_mid,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_mid,y_mid]],
             },
             {
                 name: '_pda',
@@ -1628,47 +1635,55 @@ function erase_input(){
         clean.addEventListener("click", function(){
             erase_input();
         });
+        
 
-            let content = writing_area.value.toLowerCase();
+        let content = writing_area.value.toLowerCase();
 
-            if(e.keyCode === 13){ //ENTER 
+        if(e.keyCode === 13){ //ENTER 
 
-                let k;
+            let k;
 
-                for(k = 0; k < glyph_database.length; k += 1){
+            for(k = 0; k < glyph_database.length; k += 1){
                     
-                    let glyph = glyph_database[k];
-                    let store = [];
-                    let paths = glyph.path;
-                    let b;
-                    let m;
-                    if(content === `${glyph.name}\n` || content === `${glyph.fr}\n`){
+                let glyph = glyph_database[k];
+                let store = [];
+                let paths = glyph.path;
+                let b;
+                if(content === `${glyph.name}\n` || content === `${glyph.fr}\n`){
 
-                        for(b = 0; b < paths.length; b += 1){
-                            store.push(`${_p}${paths[b]}${p_}`);
-                            output_area.innerHTML += store;   
-                        }// O(n²)
+                    for(b = 0; b < paths.length; b += 1){
+                        store.push(`${_p}${paths[b]}${p_}`);
+                        output_area.innerHTML += store;
+                        store = [];   //yes !
+                        }
 
-                        memory.push(store);                       
-                    }                        
+                    trad.innerHTML += glyph.fr.toUpperCase();
+                    trad.innerHTML += glyph.name;
+                    trad.innerHTML += " ";
                 }
-    
-                clear_area();
-
-                trad.innerHTML += content;
-
-            }else if(e.keyCode === 39){ //RIGHT ARROW
-                new_line();
-
-            }else if(e.keyCode === 38){ //TOP ARROW
-                jump_back();
-                
-            }else if(e.keyCode === 37){ //LEFT ARROW
-                jump_slight();
             }     
-            
-    }
     
+            if(content === "\n"){ //a break...
+                trad.innerHTML += "<br><br>"; //...is a break.
+            }
+
+
+            clear_area();
+
+
+        }else if(e.keyCode === 39){ //RIGHT ARROW
+            new_line();
+
+
+        }else if(e.keyCode === 38){ //TOP ARROW
+            jump_back();
+
+                
+        }else if(e.keyCode === 37){ //LEFT ARROW
+            jump_slight();
+        }                    
+    }
+
 }());
 
 (function change_background_color(){
@@ -1677,6 +1692,7 @@ function erase_input(){
     const writing_area = document.getElementById("writing_area");
     const clean = document.getElementById("clean");
     const trad = document.getElementById("trad");
+
 
     toggle.addEventListener("click", function(){
 
@@ -1707,6 +1723,7 @@ function erase_input(){
 
 }());
 
+
 function create(el,cl,id){
     let d = document.createElement(el);
     d.className = cl;
@@ -1714,13 +1731,16 @@ function create(el,cl,id){
     return d;
 }
 
+
 function glue(dad,son){
     return dad.appendChild(son);
 }
 
+
 function kill(dad,son){
     return dad.removeChild(son);
 }
+
 
 (function showInfo(){
 
@@ -1731,6 +1751,7 @@ function kill(dad,son){
     let window_content = create("DIV", "window_content", "window_content");
     window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
 
+
     btn.addEventListener("click", function(){
         this.style.visibility = "hidden";
         glue(window_info, window_content);
@@ -1738,11 +1759,12 @@ function kill(dad,son){
         glue(document.body, window_info);
     });
 
+
     window_x.addEventListener("click", function(){
         btn.style.visibility = "initial";
         kill(window_info, window_content);
         kill(window_info,window_x);
         kill(document.body, window_info);
-    })
+    });
     
 }());
