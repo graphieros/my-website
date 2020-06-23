@@ -27,51 +27,423 @@ output_area.style.width = "400px";
 svg_container.appendChild(output_area);
 output_area.setAttributeNS(null, "stroke", "cornflowerblue");
 
+const writing_area = document.getElementById("writing_area");
+const clean = document.getElementById("clean");
+const trad = document.getElementById("trad");
+const _p = '<path d="M';
+const p_ = '"/>';
+
 let memory = [];
+
+function clear_area(){
+    writing_area.value = "";
+    y_top += 206;
+    y_mid += 206;
+    y_bot += 206;
+}
+
+function jump_back(){
+    y_top -= 206;
+    y_mid -= 206;
+    y_bot -= 206;
+}
+
+function jump_slight(){
+    y_top += 103;
+    y_mid += 103;
+    y_bot += 103;
+}
+
+function new_line(){
+    writing_area.value = "";
+    y_top = 50; //103 how to manage interstices?
+    y_mid = 128;
+    y_bot = 206;
+    x_left += 175;
+    x_left_mid += 175;
+    x_mid += 175;
+    x_right_mid += 175;
+    x_right += 175;
+}
+
+function erase_input(){
+    output_area.innerHTML = "";
+
+    y_top = 50;
+    y_mid = 128;
+    y_bot = 206;
+
+    x_left = 38;
+    x_left_mid = 83;
+    x_mid = 128;
+    x_right_mid = 173;
+    x_right = 218;
+
+    trad.innerHTML = "";
+};
 
 
 (function main(){
 
-    let glyph_database;
 
     document.body.onkeyup = function(e){
         
-        function clear_area(){
-            writing_area.value = "";
-            y_top += 206;
-            y_mid += 206;
-            y_bot += 206;
-        }
 
-        function jump_back(){
-            y_top -= 206;
-            y_mid -= 206;
-            y_bot -= 206;
-        }
-
-        function jump_slight(){
-            y_top += 103;
-            y_mid += 103;
-            y_bot += 103;
-        }
-
-        function new_line(){
-            writing_area.value = "";
-            y_top = 50; //103 how to manage interstices?
-            y_mid = 128;
-            y_bot = 206;
-            x_left += 175;
-            x_left_mid += 175;
-            x_mid += 175;
-            x_right_mid += 175;
-            x_right += 175;
-        }
-
-        glyph_database = [
+        let glyph_database = [
             {
                 name: '_',
                 fr: '',
-                path: [],
+                path: [[]],
+            },
+            {
+                name: '_pda',
+                fr: 'pendant',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_right,y_mid],[x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_prye',
+                fr: 'part',
+                path: [[x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_psoi',
+                fr: 'passé',
+                path: [[x_right,y_mid,x_left,y_mid],[x_right_mid,y_top,x_left,y_mid,x_right_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_pmi',
+                fr: 'parmi',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top]],
+            },
+            {
+                name: '_vga',
+                fr: 'parfumer',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot],[x_mid,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_smai',
+                fr: 'parfois',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_mid,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_prae',
+                fr: 'parcourir',
+                path: [[x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_ba',
+                fr: 'par',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_mriy',
+                fr: 'papillon',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_sra',
+                fr: 'pacifier',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_pno',
+                fr: 'ouvrir',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_he',
+                fr: 'oui',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_roi',
+                fr: 'ou',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot,x_left_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_sdey',
+                fr: 'où',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_bnio',
+                fr: 'os',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot,x_right_mid,y_top,x_left,y_mid,x_mid,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_via',
+                fr: 'originer',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid]],
+            },
+            {
+                name: '_rgia',
+                fr: 'organe',
+                path: [[x_right_mid,y_top,x_left,y_mid,x_mid,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_left_mid,y_top],[x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_rdo',
+                fr: 'ordonner',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_r3y',
+                fr: 'orange',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_vroi',
+                fr: 'or',
+                path: [[x_left,y_mid,x_mid,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot],[x_right,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_gnae',
+                fr: 'onde',
+                path: [[x_left,y_mid,x_left_mid,y_bot],[x_left_mid,y_top,x_right_mid,y_bot],[x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_broi',
+                fr: 'ombre',
+                path: [[x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot],[x_left_mid,y_top,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_zo',
+                fr: 'oiseau',
+                path: [[x_mid,y_mid,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_gwa',
+                fr: 'oeuf',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot,x_left,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_ptae',
+                fr: 'objet',
+                path: [[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_ney',
+                fr: 'nouveau',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_fdu',
+                fr: 'nourrir',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left,y_mid],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_nia',
+                fr: 'non',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_right_mid, y_top,x_left_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_na',
+                fr: 'ni',
+                path: [[x_left,y_mid,x_mid,y_mid],[x_left_mid,y_top,x_right_mid,y_bot,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_top]],
+            },
+            {
+                name: '_nsio',
+                fr: 'nécessiter',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid],[x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_zmi',
+                fr: 'musique',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_mso',
+                fr: 'muscler',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_mksi',
+                fr: 'multiplier',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_ftey',
+                fr: 'mou',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mtu',
+                fr: 'montagne',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mu',
+                fr: 'mollusque',
+                path: [[x_left,y_mid,x_mid,y_mid,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_right_mid,y_top],[x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_mni',
+                fr: 'moins',
+                path: [[x_left,y_mid,x_mid,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_d3io',
+                fr: 'minute',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_mina',
+                fr: 'minéral',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left,x_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mlimza',
+                fr: 'millimètre',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_mligma',
+                fr: 'milligramme',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_mdo',
+                fr: 'milieu',
+                path: [[x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_vdikeo',
+                fr: 'mieux',
+                path: [[x_mid,y_mid,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_top,x_left_mid,y_bot],[x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_pne',
+                fr: 'mettre',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_left,y_mid,x_mid,y_mid,x_left_mid,y_top],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mza',
+                fr: 'mètre',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_left_mid,y_bot]],
+            },
+            {
+                name: '_mto',
+                fr: 'métal',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_bot,x_right_mid,y_top,x_right,y_mid,x_left_mid,y_bot,x_left,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_bwa',
+                fr: 'mauvais',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_bot],[x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_mtai',
+                fr: 'matière',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid, x_right_mid,y_bot]],
+            },
+            {
+                name: '_lfe',
+                fr: 'mastodonte',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_top]],
+            },
+            {
+                name: '_chka',
+                fr: 'masquer',
+                path: [[x_left_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_bot,x_right,y_mid,x_left_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_msy',
+                fr: 'marsupial',
+                path: [[x_left,y_mid,x_left_mid,y_top],[x_mid,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mrai',
+                fr: 'marquer',
+                path: [[x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_top],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mno',
+                fr: 'mâle',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid,x_right,y_mid],[x_left,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_nfea',
+                fr: 'maladie',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_mid,y_mid,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_pro',        
+                fr: 'mais',        
+                path: [[x_left,y_mid,x_mid,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],        
+            },        
+            {        
+                name: '_sna',        
+                fr: 'maigrir',        
+                path: [[x_right,y_mid,x_right_mid,y_bot,x_right_mid,y_top,x_right,y_mid,x_left,y_mid,x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot,x_left,y_mid]],        
+            },        
+            {        
+                name: '_lya',        
+                fr: 'lune',        
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top],[x_mid,y_mid,x_mid,y_mid]]        
+            },        
+            {        
+                name: '_hea',        
+                fr: 'lumière',        
+                path: [[x_left_mid,y_top,x_right,y_mid,x_left_mid,y_bot,x_left_mid,y_top],[x_left,y_mid,x_mid,y_mid,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot]],        
+            },        
+            {        
+                name: '_lro',        
+                fr: 'lourd',        
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot]],        
+            },        
+            {        
+                name: '_lgya',        
+                fr: 'long',        
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top,x_left_mid,y_top]],        
+            },        
+            {        
+                name: '_fra',        
+                fr: 'loin',        
+                path: [[x_left,y_mid,x_right_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_bot,x_mid,y_mid,x_right,y_mid,x_left_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top]]        
+            },        
+            {       
+                name: '_sti',        
+                fr: 'lister',        
+                path: [[x_right_mid,y_bot,x_left_mid,y_top,x_left,y_mid,x_right_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_right_mid,y_top]]        
+            },        
+            {        
+                name: '_lpae',        
+                fr: 'lèvre',        
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot]]        
+            },        
+            {        
+                name: '_lgy',        
+                fr: 'légume',        
+                path: [[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid]]        
+            },        
+            {        
+                name: '_lgio',        
+                fr: 'langage',        
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_left_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]
+            },
+            {
+                name: '_ska',
+                fr: 'lancer',
+                path: [[x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid],[x_left_mid,y_top,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_klotogma',
+                fr: 'kilotonne',
+                path: [[x_right_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top],[x_left,y_mid,x_mid,y_mid,x_left_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_klomza',
+                fr: 'kilomètre',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid]],
+            },
+            {
+                name: '_klogma',
+                fr: 'kilogramme',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_tli',
+                fr: 'jusque',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid,x_right,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
             },
             {
                 name: '_kadwa',
@@ -1249,32 +1621,12 @@ let memory = [];
                 path: [[x_right_mid,y_bot,x_left,y_mid,x_right,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top]],
             }
         ];
-        
 
         console.log(`NB DE GLYPHES: ${glyph_database.length}, soit ${Math.round((glyph_database.length / 435)*10000)/100}% !`);
 
-        const writing_area = document.getElementById("writing_area");
-        // const output_area = document.getElementById("output_area");
-        const clean = document.getElementById("clean");
-        const trad = document.getElementById("trad");
-        const _p = '<path d="M';
-        const p_ = '"/>';
 
         clean.addEventListener("click", function(){
-
-            output_area.innerHTML = "";
-
-            y_top = 50;
-            y_mid = 128;
-            y_bot = 206;
-
-            x_left = 38;
-            x_left_mid = 83;
-            x_mid = 128;
-            x_right_mid = 173;
-            x_right = 218;
-
-            trad.innerHTML = "";
+            erase_input();
         });
 
             let content = writing_area.value.toLowerCase();
