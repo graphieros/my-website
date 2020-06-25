@@ -1,4 +1,4 @@
-//functionalities to add: translator, sequence of glyph formation (add matrices in glyph objects)
+//functionalities to add: translator, sequence of glyph formation (add matrices in glyph objects); error handling, show modal if word is not in db
 
 
 //initial y glyph coordinates
@@ -85,8 +85,667 @@ function erase_input(){
 
     document.body.onkeyup = function(e){
         
-
         let glyph_database = [
+            {
+                name: '_ze',
+                fr: 'utiliser',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid],[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_top,x_right_mid,y_bot],[x_right_mid,y_top,x_left_mid,y_bot]],
+            },
+            {
+                name: '_vrea',
+                fr: 'vrai',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_top,x_left_mid,y_top],[x_right,y_mid,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_v3ai',
+                fr: 'vouloir',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_flae',
+                fr: 'voler',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_vloi',
+                fr: 'volume',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_right_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_sta',
+                fr: 'voir',
+                path: [[x_right_mid,y_top,x_left,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot]],
+            },
+            {
+                name: '_ko',
+                fr: 'voici',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_vlo',
+                fr: 'vitesse',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_vzi',
+                fr: 'visage',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_vzy',
+                fr: 'virus',
+                path: [[x_mid,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top]],
+            },
+            {
+                name: '_vle',
+                fr: 'violet',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_ldo',
+                fr: 'vieux',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_vey',
+                fr: 'vieillard',
+                path: [[x_left,y_mid,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid]],
+            },
+            {
+                name: '_vde',
+                fr: 'vider',
+                path: [[x_left,y_mid,x_right,y_mid,x_right_mid,y_top,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_vzey',
+                fr: 'vice',
+                path: [[x_left_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_bot,x_left,y_mid],[x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_vba',
+                fr: 'vibrer',
+                path: [[x_right,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_right,y_mid,x_mid,y_mid],[x_left,y_mid,x_left,y_mid]],
+            },
+            {
+                name: '_vry',
+                fr: 'vertu',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_right_mid,y_top,x_left_mid,y_bot,x_left,y_mid],[x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_vrae',
+                fr: 'vert',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot],[x_mid,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_kto',
+                fr: 'vers',
+                path: [[x_left,y_mid,x_right,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_rmye',
+                fr: 'ver',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid,x_left_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_sloi',
+                fr: 'vendre',
+                path: [[x_left_mid,y_top,x_right_mid,y_top],[x_left_mid,y_bot,x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_pio',
+                fr: 'végétal',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid],[x_left,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_top]],
+            },
+            {
+                name: '_vnia',
+                fr: 'varier',
+                path: [[x_left,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid],[x_mid,y_mid,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_vlia',
+                fr: 'valoriser',
+                path: [[x_left_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_vkye',
+                fr: 'vaincre',
+                path: [[x_right_mid,y_top,x_left_mid,y_bot,x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right_mid,y_bot,x_left_mid,y_bot],[x_left_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_waa',
+                fr: 'trouver',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot,x_left_mid,y_top,x_right,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_tro',
+                fr: 'trop',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_bse',
+                fr: 'trébucher',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_tie',
+                fr: 'traverser',
+                path: [[x_right_mid,y_top,x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot],[x_left,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_tvai',
+                fr: 'travailler',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_right_mid,y_top,x_right,y_mid,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_zit',
+                fr: 'transitionner',
+                path: [[x_mid,y_mid,x_left,y_mid,x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_mne',
+                fr: 'transgenre',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_mid,y_mid],[x_left_mid,y_bot,x_right,y_mid],[x_left,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_tew',
+                fr: 'tout',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_bot,x_left,y_mid,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_right_mid,y_bot],[x_right_mid,y_top,x_left_mid,y_bot]],
+            },
+            {
+                name: '_pko',
+                fr: 'toucher',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_bot],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_tnogma',
+                fr: 'tonne',
+                path: [[x_right_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_left_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_pley',
+                fr: 'tirer',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_tra3',
+                fr: 'théâtre',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_toi',
+                fr: 'texte',
+                path: [[x_left_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_mid,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_tea',
+                fr: 'tête',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid],[x_right,y_mid,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_ste',
+                fr: 'tester',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_trea',
+                fr: 'terre',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_kpoile',
+                fr: 'temps',
+                path: [[x_left,y_mid,x_right,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot]],
+            },
+            {
+                name: '_po',
+                fr: 'température',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot],[x_left,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_tle',
+                fr: 'téléphoner',
+                path: [[x_left,y_mid,x_right_mid,y_bot,x_mid,y_mid,x_left_mid,y_bot,x_right,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_zlae',
+                fr: 'tant',
+                path: [[x_left,y_mid,x_left_mid,y_top],[x_left_mid,y_bot,x_right_mid,y_bot,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_sai',
+                fr: 'taille',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_right,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_stu',
+                fr: 'synthétiser',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_sbo',
+                fr: 'symboliser',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot],[x_mid,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_tpe',
+                fr: 'sur',
+                path: [[x_left_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_flo',
+                fr: 'suivre',
+                path: [[x_left,y_mid,x_mid,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_pkae',
+                fr: 'sujet',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_ske',
+                fr: 'sucrer',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid,x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_fi',
+                fr: 'subjonctif',
+                path: [[x_right_mid,y_top,x_left,y_mid,x_left_mid,y_bot],[x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_svo',
+                fr: 'souvent',
+                path: [[x_right_mid,y_bot,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_right_mid,y_top,x_left_mid,y_top]],
+            },
+            {
+                name: '_nde',
+                fr: 'sous',
+                path: [[x_left,y_mid,x_right,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid],[x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_sple',
+                fr: 'souple',
+                path: [[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_right_mid,y_top,x_left,y_mid,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_3nu',
+                fr: 'soumettre',
+                path: [[x_left,y_mid,x_right_mid,y_top],[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_soma',
+                fr: 'soi',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot],[x_mid,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_mki',
+                fr: 'singe',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_mid,y_mid,x_right,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_snea',
+                fr: 'simplifier',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid,x_left,y_mid,x_left_mid,y_top],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_zei',
+                fr: 'si',
+                path: [[x_left_mid,y_bot,x_left,y_mid,x_right_mid,y_top],[x_left_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_skwa',
+                fr: 'sexe',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_lno',
+                fr: 'seul',
+                path: [[x_mid,y_mid,x_mid,y_mid],[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_trey',
+                fr: 'séparer',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_left,y_mid,x_right,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_smu',
+                fr: 'sentir',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid],[x_mid,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_vye',
+                fr: 'sens',
+                path: [[x_left,y_mid,x_mid,y_mid],[x_right,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_sge',
+                fr: 'segmenter',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot],[x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_sky',
+                fr: 'sécuriser',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_left_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_d3y',
+                fr: 'seconde',
+                path: [[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid],[x_right_mid,y_top,x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_so',
+                fr: 'se',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top],[x_mid,y_mid,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_',
+                fr: '',
+                path: [[]],
+            },
+            {
+                name: '_sle',
+                fr: 'saler',
+                path: [[x_left,y_mid,x_mid,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot,x_right_mid,y_top,x_mid,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_rgo',
+                fr: 'rouge',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot],[x_mid,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_rwe',
+                fr: 'roue',
+                path: [[x_right,y_mid,x_mid,y_mid,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_top],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_rgya',
+                fr: 'rongeur',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid,x_left_mid,y_bot,x_left,y_mid]],
+            },
+            {
+                name: '_lfaw',
+                fr: 'rire',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_left_mid,y_top],[x_left_mid,y_bot,x_right,y_mid,x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_rgi',
+                fr: 'rigide',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid,x_right_mid,y_bot,x_left,y_mid,x_left_mid,y_bot,x_right,y_mid],[x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_ne',
+                fr: 'rien',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_swo',
+                fr: 'revenir',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_mid,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_rve',
+                fr: 'réveiller',
+                path: [[x_mid,y_mid,x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_mid,y_mid]],
+            },
+            {
+                name: '_rto',
+                fr: 'retourner',
+                path: [[x_right_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_lvoi',
+                fr: 'retirer',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid,x_left,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_zle',
+                fr: 'résulter',
+                path: [[x_left,y_mid,x_mid,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_pta',
+                fr: 'reptile',
+                path: [[x_left_mid,y_bot,x_right_mid,y_bot,x_left,y_mid,x_right,y_mid,x_left_mid,y_top],[x_mid,y_mid,x_right_mid,y_top]],
+            },
+            {
+                name: '_rpie',
+                fr: 'répéter',
+                path: [[x_right,y_mid,x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot],[x_right_mid,y_bot,x_right_mid,y_top,x_mid,y_mid]],
+            },
+            {
+                name: '_fksi',
+                fr: 'réparer',
+                path: [[x_right,y_mid,x_left_mid,y_top,x_mid,y_mid,x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_bot]],
+            },
+            {
+                name: '_floi',
+                fr: 'remplir',
+                path: [[x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_rdai',
+                fr: 'refaire',
+                path: [[x_mid,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_right,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_left,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_tba',
+                fr: 'récipient',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_rsea',
+                fr: 'recevoir',
+                path: [[x_left,y_mid,x_right_mid,y_bot,x_mid,y_mid,x_left_mid,y_bot,x_right,y_mid],[x_left_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_rbae',
+                fr: 'rebondir',
+                path: [[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_bot,x_right,y_mid]],
+            },
+            {
+                name: '_snoi',
+                fr: 'rayonner',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_top]],
+            },
+            {
+                name: '_groi',
+                fr: 'ramper',
+                path: [[x_left_mid,y_bot,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid,x_left,y_mid,x_left_mid,y_top,x_mid,y_mid]],
+            },
+            {
+                name: '_rma',
+                fr: 'ramasser',
+                path: [[x_left,y_mid,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_top,x_left_mid,y_bot,x_mid,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_slo',
+                fr: 'ralentir',
+                path: [[x_right,y_mid,x_left,y_mid],[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_wo',
+                fr: 'questionner',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_left,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_left_mid,y_bot],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_kwa',
+                fr: 'que',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot],[x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_kta',
+                fr: 'quantité',
+                path: [[x_right,y_mid,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot],[x_left,y_mid,x_left,y_mid]],
+            },
+            {
+                name: '_fkwe',
+                fr: 'quand',
+                path: [[x_right_mid,y_top,x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid,x_mid,y_mid],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_3e',
+                fr: 'protéger',
+                path: [[x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_prai',
+                fr: 'proportionner',
+                path: [[x_right,y_mid,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_prio',
+                fr: 'programmer',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_tpia',
+                fr: 'profond',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_pre',
+                fr: 'près',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid],[x_left,y_mid,x_mid,y_mid,x_right_mid,y_top,x_left,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_ra',
+                fr: 'prendre',
+                path: [[x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_frya',
+                fr: 'pouvoir',
+                path: [[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_psie',
+                fr: 'pousser',
+                path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_vwa',
+                fr: 'pourquoi',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_left,y_mid,x_right_mid,y_bot],[x_left_mid,y_bot,x_right,y_mid],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_psu',
+                fr: 'positionner',
+                path: [[x_left,y_mid,x_mid,y_mid,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_left_mid,y_bot],[x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_ptoi',
+                fr: 'porter',
+                path: [[x_left_mid,y_bot,x_right_mid,y_top,x_right,y_mid,x_left_mid,y_top,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_left,y_mid]],
+            },
+            {
+                name: '_lbay',
+                fr: 'porcin',
+                path: [[x_mid,y_mid,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_right_mid,y_top]],
+            },
+            {
+                name: '_ptea',
+                fr: 'poitriner',
+                path: [[x_left_mid,y_bot,x_mid,y_mid,x_left,y_mid,x_right_mid,y_top,x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_top,x_left_mid,y_top],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_psaw',
+                fr: 'poisson',
+                path: [[x_left,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_right,y_mid,x_left_mid,y_bot,x_left,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_fky',
+                fr: 'pointer',
+                path: [[x_left,y_mid,x_right_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_top,x_left_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_ploi',
+                fr: 'poil',
+                path: [[x_left,y_mid,x_left_mid,y_bot],[x_left_mid,y_top,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_vdio',
+                fr: 'plus',
+                path: [[x_left_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_tsi',
+                fr: 'pluriel',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right,y_mid],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_plwe',
+                fr: 'plume',
+                path: [[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_right,y_mid,x_right_mid,y_bot,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_pli',
+                fr: 'plier',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_pto',
+                fr: 'pleuvoir',
+                path: [[x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid],[x_left_mid,y_top,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_pla',
+                fr: 'planifier',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_bot],[x_right,y_mid,x_left,y_mid]],
+            },
+            {
+                name: '_pnae',
+                fr: 'planète',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_top,x_right_mid,y_bot,x_left,y_mid,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_aria',
+                fr: 'planer',
+                path: [[x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid,x_left_mid,y_top,x_left,y_mid,x_right_mid,y_top,x_mid,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_ueoa',
+                fr: 'plaisir',
+                path: [[x_mid,y_mid,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_mid,y_mid]],
+            },
+            {
+                name: '_pvo',
+                fr: 'pivoter',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_mid,y_mid,x_left_mid,y_bot,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_top]],
+            },
+            {
+                name: '_vdibwa',
+                fr: 'pire',
+                path: [[x_mid,y_mid,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_left_mid,y_top],[x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_pke',
+                fr: 'piquant',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_mid,y_mid,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_right,y_mid,x_right_mid,y_bot]],
+            },
+            {
+                name: '_gwi',
+                fr: 'pingouin',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right_mid,y_top,x_right,y_mid],[x_mid,y_mid,x_mid,y_mid]],
+            },
+            {
+                name: '_trai',
+                fr: 'piéger',
+                path: [[x_left_mid,y_bot,x_left_mid,y_top,x_left,y_mid,x_right,y_mid,x_right_mid,y_top,x_left_mid,y_top],[x_right_mid,y_bot,x_right_mid,y_bot]],
+            },
+            {
+                name: '_fti',
+                fr: 'pied',
+                path: [[x_left,y_mid,x_mid,y_mid,x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_mid,y_mid,x_right,y_mid]],
+            },
+            {
+                name: '_sfi',
+                fr: 'peur',
+                path: [[x_left_mid,y_top,x_right_mid,y_bot],[x_mid,y_mid,x_right,y_mid,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_left_mid,y_bot,x_left_mid,y_bot]],
+            },
+            {
+                name: '_psia',
+                fr: 'peser',
+                path: [[x_left_mid,y_top,x_right_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
             {
                 name: '_lse',
                 fr: 'perdre',
@@ -1749,7 +2408,7 @@ function kill(dad,son){
     let window_x = create("DIV", "window_x", "window_x");
     window_x.innerHTML = "X";
     let window_content = create("DIV", "window_content", "window_content");
-    window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
+    window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br>Les son 'j' ou [ʒ] doit s'écrire avec un 'trois' (3).<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
 
 
     btn.addEventListener("click", function(){

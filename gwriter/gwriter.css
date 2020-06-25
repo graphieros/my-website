@@ -174,7 +174,7 @@ span.d{
     padding:10px;
     max-width:400px;
     margin:0 auto;
-    height:100px;
+    min-height:100px;
     background: grey;
     border-radius:2px;
     font-size:0.8em;
@@ -291,7 +291,7 @@ span.d{
     height:100%;
     width:100%;
     max-width:400px;
-    max-height:450px;
+    max-height:480px;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
