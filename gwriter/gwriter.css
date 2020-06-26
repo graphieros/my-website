@@ -352,6 +352,45 @@ span.info_btn{
     box-shadow: -3px -3px 10px 1px black;
 }
 
+.color_select{
+    height:50px;
+    width:50px;
+    resize:none;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    box-sizing: border-box;
+    padding-top:15px;
+    text-align:center;
+    border-radius:3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    background: black;
+}
+
+#R{
+    color: rgb(255,0,0);
+    border:1px solid rgb(255,0,0);
+}
+
+#G{
+    color: rgb(0,255,0);
+    border:1px solid rgb(0,255,0);
+}
+
+#B{
+    color: rgb(0,0,255);
+    border:1px solid rgb(0,0,255);
+}
+
+#color_result{
+    height:50px;
+    width:50px;
+    box-sizing: border-box;
+    border:1px solid grey;
+    border-radius: 100%;
+}
+
 .end{
     margin-top:200px;
 }

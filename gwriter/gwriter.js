@@ -1,4 +1,4 @@
-//functionalities to add: translator, sequence of glyph formation (add matrices in glyph objects); error handling, show modal if word is not in db
+//todo: error handling, show modal if word is not in db
 
 
 //initial y glyph coordinates
@@ -28,8 +28,22 @@ output_area.setAttributeNS(null, "stroke", "cornflowerblue");
 const writing_area = document.getElementById("writing_area");
 const clean = document.getElementById("clean");
 const trad = document.getElementById("trad");
-const _p = '<path d="M';
-const p_ = '"/>';
+
+let R = document.getElementById("R");
+let G = document.getElementById("G");
+let B = document.getElementById("B");
+const color_mix = document.getElementById("color_result");
+
+function make_color(){
+    color_mix.style.background = `rgb(${R.value},${G.value},${B.value})`;
+};
+
+// function grab_color(){
+//     return `rgb(${R.value},${G.value},${B.value})`
+// }
+
+// const _p = `<path style="stroke:${grab_color()};" d="M`;
+// const p_ = '"/>';
 
 let memory = [];
 
@@ -84,8 +98,16 @@ function erase_input(){
 (function main(){
 
     document.body.onkeyup = function(e){
+
+        function grab_color(){
+            return `rgb(${R.value},${G.value},${B.value})`
+        }
+        
+        const _p = `<path style="stroke:${grab_color()};" d="M`;
+        const p_ = '"/>';
         
         let glyph_database = [
+            
             {
                 name: '_ze',
                 fr: 'utiliser',
@@ -2317,7 +2339,23 @@ function erase_input(){
                         }
 
                     trad.innerHTML += glyph.fr.toUpperCase();
-                    trad.innerHTML += glyph.name;
+
+                    let modified_name;
+
+                    if(glyph.name.includes("3")){
+
+                        modified_name = glyph.name.replace("3","ʒ");
+
+                    }else if(glyph.name.includes("ch")){
+
+                        modified_name = glyph.name.replace("ch","ʃ");
+
+                    }else{
+
+                        modified_name = glyph.name;
+                    }
+                    
+                    trad.innerHTML += modified_name;
                     trad.innerHTML += " ";
                 }
             }     
@@ -2408,7 +2446,7 @@ function kill(dad,son){
     let window_x = create("DIV", "window_x", "window_x");
     window_x.innerHTML = "X";
     let window_content = create("DIV", "window_content", "window_content");
-    window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br>Les son 'j' ou [ʒ] doit s'écrire avec un 'trois' (3).<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
+    window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br>Les son 'j' ou [ʒ] doit s'écrire avec un 'trois' (3). Le son [ʃ] doit s'écrire 'ch'.<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
 
 
     btn.addEventListener("click", function(){
