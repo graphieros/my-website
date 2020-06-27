@@ -34,16 +34,12 @@ let G = document.getElementById("G");
 let B = document.getElementById("B");
 const color_mix = document.getElementById("color_result");
 
+let center_paths_store = [];
+let cut_indicator = document.getElementById("cut_indicator");
+
 function make_color(){
     color_mix.style.background = `rgb(${R.value},${G.value},${B.value})`;
 };
-
-// function grab_color(){
-//     return `rgb(${R.value},${G.value},${B.value})`
-// }
-
-// const _p = `<path style="stroke:${grab_color()};" d="M`;
-// const p_ = '"/>';
 
 let memory = [];
 
@@ -68,7 +64,7 @@ function jump_slight(){
 
 function new_line(){
     writing_area.value = "";
-    y_top = 50; //103 how to manage interstices?
+    y_top = 50; 
     y_mid = 128;
     y_bot = 206;
     x_left += 175;
@@ -76,6 +72,8 @@ function new_line(){
     x_mid += 175;
     x_right_mid += 175;
     x_right += 175;
+    center_paths_store = [];
+    cut_indicator.innerHTML = "";
 }
 
 function erase_input(){
@@ -92,6 +90,8 @@ function erase_input(){
     x_right = 218;
 
     trad.innerHTML = "";
+    center_paths_store = [];
+    cut_indicator.innerHTML = "";
 };
 
 
@@ -107,7 +107,11 @@ function erase_input(){
         const p_ = '"/>';
         
         let glyph_database = [
-            
+            {
+                name: '_kwi',
+                fr: 'qui',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot],[x_left,y_mid,x_right_mid,y_bot,x_right_mid,y_top],[x_mid,y_mid,x_mid,y_mid],[x_right,y_mid,x_right,y_mid]],
+            },
             {
                 name: '_ze',
                 fr: 'utiliser',
@@ -2330,6 +2334,7 @@ function erase_input(){
                 let store = [];
                 let paths = glyph.path;
                 let b;
+
                 if(content === `${glyph.name}\n` || content === `${glyph.fr}\n`){
 
                     for(b = 0; b < paths.length; b += 1){
@@ -2338,7 +2343,10 @@ function erase_input(){
                         store = [];   //yes !
                         }
 
-                    trad.innerHTML += glyph.fr.toUpperCase();
+                    center_paths_store.push(`${x_mid},${y_mid}`);
+                    console.log(center_paths_store); 
+
+                    trad.innerHTML += `<span style="color:${grab_color()};">${glyph.fr.toUpperCase()}</span>`;
 
                     let modified_name;
 
@@ -2358,12 +2366,24 @@ function erase_input(){
                     trad.innerHTML += modified_name;
                     trad.innerHTML += " ";
                 }
-            }     
+            }    
+            
+            console.log(center_paths_store);
     
-            if(content === "\n"){ //a break...
-                trad.innerHTML += "<br><br>"; //...is a break.
+            if(content === "\n"){ 
+                trad.innerHTML += "<br><br>";
+                center_paths_store = [];
+            }else if(content === "x\n"){
+                center_paths_store = [];
+                trad.innerHTML += "<br><br>";
+                cut_indicator.innerHTML = "";
+                cut_indicator.innerHTML = "lien coupé";
+                jump_back();
+            }else{
+                output_area.innerHTML += `${_p}${center_paths_store}${p_}`;
+                cut_indicator.innerHTML = "";
+                cut_indicator.innerHTML = "lien actif, x + ENTER pour couper";
             }
-
 
             clear_area();
 
@@ -2446,7 +2466,7 @@ function kill(dad,son){
     let window_x = create("DIV", "window_x", "window_x");
     window_x.innerHTML = "X";
     let window_content = create("DIV", "window_content", "window_content");
-    window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br>Les son 'j' ou [ʒ] doit s'écrire avec un 'trois' (3). Le son [ʃ] doit s'écrire 'ch'.<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
+    window_content.innerHTML = "<span class=\"courier\">i</span><br><b>CONTROLES CLAVIER:</b><br>Appuyez sur la touche <b>ENTER</b> après avoir tapé votre glyphe.<br>Appuyez aussi sur <b>ENTER</b> pour ajouter un espace vide<br><br>tapez <b>x + ENTER</b> pour ne pas que votre prochain glyphe soit relié au précédent.<br><br>Noubliez pas d'ajouter un _ (underscore) devant la saisie d'une phonologie, comme par exemple _ka.<br>Les son 'j' ou [ʒ] doit s'écrire avec un 'trois' (3). Le son [ʃ] doit s'écrire 'ch'.<br><br><span class=\"info_btn\">&#8680;</span>Pour passer à la <b>ligne verticale</b> suivante.<br><br><span class=\"info_btn\">&#8678;</span>pour se positionner un <b>demi-espace en arrière</b>.<br><br><span class=\"info_btn\">&#8679;</span>pour se positionner <b>un espace en arrière</b>."; 
 
 
     btn.addEventListener("click", function(){

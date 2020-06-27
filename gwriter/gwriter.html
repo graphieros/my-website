@@ -30,7 +30,8 @@
     </a>
     
 
-    <p>Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple _ka (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <i>humain</i> (pas besoin d'underscore si vous écrivez en français), et appuyez sur ENTER.<br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span></p>
+    <p>Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple _ka (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <i>humain</i> (pas besoin d'underscore si vous écrivez en français), et appuyez sur ENTER.<br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span><br><br>
+    Vous pouvez sélectionner la couleur des glyphes en indiquant les niveaux de 0 à 255 pour le rouge, le vert et le bleu, avant d'écrire le glyphe.</p>
     <div class="controls">
         <div class="toggle_color">
             <div id="toggle">0</div>
@@ -55,6 +56,7 @@
     </div>
     
     <div class="inputs">
+        <div id="cut_indicator"></div>
         <textarea placeholder="écrivez ici... ajoutez un _ devant la phono, mais pas devant un mot en français" id="writing_area"></textarea>
          <button id="clean">effacer l'ardoise</button>
     </div>
