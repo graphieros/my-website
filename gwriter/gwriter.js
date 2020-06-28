@@ -1,5 +1,7 @@
-//todo: error handling, show modal if word is not in db
-
+//--------------------------------------------------------------------
+//GRAPHIEROS WRITER, compose graphieros glyphs using physical keyboard
+//Alec Lloyd Probert, 2020
+//--------------------------------------------------------------------
 
 //initial y glyph coordinates
 let y_top = 50;
@@ -23,7 +25,7 @@ output_area.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
 output_area.style.height = "800px";
 output_area.style.width = "400px";
 svg_container.appendChild(output_area);
-output_area.setAttributeNS(null, "stroke", "cornflowerblue");
+output_area.setAttributeNS(null, "stroke", "white");
 
 const writing_area = document.getElementById("writing_area");
 const clean = document.getElementById("clean");
@@ -62,6 +64,21 @@ function jump_slight(){
     y_bot += 103;
 }
 
+function goto_previous_line(){
+    writing_area.value = "";
+    y_top = 50;
+    y_mid = 128;
+    y_bot = 206;
+    x_left -= 175;
+    x_left_mid -= 175;
+    x_mid -= 175;
+    x_right_mid -= 175;
+    x_right -= 175;
+    center_paths_store = [];
+    cut_indicator.innerHTML = "";
+    trad.innerHTML += "<br><br>[RETOUR]";
+}
+
 function new_line(){
     writing_area.value = "";
     y_top = 50; 
@@ -74,6 +91,7 @@ function new_line(){
     x_right += 175;
     center_paths_store = [];
     cut_indicator.innerHTML = "";
+    trad.innerHTML += "<br><br>";
 }
 
 function erase_input(){
@@ -107,6 +125,16 @@ function erase_input(){
         const p_ = '"/>';
         
         let glyph_database = [
+            {
+                name: '_sola',
+                fr: 'son',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid]],
+            },
+            {
+                name: '_sota',
+                fr: 'ton',
+                path: [[x_left_mid,y_top,x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top,x_right,y_mid,x_mid,y_mid]],
+            },
             {
                 name: '_kwi',
                 fr: 'qui',
@@ -1454,7 +1482,7 @@ function erase_input(){
             },
             {
                 name: '_vlye',
-                fr: 'écvoluer',
+                fr: 'évoluer',
                 path: [[x_left,y_mid,x_left,y_mid],[x_left_mid,y_top,x_left_mid,y_bot],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_mid,y_mid,x_right_mid,y_top]],
             },
             {
@@ -2314,7 +2342,7 @@ function erase_input(){
             }
         ];
 
-        console.log(`NB DE GLYPHES: ${glyph_database.length}, soit ${Math.round((glyph_database.length / 435)*10000)/100}% !`);
+        console.log(`NB DE GLYPHES: ${glyph_database.length}`);
 
 
         clean.addEventListener("click", function(){
@@ -2367,22 +2395,27 @@ function erase_input(){
                     trad.innerHTML += " ";
                 }
             }    
-            
-            console.log(center_paths_store);
     
             if(content === "\n"){ 
+
                 trad.innerHTML += "<br><br>";
                 center_paths_store = [];
+
             }else if(content === "x\n"){
+
                 center_paths_store = [];
                 trad.innerHTML += "<br><br>";
                 cut_indicator.innerHTML = "";
                 cut_indicator.innerHTML = "lien coupé";
+
                 jump_back();
+
             }else{
+
                 output_area.innerHTML += `${_p}${center_paths_store}${p_}`;
                 cut_indicator.innerHTML = "";
                 cut_indicator.innerHTML = "lien actif, x + ENTER pour couper";
+
             }
 
             clear_area();
@@ -2398,6 +2431,10 @@ function erase_input(){
                 
         }else if(e.keyCode === 37){ //LEFT ARROW
             jump_slight();
+
+
+        }else if(e.keyCode === 17){ //CTRL
+            goto_previous_line();
         }                    
     }
 
@@ -2430,7 +2467,7 @@ function erase_input(){
             this.style.border = "none";
             this.style.background = "white";
             output_area.style.background = "black";
-            output_area.setAttributeNS(null, "stroke", "cornflowerblue");
+            output_area.setAttributeNS(null, "stroke", "white");
             document.body.style.background = "rgb(20,20,20)";
             writing_area.style.background = "rgb(25,25,25)";
             writing_area.style.color = "gold";
