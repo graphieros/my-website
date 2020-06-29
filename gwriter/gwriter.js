@@ -15,17 +15,36 @@ let x_mid = 128;
 let x_right_mid = 173;
 let x_right = 218;
 
+const change_size = document.getElementById("change_size");
+const btn_apply_size = document.getElementById("apply_size");
+
 const svg_container = document.getElementById("svg_container");
 const xmlns = "http://www.w3.org/2000/svg";
 const output_area = document.createElementNS(xmlns, "svg");
 output_area.id = "output_area";
-let svg_width = 3000;
+let svg_size = document.getElementById("change_size");
+
+let svg_width= 3000;
+
 let svg_height = svg_width * 2;
 output_area.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
 output_area.style.height = "800px";
 output_area.style.width = "400px";
 svg_container.appendChild(output_area);
 output_area.setAttributeNS(null, "stroke", "white");
+
+btn_apply_size.addEventListener("click", function(){
+    let size_matters = change_size.value;
+    if(size_matters !== ""){
+        svg_container.removeChild(output_area);
+        let new_svg_width = size_matters;
+        let new_svg_height = new_svg_width * 2;
+        output_area.setAttributeNS(null, "viewBox", `0 0 ${new_svg_width} ${new_svg_height}`);
+        svg_container.appendChild(output_area);
+        output_area.setAttributeNS(null, "stroke", "white");
+    }
+})
+
 
 const writing_area = document.getElementById("writing_area");
 const clean = document.getElementById("clean");
@@ -39,6 +58,21 @@ const color_mix = document.getElementById("color_result");
 let center_paths_store = [];
 let cut_indicator = document.getElementById("cut_indicator");
 let search = document.getElementById("search");
+
+const key_type = document.getElementById("key_type");
+const sound_toggle = document.getElementById("mute");
+
+sound_toggle.addEventListener("click", function(){
+    if(this.innerHTML === "son<br>ON"){
+        this.innerHTML = "son<br>OFF";
+        this.style.background = 'black';
+        this.style.color = "white";
+    }else{
+        this.innerHTML = "son<br>ON";
+        this.style.background = "lightgrey";
+        this.style.color = "black";
+    }
+})
 
 function make_color(){
     color_mix.style.background = `rgb(${R.value},${G.value},${B.value})`;
@@ -132,13 +166,18 @@ function erase_input(){
         search.style.background = "red";
 
         function grab_color(){
-            return `rgb(${R.value},${G.value},${B.value})`
+            return `rgb(${R.value},${G.value},${B.value})`;
         }
         
         const _p = `<path style="stroke:${grab_color()};" d="M`;
         const p_ = '"/>';
         
         let glyph_database = [
+            {
+                name: '_nmo',
+                fr: 'nommer',
+                path: [[x_left_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_left_mid,y_bot,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot]]
+            },
             {
                 name: '_sola',
                 fr: 'son',
@@ -2368,6 +2407,10 @@ function erase_input(){
 
         if(e.keyCode === 13){ //ENTER 
 
+            if(sound_toggle.innerHTML === "son<br>ON"){
+                key_type.play();
+            }
+            
             let k;
 
             for(k = 0; k < glyph_database.length; k += 1){
@@ -2416,7 +2459,6 @@ function erase_input(){
 
                 trad.innerHTML += "<br><br>";
                 center_paths_store = [];
-                // search.style.background = "white";
 
             }else if(content === "x\n"){
 

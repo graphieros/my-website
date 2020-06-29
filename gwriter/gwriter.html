@@ -31,8 +31,9 @@
     </a>
     
 
-    <p><span class="tit">Graphieros Writer</span><br><br>Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple _ka (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <i>humain</i> (pas besoin d'underscore si vous écrivez en français), et appuyez sur ENTER.<br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span><br><br>
-    Vous pouvez sélectionner la couleur des glyphes en indiquant les niveaux de 0 à 255 pour le rouge, le vert et le bleu, avant d'écrire le glyphe.</p>
+    <p><span class="tit">Graphieros Writer</span><br><br>Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple <b class="big">_ka</b> (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <b class="big">humain</b> (pas besoin d'underscore si vous écrivez en français), et appuyez sur <span class="a">ENTER</span>.<br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span><br><br>
+    <b class="big">Couleur : </b>sélectionnez la couleur des glyphes en indiquant les niveaux de 0 à 255 pour le rouge, le vert et le bleu, avant d'écrire le glyphe.<br><br>
+    <b class="big">Taille : </b>changez la taille de la police. Plus le nombre est grand, plus la police sera... petite (logique).</p>
     <div class="controls">
         <div class="toggle_color">
             <div id="toggle">0</div>
@@ -42,6 +43,11 @@
             <textarea maxlength="3" class="color_select" id="B" placeholder="B" oninput="make_color()"></textarea>
             <div id="color_result"></div>
         </div>
+        <div class="size_matters">
+            <textarea placeholder="changer la taille du svg..." id="change_size">3000</textarea>
+            <div id="apply_size">changer taille</div>
+        </div>
+        
     </div> 
     <!--for when I find a way to simulate key events with buttons without duplicating my js-->
     <!-- <div class="touch_controls">
@@ -64,7 +70,10 @@
     
     <div id="trad"></div>
     <div id="search"></div>
-    
+    <audio id="key_type" controls style="display:none">
+        <source src="key_type2.mp3">
+    </audio>
+    <div id="mute">son<br>OFF</div>
     <div class="end"></div>
     <script src="gwriter.js"></script>
 </body>
