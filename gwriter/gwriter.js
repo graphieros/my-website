@@ -38,6 +38,7 @@ const color_mix = document.getElementById("color_result");
 
 let center_paths_store = [];
 let cut_indicator = document.getElementById("cut_indicator");
+let search = document.getElementById("search");
 
 function make_color(){
     color_mix.style.background = `rgb(${R.value},${G.value},${B.value})`;
@@ -45,23 +46,28 @@ function make_color(){
 
 let memory = [];
 
-function clear_area(){
+function clear_area(){ 
     writing_area.value = "";
     y_top += 206;
     y_mid += 206;
     y_bot += 206;
+    search.innerHTML = "";
 }
 
 function jump_back(){
     y_top -= 206;
     y_mid -= 206;
     y_bot -= 206;
+    search.style.background = "white";
+    search.innerHTML += "<br>1UP";
 }
 
 function jump_slight(){
     y_top += 103;
     y_mid += 103;
     y_bot += 103;
+    search.style.background = "white";
+    search.innerHTML += "<br>1/2UP";
 }
 
 function goto_previous_line(){
@@ -77,6 +83,8 @@ function goto_previous_line(){
     center_paths_store = [];
     cut_indicator.innerHTML = "";
     trad.innerHTML += "<br><br>[RETOUR]";
+    search.style.background = "white";
+    search.innerHTML = "BACK";
 }
 
 function new_line(){
@@ -92,6 +100,8 @@ function new_line(){
     center_paths_store = [];
     cut_indicator.innerHTML = "";
     trad.innerHTML += "<br><br>";
+    search.style.background = "white";
+    search.innerHTML = "NEXT";
 }
 
 function erase_input(){
@@ -110,12 +120,16 @@ function erase_input(){
     trad.innerHTML = "";
     center_paths_store = [];
     cut_indicator.innerHTML = "";
+    search.style.background = "white";
+    search.innerHTML = "";
 };
 
 
 (function main(){
 
     document.body.onkeyup = function(e){
+
+        search.style.background = "red";
 
         function grab_color(){
             return `rgb(${R.value},${G.value},${B.value})`
@@ -2365,6 +2379,8 @@ function erase_input(){
 
                 if(content === `${glyph.name}\n` || content === `${glyph.fr}\n`){
 
+                    search.style.background = "green";
+
                     for(b = 0; b < paths.length; b += 1){
                         store.push(`${_p}${paths[b]}${p_}`);
                         output_area.innerHTML += store;
@@ -2400,6 +2416,7 @@ function erase_input(){
 
                 trad.innerHTML += "<br><br>";
                 center_paths_store = [];
+                // search.style.background = "white";
 
             }else if(content === "x\n"){
 
@@ -2407,6 +2424,7 @@ function erase_input(){
                 trad.innerHTML += "<br><br>";
                 cut_indicator.innerHTML = "";
                 cut_indicator.innerHTML = "lien coupé";
+                search.style.background = "white";
 
                 jump_back();
 
