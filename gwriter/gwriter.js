@@ -72,7 +72,17 @@ sound_toggle.addEventListener("click", function(){
         this.style.background = "lightgrey";
         this.style.color = "black";
     }
-})
+});
+
+const eraser = document.getElementById("eraser");
+let glyphs = document.getElementsByClassName("glyph");
+
+function close_eraser(){
+    eraser.innerHTML = "DESTROY";
+    eraser.style.fontSize = "0.6em";
+    eraser.style.background = "black";
+    eraser.style.color = "white";
+}
 
 function make_color(){
     color_mix.style.background = `rgb(${R.value},${G.value},${B.value})`;
@@ -169,7 +179,8 @@ function erase_input(){
             return `rgb(${R.value},${G.value},${B.value})`;
         }
         
-        const _p = `<path style="stroke:${grab_color()};" d="M`;
+        const _p = `<path `;
+        const _p_ = `style="stroke:${grab_color()};" d="M`;
         const p_ = '"/>';
         
         let glyph_database = [
@@ -2425,7 +2436,7 @@ function erase_input(){
                     search.style.background = "green";
 
                     for(b = 0; b < paths.length; b += 1){
-                        store.push(`${_p}${paths[b]}${p_}`);
+                        store.push(`${_p}class="glyph"id="${glyph.name}_${x_mid}_${y_mid}"${_p_}${paths[b]}${p_}`);
                         output_area.innerHTML += store;
                         store = [];   //yes !
                         }
@@ -2472,7 +2483,7 @@ function erase_input(){
 
             }else{
 
-                output_area.innerHTML += `${_p}${center_paths_store}${p_}`;
+                output_area.innerHTML += `${_p}class="glyph"id="${content}_${x_mid}_${y_mid}"${_p_}${center_paths_store}${p_}`;
                 cut_indicator.innerHTML = "";
                 cut_indicator.innerHTML = "lien actif, x + ENTER pour couper";
 
@@ -2579,6 +2590,30 @@ function kill(dad,son){
         kill(window_info, window_content);
         kill(window_info,window_x);
         kill(document.body, window_info);
-    });
+    });   
+}());
+
+(function manipulate_glyphs(){
     
+    eraser.addEventListener("click", function(){
+
+        if(eraser.innerHTML === "DESTROY"){
+
+            eraser.innerHTML = "&#128520;";
+            eraser.style.background = "white";
+            eraser.style.color = "black";
+            eraser.style.fontSize = "1.5em";
+
+            for(let i = 0; i < glyphs.length; i += 1){
+                let that_glyph = glyphs[i];
+
+                that_glyph.addEventListener("click", function(){
+                    output_area.removeChild(this);
+                });
+            }
+
+        }else{
+            close_eraser();
+        }
+    });
 }());
