@@ -1,9 +1,6 @@
 /*
 TODO:
-    > add a jump indicator
     > add a size indicator (example: 50%, 25%, ... etc)
-    > add a modal window with HELP details
-    > update main menu at graphieros.com
 */
 
 (function main(){
@@ -26,6 +23,7 @@ TODO:
     const erase = document.getElementById("btn_erase");
     const jump_indicator = document.getElementById("jump_indicator");
     const HELP = document.getElementById("help");
+    const help_modal = document.getElementById("help_modal");
 
     let _p = `<path `;
     let _p_ = `d="M `;
@@ -68,6 +66,7 @@ TODO:
         color_B = 30;
         glyph_color = `rgb(${color_R},${color_G},${color_B})`;
         counter = 0;
+        input.focus();
     }
 
     function jump_forward(){
@@ -188,6 +187,7 @@ TODO:
                     counter += (glyph_size + increment);
 
                     jump_forward();
+                    input.focus();
                     
                 }
 
@@ -202,11 +202,19 @@ TODO:
 
     }());
 
+    const btn_quit_modal = document.getElementById("quit_modal");
 
     HELP.addEventListener("click", function(){
         console.log(">> HELP");
+        help_modal.style.opacity = 1;
+        help_modal.style.display = "grid";
 
-        //modal window with instrux
+        
+        btn_quit_modal.addEventListener("click", function(){
+            help_modal.style.opacity = 0;
+            help_modal.style.display = "none";
+            input.focus();
+        })
 
     })
 

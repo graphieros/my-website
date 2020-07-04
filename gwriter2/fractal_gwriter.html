@@ -28,17 +28,34 @@
                 </div>
             </header>
         </a>
-
+        
         <div class="svg_container" id="svg_container">
+            <p class="disclaimer">Cette application fonctionne avec un clavier physique.</p>
         </div>
 
         <div class="controls">
             <div class="btn" id="help">HELP</div>
             <div class="btn" id="btn_erase">effacer</div>
-            <textarea class="input_text" id="input" placeholder="saisissez la séquence, séparez les segments par des espaces. Tapez par exemple: zx ws qe dd , puis ENTER"></textarea>
+            <textarea autofocus class="input_text" id="input" placeholder="saisissez la séquence, séparez les segments par des espaces. Tapez par exemple: zx ws qe dd , puis ENTER"></textarea>
         </div>
         <div id="jump_indicator">YOU<br>JUMPED</div>
-        
+        <div id="help_modal">
+            <div id="quit_modal">OK</div>
+            <div class="help_inside_wrapper">
+                <p class="pee_help">Sur un clavier AZERTY, les touches ci-dessous sont disposées comme les 7 points d'un hexagone:</p>
+                <div id="clavier">
+                    <span class="touche" id="key_s">S</span>
+                    <span class="touche" id="key_q">Q</span>
+                    <span class="touche" id="key_d">D</span>
+                    <span class="touche" id="key_z">Z</span>
+                    <span class="touche" id="key_e">E</span>
+                    <span class="touche" id="key_w">W</span>
+                    <span class="touche" id="key_x">X</span>
+                </div>
+                <p class="pee_help">Pour dessiner un point, il faut taper 2 fois la lettre. Pour dessiner un segment, il faut taper la séquence de touches qui le relient. Pour lever le stylo avant de dessiner un autre segment, appuyer sur ESPACE. Pour voir votre glyphe, appuyer sur ENTER.<br><br>Pour aller à la ligne et commencer un nouveau glyphe, appuyez sur la touche CTRL.<br><br>
+                Seules ces 10 touches sont autorisées par le programme.<br><br><b><a class="tuto "href="fractal_gwriter_c.mp4" target="_blank">TUTORIEL VIDEO</a></b></p>
+            </div>
+        </div>
 
     <script src="fractal_gwriter.js"></script>
 </body> 
