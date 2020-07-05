@@ -11,6 +11,8 @@ const MENUBALLGRAPHIEROS = document.getElementById("menuBallGraphieros");
 const MENUBALL2 = document.getElementById("menuBall2");
 const MENUBALLJOURNAL = document.getElementById("menuBallJournal");
 const MENUBALL3 = document.getElementById("menuBall3");
+const MENUBALLWRITER = document.getElementById("menuBallWriter");
+const MENUBALLFRACTALWRITER = document.getElementById("menuBallFractalWriter");
 const XBALL = document.getElementById("Xball");
 const XBALLCROSS0 = document.getElementById("XballCross0");
 const XBALLCROSS1 = document.getElementById("XballCross1");
@@ -72,10 +74,18 @@ let i;
             MENUBALL2.style.opacity = 1;
             MENUBALLJOURNAL.style.opacity = 1;
         }, 200);
+        setTimeout(function(){
+          MENUBALLFRACTALWRITER.style.height = "70px";
+          MENUBALLFRACTALWRITER.style.width = "70px";
+          MENUBALLFRACTALWRITER.style.opacity = 1;
+        }, 225);
         setTimeout(function() {
             MENUBALL3.style.height = "70px";
             MENUBALL3.style.width = "70px";
             MENUBALL3.style.opacity = 1;
+            MENUBALLWRITER.style.height = "70px";
+            MENUBALLWRITER.style.width = "70px";
+            MENUBALLWRITER.style.opacity = 1;
         }, 250);
         setTimeout(function() {
             XBALLCROSS0.style.opacity = 1;
@@ -106,7 +116,11 @@ function closeMenu() {
 
     setTimeout(function() {
         MENUBALL3.style.opacity = 0;
+        MENUBALLWRITER.style.opacity = 0;
     }, 10);
+    setTimeout(function(){
+      MENUBALLFRACTALWRITER.style.opacity = 0;
+    }, 15);
     setTimeout(function() {
         MENUBALL2.style.opacity = 0;
         MENUBALLJOURNAL.style.opacity = 0;
@@ -177,37 +191,11 @@ function showQuote(menu, quote, col) {
         QUOTE.innerHTML = quote;
         QUOTE.style.background = `linear-gradient(to bottom right,darkgrey,${col}, transparent, transparent, transparent, transparent, transparent, transparent, transparent`;
     }); 
-    // menu.addEventListener("mouseover", function(){
-    //   let interval = setInterval(function(){
-    //     QUOTE.innerHTML += quote.charAt(k);
-    //     k += 1;
-    //     if(k > quote.length){
-    //       clearInterval(interval);
-    //     }
-    //   },0)
-    // }); //when clicking to quickly on another menu, loops merge and result is weird
-  // let splat = quote.split("");
-  // let k = 0;
-
-  // menu.addEventListener("mouseover", function() {
-  //     let interval = setInterval(function(){
-  //       if(splat[k] === undefined || k >= splat.length){
-  //         splat[k] = "";
-  //       }
-
-  //       QUOTE.innerHTML += splat[k];
-  //       k += 1;
-  //       if(k >= splat.length ){
-  //         clearInterval(interval);
-  //       }
-  //     },0); //better but same issue in the end
-  // }); 
-    
-
+ 
     menu.addEventListener("mouseout", function() {
         QUOTE.innerHTML = "";
         QUOTE.style.background = "none";
-    });
+    }); 
 } 
 
 showQuote(MENUBALLBLOG, "Des pensées, des photos comme elles viennent", "rgb(90,156,36)");
@@ -215,8 +203,10 @@ showQuote(MENUBALL0, "Une sorte de curriculum vitae", "rgb(90,156,36)");
 showQuote(MENUBALL1, "La construction d'une langue hexagonale", "cornflowerblue");
 showQuote(MENUBALLGRAPHIEROS, "La clé, dans sa version en graphieros", "cornflowerblue");
 showQuote(MENUBALL2, "Ecrire et peindre simultanément dans une langue nouvelle","tomato");
-showQuote(MENUBALLJOURNAL, "Journal commencé le jour 0 du confinement en France","tomato")
+showQuote(MENUBALLJOURNAL, "<b>Le cri du pangolin</b>, journal de confinement 2020","tomato")
 showQuote(MENUBALL3, "Programmation, idées et applications", "gold");
+showQuote(MENUBALLWRITER, "Ecrivez en graphieros avec votre clavier !", "gold");
+showQuote(MENUBALLFRACTALWRITER, "Ecrivez en graphieros <b>fractal</b> avec votre clavier!", "rgb(255, 160, 71)");
 
 //BIO
 (function hideBioPic(){
@@ -462,7 +452,7 @@ showApp(DEVMENU[2], APPS[2], APPS[0], APPS[1]);
     let Yarray = [];
     let allInputCircles = [];
     let drawnLines = [];
-    let size = 2880;
+    let size = 2880; 
 
 
     function buildCoreSVG(){
