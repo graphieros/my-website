@@ -1,8 +1,3 @@
-/*
-TODO:
-    > add a size indicator (example: 50%, 25%, ... etc)
-*/
-
 (function main(){
 
 
@@ -15,8 +10,34 @@ TODO:
     let svg_width= 4000;
     let svg_height = svg_width *6;
     output_area.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
-    output_area.style.height = "2400px";
-    output_area.style.width = "400px";
+
+    const size_plus = document.getElementById("size_plus");
+    const size_minus = document.getElementById("size_minus");
+    let svg_size = document.getElementById("svg_size");
+
+    size_plus.addEventListener("click", function(){
+        let num = Number(svg_size.innerHTML);
+        num += 10;
+        svg_size.innerHTML = num;
+        output_area.style.width = `${num}px`;
+        output_area.style.height = `${num * 6}px`;
+        input.focus();
+    });
+
+    size_minus.addEventListener("click", function(){
+        let num = Number(svg_size.innerHTML);
+        num -= 10;
+        svg_size.innerHTML = num;
+        output_area.style.width = `${num}px`;
+        output_area.style.height = `${num * 6}px`;
+        input.focus();
+    });
+
+    let SVGSIZE = Number(svg_size.innerHTML);
+
+    output_area.style.width = SVGSIZE;
+
+    output_area.style.height =  SVGSIZE * 6;
     svg_container.appendChild(output_area);
     output_area.setAttributeNS(null, "stroke", "white");
 
@@ -24,6 +45,9 @@ TODO:
     const jump_indicator = document.getElementById("jump_indicator");
     const HELP = document.getElementById("help");
     const help_modal = document.getElementById("help_modal");
+    const position_indicator = document.getElementById("position_indicator");
+    let position = 1;
+    position_indicator.innerHTML = `${position * 100}%`;
 
     let _p = `<path `;
     let _p_ = `d="M `;
@@ -66,11 +90,13 @@ TODO:
         color_B = 30;
         glyph_color = `rgb(${color_R},${color_G},${color_B})`;
         counter = 0;
+        position = 1;
+        position_indicator.innerHTML = `${position * 100}%`;
         input.focus();
     }
 
     function jump_forward(){
-        jump_indicator.style.bottom = "150px";
+        jump_indicator.style.bottom = "170px";
         jump_indicator.style.opacity = 1;
         glyph_size = svg_width /2;
         increment = glyph_size / 10;
@@ -84,6 +110,8 @@ TODO:
         color_B = 30;
         glyph_color = `rgb(${color_R},${color_G},${color_B})`;
         Ycenter += counter;
+        position = 1;
+        position_indicator.innerHTML = `${position * 100}%`;
     }
 
     function fractalize_to_small(){
@@ -93,7 +121,18 @@ TODO:
         color_R *= phi;
         color_G *= phi;
         color_B *= phi;
+        if(color_R >= 255){
+            color_R = 255;
+        }
+        if(color_G >= 255){
+            color_G = 255;
+        }
+        if(color_B >= 255){
+            color_B = 255;
+        }
         glyph_color = `rgb(${color_R},${color_G},${color_B})`;
+        console.log(glyph_color);
+        position_indicator.innerHTML = `${(position) * 100}%`;
     }
 
     erase.addEventListener("click", function(){
@@ -144,19 +183,21 @@ TODO:
 
                 if(event.keyCode === 13){ //ENTER 
                     console.log(">> ENTER");
+                    position /= 2;
 
                     jump_indicator.style.bottom = "100px";
                     jump_indicator.style.opacity = 0;
 
                     let raw_content = input.value;
-                    let pure_content = raw_content.split(/,| |;+/) //array
+                    let pure_content = raw_content.split(/,| |;+/);
+
                     console.log(`PURE CONTENT: ${pure_content}`);
 
                     let store = [];
 
                     for(let i = 0; i < pure_content.length; i += 1){
+
                         let content_path = pure_content[i];
-    
                         content_path = content_path.replace(/[s]/g,` ${S},`);
                         content_path = content_path.replace(/[z]/g,` ${Z},`);
                         content_path = content_path.replace(/[e]/g,` ${E},`);
@@ -165,13 +206,16 @@ TODO:
                         content_path = content_path.replace(/[w]/g,` ${W},`);
                         content_path = content_path.replace(/[q]/g,` ${Q},`);
                         store.push(content_path);
+
                     }
                     
                     console.log(store);
 
                     for(let j = 0; j < store.length; j += 1){
+
                         let pth = store[j];
-                        output_area.innerHTML += `${_p}class="test" stroke-width="${stk}"style="stroke:${glyph_color}"${_p_}${pth}${p_}`
+                        output_area.innerHTML += `${_p}class="test" stroke-width="${stk}"style="stroke:${glyph_color}"${_p_}${pth}${p_}`;
+
                     }
 
                     input.value = "";
@@ -192,7 +236,8 @@ TODO:
                 }
 
             }else{
-    
+
+                input.value="";
                 alert("\n________________________\nTouche non autorisée!\n________________________\nUtilisez les touches Q Z E D X W S, ENTER, CTRL, ESPACE");
                 event.preventDefault();
                 
@@ -205,6 +250,7 @@ TODO:
     const btn_quit_modal = document.getElementById("quit_modal");
 
     HELP.addEventListener("click", function(){
+
         console.log(">> HELP");
         help_modal.style.opacity = 1;
         help_modal.style.display = "grid";
@@ -214,9 +260,7 @@ TODO:
             help_modal.style.opacity = 0;
             help_modal.style.display = "none";
             input.focus();
-        })
-
-    })
-
-
+            
+        });
+    });
 }());

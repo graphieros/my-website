@@ -31,14 +31,22 @@
         
         <div class="svg_container" id="svg_container">
             <p class="disclaimer">Cette application fonctionne avec un clavier physique.</p>
+           
         </div>
 
         <div class="controls">
-            <div class="btn" id="help">HELP</div>
+            <div class="btn" id="help">&nbsp&nbspHELP&nbsp&nbsp</div>
+            <div class="size_manager">
+                <div class="size_controller" id="size_plus">+</div>
+                <div id="svg_size">200</div>
+                <div xlass="size_controller" id="size_minus">-</div>
+            </div>
             <div class="btn" id="btn_erase">effacer</div>
             <textarea autofocus class="input_text" id="input" placeholder="saisissez la séquence, séparez les segments par des espaces. Tapez par exemple: zx ws qe dd , puis ENTER"></textarea>
         </div>
         <div id="jump_indicator">YOU<br>JUMPED</div>
+        <div id="position_indicator"></div>
+
         <div id="help_modal">
             <div id="quit_modal">OK</div>
             <div class="help_inside_wrapper">

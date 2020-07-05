@@ -53,6 +53,15 @@ span.d{
     font-weight:bold;
 } 
 
+span.larg{
+    display:inline-block;
+    color: cornflowerblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:0.75em;
+    text-align:center;
+    width:100%;
+}
+
 .svg_container{
     position: fixed;
     width:90%;
@@ -157,7 +166,7 @@ span.d{
 #output_area{
     border:1px solid rgb(92, 91, 91);
     border-radius:30px;
-    background: radial-gradient(at top,rgb(44, 43, 40), black);
+    background: black;
 }
 
 #help{
@@ -254,7 +263,6 @@ span.d{
 
 #clavier{
     margin:0 auto;
-    top: 20px;
     display: block;
     position: relative;
     height:200px;
@@ -368,4 +376,77 @@ p.disclaimer{
     text-align:center;
     display: block;
     top:50px;
+}
+
+#position_indicator{
+    height:100px;
+    width:100px;
+    box-sizing: border-box;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    position: fixed;
+    bottom:10px;
+    left:50%;
+    transform: translateX(-310%);
+    border-radius:3px;
+    color:cornflowerblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.size_manager{
+    grid-column: 3;
+    width:150px;
+    display: grid;
+    grid-template-columns: 25px 100px 25px;
+    color:white;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin:0 auto;
+}
+
+.size_manager > div {
+    border:1px solid rgb(92, 92, 92);
+    box-sizing: border-box;
+    padding:5px;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+}
+
+#svg_size{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    color:cornflowerblue;
+    background: radial-gradient(at top, rgb(63, 63, 63), black);
+}
+
+#size_plus{
+    border-radius: 10px 0 0 10px;
+    background: radial-gradient(at left, cornflowerblue, rgb(58, 85, 134));
+}
+
+#size_plus:hover{
+    box-shadow: -3px 0px 3px black;
+    border: 1px solid white;
+}
+
+#size_minus{
+    border-radius: 0 10px 10px 0;
+    background: radial-gradient(at right, cornflowerblue,rgb(58, 85, 143));
+}
+
+#size_minus:hover{
+    box-shadow: 3px 0px 3px black;
+    border: 1px solid white;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
+}
+
+.size_controller{
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 1px 1px black;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    cursor: pointer;
 }
