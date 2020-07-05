@@ -31,7 +31,10 @@
     </a>
     
 
-    <p><span class="tit">Graphieros Writer</span><br><br>Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple <b class="big">_ka</b> (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <b class="big">humain</b> (pas besoin d'underscore si vous écrivez en français), et appuyez sur <span class="a">ENTER</span>.<br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span><br><br>
+    <p><span class="tit">Graphieros Writer</span><br><br>
+    Ecrivez en graphieros en tapant les glyphes par leur phonologie (sans les points) ou par leur traduction en français. Pour commencer, tapez par exemple <b class="big">_ka</b> (car il faut préfacer la phonologie avec un <u>underscore</u>), ou tapez <b class="big">humain</b> (pas besoin d'underscore si vous écrivez en français), et appuyez sur <span class="a">ENTER</span>.<br><br>
+    <a href="gwriter.mp4" target="_blank"><span class="tuto">TUTORIEL VIDEO</span></a>
+    <br><br>Retrouvez la liste des glyphes du graphieros <a href="https://graphieros.com/php/glyphs.php" target="_blank">en cliquant ici</a>, et apprenez le graphieros en lisant <a href="https://graphieros.com/lacle2.pdf" target="_blank">la clé</a>!<br><br><span class="c">Cette application fonctionne<br>avec un clavier physique.</span><br><br>
     <b class="big">Couleur : </b>sélectionnez la couleur des glyphes en indiquant les niveaux de 0 à 255 pour le rouge, le vert et le bleu, avant d'écrire le glyphe.<br><br>
     <b class="big">Taille : </b>changez la taille de la police. Plus le nombre est grand, plus la police sera... petite (logique).</p>
     <div class="controls">
@@ -49,20 +52,11 @@
         </div>
         
     </div> 
-    <!--for when I find a way to simulate key events with buttons without duplicating my js-->
-    <!-- <div class="touch_controls">
-        <div class="tcc">
-            <div id="enter">ENTER</div>
-            <div id="left">&#8678;</div>
-            <div id="top">&#8679;</div>
-            <div id="right">&#8680;</div>
-        </div>
-    </div> -->
     
     <div class="svg_container" id="svg_container">
     </div>
     
-    <div class="inputs">
+    <div class="inputs"> 
         <div id="cut_indicator"></div>
         <textarea placeholder="écrivez ici... ajoutez un _ devant la phono, mais pas devant un mot en français" id="writing_area"></textarea>
          <button id="clean">effacer l'ardoise</button>
