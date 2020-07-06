@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65449763-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-65449763-3');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ecrivez en graphieros d'où que vous soyiez!" />
+    <title>Graphieros TouchWriter</title>
+    <link rel="stylesheet" href="touch_writer.css" class="css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pics/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../pics/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pics/favicon-32x32.png">
+</head>
+<body>
+    <a href="../index.html">
+        <header class="title">
+            <div>
+                <span class="a">A</span>le<span class="c">C</span> Lloy<span class="d">D</span> Pro<span class="b">B</span>ert
+            </div>
+        </header>
+    </a>
+
+    <p class="page_name">Graphieros TouchWriter</p>
+
+    <div id="erase_all">tout effacer</div>
+    <div class="svg_container" id="svg_container">
+    </div>
+
+    <section class="view" id="view"></section>
+
+    <section class="clavier">
+
+        <div class="line" id="line_numbers">
+            <div class="key" id="k1">1</div>
+            <div class="key" id="k2">2</div>
+            <div class="key" id="k3">3</div>
+            <div class="key" id="k4">4</div>
+            <div class="key" id="k5">5</div>
+            <div class="key" id="k6">6</div>
+            <div class="key" id="k7">7</div>
+            <div class="key" id="k8">8</div>
+            <div class="key" id="k9">9</div>
+            <div class="key" id="k0">0</div>
+            <div class="key" id="under">_</div>
+        </div>
+
+        <div class="line" id="line_ap">
+            <div class="key" id="ka">A</div>
+            <div class="key" id="kz">Z</div>
+            <div class="key" id="ke">E</div>
+            <div class="key" id="kr">R</div>
+            <div class="key" id="kt">T</div>
+            <div class="key" id="ky">Y</div>
+            <div class="key" id="ku">U</div>
+            <div class="key" id="ki">I</div>
+            <div class="key" id="ko">O</div>
+            <div class="key" id="kp">P</div>
+        </div>
+
+        <div class="line" id="line_qm">
+            <div class="key" id="kq">Q</div>
+            <div class="key" id="ks">S</div>
+            <div class="key" id="kd">D</div>
+            <div class="key" id="kf">F</div>
+            <div class="key" id="kg">G</div>
+            <div class="key" id="kh">H</div>
+            <div class="key" id="kj">J</div>
+            <div class="key" id="kk">K</div>
+            <div class="key" id="kl">L</div>
+            <div class="key" id="km">M</div>
+        </div>
+
+        <div class="line" id="line_wn">
+            <div class="key" id="kw">W</div>
+            <div class="key" id="kx">X</div>
+            <div class="key" id="kc">C</div>
+            <div class="key" id="kv">V</div>
+            <div class="key" id="kb">B</div>
+            <div class="key" id="kn">N</div>
+            <div class="key" id="kcom">,</div>
+            <div class="key" id="kint">?</div>
+            <div class="key" id="kdot">.</div>
+            <div class="key" id="kexc">!</div>
+        </div>
+
+        <div class="line" id="controls">
+            <div id="erase"></div>
+            <div id="left">&larr;</div>
+            <div id="up">&uarr;</div>
+            <div id="space"></div>
+            <div id="down">&darr;</div>
+            <div id="right">&rarr;</div>
+            <div id="ok"></div>
+        </div>
+
+    </section>
+
+    <script src="touch_writer.js"></script>
+</body>
+</html>
