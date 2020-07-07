@@ -1,10 +1,10 @@
 /*
 TODO:
-    > clean glyph_reference[] from all paths
     > function to change colors
     > function to change size of glyphs
     > function to erase segments, modify cursor if possible
-    > history with glyph.name and glyph.fr
+    > add link on graphieros.com
+    > sketch for pattern recognition to translate basic concepts
 */ 
 
 (function main(){
@@ -57,6 +57,29 @@ TODO:
     const up = document.getElementById("up");
     const down = document.getElementById("down");
     const erase_all = document.getElementById("erase_all");
+    const translator = document.getElementById("translator");
+    const circle_preview = document.getElementById("circle_preview");
+    const light = document.getElementById("light");
+
+
+    light.addEventListener("click", function(){
+
+        if(light.innerHTML === "0"){
+            output_area.style.stroke = "black";
+            output_area.style.background = "white";
+            this.innerHTML = "1";
+            this.style.background = "black";
+            this.style.border = "2px solid white";
+        }else{
+            output_area.style.stroke = "white";
+            output_area.style.background = "black";
+            this.innerHTML = "0";
+            this.style.background ="white";
+            this.style.border = "2px solid black";
+        }
+
+    });
+
 
     let glyph_reference = [
         {
@@ -2293,13 +2316,23 @@ TODO:
     }
 
     erase.addEventListener("click", function(){
-        erase_view();
+        let view_string = view.innerHTML;
+        let sliced_view = view_string.slice(0, -1);
+        view.innerHTML = sliced_view;
+        search_reference(sliced_view);
+        if(view.innerHTML === ""){
+            svg_preview.style.display = "none";
+            circle_preview.style.display = "none";
+        }
     });
+
 
     function erase_view(){
         view.innerHTML = "";
         svg_preview.style.display = "none";
+        circle_preview.style.display = "none";
     }
+
 
     let center_link_counter = 0;
     let center_link_memory = [];
@@ -2308,6 +2341,7 @@ TODO:
         center_link_counter = 0;
         center_link_memory = [];
     }
+
 
     function draw_glyph(path){
 
@@ -2342,6 +2376,7 @@ TODO:
         y_mid -= 200;
         y_bot -= 200;
     }
+
 
     let semi_line = 0;
 
@@ -2389,12 +2424,14 @@ TODO:
 
 
     function erase_svg_content(){
+        translator.innerHTML = "";
         output_area.innerHTML = "";
         semi_line = 0;
         kill_link();
         clear_space();
         view.innerHTML = "";
         svg_preview.style.display = "none";
+        circle_preview.style.display = "none";
         //initial y glyph coordinates
         y_top = 50;
         y_mid = 128;
@@ -2407,18 +2444,21 @@ TODO:
         x_right = 218;
     }
 
+
     function clear_space(){
         space.style.background = "initial";
         space.innerHTML = "";
     }
 
+
     function search_reference(text_searched){
+        circle_preview.style.display = "block";
         svg_preview.innerHTML = "";
         svg_preview.style.display = "block";
         let w;
         for(w = 0; w < glyph_reference.length; w += 1){
             let one_ref = glyph_reference[w];
-            if(one_ref.name === text_searched || one_ref.fr === text_searched){
+            if(one_ref.name === text_searched || one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === text_searched){ //removing all accents from one_ref.fr
                 space.style. background = "radial-gradient(at top left, white, grey)";
                 space.innerHTML = `${one_ref.fr}: [${one_ref.name.replace("_","")}]`;
 
@@ -2427,10 +2467,10 @@ TODO:
                     svg_preview.innerHTML += `${_p}${p1}${p_}`;
                     console.log(`${_p}${p1}${p_}`);
                 }
-                
             }
         }
     }
+
 
     (function display_search(){
         for(let c = 0; c < keys.length; c += 1){
@@ -2441,6 +2481,7 @@ TODO:
             });
         }
     }());
+
 
     function search_and_draw(text_searched){
 
@@ -4669,11 +4710,16 @@ TODO:
 
         let k;
         for(k = 0; k < glyph_database.length; k += 1){
+
             let one_glyph = glyph_database[k];
+            let glyph_with_accent = glyph_reference[k]; //implies that both lists are strictly identical with the exception of accents = possible source of error when updating lists.
+
             if(one_glyph.name === text_searched || one_glyph.fr === text_searched){
+                console.log(text_searched, one_glyph.fr);
                 draw_glyph(one_glyph.path);
                 erase_view();
                 increment_y();
+                translator.innerHTML += `${glyph_with_accent.fr.toUpperCase()}<span class="phono">[${glyph_with_accent.name.replace("_","")}]</span> `;
             }
         }
     }
@@ -4685,27 +4731,36 @@ TODO:
         clear_space();
     });
 
+
     space.addEventListener("click", function(){
         kill_link();
+
         this.style. background = "radial-gradient(at top left, white, grey)";
         this.innerHTML = `nouveau mot`;
+        translator.innerHTML += `<span class="word_separator"><br>______________<br><br></span>`;
+        word_count += 1;
     });
+
 
     right.addEventListener("click", function(){
         kill_link();
         space.style. background = "radial-gradient(at top left, white, grey)";
         space.innerHTML = `nouvelle ligne`;
+        translator.innerHTML += `<span class="line_separator"><br>______________<br><br></span>`;
         increment_x();
     });
+
 
     erase_all.addEventListener("click", function(){
         erase_svg_content();
     });
 
+
     up.addEventListener("click", function(){
         space.style. background = "radial-gradient(at top left, white, grey)";
         decrement_y();
     });
+
 
     down.addEventListener("click", function(){
         kill_link();
@@ -4714,10 +4769,12 @@ TODO:
         increment_y();
     });
 
+
     left.addEventListener("click", function(){
         kill_link();
         space.style. background = "radial-gradient(at top left, white, grey)";
         space.innerHTML = `retour ligne précédente`;
+        translator.innerHTML += `<span class="back_jump"><br><br>___|retour|___<br><br></span>`;
         decrement_x();
     });
 

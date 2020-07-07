@@ -32,15 +32,28 @@
 
     <p class="page_name">Graphieros TouchWriter</p>
 
-    <div id="erase_all">tout effacer</div>
+    <div id="erase_all">Réinitialiser</div>
     <div class="svg_container" id="svg_container">
     </div>
 
+    <section class="circle" id="circle_preview">
+        <span class="text_in_circle" id="circle_0">P</span>
+        <span class="text_in_circle" id="circle_1">r</span>
+        <span class="text_in_circle" id="circle_2">e</span>
+        <span class="text_in_circle" id="circle_3">v</span>
+        <span class="text_in_circle" id="circle_4">i</span>
+        <span class="text_in_circle" id="circle_5">e</span>
+        <span class="text_in_circle" id="circle_6">w</span>
+    </section>
+
     <section class="view" id="view"></section>
+
+    
 
     <section class="clavier">
 
         <div class="line" id="line_numbers">
+            <div id="light">0</div>
             <div class="key" id="k1">1</div>
             <div class="key" id="k2">2</div>
             <div class="key" id="k3">3</div>
@@ -104,6 +117,8 @@
         </div>
 
     </section>
+
+    <section id="translator"></section>
 
     <script src="touch_writer.js"></script>
 </body>

@@ -95,7 +95,8 @@ span.d{
     height:100px;
     width:100px;
     display: none;
-    background: white;
+    background:radial-gradient(black, rgb(0, 34, 0));
+    border:1px solid rgb(0, 68, 0);
 }
 
 .svg_container{
@@ -256,4 +257,124 @@ p.page_name{
 
 #erase_all:hover{
     opacity: 1;
+}
+
+#translator{
+    margin: 0 auto;
+    width:400px;
+    background: white;
+    margin-bottom: 400px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 0 0 30px 30px;
+    background: black;
+    border:1px solid grey;
+    color: grey;
+    font-size:0.8em;
+}
+
+span.phono{
+    color: white;
+    font-weight: bold;
+}
+
+span.word_separator{
+    color:rgb(56, 56, 56);
+}
+
+span.line_separator{
+    color: white;
+}
+
+span.back_jump{
+    color: tomato;
+}
+
+.circle{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    width:200px;
+    height:200px;
+    text-align:center;
+    display: none;
+}
+
+.circle > span {
+    display: block;
+    color: rgb(102, 158, 17);
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#circle_0{
+    top: 10px;
+    left: 60px;
+    transform: rotate(-40deg);
+}
+
+#circle_1{
+    top:0.3em;
+    left:70px;
+    transform: rotate(-28deg);
+}
+
+#circle_2{
+    top:1px;
+    left:82px;
+    transform: rotate(-10deg);
+}
+
+#circle_3{
+    top:0px;
+    left:94px;
+    transform: rotate(0deg);
+}
+
+#circle_4{
+    top:1px;
+    left:106px;
+    transform: rotate(11deg);
+}
+
+#circle_5{
+    top:0.25em;
+    left: 118px;
+    transform: rotate(28deg);
+}
+
+#circle_6{
+    top:10px;
+    left:128px;
+    transform: rotate(38deg);
+}
+
+#light{
+    height:40px;
+    width:40px;
+    background: white;
+    border-radius:100%;
+    position: absolute;
+    top:-50px;
+    left:0;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    font-size:0em;
+    line-height:43px;
+    text-align:center;
+    color: transparent;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, box-shadow 0.1s ease;
+    box-sizing: border-box;
+    border:2px solid white;
+}
+
+#light:hover{
+    opacity: 1;
+    box-shadow: 0 0 10px 3px black;
 }
