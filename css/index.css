@@ -225,7 +225,7 @@ span.nD{
     transform: translateY(50%);
     background:gold;
     color:black;
-}
+} 
 
 #menuBallWriter{
     top:50%;
@@ -240,6 +240,14 @@ span.nD{
     right:132px;
     transform: translateY(100%);
     background: rgb(255, 160, 71);
+    color:black;
+}
+
+#menuBallTouchWriter{
+    top:50%;
+    right:132px;
+    transform: translateY(200%);
+    background: rgb(255, 197, 71);
     color:black;
 }
 
@@ -371,7 +379,7 @@ span#EE{
     padding:15px;
     border-radius:100%;
     position: fixed;
-    top: 85%;
+    bottom: 50px;
     margin-left:50%;
     transform: translate(-50%);
     width: 90vw;
@@ -1091,7 +1099,7 @@ svg.storedSVG path {
         font-size: 1.3em;
     }
     #QUOTE {
-        top: 75%;
+        bottom: 50px;
         font-size: 1em;
     }
 
@@ -1142,5 +1150,7 @@ svg.storedSVG path {
         color: grey;
         text-align:center;
     }
+
+
     
 }   
