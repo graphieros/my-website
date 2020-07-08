@@ -13,6 +13,7 @@ const MENUBALLJOURNAL = document.getElementById("menuBallJournal");
 const MENUBALL3 = document.getElementById("menuBall3");
 const MENUBALLWRITER = document.getElementById("menuBallWriter");
 const MENUBALLFRACTALWRITER = document.getElementById("menuBallFractalWriter");
+const MENUBALLTOUCHWRITER = document.getElementById("menuBallTouchWriter");
 const XBALL = document.getElementById("Xball");
 const XBALLCROSS0 = document.getElementById("XballCross0");
 const XBALLCROSS1 = document.getElementById("XballCross1");
@@ -86,6 +87,9 @@ let i;
             MENUBALLWRITER.style.height = "70px";
             MENUBALLWRITER.style.width = "70px";
             MENUBALLWRITER.style.opacity = 1;
+            MENUBALLTOUCHWRITER.style.height = "70px";
+            MENUBALLTOUCHWRITER.style.width = "70px";
+            MENUBALLTOUCHWRITER.style.opacity = 1;
         }, 250);
         setTimeout(function() {
             XBALLCROSS0.style.opacity = 1;
@@ -117,6 +121,7 @@ function closeMenu() {
     setTimeout(function() {
         MENUBALL3.style.opacity = 0;
         MENUBALLWRITER.style.opacity = 0;
+        MENUBALLTOUCHWRITER.style.opacity = 0;
     }, 10);
     setTimeout(function(){
       MENUBALLFRACTALWRITER.style.opacity = 0;
@@ -207,6 +212,7 @@ showQuote(MENUBALLJOURNAL, "<b>Le cri du pangolin</b>, journal de confinement 20
 showQuote(MENUBALL3, "Programmation, idées et applications", "gold");
 showQuote(MENUBALLWRITER, "Ecrivez en graphieros avec votre clavier !", "gold");
 showQuote(MENUBALLFRACTALWRITER, "Ecrivez en graphieros <b>fractal</b> avec votre clavier!", "rgb(255, 160, 71)");
+showQuote(MENUBALLTOUCHWRITER, "L'éditeur <b>universel</b> de graphieros", "rgb(255, 197, 71)"),
 
 //BIO
 (function hideBioPic(){
