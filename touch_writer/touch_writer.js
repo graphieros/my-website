@@ -1,9 +1,9 @@
 /*
 TODO:
-    > function to change colors
+    > save to jpg : http://bl.ocks.org/biovisualize/8187844
+    > function to change colors: modal window
     > function to change size of glyphs
     > function to erase segments, modify cursor if possible
-    > add link on graphieros.com
     > sketch for pattern recognition to translate basic concepts
 */ 
 
@@ -60,6 +60,11 @@ TODO:
     const translator = document.getElementById("translator");
     const circle_preview = document.getElementById("circle_preview");
     const light = document.getElementById("light");
+    const counter_up = document.getElementById("up_counter");
+    const counter_down = document.getElementById("down_counter");
+
+    let up_down_counter = 0;
+    let stax = [];
 
 
     light.addEventListener("click", function(){
@@ -2304,9 +2309,8 @@ TODO:
         }
     ];
 
-    let i;
 
-    for(i = 0; i < keys.length; i += 1){
+    for(let i = 0; i < keys.length; i += 1){
         let that_key = keys[i];
 
         that_key.addEventListener("click", function(){
@@ -2316,13 +2320,18 @@ TODO:
     }
 
     erase.addEventListener("click", function(){
-        let view_string = view.innerHTML;
-        let sliced_view = view_string.slice(0, -1);
-        view.innerHTML = sliced_view;
-        search_reference(sliced_view);
         if(view.innerHTML === ""){
             svg_preview.style.display = "none";
             circle_preview.style.display = "none";
+            //now erase previous glyph, bit by bit
+            let last_glyph = output_area.lastChild;
+            output_area.removeChild(last_glyph);
+            kill_link();
+        }else{
+            let view_string = view.innerHTML;
+            let sliced_view = view_string.slice(0, -1);
+            view.innerHTML = sliced_view;
+            search_reference(sliced_view);
         }
     });
 
@@ -2332,7 +2341,6 @@ TODO:
         svg_preview.style.display = "none";
         circle_preview.style.display = "none";
     }
-
 
     let center_link_counter = 0;
     let center_link_memory = [];
@@ -2367,6 +2375,7 @@ TODO:
         y_bot += 200;
     }
 
+
     function decrement_y(){
         center_link_counter = 0;
         center_link_memory = [];
@@ -2379,7 +2388,6 @@ TODO:
 
 
     let semi_line = 0;
-
     function check_semi_line(){
         if(semi_line === 0){
 
@@ -2410,6 +2418,7 @@ TODO:
         x_right += 170;
     }
 
+
     function decrement_x(){
 
         check_semi_line();
@@ -2424,6 +2433,9 @@ TODO:
 
 
     function erase_svg_content(){
+        up_down_counter = 0;
+        counter_down.style.display = "none";
+        counter_up.style.display = "none";
         translator.innerHTML = "";
         output_area.innerHTML = "";
         semi_line = 0;
@@ -2451,24 +2463,50 @@ TODO:
     }
 
 
+    function notify_combo(){
+        space.style. background = "radial-gradient(at top left, white, grey)";
+        svg_preview.innerHTML += `<text class="prev_text" x="45" y="140">COMBO!</text>`;
+    }
+
+
     function search_reference(text_searched){
         circle_preview.style.display = "block";
         svg_preview.innerHTML = "";
         svg_preview.style.display = "block";
+        space.innerHTML = "";
         let w;
+
         for(w = 0; w < glyph_reference.length; w += 1){
             let one_ref = glyph_reference[w];
-            if(one_ref.name === text_searched || one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === text_searched){ //removing all accents from one_ref.fr
+            if(text_searched !== "_" && one_ref.name === text_searched || one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === text_searched){ //removing all accents from one_ref.fr
                 space.style. background = "radial-gradient(at top left, white, grey)";
                 space.innerHTML = `${one_ref.fr}: [${one_ref.name.replace("_","")}]`;
 
                 for(let v = 0; v < one_ref.path.length; v += 1){
                     let p1 = one_ref.path[v];
                     svg_preview.innerHTML += `${_p}${p1}${p_}`;
-                    console.log(`${_p}${p1}${p_}`);
                 }
             }
         }
+
+        //readymade word cumulations combo notifications
+        if(text_searched === "aimer" || text_searched === "_sakme"){
+            space.innerHTML += `aimer: [sa-kme]`;
+            notify_combo();
+        }
+        if(text_searched === "alec" || text_searched === "lloyd"){
+            space.innerHTML += `"L'Artiste": [nmo-ka-tae]`;
+            notify_combo();
+        }        
+        if(text_searched === "je" || text_searched === "_kafygo"){
+            space.innerHTML = `je: [ka-fy-go]`;
+            notify_combo();
+        }        
+        if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
+            space.innerHTML += `tu,toi: [ka_fya_fy]`;
+            notify_combo();
+        }
+
     }
 
 
@@ -4712,20 +4750,65 @@ TODO:
         for(k = 0; k < glyph_database.length; k += 1){
 
             let one_glyph = glyph_database[k];
-            let glyph_with_accent = glyph_reference[k]; //implies that both lists are strictly identical with the exception of accents = possible source of error when updating lists.
+            let glyph_with_accent = glyph_reference[k]; //implies that both lists are strictly identical with the exception of accents = possible source of error when updating lists!
 
             if(one_glyph.name === text_searched || one_glyph.fr === text_searched){
-                console.log(text_searched, one_glyph.fr);
                 draw_glyph(one_glyph.path);
                 erase_view();
                 increment_y();
                 translator.innerHTML += `${glyph_with_accent.fr.toUpperCase()}<span class="phono">[${glyph_with_accent.name.replace("_","")}]</span> `;
             }
         }
+
+        //readymade word cumulations
+        if(text_searched === "je" || text_searched === "_kafygo"){
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid]]);
+            increment_y();
+            erase_view();
+            translator.innerHTML += `JE, MOI <span class="phono">[ka-fy-go]</span>`;
+        }
+        if(text_searched === "aimer" || text_searched === "_sakme"){
+            draw_glyph([[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_top]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]]);
+            increment_y();
+            erase_view();
+            translator.innerHTML += `AIMER <span class="phono">[sa-kme]</span>`;
+        }
+        if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid,x_left_mid,y_top],[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_bot,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_right,y_mid]]);
+            increment_y();
+            erase_view();
+            translator.innerHTML += `TU, TOI <span class="phono">[ka-fya-fy]</span>`;
+        }
+        if(text_searched === "alec" || text_searched === "lloyd"){
+            draw_glyph([[x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_top,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_top,x_left,y_mid],[x_mid,y_mid,x_mid,y_mid],[x_right_mid,y_bot,x_left_mid,y_bot,x_right,y_mid]]);
+            increment_y();
+            erase_view();
+            translator.innerHTML += `Alec Lloyd Probert <span class="phono">[nmo_ka_tae]</span>`;
+        }
     }
 
-
     ok.addEventListener("click", function(){
+        if(up_down_counter < 0){
+            up_down_counter += 1;
+        }
+        if(up_down_counter > 0){
+            up_down_counter = 0;
+        }
+        show_counters();
         svg_preview.style.display = "none";
         search_and_draw(view.innerHTML);
         clear_space();
@@ -4738,7 +4821,7 @@ TODO:
         this.style. background = "radial-gradient(at top left, white, grey)";
         this.innerHTML = `nouveau mot`;
         translator.innerHTML += `<span class="word_separator"><br>______________<br><br></span>`;
-        word_count += 1;
+
     });
 
 
@@ -4759,6 +4842,8 @@ TODO:
     up.addEventListener("click", function(){
         space.style. background = "radial-gradient(at top left, white, grey)";
         decrement_y();
+        up_down_counter -= 1;
+        show_counters();
     });
 
 
@@ -4767,7 +4852,24 @@ TODO:
         space.style. background = "radial-gradient(at top left, white, grey)";
         space.innerHTML = `espace+nouveau mot`;
         increment_y();
+        up_down_counter += 1;
+        show_counters();
     });
+
+    function show_counters(){
+        if(up_down_counter < 0){
+            counter_down.style.display = "none";
+            counter_up.style.display = "grid";
+            counter_up.innerHTML = Math.abs(up_down_counter);
+        }else if(up_down_counter > 0){
+            counter_up.style.display = "none";
+            counter_down.style.display = "grid";
+            counter_down.innerHTML = up_down_counter;
+        }else if(up_down_counter === 0){
+            counter_up.style.display = "none";
+            counter_down.style.display = "none";
+        }
+    };
 
 
     left.addEventListener("click", function(){

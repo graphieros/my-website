@@ -378,3 +378,55 @@ span.back_jump{
     opacity: 1;
     box-shadow: 0 0 10px 3px black;
 }
+
+#up_counter,
+#down_counter{
+    display: none;
+    border-radius:100%;
+    width:15px;
+    height:15px;
+    box-sizing: border-box;
+    align-items:center;
+    justify-items:center;
+    background: rgb(139, 0, 0);
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:0.6em;
+    position: fixed;
+    bottom: 30px;
+    border:1px solid rgb(182, 91, 91);
+    box-shadow: 0 5px 2px black;
+}
+
+#down_counter{
+    right: 75px;
+}
+
+#up_counter{
+    left: 98px;
+}
+
+.prev_text{
+    fill: white;
+    stroke:white;
+    stroke-width: 2px;
+    font-family: 'Courier New', Courier, monospace;
+    animation-fill-mode:forwards;
+    animation-name: combo;
+    animation-duration: 0.2s;
+}
+
+@keyframes combo{
+    0%{
+        transform: rotate(-100deg);
+        opacity:0;
+        font-size: 0px;
+        stroke:yellowgreen;
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 1;
+        font-size:50px;
+        stroke:cornflowerblue;
+    }
+}
