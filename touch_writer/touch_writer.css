@@ -287,6 +287,10 @@ span.line_separator{
     color: white;
 }
 
+span.line_separator_plus{
+    color: greenyellow;
+}
+
 span.back_jump{
     color: tomato;
 }
@@ -379,8 +383,10 @@ span.back_jump{
     box-shadow: 0 0 10px 3px black;
 }
 
+#left_counter,
 #up_counter,
-#down_counter{
+#down_counter,
+#right_counter{
     display: none;
     border-radius:100%;
     width:15px;
@@ -398,12 +404,20 @@ span.back_jump{
     box-shadow: 0 5px 2px black;
 }
 
+#left_counter{
+    left: 62px;
+}
+
 #down_counter{
     right: 75px;
 }
 
 #up_counter{
     left: 98px;
+}
+
+#right_counter{
+    right: 36px;
 }
 
 .prev_text{
@@ -429,4 +443,11 @@ span.back_jump{
         font-size:50px;
         stroke:cornflowerblue;
     }
+}
+
+#output_cursor{
+    r: 10;
+    stroke: red;
+    stroke-width:3;
+    fill:red;
 }

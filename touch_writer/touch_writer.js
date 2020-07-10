@@ -29,7 +29,7 @@ TODO:
     const xmlns = "http://www.w3.org/2000/svg";
     const output_area = document.createElementNS(xmlns, "svg");
     output_area.id = "output_area";
-
+    
     let svg_width= 3000;
 
     let svg_height = svg_width * 2;
@@ -60,12 +60,19 @@ TODO:
     const translator = document.getElementById("translator");
     const circle_preview = document.getElementById("circle_preview");
     const light = document.getElementById("light");
+    const counter_left = document.getElementById("left_counter");
     const counter_up = document.getElementById("up_counter");
     const counter_down = document.getElementById("down_counter");
+    const counter_right = document.getElementById("right_counter");
+
 
     let up_down_counter = 0;
+    let left_right_counter = 0;
     let stax = [];
 
+    function curse(){
+
+    }
 
     light.addEventListener("click", function(){
 
@@ -2433,9 +2440,12 @@ TODO:
 
 
     function erase_svg_content(){
+        left_right_counter = 0;
         up_down_counter = 0;
+        counter_left.style.display = "none";
         counter_down.style.display = "none";
         counter_up.style.display = "none";
+        counter_right.style.display = "none";
         translator.innerHTML = "";
         output_area.innerHTML = "";
         semi_line = 0;
@@ -2470,6 +2480,7 @@ TODO:
 
 
     function search_reference(text_searched){
+        curse();
         circle_preview.style.display = "block";
         svg_preview.innerHTML = "";
         svg_preview.style.display = "block";
@@ -2490,22 +2501,21 @@ TODO:
         }
 
         //readymade word cumulations combo notifications
-        if(text_searched === "aimer" || text_searched === "_sakme"){
-            space.innerHTML += `aimer: [sa-kme]`;
-            notify_combo();
+        function display_combo(options, write){
+            for(let i = 0; i < options.length; i += 1){
+                let that_option = options[i];
+                if(text_searched === that_option){
+                    space.innerHTML += write;
+                    notify_combo();
+                }
+            }
         }
-        if(text_searched === "alec" || text_searched === "lloyd"){
-            space.innerHTML += `"L'Artiste": [nmo-ka-tae]`;
-            notify_combo();
-        }        
-        if(text_searched === "je" || text_searched === "_kafygo"){
-            space.innerHTML = `je: [ka-fy-go]`;
-            notify_combo();
-        }        
-        if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
-            space.innerHTML += `tu,toi: [ka_fya_fy]`;
-            notify_combo();
-        }
+
+        display_combo(["aimer","_sakme"],"aimer: [sa-kme]");
+        display_combo(["alec","lloyd","_nmokatae"],`"L'artiste": [nmo-ka-tae]`);
+        display_combo(["je","moi","_kafygo"],"je: [ka-fy-go]");
+        display_combo(["manger","_rafdu"],"manger: [ra-fdu]");
+        display_combo(["tu","toi","_kafyafy"],"tu,toi: [ka-fya-fy]");
 
     }
 
@@ -4706,7 +4716,7 @@ TODO:
             },
             {
                 name: '_boi',
-                fr: 'à',
+                fr: 'a',
                 path: [[x_left_mid,y_top,x_left_mid,y_bot,x_left,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]],
             },
             {
@@ -4779,6 +4789,14 @@ TODO:
             erase_view();
             translator.innerHTML += `AIMER <span class="phono">[sa-kme]</span>`;
         }
+        if(text_searched === "manger" || text_searched === "_rafdu"){
+            draw_glyph([[x_mid,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid],[x_left_mid,y_bot,x_left,y_mid,x_right,y_mid,x_right_mid,y_bot]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_bot,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left,y_mid,x_left_mid,y_bot]]);
+            increment_y();
+            erase_view();
+            translator.innerHTML += `MANGER <span class="phono">[ra-fdu]</span>`;
+        }
         if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
             draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]);
             increment_y();
@@ -4808,6 +4826,7 @@ TODO:
         if(up_down_counter > 0){
             up_down_counter = 0;
         }
+        left_right_counter = 0;
         show_counters();
         svg_preview.style.display = "none";
         search_and_draw(view.innerHTML);
@@ -4821,7 +4840,6 @@ TODO:
         this.style. background = "radial-gradient(at top left, white, grey)";
         this.innerHTML = `nouveau mot`;
         translator.innerHTML += `<span class="word_separator"><br>______________<br><br></span>`;
-
     });
 
 
@@ -4829,8 +4847,10 @@ TODO:
         kill_link();
         space.style. background = "radial-gradient(at top left, white, grey)";
         space.innerHTML = `nouvelle ligne`;
-        translator.innerHTML += `<span class="line_separator"><br>______________<br><br></span>`;
+        translator.innerHTML += `<span class="line_separator_plus"><br><br>___|+ligne|___<br><br></span>`;
         increment_x();
+        left_right_counter += 1;
+        show_counters();
     });
 
 
@@ -4856,6 +4876,16 @@ TODO:
         show_counters();
     });
 
+    left.addEventListener("click", function(){
+        kill_link();
+        space.style. background = "radial-gradient(at top left, white, grey)";
+        space.innerHTML = `retour ligne précédente`;
+        translator.innerHTML += `<span class="back_jump"><br><br>___|retour|___<br><br></span>`;
+        decrement_x();
+        left_right_counter -= 1;
+        show_counters();
+    });
+
     function show_counters(){
         if(up_down_counter < 0){
             counter_down.style.display = "none";
@@ -4869,15 +4899,22 @@ TODO:
             counter_up.style.display = "none";
             counter_down.style.display = "none";
         }
+
+        if(left_right_counter < 0){
+            counter_right.style.display = "none";
+            counter_left.style.display = "grid";
+            counter_left.innerHTML = Math.abs(left_right_counter);
+        }else if(left_right_counter > 0){
+            counter_left.style.display = "none";
+            counter_right.style.display = "grid";
+            counter_right.innerHTML = left_right_counter;
+        }else if(left_right_counter === 0){
+            counter_left.style.display = "none";
+            counter_right.style.display = "none";
+        }
     };
 
 
-    left.addEventListener("click", function(){
-        kill_link();
-        space.style. background = "radial-gradient(at top left, white, grey)";
-        space.innerHTML = `retour ligne précédente`;
-        translator.innerHTML += `<span class="back_jump"><br><br>___|retour|___<br><br></span>`;
-        decrement_x();
-    });
+
 
 }());
