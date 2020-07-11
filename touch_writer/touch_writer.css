@@ -74,12 +74,14 @@ span.d{
     font-family: var(--FT);
     color: white;
     box-sizing: border-box;
+    padding: 10px;
     text-align:center;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background 0.3s ease;
 }
 
 .sources:hover{
     color: cornflowerblue;
+    background: rgb(37, 37, 37);
 }
 
 #output_area{

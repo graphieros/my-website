@@ -4789,7 +4789,7 @@ TODO:
         }
 
         //readymade word cumulations
-        if(text_searched === "je" || text_searched === "_kafygo"){
+        if(text_searched === "je" || text_searched === "moi" || text_searched === "_kafygo"){
             draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]);
             increment_y();
             draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_right,y_mid]]);
