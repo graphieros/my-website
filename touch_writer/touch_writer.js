@@ -91,11 +91,10 @@ TODO:
             circle.setAttributeNS(null, "cy", y_mid);
             stax.push(circle);
             output_area.appendChild(stax.pop());
-            //find a way to avoir error when clicking erase if empty
-            //find a way to garbage collect stax
         }
-        console.log(stax);
+
         stax = [];
+
         for(let i = 0; i < circles.length; i += 1){
             stax.push(circles[i]);
         }
@@ -2376,7 +2375,7 @@ TODO:
         if(output_area.innerHTML === ""){
             output_area.appendChild(circles[0]);
             curse();
-            location.reload();
+            location.reload(); //ok brutal.
         }
     });
 
