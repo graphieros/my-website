@@ -3,7 +3,6 @@ TODO:
     > save to jpg : http://bl.ocks.org/biovisualize/8187844
     > function to change colors: modal window
     > function to change size of glyphs
-    > function to erase segments, modify cursor if possible
     > sketch for pattern recognition to translate basic concepts
 */ 
 
