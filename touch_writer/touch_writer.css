@@ -7,6 +7,11 @@ body{
     --FT: 'Poiret One', cursive;
 } 
 
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
 header{ 
     display: grid;
     align-items:center;
@@ -61,6 +66,20 @@ span.b,
 span.c,
 span.d{
     font-weight:bold;
+}
+
+.sources{
+    width:400px;
+    margin:0 auto;
+    font-family: var(--FT);
+    color: white;
+    box-sizing: border-box;
+    text-align:center;
+    transition: color 0.3s ease;
+}
+
+.sources:hover{
+    color: cornflowerblue;
 }
 
 #output_area{
