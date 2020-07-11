@@ -2534,7 +2534,7 @@ TODO:
         display_combo(["je","moi","_kafygo"],"je: [ka-fy-go]");
         display_combo(["manger","_rafdu"],"manger: [ra-fdu]");
         display_combo(["tu","toi","_kafyafy"],"tu,toi: [ka-fya-fy]");
-        display_combo(["beau"],"beau: [kli-keoègrey-hea]");
+        display_combo(["beau"],"beau: [kli-keo-grey-hea]");
 
     }
 
