@@ -2534,6 +2534,7 @@ TODO:
         display_combo(["je","moi","_kafygo"],"je: [ka-fy-go]");
         display_combo(["manger","_rafdu"],"manger: [ra-fdu]");
         display_combo(["tu","toi","_kafyafy"],"tu,toi: [ka-fya-fy]");
+        display_combo(["beau"],"beau: [kli-keoègrey-hea]");
 
     }
 
@@ -4834,6 +4835,18 @@ TODO:
             increment_y();
             erase_view();
             translator.innerHTML += `Alec Lloyd Probert <span class="phono">[nmo_ka_tae]</span>`;
+        }
+        if(text_searched === "beau"){
+            draw_glyph([[x_right_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_top]]);
+            increment_y();
+            draw_glyph([[x_left,y_mid,x_left_mid,y_bot,x_right_mid,y_top],[x_right_mid,y_bot,x_right,y_mid],[x_left_mid,y_top,x_left_mid,y_top]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_left,y_mid],[x_right_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_left_mid,y_bot]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_bot,x_left_mid,y_top,x_right,y_mid,x_left_mid,y_bot],[x_left,y_mid,x_mid,y_mid,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot]]);
+            increment_y();
+            erase_view();
+            translator.innerHTML += `BEAU <span class="phono">[kli-keo-grey-hea]</span>`;
         }
     }
 
