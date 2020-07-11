@@ -47,6 +47,7 @@ TODO:
     svg_preview.id = "svg_preview";
     document.body.appendChild(svg_preview);
 
+    const outahere = document.getElementById("claver");
     const keys = document.getElementsByClassName("key");
     const view = document.getElementById("view");
     const erase = document.getElementById("erase");
@@ -64,6 +65,7 @@ TODO:
     const counter_up = document.getElementById("up_counter");
     const counter_down = document.getElementById("down_counter");
     const counter_right = document.getElementById("right_counter");
+    let circles = document.getElementsByClassName("circles");
 
 
     let up_down_counter = 0;
@@ -71,8 +73,36 @@ TODO:
     let stax = [];
 
     function curse(){
+        for(let i = 0; i < circles.length; i += 1){
+            stax.push(circles[i]);
+        }
 
+        if(stax.length >= 1){
+            let lastel = stax[stax.length - 1];
+
+            if(stax.length > 1 || lastel.id !== "dummy"){
+                let xx = document.getElementById("g_cursor");
+                output_area.removeChild(xx);
+            }
+
+            let circle = document.createElementNS(xmlns, "circle");
+            circle.id = "g_cursor";
+            circle.className = "circles";
+            circle.setAttributeNS(null, "cx", x_mid);
+            circle.setAttributeNS(null, "cy", y_mid);
+            stax.push(circle);
+            output_area.appendChild(stax.pop());
+            //find a way to avoir error when clicking erase if empty
+            //find a way to garbage collect stax
+        }
+        console.log(stax);
+        stax = [];
+        for(let i = 0; i < circles.length; i += 1){
+            stax.push(circles[i]);
+        }
     }
+
+    document.onload = curse();
 
     light.addEventListener("click", function(){
 
@@ -2327,18 +2357,27 @@ TODO:
     }
 
     erase.addEventListener("click", function(){
+        stax = [];
         if(view.innerHTML === ""){
             svg_preview.style.display = "none";
             circle_preview.style.display = "none";
             //now erase previous glyph, bit by bit
             let last_glyph = output_area.lastChild;
-            output_area.removeChild(last_glyph);
+            if(last_glyph.id !== "dummy"){
+                output_area.removeChild(last_glyph);
+            }
             kill_link();
         }else{
             let view_string = view.innerHTML;
             let sliced_view = view_string.slice(0, -1);
             view.innerHTML = sliced_view;
             search_reference(sliced_view);
+            curse();
+        }
+        if(output_area.innerHTML === ""){
+            output_area.appendChild(circles[0]);
+            curse();
+            location.reload();
         }
     });
 
@@ -2359,7 +2398,7 @@ TODO:
 
 
     function draw_glyph(path){
-
+        curse();
         center_link_counter += 1;
         center_link_memory.push(`${x_mid} ${y_mid}`);
 
@@ -2440,30 +2479,7 @@ TODO:
 
 
     function erase_svg_content(){
-        left_right_counter = 0;
-        up_down_counter = 0;
-        counter_left.style.display = "none";
-        counter_down.style.display = "none";
-        counter_up.style.display = "none";
-        counter_right.style.display = "none";
-        translator.innerHTML = "";
-        output_area.innerHTML = "";
-        semi_line = 0;
-        kill_link();
-        clear_space();
-        view.innerHTML = "";
-        svg_preview.style.display = "none";
-        circle_preview.style.display = "none";
-        //initial y glyph coordinates
-        y_top = 50;
-        y_mid = 128;
-        y_bot = 206;
-        //initial x glyph coordinates
-        x_left = 38;
-        x_left_mid = 83;
-        x_mid = 128;
-        x_right_mid = 173;
-        x_right = 218;
+        location.reload();
     }
 
 
@@ -4826,11 +4842,16 @@ TODO:
         if(up_down_counter > 0){
             up_down_counter = 0;
         }
+        if(output_area.innerHTML === ""){
+            output_area.appendChild(circles[0]);
+            curse();
+        }
         left_right_counter = 0;
         show_counters();
         svg_preview.style.display = "none";
         search_and_draw(view.innerHTML);
         clear_space();
+        curse();
     });
 
 
@@ -4851,6 +4872,7 @@ TODO:
         increment_x();
         left_right_counter += 1;
         show_counters();
+        curse();
     });
 
 
@@ -4864,6 +4886,7 @@ TODO:
         decrement_y();
         up_down_counter -= 1;
         show_counters();
+        curse();
     });
 
 
@@ -4874,6 +4897,7 @@ TODO:
         increment_y();
         up_down_counter += 1;
         show_counters();
+        curse();
     });
 
     left.addEventListener("click", function(){
@@ -4884,6 +4908,8 @@ TODO:
         decrement_x();
         left_right_counter -= 1;
         show_counters();
+        curse();
+        
     });
 
     function show_counters(){
@@ -4913,8 +4939,6 @@ TODO:
             counter_right.style.display = "none";
         }
     };
-
-
 
 
 }());

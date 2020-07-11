@@ -445,9 +445,28 @@ span.back_jump{
     }
 }
 
-#output_cursor{
-    r: 10;
-    stroke: red;
-    stroke-width:3;
+#g_cursor{
+    r: 66;
+    stroke: white;
+    stroke-width:10;
     fill:red;
+    animation-name: cursor_life;
+    animation: cursor_life 0.6s infinite;
+    transition: opacity 0.6s ease;
+}
+
+@keyframes cursor_life{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+#dummy{
+    display:none;
 }
