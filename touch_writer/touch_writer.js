@@ -2370,6 +2370,10 @@ TODO:
             let sliced_view = view_string.slice(0, -1);
             view.innerHTML = sliced_view;
             search_reference(sliced_view);
+            let last_glyph = output_area.lastChild;
+            if(last_glyph.id !== "dummy"){
+                output_area.removeChild(last_glyph);
+            }
             curse();
         }
         if(output_area.innerHTML === ""){
