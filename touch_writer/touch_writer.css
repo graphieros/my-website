@@ -153,6 +153,7 @@ p.page_name{
     display: grid;
     align-items:center;
     justify-items:center;
+    z-index:1;
 }
 
 .view{
@@ -284,7 +285,6 @@ p.page_name{
     margin: 0 auto;
     width:400px;
     background: white;
-    margin-bottom: 400px;
     font-family: 'Courier New', Courier, monospace;
     box-sizing: border-box;
     padding: 20px;
@@ -490,4 +490,66 @@ span.back_jump{
 
 #dummy{
     display:none;
+}
+
+#link_caption{
+    margin:0 auto;
+    width:400px;
+    box-sizing: border-box;
+    color:white;
+    font-family: var(--FT);
+    text-align: center; 
+    height:60px;
+    margin-top:30px;
+}
+
+.links{
+    margin: 0 auto;
+    width:400px;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+    background: transparent;
+    height:120px;
+    margin-bottom:400px;
+}
+
+.links > div {
+    height: 100%;
+    width:100%;;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    border:1px solid white;
+    border-radius:100%;
+    font-family: var(--FT);
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+    font-size:2em;
+    font-weight:bold;
+}
+
+span.rotated{
+    font-size:0.5em;
+    transform: rotate(-10deg);
+    margin-bottom:-30px;
+}
+
+.links > div:hover{
+    opacity: 1;
+}
+
+#link0{
+    background: radial-gradient(gold, rgb(255, 153, 0));
+}
+
+#link1{
+    background: radial-gradient(rgb(255, 231, 94), gold);
+}
+
+#link2{
+    background: radial-gradient(white, rgb(202, 202, 202));
+    font-size:1.2em;
 }

@@ -66,6 +66,10 @@ TODO:
     const counter_right = document.getElementById("right_counter");
     let circles = document.getElementsByClassName("circles");
 
+    const audio_kafygo = new Audio("audio/kafygo.mp3");
+    const audio_sakme = new Audio("audio/sakme.mp3");
+    const audio_kafyafy = new Audio("audio/kafyafy.mp3");
+
 
     let up_down_counter = 0;
     let left_right_counter = 0;
@@ -4798,6 +4802,7 @@ TODO:
             draw_glyph([[x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_left_mid,y_bot],[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid]]);
             increment_y();
             erase_view();
+            audio_kafygo.play();
             translator.innerHTML += `JE, MOI <span class="phono">[ka-fy-go]</span>`;
         }
         if(text_searched === "aimer" || text_searched === "_sakme"){
@@ -4806,6 +4811,7 @@ TODO:
             draw_glyph([[x_left_mid,y_top,x_left_mid,y_bot],[x_left,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot]]);
             increment_y();
             erase_view();
+            audio_sakme.play();
             translator.innerHTML += `AIMER <span class="phono">[sa-kme]</span>`;
         }
         if(text_searched === "manger" || text_searched === "_rafdu"){
@@ -4824,6 +4830,7 @@ TODO:
             draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top],[x_left,y_mid,x_right,y_mid]]);
             increment_y();
             erase_view();
+            audio_kafyafy.play();
             translator.innerHTML += `TU, TOI <span class="phono">[ka-fya-fy]</span>`;
         }
         if(text_searched === "alec" || text_searched === "lloyd"){
@@ -4955,5 +4962,30 @@ TODO:
         }
     };
 
+    (function manage_bottom_links(){
+        const links = document.getElementsByClassName("link");
+        const link_caption = document.getElementById("link_caption");
+
+        function tell_what_is_that_link(one_link, text_display, text_color, page){
+            one_link.addEventListener("mouseover", function(){
+                link_caption.innerHTML = text_display;
+                link_caption.style.color = text_color;
+            });
+            one_link.addEventListener("mouseout", function(){
+                link_caption.innerHTML = "";
+            });
+
+            one_link.addEventListener("click", function(){
+                window.location.href = page;
+            })
+        }
+
+        tell_what_is_that_link(links[0], "Ecrivez en graphieros fractal avec un clavier physique", "rgb(255,153,0)","https://graphieros.com/fractal_gwriter/fractal_gwriter.html");
+
+        tell_what_is_that_link(links[1], "Ecrivez en graphieros linéaire avec un clavier physique.","gold","https://graphieros.com/gwriter/gwriter.html");
+
+        tell_what_is_that_link(links[2], "Composez des glyphes directement à partir de la grille.","white","https://graphieros.com/composer.html");
+
+    }());
 
 }());
