@@ -17,6 +17,7 @@
     <title>Graphieros TouchWriter</title>
     <link rel="stylesheet" href="touch_writer.css" class="css">
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
+
     <link rel="apple-touch-icon" sizes="180x180" href="../pics/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="../pics/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../pics/favicon-32x32.png">
@@ -31,6 +32,7 @@
     </a>
 
     <p class="page_name">Graphieros TouchWriter</p>
+    <p class="bs">L'éditeur <b>universel</b> de graphieros, <br>pour écrire dans l'idéolangue hexagonale<br> et en garder une image</p>
 
     <a href="touch_writer.mp4"><p class="sources">Le tutoriel video</p></a>
     <a href="https://graphieros.com/php/glyphs.php" target="_blank"><p class="sources">Lexique du graphieros</p></a>
@@ -38,8 +40,14 @@
     <br>
 
     <div id="erase_all">Réinitialiser</div>
+    <div class="color_pick">
+        <div class="color_unit" id="btn_R">255</div>
+        <div class="color_unit" id="btn_G">255</div>
+        <div class="color_unit" id="btn_B">255</div>
+    </div>
     <div class="svg_container" id="svg_container">
     </div>
+    
 
     <section class="circle" id="circle_preview">
         <span class="text_in_circle" id="circle_0">P</span>
@@ -59,6 +67,7 @@
 
         <div class="line" id="line_numbers">
             <div id="light">0</div>
+            <div class="key" id="k0">0</div>
             <div class="key" id="k1">1</div>
             <div class="key" id="k2">2</div>
             <div class="key" id="k3">3</div>
@@ -68,7 +77,8 @@
             <div class="key" id="k7">7</div>
             <div class="key" id="k8">8</div>
             <div class="key" id="k9">9</div>
-            <div class="key" id="k0">0</div>
+            <div class="key" id="k10">10</div>
+            <div class="key" id="k11">11</div>
             <div class="key" id="under">_</div>
         </div>
 
@@ -132,12 +142,17 @@
 
     <section id="translator"></section>
 
+    <div id="btn">Créer l'image</div>
+    <canvas id="canvas" width="3000" height ="6000"></canvas>
+    <div id="png-container"></div>
+
     <div id="link_caption"></div>
     <section class="links">
         <div class="link" id="link0"><span class="rotated">FRACTAL</span>WRITER</div>
         <div class="link" id="link1"><span class="rotated">TYPE</span>WRITER</div>
         <div class="link" id="link2">COMPOSER</div>
     </section>
+    
 
     <script src="touch_writer.js"></script>
 </body>

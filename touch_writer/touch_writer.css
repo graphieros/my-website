@@ -135,8 +135,20 @@ p.page_name{
     font-size:1.5em;
     color: white;
     box-sizing: border-box;
-    padding:20px;
+    padding-top:20px;
     margin-top:60px;
+}
+
+p.bs{
+    width:400px;
+    margin:0 auto;
+    color: white;
+    text-align:center;
+    margin-bottom:30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    color: grey;
+    font-size:0.8em;
 }
 
 .view,
@@ -182,7 +194,11 @@ p.page_name{
     height:35px;
 }
 
-#line_numbers,
+#line_numbers{
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: 2px;
+}
+
 #controls{
     grid-template-columns: repeat(11, 1fr);
     grid-gap: 2px;
@@ -552,4 +568,80 @@ span.rotated{
 #link2{
     background: radial-gradient(white, rgb(202, 202, 202));
     font-size:1.2em;
+}
+
+#canvas{
+    display:none;
+}
+
+.imgout{
+    display: block;
+    margin: 0 auto;
+    border-radius:2px;
+    height:800px;
+    width:400px;
+}
+
+#btn{
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding:5px;
+    font-family: var(--FT);
+    font-size:1.5em;
+    border-radius:2px;
+    background: white;
+    width:150px;
+    margin-top:20px;
+    margin-bottom:20px;
+    cursor: pointer;
+    opacity:0.75;
+    transition: opacity 0.3s ease;
+}
+
+#btn:hover{
+    opacity:1;
+}
+
+.color_pick{
+    display: grid;
+    margin:0 auto;
+    width:400px;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:10px;
+    box-sizing: border-box;
+    padding:10px;
+    height:30px;
+    margin-bottom:20px;
+}
+
+.color_pick > div {
+    display: grid;
+    height:30px;
+    width:100%;
+    align-items:center;
+    justify-items:center;
+    color:white;
+    cursor: pointer;
+    border-radius:3px;
+    opacity:0.5;
+    transition: opacity 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.color_pick > div:hover {
+    opacity:1;
+    box-shadow: 0 0 10px white;
+}
+
+#btn_R{
+    border:1px solid red;
+}
+
+#btn_G{
+    border:1px solid rgb(0,255,0);
+}
+
+#btn_B{
+    border: 1px solid rgb(0,0,255);
 }

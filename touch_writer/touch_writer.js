@@ -1,7 +1,5 @@
 /*
 TODO:
-    > save to jpg : http://bl.ocks.org/biovisualize/8187844
-    > function to change colors: modal window
     > function to change size of glyphs
     > sketch for pattern recognition to translate basic concepts
 */ 
@@ -20,8 +18,8 @@ TODO:
     let x_right_mid = 173;
     let x_right = 218;
 
-    const _p = `<path d="M `;
-    // const _p_ = `style="stroke:${grab_color()};" d="M`;
+    //some styling for the svg paths has to be hardcoded here to be used when converting into canvas > png
+    const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
     const p_ = '"/>';
 
     const svg_container = document.getElementById("svg_container");
@@ -68,11 +66,31 @@ TODO:
     const audio_kafygo = new Audio("audio/kafygo.mp3");
     const audio_sakme = new Audio("audio/sakme.mp3");
     const audio_kafyafy = new Audio("audio/kafyafy.mp3");
+    const audio_kioheatotreafrey = new Audio("audio/kiohaetotreafrey.mp3");
 
+    const btn_R = document.getElementById("btn_R");
+    const btn_G = document.getElementById("btn_G");
+    const btn_B = document.getElementById("btn_B");
 
     let up_down_counter = 0;
     let left_right_counter = 0;
     let stax = [];
+
+    (function create_color(){
+        function change_color(btn){
+            btn.addEventListener("click", function(){
+                let rand = Math.round(Math.random()*255);
+                this.innerHTML = rand;
+                let made_color = `rgb(${btn_R.innerHTML},${btn_G.innerHTML},${btn_B.innerHTML})`;
+                light.style.background = made_color;
+                output_area.style.stroke = made_color;
+            });
+        }
+        change_color(btn_R);
+        change_color(btn_G);
+        change_color(btn_B);
+        
+    }());
 
     function curse(){
         for(let i = 0; i < circles.length; i += 1){
@@ -2541,6 +2559,7 @@ TODO:
         display_combo(["manger","_rafdu"],"manger: [ra-fdu]");
         display_combo(["tu","toi","_kafyafy"],"tu,toi: [ka-fya-fy]");
         display_combo(["beau"],"beau: [kli-keo-grey-hea]");
+        display_combo(["nature"],"nature: [kio-hae-to-trea-frey]");
 
     }
 
@@ -5232,7 +5251,7 @@ TODO:
             let glyph_with_accent = glyph_reference[k]; //implies that both lists are strictly identical with the exception of accents = possible source of error when updating lists!
 
             if(one_glyph.name === text_searched || one_glyph.fr === text_searched){
-                hear_sound(one_glyph.sound);
+                hear_sound(one_glyph.sound); //huge delay alas
                 draw_glyph(one_glyph.path);
                 erase_view();
                 increment_y();
@@ -5252,6 +5271,7 @@ TODO:
             audio_kafygo.play();
             translator.innerHTML += `JE, MOI <span class="phono">[ka-fy-go]</span>`;
         }
+
         if(text_searched === "aimer" || text_searched === "_sakme"){
             draw_glyph([[x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_left,y_mid,x_right,y_mid],[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_right_mid,y_top]]);
             increment_y();
@@ -5261,6 +5281,7 @@ TODO:
             audio_sakme.play();
             translator.innerHTML += `AIMER <span class="phono">[sa-kme]</span>`;
         }
+
         if(text_searched === "manger" || text_searched === "_rafdu"){
             draw_glyph([[x_mid,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_mid,y_mid],[x_left_mid,y_bot,x_left,y_mid,x_right,y_mid,x_right_mid,y_bot]]);
             increment_y();
@@ -5269,6 +5290,23 @@ TODO:
             erase_view();
             translator.innerHTML += `MANGER <span class="phono">[ra-fdu]</span>`;
         }
+
+        if(text_searched === "nature"){
+            draw_glyph([[x_left_mid,y_top,x_left_mid,y_bot,x_right_mid,y_bot,x_right_mid,y_top,x_left_mid,y_top,x_left,y_mid,x_right,y_mid,x_right_mid,y_top]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_bot,x_right_mid,y_top],[x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid],[x_left,y_mid,x_mid,y_mid,x_right_mid,y_bot]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_top],[x_left,y_mid,x_left_mid,y_bot,x_mid,y_mid,x_right_mid,y_bot,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top],[x_left,y_mid,x_left,y_mid],[x_right,y_mid,x_right,y_mid]]);
+            increment_y();
+            draw_glyph([[x_left_mid,y_bot,x_right_mid,y_bot,x_left,y_mid,x_right,y_mid,x_left_mid,y_top],[x_right_mid,y_top,x_right_mid,y_top]]);
+            increment_y();
+            erase_view();
+            audio_kioheatotreafrey.play();
+            translator.innerHTML += `NATURE <span class="phono">[kio-hae-to-trea-frey]</span>`;
+        }
+
         if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
             draw_glyph([[x_left_mid,y_top,x_right_mid,y_bot],[x_left_mid,y_bot,x_mid,y_mid],[x_left,y_mid,x_right_mid,y_top],[x_right,y_mid,x_right,y_mid]]);
             increment_y();
@@ -5280,6 +5318,7 @@ TODO:
             audio_kafyafy.play();
             translator.innerHTML += `TU, TOI <span class="phono">[ka-fya-fy]</span>`;
         }
+
         if(text_searched === "alec" || text_searched === "lloyd"){
             draw_glyph([[x_left_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_right_mid,y_top,x_right,y_mid,x_right_mid,y_bot,x_left_mid,y_bot,x_right_mid,y_top],[x_mid,y_mid,x_right_mid,y_bot],[x_left_mid,y_top,x_right,y_mid]]);
             increment_y();
@@ -5290,6 +5329,7 @@ TODO:
             erase_view();
             translator.innerHTML += `Alec Lloyd Probert <span class="phono">[nmo_ka_tae]</span>`;
         }
+
         if(text_searched === "beau"){
             draw_glyph([[x_right_mid,y_bot,x_left,y_mid,x_left_mid,y_top,x_left_mid,y_bot,x_right,y_mid,x_mid,y_mid],[x_right_mid,y_top,x_right_mid,y_top]]);
             increment_y();
@@ -5435,4 +5475,25 @@ TODO:
 
     }());
 
+}());
+
+(function converter(){
+    const btn = document.getElementById("btn");
+
+    btn.addEventListener("click", function(){
+        let svgString = new XMLSerializer().serializeToString(document.getElementById('output_area'));
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+        let DOMURL = self.URL || self.webkitURL || self;
+        let img = new Image();
+        let svg = new Blob([svgString], {type: "image/svg+xml;charset=utf-8"});
+        let url = DOMURL.createObjectURL(svg);
+        img.onload = function() {
+            ctx.drawImage(img, 0, 0);
+            var png = canvas.toDataURL("image/png");
+            document.querySelector('#png-container').innerHTML = '<img class="imgout" src="'+png+'"/>';
+            DOMURL.revokeObjectURL(png);
+        };
+        img.src = url;
+    });
 }());
