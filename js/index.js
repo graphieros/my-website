@@ -203,15 +203,15 @@ function showQuote(menu, quote, col) {
     }); 
 } 
 
-showQuote(MENUBALLBLOG, "Des pensées, des photos comme elles viennent", "rgb(90,156,36)");
-showQuote(MENUBALL0, "Une sorte de curriculum vitae", "rgb(90,156,36)");
-showQuote(MENUBALL1, "La construction d'une langue hexagonale", "cornflowerblue");
-showQuote(MENUBALLGRAPHIEROS, "La clé, dans sa version en graphieros", "cornflowerblue");
-showQuote(MENUBALL2, "Ecrire et peindre simultanément dans une langue nouvelle","tomato");
+showQuote(MENUBALLBLOG, "Des <b>pensées</b>, des photos comme elles viennent", "rgb(90,156,36)");
+showQuote(MENUBALL0, "Une sorte de <b>curriculum</b> vitae", "rgb(90,156,36)");
+showQuote(MENUBALL1, "La construction d'une langue <b>hexagonale</b>", "cornflowerblue");
+showQuote(MENUBALLGRAPHIEROS, "<b>La clé</b>, dans sa version en graphieros", "cornflowerblue");
+showQuote(MENUBALL2, "Ecrire et peindre <b>simultanément</b> dans une langue nouvelle","tomato");
 showQuote(MENUBALLJOURNAL, "<b>Le cri du pangolin</b>, journal de confinement 2020","tomato")
 showQuote(MENUBALL3, "Programmation, idées et applications", "gold");
-showQuote(MENUBALLWRITER, "Ecrivez en graphieros avec votre clavier !", "gold");
-showQuote(MENUBALLFRACTALWRITER, "Ecrivez en graphieros <b>fractal</b> avec votre clavier!", "rgb(255, 160, 71)");
+showQuote(MENUBALLWRITER, "Ecrivez en graphieros (clavier physique uniquement)", "gold");
+showQuote(MENUBALLFRACTALWRITER, "Ecrivez en graphieros <b>fractal</b> (clavier physique uniquement)", "rgb(255, 160, 71)");
 showQuote(MENUBALLTOUCHWRITER, "L'éditeur <b>universel</b> de graphieros", "rgb(255, 197, 71)"),
 
 //BIO
