@@ -482,15 +482,44 @@ span.back_jump{
     }
 }
 
-#g_cursor{
-    r: 66;
-    stroke: white;
-    stroke-width:10;
-    fill:red;
+#g_cursor > circle{
+    r: 16;
+    stroke: black;
+    stroke-width:3;
+    fill: grey;
     animation-name: cursor_life;
     animation: cursor_life 0.6s infinite;
     transition: opacity 0.6s ease;
 }
+
+#g_cursor > circle:nth-child(1){
+    fill: white;
+}
+
+#g_cursor > circle:nth-child(2){
+    fill:rgb(0, 110, 255);
+}
+
+#g_cursor > circle:nth-child(3){
+    fill:green;
+}
+
+#g_cursor > circle:nth-child(4){
+    fill:yellow;
+}
+
+#g_cursor > circle:nth-child(5){
+    fill:orange;
+}
+
+#g_cursor > circle:nth-child(6){
+    fill: red;
+}
+
+#g_cursor > circle:nth-child(7){
+    fill:purple;
+}
+
 
 @keyframes cursor_life{
     0%{
@@ -644,4 +673,29 @@ span.rotated{
 
 #btn_B{
     border: 1px solid rgb(0,0,255);
+}
+
+#found_list{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-150%);
+    display: none;
+    position: fixed;
+    background: linear-gradient(to top, rgba(255,255,255,0.75), white);
+    height:200px;
+    width:300px;
+    overflow: auto;
+    border-radius:3px;
+    box-sizing: border-box;
+    padding:20px;
+    font-family: 'Courier New', Courier, monospace;
+    border:1px solid greenyellow;
+    box-shadow: 0 0 10px 2px black;
+}
+
+.mini_svg{
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill:none;
+    stroke-width:10px;
 }
