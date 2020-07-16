@@ -78,18 +78,30 @@ TODO:
     let stax = [];
 
     (function create_color(){
-        function change_color(btn){
+        function change_color(btn, place){
             btn.addEventListener("click", function(){
                 let rand = Math.round(Math.random()*255);
                 this.innerHTML = rand;
+                if(place === 0){
+                    this.style.background = `rgb(${rand},0,0)`;
+                }else if(place === 1){
+                    this.style.background = `rgb(0,${rand},0)`;
+                    if(rand > 150){
+                        this.style.color = "black";
+                    }else{
+                        this.style.color = "white";
+                    }
+                }else{
+                    this.style.background = `rgb(0,0,${rand})`;
+                }
                 let made_color = `rgb(${btn_R.innerHTML},${btn_G.innerHTML},${btn_B.innerHTML})`;
                 light.style.background = made_color;
                 output_area.style.stroke = made_color;
             });
         }
-        change_color(btn_R);
-        change_color(btn_G);
-        change_color(btn_B);
+        change_color(btn_R, 0);
+        change_color(btn_G, 1);
+        change_color(btn_B, 2);
         
     }());
 
@@ -5331,14 +5343,46 @@ TODO:
                 
             }
         }
+ 
+
+        function draw_combo(db, phono, inc) {
+
+            let increment = inc * 200;
+            let copied_paths = [];
+            let modified_paths = [];
+
+            for (let i = 0; i < db.length; i += 1) {
+
+                if (db[i].name === phono) {
+                    copied_paths = [...db[i].path];
+                }
+
+            }
+
+            for (let i = 0; i < copied_paths.length; i += 1) {
+                let block = copied_paths[i];
+                let modified_block = [];
+
+                for (let k = 0; k < block.length; k += 1) {
+                    if (k % 2 === 0) {
+                        modified_block.push(block[k]);
+                    } else {
+                        block[k] += increment;
+                        modified_block.push(block[k]);
+                    }
+                }
+                modified_paths.push(modified_block);
+            }
+            return modified_paths;
+        }
 
         //readymade word cumulations
         if(text_searched === "je" || text_searched === "moi" || text_searched === "_kafygo"){
-            draw_glyph([[lm,a,rm,w],[lm,w,m,q],[l,q,rm,a],[r,q,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_ka", 0));
             increment_y();
-            draw_glyph([[lm,a,rm,w,lm,w,rm,a,lm,a],[l,q,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_fy", 1));
             increment_y();
-            draw_glyph([[lm,w,m,q,rm,w,lm,w],[l,q,lm,a,rm,a,r,q]]);
+            draw_glyph(draw_combo(glyph_database,"_go", 2));
             increment_y();
             erase_view();
             audio_kafygo.play();
@@ -5346,9 +5390,9 @@ TODO:
         }
 
         if(text_searched === "aimer" || text_searched === "_sakme"){
-            draw_glyph([[l,q,lm,a,rm,a,r,q,rm,w,lm,w,l,q,r,q],[lm,a,rm,w],[lm,w,rm,a]]);
+            draw_glyph(draw_combo(glyph_database, "_sa", 0));
             increment_y();
-            draw_glyph([[lm,a,lm,w],[l,q,m,q],[rm,a,r,q,rm,w]]);
+            draw_glyph(draw_combo(glyph_database, "_kme", 1));
             increment_y();
             erase_view();
             audio_sakme.play();
@@ -5356,24 +5400,24 @@ TODO:
         }
 
         if(text_searched === "manger" || text_searched === "_rafdu"){
-            draw_glyph([[m,q,lm,a,rm,a,m,q],[lm,w,l,q,r,q,rm,w]]);
+            draw_glyph(draw_combo(glyph_database, "_ra", 0));
             increment_y();
-            draw_glyph([[lm,w,lm,a,rm,a,r,q,rm,w,l,q,lm,w]]);
+            draw_glyph(draw_combo(glyph_database, "_fdu", 1));
             increment_y();
             erase_view();
             translator.innerHTML += `MANGER <span class="phono">[ra-fdu]</span>`;
         }
 
         if(text_searched === "nature"){
-            draw_glyph([[lm,a,lm,w,rm,w,rm,a,lm,a,l,q,r,q,rm,a]]);
+            draw_glyph(draw_combo(glyph_database, "_kio", 0));
             increment_y();
-            draw_glyph([[lm,w,rm,a],[lm,a,rm,a,r,q],[l,q,m,q,rm,w]]);
+            draw_glyph(draw_combo(glyph_database, "_hae", 1));
             increment_y();
-            draw_glyph([[lm,a,rm,a],[l,q,lm,w,m,q,rm,w,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_to", 2));
             increment_y();
-            draw_glyph([[lm,a,rm,w,lm,w,rm,a],[l,q,l,q],[r,q,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_trea", 3));
             increment_y();
-            draw_glyph([[lm,w,rm,w,l,q,r,q,lm,a],[rm,a,rm,a]]);
+            draw_glyph(draw_combo(glyph_database, "_frey", 4));
             increment_y();
             erase_view();
             audio_kioheatotreafrey.play();
@@ -5381,11 +5425,11 @@ TODO:
         }
 
         if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
-            draw_glyph([[lm,a,rm,w],[lm,w,m,q],[l,q,rm,a],[r,q,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_ka", 0));
             increment_y();
-            draw_glyph([[lm,a,rm,a,m,q,lm,a],[l,q,lm,w,rm,w,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_fya", 1));
             increment_y();
-            draw_glyph([[lm,a,rm,w,lm,w,rm,a,lm,a],[l,q,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_fy", 2));
             increment_y();
             erase_view();
             audio_kafyafy.play();
@@ -5393,25 +5437,24 @@ TODO:
         }
 
         if(text_searched === "alec" || text_searched === "lloyd"){
-            draw_glyph([[lm,w,l,q,lm,a,rm,a,r,q,rm,w,lm,w,rm,a],[m,q,rm,w],[lm,a,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_nmo", 0));
             increment_y();
-            draw_glyph([[lm,a,rm,w],[lm,w,m,q],[l,q,rm,a],[r,q,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_ka", 1));
             increment_y();
-            draw_glyph([[lm,a,rm,a,l,q],[m,q,m,q],[rm,w,lm,w,r,q]]);
+            draw_glyph(draw_combo(glyph_database, "_tae", 2));
             increment_y();
             erase_view();
             translator.innerHTML += `Alec Lloyd Probert <span class="phono">[nmo_ka_tae]</span>`;
         }
 
         if(text_searched === "beau"){
-            draw_glyph([[rm,w,l,q,lm,a,lm,w,r,q,m,q],[rm,a,rm,a]]);
+            draw_glyph(draw_combo(glyph_database, "_kli", 0));
             increment_y();
-            draw_glyph([[l,q,lm,w,rm,a],[rm,w,r,q],[lm,a,lm,a]]);
+            draw_glyph(draw_combo(glyph_database, "_keo", 1));
             increment_y();
-            draw_glyph([[lm,a,rm,a,r,q,l,q],[rm,a,rm,w],[lm,w,lm,w]]);
+            draw_glyph(draw_combo(glyph_database, "_grey", 2));
             increment_y();
-            draw_glyph([[lm,w,lm,a,r,q,lm,w],[l,q,m,q,rm,a],[m,q,rm,w]]);
-            increment_y();
+            draw_glyph(draw_combo(glyph_database, "_hea", 3));
             erase_view();
             translator.innerHTML += `BEAU <span class="phono">[kli-keo-grey-hea]</span>`;
         }
