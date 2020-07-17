@@ -122,12 +122,19 @@ TODO:
             graphieros_cursor.id = "g_cursor";
             
             let c0 = document.createElementNS(xmlns, "circle");
+            c0.setAttributeNS(null, "r", "16");
             let c1 = document.createElementNS(xmlns, "circle");
+            c1.setAttributeNS(null, "r", "16");
             let c2 = document.createElementNS(xmlns, "circle");
+            c2.setAttributeNS(null, "r", "16");
             let c3 = document.createElementNS(xmlns, "circle");
+            c3.setAttributeNS(null, "r", "16");
             let c4 = document.createElementNS(xmlns, "circle");
+            c4.setAttributeNS(null, "r", "16");
             let c5 = document.createElementNS(xmlns, "circle");
+            c5.setAttributeNS(null, "r", "16");
             let c6 = document.createElementNS(xmlns, "circle");
+            c6.setAttributeNS(null, "r", "16");
 
             c0.setAttributeNS(null, "cx", m);
             c0.setAttributeNS(null, "cy", q);
@@ -2481,6 +2488,7 @@ TODO:
             let last = center_link_memory[center_link_memory.length -1];
             output_area.innerHTML += `${_p}${first},${last}${p_}`;
         }
+        increment_y();
     }
 
 
@@ -2613,14 +2621,14 @@ TODO:
             }
         }
 
-        (function play_with_listed_pictos(){
+        (function play_with_listed_pictos() {
             let glyphos = document.getElementsByClassName("glypho");
-                for(let i = 0; i < glyphos.length; i += 1){
+                for (let i = 0; i < glyphos.length; i += 1) {
                     let one_glypho = glyphos[i];
-                    one_glypho.addEventListener("click", function(){
-                        for(let i = 0; i < glyph_reference.length; i += 1){
+                    one_glypho.addEventListener("click", function() {
+                        for (let i = 0; i < glyph_reference.length; i += 1) {
                             let one_glyph = glyph_reference[i];
-                            if(one_glypho.id === one_glyph.name){
+                            if (one_glypho.id === one_glyph.name) {
                                 let aud = new Audio(`audio/${one_glyph.name.replace("_","")}.mp3`);
                                 aud.play();
                             }
@@ -2630,16 +2638,24 @@ TODO:
         }());
 
         //readymade word cumulations combo notifications
-        function display_combo(options, write){
-            for(let i = 0; i < options.length; i += 1){
+        function display_combo(options, write) {
+            for (let i = 0; i < options.length; i += 1) {
                 let that_option = options[i];
-                if(text_searched === that_option){
+                if (text_searched === that_option) {
                     space.innerHTML += write;
                     notify_combo();
                 }
             }
         }
 
+        display_combo(["apprendre","_rseakno"],"apprendre: [rsea-kno]");
+        display_combo(["ecrire", "_mraitoi"],"écrire: [mrai-toi]");
+        display_combo(["montrer","_fasta"],"montrer: [fa-sta]");
+        display_combo(["dire","_fasko"], "dire: [fa-sko]");
+        display_combo(["graphieros","_mealgioney"], "graphieros: [mea-lgio-ney]");
+        display_combo(["editer", "_fatoizai"], "éditer: [fa-toi-zai]");
+        display_combo(["permettre","_fafrya", "permettre: [fa-frya]"]);
+        display_combo(["art", "_measatae"], "art: [mea-sa-tae]");
         display_combo(["aimer","_sakme"],"aimer: [sa-kme]");
         display_combo(["alec","lloyd","_nmokatae"],`"L'artiste": [nmo-ka-tae]`);
         display_combo(["je","moi","_kafygo"],"je: [ka-fy-go]");
@@ -5338,136 +5354,141 @@ TODO:
                 aud.play();
                 draw_glyph(one_glyph.path);
                 erase_view();
-                increment_y();
+                // increment_y();
                 translator.innerHTML += `${glyph_with_accent.fr.toUpperCase()}<span class="phono">[${glyph_with_accent.name.replace("_","")}]</span> `;
                 
             }
         }
- 
 
-        function draw_combo(db, phono, inc) {
+        function draw_combo(db, phono) {
 
-            let increment = inc * 200;
-            let copied_paths = [];
-            let modified_paths = [];
+            let increment = 200;
 
-            for (let i = 0; i < db.length; i += 1) {
+            for (n = 0; n < phono.length; n += 1) {
 
-                if (db[i].name === phono) {
-                    copied_paths = [...db[i].path];
-                }
+                let one_phono = phono[n];
+                let copied_paths = [];
+                let modified_paths = [];
 
-            }
-
-            for (let i = 0; i < copied_paths.length; i += 1) {
-                let block = copied_paths[i];
-                let modified_block = [];
-
-                for (let k = 0; k < block.length; k += 1) {
-                    if (k % 2 === 0) {
-                        modified_block.push(block[k]);
-                    } else {
-                        block[k] += increment;
-                        modified_block.push(block[k]);
+                for (let i = 0; i < db.length; i += 1) {
+                    if (db[i].name === one_phono) {
+                        copied_paths = [...db[i].path];
                     }
                 }
-                modified_paths.push(modified_block);
+
+                for (let i = 0; i < copied_paths.length; i += 1) {
+                    let block = copied_paths[i];
+                    let modified_block = [];
+
+                    for (let k = 0; k < block.length; k += 1) {
+                        if (k % 2 === 0) {
+                            modified_block.push(block[k]);
+                        } else {
+                            block[k] += increment * n;
+                            modified_block.push(block[k]);
+                        }
+                    }
+                    modified_paths.push(modified_block);
+                }
+                draw_glyph(modified_paths);
             }
-            return modified_paths;
+            erase_view();
+        }
+
+        function show_translation(translation, phonology) {
+            translator.innerHTML += `${translation} <span class="phono">${phonology}</span>`;
         }
 
         //readymade word cumulations
-        if(text_searched === "je" || text_searched === "moi" || text_searched === "_kafygo"){
-            draw_glyph(draw_combo(glyph_database, "_ka", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_fy", 1));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database,"_go", 2));
-            increment_y();
-            erase_view();
+
+        if (text_searched === "apprendre" || text_searched === "_rseakno") {
+            draw_combo(glyph_database, ["_rsea","_kno"]);
+            show_translation("APPRENDRE", "[rsea-kno]");
+        }
+
+        if (text_searched === "ecrire" || text_searched === "_mraitoi") {
+            draw_combo(glyph_database, ["_mrai","_toi"]);
+            show_translation("ECRIRE", "[mrai-toi]");
+        }
+
+        if (text_searched === "montrer" || text_searched === "_fasta") {
+            draw_combo(glyph_database, ["_fa","_sta"]);
+            show_translation("MONTRER","[fa-sta]");
+        }
+
+        if (text_searched === "dire" || text_searched === "_fasko") {
+            draw_combo(glyph_database, ["_fa","_sko"]);
+            show_translation("DIRE", "[fa-sko]");
+        }
+
+        if (text_searched === "graphieros" || text_searched === "_mealgioney") {
+            draw_combo(glyph_database, ["_mea","_lgio","_ney"]);
+            show_translation("GRAPHIEROS", "[mea-lgio-ney]");
+        }
+
+        if (text_searched === "editer" || text_searched === "_fatoizai") {
+            draw_combo(glyph_database, ["_fa","_toi","_zai"]);
+            show_translation("EDITER", "[fa-toi-zai]");
+        }
+
+        if (text_searched === "permettre" || text_searched === "_fafrya") {
+            draw_combo(glyph_database, ["_fa","_frya"]);
+            show_translation("PERMETTRE","[fa-frya]");
+        }
+
+        if (text_searched === "art" || text_searched === "_measatae") {
+            draw_combo(glyph_database, ["_mea","_sa","_tae"]);
+            show_translation("ART","[mea-sa-tae]");
+        }
+
+        if (text_searched === "je" || text_searched === "moi" || text_searched === "_kafygo") {
+            draw_combo(glyph_database,["_ka","_fy","_go"]);
             audio_kafygo.play();
-            translator.innerHTML += `JE, MOI <span class="phono">[ka-fy-go]</span>`;
+            show_translation("JE", "[ka-fy-go]");
         }
 
-        if(text_searched === "aimer" || text_searched === "_sakme"){
-            draw_glyph(draw_combo(glyph_database, "_sa", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_kme", 1));
-            increment_y();
-            erase_view();
+        if (text_searched === "aimer" || text_searched === "_sakme") {
+            draw_combo(glyph_database,["_sa","_kme"]);
             audio_sakme.play();
-            translator.innerHTML += `AIMER <span class="phono">[sa-kme]</span>`;
+            show_translation("AIMER", "[sa-kme]");
         }
 
-        if(text_searched === "manger" || text_searched === "_rafdu"){
-            draw_glyph(draw_combo(glyph_database, "_ra", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_fdu", 1));
-            increment_y();
-            erase_view();
-            translator.innerHTML += `MANGER <span class="phono">[ra-fdu]</span>`;
+        if (text_searched === "manger" || text_searched === "_rafdu") {
+            draw_combo(glyph_database,["_ra","_fdu"]);
+            show_translation("MANGER", "[ra-fdu]");
         }
 
-        if(text_searched === "nature"){
-            draw_glyph(draw_combo(glyph_database, "_kio", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_hae", 1));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_to", 2));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_trea", 3));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_frey", 4));
-            increment_y();
-            erase_view();
+        if (text_searched === "nature") {
+            draw_combo(glyph_database,["_kio","_hae","_to","_trea","_frey"]);
             audio_kioheatotreafrey.play();
-            translator.innerHTML += `NATURE <span class="phono">[kio-hae-to-trea-frey]</span>`;
+            show_translation("NATURE", "[kio-hae-to-trea-frey]");
         }
 
-        if(text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy"){
-            draw_glyph(draw_combo(glyph_database, "_ka", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_fya", 1));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_fy", 2));
-            increment_y();
-            erase_view();
+        if (text_searched === "tu" || text_searched === "toi" || text_searched === "_kafyafy") {
+            draw_combo(glyph_database,["_ka","_fya","_fy"]);
             audio_kafyafy.play();
-            translator.innerHTML += `TU, TOI <span class="phono">[ka-fya-fy]</span>`;
+            show_translation("TU, TOI", "[ka-fya-fy]");
         }
 
-        if(text_searched === "alec" || text_searched === "lloyd"){
-            draw_glyph(draw_combo(glyph_database, "_nmo", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_ka", 1));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_tae", 2));
-            increment_y();
-            erase_view();
-            translator.innerHTML += `Alec Lloyd Probert <span class="phono">[nmo_ka_tae]</span>`;
+        if (text_searched === "alec" || text_searched === "lloyd") {
+            draw_combo(glyph_database,["_nmo","_ka","_tae"]);
+            show_translation("Alec Lloyd Probert", "[nmo-ka-tae]");
         }
 
-        if(text_searched === "beau"){
-            draw_glyph(draw_combo(glyph_database, "_kli", 0));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_keo", 1));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_grey", 2));
-            increment_y();
-            draw_glyph(draw_combo(glyph_database, "_hea", 3));
-            erase_view();
-            translator.innerHTML += `BEAU <span class="phono">[kli-keo-grey-hea]</span>`;
+        if (text_searched === "beau") {
+            draw_combo(glyph_database,["_kli","_keo","_grey","_hea"]);
+            show_translation("BEAU", "[kli-keo-grey-hea]");
         }
     }
 
-    ok.addEventListener("click", function(){
-        if(up_down_counter < 0){
+    ok.addEventListener("click", function() {
+        if (up_down_counter < 0) {
             up_down_counter += 1;
         }
-        if(up_down_counter > 0){
+        if (up_down_counter > 0) {
             up_down_counter = 0;
         }
-        if(output_area.innerHTML === ""){
+        if (output_area.innerHTML === "") {
             output_area.appendChild(circles[0]);
             curse();
         }
