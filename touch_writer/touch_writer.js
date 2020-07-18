@@ -2648,6 +2648,20 @@ TODO:
             }
         }
 
+        display_combo(["creer", "_favine"],"créer: [fa-vi-ne]");
+        display_combo(["malheur","_bwasa"],"(être)malheur: [bwa-sa]");
+        display_combo(["bonheur","_keosa"],"(être)bonheur: [keo-sa]");
+        display_combo(["maitre","_kafyardo"],"maître: [ka-fya-rdo]");
+        display_combo(["esclave","_ptaeka"],"esclave: [ptae-ka]");
+        display_combo(["sans","_niavi"],"sans: [nia-vi]");
+        display_combo(["technique","_plamtai"],"(être)technique: [pla-mtai]");
+        display_combo(["science","_hiamtai"],"(être)science: [hia-mtai]");
+        display_combo(["philosopher","_sakmehia"],"philosopher: [sa-kme-hia]");
+        display_combo(["mot", "_ptaetmeihia"],"mot: [ptae-tmei-hia]");
+        display_combo(["percevoir", "_drista"],"percevoir: [dri-sta]");
+        display_combo(["societe", "_ptaerdokweka"],"société: [ptae-rdo-kwe-ka]");
+        display_combo(["structurer", "_rdomtai"],"structurer: [rdo-mtai]");
+        display_combo(["souhaiter", "_krov3ai"], "souhaiter: [kro-v3ai]");
         display_combo(["apprendre","_rseakno"],"apprendre: [rsea-kno]");
         display_combo(["ecrire", "_mraitoi"],"écrire: [mrai-toi]");
         display_combo(["montrer","_fasta"],"montrer: [fa-sta]");
@@ -2663,7 +2677,6 @@ TODO:
         display_combo(["tu","toi","_kafyafy"],"tu,toi: [ka-fya-fy]");
         display_combo(["beau"],"beau: [kli-keo-grey-hea]");
         display_combo(["nature"],"nature: [kio-hae-to-trea-frey]");
-
     }
 
 
@@ -5396,10 +5409,80 @@ TODO:
         }
 
         function show_translation(translation, phonology) {
-            translator.innerHTML += `${translation} <span class="phono">${phonology}</span>`;
+            translator.innerHTML += `${translation}<span class="phono">${phonology}</span> `;
         }
 
-        //readymade word cumulations
+        //readymade word cumulations 
+
+        if (text_searched === "creer" || text_searched === "_favine") {
+            draw_combo(glyph_database, ["_fa","_vi","_ne"]);
+            show_translation("CREER","[fa-vi-ne]");
+        }
+
+        if (text_searched === "malheur" || text_searched === "_bwasa") {
+            draw_combo(glyph_database, ["_bwa","_sa"]);
+            show_translation("(être)MALHEUR", "[bwa-sa]");
+        }
+
+        if (text_searched === "bonheur" || text_searched === "_keosa") {
+            draw_combo(glyph_database, ["_keo","_sa"]);
+            show_translation("(être)BONHEUR", "[keo-sa]");
+        }
+
+        if (text_searched === "maitre" || text_searched === "_kafyardo") {
+            draw_combo(glyph_database, ["_ka","_fya","_rdo"]);
+            show_translation("MAÎTRE","[ka-fya-rdo]");
+        }
+
+        if (text_searched === "esclave" || text_searched === "_ptaeka") {
+            draw_combo(glyph_database, ["_ptae","_ka"]);
+            show_translation("ESCLAVE","[ptae-ka]");
+        }
+
+        if (text_searched === "sans" || text_searched === "_niavi") {
+            draw_combo(glyph_database, ["_nia","_vi"]);
+            show_translation("SANS","[nia-vi]");
+        }
+
+        if (text_searched === "technique" || text_searched === "_plamtai") {
+            draw_combo(glyph_database, ["_pla","_mtai"]);
+            show_translation("(être)TECHNIQUE","[pla-mtai]");
+        }
+
+        if (text_searched === "science" || text_searched === "_hiamtai") {
+            draw_combo(glyph_database, ["_hia","_mtai"]);
+            show_translation("(être)SCIENCE","[hia-mtai]");
+        }
+
+        if (text_searched === "philosopher" || text_searched === "_sakmehia") {
+            draw_combo(glyph_database, ["_sa","_kme","_hia"]);
+            show_translation("PHILOSOPHER", "[sa-kme-hia]");
+        }
+
+        if (text_searched === "mot" || text_searched === "_ptaetmeihia") {
+            draw_combo(glyph_database, ["_ptae","_tmei","_hia"]);
+            show_translation("MOT", "[ptae-tmei-hia]");
+        }
+
+        if (text_searched === "percevoir" || text_searched === "_drista") {
+            draw_combo(glyph_database, ["_dri","_sta"]);
+            show_translation("PERCEVOIR", "[dri-sta]");
+        }
+
+        if (text_searched === "societe" || text_searched === "_ptaerdokweka") {
+            draw_combo(glyph_database, ["_ptae","_rdo","_kwe","_ka"]);
+            show_translation("SOCIETE", "[ptae-rdo-kwe-ka]");
+        }
+
+        if (text_searched === "structurer" || text_searched === "_rdomtai") {
+            draw_combo(glyph_database, ["_rdo","_mtai"]);
+            show_translation("STRUCTURER", "[rdo-mtai]");
+        }
+
+        if (text_searched === "souhaiter" || text_searched === "_kro_v3ai") {
+            draw_combo(glyph_database, ["_kro","_v3ai"]);
+            show_translation("SOUHAITER","[kro-v3ai]");
+        }
 
         if (text_searched === "apprendre" || text_searched === "_rseakno") {
             draw_combo(glyph_database, ["_rsea","_kno"]);

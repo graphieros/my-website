@@ -483,7 +483,6 @@ span.back_jump{
 }
 
 #g_cursor > circle{
-    r: 16;
     stroke: black;
     stroke-width:3;
     fill: grey;
