@@ -313,15 +313,17 @@ span#EE{
     display: block;
     position: fixed;
     top: 50%;
-    right: -100px;
+    right: -35px;
     transform: translateY(-50%);
     box-sizing: border-box;
     font-size: 3em;
     padding-right: 200px;
     font-family: var(--FT);
     color: black;
-    background: linear-gradient(to right, transparent, white, white);
+    background: transparent;
     z-index: -1;
+    opacity:0;
+    transition: opacity 1s ease;
 }
 
 @keyframes slideNameOpen {
@@ -1061,6 +1063,47 @@ svg.storedSVG path {
     border-radius: 0 0 100% 100%;
 }
 
+#background_svg{
+    display:block;
+    height: 100vh;
+    width:100%;
+    position:fixed;
+    left:0px;
+    top:50%;
+    transform: translateY(-50%);
+    opacity:0.5;
+    z-index:-200;
+    transition: opacity 1s ease;
+}
+
+svg#back_svg {
+    height:100%;
+    width:100%;
+    fill:none;
+    background:transparent;
+    stroke-linecap:round;
+    stroke-linejoin: round;
+}
+
+#logo0,
+#logo1,
+#logo2{
+    opacity:0;
+    transition: opacity 1s ease;
+}
+
+#logo0{
+    stroke: rgb(200,200,200);
+}
+
+#logo1{
+    stroke: rgb(150,150,150);
+}
+
+#logo2{
+    stroke: rgb(100,100,100);
+}
+
 
 
 @media screen and (max-width: 680px) {
@@ -1068,7 +1111,7 @@ svg.storedSVG path {
         font-size: 1.3em;
         right: -100px;
         text-align: center;
-    }
+    } 
     @keyframes slideNameOpen {
         from {
             right: -100px;

@@ -6,7 +6,7 @@ html,body
     padding: 0px;
     overflow-x: hidden; 
     font-family: 'Poiret One', cursive;
-}
+} 
 
 .book{
   margin: 0 auto;
@@ -26,7 +26,15 @@ a{
 
 p.disclaimer{
   grid-column: 1 / span 2;
+  width:100vw;
+  box-sizing: border-box;
+  padding:40px;
+  margin-top:0;
   text-align:center;
+  background: lightgrey;
+  border-radius: 0 0 30px 30px;
+  font-weight:bold;
+  font-size:1.2em;
 }
 
 #lacle{
