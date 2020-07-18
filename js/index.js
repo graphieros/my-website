@@ -25,11 +25,34 @@ const CAPTIONS = document.getElementsByClassName("picCaption");
 const APPS = document.getElementsByClassName("appliWrapper");
 const DEVMENU = document.getElementsByClassName("devMenu");
 const WOW = document.getElementById("progWow");
+const background_svg = document.getElementById("background_svg");
+const logo0 = document.getElementById("logo0");
+const logo1 = document.getElementById("logo1");
+const logo2 = document.getElementById("logo2");
 
 let i; 
 
+document.onload = function(){
+  setTimeout(function(){
+    logo0.style.opacity = 1;
+  },500);
+  setTimeout(function(){
+    logo1.style.opacity = 1
+  },1000);
+  setTimeout(function(){
+    logo2.style.opacity = 1;
+  },1500);
+  setTimeout(function(){
+    LANDING.style.opacity = 1;
+  },2000);
+  setTimeout(function(){
+    background_svg.style.opacity = 0.1;
+  },2000);
+}
+
 (function activateMenu() {
     MENU.addEventListener("mouseover", function() {
+        background_svg.style.opacity = 0.1;
         MENU.style.zIndex = "100";
         LANDING.style.display = "block";
         LANDING.style.animationName = "slideNameOpen";
@@ -105,6 +128,7 @@ XBALL.addEventListener("click", function() {
 })
 
 function closeMenu() {
+    background_svg.style.opacity = 0.5;
     MENU.style.zIndex = 10;
     LANDING.style.animationName = "slideNameClose";
     LANDING.style.animationDuration = "0.5s";
@@ -201,7 +225,7 @@ function showQuote(menu, quote, col) {
         QUOTE.innerHTML = "";
         QUOTE.style.background = "none";
     }); 
-} 
+}
 
 showQuote(MENUBALLBLOG, "Des <b>pensées</b>, des photos comme elles viennent", "rgb(90,156,36)");
 showQuote(MENUBALL0, "Une sorte de <b>curriculum</b> vitae", "rgb(90,156,36)");
