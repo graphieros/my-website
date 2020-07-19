@@ -2477,11 +2477,15 @@ TODO:
         curse();
         center_link_counter += 1;
         center_link_memory.push(`${m} ${q}`);
+        let g_element = document.createElementNS(xmlns, "g");
+        g_element.setAttributeNS(null, "class", "written_glyph");
 
         for(let x = 0; x < path.length; x += 1){
             let one_path = path[x];
-            output_area.innerHTML += `${_p}${one_path}${p_}`;
+            g_element.innerHTML += `${_p}${one_path}${p_}`;
         }
+
+        output_area.appendChild(g_element);
 
         if(center_link_counter > 1){
             let first = center_link_memory[0];
@@ -2573,7 +2577,7 @@ TODO:
 
 
     function search_reference(text_searched){
-        found_list.style.display = "block";
+        // found_list.style.display = "block";
         found_list.innerHTML = "";
         curse();
         circle_preview.style.display = "block";
@@ -2594,7 +2598,9 @@ TODO:
                 found_list.style.display = "none";
             }
 
-            if(text_searched !== "_" && text_searched.substring(0,2) === one_ref.name.substring(0,2) || text_searched.substring(0,2) === one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0,2)){
+            if(text_searched.substring(0,2) === one_ref.name.substring(0,2) || text_searched.substring(0,2) === one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0,2)){
+
+                found_list.style.display = "block";
 
                 found_list.innerHTML += `<b>${one_ref.name}</b> ${one_ref.fr.toUpperCase()} `;
                 let mini_svg = document.createElementNS(xmlns, "svg");
@@ -2618,6 +2624,10 @@ TODO:
 
                 found_list.appendChild(mini_svg);
                 found_list.innerHTML += "<br>";
+            }
+
+            if(text_searched === "" || text_searched === "_") {
+                found_list.style.display = "none";
             }
         }
 
@@ -2648,6 +2658,10 @@ TODO:
             }
         }
 
+        display_combo(["univers","_kiotewma"],"univers: [kio-tew-ma]");
+        display_combo(["parler","_lpaelgio"],"parler: [lpae-lgio]");
+        display_combo(["exprimer", "_fazaifwo"],"exprimer: [fa-zai-fwo]");
+        display_combo(["comme", "_smezai"],"comme: [sme-zai]");
         display_combo(["creer", "_favine"],"créer: [fa-vi-ne]");
         display_combo(["malheur","_bwasa"],"(être)malheur: [bwa-sa]");
         display_combo(["bonheur","_keosa"],"(être)bonheur: [keo-sa]");
@@ -2657,13 +2671,16 @@ TODO:
         display_combo(["technique","_plamtai"],"(être)technique: [pla-mtai]");
         display_combo(["science","_hiamtai"],"(être)science: [hia-mtai]");
         display_combo(["philosopher","_sakmehia"],"philosopher: [sa-kme-hia]");
+        display_combo(["verbe", "_ptaetmeihiapfae"],"mot: [ptae-tmei-hia-pfae]");
         display_combo(["mot", "_ptaetmeihia"],"mot: [ptae-tmei-hia]");
+        display_combo(["glyphe", "_ptaetmeihiamrai"],"mot: [ptae-tmei-hia-mrai]");
         display_combo(["percevoir", "_drista"],"percevoir: [dri-sta]");
         display_combo(["societe", "_ptaerdokweka"],"société: [ptae-rdo-kwe-ka]");
         display_combo(["structurer", "_rdomtai"],"structurer: [rdo-mtai]");
         display_combo(["souhaiter", "_krov3ai"], "souhaiter: [kro-v3ai]");
         display_combo(["apprendre","_rseakno"],"apprendre: [rsea-kno]");
         display_combo(["ecrire", "_mraitoi"],"écrire: [mrai-toi]");
+        display_combo(["lire", "_statoi"],"lire: [sta-toi]");
         display_combo(["montrer","_fasta"],"montrer: [fa-sta]");
         display_combo(["dire","_fasko"], "dire: [fa-sko]");
         display_combo(["graphieros","_mealgioney"], "graphieros: [mea-lgio-ney]");
@@ -5412,7 +5429,27 @@ TODO:
             translator.innerHTML += `${translation}<span class="phono">${phonology}</span> `;
         }
 
-        //readymade word cumulations 
+        //readymade word cumulations
+
+        if (text_searched === "univers" || text_searched === "_kiotewma") {
+            draw_combo(glyph_database, ["_kio","_tew","_ma"]);
+            show_translation("UNIVERS", "[kio-tew-ma]");
+        }
+
+        if (text_searched === "parler" || text_searched === "_lpaelgio") {
+            draw_combo(glyph_database, ["_lpae","_lgio"]);
+            show_translation("PARLER","[lpae-lgio]");
+        }
+        
+        if (text_searched === "exprimer" || text_searched === "_fazaifwo") {
+            draw_combo(glyph_database, ["_fa","_zai","_fwo"]);
+            show_translation("EXPRIMER", "[fa-zai-fwo]");
+        }
+
+        if (text_searched === "comme" || text_searched === "_smezai") {
+            draw_combo(glyph_database, ["_sme","_zai"]);
+            show_translation("COMME", "[sme-zai]");
+        }
 
         if (text_searched === "creer" || text_searched === "_favine") {
             draw_combo(glyph_database, ["_fa","_vi","_ne"]);
@@ -5459,9 +5496,19 @@ TODO:
             show_translation("PHILOSOPHER", "[sa-kme-hia]");
         }
 
+        if (text_searched === "verbe" || text_searched === "_ptaetmeihiapfae") {
+            draw_combo(glyph_database, ["_ptae","_tmei","_hia","_pfae"]);
+            show_translation("VERBE", "[ptae-tmei-hia-pfae]");
+        }
+
         if (text_searched === "mot" || text_searched === "_ptaetmeihia") {
             draw_combo(glyph_database, ["_ptae","_tmei","_hia"]);
             show_translation("MOT", "[ptae-tmei-hia]");
+        }
+
+        if (text_searched === "glyphe" || text_searched === "_ptaetmeihiamrai") {
+            draw_combo(glyph_database, ["_ptae","_tmei","_hia","_mrai"]);
+            show_translation("GLYPHE", "[ptae-tmei-hia-mrai]");
         }
 
         if (text_searched === "percevoir" || text_searched === "_drista") {
@@ -5492,6 +5539,11 @@ TODO:
         if (text_searched === "ecrire" || text_searched === "_mraitoi") {
             draw_combo(glyph_database, ["_mrai","_toi"]);
             show_translation("ECRIRE", "[mrai-toi]");
+        }
+
+        if (text_searched === "lire" || text_searched === "_statoi") {
+            draw_combo(glyph_database, ["_sta","_toi"]);
+            show_translation("LIRE", "[sta-toi]");
         }
 
         if (text_searched === "montrer" || text_searched === "_fasta") {
@@ -5700,6 +5752,8 @@ TODO:
         const btn = document.getElementById("btn");
     
         btn.addEventListener("click", function(){
+            let cursor = document.getElementById("g_cursor");
+            cursor.style.display = "none";
             let svgString = new XMLSerializer().serializeToString(document.getElementById('output_area'));
             let canvas = document.getElementById("canvas");
             let ctx = canvas.getContext("2d");

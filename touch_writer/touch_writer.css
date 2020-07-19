@@ -80,7 +80,7 @@ span.d{
 }
 
 .sources:hover{
-    color: cornflowerblue;
+    color: gold;
     background: rgb(37, 37, 37);
 }
 
@@ -131,12 +131,13 @@ span.d{
 p.page_name{
     width:100%;
     text-align:center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size:1.5em;
+    font-family: var(--FT);
+    font-size:1.9em;
     color: white;
     box-sizing: border-box;
     padding-top:20px;
     margin-top:60px;
+    color:gold;
 }
 
 p.bs{
@@ -145,10 +146,9 @@ p.bs{
     color: white;
     text-align:center;
     margin-bottom:30px;
-    font-family: 'Courier New', Courier, monospace;
-    font-style: italic;
-    color: grey;
-    font-size:0.8em;
+    font-family: var(--FT);
+    color: rgb(196, 196, 196);
+    font-size:1em;
 }
 
 .view,
