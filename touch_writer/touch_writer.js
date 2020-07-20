@@ -73,6 +73,17 @@ TODO:
 
     const found_list = document.getElementById("found_list");
 
+    const MEA = document.getElementById("pk0");
+    const KA = document.getElementById("pk1");
+    const KLI = document.getElementById("pk2");
+    const VI = document.getElementById("pk3");
+    const KIO = document.getElementById("pk4");
+    const PTAE = document.getElementById("pk5");
+    const PKIA = document.getElementById("pk6");
+    const MTAI = document.getElementById("pk7");
+    const MINA = document.getElementById("pk8");
+    const TSI = document.getElementById("pk9");
+
     let up_down_counter = 0;
     let left_right_counter = 0;
     let stax = [];
@@ -1080,7 +1091,7 @@ TODO:
         {
             name: '_mina',
             fr: 'minéral',
-            path: [[lm,w,lm,a,m,q,rm,a,rm,w,lm,w,l,m,lm,a,rm,a,r,q,rm,w]],
+            path: [[lm,w,lm,a,m,q,rm,a,rm,w,lm,w,l,q,lm,a,rm,a,r,q,rm,w]],
         },
         {
             name: '_mlimza',
@@ -2469,10 +2480,6 @@ TODO:
         center_link_memory = [];
     }
 
-    function hear_sound(noise){
-        noise.play();
-    }
-
     function draw_glyph(path){
         curse();
         center_link_counter += 1;
@@ -2575,9 +2582,53 @@ TODO:
         svg_preview.innerHTML += `<text class="prev_text" x="45" y="140">COMBO!</text>`;
     }
 
+    let combo_database = [
+        {name: "_fagrae", fr: "cultiver", list: ["_fa", "_grae"]},
+        {name: "_piodveande", fr: "racine", list: ["_pio", "_dvea", "_nde"]},
+        {name: "_piodveagew", fr: "arbre", list: ["_pio", "_dvea", "_gew"]},
+        {name: "_knofkai", fr: "comprendre", list: ["_kno", "_fkai"]},
+        {name: "_kiotewma", fr: "univers", list: ["_kio","_tew","_ma"]},
+        {name: "_lpaelgio", fr: "parler", list: ["_lpae", "_lgio"]},
+        {name: "_fazaifwo", fr: "exprimer", list: ["_fa", "_zai", "_fwo"]},
+        {name: "_smezai", fr: "comme", list: ["_sme", "_zai"]},
+        {name: "_favine", fr: "créer", list: ["_fa", "_vi", "_ne"]},
+        {name: "_bwasa", fr: "malheur", list: ["_bwa", "_sa"]},
+        {name: "_keosa", fr: "bonheur", list: ["_keo", "_sa"]},
+        {name: "_kafyardo", fr: "maître", list: ["_ka", "_fya", "_rdo"]},
+        {name: "_ptaeka", fr: "exclave", list: ["_ptae", "_ka"]},
+        {name: "_niavi", fr: "sans", list: ["_nia", "_vi"]},
+        {name: "_plamtai", fr: "technique", list: ["_pla", "_mtai"]},
+        {name: "_hiamtai", fr: "science", list: ["_hia", "_mtai"]},
+        {name: "_sakmehia", fr: "philosopher", list: ["_sa", "_kme", "_hia"]},
+        {name: "_ptaetmeihiapfae", fr: "verbe", list: ["_ptae", "_tmei", "_hia", "_pfae"]},
+        {name: "_ptaetmeihia", fr: "mot", list: ["_ptae", "_tmei", "_hia"]},
+        {name: "_ptaetmeihiamrai", fr: "glyphe", list: ["_ptae", "_tmei", "_hia", "_mrai"]},
+        {name: "_drista", fr: "percevoir", list: ["_dri", "_sta"]},
+        {name: "_ptaerdokweka", fr: "société", list: ["_ptae", "_rdo", "_kwe", "_ka"]},
+        {name: "_rdomtai", fr: "structurer", list: ["_rdo", "_mtai"]},
+        {name: "_krov3ai", fr: "souhaiter", list: ["_kro", "_v3ai"]},
+        {name: "_rseakno", fr: "apprendre", list: ["_rsea", "_kno"]},
+        {name: "_mraitoi", fr: "écrire", list: ["_mrai", "_toi"]},
+        {name: "_statoi", fr: "lire", list: ["_sta", "_toi"]},
+        {name: "_fasta", fr: "montrer", list: ["_fa", "_sta"]},
+        {name: "_fasko", fr: "dire", list: ["_fa", "_sko"]},
+        {name: "_mealgioney", fr: "graphieros", list: ["_mea", "_lgio", "_ney"]},
+        {name: "_fatoizai", fr: "éditer", list: ["_fa", "_toi", "_zai"]},
+        {name: "_fafrya", fr: "permettre", list: ["_fa", "_frya"]},
+        {name: "_measatae", fr: "art", list: ["_mea", "_sa", "_tae"]},
+        {name: "_sakme", fr: "aimer", list: ["_sa", "_kme"]},
+        {name: "_nmokatae", fr: "alec lloyd probert", list: ["_nmo", "_ka", "_tae"]},
+        {name: "_kafygo", fr: "je", list: ["_ka", "_fy", "_go"]},
+        {name: "_kafygo", fr: "moi", list: ["_ka", "_fy", "_go"]},
+        {name: "_rafdu", fr: "manger", list: ["_ra", "_fdu"]},
+        {name: "_kafyafy", fr: "tu", list: ["_ka", "_fya", "_fy"]},
+        {name: "_kafyafy", fr:"toi", list: ["_ka", "_fya", "_fy"]},
+        {name: "_klikeogreyhea", fr: "beau", list: ["_kli", "_keo", "_grey", "_hea"]},
+        {name: "_kiohaetotreafrey", fr: "nature", list: ["_kio", "_hae", "_to", "_trea", "_frey"]},
+    ];
 
     function search_reference(text_searched){
-        // found_list.style.display = "block";
+       
         found_list.innerHTML = "";
         curse();
         circle_preview.style.display = "block";
@@ -2587,7 +2638,21 @@ TODO:
         
         for(let w = 0; w < glyph_reference.length; w += 1){
             let one_ref = glyph_reference[w];
-            if(text_searched !== "_" && one_ref.name === text_searched || one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === text_searched){ //removing all accents from one_ref.fr
+
+            function search_is_a_match() {
+                //removing all accents from one_ref.fr
+                return text_searched !== "_" && one_ref.name === text_searched || one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "") === text_searched;
+            }
+
+            function first_letters_are_a_match() {
+                return text_searched.substring(0,2) === one_ref.name.substring(0,2) || text_searched.substring(0,2) === one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0,2);
+            }
+
+            function search_is_empty() {
+                return text_searched === "" || text_searched === "_";
+            }
+
+            if (search_is_a_match()) { 
                 space.style. background = "radial-gradient(at top left, white, grey)";
                 space.innerHTML = `${one_ref.fr}: [${one_ref.name.replace("_","")}]`;
 
@@ -2598,10 +2663,9 @@ TODO:
                 found_list.style.display = "none";
             }
 
-            if(text_searched.substring(0,2) === one_ref.name.substring(0,2) || text_searched.substring(0,2) === one_ref.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0,2)){
+            if (first_letters_are_a_match()) {
 
                 found_list.style.display = "block";
-
                 found_list.innerHTML += `<b>${one_ref.name}</b> ${one_ref.fr.toUpperCase()} `;
                 let mini_svg = document.createElementNS(xmlns, "svg");
                 mini_svg.setAttributeNS(null, "viewBox", "0 0 260 260");
@@ -2609,7 +2673,7 @@ TODO:
                 mini_svg.className = "mini_svg";
                 mini_svg.style.height = "30px";
                 mini_svg.style.width = "30px";
-                mini_svg.style.background = "white";
+                mini_svg.style.background = "radial-gradient(at bottom left, white, gold)";
                 mini_svg.style.borderRadius = "100%";
                 mini_svg.style.border = "1px solid black";
                 mini_svg.style.boxShadow = "0 0 8px black";
@@ -2626,24 +2690,87 @@ TODO:
                 found_list.innerHTML += "<br>";
             }
 
-            if(text_searched === "" || text_searched === "_") {
+            if (search_is_empty()) {
                 found_list.style.display = "none";
             }
         }
 
+        for (let i = 0; i < combo_database.length; i += 1) {
+
+            let one_combo = combo_database[i];
+
+            function display_combo_in_list(){
+                found_list.style.display = "block";
+                found_list.innerHTML === "";
+                found_list.innerHTML += `<span class="combo_exclam">COMBO!</span><b>${one_combo.name}</b>: ${one_combo.fr.toUpperCase()}<br>`;
+
+                for (let k = 0; k < one_combo.list.length; k += 1) {
+                    let one_combo_glyph_phono = one_combo.list[k];
+                    let mini_svg = document.createElementNS(xmlns, "svg");
+                    mini_svg.setAttributeNS(null, "viewBox", "0 0 260 260");
+                    mini_svg.setAttributeNS(null, "stroke", "cornflowerblue");
+                    mini_svg.className = "mini_svg";
+                    mini_svg.style.height = "30px";
+                    mini_svg.style.width = "30px";
+                    mini_svg.style.background = "black";
+                    mini_svg.style.borderRadius = "100%";
+                    mini_svg.style.border = "1px solid black";
+                    mini_svg.style.boxShadow = "0 0 8px black";
+                    mini_svg.style.cursor = "pointer";
+                    mini_svg.setAttributeNS(null, "class", "glypho");
+                    mini_svg.id = one_combo_glyph_phono;
+
+                    for(let z = 0; z < glyph_reference.length; z += 1) {
+
+                        function the_name_is_like_the_phonology() {
+                            return glyph_reference[z].name === one_combo_glyph_phono;
+                        }
+                        
+                        if (the_name_is_like_the_phonology()) {
+                            
+                            for (let x = 0; x < glyph_reference[z].path.length; x += 1) {
+                                let p3 = glyph_reference[z].path[x];
+                                mini_svg.innerHTML += `${_p}${p3}${p_}`;
+                            }
+                            
+                            found_list.appendChild(mini_svg);
+                        }
+                    }
+                }
+                found_list.innerHTML += "<br>";
+            }
+
+            function search_is_a_combo() {
+                return text_searched.substring(0,3) === one_combo.name.substring(0,3) || text_searched.substring(0,3) === one_combo.fr.normalize("NFD").replace(/[\u0300-\u036f]/g, "").substring(0,3);
+            }
+
+            if (search_is_a_combo()) {
+                display_combo_in_list();
+            }
+        }
+
         (function play_with_listed_pictos() {
+
             let glyphos = document.getElementsByClassName("glypho");
+
                 for (let i = 0; i < glyphos.length; i += 1) {
                     let one_glypho = glyphos[i];
+
                     one_glypho.addEventListener("click", function() {
                         for (let i = 0; i < glyph_reference.length; i += 1) {
                             let one_glyph = glyph_reference[i];
-                            if (one_glypho.id === one_glyph.name) {
+
+                            function glyph_id_is_like_glyph_name() {
+                                return one_glypho.id === one_glyph.name;
+                            }
+
+                            if (glyph_id_is_like_glyph_name()) {
                                 let aud = new Audio(`audio/${one_glyph.name.replace("_","")}.mp3`);
                                 aud.play();
                             }
                         }
                     });
+                    draw_prefix(one_glypho, one_glypho.id);
                 }
         }());
 
@@ -2651,6 +2778,7 @@ TODO:
         function display_combo(options, write) {
             for (let i = 0; i < options.length; i += 1) {
                 let that_option = options[i];
+
                 if (text_searched === that_option) {
                     space.innerHTML += write;
                     notify_combo();
@@ -2658,6 +2786,10 @@ TODO:
             }
         }
 
+        display_combo(["cultiver", "_fagrae"], "cultiver: [fa-grae]");
+        display_combo(["racine", "_piodveande"], "racine: [pio-dvea-nde]");
+        display_combo(["arbre", "_piodveagew"], "arbre: [pio-dvea-gew]");
+        display_combo(["comprendre", "_knofkai"], "comprendre: [kno-fkai]");
         display_combo(["univers","_kiotewma"],"univers: [kio-tew-ma]");
         display_combo(["parler","_lpaelgio"],"parler: [lpae-lgio]");
         display_combo(["exprimer", "_fazaifwo"],"exprimer: [fa-zai-fwo]");
@@ -3771,7 +3903,7 @@ TODO:
             {
                 name: '_mina',
                 fr: 'mineral',
-                path: [[lm,w,lm,a,m,q,rm,a,rm,w,lm,w,l,m,lm,a,rm,a,r,q,rm,w]],
+                path: [[lm,w,lm,a,m,q,rm,a,rm,w,lm,w,l,q,lm,a,rm,a,r,q,rm,w]],
                 
             },
             {
@@ -5431,6 +5563,26 @@ TODO:
 
         //readymade word cumulations
 
+        if (text_searched === "cultiver" || text_searched === "_fagrae") {
+            draw_combo(glyph_database, ["_fa", "_grae"]);
+            show_translation("CULTIVER", "[fa-grae]");
+        }
+
+        if (text_searched === "racine" || text_searched === "_piodveande") {
+            draw_combo(glyph_database, ["_pio", "_dvea", "_nde"]);
+            show_translation("RACINE", "[pio-dvea-nde]");
+        }
+
+        if (text_searched === "arbre" || text_searched === "_piodveagew") {
+            draw_combo(glyph_database, ["_pio", "_dvea", "_gew"]);
+            show_translation("ARBRE", "[pio-dvea-gew]");
+        }
+
+        if (text_searched === "comprendre" || text_searched === "_knofkai") {
+            draw_combo(glyph_database, ["_kno", "_fkai"]);
+            show_translation("COMPRENDRE", "[kno-fkai]");
+        }
+
         if (text_searched === "univers" || text_searched === "_kiotewma") {
             draw_combo(glyph_database, ["_kio","_tew","_ma"]);
             show_translation("UNIVERS", "[kio-tew-ma]");
@@ -5616,7 +5768,8 @@ TODO:
         }
     }
 
-    ok.addEventListener("click", function() {
+
+    function click_ok(){
         if (up_down_counter < 0) {
             up_down_counter += 1;
         }
@@ -5634,8 +5787,30 @@ TODO:
         clear_space();
         curse();
         found_list.style.display = "none";
+    }
+
+    ok.addEventListener("click", function() {
+        click_ok();
     });
 
+    function draw_prefix(prefix_button, prefix_phonology){
+        prefix_button.addEventListener("click", function(){
+            view.innerHTML = "";
+            view.innerHTML += prefix_phonology;
+            click_ok();
+        });
+    }
+
+    draw_prefix(MEA, "_mea");
+    draw_prefix(KA, "_ka");
+    draw_prefix(KLI, "_kli");
+    draw_prefix(VI, "_vi");
+    draw_prefix(KIO, "_kio");
+    draw_prefix(PTAE, "_ptae");
+    draw_prefix(PKIA, "_pkia");
+    draw_prefix(MTAI, "_mtai");
+    draw_prefix(MINA, "_mina");
+    draw_prefix(TSI, "_tsi");
 
     space.addEventListener("click", function(){
         kill_link();
