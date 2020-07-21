@@ -15,7 +15,7 @@ footer{
     bottom:10px;
     left:10px;
     font-family: var(--FT);
-}
+} 
 
 a{
     text-decoration: none;
@@ -522,7 +522,8 @@ span.green2{
 }
 
 span.blue{
-    color: cornflowerblue;
+    color: rgb(149, 176, 226);
+    font-weight:bold;
 }
 
 /*IDEO*/
@@ -577,6 +578,24 @@ span.blue{
     text-decoration: underline;
 }
 
+#glyphLink{
+    background: cornflowerblue;
+    color: black;
+    text-decoration:none;
+    font-weight:bold;
+    border:1px solid cornflowerblue;
+    display: inline-block;
+    box-sizing: border-box;
+    padding:5px;
+    border-radius:100%;
+    opacity:0.75;
+    transition: opacity 0.3s ease;
+}
+
+#glyphLink:hover{
+    opacity: 1;
+}
+
 #prezGlyph{
     background:black;
     width:200px;
@@ -627,7 +646,7 @@ circle.c0:hover{
 }
 
 p#cleGreen{
-    color: rgb(108, 180, 48);
+    color: white;
 }
 
 .graphierosCle{
@@ -640,28 +659,29 @@ p#cleGreen{
     border-radius:2px;
     cursor:pointer;
     transition: all 0.3s ease, 0.3s box-shadow;
+    font-weight:bold;
 }
 
 #cleFR{
-    background: rgb(90,156,36);
+    background: cornflowerblue;
     color:black;
 }
 
 #cleFR:hover{
-    background: rgb(108, 180,48);
+    background: cornflowerblue;
     box-shadow: 0 0 1em 0.5em white inset, 0 0 1em 0.2em white;
 }
 
 #cleEN{
     background:black;
-    border:1px solid rgb(90,156,36);
-    color: rgb(90,156, 36);
+    border:1px solid cornflowerblue;
+    color: cornflowerblue;
 }
 
 #cleEN:hover{
-    border:1px solid rgb(144, 212, 88);
-    color: rgb(144, 212, 88);
-    box-shadow: 0 0 1em 0.5em rgb(144,212,88) inset, 0 0 1em 0.2em white;
+    border:1px solid cornflowerblue;
+    color: cornflowerblue;
+    box-shadow: 0 0 1em 0.5em cornflowerblue inset, 0 0 1em 0.2em white;
 }
 
 /*GALERIE*/
