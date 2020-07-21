@@ -48,18 +48,21 @@ document.onload = function(){
   setTimeout(function(){
     background_svg.style.opacity = 0.1;
   },2000);
-}
+} 
 
 (function activateMenu() {
     MENU.addEventListener("mouseover", function() {
         background_svg.style.opacity = 0.1;
+        logo0.style.stroke = "rgb(200,200,200)";
+        logo1.style.stroke = "rgb(150,150,150)";
+        logo2.style.stroke = "rgb(100,100,100)";
         MENU.style.zIndex = "100";
         LANDING.style.display = "block";
         LANDING.style.animationName = "slideNameOpen";
         LANDING.style.animationDuration = "0.5s";
         LANDING.style.animationTimingFunction = "ease-in-out";
         LANDING.style.animationFillMode = "forwards";
-        TOPNAME.style.opacity = 0.1;
+        TOPNAME.style.opacity = 0;
         BIOPIC.style.opacity = 1;
 
         for(i = 0; i < BIOCONTENT.length; i += 1){
@@ -67,7 +70,8 @@ document.onload = function(){
         }
 
         for (i = 0; i < SECTIONS.length; i += 1) {
-            SECTIONS[i].style.opacity = 0.1;
+            SECTIONS[i].style.opacity = 0;
+            // SECTIONS[i].style.display = "none";
             SECTIONS[i].style.zIndex = -1;
         }
 
@@ -129,13 +133,16 @@ XBALL.addEventListener("click", function() {
 
 function closeMenu() {
     background_svg.style.opacity = 0.5;
+    logo0.style.stroke = "rgb(186,211,255)";
+    logo1.style.stroke = "rgb(140,172,230";
+    logo2.style.stroke = "cornflowerblue";
     MENU.style.zIndex = 10;
     LANDING.style.animationName = "slideNameClose";
     LANDING.style.animationDuration = "0.5s";
     LANDING.style.animationTimingFunction = "ease-in-out";
     LANDING.style.animationFillMode = "forwards";
-    TOPNAME.style.opacity = 1;
-    QUOTE.innerHTML = "";
+    TOPNAME.style.opacity = 0;
+    QUOTE.innerHTML = ""; 
 
     for (i = 0; i < SECTIONS.length; i += 1) {
         SECTIONS[i].style.opacity = 1;
@@ -233,7 +240,7 @@ showQuote(MENUBALL1, "La construction d'une langue <b>hexagonale</b>", "cornflow
 showQuote(MENUBALLGRAPHIEROS, "<b>La clé</b>, dans sa version en graphieros", "cornflowerblue");
 showQuote(MENUBALL2, "Ecrire et peindre <b>simultanément</b> dans une langue nouvelle","tomato");
 showQuote(MENUBALLJOURNAL, "<b>Le cri du pangolin</b>, journal de confinement 2020","tomato")
-showQuote(MENUBALL3, "Programmation, idées et applications", "gold");
+showQuote(MENUBALL3, "Applications pour créer de nouveaux glyphes", "gold");
 showQuote(MENUBALLWRITER, "Ecrivez en graphieros (clavier physique uniquement)", "gold");
 showQuote(MENUBALLFRACTALWRITER, "Ecrivez en graphieros <b>fractal</b> (clavier physique uniquement)", "rgb(255, 160, 71)");
 showQuote(MENUBALLTOUCHWRITER, "L'éditeur <b>universel</b> de graphieros", "rgb(255, 197, 71)"),
