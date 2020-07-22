@@ -2,6 +2,9 @@
 
 main files for my single page website, without the php files.
 take a look: https://graphieros.com
+
+<img src="https://github.com/graphieros/my-website/blob/master/myWebsite.jpg" width="500px">
+
 Experience is especially nice on a smartphone, except for https://graphieros.com/gwriter/grwiter.html which only works with a physical keyboard (and with some advanced knowledge of graphieros too...).
 
 # graphieros.js library 1.0 (graphieros journal)
@@ -21,8 +24,6 @@ Editing graphieros on a webpage has never been faster. Now that user will be hap
 Now available is https://graphieros.com/touch_writer/touch_writer.html which provides a way to write graphieros on any device, using a virtual keyboard. And this one has a twinking cursor too, providing handy location indication. The glyph database is present in the js file itself, to make it usable offline. As graphieros words are built by cumulating base glyphs, some readymade cumulations are provided, with a "COMBO!" notification upon detection.
 Check out the video here: https://graphieros.com/touch_writer/touch_writer.mp4
 Audio files have been added which make the user hear the phonology when a glyph is validated. A .png can also be generated upon clicking a button, to save your text.
-
-<img src="https://github.com/graphieros/my-website/blob/master/myWebsite.png" width="500px">
 
 # graphieros composer
 
