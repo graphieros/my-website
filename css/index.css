@@ -15,7 +15,7 @@ footer{
     bottom:10px;
     left:10px;
     font-family: var(--FT);
-} 
+}
 
 a{
     text-decoration: none;
@@ -193,6 +193,15 @@ span.nD{
     background: cornflowerblue;
 }
 
+#menuBallGraphierosJournal{
+    top:50%;
+    right:131px;
+    transform: translateY(-200%);
+    background: rgb(100, 194, 237);
+    font-size: 0.77em;
+    text-shadow: 0 1px 1px black;
+}
+
 .svgCle{
     width:100%;
     fill: none;
@@ -215,7 +224,8 @@ span.nD{
     right: 192px;
     transform:translateY(50%);
     background: tomato;
-    font-size:0.8em;
+    font-size:0.67em;
+    text-align:center;
     text-shadow: 0 1px 1px black;
 } 
 
