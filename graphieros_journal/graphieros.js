@@ -1,4 +1,4 @@
-function main(section) {
+function main(section, p) {
 
     const main_section = document.getElementById(section);
 
@@ -12,10 +12,11 @@ function main(section) {
     let lm = 83; //x_left_mid
     let m = 128; //x_mid
     let rm = 173; //x_right_mid
-    let r = 218; //x_right
+    let r = 218; //x_right 
  
-    const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
+    const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none; stroke:rgb(20,90,122);" d="M `;
     const p_ = '"/>';
+    const _pl = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none; stroke:rgb(122, 170, 191); opacity: 0.75;" d="M `;
 
     let glyph_database = [
         {
@@ -2681,8 +2682,10 @@ function main(section) {
 
     const xmlns = "http://www.w3.org/2000/svg";
 
-    let graphieros_text = document.getElementsByClassName("p");
+    let graphieros_text = document.getElementsByClassName(p);
 
+    let memory_all_g_elements = [];
+    let memory_all_paragraphs = [];
 
     (function process_text_to_glyphs() {
 
@@ -2693,7 +2696,7 @@ function main(section) {
             let svg_paragraph = document.createElementNS(xmlns, "svg");
 
             svg_paragraph.style.width = "40px";
-            svg_paragraph.style.background = "white";
+            svg_paragraph.style.background = "rgb()237,237,237)";
             svg_paragraph.style.stroke = "black";
             svg_paragraph.style.strokeLinejoin = "round";
             svg_paragraph.style.strokeLinecap = "round";
@@ -2742,6 +2745,7 @@ function main(section) {
             }
 
             let incr = 0;
+            let time_glyph = 0;
             rebuilt_glyphs_library.forEach(glyph_array => {
 
                 let center_incr = 0;
@@ -2777,7 +2781,12 @@ function main(section) {
                                 });
          
                                 g.innerHTML += `${_p}${new_path}${p_}$`;                       
-                                svg_paragraph.appendChild(g);
+                                setTimeout(() => {
+                                    svg_paragraph.appendChild(g);
+                                    g.style.opacity = 1;
+                                },time_glyph += 20);
+                                 //remove if async ok
+                                memory_all_g_elements.push(g);
 
                             });
 
@@ -2792,7 +2801,7 @@ function main(section) {
             });
 
             let memory = [];
-
+            let time_link = 0;
             words_lengths.forEach((word, i) => {
                 
                 let x = 128;
@@ -2809,22 +2818,28 @@ function main(section) {
                 memory.push(y_end);
                 let g = document.createElementNS(xmlns, "g");
                 g.setAttributeNS(null, "class", "link");
-                g.innerHTML += `${_p}${x} ${y_start},${x} ${y_end}${p_}`;
-                svg_paragraph.appendChild(g);
+                g.innerHTML += `${_pl}${x} ${y_start},${x} ${y_end}${p_}`;
+                setTimeout(() => {
+                    svg_paragraph.appendChild(g);
+                    g.style.opacity = 1;
+                },time_link);
+                
+                time_link += 100;
+                memory_all_g_elements.push(g);
   
-            })
+            });
 
             let svg_wrapper = document.createElement("DIV");
             svg_wrapper.style.boxSizing = "border-box";
             svg_wrapper.className = "svg_paragraph";
             svg_wrapper.appendChild(svg_paragraph);
+            memory_all_paragraphs.push(svg_paragraph);
             main_section.appendChild(svg_wrapper);
 
         }
 
     }());
 
- 
 
     let all_paragraphs = document.getElementsByClassName("svg_paragraph");
 
@@ -2837,5 +2852,3 @@ function main(section) {
     }
 
 };
-
-main("main");
