@@ -51,10 +51,16 @@ a.inLink:hover{
     color:white;
 }
 
+a.normLink {
+    display: inline-block;
+    width:100%;
+}
+
 .homeContainer{
     width:100%;
     position:fixed;
     bottom:0;
+    height:50px;
     display:grid;
     align-items:center;
     justify-items:center;
@@ -67,13 +73,13 @@ a.inLink:hover{
     bottom: 0;
     background: white;
     transition: box-shadow 0.3s ease;
-    cursor: pointer;
     font-weight: bold;
     box-shadow: 0px -5px 20px -12px black;
     width:100%;
-    height:55px;
+    height:100%;
     color: black;
     font-size: 1.3em;
+    border-radius: 100% 100% 0 0;
 }
 
 .HOME:hover{
@@ -146,28 +152,28 @@ p.category{
 
 #texts{
     background-image: radial-gradient(at bottom right, white, transparent);
-    border-radius: 0 0 30px 0;
+    border-radius: 30px 0 30px 0;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
 }
 
 #poetry{
     background-image: radial-gradient(at bottom left, white, transparent);
-    border-radius: 0 0 0 30px;
+    border-radius: 0 30px 0 30px;
     border-top: 2px solid transparent;
     border-right: 2px solid transparent;
 }
 
 #pics{
     background-image: radial-gradient(at top right, white, transparent);
-    border-radius: 0 30px 0 0;
+    border-radius: 0 30px 0 30px;
     border-bottom: 2px solid transparent;
     border-left: 2px solid transparent;
 }
 
 #jsFiddles{
     background-image: radial-gradient(at top left, white, transparent);
-    border-radius: 30px 0 0 0;
+    border-radius: 30px 0 30px 0;
     border-bottom: 2px solid transparent;
     border-right: 2px solid transparent;
 }
@@ -241,7 +247,7 @@ p.category{
     text-shadow: 0 1px 1px black;
     font-family: 'Exo', sans-serif;
     font-size:1.3em;
-}
+} 
 
 .quit_modal:hover{
     height:60px;
@@ -312,6 +318,20 @@ p.date{
 
 .largeGrid > img {
     width:100%;
+}
+
+#blog_svg{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    fill:none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    background: transparent;
+    height:100%;
+    height:400px;
+    width:400px;
 }
 
 
