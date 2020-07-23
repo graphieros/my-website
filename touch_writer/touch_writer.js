@@ -2583,6 +2583,7 @@ TODO:
     }
 
     let combo_database = [
+        {name: "ptaegleinmaeksigla", fr: "hexagone", list: ["_ptae", "_glei", "_nmae", "_ksi", "_gla"]},
         {name: "_fagrae", fr: "cultiver", list: ["_fa", "_grae"]},
         {name: "_piodveande", fr: "racine", list: ["_pio", "_dvea", "_nde"]},
         {name: "_piodveagew", fr: "arbre", list: ["_pio", "_dvea", "_gew"]},
@@ -2786,6 +2787,7 @@ TODO:
             }
         }
 
+        display_combo(["hexagone", "_ptaegleinmaeksigla"], "hexagone: [ptae-glei-nmae-ksi-gla]");
         display_combo(["cultiver", "_fagrae"], "cultiver: [fa-grae]");
         display_combo(["racine", "_piodveande"], "racine: [pio-dvea-nde]");
         display_combo(["arbre", "_piodveagew"], "arbre: [pio-dvea-gew]");
@@ -5562,6 +5564,11 @@ TODO:
         }
 
         //readymade word cumulations
+
+        if (text_searched === "hexagone" || text_searched === "_ptaegleinmaeksigla") {
+            draw_combo(glyph_database, ["_ptae", "_glei", "_nmae", "_ksi", "_gla"]);
+            show_translation("HEXAGONE", "[ptae-glei-nmae-ksi-gla]");
+        }
 
         if (text_searched === "cultiver" || text_searched === "_fagrae") {
             draw_combo(glyph_database, ["_fa", "_grae"]);
