@@ -1,4 +1,4 @@
-function main(section, p) {
+function linear(section, p, size, red, green, blue) { 
 
     const main_section = document.getElementById(section);
 
@@ -16,6 +16,12 @@ function main(section, p) {
  
     const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
     const p_ = '"/>';
+
+    let R = red;
+    let G = green;
+    let B = blue; 
+
+    let glyph_color = `rgb(${R},${G},${B})`;
 
     let glyph_database = [
         {
@@ -2692,9 +2698,9 @@ function main(section, p) {
 
             let svg_paragraph = document.createElementNS(xmlns, "svg");
 
-            svg_paragraph.style.width = "40px";
+            svg_paragraph.style.width = `${size}px`;
             svg_paragraph.style.background = "rgb()237,237,237)";
-            svg_paragraph.style.stroke = "black";
+            svg_paragraph.style.stroke = glyph_color;
             svg_paragraph.style.strokeLinejoin = "round";
             svg_paragraph.style.strokeLinecap = "round";
             svg_paragraph.style.fill = "none";
@@ -2837,3 +2843,118 @@ function main(section, p) {
     }
 
 };
+
+function fractal(section, f, size, r, g, b) {
+
+    const xmlns = "http://www.w3.org/2000/svg";
+    let svg_width = size * 2.5;
+    let svg_height = size * 2.5;
+    const svg_container = document.getElementById(section);
+    const raw_content = document.getElementById(f);
+    raw_content.style.display = "none";
+
+    let _p = `<path`;
+    let _p_ = `d="M`;
+    let p_ = `"/>`;
+
+    const PHI = 1.61803398875;
+    let glyph_size = svg_width/2;
+    let stk = glyph_size / 10;
+    
+    svg_container.style.height = `${size}px`;
+    svg_container.style.width = `${size}px`;
+
+    let svg_size = size;
+
+    let svg_output = document.createElementNS(xmlns, "svg");
+    svg_output.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
+    svg_output.setAttributeNS(null, "stroke-width", stk);
+
+    let R = r;
+    let G = g;
+    let B = b; 
+
+    let glyph_color = `rgb(${R},${G},${B})`;
+
+    let Xcenter = svg_width / 2;
+    let Ycenter = svg_width / 2;
+
+    let g_size = Xcenter / 2;
+
+    function fractalize() {
+        size /=2;
+        glyph_size /=2;
+        g_size /=2;
+        stk /=2;
+        R /= 1.3333;
+        G /= 1.3333;
+        B /= 1.3333;
+        glyph_color = `rgb(${R},${G},${B})`;
+    }
+
+    let all_glyphs = raw_content.innerHTML.split(" ");
+    
+
+    all_glyphs.forEach(glyph => {
+        
+        let store = [];
+        let pure_content = glyph.split("-");
+
+        let xx = Math.round((Xcenter + size * Math.cos(1 * 2 * Math.PI / 6)) * 100) / 100;
+        let xy = Math.round((Ycenter + size * Math.sin(1 * 2 * Math.PI / 6)) * 100) / 100;
+        let wx = Math.round((Xcenter + size * Math.cos(2 * 2 * Math.PI / 6)) * 100) / 100;
+        let wy = Math.round((Ycenter + size * Math.sin(2 * 2 * Math.PI / 6)) * 100) / 100;
+        let qx = Math.round((Xcenter + size * Math.cos(3 * 2 * Math.PI / 6)) * 100) / 100;
+        let qy = Math.round((Ycenter + size * Math.sin(3 * 2 * Math.PI / 6)) * 100) / 100;
+        let zx = Math.round((Xcenter + size * Math.cos(4 * 2 * Math.PI / 6)) * 100) / 100;
+        let zy = Math.round((Ycenter + size * Math.sin(4 * 2 * Math.PI / 6)) * 100) / 100;
+        let ex = Math.round((Xcenter + size * Math.cos(5 * 2 * Math.PI / 6)) * 100) / 100;
+        let ey = Math.round((Ycenter + size * Math.sin(5 * 2 * Math.PI / 6)) * 100) / 100;
+        let dx = Math.round((Xcenter + size * Math.cos(6 * 2 * Math.PI / 6)) * 100) / 100;
+        let dy = Math.round((Ycenter + size * Math.sin(6 * 2 * Math.PI / 6)) * 100) / 100;
+    
+        function coordinate(a,b){
+            return `${a} ${b}`;
+        }
+    
+        let x = [xx,xy];
+        let X = coordinate(x[0],x[1]);
+        let w = [wx,wy];
+        let W = coordinate(w[0],w[1]);
+        let q = [qx,qy];
+        let Q = coordinate(q[0],q[1]);
+        let z = [zx,zy];
+        let Z = coordinate(z[0],z[1]);
+        let e = [ex,ey];
+        let E = coordinate(e[0],e[1]);
+        let d = [dx,dy];
+        let D = coordinate(d[0],d[1]);
+        let s = [Xcenter,Ycenter];
+        let S = coordinate(s[0],s[1]);
+
+        pure_content.forEach(cord => {
+            cord = cord.replace(/[s]/g,` ${S},`);
+            cord = cord.replace(/[z]/g,` ${Z},`);
+            cord = cord.replace(/[e]/g,` ${E},`);
+            cord = cord.replace(/[d]/g,` ${D},`);
+            cord = cord.replace(/[x]/g,` ${X},`);
+            cord = cord.replace(/[w]/g,` ${W},`);
+            cord = cord.replace(/[q]/g,` ${Q},`);
+            store.push(cord);
+        });
+
+        store.forEach(pth => {
+            let g = document.createElementNS(xmlns, "g");
+            g.innerHTML += `${_p} class="test" stroke-width="${stk}"style="stroke:${glyph_color}; stroke-linejoin: round; stroke-linecap:round; fill:none;"${_p_}${pth}${p_}`;
+            svg_output.appendChild(g);
+        });
+        fractalize();
+    });
+
+    
+    
+
+    console.log(svg_output);
+    svg_container.appendChild(svg_output);
+
+}
