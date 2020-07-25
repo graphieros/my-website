@@ -1,0 +1,115 @@
+:root {
+    --FT: 'Poiret One', cursive;
+}  
+
+body {
+    background: radial-gradient(at top, white, rgb(200,200,200));
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.form_wrapper{
+    display: grid;
+    margin: 0 auto;
+    align-items:center;
+    justify-items:center;
+    font-family: var(--FT);
+    box-sizing: border-box;
+}
+
+label {
+    color: rgb(101,143,141);
+    font-weight: bold;
+}
+
+.form_block{
+    box-sizing: border-box;
+    padding-top: 10px;
+}
+
+.message{
+    width:100%;
+    resize:none;
+    height:200px;
+    font-family: var(--FT);
+    box-sizing: border-box;
+    padding:10px;
+}
+
+.btn_send {
+    margin-left:50%;
+    transform: translate(-50%);
+    width:100%;
+    font-family: var(--FT);
+    font-size:2em;
+    background: rgb(101,143,141);
+    color: white;
+    height:50px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity:0.5;
+    display:none;
+}
+
+.btn_send:hover {
+    opacity:1;
+}
+
+.contact_logo {
+    width:400px;
+}
+
+.svg_paragraph{
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    margin-bottom: -50px;
+    background: white;
+    height:200px;
+    width:200px;
+    margin: 0 auto;
+    border-radius: 100%
+}
+
+.error {
+    width:300px;
+    margin: 0 auto;
+    text-align:center;
+    background: red;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius:3px;
+    font-weight: bold;
+}
+
+.success {
+    width:300px;
+    margin: 0 auto;
+    text-align:center;
+    background: green;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius:3px;
+    font-weight: bold;
+}
+
+
+.alert {
+    width:400px;
+    margin: 0 auto;
+    text-align:center;
+    color: white;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius:3px;
+    font-weight: bold;
+}
