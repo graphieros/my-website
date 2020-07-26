@@ -4,7 +4,7 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-} 
+}
 
 :root {
     --FT: 'Poiret One', cursive;
@@ -200,6 +200,14 @@ span.nD{
     background: rgb(100, 194, 237);
     font-size: 0.77em;
     text-shadow: 0 1px 1px black;
+}
+
+#menuBallContact{
+    top:50%;
+    right:131px;
+    transform: translateY(-300%);
+    background: rgb(163, 224, 211);
+    font-size:0.75em;
 }
 
 .svgCle{
@@ -401,12 +409,20 @@ span#EE{
     color: black;
     font-style: italic;
     transition: all 0.3s ease;
-}
+} 
 
 /*BIO*/
 
 #BIO{
-    height:130vh;
+    height:100vh;
+    position: fixed;
+    overflow: auto;
+}
+
+#bioFrac{
+    background:transparent;
+    border-radius:100%;
+    margin:0 auto;
 }
 
 #BIOmenuWrapper{
@@ -447,6 +463,25 @@ span#EE{
     transition:all 0.3s ease;
     font-family: var(--FT);
     background:white;
+}
+
+#bio_ctc {
+    width:100%;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    border-radius:100%;
+    height: 100px;
+    width:100px;
+    line-height:50px;
+    margin:0 auto;
+    border:1px solid greenyellow;
+    cursor: pointer;
+}
+
+#BIOctc {
+    transition: color 0.3s ease;
+    color: greenyellow;
 }
 
 img#BIOPIC{
@@ -692,6 +727,16 @@ p#cleGreen{
     border:1px solid cornflowerblue;
     color: cornflowerblue;
     box-shadow: 0 0 1em 0.5em cornflowerblue inset, 0 0 1em 0.2em white;
+}
+
+#gp{
+    width: 100%;
+    margin: 0 auto;
+    max-width:400px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    box-sizing: border-box;
+    padding:20px;
 }
 
 /*GALERIE*/
