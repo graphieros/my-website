@@ -15,6 +15,11 @@ html,body
     overflow-x: hidden; 
 }
 
+form {
+    max-width:400px;
+    width:100%;
+}
+
 .form_wrapper{
     display: grid;
     margin: 0 auto;
@@ -63,10 +68,6 @@ label {
 }
 
 .contact_logo {
-    width:400px;
-}
-
-.svg_paragraph{
     display: grid;
     align-items:center;
     justify-items:center;
@@ -75,7 +76,9 @@ label {
     height:200px;
     width:200px;
     margin: 0 auto;
-    border-radius: 100%
+    border-radius: 100%;
+    margin-top:30px;
+    margin-bottom:30px;
 }
 
 .error {
