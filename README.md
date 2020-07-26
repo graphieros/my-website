@@ -1,6 +1,6 @@
 # my-website
 
-main files for my single page website, without the php files.
+main files for my single page website.
 take a look: https://graphieros.com
 
 <img src="https://github.com/graphieros/my-website/blob/master/myWebsite.jpg" width="500px">
