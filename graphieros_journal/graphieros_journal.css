@@ -8,7 +8,7 @@ html,body
 }
 
 html {
-    background: radial-gradient(at top,white,rgb(215, 231, 238));
+    background: radial-gradient(at top, rgb(18,43,18), black);
 }
 
  
@@ -17,8 +17,6 @@ html {
     --green: rgb(78, 122, 52);
     --FT: 'Poiret One', cursive;
 } 
-
- 
 
 header{ 
 
@@ -29,7 +27,8 @@ header{
     top: 0;
     left:0;
     width:100vw;
-    background: white;
+    background: black;
+    border-bottom: 1px solid rgb(18,43,28);
     line-height:50px;
     border-radius:0 0 100% 100%;
     height:50px;
@@ -48,70 +47,36 @@ header{
  
 
 span.a{
-
     color: var(--green);
-
 }
-
- 
-
 span.b{
-
     color: cornflowerblue;
-
 }
-
- 
-
 span.c{
-
     color: tomato;
-
 }
-
- 
-
 span.d{
-
     color: gold;
-
 }
-
- 
 
 span.a,
-
 span.b,
-
 span.c,
-
 span.d{
-
     font-weight:bold;
-
 } 
 
-.svg_title{
+#svg_title{
     width:50%;
     max-width:400px;
     margin: 0 auto;
     margin-bottom:20px;
     margin-top:100px;
-    background: white;
+    background: black;
+    border-top:1px solid rgb(78, 122, 52);
     border-radius:100%;
 }
-
-.svg_title > svg {
-    
-    display: grid;
-    align-items:center;
-    justify-items:center;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    background: transparent;
-    fill:none; 
-}
-
+ 
 .global_wrapper{
     width:100%;
     display: grid;
@@ -128,7 +93,7 @@ span.d{
     margin:0 auto;
     box-sizing: border-box;
     width:400px;
-    border-bottom: 1px solid rgb(148, 201, 226);
+    border-bottom: 1px solid rgb(28, 43, 28);
     padding-top:20px;
     padding-bottom:20px;
 }
@@ -144,11 +109,6 @@ span.d{
     display:block;
 }
 
-.link,
-.word{
-    opacity:0;
-    transition: opacity 1s ease;
-}
 
 @media screen and (max-width: 500px) {
 
