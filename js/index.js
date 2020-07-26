@@ -14,6 +14,8 @@ const MENUBALL3 = document.getElementById("menuBall3");
 const MENUBALLWRITER = document.getElementById("menuBallWriter");
 const MENUBALLFRACTALWRITER = document.getElementById("menuBallFractalWriter");
 const MENUBALLTOUCHWRITER = document.getElementById("menuBallTouchWriter");
+const MENUBALLGRAPHIEROSJOURNAL = document.getElementById("menuBallGraphierosJournal");
+const MENUBALLCONTACT = document.getElementById("menuBallContact");
 const XBALL = document.getElementById("Xball");
 const XBALLCROSS0 = document.getElementById("XballCross0");
 const XBALLCROSS1 = document.getElementById("XballCross1");
@@ -30,7 +32,7 @@ const logo0 = document.getElementById("logo0");
 const logo1 = document.getElementById("logo1");
 const logo2 = document.getElementById("logo2");
 
-let i; 
+let i;
 
 document.onload = function(){
   setTimeout(function(){
@@ -85,14 +87,20 @@ document.onload = function(){
             MENUBALLBLOG.style.height = "70px";
             MENUBALLBLOG.style.width = "70px";
             MENUBALLBLOG.style.opacity = 1;
+            MENUBALLCONTACT.style.height = "70px";
+            MENUBALLCONTACT.style.width = "70px";
+            MENUBALLCONTACT.style.opacity = 1;
         }, 100);
         setTimeout(function() {
             MENUBALL1.style.height = "70px";
             MENUBALL1.style.width = "70px";
             MENUBALLGRAPHIEROS.style.width = "70px";
             MENUBALLGRAPHIEROS.style.height = "70px";
+            MENUBALLGRAPHIEROSJOURNAL.style.height = "70px";
+            MENUBALLGRAPHIEROSJOURNAL.style.width = "70px";
             MENUBALL1.style.opacity = 1;
             MENUBALLGRAPHIEROS.style.opacity = 1;
+            MENUBALLGRAPHIEROSJOURNAL.style.opacity = 1;
         }, 150);
         setTimeout(function() {
             MENUBALL2.style.height = "70px";
@@ -164,10 +172,12 @@ function closeMenu() {
     setTimeout(function() {
         MENUBALL1.style.opacity = 0;
         MENUBALLGRAPHIEROS.style.opacity = 0;
+        MENUBALLGRAPHIEROSJOURNAL.style.opacity = 0;
     }, 30);
     setTimeout(function() {
         MENUBALL0.style.opacity = 0;
         MENUBALLBLOG.style.opacity = 0;
+        MENUBALLCONTACT.style.opacity = 0;
     }, 40);
     setTimeout(function() {
         MENUBALLS.style.display = "none";
@@ -232,7 +242,7 @@ function showQuote(menu, quote, col) {
         QUOTE.innerHTML = "";
         QUOTE.style.background = "none";
     }); 
-}
+} 
 
 showQuote(MENUBALLBLOG, "Des <b>pensées</b>, des photos comme elles viennent", "rgb(90,156,36)");
 showQuote(MENUBALL0, "Une sorte de <b>curriculum</b> vitae", "rgb(90,156,36)");
@@ -244,6 +254,8 @@ showQuote(MENUBALL3, "Applications pour créer de nouveaux glyphes", "gold");
 showQuote(MENUBALLWRITER, "Ecrivez en graphieros (clavier physique uniquement)", "gold");
 showQuote(MENUBALLFRACTALWRITER, "Ecrivez en graphieros <b>fractal</b> (clavier physique uniquement)", "rgb(255, 160, 71)");
 showQuote(MENUBALLTOUCHWRITER, "L'éditeur <b>universel</b> de graphieros", "rgb(255, 197, 71)"),
+showQuote(MENUBALLGRAPHIEROSJOURNAL, "Mon journal <b>secret</b> en graphieros", "rgb(100, 194, 237)"),
+showQuote(MENUBALLCONTACT, "Pour me <b>contacter</b>", "rgb(163, 224, 211)");
 
 //BIO
 (function hideBioPic(){
