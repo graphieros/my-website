@@ -1,9 +1,10 @@
-:root {
+:root{
+    --green: rgb(78, 122, 52);
     --FT: 'Poiret One', cursive;
-}  
+} 
 
 body {
-    background: radial-gradient(at top, white, rgb(200,200,200));
+    background: radial-gradient(at top, rgb(18,43,18), black);
 }
 
 html,body
@@ -15,9 +16,79 @@ html,body
     overflow-x: hidden; 
 }
 
+header{ 
+
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100vw;
+    background: black;
+    border-bottom: 1px solid rgb(18,43,28);
+    line-height:50px;
+    border-radius:0 0 100% 100%;
+    height:50px;
+    margin: 0 auto;
+    text-align:center;
+    font-family: var(--FT);
+    color:rgb(88, 88, 88);
+    box-sizing: border-box;
+    font-size:1.3em;
+    font-weight:bold;
+    padding-bottom: 50px;
+    z-index:100;
+
+}
+
+ 
+
+span.a{
+    color: var(--green);
+}
+span.b{
+    color: cornflowerblue;
+}
+span.c{
+    color: tomato;
+}
+span.d{
+    color: gold;
+}
+
+span.a,
+span.b,
+span.c,
+span.d{
+    font-weight:bold;
+} 
+
 form {
     max-width:400px;
-    width:100%;
+    width:80%;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+
+}
+
+input {
+    height:30px;
+    border-radius:30px;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+input, textarea {
+    width: 80%;
+    min-width:280px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    background: radial-gradient(at top right, grey, white);
+    font-family: var(--FT);
+    font-size:1.2em;
+    font-weight: bold;
 }
 
 .form_wrapper{
@@ -30,7 +101,11 @@ form {
 }
 
 label {
-    color: rgb(101,143,141);
+    display: inline-block;
+    width: 100%;
+    text-align:center;
+    /* color: rgb(101,143,141); */
+    color: white;
     font-weight: bold;
 }
 
@@ -39,19 +114,43 @@ label {
     padding-top: 10px;
 }
 
+#nmo,
+#mel,
+#mes {
+    display: inline-block;
+    width:80%;
+    text-align:center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top:10px;
+}
+
+#nmo > svg,
+#mel > svg,
+#mes > svg {
+
+    background: black;
+    box-sizing: border-box;
+    border-radius:100%;
+    border-top: 1px solid green;
+}
+
 .message{
-    width:100%;
+    border-radius:8px;
     resize:none;
     height:200px;
     font-family: var(--FT);
     box-sizing: border-box;
     padding:10px;
+    font-weight: bold;
+    font-size:1.2em;
 }
 
 .btn_send {
     margin-left:50%;
     transform: translate(-50%);
-    width:100%;
+    width:50%;
+    border-radius:30px;
     font-family: var(--FT);
     font-size:2em;
     background: rgb(101,143,141);
@@ -61,7 +160,7 @@ label {
     transition: opacity 0.3s ease;
     opacity:0.5;
     display:none;
-}
+} 
 
 .btn_send:hover {
     opacity:1;
@@ -72,13 +171,14 @@ label {
     align-items:center;
     justify-items:center;
     margin-bottom: -50px;
-    background: white;
+    background: black;
     height:200px;
     width:200px;
     margin: 0 auto;
     border-radius: 100%;
-    margin-top:30px;
+    margin-top:100px;
     margin-bottom:30px;
+    border-top: 1px solid green;
 }
 
 .error {
