@@ -247,7 +247,7 @@ function showQuote(menu, quote, col) {
 showQuote(MENUBALLBLOG, "Des <b>pensées</b>, des photos comme elles viennent", "rgb(90,156,36)");
 showQuote(MENUBALL0, "Une sorte de <b>curriculum</b> vitae", "rgb(90,156,36)");
 showQuote(MENUBALL1, "La construction d'une langue <b>hexagonale</b>", "cornflowerblue");
-showQuote(MENUBALLGRAPHIEROS, "<b>La clé</b>, dans sa version en graphieros", "cornflowerblue");
+showQuote(MENUBALLGRAPHIEROS, "<b>La clé</b>, pour tout savoir sur le graphieros", "cornflowerblue");
 showQuote(MENUBALL2, "Ecrire et peindre <b>simultanément</b> dans une langue nouvelle","tomato");
 showQuote(MENUBALLJOURNAL, "<b>Le cri du pangolin</b>, journal de confinement 2020","tomato")
 showQuote(MENUBALL3, "Applications pour créer de nouveaux glyphes", "gold");
