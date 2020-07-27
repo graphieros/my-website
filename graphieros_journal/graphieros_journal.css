@@ -9,7 +9,7 @@ html,body
 
 html {
     background: radial-gradient(at top, rgb(18,43,18), black);
-}
+} 
 
  
 
@@ -98,6 +98,18 @@ span.d{
     padding-bottom:20px;
 }
 
+.eight {
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-items:center;
+    margin:0 auto;
+    box-sizing: border-box;
+    width:8fr;
+    border-bottom: 1px solid rgb(28, 43, 28);
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
 .graphieros_text{
     color: transparent;
     box-sizing: border-box;
@@ -109,6 +121,12 @@ span.d{
     display:block;
 }
 
+.molecules {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items:center;
+    justify-items:center;
+}
 
 @media screen and (max-width: 500px) {
 
