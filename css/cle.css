@@ -157,19 +157,29 @@ img {
   transform:translate(-50%);
 }
 
-.svg_paragraph_line0{
+.svg_paragraph_line0,
+.svg_paragraph_line_nmae,
+.svg_paragraph_line_chem0,
+.svg_paragraph_mol_kfa,
+.svg_paragraph_line_knoikfa{
   display:grid;
   align-items:center;
   justify-items:center;
 }
 
-.six_mols{
+.six_mols,
+.three_things {
   width:100%;
   display: grid;
   align-items:center;
   justify-items:center;
   grid-template-columns: repeat(3,1fr);
 }
+
+.three_things > div > svg{
+  width:100%;
+}
+
 
 img {
   margin-left: 50%;
@@ -203,6 +213,11 @@ img {
 
 .digits{
   padding-top:20px;
+}
+
+svg.svg_illustr{
+  margin-left: 50%;
+  transform: translate(-50%);
 }
 
 @media screen and (max-width: 600px) {
