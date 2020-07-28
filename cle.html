@@ -367,24 +367,64 @@
     <div class="digits">3</div>
     <div class="digits">4</div>
     <div class="digits">5</div>
+
     <div id="mol_num0"></div>
     <div id="mol_num1"></div>
     <div id="mol_num2"></div>
     <div id="mol_num3"></div>
     <div id="mol_num4"></div>
     <div id="mol_num5"></div>
+
+    <span>[sro]</span>
+    <span>[kfa]</span>
+    <span>[du]</span>
+    <span>[sre.i]</span>
+    <span>[ktu]</span>
+    <span>[fo.i]</span>
+
     <div class="digits">6</div>
     <div class="digits">7</div>
     <div class="digits">8</div>
     <div class="digits">9</div>
     <div class="digits">χ</div>
     <div class="digits">Ɛ</div>
+
     <div id="mol_num6"></div>
     <div id="mol_num7"></div>
     <div id="mol_num8"></div>
     <div id="mol_num9"></div>
     <div id="mol_num10"></div>
     <div id="mol_num11"></div>
+
+    <span>[ksi]</span>
+    <span>[ste.i]</span>
+    <span>[tsi.o]</span>
+    <span>[nwa]</span>
+    <span>[dza]</span>
+    <span>[zno]</span>
+
+    <div class="digits"></div>
+    <div class="digits">+</div>
+    <div class="digits">-</div>
+    <div class="digits">x</div>
+    <div class="digits">÷</div>
+    <div class="digits"></div>
+
+    <div id="mol_ope0"></div>
+    <div id="mol_ope1"></div>
+    <div id="mol_ope2"></div>
+    <div id="mol_ope3"></div>
+    <div id="mol_ope4"></div>
+    <div id="mol_ope5"></div>
+
+    <span></span>
+    <span>[vdi.o]</span>
+    <span>[mni]</span>
+    <span>[mksi]</span>
+    <span>[dvi]</span>
+    <span></span>
+
+
   </div>
   <div id="mn0">qd-zx-we</div>
   <div id="mn1">zw-qq-xx-ee-dd-ss</div>
@@ -392,12 +432,18 @@
   <div id="mn3">wzdw-qq-ss-ee-xx</div>
   <div id="mn4">wzexw-qq-ss-dd</div>
   <div id="mn5">wzexw-qd</div>
+
   <div id="mn6">wqzedxw-ss</div>
   <div id="mn7">dqzedxwq</div>
   <div id="mn8">wqzxdew</div>
   <div id="mn9">zedxwqzsd-sw</div>
   <div id="mn10">zedxwqzsd-sw-zw</div>
   <div id="mn11">zedxwqzsd-sw-wzd</div>
+
+  <div id="mo1">zw-qs-ee-dd-xx</div>
+  <div id="mo2">qs-zz-ee-dd-xx-ww</div>
+  <div id="mo3">qwxd-ss-zz-ee</div>
+  <div id="mo4">we-qq-zz-xx-dd</div>
 
   <script>
     fractal("mol_num0", "mn0", 45, 125,119,102);
@@ -406,13 +452,84 @@
     fractal("mol_num3", "mn3", 45, 125,119,102);
     fractal("mol_num4", "mn4", 45, 125,119,102);
     fractal("mol_num5", "mn5", 45, 125,119,102);
+
     fractal("mol_num6", "mn6", 45, 125,119,102);
     fractal("mol_num7", "mn7", 45, 125,119,102);
     fractal("mol_num8", "mn8", 45, 125,119,102);
     fractal("mol_num9", "mn9", 45, 125,119,102);
     fractal("mol_num10", "mn10", 45, 125,119,102);
     fractal("mol_num11", "mn11", 45, 125,119,102);
+
+    fractal("mol_ope1", "mo1", 45, 125,119,102);
+    fractal("mol_ope2", "mo2", 45, 125,119,102);
+    fractal("mol_ope3", "mo3", 45, 125,119,102);
+    fractal("mol_ope4", "mo4", 45, 125,119,102);
   </script>
+
+  <br>
+
+  Dans la mesure où certains numéros utilisent les mêmes glyphes que d’autres mots du corpus, une balise est placée avant un numéro ou un nombre, pour pouvoir clairement les identifier. Cette balise, <b>[nma.e]</b> (nombre), ne se prononce pas quand elle est suivie de numéros, uniquement si elle n’est pas utilisée comme balise. 
+  <br><br>
+
+  <div class="glyphs" id="mol_nmae"></div>
+  <div id="m_nmae">wzxe-qq-dd</div>
+  <script>fractal("mol_nmae", "m_nmae", 200, 125,119,102);</script>
+
+  <span class="fig">La balise <b>[nma.e]</b></span>
+
+  <div class="three_things">
+    <div id="line_nmae"></div>
+    <div id="frac_nmae"></div>
+    <div id="mol_nmae1"></div>
+    <span>linéaire</span>
+    <span>fractal</span>
+    <span>moléculaire</span>
+  </div>
+
+  <div class="l_nmae">nmae-kfa</div>
+  <div id="f_nmae">wzxe-qq-dd zw-qq-ss-ee-dd-xx</div>
+  <div id="m_nmae1">nmae kfa</div>
+
+  <script>
+    linear("line_nmae", "l_nmae", 40, 125,119,102);
+    fractal("frac_nmae", "f_nmae", 80, 125,119,102,null);
+    molecular("mol_nmae1", "m_nmae1", 100, 125,119,102);
+  </script>
+  <br><br>
+  <span class="fig">La balise <b>[nma.e]</b> (nombre) et son utilisation dans les trois modes du graphieros <span class="new">, ici avec le nombre 1</span>.</span>
+  <br><br<<br><br>
+  <h4>3.1<br> Notation chimique des éléments</h4>
+  <br>
+  Les éléments du tableau périodique sont baptisés par leur numéro atomique. Lorsqu’ils sont utilisés dans le langage courant, ils sont considérés comme des objets, donc précédés par le préfixe <b>[pta.e]</b>.
+  <br><br>
+  Dans le cadre de la notation scientifique, ils perdent le préfixe, ne laissant que leur numéro, et s’il s’agit de représenter une molécule, les liaisons seront indiquées par des connecteurs entre les glyphes (le tableau périodique complet figure en annexe).
+  <br><br>
+  <div id="line_chem0"></div>
+  <div class="l_ch0">ptae-tmei-nmae-kfa</div>
+  <script>linear("line_chem0","l_ch0", 60, 125,119,102);</script>
+  <br>
+  <span class="fig">"Hydrogène"<br>en graphieros linéaire, en notation commune.<br><b>[pta.e-tme.i-nmae-kfa]</b><br>(objet-atome-numéro-un).</span>
+  <br><br><br>
+  <div id="mol_kfa"></div>
+  <div class="m_kfa">kfa</div>
+  <script>linear("mol_kfa", "m_kfa", 60,125,119,102);</script>
+  <br>
+  <span class="fig">"Hydrogène"<br>en notation scientifique, où l'on ne conserve que le numéro. Toutefois, on continuerait à le prononcer comme dans la notation commune.</span>
+  <br><br><br>
+  <div id="line_knoikfa"></div>
+  <div class="l_knoikfa">ptae-tmei-knoi-nmae-kfa</div>
+  <script>linear("line_knoikfa", "l_knoikfa", 60,125,119,102);</script>
+  <br>
+  <span class="fig">"Dihydrogène"<br>en graphieros linéaire, en notation commune.<br><b>[pta.e-tme.i-kno.i-nma.e-kfa]</b><br>(objet-atome-connecter-numéro-un)</span>
+  <br><br><br>
+  <svg class="svg_illustr" viewBox="0 0 220 210" width="30%" stroke-width="4px" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="rgb(160, 194, 250)" style="background: white; border: 1px solid lightgrey; border-radius: 15px;"><path d="M 40,89,40,89" style="stroke:black;"></path><path d="M 20,124,20,124" style="stroke:black;"></path><path d="M 40,158,40,158" style="stroke:black;"></path><path d="M 60,124,60,124" style="stroke:black;"></path><path d="M 100,124,100,124" style="stroke:black;"></path><path d="M 80,158,80,89,140,124,140,55" style="stroke:black;"></path><path d="M 120,89,120,89" style="stroke:black;"></path><path d="M 160,89,160,89" style="stroke:black;"></path><path d="M 200,89,200,89" style="stroke:black;"></path><path d="M 180,55,180,55" style="stroke:black;"></path><path d="M 180,124,180,124" style="stroke:black;"></path></svg>
+  <br><br>
+  <span class="fig">"Dihydrogène"<br>ou 1-1 en notation scientifique, avec sa liaison covalente. Les deux glyphes <b>[kfa]</b> sont notés en miroir, pour une finalité esthétique.</span>
+  <br><br><br>
+  <svg class="svg_illustr" viewBox="0 0 420 360" width="30%"" stroke-width="8px" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="rgb(152, 185, 228)" style="background: white; border: 1px solid lightgrey; border-radius: 15px;"><path d="M 40,228,80,158,160,297,200,228,160,158,80,297,40,228" style="stroke:black;"></path><path d="M 220,124,260,193,340,55,380,124,340,193,260,55,220,124" style="stroke:black;"></path><path d="M 220,124,160,158" style="stroke:black;"></path><path d="M 260,193,200,228" style="stroke:black;"></path></svg>
+  <br><br>
+  <span class="fig">"Dioxygène"<br>ou 8-8 en notation scientifique, avec sa double liaison.</span>
+  <br><br><br>
 
 </section>
   
