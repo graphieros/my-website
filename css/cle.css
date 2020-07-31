@@ -219,6 +219,16 @@ img {
   grid-template-columns: repeat(4,1fr);
 }
 
+#pareidolie{
+  grid-template-rows: repeat(6,120px);
+}
+
+#pareidolie > span {
+  display:inline-block;
+  width:100%;
+  text-align:left;
+}
+
 .two_things,
 .two_things_table {
   width:100%;
