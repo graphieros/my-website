@@ -50,6 +50,7 @@ header{
 
 span.serif{
   font-family: var(--PF);
+  color: rgb(70,114,196);
 }
 
 header > a {
@@ -88,7 +89,12 @@ a.submenu_links:hover{
   background: rgba(70,114,196,0.1);
 }
 
-h1, h2, h3, h4 {
+#modes,
+#gram{
+  background: rgb(70,114,196);
+}
+
+h1, h2, h3, h4, h5 {
   text-align:center;
 }
 
@@ -104,11 +110,12 @@ span.right{
   font-size:3em;
   font-family: var(--PF);
   font-weight: bold;
-  color: rgb(68,64,54);
+  color: rgb(70,114,196);
 }
 
 span.sign {
   font-size:0.5em;
+  color: rgb(68,64,54);
 }
 
 span.edit0 {
@@ -118,7 +125,7 @@ span.edit0 {
   transform: translate(-50%) rotate(-6deg);
   font-family: var(--FT);
   font-weight:bold;
-  color: cornflowerblue;
+  color: rgb(70,114,196);
   font-size: 1.5em;
   background: white;
   box-sizing: border-box;
@@ -139,7 +146,7 @@ span.edit1 {
 }
 
 span.new {
-  color: rgb(70,144,196);
+  color: rgb(70,114,196);
   /* font-weight:bold; */
 }
 
@@ -196,14 +203,27 @@ img {
 .svg_paragraph_mol_kfa,
 .svg_paragraph_line_knoikfa,
 .svg_paragraph_line_prefix_ptaefkai,
-.svg_paragraph_line_prefix_kiofkai{
+.svg_paragraph_line_prefix_kiofkai,
+.svg_paragraph_phrase_past,
+.svg_paragraph_phrase_future,
+.svg_paragraph_phrase_cond,
+.svg_paragraph_phrase_forest{
   display:grid;
   align-items:center;
   justify-items:center;
 }
 
+.seven_things {
+  width:100%;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+  grid-template-columns: repeat(7,1fr);
+}
+
 .six_mols,
-.three_things {
+.three_things,
+.three_things_table {
   width:100%;
   display: grid;
   align-items:center;
@@ -211,12 +231,43 @@ img {
   grid-template-columns: repeat(3,1fr);
 }
 
-.four_things {
+.four_things,
+.four_things_table {
   width:100%;
   display: grid;
   align-items:center;
   justify-items:center;
   grid-template-columns: repeat(4,1fr);
+}
+
+.four_things_table,
+.three_things_table{
+  border-radius: 3px;
+  grid-gap: 6px;
+}
+
+.four_things_table > span,
+.three_things_table > span {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top:3px;
+  padding-bottom:3px;
+  width:100%;
+  text-align:center;
+  font-size:0.8em;
+  background: white;
+  height:100%;
+  border-radius:3px;
+}
+
+.four_things_table > div {
+  background: white;
+  width:100%;
+  height:100%;
+  display: grid;
+  align-items:center;
+  justify-items:center;
+  border-radius:3px;
 }
 
 #pareidolie{
@@ -238,11 +289,13 @@ img {
   grid-template-columns: repeat(2,1fr);
 }
 
-.two_things_table{
+.two_things_table,
+.seven_things {
   grid-gap: 6px;
 }
 
-.two_things_table > div {
+.two_things_table > div,
+.seven_things > div {
   text-align:center;
   box-sizing: border-box;
   padding:6px;
@@ -260,6 +313,11 @@ img {
 .two_things_table > div {
   width:100%;
 }
+
+.syll_tit {
+  background: rgb(125,119,102) !important;
+}
+
 
 
 img {
@@ -299,6 +357,11 @@ img {
 svg.svg_illustr{
   margin-left: 50%;
   transform: translate(-50%);
+}
+
+#line_kamno {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
 @media screen and (max-width: 600px) {
