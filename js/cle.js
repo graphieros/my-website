@@ -85,6 +85,24 @@
     [
       {link:"#phonologie",name:"L'organisation phonologique"}
     ],
+    [
+      {link:"#prefixe_nom_propre",name:"Préfixe nom propre"},
+      {link:"#syllabaire",name:"Syllabaire"},
+    ],
+    [
+      {link:"#syntaxe",name:"Syntaxe"},
+      {link:"#participe_passe",name:"Participe passé"},
+      {link:"#pluriel",name:"Pluriel"},
+      {link:"#negation",name:"Négation"},
+      {link:"#pronoms_personnels",name:"Pronoms personnels"},
+      {link:"#pronoms_possessifs",name:"Pronoms possessifs"},
+      {link:"#conjonctions",name:"Conjonctions de coordination"},
+      {link:"#conjugaison",name:"Conjugaison"},
+    ],
+    [
+      {link:"#glyphogenese",name:"Glyphogenèse"},
+      {link:"#formation_mots",name:"La formation des mots"},
+    ],
   ];
 
   
@@ -111,7 +129,7 @@
         let a = document.createElement("A");
         a.className = "submenu_links";
         a.style.textDecoration ="none";
-        a.style.color = "rgb(70, 114, 196)";
+        a.style.color = "rgb(125,119,102)";
         let nm = document.createTextNode(`${link.name}`);
         a.appendChild(nm);
         a.href = link.link;
