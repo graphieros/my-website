@@ -28,17 +28,17 @@
     <header class="title">
         <a class="header" href="#">Préface & avant-propos</a>
         <a class="header" href="#">Structure</a>
-        <a class="header" href="#">Les 3 modes</a>
+        <a class="header" id="modes" href="#">Les 3 modes</a>
         <a class="header" href="#">Nombres</a>
         <a class="header" href="#">Fonctionnement</a>
         <a class="header" href="#">Phonologie</a>
         <a class="header" href="#">Noms propres</a>
-        <a class="header" href="#">Grammaire</a>
+        <a class="header" id="gram" href="#">Grammaire</a>
         <a class="header" href="#">Glyphogenèse</a>
         <a class="header" href="#">Annexes</div>
     </header>
 </a>
-<br><br><br><br>
+<br><br><br><br><br><br><br>
 
 <section class="book_text" id="book_text">
  
@@ -50,7 +50,7 @@
 
   <div id="frac0"></div>
   <div id="f0">zws-qdx-ee</div>
-  <script>fractal("frac0","f0",300,125,119,102,0)</script>
+  <script>fractal("frac0","f0",300,70,114,196,null)</script>
 
   <span class="edit0">3<sup>ème</sup> édition</span>
   <br><br>
@@ -284,10 +284,10 @@
   <br>
   <div class="glyphs" id="mol2"></div>
   <div id="m2">ka fy go tsi</div>
-  <script>molecular("mol2","m2",180, 70,144,196);</script>
+  <script>molecular("mol2","m2",180, 70,114,196);</script>
   <div class="glyphs" id="line0"></div>
   <div class="p0">ka-fy-go-tsi</div>
-  <script>linear("line0","p0",40,70,144,196);</script><br><br>
+  <script>linear("line0","p0",40,70,114,196);</script><br><br>
   <span class="fig"><span class="new">Fig.7<br>Exemple de répartition des glyphes lorsque leur nombre est inférieur au maximum. [ka-fy-go-tsi] (nous), avec sa version en graphieros linéaire.</span></span>
   <br><br>
   <div class="six_mols">
@@ -304,12 +304,12 @@
     <div id="m6_4">sro kfa du srei ktu foi</div>
     <div id="m6_5">sro kfa du srei ktu foi ksi</div>
     <script>
-      molecular("mol6_0","m6_0", 100, 70,144,196);
-      molecular("mol6_1","m6_1", 100, 70,144,196);
-      molecular("mol6_2","m6_2", 100, 70,144,196);
-      molecular("mol6_3","m6_3", 100, 70,144,196);
-      molecular("mol6_4","m6_4", 100, 70,144,196);
-      molecular("mol6_5","m6_5", 100, 70,144,196);
+      molecular("mol6_0","m6_0", 100, 70,114,196);
+      molecular("mol6_1","m6_1", 100, 70,114,196);
+      molecular("mol6_2","m6_2", 100, 70,114,196);
+      molecular("mol6_3","m6_3", 100, 70,114,196);
+      molecular("mol6_4","m6_4", 100, 70,114,196);
+      molecular("mol6_5","m6_5", 100, 70,114,196);
     </script>
   </div>
   <br>
@@ -741,7 +741,7 @@
   <h4>4.1<br>Préfixes temporels</h4>
   <br><br>
 
-  Les temps disponibles en graphieros sont d’un usage relativement simple, si on le compare aux langues européennes. Par défaut, tout verbe est exprimé au présent de l’indicatif ; il n’est donc nul besoin d’un marqueur spécifique. Des préfixes ont été créés pour indiquer les temps du passé <b>[pso.i]</b> et futur <b>[ftu]</b> ainsi que les modes : conditionnel, subjonctif et impératif. Des exemples serviront d’illustrations au chapitre les concernant dans la <a href="#grammaire">section grammaticale</a> de l’ouvrage. 
+  Les temps disponibles en graphieros sont d’un usage relativement simple, si on le compare aux langues européennes. Par défaut, tout verbe est exprimé au présent de l’indicatif ; il n’est donc nul besoin d’un marqueur spécifique. Des préfixes ont été créés pour indiquer les temps du passé <b>[pso.i]</b> et futur <b>[ftu]</b> ainsi que les modes : conditionnel, subjonctif et impératif. Des exemples serviront d’illustrations au chapitre les concernant dans la <a href="#conjugaison">section grammaticale</a> de l’ouvrage. 
   <br><br><br>
 
   <div class="two_things">
@@ -777,7 +777,7 @@
     <span class="fig1">[fo]</span>
   </div>
 
-  <div id="f_p_hi">adw-xqe-ss</div>
+  <div id="f_p_hi">zdw-xqe-ss</div>
   <div id="f_p_fi">wqe-xz-dq</div>
   <div id="f_p_fo">xezdwz-qq-ss</div>
 
@@ -842,24 +842,24 @@
 
     <div id="frac_prefix_mna"></div>
     <div id="frac_prefix_mno"></div>
-    <div id="frac_prefix_mnao"></div>
+    <div id="frac_prefix_fro"></div>
     <div id="frac_prefix_mne"></div>
 
     <span class="fig1">[mna]</span>
     <span class="fig1">[mno]</span>
-    <span class="fig1">[mna.o]</span>
+    <span class="fig1">[fro]</span>
     <span class="fig1">[mne]</span>
   </div>
 
   <div id="f_p_mna">zsdxws-qe-dd</div>
   <div id="f_p_mno">zx-wsd-qe</div>
-  <div id="f_p_mnao">zxdswx-qe</div>
+  <div id="f_p_fro">zxdswx-qe</div>
   <div id="f_p_mne">zsdxws-qe-wd</div>
 
   <script>
     fractal("frac_prefix_mna", "f_p_mna", 50, 125,119,102,null);
     fractal("frac_prefix_mno", "f_p_mno", 50, 125,119,102,null);
-    fractal("frac_prefix_mnao", "f_p_mnao", 50, 125,119,102,null);
+    fractal("frac_prefix_fro", "f_p_fro", 50, 125,119,102,null);
     fractal("frac_prefix_mne", "f_p_mne", 50, 125,119,102,null);
   </script>
   <br><br>
@@ -1022,8 +1022,726 @@
   <div id="f_p_nmo">qzedxwq-we-xs-dz</div>
   <script>fractal("frac_prefixe_nmo", "f_p_nmo", 100, 125,119,102,null);</script>
   <span class="fig">[nmo]</span>
+  <br><br>
 
+  <div class="three_things">
+    <div id="line_nmokatae"></div>
+    <div id="frac_nmokatae"></div>
+    <div id="mol_nmokatae"></div>
+  </div>
 
+  <div class="l_nmokatae">nmo-ka-tae</div>
+  <div id="f_nmokatae">xwqzedxs-we-dz zx-ws-qe-dd zeq-xwd-ss</div>
+  <div id="m_nmokatae">nmo ka tae</div>
+
+  <script>
+    linear("line_nmokatae","l_nmokatae",30, 125,119,102);
+    fractal("frac_nmokatae","f_nmokatae",80,125,119,102,null);
+    molecular("mol_nmokatae","m_nmokatae", 100,125,119,102);
+  </script>
+  <br><br>
+  <span class="fig"><b>[nmo - ka -tae]</b><br>"L'artiste"<br>écrit dans les trois modes</span>
+  <br><br>
+  Le préfixe <b>[nmo]</b>, dérivé du glyphe <b>[ka]</b> (humain) dont il est une sorte de miroir, permet d’indiquer un nom propre. On ne pourra pas l’utiliser pour transcrire directement un nom propre existant dans une autre langue, sauf si celui-ci est issu d’un nom commun qui trouve sa traduction en graphieros, comme par exemple « Forestier » ou « Mouton ».
+  <br><br>
+  Afin d’autoriser une certaine souplesse et pénétration des autres langues dans le graphieros, un syllabaire a été créé pour reproduire les sonorités de ces langues au plus près, avec le matériel phonologique fondamental du graphieros.
+  <br><br><br>
+
+  <hr id="syllabaire">
+  <br><br><br>
+  <h4>6.1<br>Syllabaire</h4>
+  <br><br>
+  Une langue serait totalement hermétique si elle n’offrait pas de transcrire phonétiquement les autres langues. Elle serait probablement mort-née sans cette indispensable connexion, qui permet d’exprimer l’onomastique, depuis les prénoms jusqu’aux territoires, en passant par les marques.
+  <br><br>
+  Le syllabaire du graphieros est construit d’après sa phonologie, et devrait permettre, sinon une transcription exacte des sons des autres langues, du moins quelque forme approchante. Les glyphes du syllabaire sont le produit d’une fusion de glyphes représentant les sons autorisés dans le graphieros, qui sont très proches de l’alphabet occidental.
+  <br><br>
+  Voici un aperçu du syllabaire, avec tous les sons possibles avec la consonne [k] (le tableau complet peut être consulté dans les annexes) :
+  <br><br>
+
+  <div class="seven_things">
+
+    <span></span>
+    <div class="syll_tit" id="syll_a"></div>
+    <div class="syll_tit" id="syll_e"></div>
+    <div class="syll_tit" id="syll_i"></div>
+    <div class="syll_tit" id="syll_o"></div>
+    <div class="syll_tit" id="syll_y"></div>
+    <div class="syll_tit" id="syll_u"></div>
+
+    <span></span>
+    <span>[a]</span>
+    <span>[e]</span>
+    <span>[i]</span>
+    <span>[o]</span>
+    <span>[y]</span>
+    <span>[u]</span>
+
+    <div class="syll_tit" id="syll_k"></div>
+    <div id="syll_ka"></div>
+    <div id="syll_ke"></div>
+    <div id="syll_ki"></div>
+    <div id="syll_ko"></div>
+    <div id="syll_ky"></div>
+    <div id="syll_ku"></div>
+
+    <span>[k]</span>
+    <span>[ka]</span>
+    <span>[ke]</span>
+    <span>[ki]</span>
+    <span>[ko]</span>
+    <span>[ky]</span>
+    <span>[ku]</span>
+
+  </div>
+
+  <div id="s_a">wex-qd-zz</div>
+  <div id="s_e">zqw-sq-ee-dd-xx</div>
+  <div id="s_i">ex-zz-ss-ww-qq-dd</div>
+  <div id="s_o">xsedx-ww-qq-zz</div>
+  <div id="s_y">sxd-ww-qq-zz-ee</div>
+  <div id="s_u">sxds-ww-qq-zz-ee</div>
+
+  <div id="s_k">zw-xqe-dd-ss</div>
+  <div id="s_ka">zwexqe-dq</div>
+  <div id="s_ke">zw-dseqxs</div>
+  <div id="s_ki">zw-qexq-ss-dd</div>
+  <div id="s_ko">esxdeqx-zw</div>
+  <div id="s_ky">zw-eqx-sxd</div>
+  <div id="s_ku">zw-eqxsdx</div>
+
+  <script>
+    fractal("syll_a","s_a",40,255,255,255,null);
+    fractal("syll_e","s_e",40,255,255,255,null);
+    fractal("syll_i","s_i",40,255,255,255,null);
+    fractal("syll_o","s_o",40,255,255,255,null);
+    fractal("syll_y","s_y",40,255,255,255,null);
+    fractal("syll_u","s_u",40,255,255,255,null);
+    
+    fractal("syll_k","s_k",40,255,255,255,null);
+    fractal("syll_ka","s_ka",40,125,119,102,null);
+    fractal("syll_ke","s_ke",40,125,119,102,null);
+    fractal("syll_ki","s_ki",40,125,119,102,null);
+    fractal("syll_ko","s_ko",40,125,119,102,null);
+    fractal("syll_ky","s_ky",40,125,119,102,null);
+    fractal("syll_ku","s_ku",40,125,119,102,null);
+  </script>
+  <br><br>
+  De la même façon qu’il a été nécessaire de prévenir le lecteur qu’il allait lire un nombre en le faisant précéder de la balise <span class="new"><b>[zba]</b></span>, il est nécessaire d’introduire une nouvelle balise pour indiquer qu’un module syllabique est utilisé. Cette balise n’est jamais prononcée.
+  <br><br>
+
+  <span class="fig">être syllabe</span>
+  <div class="glyphs" id="frac_prefix_zba"></div>
+  <div id="f_p_zba">eqdw-zz-xx</div>
+  <script>fractal("frac_prefix_zba", "f_p_zba", 100, 125,119,102,null);</script>
+  <span class="fig">[zba]</span>
+  <br><br><br><br>
+
+  <img src="pics/parler.jpg">
+  <span class="fig1">
+    <i>Parler</i><br>
+    Huile sur toile<br>
+    65x54cm<br>
+    2020, confinement
+  </span>
+  <br><br><br><br>
+
+  <hr id="grammaire">
+  <br><br><br>
+  <h1 id="link6">7<br><br>Grammaire du graphieros</h1>
+  <hr id="syntaxe">
+  <br><br><br>
+  <h4>7.0<br>Syntaxe</h4>
+  <br><br>
+  Le graphieros utilise une syntaxe de type Sujet-Verbe-Objet. Voici une illustration en graphieros linéaire de cet ordre : 
+  <br><br>
+  <div class="two_things_table">
+    <span>sujet</span>
+    <div id="line_kafygo"></div>
+
+    <span>verbe</span>
+    <div id="line_sta"></div>
+
+    <span>objet</span>
+    <div id="line_measkai"></div>
+    
+  </div>
+
+  <div class="l_kafygo">ka-fy-go</div>
+  <div class="l_sta">sta</div>
+  <div class="l_measkai">mea-skai</div>
+
+  <script>
+    linear("line_kafygo","l_kafygo",40,125,119,102);
+    linear("line_sta","l_sta",40,125,119,102);
+    linear("line_measkai","l_measkai",40,125,119,102);
+  </script>
+
+  <br><br>
+  <span class="fig">"Je vois le ciel"<br><b>[ka-fy-go sta me.a-ska.i]</b></span>
+  <br><br><br>
+
+  <hr id="participe_passe">
+  <br><br><br>
+  <h4>7.1<br>Participe passé</h4>
+  <br><br>
+  Le graphieros ne dispose pas de participe passé. Celui-ci est en effet remplacé par l’explicitation de l’assujettissement qu’il implique : au lieu de dire : « je suis allé », on dira : «je suis sujet de allage » ; au lieu de dire « je suis pris », on dira : « je suis sujet de prise ». Le module « sujet-de » sera donc toujours suivi d’un nom préfixé par <b>[me.a]</b>, sans exception.
+  <br><br>
+  
+  <div class="two_things_table">
+    <span>humain-refléter-avoir</span>
+    <div id="line_kafygo1"></div>
+
+    <span>passé-être</span>
+    <div id="line_psoima"></div>
+
+    <span>sujet-de</span>
+    <div id="line_pkaeda"></div>
+
+    <span>déterminer-aller</span>
+    <div id="line_meale"></div>
+  </div>
+
+  <div class="l_kafygo1">ka-fy-go</div>
+  <div class="l_psoima">psoi-ma</div>
+  <div class="l_pkaeda">pkae-da</div>
+  <div class="l_meale">mea-le</div>
+
+  <script>
+    linear("line_kafygo1","l_kafygo1", 40, 125,119,102);
+    linear("line_psoima","l_psoima", 40, 125,119,102);
+    linear("line_pkaeda","l_pkaeda", 40, 125,119,102);
+    linear("line_meale","l_meale", 40, 125,119,102);
+  </script>
+  <br><br>
+  <span class="fig">
+    "Je suis allé"
+    <br>
+    <b>[ka-fy-go pso.i-ma pka.e-da me.a-le]</b>
+  </span>
+  <br><br>
+  Le module <b>[pka.e-da]</b> ainsi que le substantif qui le suit sont invariables.<span class="new">Mais est-il nécessaire de mentionner que la poésie peut s'accorder de telles licences ?</span>
+  <br><br><br>
+
+  <hr id="pluriel">
+  <br><br><br>
+  <h4>7.2<br>Pluriel</h4>
+  <br><br>
+
+  Les verbes et les objets sont accordés systématiquement. Le pluriel est indiqué par l’ajout du suffixe <b>[tsi]</b>:
+  <br><br>
+  <span class="fig">être pluriel</span>
+  <div class="glyphs" id="frac_suffix_tsi1"></div>
+  <div id="f_s_tsi1">zsd-ws-qq-xx-ee</div>
+  <script>fractal("frac_suffix_tsi1", "f_s_tsi1", 100, 125,119,102,null);</script>
+  <span class="fig">[tsi]</span>
+  <br><br><br>
+  Voici deux exemples d'utilisation du pluriel:
+  <br><br>
+  <div class="two_things_table">
+    <span><center>Nous<br>(humain - refléter - avoir - pluriel)</center></span>
+    <div id="line_kafygotsi"></div>
+
+    <span><center>allons<br>(aller-pluriel)</center></span>
+    <div id="line_letsi"></div>
+  </div>
+
+  <div class="l_kafygotsi">ka-fy-go-tsi</div>
+  <div class="l_letsi">le-tsi</div>
+
+  <script>
+    linear("line_kafygotsi","l_kafygotsi", 40,125,119,102);
+    linear("line_letsi","l_letsi", 40,125,119,102);
+  </script>
+  <br><br>
+  <span class="fig">
+    "Nous allons"
+    <br>
+    <b>[ka-fy-go-tsi le-tsi]</b>
+  </span>
+  <br><br><br><br>
+
+  <div class="two_things_table">
+    <span><center>Ces<br>(ce - pluriel)</center></span>
+    <div id="line_detsi"></div>
+
+    <span><center>animaux<br>(animal - pluriel)</center></span>
+    <div id="line_pkiatsi"></div>
+  </div>
+
+  <div class="l_detsi">de-tsi</div>
+  <div class="l_pkiatsi">pkia-tsi</div>
+
+  <script>
+    linear("line_detsi","l_detsi",40,125,119,102);
+    linear("line_pkiatsi","l_pkiatsi",40,125,119,102);
+  </script>
+  <br><br>
+  <span class="fig">
+    "Ces animaux"
+    <br>
+    <b>[de-tsi pki.a-tsi]</b>
+  </span>
+  <br><br><br>
+
+  <hr id="negation">
+  <br><br><br>
+  <h4>7.3<br>Négation</h4>
+  <br><br>
+  Le glyphe <b>[ni.a]</b> est utilisé pour indiquer la négation. Il est placé en général avant le verbe. <span class="new">Il peut aussi servir dans la formation des mots pour évoquer l'inverse d'un concept. Par exemple, "sans" se dira "non-avec". Cette propriété se retrouve d'ailleurs en français, dans des mots composés comme "non-voyant" par exemple.</span>
+  <br><br>
+
+  <span class="fig">non</span>
+  <div class="glyphs" id="frac_nia"></div>
+  <div id="f_nia">zx-we-qq-dd</div>
+  <script>fractal("frac_nia", "f_nia", 100, 125,119,102,null);</script>
+  <span class="fig">[ni.a]</span>
+  <br><br><br>
+
+  <div class="two_things_table">
+    <span><center>Je</center></span>
+    <div id="line_kafygo2"></div>
+
+    <span><center>n'ai pas<br>(non avoir)</center></span>
+    <div id="line_niago"></div>
+  </div>
+
+  <div class="l_kafygo2">ka-fy-go</div>
+  <div class="l_niago">nia go</div>
+
+  <script>
+    linear("line_kafygo2","l_kafygo2",40,125,119,102);
+    linear("line_niago","l_niago",40,125,119,102);
+  </script>
+  <br><br>
+  Le graphieros n’utilise pas de double négation, comme c’est le cas en français. 
+  <br><br><br>
+
+  <hr id="pronoms_personnels">
+  <br><br><br>
+  <h4>7.4<br>Pronoms personnels</h4>
+  <br><br>
+
+  <div class="four_things_table">
+    <div id="line_kafygo3"></div>
+    <div id="line_kafyafy1"></div>
+    <div id="line_kamno"></div>
+    <div id="line_katra"></div>
+
+    <span>[ka-fy-go]</span>
+    <span>[ka-fya-fy]</span>
+    <span>[ka-mno]<br>[ka-mna]<br>[ka-fro]<br>[ka-mne]</span>
+    <span>[ka-tra]</span>
+
+    <span>je, moi</span>
+    <span>tu, toi</span>
+    <span>il, elle</span>
+    <span>on</span>
+
+    <span>humain<br>refléter<br>avoir</span>
+    <span>humain<br>donner<br>refléter</span>
+    <span>humain<br>genre</span>
+    <span>humain<br>extérieur</span>
+  </div>
+
+  <div class="l_kafygo3">ka-fy-go</div>
+  <div class="l_kafyafy1">ka-fya-fy</div>
+  <div class="l_kamno">ka-mno</div>
+  <div class="l_kamno">ka-mna</div>
+  <div class="l_kamno">ka-fro</div>
+  <div class="l_kamno">ka-mne</div>
+  <div class="l_katra">ka-tra</div>
+
+  <script>
+    linear("line_kafygo3","l_kafygo3", 40,125,119,102);
+    linear("line_kafyafy1", "l_kafyafy1", 40,125,119,102);
+    linear("line_kamno", "l_kamno", 40,125,119,102);
+    linear("line_katra","l_katra", 40,125,119,102);
+  </script>
+  <br><br>
+
+  Il suffit d’ajouter le glyphe pluriel <b>[tsi]</b> pour obtenir les pronoms personnels du pluriel. A part pour « il » et « elle », tous les glyphes <b>[ka]</b> peuvent être remplacés par un glyphe de genre, par exemple <b>[mno-fy-go]</b>, <b>[mna-fya-fy]</b>, et <b>[fro-tra]</b>.
+  <br><br><br>
+
+  <hr id="pronoms_possessifs">
+  <br><br><br>
+  <h4>7.5<br>Pronoms possessifs</h4>
+  <br><br>
+
+  <span class="new">Le premier système exposé dans la première édition exigeait d'agglomérer trois glyphes pour exprimer la possession. Des traces de ce premier système sont visibles sur mes tableaux de l'époque, et son explication peut se trouver dans la version papier ou PDF de <i>la Clé</i>.<br><br>Le système a été simplifié dans la deuxième édition, par l'utilisation d'un seul suffixe ajouté au substantif, auquel pourra s'adjoindre le glyphe pluriel, le cas échéant.</span>
+  <br><br>
+
+  <div class="three_things_table">
+    <div id="frac_soma"></div>
+    <div id="frac_sota"></div>
+    <div id="frac_sola"></div>
+
+    <span>[soma]</span>
+    <span>[sota]</span>
+    <span>[sola]</span>
+
+    <span>mon</span>
+    <span>ton</span>
+    <span>son</span>
+  </div>
+
+  <div id="f_soma">zqwxsedx-sd</div>
+  <div id="f_sota">zqwxseds</div>
+  <div id="f_sola">zqwxsed</div>
+
+  <script>
+    fractal("frac_soma","f_soma",70,125,119,102,null);
+    fractal("frac_sota","f_sota",70,125,119,102,null);
+    fractal("frac_sola","f_sola",70,125,119,102,null);
+  </script>
+  <br><br><br>
+
+  <hr id="conjonctions">
+  <br><br><br>
+  <h4>7.6<br>Conjonctions de coordination</h4>
+  <br><br>
+  <span class="new">Les conjonctions de coordination peuvent s'utiliser seules pour coordonner deux propositions. Elles peuvent aussi entrer dans la composition d'un mot qui nécessiterait leur concept.</span>
+  <br><br>
+  <div class="seven_things">
+    <div id="frac_c_pro"></div>
+    <div id="frac_c_roi"></div>
+    <div id="frac_c_te"></div>
+    <div id="frac_c_dku"></div>
+    <div id="frac_c_vroi"></div>
+    <div id="frac_c_na"></div>
+    <div id="frac_c_gzo"></div>
+
+    <span>[pro]</span>
+    <span>[ro.i]</span>
+    <span>[te]</span>
+    <span>[dku]</span>
+    <span>[vro.i]</span>
+    <span>[na]</span>
+    <span>[gzo]</span>
+
+    <span>mais</span>
+    <span>ou</span>
+    <span>et</span>
+    <span>donc</span>
+    <span>or</span>
+    <span>ni</span>
+    <span>car</span>
+  </div>
+
+  <div id="f_c_pro">zsw-qs-ex-dd</div>
+  <div id="f_c_roi">zxwez-qq-dd</div>
+  <div id="f_c_te">zqw-sq-edx</div>
+  <div id="f_c_dku">ezwx-ds-qq</div>
+  <div id="f_c_vroi">zsw-qs-xedx</div>
+  <div id="f_c_na">zxd-we-qs</div>
+  <div id="f_c_gzo">zdwx-qq-ss-ee</div>
+
+  <script>
+    fractal("frac_c_pro","f_c_pro",40,125,119,102,null);
+    fractal("frac_c_roi","f_c_roi",40,125,119,102,null);
+    fractal("frac_c_te","f_c_te",40,125,119,102,null);
+    fractal("frac_c_dku","f_c_dku",40,125,119,102,null);
+    fractal("frac_c_vroi","f_c_vroi",40,125,119,102,null);
+    fractal("frac_c_na","f_c_na",40,125,119,102,null);
+    fractal("frac_c_gzo","f_c_gzo",40,125,119,102,null);
+  </script>
+  <br><br><br>
+
+  <hr id="conjugaison">
+  <br><br><br>
+  <h4>7.7<br>Conjugaison</h4>
+  <br><br>
+
+  Comme il a été vu dans la section « préfixes » de l’ouvrage, l’expression du passé, du futur, du conditionnel, de l’impératif et du subjonctif est liée à l’utilisation des <a href="#prefixes_temporels">préfixes temporels</a> afférents, <span class="new">qui précèdent toujours le verbe.</span>
+  <br><br>
+  Par défaut, tous les verbes sont conjugués au présent, pour lequel il n’est donc pas de préfixe.
+  <br><br>
+
+  <h5>7.7.0<br>Le passé</h5>
+
+  L'ajout du préfixe <b>[pso.i]</b> avant le verbe conjuguait celui-ci au passé.
+  <br><br>
+  <div id="phrase_past"></div>
+  <div class="ph_past">ka-fy-go psoi-ma</div>
+  <script>linear("phrase_past","ph_past",40,125,119,102);</script>
+  <br><br>
+  <span class="fig">
+    "J'étais" ou "je fus" <br>
+    [ka-fy-go <b>pso.i</b>-ma]
+  </span>
+  <br><br>
+
+  <h5>7.7.1<br>Le futur</h5>
+
+  De la même manière, l'ajout du préfixe <b>[ftu]</b> avant le verbe conjuguera celui-ci au futur.
+  <br><br>
+  <div id="phrase_future"></div>
+  <div class="ph_future">mna-fya-fy ftu-ra</div>
+  <script>linear("phrase_future","ph_future",40,125,119,102);</script>
+  <br><br>
+  <span class="fig">
+    "Tu prendras"<br>
+    [mna-fy.a-fy <b>ftu</b>-ra]
+  </span>
+  <br><br>
+
+  <h5>7.7.2<br>Le conditionnel</h5>
+
+  L'ajout du préfixe <b>[hi]</b> avant le verbe conjuguerait celui-ci au conditionnel.
+  <br><br>
+  <div id="phrase_cond"></div>
+  <div class="ph_cond">ka-tra-tsi hi-lfaw-tsi</div>
+  <script>linear("phrase_cond","ph_cond",40,125,119,102);</script>
+  <br><br>
+  <span class="fig">
+    "Ils riraient"<br>
+    [ka-tra-tsi <b>hi</b>-lfaw-tsi]
+  </span>
+  <br><br>
+  
+  <h5>7.7.3<br>Le subjonctif</h5>
+
+  Le mode subjonctif est composé de trois temps : passé, présent, futur. Le subjonctif obéit aux mêmes règles de concordance des temps <span class="new">et d'usage</span> qu'en français, à part pour le conditionnel, qui, s'il est placé en proposition principale, engendre l'usage du <i>subjonctif futur</i> dans la proposition subordonnée. En français, le subjonctif futur n'existe pas, aussi en ai-je proposé une traduction dans l'exemple ci-dessous.
+  <br><br>
+  <span class="new">Le subjonctif est composé du préfixe <b>[fi]</b> placé avant l'indication temporelle, et avant le verbe. Comme toujours, le présent se dispense d'indication temporelle, puisqu'il est présent par défaut.</span>
+  <br><br>
+
+  <div class="three_things_table">
+    <div id="phrase_subj_past"></div>
+    <div id="phrase_subj_pres"></div>
+    <div id="phrase_subj_futu"></div>
+
+    <span>"que je prisse"<br>(passé)</span>
+    <span>"que je prenne"<br>(présent)</span>
+    <span>"que je prendrasse"<br>(futur)</span>
+
+    <span>[kwa ka-fy-go <br><b>fi-pso.i</b>-ra]</span>
+    <span>[kwa ka-fy-go <br><b>fi</b>-ra]</span>
+    <span>[kwa ka-fy-go <br><b>fi-ftu</b>-ra]</span>
+  </div>
+
+  <div class="ph_s_past">kwa ka-fy-go fi-psoi-ra</div>
+  <div class="ph_s_pres">kwa ka-fy-go fi-ra</div>
+  <div class="ph_s_futu">kwa ka-fy-go fi-ftu-ra</div>
+
+  <script>
+    linear("phrase_subj_past","ph_s_past",40,125,119,102);
+    linear("phrase_subj_pres","ph_s_pres",40,125,119,102);
+    linear("phrase_subj_futu","ph_s_futu",40,125,119,102);
+  </script>
+
+  <br><br>
+
+  <h5>7.7.4<br>L'impératif</h5>
+
+  L'impératif est obtenu en ajoutant le préfixe <b>[fo]</b> devant le verbe. Il s'accorde au pluriel.
+  <br><br>
+
+  <div class="two_things_table">
+    <div id="phrase_imp_sing"></div>
+    <div id="phrase_imp_plur"></div>
+
+    <span>"fais cela"</span>
+    <span>"faites cela"</span>
+
+    <span>[<b>fo</b>-fa de]</span>
+    <span>[<b>fo</b>-fa-tsi de]</span>
+  </div>
+
+  <div class="p_i_sing">fo-fa de</div>
+  <div class="p_i_plur">fo-fa-tsi de</div>
+
+  <script>
+    linear("phrase_imp_sing","p_i_sing",40,125,119,102);
+    linear("phrase_imp_plur","p_i_plur",40,125,119,102);
+  </script>
+  <br><br>
+
+  <h5>7.7.5<br>Concordance des temps</h5>
+
+  <span class="new">Avec le passé en proposition principale, on placera le passé en subordonnée. Ainsi du présent.
+  <br><br>
+  Toutefois, avec le futur ou le conditionnel en principale, la subordonnée se conjuguera au futur. Voici quelques exemples, avec une transcription en français du subjonctif futur:</span>
+  <br><br>
+
+  <div class="four_things_table">
+    <div id="phrase_con_past"></div>
+    <div id="phrase_con_pres"></div>
+    <div id="phrase_con_cond"></div>
+    <div id="phrase_con_futu"></div>
+
+    <span>"Il fallait que j'allasse"</span>
+    <span>"Il faut que j'aille"</span>
+    <span>"Il faudrait que j'irasse"</span>
+    <span>"Il faudra que j'irasse"</span>
+
+    <span>[pso.i-dvi-fa kwa ka-fy-go fi-pso.i-le]</span>
+    <span>[dvo-fa kwa ka-fy-go fi-le]</span>
+    <span>[hi-dvo-fa kwa ka-fy-go fi-ftu-le]</span>
+    <span>[ftu-dvo-fa kwa ka-fy-go fi-ftu-le]</span>
+  </div>
+
+  <div class="ph_c_past">psoi-dvo-fa kwa ka-fy-go fi-psoi-le</div>
+  <div class="ph_c_pres">dvo-fa kwa ka-fy-go fi-le</div>
+  <div class="ph_c_cond">hi-dvo-fa kwa ka-fy-go fi-ftu-le</div>
+  <div class="ph_c_futu">ftu-dvo-fa kwa ka-fy-go fi-ftu-le</div>
+
+  <script>
+    linear("phrase_con_past","ph_c_past",40,125,119,102);
+    linear("phrase_con_pres","ph_c_pres",40,125,119,102);
+    linear("phrase_con_cond","ph_c_cond",40,125,119,102);
+    linear("phrase_con_futu","ph_c_futu",40,125,119,102);
+  </script>
+  <br><br><br>
+
+  <img src="pics/eye.png">
+  <br><br><br>
+
+  <h1 id="link8">8<br><br>Glyphogenèse et création des mots en graphieros</h1>
+  <hr id="glyphogenese">
+  <br><br><br>
+  <h4>8.0<br>Glyphogenèse</h4>
+  <br><br>
+  Le lexique du graphieros contient des glyphes de deux types: les <i>pictogrammes</i>, sortes de petits dessins qui représentent un objet; et les <i>idéogrammes</i>, des symboles qui représentent un concept.
+  <br><br>
+  <span class="new">Avec une structure de sept points équilatéralement répartis, un nombre réduit de pictogrammes sont possibles. Voici quelques exemples de glyphes créés dans une optique de reproduction de l'apparence des objets ou des idées désignés:</span>
+  <br><br><br>
+
+  <span class="fig">brancher</span>
+  <div class="glyphs" id="frac_dvea"></div>
+  <div id="f_dvea">exwxz-qs-dd</div>
+  <script>fractal("frac_dvea", "f_dvea", 200, 144, 186, 115,null);</script>
+  <span class="fig"><b>[dve.a]</b><br>"Brancher", comme les branches d'un arbre</span>
+  <br><br><br>
+
+  <span class="fig"><span class="new">être</span> courrier</span>
+  <div class="glyphs" id="frac_krye"></div>
+  <div id="f_krye">qseqwde-zz-xx</div>
+  <script>fractal("frac_krye", "f_krye", 200, 255,255,255,null);</script>
+  <span class="fig"><b>[kry.e]</b><br>"(être)courrier", comme une enveloppe</span>
+  <br><br><br>
+
+  <span class="fig">détruire</span>
+  <div class="glyphs" id="frac_dzye"></div>
+  <div id="f_dzye">qw-xe-dzsd</div>
+  <script>fractal("frac_dzye", "f_dzye", 200, 125,119,102,null);</script>
+  <span class="fig"><b>[dzy.e]</b><br>"détruire", comme une hâche s'abattant sur une bûche</span>
+  <br><br><br>
+
+  <span class="fig">fleurir</span>
+  <div class="glyphs" id="frac_blea"></div>
+  <div id="f_blea">zqx-edw-ss</div>
+  <script>fractal("frac_blea", "f_blea", 200,212, 155, 204,null);</script>
+  <span class="fig"><b>[ble.a]</b><br>"fleurir", comme une rose avec pétales, sépales et pistil.</span>
+  <br><br><br>
+
+  La glyphogenèse des idéogrammes est basée sur les prédicats symboliques suivants:
+  <br><br>
+  <img src="pics/cle_pic5.png">
+  <br><br>
+  Voici quelques exemples de glyphogenèse:
+  <br><br>
+  <img src="pics/cle_pic6.png">
+  <br><br>
+  <img src="pics/cle_pic7.png">
+  <br><br>
+  <img src="pics/cle_pic8.png">
+  <br><br>
+  Voici un dernier exemple de généalogie, à partir du glyphe <b>[lpa.e]</b> « lèvre » ici au centre, duquel dérivent les six glyphes désignant les différents goûts perçus généralement par la bouche humaine :
+  <br><br>
+  <img src="pics/cle_pic9.png">
+  <br><br><br><br>
+
+  <hr id="formation_mots">
+  <br><br><br>
+  <h4>8.1<br>La formation des mots</h4>
+  <br><br>
+  Le lexique du graphieros comporte à ce jour environ <a target="_blank" href="https://graphieros.com/php/glyphs.php">450 glyphes</a> génétiques, qui doivent autoriser le modelage, par agglutination, d’une grande partie des mots dont un locuteur aurait à se servir, dans tous les contextes. Le graphieros est ainsi une idéolangue à caractère étymologique, puisque la formation de ces mots par agglutination offre lisiblement la trace du cheminement logique ayant conduit au choix des glyphes qu’ils contiennent.
+  <br><br>
+  Le graphieros est aussi une idéolangue philosophique, où chaque mot agglutiné <i>est</i> sa définition. Un nouveau locuteur devrait pouvoir créer son propre lexique de mots agglutinés, à partir du lexique des glyphes génétiques présenté à la fin de cet ouvrage. Si ces mots sont construits d’une façon logique, un autre locuteur devrait être en mesure de les décrypter. En l’absence d’expérience, tel est tout du moins le vœu que nous formulons, et c’est pour cette raison que le projet de créer un dictionnaire complet avec tous les mots du monde nous est apparu comme une entreprise vaine. Par le décryptage lent et patient qu’elle propose à ses locuteurs, le graphieros doit leur rendre le monde des autres plus accessible dans la profondeur.
+
+  Nous offrons ici au lecteur quelques exemples de formation de mots par agglutination, avec parfois des alternatives synonymiques.
+  <br><br><br>
+  <div class="glyphs" id="end_fta"></div>
+  <div id="e_fta">zx-qe-wd sqzdwq-ee-xx qw-zs-ed-xx</div>
+  <script>
+    fractal("end_fta","e_fta", 300, 125,119,102, 1);
+  </script>
+  <br><br><br>
+
+  Voici une phrase simple: "J'aime la forêt."
+  <br><br>
+
+  <div id="phrase_forest"></div>
+  <div class="ph_forest">ka-fy-go sa-kme kio-kwe-pio .</div>
+
+  <script>
+    linear("phrase_forest","ph_forest", 40,125,119,102);
+  </script>
+  <span class="fig"><b>[ka-fy-go sa-kme ki.o-kwe-pi.o]</b></span>
+  <br><br>
+  Voyons comment sont formés chacun des mots de cette phrase:
+  <br><br>
+
+  <div class="two_things_table">
+    <div id="analysis_kafygo"></div>
+    <span><b>[ka]</b> humain<br><b>[fy]</b>refléter<br><b>[go]</b>avoir</span>
+  </div>
+
+  <div class="ana_kafygo">ka-fy-go</div>
+  <script>
+    linear("analysis_kafygo","ana_kafygo",40,125,119,102);
+  </script>
+  <br><br>
+  L’agglutination de ces trois glyphes désigne le « je », le « moi ». Le préfixe « humain », neutre, dont nous avons vu qu’il peut être genré, indique que le mot se réfère à un être humain. Le « je » est donc l’être humain qui « a un reflet », comme Narcisse s’apercevant du sien près de la source où il étanchait sa soif. Ce mot prend son origine dans les débuts du graphieros. Bien qu’il existe des façons plus simples de le formuler, nous l’avons conservé comme un marqueur archéologique.
+  <br><br>
+  Prenons maintenant le verbe de la phrase:
+  <br><br>
+
+  <div class="two_things_table">
+    <div id="analysis_sakme"></div>
+    <span><b>[sa]</b> vivre<br><b>[kme]</b>pour</span>
+  </div>
+
+  <div class="ana_sakme">sa-kme</div>
+
+  <script>
+    linear("analysis_sakme","ana_sakme",40,125,119,102);
+  </script>
+  <br><br>
+  Le verbe aimer est compris comme étant ce qui fait que l’on « vit pour » quelqu’un ou quelque chose.
+  <br><br>
+  Enfin, le dernier mot de la phrase:
+  <br><br>
+
+  <div class="two_things_table">
+    <div id="analysis_kiokwepio"></div>
+    <span><b>[ki.o]</b> lieu<br><b>[kwe]</b>peupler<br><b>[pi.o]</b>être végétal</span>
+  </div>
+
+  <div class="ana_kiokwepio">kio-kwe-pio</div>
+
+  <script>
+    linear("analysis_kiokwepio","ana_kiokwepio",40,125,119,102);
+  </script>
+  <br><br>
+  Une forêt étant un lieu, il est nécessaire d’utiliser le préfixe de lieu. La forêt est définie comme « peuple végétal ». Mais comment le distinguer d’un parc, qui est aussi un « peuple végétal » ? Un parc étant une création humaine, il conviendra alors d’ajouter un second préfixe de fonction <b>[fka.i]</b> après le préfixe <b>[ki.o]</b>, tel que nous l’avons vu dans le <a href="#prefixes_generaux">chapitre traitant des préfixes</a>.
+  <br><br>
+  Le graphieros a cela de souple qu'il permet de construire un même concept à partir de briques différentes. Ainsi le concept de forêt pourrait-il se dire:
+  <br><br>
+
+  <div class="two_things_table">
+    <div id="analysis_kiotewpio"></div>
+    <span><b>[ki.o]</b> lieu<br><b>[tew]</b>être tout<br><b>[pi.o]</b>être végétal</span>
+  </div>
+
+  <div class="ana_kiotewpio">kio-tew-pio</div>
+
+  <script>
+    linear("analysis_kiotewpio","ana_kiotewpio",40,125,119,102);
+  </script>
+
+  <br><br>
+  Ici, la forêt se définit comme le "lieu tout végétal". <span class="new">Dans les deux cas, c'est la notion d'ensemble, de groupe, qui siège au centre du mot, avec la nuance que "peupler" connote aux individus vivants, raison pour laquelle il remporta ma préférence dans la formation de cet exemple.</span>
 
 </section>
   
