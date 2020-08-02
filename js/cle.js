@@ -103,6 +103,13 @@
       {link:"#glyphogenese",name:"Glyphogenèse"},
       {link:"#formation_mots",name:"La formation des mots"},
     ],
+    [
+      {link:"#tableau_periodique",name:"Tableau périodique des éléments"},
+      {link:"#cercle_chromatique",name:"Le cercle chromatique"},
+      {link:"https://graphieros.com/php/glyphs.php",name:"Liste des glyphes du graphieros"},
+      {link:"https://graphieros.com/touch_writer/touch_writer.html",name:"Utilisez l'éditeur de graphieros !"},
+      {link:"https://graphieros.com/contact.php",name:"Contact"},
+    ],
   ];
 
   
