@@ -80,31 +80,15 @@ span.d{
 .global_wrapper{
     width:100%;
     display: grid;
-    align-items:center;
-    justify-items:center;
+    justify-items: center;
 }
 
 /*all that is below needs to be included in graphieros.js*/
 
 .main{
-    display: grid;
-    grid-template-columns: repeat(10,1fr);
-    justify-items:center;
-    margin:0 auto;
     box-sizing: border-box;
-    width:400px;
-    border-bottom: 1px solid rgb(28, 43, 28);
-    padding-top:20px;
-    padding-bottom:20px;
-}
-
-.eight {
-    display: grid;
-    grid-template-columns: repeat(8,1fr);
-    justify-items:center;
     margin:0 auto;
-    box-sizing: border-box;
-    width:8fr;
+    width:100%;
     border-bottom: 1px solid rgb(28, 43, 28);
     padding-top:20px;
     padding-bottom:20px;
@@ -115,28 +99,41 @@ span.d{
     box-sizing: border-box;
 }
 
-.p,
-.p0{
-    box-sizing: border-box;
-    display:block;
-}
-
 .molecules {
-    display: grid;
+    display: grid; 
     grid-template-columns: repeat(3,1fr);
     align-items:center;
     justify-items:center;
 }
 
+#linear_0208 {
+    background: white;
+    border-radius:3px;
+    border:10px solid white;
+}
+
+#linear_0208_1{
+    border:10px solid transparent;
+}
+
 @media screen and (max-width: 500px) {
 
-    .main{
-        grid-template-columns: repeat(10,35px);
-        width:350px;
+    .global_wrapper {
+        display: block;
     }
 
-    .svg_title{
-        width:90%;
+    .global_wrapper > div,
+    .global_wrapper > svg,
+    #eight0 {
+        margin-left:50%;
+        transform: translate(-50%);
+    }
+
+    #mol0,
+    #mol1 {
+        width:100%;
+        display: grid;
+        justify-items: center;;
     }
 
 }
