@@ -5,7 +5,7 @@ created by Alec Lloyd Probert
 
 //TODO
 /*
-include responsiveness refoactor my crap
+refactor function parameters into destructured arrays
 */
 
 let a = 50; //y_top
