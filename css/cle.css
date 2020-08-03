@@ -213,6 +213,17 @@ img {
   justify-items:center;
 }
 
+#line_chem0,
+#mol_kfa,
+#line_knoikfa,
+#phrase_past,
+#phrase_future,
+#phrase_cond,
+#phrase_forest{
+  margin-left:50%;
+  transform:translate(-50%);
+}
+
 .seven_things {
   width:100%;
   display: grid;
@@ -300,10 +311,10 @@ img {
   box-sizing: border-box;
   padding:6px;
   height:100%;
+  width:100%;
   display: grid;
   align-items:center;
   justify-items:center;
-  background: white;
   border-radius:3px;
 }
 
