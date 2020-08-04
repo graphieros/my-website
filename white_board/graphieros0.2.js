@@ -567,7 +567,7 @@ function molecular(section, mol, size, red, green, blue) {
 }
 export { molecular };
 
-function calligraphic({ sect, coords, svgSize, size, colors, radius, background, light, intensity }) {
+function calligraphic({ sect, sequence, svgSize, size, colors, radius, background, light, intensity }) {
 
     let [red, green, blue] = colors;
 
@@ -580,11 +580,12 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     svgSize = svgSize || 100;
     light = light || false;
     intensity = intensity || 1.3;
+    sequence = sequence || [];
 
     let glyph_color = `rgb(${red},${green},${blue})`;
     const section = document.getElementById(sect);
-    const coordinates = document.getElementById(coords);
-    coordinates.style.display = "none";
+    const coordinates = sequence;
+    // coordinates.style.display = "none";
 
     const xmlns = "http://www.w3.org/2000/svg";
     const _p = `<path style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;" d="M `;
@@ -596,7 +597,7 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
 
-    let raw_data = coordinates.innerHTML;
+    let raw_data = coordinates;
     let lines = raw_data.split(" ");
 
     (function translate_data_to_coordinates() {
@@ -616,10 +617,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             d4 = [r, q],
             d5 = [rm, w],
             d6 = [lm, w];
-
-        let newRed = red,
-            newGreen = green,
-            newBlue = blue;
 
         function fractalize() {
 
@@ -651,7 +648,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
                 colors[2] /= intensity;
             }
             
-
             stroke_defs();
 
         }
