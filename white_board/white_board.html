@@ -35,7 +35,9 @@
 
     <!--function calls-->
 
-    <script>
+    <script type="module">
+        import { linear, fractal, molecular, calligraphic } from './graphieros0.2.js';
+
         let greenMagic = { color: [100, 200, 100], size: 50, container: 'linear_sequence', section: 'LINEAR'};
         
         linear({...greenMagic});

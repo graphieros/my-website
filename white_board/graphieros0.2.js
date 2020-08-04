@@ -209,6 +209,8 @@ function linear({ section, container, size = 50, color }) {
 
 };
 
+export { linear };
+
 function fractal(section, f, size, r, g, b, light) {
 
     const xmlns = "http://www.w3.org/2000/svg";
@@ -337,6 +339,7 @@ function fractal(section, f, size, r, g, b, light) {
     svg_container.appendChild(svg_output);
 
 }
+export { fractal };
 
 function molecular(section, mol, size, red, green, blue) {
 
@@ -565,6 +568,8 @@ function molecular(section, mol, size, red, green, blue) {
     main_section.appendChild(svg);
 
 }
+
+export { molecular };
 
 function calligraphic({ sect, coords, svgSize, size, colors, radius, background, circleColor }) {
 
@@ -970,3 +975,5 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     section.appendChild(wrapper);
 
 }
+
+export { calligraphic };
