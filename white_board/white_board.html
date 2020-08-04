@@ -8,7 +8,7 @@
     <script type="module" src="./graphieros0.2.js"></script>
 </head>
 
-<body> 
+<body>
 
     <!--components: empty divs-->
     <div id="LINEAR"></div>
@@ -30,7 +30,7 @@
     <div id="molecular_sequence">sro kfa du srei ktu foi ksi</div>
 
     <!--calligraphic-->
-    <div id="calligraphic_sequence">zx-ws-qe ze-ew-wx-xz-qd ws-sx-xw-qz-ze-ed</div>
+    <div id="calligraphic_sequence">zx-ws-qe ze-ew-wx-xz-qd ws-sx-xw-qz-ze-ed zs-sd-ws</div>
 
 
     <!--function calls-->
@@ -38,9 +38,9 @@
     <script type="module">
         import { linear, fractal, molecular, calligraphic } from './graphieros0.2.js';
 
-        let greenMagic = { color: [100, 200, 100], size: 30, container: 'linear_sequence', section: 'LINEAR'};
-        
-        linear({...greenMagic});
+        let greenMagic = { color: [100, 200, 100], size: 30, container: 'linear_sequence', section: 'LINEAR' };
+
+        linear({ ...greenMagic });
         greenMagic.section = 'LINEAR1';
         greenMagic.container = 'linear_sequence1';
         greenMagic.size = "";
@@ -52,17 +52,19 @@
         //molecular parameters: component, string coordinates, size, rgb colors
         molecular("MOLECULAR", "molecular_sequence", 200, 0, 0, 0);
 
-        let calli_0 = { 
+        let calli_0 = {
             sect: 'CALLIGRAPHIC',
             coords: 'calligraphic_sequence',
             size: 40,
             radius: '',
-            colors: [200,200,200],
+            colors: [200, 200, 200],
             background: '',
-            svgSize: 200,
+            svgSize: 400,
+            light: false,
+            intensity: 1.3,
         };
 
-        calligraphic({...calli_0});
+        calligraphic({ ...calli_0 });
     </script>
 
 </body>

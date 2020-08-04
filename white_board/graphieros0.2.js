@@ -567,7 +567,7 @@ function molecular(section, mol, size, red, green, blue) {
 }
 export { molecular };
 
-function calligraphic({ sect, coords, svgSize, size, colors, radius, background }) {
+function calligraphic({ sect, coords, svgSize, size, colors, radius, background, light, intensity }) {
 
     let [red, green, blue] = colors;
 
@@ -578,6 +578,8 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background 
     radius = radius || size / 5.5;
     background = background || "transparent";
     svgSize = svgSize || 100;
+    light = light || false;
+    intensity = intensity || 1.3;
 
     let glyph_color = `rgb(${red},${green},${blue})`;
     const section = document.getElementById(sect);
@@ -639,9 +641,16 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background 
             x_equShift /= 2;
             y_equShift /= 2;
 
-            colors[0] /= 1.3;
-            colors[1] /=1.3;
-            colors[2] /= 1.3;
+            if(light === true) {
+                colors[0] *= intensity;
+                colors[1] *= intensity;
+                colors[2] *= intensity;
+            }else{
+                colors[0] /= intensity;
+                colors[1] /= intensity;
+                colors[2] /= intensity;
+            }
+            
 
             stroke_defs();
 
