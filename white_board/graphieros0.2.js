@@ -3310,8 +3310,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             SVG.appendChild(g);
         }
 
-
-
         let straight_deviation = size * 0.18;
         let x_sideShift = size * 0.16;
         let y_sideShift = size * 0.09;
