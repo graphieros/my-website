@@ -23,8 +23,6 @@ include css responsive styling
 
 import {a,q,w,l,lm,m,rm,r,graphieros_dictionnary } from './graphieros_dictionnary.js';
 
-console.log(graphieros_dictionnary);
-
 
 function linear({ section, container, size = 50, color }) {
         let [red, green, blue] = color;
@@ -208,7 +206,6 @@ function linear({ section, container, size = 50, color }) {
         }
 
 };
-
 export { linear };
 
 function fractal(section, f, size, r, g, b, light) {
@@ -568,7 +565,6 @@ function molecular(section, mol, size, red, green, blue) {
     main_section.appendChild(svg);
 
 }
-
 export { molecular };
 
 function calligraphic({ sect, coords, svgSize, size, colors, radius, background, circleColor }) {
@@ -599,29 +595,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
     SVG.setAttributeNS(null, "stroke", `rgb(${glyph_color})`);
-
-    let g = document.createElementNS(xmlns, "g");
-
-    // g.innerHTML += S_d0_d1;
-    // g.innerHTML += S_d0_d2;
-    // g.innerHTML += S_d0_d3;
-    // g.innerHTML += S_d0_d4;
-    // g.innerHTML += S_d0_d5;
-    // g.innerHTML += S_d0_d6;
-    // g.innerHTML += S_d1_d2;
-    // g.innerHTML += S_d2_d3;
-    // g.innerHTML += S_d3_d4;
-    // g.innerHTML += S_d4_d5;
-    // g.innerHTML += S_d5_d6;
-    // g.innerHTML += S_d6_d1;
-    // g.innerHTML += S_d2_d6;
-    // g.innerHTML += S_d3_d5;
-    // g.innerHTML += S_d1_d3;
-    // g.innerHTML += S_d4_d6;
-    // g.innerHTML += S_d2_d4;
-    // g.innerHTML += S_d5_d1;
-    // console.log(g);
-    //translate coords
 
     let raw_data = coordinates.innerHTML;
     let lines = raw_data.split(" ");
@@ -975,5 +948,4 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     section.appendChild(wrapper);
 
 }
-
 export { calligraphic };
