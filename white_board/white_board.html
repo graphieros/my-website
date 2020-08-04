@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>White Board</title>
+    <script src="graphieros0.2.js"></script>
+</head>
+
+<body>
+
+    <!--components: empty divs-->
+    <div id="LINEAR"></div>
+    <div id="LINEAR1"></div>
+    <div id="FRACTAL"></div>
+    <div id="MOLECULAR"></div>
+    <div id="CALLIGRAPHIC"></div>
+
+
+    <!--string coordinates-->
+    <!--linear: use true phonology, use dash to link glyphs from same word. needs to have a CLASSNAME and not an ID-->
+    <div class="linear_sequence">ka-tsi ma-tsi</div>
+    <div class="linear_sequence">ka-tsi ma-tsi</div>
+
+    <!--fractal: use azerty keyboard coordinates to draw glyphs (WQZEDXS). Dashes separate sequence of a same glyph-->
+    <div id="fractal_sequence">s s s s</div>
+
+    <!--molecular: use true phonology, just separate with spaces. 7 glyphs max-->
+    <div id="molecular_sequence">sro kfa du srei ktu foi ksi</div>
+
+    <!--calligraphic-->
+    <div id="calligraphic_sequence">zx-ws-qe qz-ze-ed-dx-xw-wq</div>
+
+
+    <!--function calls-->
+
+    <script>
+        let greenMagic = { color: [100, 200, 100], size: 50, container: 'linear_sequence', section: 'LINEAR'};
+        
+        linear({...greenMagic});
+        greenMagic.section = 'LINEAR1';
+        greenMagic.container = 'linear_sequence1';
+        greenMagic.size = "30";
+        linear({ ...greenMagic });
+
+        //fractal parameters: component, string coordinates, size, rgb colors, null = to black, 1 = to white
+        fractal("FRACTAL", "fractal_sequence", 200, 200, 200, 200, null);
+
+        //molecular parameters: component, string coordinates, size, rgb colors
+        molecular("MOLECULAR", "molecular_sequence", 200, 0, 0, 0);
+
+        let calli_0 = { 
+            sect: 'CALLIGRAPHIC',
+            coords: 'calligraphic_sequence',
+            size: 40,
+            radius: '',
+            colors: [],
+            background: '',
+            svgSize: 200,
+        };
+
+        calligraphic({...calli_0});
+
+        let calli_1 = {
+            sect: 'CALLIGRAPHIC',
+            coords: 'calligraphic_sequence',
+            size: 40,
+            svgSize: 100,
+            colors: [100,120,140],
+        }
+        calligraphic({...calli_1})
+    </script>
+
+</body>
+
+</html>
