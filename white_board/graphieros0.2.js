@@ -3227,7 +3227,7 @@ function molecular(section, mol, size, red, green, blue) {
 
 }
 
-function calligraphic({ sect, coords, svgSize, size, colors, radius, background }) {
+function calligraphic({ sect, coords, svgSize, size, colors, radius, background, circleColor }) {
 
     let [red, green, blue] = colors;
 
@@ -3238,6 +3238,7 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background 
     radius = radius || size / 5.5;
     background = background || "transparent";
     svgSize = svgSize || 100;
+    circleColor = circleColor || colors;
 
     let glyph_color = `rgb(${red},${green},${blue})`;
     const section = document.getElementById(sect);
@@ -3247,219 +3248,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background 
     const xmlns = "http://www.w3.org/2000/svg";
     const _p = `<path style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;fill:rgb(${colors});" d="M `;
     const p_ = '"/>';
-
-    /* 
-
-      d2 d3
-    d1 d0 d4
-      d6 d5
-
-    */
-
-
-    let d0 = [m, q],
-        d1 = [l, q],
-        d2 = [lm, a],
-        d3 = [rm, a],
-        d4 = [r, q],
-        d5 = [rm, w],
-        d6 = [lm, w];
-
-    let circle0 = document.createElementNS(xmlns, "circle");
-    circle0.setAttributeNS(null, "cx", d0[0]);
-    circle0.setAttributeNS(null, "cy", d0[1]);
-    circle0.setAttributeNS(null, "r", radius);
-    circle0.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let circle1 = document.createElementNS(xmlns, "circle");
-    circle1.setAttributeNS(null, "cx", d1[0]);
-    circle1.setAttributeNS(null, "cy", d1[1]);
-    circle1.setAttributeNS(null, "r", radius);
-    circle1.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let circle2 = document.createElementNS(xmlns, "circle");
-    circle2.setAttributeNS(null, "cx", d2[0]);
-    circle2.setAttributeNS(null, "cy", d2[1]);
-    circle2.setAttributeNS(null, "r", radius);
-    circle2.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let circle3 = document.createElementNS(xmlns, "circle");
-    circle3.setAttributeNS(null, "cx", d3[0]);
-    circle3.setAttributeNS(null, "cy", d3[1]);
-    circle3.setAttributeNS(null, "r", radius);
-    circle3.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let circle4 = document.createElementNS(xmlns, "circle");
-    circle4.setAttributeNS(null, "cx", d4[0]);
-    circle4.setAttributeNS(null, "cy", d4[1]);
-    circle4.setAttributeNS(null, "r", radius);
-    circle4.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let circle5 = document.createElementNS(xmlns, "circle");
-    circle5.setAttributeNS(null, "cx", d5[0]);
-    circle5.setAttributeNS(null, "cy", d5[1]);
-    circle5.setAttributeNS(null, "r", radius);
-    circle5.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let circle6 = document.createElementNS(xmlns, "circle");
-    circle6.setAttributeNS(null, "cx", d6[0]);
-    circle6.setAttributeNS(null, "cy", d6[1]);
-    circle6.setAttributeNS(null, "r", radius);
-    circle6.setAttributeNS(null, "fill", `rgb(${colors})`);
-
-    let straight_deviation = size * 0.18;
-    let x_sideShift = size * 0.16;
-    let y_sideShift = size * 0.09;
-    let x_equShift = size * 0.1;
-    let y_equShift = size * 0.15;
-
-    // strokes definition
-    let S_d0_d1 = `${_p}
-                    ${d0[0]} ${d0[1] + straight_deviation}, 
-                    ${d0[0]} ${d0[1] - straight_deviation},
-                    ${d1[0]} ${d1[1] + straight_deviation},
-                    ${d1[0]} ${d1[1] - straight_deviation} 
-                    Z${p_}`;
-
-    let S_d1_d4 = `${_p}
-                    ${d1[0]} ${d1[1] + straight_deviation}, 
-                    ${d1[0]} ${d1[1] - straight_deviation},
-                    ${d4[0]} ${d4[1] + straight_deviation},
-                    ${d4[0]} ${d4[1] - straight_deviation} 
-                    Z${p_}`;
-
-    let S_d0_d2 = `${_p}
-                    ${d0[0] - x_sideShift} ${d0[1] + y_sideShift},
-                    ${d0[0] + x_sideShift} ${d0[1] - y_sideShift},
-                    ${d2[0] - x_sideShift} ${d2[1] + y_sideShift},
-                    ${d2[0] + x_sideShift} ${d2[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d2_d5 = `${_p}
-                    ${d2[0] - x_sideShift} ${d2[1] + y_sideShift},
-                    ${d2[0] + x_sideShift} ${d2[1] - y_sideShift},
-                    ${d5[0] - x_sideShift} ${d5[1] + y_sideShift},
-                    ${d5[0] + x_sideShift} ${d5[1] - y_sideShift}
-                    Z${p_}`;               
-
-    let S_d0_d3 = `${_p}
-                    ${d0[0] + x_sideShift} ${d0[1] + y_sideShift},
-                    ${d0[0] - x_sideShift} ${d0[1] - y_sideShift},
-                    ${d3[0] + x_sideShift} ${d3[1] + y_sideShift},
-                    ${d3[0] - x_sideShift} ${d3[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d3_d6 = `${_p}
-                    ${d3[0] + x_sideShift} ${d3[1] + y_sideShift},
-                    ${d3[0] - x_sideShift} ${d3[1] - y_sideShift},
-                    ${d6[0] + x_sideShift} ${d6[1] + y_sideShift},
-                    ${d6[0] - x_sideShift} ${d6[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d0_d4 = `${_p}
-                    ${d0[0]} ${d0[1] + straight_deviation}, 
-                    ${d0[0]} ${d0[1] - straight_deviation},
-                    ${d4[0]} ${d4[1] + straight_deviation},
-                    ${d4[0]} ${d4[1] - straight_deviation} 
-                    Z${p_}`;
-
-    let S_d0_d5 = `${_p}
-                    ${d0[0] - x_sideShift} ${d0[1] + y_sideShift},
-                    ${d0[0] + x_sideShift} ${d0[1] - y_sideShift},
-                    ${d5[0] - x_sideShift} ${d5[1] + y_sideShift},
-                    ${d5[0] + x_sideShift} ${d5[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d0_d6 = `${_p}
-                    ${d0[0] + x_sideShift} ${d0[1] + y_sideShift},
-                    ${d0[0] - x_sideShift} ${d0[1] - y_sideShift},
-                    ${d6[0] + x_sideShift} ${d6[1] + y_sideShift},
-                    ${d6[0] - x_sideShift} ${d6[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d1_d2 = `${_p}
-                    ${d1[0] + x_sideShift} ${d1[1] + y_sideShift},
-                    ${d1[0] - x_sideShift} ${d1[1] - y_sideShift},
-                    ${d2[0] + x_sideShift} ${d2[1] + y_sideShift},
-                    ${d2[0] - x_sideShift} ${d2[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d2_d3 = `${_p}
-                    ${d2[0]} ${d2[1] + straight_deviation}, 
-                    ${d2[0]} ${d2[1] - straight_deviation},
-                    ${d3[0]} ${d3[1] + straight_deviation},
-                    ${d3[0]} ${d3[1] - straight_deviation} 
-                    Z${p_}`;
-
-    let S_d3_d4 = `${_p}
-                    ${d3[0] - x_sideShift} ${d3[1] + y_sideShift},
-                    ${d3[0] + x_sideShift} ${d3[1] - y_sideShift},
-                    ${d4[0] - x_sideShift} ${d4[1] + y_sideShift},
-                    ${d4[0] + x_sideShift} ${d4[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d4_d5 = `${_p}
-                    ${d4[0] + x_sideShift} ${d4[1] + y_sideShift},
-                    ${d4[0] - x_sideShift} ${d4[1] - y_sideShift},
-                    ${d5[0] + x_sideShift} ${d5[1] + y_sideShift},
-                    ${d5[0] - x_sideShift} ${d5[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d5_d6 = `${_p}
-                    ${d5[0]} ${d5[1] + straight_deviation}, 
-                    ${d5[0]} ${d5[1] - straight_deviation},
-                    ${d6[0]} ${d6[1] + straight_deviation},
-                    ${d6[0]} ${d6[1] - straight_deviation} 
-                    Z${p_}`;
-
-    let S_d6_d1 = `${_p}
-                    ${d6[0] - x_sideShift} ${d6[1] + y_sideShift},
-                    ${d6[0] + x_sideShift} ${d6[1] - y_sideShift},
-                    ${d1[0] - x_sideShift} ${d1[1] + y_sideShift},
-                    ${d1[0] + x_sideShift} ${d1[1] - y_sideShift}
-                    Z${p_}`;
-
-    let S_d2_d6 = `${_p}
-                    ${d2[0] + straight_deviation} ${d2[1]},
-                    ${d2[0] - straight_deviation} ${d2[1]},
-                    ${d6[0] + straight_deviation} ${d6[1]},
-                    ${d6[0] - straight_deviation} ${d6[1]}
-                    Z${p_}`;
-
-    let S_d3_d5 = `${_p}
-                    ${d3[0] + straight_deviation} ${d3[1]},
-                    ${d3[0] - straight_deviation} ${d3[1]},
-                    ${d5[0] + straight_deviation} ${d5[1]},
-                    ${d5[0] - straight_deviation} ${d5[1]}
-                    Z${p_}`;
-
-    let S_d1_d3 = `${_p}
-                    ${d1[0] - x_equShift} ${d1[1] - y_equShift},
-                    ${d1[0] + x_equShift} ${d1[1] + y_equShift},
-                    ${d3[0] - x_equShift} ${d3[1] - y_equShift},
-                    ${d3[0] + x_equShift} ${d3[1] + y_equShift}
-                    Z${p_}`;
-
-    let S_d4_d6 = `${_p}
-                    ${d4[0] - x_equShift} ${d4[1] - y_equShift},
-                    ${d4[0] + x_equShift} ${d4[1] + y_equShift},
-                    ${d6[0] - x_equShift} ${d6[1] - y_equShift},
-                    ${d6[0] + x_equShift} ${d6[1] + y_equShift}
-                    Z${p_}`;
-
-    let S_d2_d4 = `${_p}
-                    ${d2[0] + x_equShift} ${d2[1] - y_equShift},
-                    ${d2[0] - x_equShift} ${d2[1] + y_equShift},
-                    ${d4[0] + x_equShift} ${d4[1] - y_equShift},
-                    ${d4[0] - x_equShift} ${d4[1] + y_equShift}
-                    Z${p_}`;
-
-    let S_d5_d1 = `${_p}
-                    ${d5[0] + x_equShift} ${d5[1] - y_equShift},
-                    ${d5[0] - x_equShift} ${d5[1] + y_equShift},
-                    ${d1[0] + x_equShift} ${d1[1] - y_equShift},
-                    ${d1[0] - x_equShift} ${d1[1] + y_equShift}
-                    Z${p_}`;
 
     const SVG = document.createElementNS(xmlns, "svg");
     SVG.setAttributeNS(null, "viewBox", `0 0 260 260`);
@@ -3491,20 +3279,273 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background 
     // console.log(g);
     //translate coords
 
-    function draw(element) {
-        let g = document.createElementNS(xmlns, "g");
-        g.innerHTML += element;
-        SVG.appendChild(g);
-    }
-
-    function fractalize() {
-    }
+    let raw_data = coordinates.innerHTML;
+    let lines = raw_data.split(" ");
 
     (function translate_data_to_coordinates() {
-        let raw_data = coordinates.innerHTML;
-        let lines = raw_data.split(" ");
+
+        /* 
+
+         d2 d3
+        d1 d0 d4
+         d6 d5
+
+        */
+
+        let d0 = [m, q],
+            d1 = [l, q],
+            d2 = [lm, a],
+            d3 = [rm, a],
+            d4 = [r, q],
+            d5 = [rm, w],
+            d6 = [lm, w];
+
+        function fractalize() {
+            //?
+        }
+
+        function draw(element) {
+            let g = document.createElementNS(xmlns, "g");
+            g.innerHTML += element;
+            SVG.appendChild(g);
+        }
+
+
+
+        let straight_deviation = size * 0.18;
+        let x_sideShift = size * 0.16;
+        let y_sideShift = size * 0.09;
+        let x_equShift = size * 0.1;
+        let y_equShift = size * 0.15;
+
+        let S_d0_d1,
+            S_d1_d4,
+            S_d0_d2,
+            S_d2_d5,
+            S_d0_d3,
+            S_d3_d6,
+            S_d0_d4,
+            S_d0_d5,
+            S_d0_d6,
+            S_d1_d2,
+            S_d2_d3,
+            S_d3_d4,
+            S_d4_d5,
+            S_d5_d6,
+            S_d6_d1,
+            S_d2_d6,
+            S_d3_d5,
+            S_d1_d3,
+            S_d4_d6,
+            S_d2_d4,
+            S_d5_d1;
+
+        // strokes definition
+        (function stroke_defs() {
+            S_d0_d1 = `${_p}
+                        ${d0[0]} ${d0[1] + straight_deviation}, 
+                        ${d0[0]} ${d0[1] - straight_deviation},
+                        ${d1[0]} ${d1[1] + straight_deviation},
+                        ${d1[0]} ${d1[1] - straight_deviation} 
+                        Z${p_}`;
+
+            S_d1_d4 = `${_p}
+                        ${d1[0]} ${d1[1] + straight_deviation}, 
+                        ${d1[0]} ${d1[1] - straight_deviation},
+                        ${d4[0]} ${d4[1] + straight_deviation},
+                        ${d4[0]} ${d4[1] - straight_deviation} 
+                        Z${p_}`;
+
+            S_d0_d2 = `${_p}
+                        ${d0[0] - x_sideShift} ${d0[1] + y_sideShift},
+                        ${d0[0] + x_sideShift} ${d0[1] - y_sideShift},
+                        ${d2[0] - x_sideShift} ${d2[1] + y_sideShift},
+                        ${d2[0] + x_sideShift} ${d2[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d2_d5 = `${_p}
+                        ${d2[0] - x_sideShift} ${d2[1] + y_sideShift},
+                        ${d2[0] + x_sideShift} ${d2[1] - y_sideShift},
+                        ${d5[0] - x_sideShift} ${d5[1] + y_sideShift},
+                        ${d5[0] + x_sideShift} ${d5[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d0_d3 = `${_p}
+                        ${d0[0] + x_sideShift} ${d0[1] + y_sideShift},
+                        ${d0[0] - x_sideShift} ${d0[1] - y_sideShift},
+                        ${d3[0] + x_sideShift} ${d3[1] + y_sideShift},
+                        ${d3[0] - x_sideShift} ${d3[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d3_d6 = `${_p}
+                        ${d3[0] + x_sideShift} ${d3[1] + y_sideShift},
+                        ${d3[0] - x_sideShift} ${d3[1] - y_sideShift},
+                        ${d6[0] + x_sideShift} ${d6[1] + y_sideShift},
+                        ${d6[0] - x_sideShift} ${d6[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d0_d4 = `${_p}
+                        ${d0[0]} ${d0[1] + straight_deviation}, 
+                        ${d0[0]} ${d0[1] - straight_deviation},
+                        ${d4[0]} ${d4[1] + straight_deviation},
+                        ${d4[0]} ${d4[1] - straight_deviation} 
+                        Z${p_}`;
+
+            S_d0_d5 = `${_p}
+                        ${d0[0] - x_sideShift} ${d0[1] + y_sideShift},
+                        ${d0[0] + x_sideShift} ${d0[1] - y_sideShift},
+                        ${d5[0] - x_sideShift} ${d5[1] + y_sideShift},
+                        ${d5[0] + x_sideShift} ${d5[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d0_d6 = `${_p}
+                        ${d0[0] + x_sideShift} ${d0[1] + y_sideShift},
+                        ${d0[0] - x_sideShift} ${d0[1] - y_sideShift},
+                        ${d6[0] + x_sideShift} ${d6[1] + y_sideShift},
+                        ${d6[0] - x_sideShift} ${d6[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d1_d2 = `${_p}
+                        ${d1[0] + x_sideShift} ${d1[1] + y_sideShift},
+                        ${d1[0] - x_sideShift} ${d1[1] - y_sideShift},
+                        ${d2[0] + x_sideShift} ${d2[1] + y_sideShift},
+                        ${d2[0] - x_sideShift} ${d2[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d2_d3 = `${_p}
+                        ${d2[0]} ${d2[1] + straight_deviation}, 
+                        ${d2[0]} ${d2[1] - straight_deviation},
+                        ${d3[0]} ${d3[1] + straight_deviation},
+                        ${d3[0]} ${d3[1] - straight_deviation} 
+                        Z${p_}`;
+
+            S_d3_d4 = `${_p}
+                        ${d3[0] - x_sideShift} ${d3[1] + y_sideShift},
+                        ${d3[0] + x_sideShift} ${d3[1] - y_sideShift},
+                        ${d4[0] - x_sideShift} ${d4[1] + y_sideShift},
+                        ${d4[0] + x_sideShift} ${d4[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d4_d5 = `${_p}
+                        ${d4[0] + x_sideShift} ${d4[1] + y_sideShift},
+                        ${d4[0] - x_sideShift} ${d4[1] - y_sideShift},
+                        ${d5[0] + x_sideShift} ${d5[1] + y_sideShift},
+                        ${d5[0] - x_sideShift} ${d5[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d5_d6 = `${_p}
+                        ${d5[0]} ${d5[1] + straight_deviation}, 
+                        ${d5[0]} ${d5[1] - straight_deviation},
+                        ${d6[0]} ${d6[1] + straight_deviation},
+                        ${d6[0]} ${d6[1] - straight_deviation} 
+                        Z${p_}`;
+
+            S_d6_d1 = `${_p}
+                        ${d6[0] - x_sideShift} ${d6[1] + y_sideShift},
+                        ${d6[0] + x_sideShift} ${d6[1] - y_sideShift},
+                        ${d1[0] - x_sideShift} ${d1[1] + y_sideShift},
+                        ${d1[0] + x_sideShift} ${d1[1] - y_sideShift}
+                        Z${p_}`;
+
+            S_d2_d6 = `${_p}
+                        ${d2[0] + straight_deviation} ${d2[1]},
+                        ${d2[0] - straight_deviation} ${d2[1]},
+                        ${d6[0] + straight_deviation} ${d6[1]},
+                        ${d6[0] - straight_deviation} ${d6[1]}
+                        Z${p_}`;
+
+            S_d3_d5 = `${_p}
+                        ${d3[0] + straight_deviation} ${d3[1]},
+                        ${d3[0] - straight_deviation} ${d3[1]},
+                        ${d5[0] + straight_deviation} ${d5[1]},
+                        ${d5[0] - straight_deviation} ${d5[1]}
+                        Z${p_}`;
+
+            S_d1_d3 = `${_p}
+                        ${d1[0] - x_equShift} ${d1[1] - y_equShift},
+                        ${d1[0] + x_equShift} ${d1[1] + y_equShift},
+                        ${d3[0] - x_equShift} ${d3[1] - y_equShift},
+                        ${d3[0] + x_equShift} ${d3[1] + y_equShift}
+                        Z${p_}`;
+
+            S_d4_d6 = `${_p}
+                        ${d4[0] - x_equShift} ${d4[1] - y_equShift},
+                        ${d4[0] + x_equShift} ${d4[1] + y_equShift},
+                        ${d6[0] - x_equShift} ${d6[1] - y_equShift},
+                        ${d6[0] + x_equShift} ${d6[1] + y_equShift}
+                        Z${p_}`;
+
+            S_d2_d4 = `${_p}
+                        ${d2[0] + x_equShift} ${d2[1] - y_equShift},
+                        ${d2[0] - x_equShift} ${d2[1] + y_equShift},
+                        ${d4[0] + x_equShift} ${d4[1] - y_equShift},
+                        ${d4[0] - x_equShift} ${d4[1] + y_equShift}
+                        Z${p_}`;
+
+            S_d5_d1 = `${_p}
+                        ${d5[0] + x_equShift} ${d5[1] - y_equShift},
+                        ${d5[0] - x_equShift} ${d5[1] + y_equShift},
+                        ${d1[0] + x_equShift} ${d1[1] - y_equShift},
+                        ${d1[0] - x_equShift} ${d1[1] + y_equShift}
+                        Z${p_}`;
+        }());
 
         lines.forEach(line => {
+
+            let circle0 = document.createElementNS(xmlns, "circle");
+            let circle1 = document.createElementNS(xmlns, "circle");
+            let circle2 = document.createElementNS(xmlns, "circle");
+            let circle3 = document.createElementNS(xmlns, "circle");
+            let circle4 = document.createElementNS(xmlns, "circle");
+            let circle5 = document.createElementNS(xmlns, "circle");
+            let circle6 = document.createElementNS(xmlns, "circle");
+
+            (function circle_parameters() {
+                circle0.setAttributeNS(null, "cx", d0[0]);
+                circle0.setAttributeNS(null, "cy", d0[1]);
+                circle0.setAttributeNS(null, "r", radius);
+                circle0.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+
+
+                circle1.setAttributeNS(null, "cx", d1[0]);
+                circle1.setAttributeNS(null, "cy", d1[1]);
+                circle1.setAttributeNS(null, "r", radius);
+                circle1.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+
+
+                circle2.setAttributeNS(null, "cx", d2[0]);
+                circle2.setAttributeNS(null, "cy", d2[1]);
+                circle2.setAttributeNS(null, "r", radius);
+                circle2.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+
+
+                circle3.setAttributeNS(null, "cx", d3[0]);
+                circle3.setAttributeNS(null, "cy", d3[1]);
+                circle3.setAttributeNS(null, "r", radius);
+                circle3.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+
+
+                circle4.setAttributeNS(null, "cx", d4[0]);
+                circle4.setAttributeNS(null, "cy", d4[1]);
+                circle4.setAttributeNS(null, "r", radius);
+                circle4.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+
+
+                circle5.setAttributeNS(null, "cx", d5[0]);
+                circle5.setAttributeNS(null, "cy", d5[1]);
+                circle5.setAttributeNS(null, "r", radius);
+                circle5.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+
+
+                circle6.setAttributeNS(null, "cx", d6[0]);
+                circle6.setAttributeNS(null, "cy", d6[1]);
+                circle6.setAttributeNS(null, "r", radius);
+                circle6.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+            }());
+
+            console.log(line);
+            console.log(S_d0_d6, d0);
+
             let plots = line.split("-");
             plots.forEach(plot => {
                 if (plot === "sq" || plot === "qs") {
@@ -3537,51 +3578,54 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background 
                 if (plot === "dx" || plot === "xd") {
                     draw(S_d4_d5);
                 }
-                if(plot === "xw" || plot === "wx") {
+                if (plot === "xw" || plot === "wx") {
                     draw(S_d5_d6);
                 }
-                if(plot === "wq" || plot === "qw") {
+                if (plot === "wq" || plot === "qw") {
                     draw(S_d6_d1);
                 }
-                if(plot === "wz" || plot === "zw") {
+                if (plot === "wz" || plot === "zw") {
                     draw(S_d2_d6);
                 }
-                if(plot === "ex" || plot === "xe") {
+                if (plot === "ex" || plot === "xe") {
                     draw(S_d3_d5);
                 }
-                if(plot === "qe" || plot === "eq") {
+                if (plot === "qe" || plot === "eq") {
                     draw(S_d1_d3);
                 }
-                if(plot === "wd" || plot === "dw") {
+                if (plot === "wd" || plot === "dw") {
                     draw(S_d4_d6);
                 }
-                if(plot === "xq" || plot === "qx") {
+                if (plot === "xq" || plot === "qx") {
                     draw(S_d5_d1);
                 }
-                if(plot === "zd" || plot === "dz") {
+                if (plot === "zd" || plot === "dz") {
                     draw(S_d2_d4);
                 }
-                if(plot === "qd" || plot === "dq") {
+                if (plot === "qd" || plot === "dq") {
                     draw(S_d1_d4);
                 }
-                if(plot === "zx" || plot === "xz") {
+                if (plot === "zx" || plot === "xz") {
                     draw(S_d2_d5);
                 }
-                if(plot === "we" || plot === "ew") {
+                if (plot === "we" || plot === "ew") {
                     draw(S_d3_d6);
                 }
             });
+            SVG.appendChild(circle0);
+            SVG.appendChild(circle1);
+            SVG.appendChild(circle2);
+            SVG.appendChild(circle3);
+            SVG.appendChild(circle4);
+            SVG.appendChild(circle5);
+            SVG.appendChild(circle6);
+
+            fractalize();
         });
-        fractalize();
+
     }());
 
-    SVG.appendChild(circle0);
-    SVG.appendChild(circle1);
-    SVG.appendChild(circle2);
-    SVG.appendChild(circle3);
-    SVG.appendChild(circle4);
-    SVG.appendChild(circle5);
-    SVG.appendChild(circle6);
+
 
     let wrapper = document.createElement("DIV");
 
