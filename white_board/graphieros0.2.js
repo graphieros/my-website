@@ -567,7 +567,7 @@ function molecular(section, mol, size, red, green, blue) {
 }
 export { molecular };
 
-function calligraphic({ sect, coords, svgSize, size, colors, radius, background, circleColor }) {
+function calligraphic({ sect, coords, svgSize, size, colors, radius, background }) {
 
     let [red, green, blue] = colors;
 
@@ -578,7 +578,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     radius = radius || size / 5.5;
     background = background || "transparent";
     svgSize = svgSize || 100;
-    circleColor = circleColor || colors;
 
     let glyph_color = `rgb(${red},${green},${blue})`;
     const section = document.getElementById(sect);
@@ -586,7 +585,7 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     coordinates.style.display = "none";
 
     const xmlns = "http://www.w3.org/2000/svg";
-    const _p = `<path style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;fill:rgb(${colors});" d="M `;
+    const _p = `<path style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;" d="M `;
     const p_ = '"/>';
 
     const SVG = document.createElementNS(xmlns, "svg");
@@ -594,8 +593,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     SVG.style.background = background;
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
-    // SVG.setAttributeNS(null, "stroke", glyph_color);
-    SVG.setAttributeNS(null, "fill", glyph_color);
 
     let raw_data = coordinates.innerHTML;
     let lines = raw_data.split(" ");
@@ -618,7 +615,9 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             d5 = [rm, w],
             d6 = [lm, w];
 
-        let modified_color = colors;
+        let newRed = red,
+            newGreen = green,
+            newBlue = blue;
 
         function fractalize() {
 
@@ -640,14 +639,19 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             x_equShift /= 2;
             y_equShift /= 2;
 
-            SVG.setAttributeNS(null, "fill", `rgb(${red} ${green} ${blue})`);
+            colors[0] /= 1.3;
+            colors[1] /=1.3;
+            colors[2] /= 1.3;
 
             stroke_defs();
+
         }
 
         function draw(element) {
             let g = document.createElementNS(xmlns, "g");
             g.innerHTML += element;
+            let child = g.childNodes;
+            child[0].setAttributeNS(null, "fill", `rgb(${colors})`);
             SVG.appendChild(g);
         }
 
@@ -845,43 +849,43 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
                 circle0.setAttributeNS(null, "cx", d0[0]);
                 circle0.setAttributeNS(null, "cy", d0[1]);
                 circle0.setAttributeNS(null, "r", radius);
-                circle0.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle0.setAttributeNS(null, "fill", `rgb(${colors})`);
 
 
                 circle1.setAttributeNS(null, "cx", d1[0]);
                 circle1.setAttributeNS(null, "cy", d1[1]);
                 circle1.setAttributeNS(null, "r", radius);
-                circle1.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle1.setAttributeNS(null, "fill", `rgb(${colors})`);
 
 
                 circle2.setAttributeNS(null, "cx", d2[0]);
                 circle2.setAttributeNS(null, "cy", d2[1]);
                 circle2.setAttributeNS(null, "r", radius);
-                circle2.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle2.setAttributeNS(null, "fill", `rgb(${colors})`);
 
 
                 circle3.setAttributeNS(null, "cx", d3[0]);
                 circle3.setAttributeNS(null, "cy", d3[1]);
                 circle3.setAttributeNS(null, "r", radius);
-                circle3.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle3.setAttributeNS(null, "fill", `rgb(${colors})`);
 
 
                 circle4.setAttributeNS(null, "cx", d4[0]);
                 circle4.setAttributeNS(null, "cy", d4[1]);
                 circle4.setAttributeNS(null, "r", radius);
-                circle4.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle4.setAttributeNS(null, "fill", `rgb(${colors})`);
 
 
                 circle5.setAttributeNS(null, "cx", d5[0]);
                 circle5.setAttributeNS(null, "cy", d5[1]);
                 circle5.setAttributeNS(null, "r", radius);
-                circle5.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle5.setAttributeNS(null, "fill", `rgb(${colors})`);
 
 
                 circle6.setAttributeNS(null, "cx", d6[0]);
                 circle6.setAttributeNS(null, "cy", d6[1]);
                 circle6.setAttributeNS(null, "r", radius);
-                circle6.setAttributeNS(null, "fill", `rgb(${circleColor})`);
+                circle6.setAttributeNS(null, "fill", `rgb(${colors})`);
             }());
 
             let plots = line.split("-");
@@ -950,6 +954,7 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
                     draw(S_d3_d6);
                 }
             });
+
             SVG.appendChild(circle0);
             SVG.appendChild(circle1);
             SVG.appendChild(circle2);
