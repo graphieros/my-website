@@ -594,7 +594,8 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
     SVG.style.background = background;
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
-    SVG.setAttributeNS(null, "stroke", `rgb(${glyph_color})`);
+    // SVG.setAttributeNS(null, "stroke", glyph_color);
+    SVG.setAttributeNS(null, "fill", glyph_color);
 
     let raw_data = coordinates.innerHTML;
     let lines = raw_data.split(" ");
@@ -617,6 +618,8 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             d5 = [rm, w],
             d6 = [lm, w];
 
+        let modified_color = colors;
+
         function fractalize() {
 
             d1[0] += ((m - d1[0]) / 2);
@@ -630,14 +633,14 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             d6[0] += ((m - d6[0]) / 2);
             d6[1] = q - ((q - d6[1]) / 2);
 
-            console.log(d2);
-
             radius /= 2;
             straight_deviation /= 2;
             x_sideShift /= 2;
             y_sideShift /= 2;
             x_equShift /= 2;
             y_equShift /= 2;
+
+            SVG.setAttributeNS(null, "fill", `rgb(${red} ${green} ${blue})`);
 
             stroke_defs();
         }
