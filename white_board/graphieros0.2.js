@@ -21,189 +21,189 @@ include css responsive styling
 // let rm = 173; //x_right_mid
 // let r = 218; //x_right
 
-import {a,q,w,l,lm,m,rm,r,graphieros_dictionnary } from './graphieros_dictionnary.js';
+import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
 
 
 function linear({ section, container, size = 50, color }) {
-        let [red, green, blue] = color;
-        // console.log(color);
-        red = red || 100;
-        green = green || 100;
-        blue = blue || 100;
-        // console.log(section, container);
-        const main_section = document.getElementById(section);
-        let adjust = size / 2.631578947368421;
+    let [red, green, blue] = color;
+    // console.log(color);
+    red = red || 100;
+    green = green || 100;
+    blue = blue || 100;
+    // console.log(section, container);
+    const main_section = document.getElementById(section);
+    let adjust = size / 2.631578947368421;
 
-        const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
-        const p_ = '"/>';
+    const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
+    const p_ = '"/>';
 
-        let glyph_color = `rgb(${red},${green},${blue})`;
+    let glyph_color = `rgb(${red},${green},${blue})`;
 
-        let glyph_database = graphieros_dictionnary.slice(0);
+    let glyph_database = graphieros_dictionnary.slice(0);
 
-        const xmlns = "http://www.w3.org/2000/svg";
+    const xmlns = "http://www.w3.org/2000/svg";
 
-        const graphieros_text = document.getElementsByClassName(container);
+    const graphieros_text = document.getElementsByClassName(container);
 
-        (function process_text_to_glyphs() {
+    (function process_text_to_glyphs() {
 
 
-            for (let i = 0; i < graphieros_text.length; i += 1) {
+        for (let i = 0; i < graphieros_text.length; i += 1) {
 
-                graphieros_text[i].style.display = "none";
+            graphieros_text[i].style.display = "none";
 
-                let svg_paragraph = document.createElementNS(xmlns, "svg");
+            let svg_paragraph = document.createElementNS(xmlns, "svg");
 
-                svg_paragraph.style.width = `${size}px`;
-                svg_paragraph.style.background = "transparent";
-                svg_paragraph.style.stroke = glyph_color;
-                svg_paragraph.style.strokeLinejoin = "round";
-                svg_paragraph.style.strokeLinecap = "round";
-                svg_paragraph.style.fill = "none";
+            svg_paragraph.style.width = `${size}px`;
+            svg_paragraph.style.background = "transparent";
+            svg_paragraph.style.stroke = glyph_color;
+            svg_paragraph.style.strokeLinejoin = "round";
+            svg_paragraph.style.strokeLinecap = "round";
+            svg_paragraph.style.fill = "none";
 
-                let rebuilt_glyphs_library = [];
-                let one_array = graphieros_text[i].innerHTML;
-                let one_array_with_spaces = one_array.split(" ");
-                let one_array_without_spaces = [];
+            let rebuilt_glyphs_library = [];
+            let one_array = graphieros_text[i].innerHTML;
+            let one_array_with_spaces = one_array.split(" ");
+            let one_array_without_spaces = [];
 
-                for (let j = 0; j < one_array_with_spaces.length; j += 1) {
+            for (let j = 0; j < one_array_with_spaces.length; j += 1) {
 
-                    function there_is_some_text() {
-                        return one_array_with_spaces[j];
-                    }
-
-                    if (there_is_some_text()) {
-                        one_array_without_spaces.push(one_array_with_spaces[j]);
-                    }
+                function there_is_some_text() {
+                    return one_array_with_spaces[j];
                 }
 
-                let words_lengths = [];
+                if (there_is_some_text()) {
+                    one_array_without_spaces.push(one_array_with_spaces[j]);
+                }
+            }
 
-                for (let j = 0; j < one_array_without_spaces.length; j += 1) {
+            let words_lengths = [];
+
+            for (let j = 0; j < one_array_without_spaces.length; j += 1) {
 
 
-                    let one_word_raw_list = one_array_without_spaces[j].split("-");
-                    let rebuilt_word = [];
+                let one_word_raw_list = one_array_without_spaces[j].split("-");
+                let rebuilt_word = [];
 
-                    words_lengths.push(one_word_raw_list.length);
+                words_lengths.push(one_word_raw_list.length);
 
-                    for (let k = 0; k < one_word_raw_list.length; k += 1) {
+                for (let k = 0; k < one_word_raw_list.length; k += 1) {
 
-                        let one_rebuilt_phono = `_${one_word_raw_list[k]}`;
+                    let one_rebuilt_phono = `_${one_word_raw_list[k]}`;
 
-                        if (one_rebuilt_phono !== "_") {
+                    if (one_rebuilt_phono !== "_") {
 
-                            rebuilt_word.push(one_rebuilt_phono);
+                        rebuilt_word.push(one_rebuilt_phono);
 
+                    }
+
+                }
+
+                rebuilt_glyphs_library.push(rebuilt_word);
+
+            }
+
+            let incr = 0;
+            rebuilt_glyphs_library.forEach(glyph_array => {
+
+                let center_incr = 0;
+
+                glyph_array.forEach((glyph, n) => {
+
+                    glyph_database.forEach(db_element => {
+
+                        function this_phono_is_in_database() {
+                            return glyph === db_element.name;
                         }
 
-                    }
+                        if (this_phono_is_in_database()) {
 
-                    rebuilt_glyphs_library.push(rebuilt_word);
+                            let g = document.createElementNS(xmlns, "g");
+                            g.setAttributeNS(null, "class", "word");
+                            g.id = db_element.name;
+                            let db_paths = db_element.path;
 
-                }
+                            db_paths.forEach((db_path) => {
 
-                let incr = 0;
-                rebuilt_glyphs_library.forEach(glyph_array => {
+                                let new_path = [];
 
-                    let center_incr = 0;
+                                db_path.forEach((coordinate, i) => {
 
-                    glyph_array.forEach((glyph, n) => {
-
-                        glyph_database.forEach(db_element => {
-
-                            function this_phono_is_in_database() {
-                                return glyph === db_element.name;
-                            }
-
-                            if (this_phono_is_in_database()) {
-
-                                let g = document.createElementNS(xmlns, "g");
-                                g.setAttributeNS(null, "class", "word");
-                                g.id = db_element.name;
-                                let db_paths = db_element.path;
-
-                                db_paths.forEach((db_path) => {
-
-                                    let new_path = [];
-
-                                    db_path.forEach((coordinate, i) => {
-
-                                        if (i % 2 === 1) {
-                                            coordinate += incr;
-                                            new_path.push(coordinate);
-                                        }
-                                        else {
-                                            new_path.push(coordinate);
-                                        }
-
-                                    });
-
-                                    g.innerHTML += `${_p}${new_path}${p_}$`;
-                                    svg_paragraph.appendChild(g);
+                                    if (i % 2 === 1) {
+                                        coordinate += incr;
+                                        new_path.push(coordinate);
+                                    }
+                                    else {
+                                        new_path.push(coordinate);
+                                    }
 
                                 });
 
-                            }
-                        });
+                                g.innerHTML += `${_p}${new_path}${p_}$`;
+                                svg_paragraph.appendChild(g);
 
-                        incr += 200;
-                        center_incr += 200;
-                        svg_paragraph.setAttributeNS(null, "viewBox", `0 0 260 ${(incr + 60)}`);
+                            });
 
+                        }
                     });
-                });
 
-                let memory = [];
-
-                words_lengths.forEach((word, i) => {
-
-                    let x = 128;
-                    let y = 128;
-                    let y_start;
-
-                    if (i === 0) {
-                        y_start = y + (i * word);
-                    }
-                    else {
-                        y_start = memory.pop() + 200;
-                    }
-
-                    let y_end = y_start + ((word - 1) * 200);
-                    memory.push(y_end);
-                    let g = document.createElementNS(xmlns, "g");
-                    g.setAttributeNS(null, "class", "link");
-                    g.innerHTML += `${_p}${x} ${y_start},${x} ${y_end}${p_}`;
-                    svg_paragraph.appendChild(g);
+                    incr += 200;
+                    center_incr += 200;
+                    svg_paragraph.setAttributeNS(null, "viewBox", `0 0 260 ${(incr + 60)}`);
 
                 });
+            });
 
-                let svg_wrapper = document.createElement("DIV");
-                svg_wrapper.style.boxSizing = "border-box";
-                svg_wrapper.className = `svg_paragraph_${section}`;
-                svg_wrapper.appendChild(svg_paragraph);
-                main_section.appendChild(svg_wrapper);
+            let memory = [];
 
-                main_section.style.display = "grid";
-                main_section.style.justifyItems = "center";
-                // grid-class-10
-                main_section.style.gridTemplateColumns = `repeat(${graphieros_text.length},1fr)`;
-                main_section.style.width = `${size * (graphieros_text.length)}px`;
-            }
+            words_lengths.forEach((word, i) => {
 
-        } ());
+                let x = 128;
+                let y = 128;
+                let y_start;
 
+                if (i === 0) {
+                    y_start = y + (i * word);
+                }
+                else {
+                    y_start = memory.pop() + 200;
+                }
 
+                let y_end = y_start + ((word - 1) * 200);
+                memory.push(y_end);
+                let g = document.createElementNS(xmlns, "g");
+                g.setAttributeNS(null, "class", "link");
+                g.innerHTML += `${_p}${x} ${y_start},${x} ${y_end}${p_}`;
+                svg_paragraph.appendChild(g);
 
-        let all_paragraphs = document.getElementsByClassName(`svg_paragraph_${section}`);
+            });
 
-        for (let i = 0; i < all_paragraphs.length; i += 1) {
+            let svg_wrapper = document.createElement("DIV");
+            svg_wrapper.style.boxSizing = "border-box";
+            svg_wrapper.className = `svg_paragraph_${section}`;
+            svg_wrapper.appendChild(svg_paragraph);
+            main_section.appendChild(svg_wrapper);
 
-            let one_paragraph = all_paragraphs[i];
-            if (i % 2 === 1) {
-                one_paragraph.style.marginTop = `${adjust}px`;
-            }
+            main_section.style.display = "grid";
+            main_section.style.justifyItems = "center";
+            // grid-class-10
+            main_section.style.gridTemplateColumns = `repeat(${graphieros_text.length},1fr)`;
+            main_section.style.width = `${size * (graphieros_text.length)}px`;
         }
+
+    }());
+
+
+
+    let all_paragraphs = document.getElementsByClassName(`svg_paragraph_${section}`);
+
+    for (let i = 0; i < all_paragraphs.length; i += 1) {
+
+        let one_paragraph = all_paragraphs[i];
+        if (i % 2 === 1) {
+            one_paragraph.style.marginTop = `${adjust}px`;
+        }
+    }
 
 };
 export { linear };
@@ -618,7 +618,28 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             d6 = [lm, w];
 
         function fractalize() {
-            //?
+
+            d1[0] += ((m - d1[0]) / 2);
+            d4[0] -= ((d4[0] - m) / 2);
+            d2[0] += ((m - d2[0]) / 2);
+            d2[1] = q - ((q - d2[1]) / 2);
+            d3[0] -= ((d3[0] - m) / 2);
+            d3[1] = q + ((d3[1] - q) / 2);
+            d5[0] -= ((d5[0] - m) / 2);
+            d5[1] = q - ((q - d5[1]) / 2);
+            d6[0] += ((m - d6[0]) / 2);
+            d6[1] = q - ((q - d6[1]) / 2);
+
+            console.log(d2);
+
+            radius /= 2;
+            straight_deviation /= 2;
+            x_sideShift /= 2;
+            y_sideShift /= 2;
+            x_equShift /= 2;
+            y_equShift /= 2;
+
+            stroke_defs();
         }
 
         function draw(element) {
@@ -656,7 +677,7 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
             S_d5_d1;
 
         // strokes definition
-        (function stroke_defs() {
+        function stroke_defs() {
             S_d0_d1 = `${_p}
                         ${d0[0]} ${d0[1] + straight_deviation}, 
                         ${d0[0]} ${d0[1] - straight_deviation},
@@ -803,7 +824,9 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
                         ${d1[0] + x_equShift} ${d1[1] - y_equShift},
                         ${d1[0] - x_equShift} ${d1[1] + y_equShift}
                         Z${p_}`;
-        }());
+        };
+
+        stroke_defs();
 
         lines.forEach(line => {
 
@@ -857,9 +880,6 @@ function calligraphic({ sect, coords, svgSize, size, colors, radius, background,
                 circle6.setAttributeNS(null, "r", radius);
                 circle6.setAttributeNS(null, "fill", `rgb(${circleColor})`);
             }());
-
-            console.log(line);
-            console.log(S_d0_d6, d0);
 
             let plots = line.split("-");
             plots.forEach(plot => {

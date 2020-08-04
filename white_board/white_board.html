@@ -21,7 +21,7 @@
     <!--string coordinates-->
     <!--linear: use true phonology, use dash to link glyphs from same word. needs to have a CLASSNAME and not an ID-->
     <div class="linear_sequence">ka-tsi ma-tsi</div>
-    <div class="linear_sequence">ka-tsi ma-tsi</div>
+    <div class="linear_sequence">nmo-ka-tae</div>
 
     <!--fractal: use azerty keyboard coordinates to draw glyphs (WQZEDXS). Dashes separate sequence of a same glyph-->
     <div id="fractal_sequence">s s s s</div>
@@ -30,7 +30,7 @@
     <div id="molecular_sequence">sro kfa du srei ktu foi ksi</div>
 
     <!--calligraphic-->
-    <div id="calligraphic_sequence">qw-ew</div>
+    <div id="calligraphic_sequence">qz-ze-ed-dx-xw-wq-sx sx sx</div>
 
 
     <!--function calls-->
@@ -38,12 +38,12 @@
     <script type="module">
         import { linear, fractal, molecular, calligraphic } from './graphieros0.2.js';
 
-        let greenMagic = { color: [100, 200, 100], size: 50, container: 'linear_sequence', section: 'LINEAR'};
+        let greenMagic = { color: [100, 200, 100], size: 30, container: 'linear_sequence', section: 'LINEAR'};
         
         linear({...greenMagic});
         greenMagic.section = 'LINEAR1';
         greenMagic.container = 'linear_sequence1';
-        greenMagic.size = "30";
+        greenMagic.size = "";
         linear({ ...greenMagic });
 
         //fractal parameters: component, string coordinates, size, rgb colors, null = to black, 1 = to white
@@ -60,7 +60,7 @@
             colors: [],
             background: '',
             svgSize: 200,
-            circleColor: [],
+            circleColor: [255,215,0],
         };
 
         calligraphic({...calli_0});
