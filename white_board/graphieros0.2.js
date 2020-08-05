@@ -17,13 +17,13 @@ function linear({
     container,
     size,
     background,
-    color,
+    colors,
     padding,
     cartouche,
     border
 }) {
 
-    let [red, green, blue] = color;
+    let [red, green, blue] = colors;
     red = red || 100;
     green = green || 100;
     blue = blue || 100;
