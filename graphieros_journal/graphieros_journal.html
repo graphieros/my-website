@@ -64,23 +64,26 @@
 
         let svg_title = {
             section: 'svg_title',
-            sequence: 'ws-sx-xw-wz-ze-ex zx-ws-qe-ez-zq-qw-wx-xd-ds-sw ze-qs-wx qw-wz-sx-xe zq-qw-ws-sx-xd-de',
-            colors: [65, 95, 153],
-            size: 35,
-            background: '',
-            svgSize: 300,
-            light: true,
-            intensity: 1.5,
-            radius: '',
+            sequence: 'nmo ka tae',
+            size: 200,
+            colors: [100,130,150],
+            strokeWidth: 10,
+            background: [],
+            border: '2px solid rgb(120,150,170)',
+            borderRadius: '100%'
         }
 
-        callifractal({ ...svg_title });
+        molecular({ ...svg_title });
 
         let linear_0 = {
             section: 'linear_0',
             container: 'l_0',
-            size: 30,
-            colors: [255, 255, 255],
+            size: 40,
+            colors: [100,130,150],
+            background: [240,240,240],
+            cartouche: true,
+            padding: 20,
+            border: '1px solid rgb(120,150,170)'
         }
 
         linear({ ...linear_0 });
@@ -88,8 +91,8 @@
         let linear_1 = {
             section: 'linear_1',
             container: 'l_1',
-            size: 30,
-            colors: [255, 99, 71],
+            size: 40,
+            colors: [100,130,150],
         }
 
         linear({ ...linear_1 });
@@ -97,12 +100,12 @@
         let fractal_1 = {
             section: 'fractal_1',
             sequence: 'wq-qz-ze-ed-dx-xw-we-zx-qd zw-qs-ed-dx',
-            colors: [100, 100, 100],
+            colors: [155,175,189],
             size: 35,
             svgSize: 300,
-            light: true,
-            intensity: 2,
-            radius: 15,
+            light: false,
+            intensity: 1.8,
+            radius: '',
         }
 
         callifractal({ ...fractal_1 });

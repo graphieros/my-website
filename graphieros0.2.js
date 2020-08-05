@@ -617,7 +617,7 @@ function callifractal({
     background,
     light,
     intensity,
-    fit
+    fit 
 }) {
 
     let [red, green, blue] = colors;
