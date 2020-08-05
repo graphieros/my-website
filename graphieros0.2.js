@@ -608,7 +608,7 @@ export { molecular };
 
 
 function callifractal({
-    sect,
+    section,
     sequence,
     svgSize,
     size,
@@ -634,7 +634,7 @@ function callifractal({
     sequence = sequence || [];
     fit = fit || false;
 
-    const section = document.getElementById(sect);
+    const SECTION = document.getElementById(section);
     const coordinates = sequence;
 
     const xmlns = "http://www.w3.org/2000/svg";
@@ -941,7 +941,7 @@ function callifractal({
                 circle6.setAttributeNS(null, "cy", d6[1]);
                 circle6.setAttributeNS(null, "r", radius);
                 circle6.setAttributeNS(null, "fill", `rgb(${colors})`);
-            }());
+            }()); 
 
             let plots = line.split("-");
             plots.forEach(plot => {
@@ -1029,7 +1029,7 @@ function callifractal({
     if (fit === true) {
         wrapper.style.marginTop = `-${svgSize / 2.35294117647}px`;
     }
-    section.appendChild(wrapper);
+    SECTION.appendChild(wrapper);
 
 }
 export { callifractal };
