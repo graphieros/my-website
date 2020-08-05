@@ -1,35 +1,40 @@
 /*graphieros.js library 1.0
 created by Alec Lloyd Probert
 2020
+Special thanx to Thundree, friend & mentor
 */
 
 //TODO
 /*
-include css responsive styling
+refactor LINEAR,
+         FRACTAL, 
+         MOLECULAR functions
 */
-
-// //initial y coordinates
-// let a = 50; //y_top
-// let q = 128; //y_mid
-// let w = 206; //y_bot
-
-// //initial x glyph coordinates
-
-// let l = 38; //x_left
-// let lm = 83; //x_left_mid
-// let m = 128; //x_mid
-// let rm = 173; //x_right_mid
-// let r = 218; //x_right
 
 import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
 
 
-function linear({ section, container, size = 50, color }) {
+function linear({
+    section,
+    container,
+    size,
+    background,
+    color,
+    padding,
+    cartouche,
+    border
+}) {
+
     let [red, green, blue] = color;
-    // console.log(color);
     red = red || 100;
     green = green || 100;
     blue = blue || 100;
+    size = size || 50;
+    background = `rgb(${background})` || "transparent";
+    padding = padding || 0;
+    cartouche = cartouche || false;
+    border = border || '0px solid transparent';
+
     // console.log(section, container);
     const main_section = document.getElementById(section);
     let adjust = size / 2.631578947368421;
@@ -55,11 +60,21 @@ function linear({ section, container, size = 50, color }) {
             let svg_paragraph = document.createElementNS(xmlns, "svg");
 
             svg_paragraph.style.width = `${size}px`;
-            svg_paragraph.style.background = "transparent";
+            svg_paragraph.style.background = background;
             svg_paragraph.style.stroke = glyph_color;
             svg_paragraph.style.strokeLinejoin = "round";
             svg_paragraph.style.strokeLinecap = "round";
             svg_paragraph.style.fill = "none";
+            svg_paragraph.style.boxSizing = "border-box";
+            svg_paragraph.style.paddingTop = `${padding}px`;
+            svg_paragraph.style.paddingBottom = `${padding}px`;
+            svg_paragraph.style.paddingRight = `${padding / 6}px`;
+            svg_paragraph.style.paddingLeft = `${padding / 6}px`;
+            svg_paragraph.style.border = border;
+
+            if (cartouche === true) {
+                svg_paragraph.style.borderRadius = `${size}px`;
+            }
 
             let rebuilt_glyphs_library = [];
             let one_array = graphieros_text[i].innerHTML;
@@ -92,9 +107,7 @@ function linear({ section, container, size = 50, color }) {
                     let one_rebuilt_phono = `_${one_word_raw_list[k]}`;
 
                     if (one_rebuilt_phono !== "_") {
-
                         rebuilt_word.push(one_rebuilt_phono);
-
                     }
 
                 }
@@ -187,8 +200,22 @@ function linear({ section, container, size = 50, color }) {
             main_section.style.display = "grid";
             main_section.style.justifyItems = "center";
             // grid-class-10
-            main_section.style.gridTemplateColumns = `repeat(${graphieros_text.length},1fr)`;
-            main_section.style.width = `${size * (graphieros_text.length)}px`;
+
+            let grid_count = Math.round(window.innerWidth / ((graphieros_text.length * (size + (padding / 6))) / graphieros_text.length));
+
+            main_section.style.gridTemplateColumns = `repeat(${grid_count},1fr)`;
+
+            function resize_grid() {
+
+                if (window.matchMedia("(max-width: 400px)").matches) {
+                    main_section.style.gridTemplateColumns = `repeat(${Math.round(400 / (graphieros_text.length))},1fr)`;
+                } else {
+                    main_section.style.gridTemplateColumns = `repeat(${grid_count},1fr)`;
+                }
+            }
+
+            window.addEventListener("resize", resize_grid);
+
         }
 
     }());
@@ -567,7 +594,18 @@ function molecular(section, mol, size, red, green, blue) {
 }
 export { molecular };
 
-function calligraphic({ sect, sequence, svgSize, size, colors, radius, background, light, intensity }) {
+function calligraphic({
+    sect,
+    sequence,
+    svgSize,
+    size,
+    colors,
+    radius,
+    background,
+    light,
+    intensity,
+    fit
+}) {
 
     let [red, green, blue] = colors;
 
@@ -581,11 +619,10 @@ function calligraphic({ sect, sequence, svgSize, size, colors, radius, backgroun
     light = light || false;
     intensity = intensity || 1.3;
     sequence = sequence || [];
+    fit = fit || false;
 
-    let glyph_color = `rgb(${red},${green},${blue})`;
     const section = document.getElementById(sect);
     const coordinates = sequence;
-    // coordinates.style.display = "none";
 
     const xmlns = "http://www.w3.org/2000/svg";
     const _p = `<path style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;" d="M `;
@@ -600,9 +637,9 @@ function calligraphic({ sect, sequence, svgSize, size, colors, radius, backgroun
     let raw_data = coordinates;
     let lines = raw_data.split(" ");
 
-    (function translate_data_to_coordinates() {
+    (function translate_sequence_to_coordinates() {
 
-        /* 
+        /* hex coordinates
 
          d2 d3
         d1 d0 d4
@@ -638,16 +675,16 @@ function calligraphic({ sect, sequence, svgSize, size, colors, radius, backgroun
             x_equShift /= 2;
             y_equShift /= 2;
 
-            if(light === true) {
+            if (light === true) {
                 colors[0] *= intensity;
                 colors[1] *= intensity;
                 colors[2] *= intensity;
-            }else{
+            } else {
                 colors[0] /= intensity;
                 colors[1] /= intensity;
                 colors[2] /= intensity;
             }
-            
+
             stroke_defs();
 
         }
@@ -973,12 +1010,14 @@ function calligraphic({ sect, sequence, svgSize, size, colors, radius, backgroun
 
     }());
 
-
-
     let wrapper = document.createElement("DIV");
 
     wrapper.appendChild(SVG);
+    if (fit === true) {
+        wrapper.style.marginTop = `-${svgSize / 2.35294117647}px`;
+    }
     section.appendChild(wrapper);
 
 }
+
 export { calligraphic };
