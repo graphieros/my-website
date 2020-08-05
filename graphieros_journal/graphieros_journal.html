@@ -2,168 +2,117 @@
 
 <html lang="en">
 
-<head> 
+<head>
 
     <meta charset="UTF-8">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Ecrivez en graphieros fractal avec votre clavier physique !" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ecrivez en graphieros fractal avec votre clavier physique !" />
 
-        <title>Graphieros Journal</title>
+    <title>Graphieros Journal</title>
 
-        <link rel="stylesheet" href="graphieros_journal.css" class="css">
-        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="../pics/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="../pics/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../pics/favicon-32x32.png">
-        <script src="../graphieros_mini.js"></script>
-    </head>
+    <link rel="stylesheet" href="graphieros_journal.css" class="css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Poiret+One&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../pics/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../pics/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../pics/favicon-32x32.png">
+    <script type="module" src="./graphieros0.2.js"></script>
+</head>
 
-</head> 
+</head>
 
-<body> 
+<body>
 
     <a href="../index.html">
         <header class="title">
             <div>
-                <span class="a">A</span>le<span class="c">C</span> Lloy<span class="d">D</span> Pro<span class="b">B</span>ert
+                <span class="a">A</span>le<span class="c">C</span> Lloy<span class="d">D</span> Pro<span
+                    class="b">B</span>ert
             </div>
         </header>
     </a>
 
 
     <div id="svg_title"></div>
-    <div id="svg_title_coords">wsxwzex-qq-dd zx-ws-qezqwxdsw ze-qs-wx-dd qwz-sxe-dd zqwsxde</div>
-    <script>fractal("svg_title", "svg_title_coords", 200, 100,150,100, 1)</script>
 
-    <section class="global_wrapper"> 
+    <section class="linear_wrapper">
+        <div id="linear_0"></div>
+        <div id="fractal_1"></div>
+        <div id="linear_1"></div>
+    </section>
 
-        <section class="main" id="main0"></section>
-        <section class="main" id="main1"></section>
-        <div id="mol0"></div>
-        <section class="main" id="main2"></section>
-        <div id="frac1"></div>
-        <div id="frac2"></div>
-        <div id="main3"></div>
-        <div id="mol1"></div>
-        <section class="eight" id="eight0"></section>
-        <section class="molecules">
-            <div id="mol2"></div>
-            <div id="mol3"></div>
-            <div id="mol4"></div>
-            <div id="mol5"></div>
-            <div id="mol6"></div>
-            <div id="mol7"></div>
-        </section>
+    <div class="l_0">ka-fy-go hia boi mea-sa vi mea-skoi-ni</div>
+    <div class="l_0">gzo ptae-kwe-ka fa-sta nmae-kfa mea-bwa</div>
+    <div class="l_0">kli-di-bdi , te kli-nia-vi-vrea-kea .</div>
+    <div class="l_0">ka-fy-go stoia nmae-kfa kio-pnae-sa kwi</div>
+    <div class="l_0">hi-ma kli-keo-bdi te kwi hi-grae vi-hea</div>
+    <div class="l_0">te sdey mea-kwe-pio , mea-kwe-pkia te</div>
+    <div class="l_0">mea-kwe-ka hi-frya sa , te vlye sme-zai</div>
+    <div class="l_0">nmae-kfa kli-lno ptae-bdi kli-keo-ma .</div>
 
-        <div class="p0">fkwe kdie-fy-go psoi-grae</div>
-        <div class="p0">psoi-sta kio-skai vi-sbo</div>
-        <div class="p0">de kio psoi-go mea-hea</div>
-        <div class="p0">kwa kdie-fy-go psoi-v3ai</div>
-        <div class="p0">ra di mea-rgia-kme-ra</div>
-        <div class="p0">kme ksea ptae-ney-hea-tsi</div>
-        <div class="p0">te mrai kio-skai-soma-tsi</div>
-        <div class="p0">vi mriy-tsi kli-stea-tsi</div>
-        <div class="p0">kme sta-de-tsi le si</div>
-        <div class="p0">sme-zai kfa mea-ney-dse</div>
+    <div class="l_1"></div>
+    <div class="l_1"></div>
+    <div class="l_1"></div>
+    <div class="l_1">vi mea-sa-kme-sota ,</div>
+    <div class="l_1">ka-fy-go ma kli-grae-keo</div>
+    <div class="l_1"></div>
+    <div class="l_1"></div>
+    <div class="l_1"></div>
 
-        <div class="p1">de ptae-kadwa ma kli-ney .  mno-fy-go frya mrai-toi mea-lgio-ney</div>
-        <div class="p1">vi mea-ka-swa , te mno-fy-go frya fta-ksea ptae-hia-soma-tsi</div>
-        <div class="p1">kli-nia-sta-tsi vi mea-nia-d3e .</div>
-        <div class="p1">de ptae-kadwa ma kli-keo-grey-hea gzo ptoi-stea boi mea-dea-tsi-soma</div>
-        <div class="p1">kwa nmo-ka-tae psoi-ksea fmai mea-kpoile kli-lgya , vi-hia-dwa te</div>
-        <div class="p1">vi-vdio-gew te vi-vdio-spea . </div>
-        <div class="p1">de ptae-kadwa-hea mrai nmae-kfa ptae-kpoile-ney kme mea-lgio , te kme</div>
-        <div class="p1">mea-sa-tae kli-sta , gzo fa-sta de mea-knoi nto nmae-du</div>
-        <div class="p1">mea-fa-hia-tsi .</div>
-        <div class="p1">mno-fy-go v3ai snoi sme-zai de kli-keo kio-stea-sa !</div>
+    <script type="module">
+        import { linear, fractal, molecular, callifractal } from '../graphieros0.2.js';
 
-        <div id="m0">kio hae to trea frey soma tsi</div>
-        
-        <div class="p2"></div>
-        <div class="p2"></div>
-        <div class="p2"></div>
-        <div class="p2"></div>
-        <div class="p2">sta mna-fya-fy</div>
-        <div class="p2">kli-keo-grey-hea</div>
-        <div class="p2"></div>
-        <div class="p2"></div>
-        <div class="p2"></div>
-        <div class="p2"></div>
+        let svg_title = {
+            sect: 'svg_title',
+            sequence: 'ws-sx-xw-wz-ze-ex zx-ws-qe-ez-zq-qw-wx-xd-ds-sw ze-qs-wx qw-wz-sx-xe zq-qw-ws-sx-xd-de',
+            colors: [65, 95, 153],
+            size: 35,
+            background: '',
+            svgSize: 300,
+            light: true,
+            intensity: 1.5,
+            radius: '',
+        }
 
-        <div id="f1">qex-ws-zd zx-qe-wd qzedxwqd-zx-we zw-qs-edx</div>
-        <div id="f2">qzedxwqd-zx-we zx-we-qq-dd zxewz-qd zx-sde-qq-ww</div>
+        callifractal({ ...svg_title });
 
-        <div class="p3">te sa sme-zai de skew-mriy kli-kadwa-pno , kwi dse kto kio-skai vi-hio te vi-lea .</div>
+        let linear_0 = {
+            section: 'linear_0',
+            container: 'l_0',
+            size: 30,
+            color: [255, 255, 255],
+        }
 
-        <div id="m1">mea keo grey hea</div>
+        linear({ ...linear_0 });
 
-        <div class="p4">de-tsi ka-tsi ma-tsi kli-keo-tsi te zaw kli-nia-vi-kea-tsi .</div>
-        <div class="p4">mea-ka frya-ksea ptae-fkai-tsi kli-plea-tsi kme fa-sa-tsi-sola-tsi</div>
-        <div class="p4">kli-vdio-snea-tsi . ka-fy-go sta-de-tsi ka-tsi vi-? te</div>
-        <div class="p4">sme-zai zei hi-ma-tsi pkia-tsi kli-ney-tsi kwa ka-fy-go</div>
-        <div class="p4">hi-3i kme kli-nmae-kfa . de kio kli-hae-to-trea-frey-sola-tsi</div>
-        <div class="p4">ma pkae-da mea-bwa-pfae-tpe , te fa-sta ptae-mrai-tsi kwa</div>
-        <div class="p4">nia-v3ai kpae de mea-vnia-sa-pkia-d3e tpe ptae-bdi-sola , roi di</div>
-        <div class="p4">mea-mrai-kpoile-sola . ka-tsi hi-dvo-pfae kme sa-kme-kio-sola .</div>
+        let linear_1 = {
+            section: 'linear_1',
+            container: 'l_1',
+            size: 30,
+            color: [255, 99, 71],
+        }
 
-        <div id="m2">mea kwe ka</div>
-        <div id="m3">le kto fni sola</div>
-        <div id="m4">kli nia vi hia psoi</div>
-        <div id="m5">kio hae to trea frey</div>
-        <div id="m6">ma</div>
-        <div id="m7">kli keo grey hea</div>
+        linear({ ...linear_1 });
 
-        <br><br>
+        let fractal_1 = {
+            sect: 'fractal_1',
+            sequence: 'wq-qz-ze-ed-dx-xw-we-zx-qd zw-qs-ed-dx',
+            colors: [100, 100, 100],
+            size: 35,
+            svgSize: 300,
+            light: true,
+            intensity: 2,
+            radius: 15,
+        }
 
-        <div id="molecular_0208"></div>
-        <div id="linear_0208"></div>
-        <div id="linear_0208_1"></div>
+        callifractal({ ...fractal_1 });
 
-        <div id="m_0208">mea skoi sa ni</div>
+    </script>
 
-        <div class="l_0208">fkwe ka-fy-go fni nmae-kfa ptae-tvai ,</div>
-        <div class="l_0208">ptae-bdi-soma ma kli-nia-vi-3ia te</div>
-        <div class="l_0208">ka-fy-go v3ai ra-sa-soma kme nia-sta</div>
-        <div class="l_0208">de mea-ne kwi grae di ptae-sye-soma</div>
-        <div class="l_0208">de mea-skoi-sa-ni hia-kme ka-fy-go</div>
-        <div class="l_0208">nwo meama-spea da rsea nmae-kfa kli-ney</div>
-        <div class="l_0208">ptae-dea , ka-fy-go ma sme-zai de</div>
-        <div class="l_0208">pkia-mki kli-nia-vi-gew .</div>
+    </section>
 
-        <div class="l_0208_1">pro vwa ka-fy-go fa de-tsi pkae-tsi ?</div>
-        <div class="l_0208_1">ka-fy-go ma kli-lno boi frya-kno-de</div>
-        <div class="l_0208_1">pro , de ma frya-ma de kwa ka-fy-go</div>
-        <div class="l_0208_1">psoi-v3ai fkwe psoi-fa-vi-ne mea-lgio-ney</div>
-        <div class="l_0208_1">dku ka-fy-go nia hi-dvo-ma kli-skai-ni</div>
-        <div class="l_0208_1">te hi-dvo-snoi te hi-dvo-dse sme-zai</div>
-        <div class="l_0208_1">nmae-kfa ka-fa-vi-ne kwi psoi-vdio-vkye ,</div>
-        <div class="l_0208_1">tli psoi-vkye-sola !</div>
 
-    </section>       
-
-<script>
-    linear("main0", "p0", 30, 100, 150, 100);
-    linear("main1", "p1", 30, 100, 150, 100);
-    molecular("mol0", "m0", 300, 255,215,0);
-    linear("main2", "p2", 40, 100, 150, 100);
-    fractal("frac1", "f1", 300, 100,149,237, 0);
-    fractal("frac2", "f2", 300, 255,99,71,0);
-    linear("main3", "p3", 30, 255,255,255);
-    molecular("mol1", "m1", 300, 255, 215,0);
-    linear("eight0", "p4", 20, 255,255,255);
-    molecular("mol2", "m2", 100, 100,149,237);
-    molecular("mol3", "m3", 100, 100,149,237);
-    molecular("mol4", "m4", 100, 100,149,237);
-    molecular("mol5", "m5", 100, 255,99,71);
-    molecular("mol6", "m6", 100, 255,99,71);
-    molecular("mol7", "m7", 100, 255,99,71);
-    linear("linear_0208","l_0208",30, 28,43,28);
-    molecular("molecular_0208","m_0208", 200, 255,255,255);
-    linear("linear_0208_1","l_0208_1",30, 255,255,255);
-</script>
-    
-<br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
 </body>
 
 </html>

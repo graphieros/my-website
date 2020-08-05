@@ -5,7 +5,7 @@ html,body
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
-}
+} 
 
 html {
     background: radial-gradient(at top, rgb(18,43,18), black);
@@ -67,14 +67,24 @@ span.d{
 } 
 
 #svg_title{
-    width:50%;
-    max-width:400px;
+    width:320px;
+    height:320px;
     margin: 0 auto;
     margin-bottom:20px;
     margin-top:100px;
     background: black;
     border-top:1px solid rgb(78, 122, 52);
     border-radius:100%;
+    display: grid;
+    justify-items:center;
+}
+
+#svg_title > div {
+    width:100%;
+    margin:0 auto;
+    display: grid;
+    align-items:center;
+    justify-items:center;
 }
  
 .global_wrapper{
@@ -83,37 +93,19 @@ span.d{
     justify-items: center;
 }
 
-/*all that is below needs to be included in graphieros.js*/
-
-.main{
-    box-sizing: border-box;
-    margin:0 auto;
+.linear_wrapper{
+    margin-left:50%;
+    transform: translate(-50%);
+    max-width:400px;
     width:100%;
-    border-bottom: 1px solid rgb(28, 43, 28);
-    padding-top:20px;
-    padding-bottom:20px;
-}
-
-.graphieros_text{
-    color: transparent;
     box-sizing: border-box;
+    padding-left: 20px;
+    padding-right:20px;
 }
 
-.molecules {
-    display: grid; 
-    grid-template-columns: repeat(3,1fr);
-    align-items:center;
+.linear_wrapper > div {
+    display: grid;
     justify-items:center;
-}
-
-#linear_0208 {
-    background: white;
-    border-radius:3px;
-    border:10px solid white;
-}
-
-#linear_0208_1{
-    border:10px solid transparent;
 }
 
 @media screen and (max-width: 500px) {
