@@ -432,6 +432,8 @@ span#EE{
     background:transparent;
     border-radius:100%;
     margin:0 auto;
+    display: grid;
+    justify-items:center;
 }
 
 #BIOmenuWrapper{

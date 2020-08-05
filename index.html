@@ -28,7 +28,8 @@
     <meta name="description" content="Artiste, data & business analyst, programmeur et créateur de l'idéolangue graphieros. Bio, peintures, journal, livres, applications..." />
     <meta name="google-site-verification" content="3M0g0CGwhq36_jRupfc2k3hDyDAWmfFAAItyW-b9IjM" />
 
-    <script src="graphieros_mini.js"></script>
+    <script src="graphieros.js"></script>
+    <script type="module" src="./graphieros0.2.js"></script>
 
 </head>
 
@@ -68,9 +69,27 @@
 
     <section class="sections" id="BIO">
         <div class="sectionTitle" id="sectionTitle0">B<span id="I">I</span>O</div>
-        <section id="bioFrac"></section>
-        <div id="bioGlyph">qzedxwqd-xz-we ewxdezqw-xs-dz zx-ws-qe-dd zeq-xwd-ss</div>
-        <script>fractal("bioFrac","bioGlyph",200,100,200,50,1)</script>
+        <section id="bioFrac">
+        <div id="bioGlyph"></div>
+        </section>
+
+        <script type="module">
+            import { linear, fractal, molecular, callifractal } from './graphieros0.2.js';
+            let BIOGLYPH = {
+                sect: 'bioGlyph',
+                sequence: 'we-xs-dz-wq-qz-ze-ed-dx-xw zx-ws-qe ze-eq-xw-wd',
+                size: 40,
+                radius: '',
+                colors: [80, 150, 60],
+                background: '',
+                svgSize: 300,
+                light: true,
+                intensity: 2,
+            }
+
+            callifractal({...BIOGLYPH});
+        </script>
+
         <p>Une sorte de <i>curriculum vitae</i></p>
         <p id="BIOctc">CONTACT:<br>
 
@@ -188,7 +207,18 @@
         <div class="p0">kme de-tsi ka-tsi</div>
         <div class="p0">kli-vi-vdio-kea-tsi !</div>
 
-        <script>linear("gp","p0",30, 100,149,237)</script>
+        <script type="module">
+            import { linear } from './graphieros0.2.js';
+
+            let linear_p0 = {
+                section: 'gp',
+                container: 'p0',
+                size: 30,
+                color: [100,149,237],
+            }
+
+            linear({...linear_p0});
+        </script>
 
 
         <div class="graphieros">
