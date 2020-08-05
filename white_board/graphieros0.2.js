@@ -6,9 +6,7 @@ Special thanx to Thundree, friend & mentor
 
 //TODO
 /*
-refactor LINEAR,
-         FRACTAL, 
-         MOLECULAR functions
+    manage mediaqueries for linear function
 */
 
 import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
@@ -235,27 +233,40 @@ function linear({
 };
 export { linear };
 
-function fractal(section, f, size, r, g, b, light) {
+
+function fractal({
+    section,
+    sequence,
+    size,
+    colors,
+    light,
+    intensity
+}) {
+
+    size = size || 100;
+    light = light || null;
+    let [r, g, b] = colors;
+    r = r || 200;
+    g = g || 200;
+    b = b || 200;
+    intensity = intensity || 1.3333;
+
 
     const xmlns = "http://www.w3.org/2000/svg";
     let svg_width = size * 2.5;
     let svg_height = size * 2.5;
     const svg_container = document.getElementById(section);
-    const raw_content = document.getElementById(f);
-    raw_content.style.display = "none";
+    const raw_content = sequence;
 
     let _p = `<path`;
     let _p_ = `d="M`;
     let p_ = `"/>`;
 
-    const PHI = 1.61803398875;
     let glyph_size = svg_width / 2;
     let stk = glyph_size / 10;
 
     svg_container.style.height = `${size}px`;
     svg_container.style.width = `${size}px`;
-
-    let svg_size = size;
 
     let svg_output = document.createElementNS(xmlns, "svg");
     svg_output.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
@@ -269,9 +280,7 @@ function fractal(section, f, size, r, g, b, light) {
 
     let Xcenter = svg_width / 2;
     let Ycenter = svg_width / 2;
-    let color_fade = 1.333;
     let proportion = 2;
-
 
     function fractalize() {
         size /= proportion;
@@ -279,20 +288,19 @@ function fractal(section, f, size, r, g, b, light) {
         stk /= proportion;
 
         if (light === 0 || light === null) {
-            R /= color_fade;
-            G /= color_fade;
-            B /= color_fade;
+            R /= intensity;
+            G /= intensity;
+            B /= intensity;
         } else {
-            R *= color_fade;
-            G *= color_fade;
-            B *= color_fade;
+            R *= intensity;
+            G *= intensity;
+            B *= intensity;
         }
 
         glyph_color = `rgb(${R},${G},${B})`;
     }
 
-
-    let all_glyphs = raw_content.innerHTML.split(" ");
+    let all_glyphs = raw_content.split(" ");
 
     all_glyphs.forEach(glyph => {
 
@@ -365,11 +373,30 @@ function fractal(section, f, size, r, g, b, light) {
 }
 export { fractal };
 
-function molecular(section, mol, size, red, green, blue) {
+
+function molecular({
+    section,
+    sequence,
+    size,
+    colors,
+    strokeWidth,
+    background,
+    border,
+    borderRadius
+}) {
+
+    let [red, green, blue] = colors;
+    red = red || 200;
+    green = green || 200;
+    blue = blue || 200;
+    strokeWidth = strokeWidth || 8;
+    background = `rgb(${background})` || "transparent";
+    borderRadius = borderRadius || 0;
+    border = border || '0px solid transparent';
 
     const main_section = document.getElementById(section);
     const xmlns = "http://www.w3.org/2000/svg";
-    const _p = `<path style="stroke-width:8px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
+    const _p = `<path style="stroke-width:${strokeWidth}px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
     const p_ = '"/>';
 
     let R = red;
@@ -380,17 +407,18 @@ function molecular(section, mol, size, red, green, blue) {
     let svg = document.createElementNS(xmlns, "svg");
     svg.setAttributeNS(null, "viewBox", "0 0 512 512")
     svg.style.width = `${size}px`;
-    svg.style.background = "rgb()237,237,237)";
+    svg.style.background = background;
     svg.style.stroke = glyph_color;
+    svg.style.borderRadius = borderRadius;
+    svg.style.border = border;
     svg.style.strokeLinejoin = "round";
     svg.style.strokeLinecap = "round";
     svg.style.fill = "none";
 
     let glyph_database = graphieros_dictionnary.slice(0);
 
-    const molecule_data = document.getElementById(mol);
-    molecule_data.style.display = "none";
-    let molecule_array = molecule_data.innerHTML.split(" ");
+    const molecule_data = sequence;
+    let molecule_array = molecule_data.split(" ");
     let final_array = [];
 
     molecule_array.forEach(phono => {
@@ -585,16 +613,13 @@ function molecular(section, mol, size, red, green, blue) {
         console.error(`__________________________________________________________________\n\n ERREUR: Le nombre de glyphes autorisés est dépassé: ${final_array.length} au lieu de 6\n  __________________________________________________________________`);
     }
 
-
-
-
-
     main_section.appendChild(svg);
 
 }
 export { molecular };
 
-function calligraphic({
+
+function callifractal({
     sect,
     sequence,
     svgSize,
@@ -1019,5 +1044,4 @@ function calligraphic({
     section.appendChild(wrapper);
 
 }
-
-export { calligraphic };
+export { callifractal };
