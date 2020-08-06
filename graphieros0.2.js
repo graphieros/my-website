@@ -259,6 +259,7 @@ function fractal({
     let svg_output = document.createElementNS(xmlns, "svg");
     svg_output.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
     svg_output.setAttributeNS(null, "stroke-width", stk);
+    svg_output.id = `fractal_${section}`;
 
     let R = r;
     let G = g;
@@ -402,6 +403,7 @@ function molecular({
     svg.style.strokeLinejoin = "round";
     svg.style.strokeLinecap = "round";
     svg.style.fill = "none";
+    svg.id = `molecular_${section}`;
 
     let glyph_database = graphieros_dictionnary.slice(0);
 
@@ -617,6 +619,7 @@ function callifractal({
     background,
     light,
     intensity,
+    border,
     fit 
 }) {
 
@@ -633,6 +636,7 @@ function callifractal({
     intensity = intensity || 1.3;
     sequence = sequence || [];
     fit = fit || false;
+    border = border || '0px solid transparent';
 
     const SECTION = document.getElementById(section);
     const coordinates = sequence;
@@ -644,8 +648,11 @@ function callifractal({
     const SVG = document.createElementNS(xmlns, "svg");
     SVG.setAttributeNS(null, "viewBox", `0 0 260 260`);
     SVG.style.background = background;
+    SVG.style.border = border;
+    SVG.style.boxSizing = "border-box";
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
+    SVG.id = `callifractal_${section}`;
 
     let raw_data = coordinates;
     let lines = raw_data.split(" ");
