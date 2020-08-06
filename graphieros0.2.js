@@ -620,6 +620,9 @@ function callifractal({
     light,
     intensity,
     border,
+    dropShadow,
+    wrapperBackground,
+    backgroundRadius,
     fit 
 }) {
 
@@ -637,6 +640,9 @@ function callifractal({
     sequence = sequence || [];
     fit = fit || false;
     border = border || '0px solid transparent';
+    dropShadow = `drop-shadow(${dropShadow})` || 'none';
+    wrapperBackground = wrapperBackground || 'transparent';
+    backgroundRadius = backgroundRadius || '0px';
 
     const SECTION = document.getElementById(section);
     const coordinates = sequence;
@@ -652,6 +658,7 @@ function callifractal({
     SVG.style.boxSizing = "border-box";
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
+    SVG.style.filter = dropShadow;
     SVG.id = `callifractal_${section}`;
 
     let raw_data = coordinates;
@@ -952,6 +959,9 @@ function callifractal({
 
             let plots = line.split("-");
             plots.forEach(plot => {
+
+                //TO DO : loop if( ['sq', 'ds'].includes(plot)) {} 
+
                 if (plot === "sq" || plot === "qs") {
                     draw(S_d0_d1);
                 }
@@ -1031,6 +1041,13 @@ function callifractal({
     }());
 
     let wrapper = document.createElement("DIV");
+    wrapper.style.background = wrapperBackground;
+    wrapper.style.borderRadius = backgroundRadius;
+    wrapper.style.width = "100%";
+    wrapper.style.height = "100%";
+    wrapper.style.display = "grid";
+    wrapper.style.justifyItems = "center";
+    wrapper.style.alignItems = "center";
 
     wrapper.appendChild(SVG);
     if (fit === true) {
