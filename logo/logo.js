@@ -215,6 +215,43 @@ export function graphieros() { //imported in events.js
         backgroundRadius: '100%'
     }, callifractal);
 
+    draw_sticker({
+        section: 'stix_15',
+        sequence: 'nsa',
+        size: 160,
+        colors: [1,1,1],
+        strokeWidth: '20',
+        background: [255, 100, 50],
+        border: '2px solid rgb(255,255,255)',
+        borderRadius: '100%'
+    }, molecular);
+
+    draw_sticker({
+        section: 'stix_16',
+        sequence: 'ew-wx-xq-qd-dz qz-ze-ed-dx-xw-wq-qd-wz-zd-dw-xe-eq-qx-zx-we',
+        svgSize: 160,
+        size: 20,
+        colors: [255,255,255],
+        radius: '15',
+        light: false,
+        intensity: 20,
+        border: '2px solid white',
+        dropShadow: '',
+        wrapperBackground: 'rgb(255,100,50)',
+        backgroundRadius: '100%'
+    }, callifractal);
+
+    draw_sticker({
+        section: 'stix_17',
+        sequence: 'trea fwo frey',
+        size: 160,
+        colors: [1,1,1],
+        strokeWidth: '20',
+        background: [255, 100, 50],
+        border: '2px solid rgb(255,255,255)',
+        borderRadius: '100%'
+    }, molecular);
+
 };
 
 graphieros();

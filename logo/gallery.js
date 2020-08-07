@@ -35,6 +35,7 @@ function add_gallery_component({
     created_element.style.cursor = "pointer";
 
     let created_title = document.createElement("SPAN");
+    created_title.className = `span_${className}`;
     created_title.innerHTML = title;
     created_title.style.display = 'block';
     created_title.style.marginTop = '-70px';

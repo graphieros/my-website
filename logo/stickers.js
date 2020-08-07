@@ -149,6 +149,36 @@ let stickers = [
         fontSize: '20px',
         parentId: 'gallery_3'
     },
+    {
+        contentIdentity: 'stix_15',
+        title: 'inside',
+        className: 'stix',
+        color: 'rgb(0,0,0)',
+        background: 'rgb(240,240,240)',
+        fontFamily: "'Lobster', cursive",
+        fontSize: '20px',
+        parentId: 'gallery_3'
+    },
+    {
+        contentIdentity: 'stix_16',
+        title: 'energy',
+        className: 'stix',
+        color: 'rgb(0,0,0)',
+        background: 'rgb(240,240,240)',
+        fontFamily: "'Lobster', cursive",
+        fontSize: '20px',
+        parentId: 'gallery_3'
+    },
+    {
+        contentIdentity: 'stix_17',
+        title: 'lava',
+        className: 'stix',
+        color: 'rgb(0,0,0)',
+        background: 'rgb(240,240,240)',
+        fontFamily: "'Lobster', cursive",
+        fontSize: '20px',
+        parentId: 'gallery_3'
+    },
 ];
 
 export { stickers };

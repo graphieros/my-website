@@ -82,7 +82,10 @@ span.start_animation_title {
 
 span.header_logo {
     font-size:4em;
-    left: 20px;
+    left: 0px;
+    padding-left:20px;
+    padding-right: 20px;
+    height:140px;
 }
 
 span.start_animation_title span,
@@ -226,7 +229,8 @@ footer span {
     display: none;
     position: fixed;
     margin: 0 auto;
-    height:500px;
+    height: 100%;
+    max-height:500px;
     width:600px;
     background: white;
     border-radius:3px;
@@ -282,12 +286,48 @@ svg#temp_svg{
     box-shadow: 0 -5px 10px -3px grey;
     transition: background 0.3s ease;
     cursor: pointer;
+    border:2px solid white;
 }
 
 #quit_modal:hover {
     background: rgb(196, 34, 34);
 }
 
+#sticker_name_display {
+    position:absolute;
+    top:100px;
+    width:100%;
+    font-family: var(--f);
+    font-size:1.5em;
+}
+
+#temp_span {
+    right:0;
+    text-align:right;
+}
+
+#buy {
+    display: block;
+    position: absolute;
+    margin-top:215px;
+    margin-left:40px;
+    width:120px;
+    height:70px;
+    border-radius:3px;
+    font-family: var(--f);
+    display:grid;
+    align-content:center;
+    text-align:center;
+    box-shadow: 0 0px 10px -2px grey;
+    opacity: 0;
+    font-size:1.3em;
+    transition: opacity 0.3s ease;
+    cursor:pointer;
+}
+
+#buy:hover {
+    opacity:1 !important;
+}
 
 
 
@@ -363,6 +403,15 @@ svg#temp_svg{
         height:55px;
         width:55px;
     }
+
+    #sticker_name_display {
+        font-size:1em;
+        top:80px;
+    }
+
+    .showcase {
+        height:350px;
+    }
 }
 
 @media screen and (max-width: 415px) {
@@ -370,14 +419,30 @@ svg#temp_svg{
         margin-top:125px;
         margin-left: 205px;
     }
+    .showcase {
+        height:400px;
+    }
+    #buy{
+        margin-left:50%;
+        transform:translate(-50%);
+        margin-top:290px;
+    }
 }
 
 @media screen and (max-width: 375px) {
     #standard_laptop_sticker_container{
         margin-top:115px;
         margin-left: 190px;
-
     }
+    .showcase{
+        height:380px;
+    }
+    #buy{
+        margin-left:50%;
+        transform:translate(-50%);
+        margin-top:270px;
+    }
+
 }
     
 
@@ -387,6 +452,12 @@ svg#temp_svg{
         margin-left:160px;
         height:50px;
         width:50px;
+    }
+    .showcase{
+        height:340px;
+    }
+    #buy{
+        margin-top:230px;
     }
 }
 
