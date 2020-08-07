@@ -278,9 +278,8 @@ svg#temp_svg{
     align-items:center;
     justify-items:center;
     position: absolute;
-    margin-left:50%;
-    transform: translate(-50%);
-    bottom:-25px;
+    right:-15px;
+    top:-15px;
     background: rgb(153, 17, 17);
     border-radius:100%;
     box-shadow: 0 -5px 10px -3px grey;

@@ -1,5 +1,3 @@
-// import { graphieros } from './logo.js';
-
 // Landing page animation
 
 (function landing_animation() {
