@@ -167,7 +167,6 @@ footer span {
 
 .gallery > div  svg {
     border-radius: 100% !important;
-    /* border:1px solid var(--c) !important; */
     box-shadow: 5px 5px 5px rgba(77, 53, 33, 0.55) !important;
 }
 
@@ -252,21 +251,20 @@ footer span {
 #standard_laptop_sticker_container{
     display:block;
     position: absolute;
-    margin-top: 50%;
-    margin-left:50%;
-    transform: translate(60%,-110%);
+    margin-top: 210px;
+    margin-left: 350px;
     height:80px;
     width:80px;
     border-radius:100%;
     perspective:300px;
+    transform-style:preserve-3d !important;
+    transform: rotateY(45deg) rotateX(25deg) !important;
 }
 
 svg#temp_svg{
     border-radius:100% !important;
     height:100% !important;
     width:100% !important;
-    transform-style:preserve-3d !important;
-    transform: rotateY(45deg) rotateX(25deg) !important;
 }
 
 #quit_modal{
@@ -282,13 +280,12 @@ svg#temp_svg{
     background: rgb(153, 17, 17);
     border-radius:100%;
     box-shadow: 0 -5px 10px -3px grey;
-    opacity: 0.75;
-    transition: opacity 0.3s ease;
+    transition: background 0.3s ease;
     cursor: pointer;
 }
 
 #quit_modal:hover {
-    opacity:1;
+    background: rgb(196, 34, 34);
 }
 
 
@@ -351,7 +348,8 @@ svg#temp_svg{
     }
 
     #standard_laptop_sticker_container{
-        transform: translate(65%,-110%);
+        margin-top:160px;
+        margin-left:260px;
         height:60px;
         width:60px;
     }
@@ -360,23 +358,42 @@ svg#temp_svg{
 
 @media screen and (max-width: 450px) {
     #standard_laptop_sticker_container{
-        transform: translate(35%,-100%);
-        height:60px;
-        width:60px;
+        margin-top:140px;
+        margin-left:230px;
+        height:55px;
+        width:55px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 415px) {
     #standard_laptop_sticker_container{
-        transform: translate(30%,-100%);
-        height:60px;
-        width:60px;
+        margin-top:125px;
+        margin-left: 205px;
     }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 375px) {
     #standard_laptop_sticker_container{
-        transform: translate(30%,-100%);
+        margin-top:115px;
+        margin-left: 190px;
+
+    }
+}
+    
+
+@media screen and (max-width: 320px) {
+    #standard_laptop_sticker_container{
+        margin-top:95px;
+        margin-left:160px;
+        height:50px;
+        width:50px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #standard_laptop_sticker_container{
+        margin-top:80px;
+        margin-left:140px;
         height:50px;
         width:50px;
     }
