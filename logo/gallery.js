@@ -8,14 +8,14 @@ function add_gallery_component({
     fontFamily,
     fontSize,
     parentId
-}) { 
+}) {
 
     size = size || '200px';
 
     color = color || 'rgb(0,0,0)';
     background = background || 'transparent';
     fontFamily = fontFamily || "'Courier New', Courier, monospace";
-    fontSize = fontSize || '1em'; 
+    fontSize = fontSize || '1em';
     title = title || 'give me a title';
 
     let created_element = document.createElement("DIV");
@@ -41,7 +41,6 @@ function add_gallery_component({
     created_title.style.width = '100%';
     created_title.style.textAlign = 'center';
 
-
     let content = document.createElement("DIV");
     content.id = contentIdentity;
     content.style.display = 'grid';
@@ -50,7 +49,7 @@ function add_gallery_component({
 
     created_element.appendChild(created_title);
     created_element.appendChild(content);
-    
+
     let target_parent = document.getElementById(parentId);
     target_parent.appendChild(created_element);
 

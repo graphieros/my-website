@@ -1,32 +1,3 @@
-// DOM manipulation
-(function logo_main() {
-
-    const main = document.getElementById("main");
-    const start_animation = document.getElementById("start_animation");
-    const span_logo = document.getElementById("span_logo");
-
-    function load(element) {
-        setTimeout(() => {
-            element.style.opacity = 1;
-        }, 500);
-    }
-
-    document.body.onload = load(span_logo);
-
-    start_animation.addEventListener("click", () => {
-        setTimeout(() => {
-            start_animation.style.opacity = 0;
-
-        }, 100);
-        setTimeout(() => {
-            start_animation.style.display = "none";
-            main.style.opacity = 1;
-        }, 101);
-    });
-
-}());
-
-
 // gallery components
 import { add_gallery_component } from './gallery.js';
 import { stickers } from './stickers.js';
@@ -43,7 +14,7 @@ import { stickers } from './stickers.js';
 // definition and styling of all graphieros SVGs
 import { linear, fractal, molecular, callifractal } from '../graphieros0.2.js';
 
-(function graphieros() {
+export function graphieros() { //imported in events.js
 
     function draw_sticker(params, func) {
         func(params);
@@ -56,6 +27,13 @@ import { linear, fractal, molecular, callifractal } from '../graphieros0.2.js';
         border: '20px solid rgb(230,230,225)',
         borderRadius: '100%',
     }, molecular)
+
+    draw_sticker({
+        section: 'quit_modal',
+        sequence: 'zx-ew',
+        colors: [255,255,255],
+        svgSize: 30
+    }, callifractal);
 
     draw_sticker({
         section: 'stix_0',
@@ -237,5 +215,6 @@ import { linear, fractal, molecular, callifractal } from '../graphieros0.2.js';
         backgroundRadius: '100%'
     }, callifractal);
 
+};
 
-}());
+graphieros();
