@@ -19,7 +19,7 @@
 }
 
 .gallery p {
-    margin-top:-150px;
+    margin-top:-50px;
     text-shadow: none;
 }
 
@@ -93,6 +93,12 @@
     color: var(--turbo);
 }
 
+.gallery svg {
+    width: 150px !important;
+    height: 150px ! important;
+    box-shadow: 0px 0px 10px rgba(77, 53, 33, 0.55) !important;
+}
+
 
 @media screen and (max-width: 840px) {
     .gallery_title{
@@ -102,7 +108,11 @@
         grid-template-columns: repeat(2,1fr);
     }
     .gallery p {
-        margin-top: -170px;
+        margin-top: -50px;
+    }
+    .gallery svg {
+        width: 200px !important;
+        height: 200px ! important;
     }
 }
 
@@ -116,6 +126,10 @@
         grid-template-columns: repeat(1,1fr);
     }
     .gallery p {
-        margin-top:-185px;
+        margin-top:-50px;
+    }
+    .gallery svg {
+        width: 250px !important;
+        height: 250px ! important;
     }
 }

@@ -8,7 +8,7 @@ Special thanx to Thundree, friend & mentor
 /*
     manage mediaqueries for linear function
 */
-
+import React from 'react';
 import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
 
 
@@ -396,6 +396,7 @@ function molecular({
     let svg = document.createElementNS(xmlns, "svg");
     svg.setAttributeNS(null, "viewBox", "0 0 512 512")
     svg.style.width = `${size}px`;
+    svg.style.height = `${size}px`;
     svg.style.background = background;
     svg.style.stroke = glyph_color;
     svg.style.borderRadius = borderRadius;
@@ -603,14 +604,17 @@ function molecular({
         console.error(`__________________________________________________________________\n\n ERREUR: Le nombre de glyphes autorisés est dépassé: ${final_array.length} au lieu de 6\n  __________________________________________________________________`);
     }
 
-    main_section.appendChild(svg);
+    let backgroundDiv = document.createElement("DIV");
+    backgroundDiv.appendChild(svg);
+
+    return backgroundDiv.innerHTML;
 
 }
 export { molecular };
 
 
 function callifractal({
-    section,
+    // section,
     sequence,
     svgSize,
     size,
@@ -644,7 +648,7 @@ function callifractal({
     wrapperBackground = wrapperBackground || 'transparent';
     backgroundRadius = backgroundRadius || '0px';
 
-    const SECTION = document.getElementById(section);
+    // const SECTION = document.getElementById(section);
     const coordinates = sequence;
 
     const xmlns = "http://www.w3.org/2000/svg";
@@ -659,7 +663,8 @@ function callifractal({
     SVG.setAttributeNS(null, "height", svgSize);
     SVG.setAttributeNS(null, "width", svgSize);
     SVG.style.filter = dropShadow;
-    SVG.id = `callifractal_${section}`;
+    SVG.style.borderRadius = backgroundRadius;
+    // SVG.id = `callifractal_${section}`;
 
     let raw_data = coordinates;
     let lines = raw_data.split(" ");
@@ -1053,7 +1058,11 @@ function callifractal({
     if (fit === true) {
         wrapper.style.marginTop = `-${svgSize / 2.35294117647}px`;
     }
-    SECTION.appendChild(wrapper);
+    
+    wrapper.appendChild(SVG);
+
+    return wrapper.innerHTML;
+    // SECTION.appendChild(wrapper);
 
 }
 export { callifractal };
