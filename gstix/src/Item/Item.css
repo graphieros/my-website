@@ -1,0 +1,30 @@
+
+.gallery_item {
+    display: grid;
+    align-content:center;
+    height: 200px;
+    width: 200px;
+    background: rgb(240,240,240);
+    border-radius: 3px;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery_item:hover {
+    box-shadow: 0px 2px 20px -10px rgb(77,55,33);
+}
+
+
+@media screen and (max-width: 840px) {
+    .gallery_item{
+        height:250px;
+        width:250px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .gallery_item{
+        height:280px;
+        width:280px;
+    }
+}

@@ -1,0 +1,121 @@
+:root{
+    --executive: rgb(100,130,150);
+    --green: rgb(61,97,50);
+    --bronze: rgb(112,73,67);
+    --turbo: rgb(255,100,50);
+    --background: rgb(240,240,240);
+}
+
+.gallery{
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 100px;
+    align-items:center;
+    justify-items:center;
+    font-family: 'Lobster', cursive;
+    font-size:1.5em;
+    text-align:center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.gallery p {
+    margin-top:-150px;
+    text-shadow: none;
+}
+
+.gallery_title{
+    grid-column: 1/span 3;
+    display: grid;
+    align-content: center;
+    border-radius: 100px 100px 6px 6px;
+    width:100%;
+    height:50px;
+    font-size:1.5em;
+}
+
+/*Executive collection*/
+
+#Executive_collection{
+    color: white;
+    text-shadow: 1px 1px var(--executive);
+}
+
+#Executive_collection_title{
+    background: radial-gradient(at top, white, var(--executive));
+}
+
+#Executive_collection p {
+    color: var(--executive);
+}
+
+
+/*Green collection*/
+
+#Green_collection{
+    color: white;
+    text-shadow: 1px 1px var(--green);
+}
+
+#Green_collection_title{
+    background: radial-gradient(at top, white,var(--green));
+}
+
+#Green_cllection p {
+    color: var(--green);
+}
+
+
+/*Bronze collection*/
+
+#Bronze_collection{
+    color: white;
+    text-shadow: 1px 1px var(--bronze);
+}
+
+#Bronze_collection_title{
+    background: radial-gradient(at top, white, var(--bronze) );
+}
+
+#Bronze_collection p {
+    color: var(--bronze);
+}
+
+/*Turbo collection*/
+#Turbo_collection{
+    color:black;
+}
+
+#Turbo_collection_title{
+    background: radial-gradient(at top, white, var(--turbo));
+}
+
+#Turbo_collection p {
+    color: var(--turbo);
+}
+
+
+@media screen and (max-width: 840px) {
+    .gallery_title{
+        grid-column: 1 / span 2;
+    }
+    .gallery{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .gallery p {
+        margin-top: -170px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .gallery_title{
+        grid-column: 1/span 1;
+        width:280px;
+        font-size:1.3em;
+    }
+    .gallery{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .gallery p {
+        margin-top:-185px;
+    }
+}
