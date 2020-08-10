@@ -112,7 +112,6 @@ function linear({
             let incr = 0;
             rebuilt_glyphs_library.forEach(glyph_array => {
 
-                let center_incr = 0;
 
                 glyph_array.forEach((glyph, n) => {
 
@@ -154,7 +153,6 @@ function linear({
                     });
 
                     incr += 200;
-                    center_incr += 200;
                     svg_paragraph.setAttributeNS(null, "viewBox", `0 0 260 ${(incr + 60)}`);
 
                 });
@@ -359,7 +357,7 @@ export { fractal };
 
 
 function molecular({
-    section,
+    // section,
     sequence,
     size,
     colors,
@@ -378,7 +376,6 @@ function molecular({
     borderRadius = borderRadius || 0;
     border = border || '0px solid transparent';
 
-    const main_section = document.getElementById(section);
     const xmlns = "http://www.w3.org/2000/svg";
     const _p = `<path style="stroke-width:${strokeWidth}px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
     const p_ = '"/>';
@@ -399,7 +396,7 @@ function molecular({
     svg.style.strokeLinejoin = "round";
     svg.style.strokeLinecap = "round";
     svg.style.fill = "none";
-    svg.id = `molecular_${section}`;
+    // svg.id = `molecular_${section}`;
 
     let glyph_database = graphieros_dictionnary.slice(0);
 
@@ -625,12 +622,14 @@ function callifractal({
     fit 
 }) {
 
-    let [red, green, blue] = colors;
+    // let [red, green, blue] = colors;
 
     size = size || 50;
-    red = red || 200;
-    green = green || 200;
-    blue = blue || 200;
+
+    // red = red || 200;
+    // green = green || 200;
+    // blue = blue || 200;
+    
     radius = radius || size / 5.5;
     background = background || "transparent";
     svgSize = svgSize || 100;

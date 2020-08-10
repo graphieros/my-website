@@ -1,33 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './Gallery/Gallery.css';
 import './Item/Item.css';
 import Header from './Header/Header';
 import Gallery from './Gallery/Gallery';
 import Item from './Item/Item';
-import './Molecule/Molecule';
 import Molecule from './Molecule/Molecule';
 import Fractal from './Fractal/Fractal';
-
-// section,
-// sequence,
-// size,
-// colors,
-// strokeWidth,
-// background,
-// border,
-// borderRadius
-
-// {callifractal({sequence:'zx-ws-qe',svgSize:50, colors: [10,20,30]})}
+import Modal from './Modal/Modal';
 
 function App() {
+
+  const [modal_state, set_modal_state ] = useState({
+      className : 'invisible'
+  })
+
+  const show_modal = () => {
+    set_modal_state({
+      className : 'visible'
+    });
+  }
+
+  const hide_modal = () => {
+    set_modal_state({
+      className: 'invisible'
+    })
+  }
 
   return (
     <div className="App">
       <Header />
 
+      <Modal id="modal_showcase" className={modal_state.className}>
+        <div id="quit_button" onClick={hide_modal}>
+          <Fractal sequence="zx-we"
+                   colors={[255,255,255]}
+                   size=""
+                   svgSize="60"
+                   radius=""
+                   background='rgb(163, 54, 46)'
+                   light={true}
+                   intensity=""
+                   border="2px solid rgb(255,255,255)"
+                   backgroundRadius="100%"/>
+        </div>
+        
+      </Modal>
+
       <Gallery className="gallery" name="Executive_collection" >
-        <Item className="gallery_item" id="item_0">
+        <Item className="gallery_item" id="item_numbers" show_modal_window={show_modal}>
           <p>numbers</p>
           <Molecule className="molecule_executive"
             sequence="sro kfa du srei ktu foi ksi"
@@ -39,7 +60,7 @@ function App() {
             border='2px solid rgb(255,255,255)'
           />
         </Item>
-        <Item className="gallery_item" id="item_1">
+        <Item className="gallery_item" id="item_light" show_modal_window={show_modal}>
           <p>light</p>
           <Fractal className="fractal_executive"
             sequence="wz-zd-dw-qs-se-xs"
@@ -54,7 +75,7 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_2">
+        <Item className="gallery_item" id="item_love" show_modal_window={show_modal}>
           <p>love</p>
           <Molecule className="molecule_executive"
             sequence='mea sa kme'
@@ -66,7 +87,7 @@ function App() {
           />
 
         </Item>
-        <Item className="gallery_item" id="item_3">
+        <Item className="gallery_item" id="item_42" show_modal_window={show_modal}>
           <p>42</p>
           <Fractal className="fractal_executive"
             sequence="wz-ze-ex-xw wz-zd"
@@ -81,7 +102,7 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_4">
+        <Item className="gallery_item" id="item_growth" show_modal_window={show_modal}>
           <p>growth</p>
           <Molecule className="molecule_executive"
             sequence='hea blea kto skai'
@@ -92,7 +113,7 @@ function App() {
             border='2px solid rgb(100,130,150)'
           />
         </Item>
-        <Item className="gallery_item" id="item_5">
+        <Item className="gallery_item" id="item_bloom" show_modal_window={show_modal}>
           <p>bloom</p>
           <Fractal className="fractal_executive"
             sequence="zq-qx-wd-de"
@@ -108,8 +129,10 @@ function App() {
           />
         </Item>
       </Gallery>
+
       <Gallery className="gallery" name="Green_collection">
-        <Item className="gallery_item" id="item_6"><p>plant</p>
+        <Item className="gallery_item" id="item_plant" show_modal_window={show_modal}>
+          <p>plant</p>
           <Fractal className="fractal_green"
             sequence="zw-wd-qx-ew qw-wx-zw-wd-we"
             colors={[192, 224, 182]}
@@ -123,7 +146,8 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_7"><p>nature</p>
+        <Item className="gallery_item" id="item_nature" show_modal_window={show_modal}>
+          <p>nature</p>
           <Molecule className="molecule_green"
             sequence="mea hae to trea frey"
             strokeWidth=""
@@ -134,7 +158,8 @@ function App() {
             border='2px solid rgb(255,255,255)'
           />
         </Item>
-        <Item className="gallery_item" id="item_8"><p>culture</p>
+        <Item className="gallery_item" id="item_culture" show_modal_window={show_modal}>
+          <p>culture</p>
           <Molecule className="molecule_green"
             sequence="ka ksea grae tvai"
             strokeWidth=""
@@ -145,8 +170,9 @@ function App() {
             border='2px solid rgb(255,255,255)'
           /></Item>
       </Gallery>
+
       <Gallery className="gallery" name="Bronze_collection">
-        <Item className="gallery_item" id="item_9">
+        <Item className="gallery_item" id="item_summertime" show_modal_window={show_modal}>
           <p>summertime</p>
           <Fractal className="fractal_bronze"
             sequence="ze-ed-ew-eq-ex zw-wd-dz-qs-se-sx"
@@ -161,7 +187,7 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_10">
+        <Item className="gallery_item" id="item_beauty" show_modal_window={show_modal}>
           <p>beauty</p>
           <Molecule className="molecule_bronze"
             sequence="mea keo grey hea"
@@ -172,7 +198,7 @@ function App() {
             colors={[237, 188, 180]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-        <Item className="gallery_item" id="item_11">
+        <Item className="gallery_item" id="item_play" show_modal_window={show_modal}>
           <p>play</p>
           <Fractal className="fractal_bronze"
             sequence="we-ex-xw-qs-zd wz-zd-dw-qw-ze-xd"
@@ -190,7 +216,7 @@ function App() {
       </Gallery>
 
       <Gallery className="gallery" name="Turbo_collection">
-        <Item className="gallery_item" id="item_12">
+        <Item className="gallery_item" id="item_fighter" show_modal_window={show_modal}>
           <p>fighter</p>
           <Fractal className="fractal_turbo"
             sequence="zx-ws-qe qw-we-dx-xz"
@@ -205,7 +231,8 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_13"><p>alien</p>
+        <Item className="gallery_item" id="item_alien" show_modal_window={show_modal}>
+          <p>alien</p>
           <Molecule className="molecule_turbo"
             sequence="meama via kio tra"
             strokeWidth="14"
@@ -215,7 +242,7 @@ function App() {
             colors={[1, 1, 1]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-        <Item className="gallery_item" id="item_14">
+        <Item className="gallery_item" id="item_echo" show_modal_window={show_modal}>
           <p>echo</p>
           <Fractal className="fractal_turbo"
             sequence="zq-qw-xd-de zq-qw-xd-de zq-qw-xd-de"
@@ -230,7 +257,7 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_15">
+        <Item className="gallery_item" id="item_inside" show_modal_window={show_modal}>
           <p>inside</p>
           <Molecule className="molecule_turbo"
             sequence="nsa"
@@ -241,11 +268,11 @@ function App() {
             colors={[1, 1, 1]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-        <Item className="gallery_item" id="item_16">
+        <Item className="gallery_item" id="item_energy" show_modal_window={show_modal}>
           <p>energy</p>
           <Fractal className="fractal_turbo"
             sequence="ew-wx-xq-qd-dz qz-ze-ed-dx-xw-wq-qd-dw-wz-zd-xe-eq-qx"
-            colors={[255,255,255]}
+            colors={[255, 255, 255]}
             size="20"
             svgSize=""
             radius="15"
@@ -256,7 +283,7 @@ function App() {
             backgroundRadius="100%"
           />
         </Item>
-        <Item className="gallery_item" id="item_17">
+        <Item className="gallery_item" id="item_lava" show_modal_window={show_modal}>
           <p>lava</p>
           <Molecule className="molecule_turbo"
             sequence="trea fwo frey"
