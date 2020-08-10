@@ -135,19 +135,139 @@ function App() {
           />
         </Item>
         <Item className="gallery_item" id="item_8"><p>culture</p>
-        <Molecule className="molecule_green"
+          <Molecule className="molecule_green"
             sequence="ka ksea grae tvai"
             strokeWidth=""
             size="200"
             borderRadius='100%'
-            background={[61,97,50]}
+            background={[61, 97, 50]}
             colors={[192, 224, 182]}
             border='2px solid rgb(255,255,255)'
           /></Item>
       </Gallery>
+      <Gallery className="gallery" name="Bronze_collection">
+        <Item className="gallery_item" id="item_9">
+          <p>summertime</p>
+          <Fractal className="fractal_bronze"
+            sequence="ze-ed-ew-eq-ex zw-wd-dz-qs-se-sx"
+            colors={[112, 73, 67]}
+            size=""
+            svgSize=""
+            radius=""
+            background='radial-gradient(white,rgb(112,73,67))'
+            light={true}
+            intensity="2"
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%"
+          />
+        </Item>
+        <Item className="gallery_item" id="item_10">
+          <p>beauty</p>
+          <Molecule className="molecule_bronze"
+            sequence="mea keo grey hea"
+            strokeWidth=""
+            size="200"
+            borderRadius='100%'
+            background={[112, 73, 67]}
+            colors={[237, 188, 180]}
+            border='2px solid rgb(255,255,255)'
+          /></Item>
+        <Item className="gallery_item" id="item_11">
+          <p>play</p>
+          <Fractal className="fractal_bronze"
+            sequence="we-ex-xw-qs-zd wz-zd-dw-qw-ze-xd"
+            colors={[232, 152, 139]}
+            size=""
+            svgSize=""
+            radius="20"
+            background='rgb(112,73,67)'
+            light={true}
+            intensity="1.4"
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%"
+          />
+        </Item>
+      </Gallery>
 
-      <Gallery className="gallery" name="Bronze_collection" />
-      <Gallery className="gallery" name="Turbo_collection" />
+      <Gallery className="gallery" name="Turbo_collection">
+        <Item className="gallery_item" id="item_12">
+          <p>fighter</p>
+          <Fractal className="fractal_turbo"
+            sequence="zx-ws-qe qw-we-dx-xz"
+            colors={[10, 10, 10]}
+            size=""
+            svgSize=""
+            radius=""
+            background='rgb(255,100,50)'
+            light={true}
+            intensity="100"
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%"
+          />
+        </Item>
+        <Item className="gallery_item" id="item_13"><p>alien</p>
+          <Molecule className="molecule_turbo"
+            sequence="meama via kio tra"
+            strokeWidth="14"
+            size="200"
+            borderRadius='100%'
+            background={[255, 100, 50]}
+            colors={[1, 1, 1]}
+            border='2px solid rgb(255,255,255)'
+          /></Item>
+        <Item className="gallery_item" id="item_14">
+          <p>echo</p>
+          <Fractal className="fractal_turbo"
+            sequence="zq-qw-xd-de zq-qw-xd-de zq-qw-xd-de"
+            colors={[10, 10, 10]}
+            size=""
+            svgSize=""
+            radius=""
+            background='rgb(255,100,50)'
+            light={false}
+            intensity="100"
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%"
+          />
+        </Item>
+        <Item className="gallery_item" id="item_15">
+          <p>inside</p>
+          <Molecule className="molecule_turbo"
+            sequence="nsa"
+            strokeWidth="20"
+            size="200"
+            borderRadius='100%'
+            background={[255, 100, 50]}
+            colors={[1, 1, 1]}
+            border='2px solid rgb(255,255,255)'
+          /></Item>
+        <Item className="gallery_item" id="item_16">
+          <p>energy</p>
+          <Fractal className="fractal_turbo"
+            sequence="ew-wx-xq-qd-dz qz-ze-ed-dx-xw-wq-qd-dw-wz-zd-xe-eq-qx"
+            colors={[255,255,255]}
+            size="20"
+            svgSize=""
+            radius="15"
+            background='rgb(255,100,50)'
+            light={false}
+            intensity="100"
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%"
+          />
+        </Item>
+        <Item className="gallery_item" id="item_17">
+          <p>lava</p>
+          <Molecule className="molecule_turbo"
+            sequence="trea fwo frey"
+            strokeWidth="14"
+            size="200"
+            borderRadius='100%'
+            background={[255, 100, 50]}
+            colors={[1, 1, 1]}
+            border='2px solid rgb(255,255,255)'
+          /></Item>
+      </Gallery>
     </div>
   );
 }

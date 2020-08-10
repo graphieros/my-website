@@ -4,11 +4,6 @@ created by Alec Lloyd Probert
 Special thanx to Thundree, friend & mentor
 */
 
-//TODO
-/*
-    manage mediaqueries for linear function
-*/
-import React from 'react';
 import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
 
 
