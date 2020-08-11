@@ -6,6 +6,7 @@ const Header = () => {
         width: '100vw',
         height: '60px',
         background: 'linear-gradient(to right, white,rgb(100,130,150))',
+        boxShadow: '0px 0px 50px 50px white',
         display: 'block',
         position: 'fixed',
         top: 0,
@@ -35,10 +36,20 @@ const Header = () => {
         fontSize: '2em'
     }    
 
+    const subtitle = {
+        fontSize : '0.5em',
+        display: 'block',
+        marginTop:'-20px',
+        marginLeft: '60px',
+        width:'100px',
+        color: 'rgb(157,187,207)'
+    }
+
     return(
         <header style={header}>
             <div style={header_logo}>
                 <span style={header_logo_span}>G</span>stix
+                <span style={subtitle}> luxury stickers</span>
             </div>
         </header>
     )

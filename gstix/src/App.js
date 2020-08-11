@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import './App.css';
 import './Gallery/Gallery.css';
 import './Item/Item.css';
@@ -13,23 +13,66 @@ import stix_laptop_1 from './Pics/stix_laptop_1.png';
 import stix_laptop_2 from './Pics/stix_laptop_2.png';
 import stix_laptop_3 from './Pics/stix_laptop_3.png';
 
+//ToDo: fix color issue on svg copied in the modal window
+
 function App() {
 
   const [modal_state, set_modal_state] = useState({
     className: 'invisible'
-  })
+  });
 
-  const show_modal = () => {
+  const show_modal = (props) => {
     set_modal_state({
       className: 'visible'
     });
-
+    update_svg(props.children[1].props);
   }
 
   const hide_modal = () => {
     set_modal_state({
       className: 'invisible'
-    })
+    });
+  }
+
+  const [svg_state, set_svg_state] = useState("");
+
+  const update_svg = (props) => {
+
+    let injected_svg;
+    if (props.sequence.includes("-")) {
+      injected_svg =
+        <Fractal id="recreated_svg"
+          sequence={props.sequence}
+          colors={props.colors}
+          svgSize={props.svgSize}
+          size={props.size}
+          radius={props.radius}
+          background={props.background}
+          light={props.light}
+          intensity={props.intensity}
+          border={props.border}
+          dropShadow={props.dropShadow}
+          wrapperBackground={props.wrapperBackground}
+          backgroundRadius={props.backgroundRadius}
+        />
+    } else {
+      injected_svg =
+        <Molecule id="recreated_svg"
+          sequence={props.sequence}
+          colors={props.colors}
+          size={props.size}
+          borderRadius={props.borderRadius}
+          background={props.background}
+          strokeWidth={props.strokeWidth}
+          border={props.border} />
+    }
+
+
+
+    console.log(props)
+    set_svg_state(
+      <div id="injected_svg_wrapper">{injected_svg}</div>
+    )
   }
 
   return (
@@ -49,8 +92,8 @@ function App() {
             border="2px solid rgb(255,255,255)"
             backgroundRadius="100%" />
         </div>
-        <div id="temp_svg">
-    
+        <div>
+          {svg_state}
         </div>
 
       </Modal>
@@ -58,7 +101,7 @@ function App() {
       <Gallery className="gallery" name="Executive_collection" >
         <Item className="gallery_item" id="item_numbers" show_modal_window={show_modal}>
           <p>numbers</p>
-          <Molecule className="molecule_executive"
+          <Molecule className="stix_svg"
             sequence="sro kfa du srei ktu foi ksi"
             strokeWidth=""
             size="200"
@@ -70,7 +113,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_light" show_modal_window={show_modal}>
           <p>light</p>
-          <Fractal className="fractal_executive"
+          <Fractal className="stix_svg"
             sequence="wz-zd-dw-qs-se-xs"
             colors={[100, 130, 150]}
             size=""
@@ -85,7 +128,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_love" show_modal_window={show_modal}>
           <p>love</p>
-          <Molecule className="molecule_executive"
+          <Molecule className="stix_svg"
             sequence='mea sa kme'
             colors={[100, 130, 150]}
             size='200'
@@ -97,7 +140,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_42" show_modal_window={show_modal}>
           <p>42</p>
-          <Fractal className="fractal_executive"
+          <Fractal className="stix_svg"
             sequence="wz-ze-ex-xw wz-zd"
             colors={[100, 130, 150]}
             size=""
@@ -112,7 +155,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_growth" show_modal_window={show_modal}>
           <p>growth</p>
-          <Molecule className="molecule_executive"
+          <Molecule className="stix_svg"
             sequence='hea blea kto skai'
             colors={[100, 130, 150]}
             size='200'
@@ -123,7 +166,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_bloom" show_modal_window={show_modal}>
           <p>bloom</p>
-          <Fractal className="fractal_executive"
+          <Fractal className="stix_svg"
             sequence="zq-qx-wd-de"
             colors={[255, 255, 255]}
             size=""
@@ -142,7 +185,7 @@ function App() {
       <Gallery className="gallery" name="Green_collection">
         <Item className="gallery_item" id="item_plant" show_modal_window={show_modal}>
           <p>plant</p>
-          <Fractal className="fractal_green"
+          <Fractal className="stix_svg"
             sequence="zw-wd-qx-ew qw-wx-zw-wd-we"
             colors={[192, 224, 182]}
             size=""
@@ -157,7 +200,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_nature" show_modal_window={show_modal}>
           <p>nature</p>
-          <Molecule className="molecule_green"
+          <Molecule className="stix_svg"
             sequence="mea hae to trea frey"
             strokeWidth=""
             size="200"
@@ -169,7 +212,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_culture" show_modal_window={show_modal}>
           <p>culture</p>
-          <Molecule className="molecule_green"
+          <Molecule className="stix_svg"
             sequence="ka ksea grae tvai"
             strokeWidth=""
             size="200"
@@ -178,13 +221,52 @@ function App() {
             colors={[192, 224, 182]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-      </Gallery>      
+        <Item className="gallery_item" id="item_earth" show_modal_window={show_modal}>
+          <p>earth</p>
+          <Molecule className="stix_svg"
+            sequence="trea"
+            strokeWidth="26"
+            size="200"
+            borderRadius='100%'
+            background={[192, 224, 182]}
+            colors={[61, 97, 50]}
+            border='2px solid rgb(255,255,255)'
+          />
+        </Item>
+        <Item className="gallery_item" id="item_flower" show_modal_window={show_modal}>
+          <p>flower</p>
+          <Fractal className="stix_svg"
+            sequence="zq-qx-wd-de wz-zd-dw-qs-se-xs"
+            colors={[192, 224, 182]}
+            size="100"
+            svgSize=""
+            radius="25"
+            background='radial-gradient(black,rgb(61,97,50))'
+            light={true}
+            intensity=""
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%"
+          />
+        </Item>
+        <Item className="gallery_item" id="item_evolve" show_modal_window={show_modal}>
+          <p>evolve</p>
+          <Molecule className="stix_svg"
+            sequence="mea ka pio pkia"
+            strokeWidth=""
+            size="200"
+            borderRadius='100%'
+            background={[192, 224, 182]}
+            colors={[61, 97, 50]}
+            border='2px solid rgb(255,255,255)'
+          />
+        </Item>
+      </Gallery>
       <img className="stix_on_laptops" src={stix_laptop_1} alt="a Green Gstix on a laptop" />
-      
+
       <Gallery className="gallery" name="Bronze_collection">
         <Item className="gallery_item" id="item_summertime" show_modal_window={show_modal}>
           <p>summertime</p>
-          <Fractal className="fractal_bronze"
+          <Fractal className="stix_svg"
             sequence="ze-ed-ew-eq-ex zw-wd-dz-qs-se-sx"
             colors={[112, 73, 67]}
             size=""
@@ -199,7 +281,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_beauty" show_modal_window={show_modal}>
           <p>beauty</p>
-          <Molecule className="molecule_bronze"
+          <Molecule className="stix_svg"
             sequence="mea keo grey hea"
             strokeWidth=""
             size="200"
@@ -210,7 +292,7 @@ function App() {
           /></Item>
         <Item className="gallery_item" id="item_play" show_modal_window={show_modal}>
           <p>play</p>
-          <Fractal className="fractal_bronze"
+          <Fractal className="stix_svg"
             sequence="we-ex-xw-qs-zd wz-zd-dw-qw-ze-xd"
             colors={[232, 152, 139]}
             size=""
@@ -229,7 +311,7 @@ function App() {
       <Gallery className="gallery" name="Turbo_collection">
         <Item className="gallery_item" id="item_fighter" show_modal_window={show_modal}>
           <p>fighter</p>
-          <Fractal className="fractal_turbo"
+          <Fractal className="stix_svg"
             sequence="zx-ws-qe qw-we-dx-xz"
             colors={[10, 10, 10]}
             size=""
@@ -244,7 +326,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_alien" show_modal_window={show_modal}>
           <p>alien</p>
-          <Molecule className="molecule_turbo"
+          <Molecule className="stix_svg"
             sequence="meama via kio tra"
             strokeWidth="14"
             size="200"
@@ -255,7 +337,7 @@ function App() {
           /></Item>
         <Item className="gallery_item" id="item_echo" show_modal_window={show_modal}>
           <p>echo</p>
-          <Fractal className="fractal_turbo"
+          <Fractal className="stix_svg"
             sequence="zq-qw-xd-de zq-qw-xd-de zq-qw-xd-de"
             colors={[10, 10, 10]}
             size=""
@@ -270,7 +352,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_inside" show_modal_window={show_modal}>
           <p>inside</p>
-          <Molecule className="molecule_turbo"
+          <Molecule className="stix_svg"
             sequence="nsa"
             strokeWidth="20"
             size="200"
@@ -281,7 +363,7 @@ function App() {
           /></Item>
         <Item className="gallery_item" id="item_energy" show_modal_window={show_modal}>
           <p>energy</p>
-          <Fractal className="fractal_turbo"
+          <Fractal className="stix_svg"
             sequence="ew-wx-xq-qd-dz qz-ze-ed-dx-xw-wq-qd-dw-wz-zd-xe-eq-qx"
             colors={[255, 255, 255]}
             size="20"
@@ -296,7 +378,7 @@ function App() {
         </Item>
         <Item className="gallery_item" id="item_lava" show_modal_window={show_modal}>
           <p>lava</p>
-          <Molecule className="molecule_turbo"
+          <Molecule className="stix_svg"
             sequence="trea fwo frey"
             strokeWidth="14"
             size="200"
@@ -305,11 +387,12 @@ function App() {
             colors={[1, 1, 1]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-      </Gallery>    
+      </Gallery>
       <img className="stix_on_laptops" src={stix_laptop_3} alt="a Turbo Gstix on a laptop" />
 
     </div>
   );
+
 }
 
 export default App;

@@ -13,6 +13,7 @@ const Modal = (props) => {
         style = {
             display: 'block',
             position: 'fixed',
+            zIndex: '101',
             height: '500px',
             width: '600px',
             background: 'white',
