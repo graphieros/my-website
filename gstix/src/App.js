@@ -8,17 +8,22 @@ import Item from './Item/Item';
 import Molecule from './Molecule/Molecule';
 import Fractal from './Fractal/Fractal';
 import Modal from './Modal/Modal';
+import stix_laptop_0 from './Pics/stix_laptop_0.png';
+import stix_laptop_1 from './Pics/stix_laptop_1.png';
+import stix_laptop_2 from './Pics/stix_laptop_2.png';
+import stix_laptop_3 from './Pics/stix_laptop_3.png';
 
 function App() {
 
-  const [modal_state, set_modal_state ] = useState({
-      className : 'invisible'
+  const [modal_state, set_modal_state] = useState({
+    className: 'invisible'
   })
 
   const show_modal = () => {
     set_modal_state({
-      className : 'visible'
+      className: 'visible'
     });
+
   }
 
   const hide_modal = () => {
@@ -34,17 +39,20 @@ function App() {
       <Modal id="modal_showcase" className={modal_state.className}>
         <div id="quit_button" onClick={hide_modal}>
           <Fractal sequence="zx-we"
-                   colors={[255,255,255]}
-                   size=""
-                   svgSize="60"
-                   radius=""
-                   background='rgb(163, 54, 46)'
-                   light={true}
-                   intensity=""
-                   border="2px solid rgb(255,255,255)"
-                   backgroundRadius="100%"/>
+            colors={[255, 255, 255]}
+            size=""
+            svgSize="60"
+            radius=""
+            background='rgb(163, 54, 46)'
+            light={true}
+            intensity=""
+            border="2px solid rgb(255,255,255)"
+            backgroundRadius="100%" />
         </div>
-        
+        <div id="temp_svg">
+    
+        </div>
+
       </Modal>
 
       <Gallery className="gallery" name="Executive_collection" >
@@ -129,6 +137,7 @@ function App() {
           />
         </Item>
       </Gallery>
+      <img className="stix_on_laptops" src={stix_laptop_0} alt="an Executive Gstix on a laptop" />
 
       <Gallery className="gallery" name="Green_collection">
         <Item className="gallery_item" id="item_plant" show_modal_window={show_modal}>
@@ -169,8 +178,9 @@ function App() {
             colors={[192, 224, 182]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-      </Gallery>
-
+      </Gallery>      
+      <img className="stix_on_laptops" src={stix_laptop_1} alt="a Green Gstix on a laptop" />
+      
       <Gallery className="gallery" name="Bronze_collection">
         <Item className="gallery_item" id="item_summertime" show_modal_window={show_modal}>
           <p>summertime</p>
@@ -214,6 +224,7 @@ function App() {
           />
         </Item>
       </Gallery>
+      <img className="stix_on_laptops" src={stix_laptop_2} alt="a Bronze Gstix on a laptop" />
 
       <Gallery className="gallery" name="Turbo_collection">
         <Item className="gallery_item" id="item_fighter" show_modal_window={show_modal}>
@@ -294,7 +305,9 @@ function App() {
             colors={[1, 1, 1]}
             border='2px solid rgb(255,255,255)'
           /></Item>
-      </Gallery>
+      </Gallery>    
+      <img className="stix_on_laptops" src={stix_laptop_3} alt="a Turbo Gstix on a laptop" />
+
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import standard_laptop from '../Pics/standard_laptop.png';
 
 const Modal = (props) => {
 
@@ -29,6 +30,7 @@ const Modal = (props) => {
     return(
         <section id={props.id} style={style}>
             {props.children}
+            <img id="standard_laptop" src={standard_laptop} alt="standard laptop" />
         </section>
     )
 }

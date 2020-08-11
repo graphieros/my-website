@@ -7,7 +7,7 @@ const Gallery = (props) => {
         width: '100vw',
         maxWidth: '800px',
         margin: '0 auto',
-        marginTop: '150px'
+        marginTop: '20px'
     }
 
     return(
