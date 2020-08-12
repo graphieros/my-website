@@ -27,7 +27,6 @@ const Modal = (props) => {
         }
     }
 
-
     return(
         <section id={props.id} style={style}>
             {props.children}

@@ -200,6 +200,11 @@
     width: 80px !important;
 }
 
+/* buy button */
+#buy:hover {
+    opacity: 1 !important;
+}
+
 @media screen and (max-width: 840px) {
     .gallery_title{
         grid-column: 1 / span 2;
@@ -233,6 +238,7 @@
     }
     #modal_showcase{
         width:400px !important;
+        height: 360px !important;
     }
     #injected_svg_wrapper{
         margin-top: 115px;
@@ -253,6 +259,12 @@
 }
 
 @media screen and (max-width: 450px) {
+
+    #modal_showcase{
+        width:400px !important;
+        height: 350px !important;
+    }
+
     #injected_svg_wrapper{
         margin-top: 120px;
         margin-left:220px;
@@ -278,6 +290,7 @@
 
     #modal_showcase{
         width:350px !important;
+        height: 330px !important;
     }
     #injected_svg_wrapper{
         margin-top: 100px;
@@ -302,6 +315,7 @@
 
     #modal_showcase{
         width:280px !important;
+        height: 290px !important;
     }
     #injected_svg_wrapper{
         margin-top: 74px;
@@ -325,7 +339,7 @@
 
     #modal_showcase{
         width:250px !important;
-        height:400px !important;
+        height:260px !important;
     }
     #injected_svg_wrapper{
         margin-top: 70px;

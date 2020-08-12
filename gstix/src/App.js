@@ -14,6 +14,7 @@ import stix_laptop_2 from './Pics/stix_laptop_2.png';
 import stix_laptop_3 from './Pics/stix_laptop_3.png';
 import Footer from './Footer/Footer';
 import LandingPage from './LandingPage/LandingPage';
+import Buy from './Buy/Buy';
 
 //ToDo: fix color issue on svg copied in the modal window
 
@@ -128,9 +129,8 @@ function App() {
               border="2px solid rgb(255,255,255)"
               backgroundRadius="100%" />
           </div>
-          <div>
-            {svg_state}
-          </div>
+          <div>{svg_state}</div>
+          <Buy />
 
         </Modal>
 
