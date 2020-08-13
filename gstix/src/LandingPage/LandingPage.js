@@ -28,7 +28,7 @@ const LandingPage = (props) => {
         cursor: 'pointer'
     }
 
-    const site_name = {
+    const site_name = { 
         display: 'block',
         position: 'relative',
         marginTop: '-100px',
