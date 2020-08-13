@@ -1,0 +1,79 @@
+:root{
+    --t0: rgb(255, 138, 117);
+    --t : tomato;
+    --t1: rgb(180, 67, 48);
+    --c0: rgb(158, 185, 235);
+    --c : cornflowerBlue;
+    --c1: rgb(59, 103, 184);
+    --g0: rgb(255, 239, 146);
+    --g : gold;
+    --g1: rgb(168, 143, 0);
+}
+
+/*MENU*/
+
+.menuInitial{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width:400px;
+    background:transparent;
+    /* border:1px solid blue; */
+}
+
+.menuInitial:first-child  div > svg{
+    width:100%;
+    height:100%;
+    position: absolute;
+    margin-left: 50%;
+    margin-top:50%;
+    filter: drop-shadow(0 0px 2px black);
+    animation: spin 6s cubic-bezier(.8, 0, .1, 1);
+    animation-duration: 2s;
+    transform:translate(-50%,-50%);
+    transform-origin: center center;
+}
+
+@keyframes spin{
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg);
+        height:0%;
+        width:0%;
+    }
+    100% {
+        transform:translate(-50%,-50%) rotate(360deg);
+        height:100%;
+        width:100%;
+    }
+}
+
+.menuCategory {
+    display: block;
+    height:70px;
+    width:70px;
+    background: rgba(255, 0, 0, 0.5);
+    border-radius:100%;
+    position: absolute;
+}
+
+#menuCategoryBio{
+    margin-top: 50%;
+    transform: translateY(-55%);
+}
+
+@media screen and (max-width: 415px) {
+    .menuInitial{
+        height: 300px;
+        width:300px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .menuInitial{
+        height: 260px;
+        width:260px;
+    }
+}
