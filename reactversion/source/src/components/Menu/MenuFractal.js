@@ -6,7 +6,7 @@ const MenuFractal = () => {
     return(
         <Fractal id="menuFractal"
             sequence = 'zw-wd-dz-sq-se-sx'
-            colors={[200,200,200]}
+            colors={[210,210,210]}
             size=''
             svgSize=''
             radius=''

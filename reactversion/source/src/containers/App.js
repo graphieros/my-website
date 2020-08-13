@@ -5,21 +5,31 @@ import Menu from '../components/Menu/Menu';
 
 function App() {
 
-  const [ menuState, setMenuState ] = useState({
-    className: 'menuInitial'
+  const origin = 'menuInitial';
+  const destination = 'menuClicked';
+
+
+  let [ menuState, setMenuState ] = useState ({
+    className: origin
   });
 
   const clickOnMenuItemHandler = () => {
-    console.log("it works dude");
     setMenuState({
-      className: 'menuClicked'
+      className: destination
     });
+  } 
+
+  const resetMenuHandler = () => {
+    setMenuState({
+      className: origin
+    })
   }
 
   return (
     <div className="App">
-      <Menu className={menuState.className} click={clickOnMenuItemHandler}>
+      <Menu className={menuState.className} buttonAction = {clickOnMenuItemHandler}> 
       </Menu>
+      <div id="resetMenu" onClick={resetMenuHandler}></div>
     </div>
   );
 }
