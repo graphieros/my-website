@@ -13,6 +13,7 @@ import PortfolioFractal from './Portfolio/PorfolioFractal';
 import GraphierosFractal from './Graphieros/GraphierosFractal';
 import MenuCategory from '../components/Menu/MenuCategory';
 import SubMenuContent from '../components/SubMenuContent/SubMenuContent';
+import SubMenuBioDo from '../components/SubMenuContent/SubMenuBioDo';
 // import  Molecule  from '../components/Molecule/Molecule';
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
     setGraphierosStandbyState({
       className: 'hidden'
     });
+    setBioDoState({
+      className: 'hidden'
+    });
   }
 
   //BIO SUBMENU STATE
@@ -53,6 +57,14 @@ function App() {
     });
     setGraphierosStandbyState({
       className: 'hidden'
+    });
+  }
+
+  //BIO SUBCATEGORY HANDLING
+  const clickBioDoHandler = (upperHandler) => {
+    upperHandler();
+    setBioDoState({
+      className: 'bioDoOn'
     });
   }
 
@@ -113,7 +125,10 @@ function App() {
     });
     setGraphierosState({
       className: 'hidden'
-    })
+    });
+    setBioDoState({
+      className: 'hidden'
+    });
   }
 
   //BOTTOM NAME STATE
@@ -134,6 +149,10 @@ function App() {
     className: 'hidden'
   });
 
+  const [bioDoState, setBioDoState] = useState({
+    className: 'hidden'
+  });
+
   const clickBioHandler = () => {
     setMenuState({
       className: 'menuClicked'
@@ -143,7 +162,7 @@ function App() {
     });
     setBioState({
       className: 'bioOn'
-    })
+    });
   }
 
   //RESET BIO SUBMENU STATE
@@ -159,6 +178,9 @@ function App() {
     });
     setGraphierosStandbyState({
       clasName: 'hidden'
+    });
+    setBioDoState({
+      className: 'hidden'
     });
   }
 
@@ -245,8 +267,6 @@ function App() {
           stroke='white'
           fill='white' />
 
-          <SubMenuContent />
-
         <MenuCategory
           className='menuCategory'
           id='menuCategoryPorfolio'
@@ -292,7 +312,7 @@ function App() {
 
       <Bio className={bioState.className}>
         <BioFractal />
-        <MenuCategory clicked={clickBioCategoryHandler}
+        <MenuCategory clicked={() => clickBioDoHandler(clickBioCategoryHandler)}
           className='menuCategory'
           id='menuCategoryBioDo'
           title='CE QUE JE FAIS'
@@ -304,7 +324,11 @@ function App() {
           stroke='rgb(143,126,50)'
           strokewidth='8'
           fill='rgb(143,126,50)'>
-          </MenuCategory>
+        </MenuCategory>
+
+        <SubMenuContent className={bioDoState.className}>
+          <SubMenuBioDo className="bioDoContent"></SubMenuBioDo>
+        </SubMenuContent>
 
         <MenuCategory
           className='menuCategory'
