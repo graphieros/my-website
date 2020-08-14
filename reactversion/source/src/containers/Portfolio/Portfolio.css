@@ -1,0 +1,56 @@
+.portfolioOn{
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 400px;
+    width:400px;
+    border-radius:100%;
+    background:radial-gradient(white,transparent, transparent);
+}
+
+.portfolioOn div > svg{
+    width:100%;
+    height:100%;
+    position: absolute;
+    margin-left: 50%;
+    margin-top:50%;
+    animation: spinPortfolio 1s cubic-bezier(.8, 0, .1, 1);
+    animation-duration: 0.5s;
+    transform:translate(-50%,-50%);
+    transform-origin: center center;
+}
+
+@keyframes spinPortfolio{
+    0% {
+        opacity:0;
+        height:90%;
+        width:90%;
+    }
+    100% {
+        opacity:1;
+        height:100%;
+        width:100%;
+    }
+}
+
+.portfolioOff{
+    display: none;
+}
+
+@media screen and (max-width: 415px) {
+    .portfolioOn{
+        height: 300px;
+        width:300px;
+        transform: translate(-50%,-50%);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .portfolioOn{
+        height: 260px;
+        width:260px;
+        transform: translate(-50%,-50%);
+    }
+}    

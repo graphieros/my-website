@@ -20,7 +20,8 @@
     transform: translate(-50%,-50%);
     height: 400px;
     width:400px;
-    background:transparent;
+    border-radius:100%;
+    background:radial-gradient(white,transparent, transparent);
     /* border:1px solid blue; */
 }
 
@@ -78,7 +79,7 @@
 #menuCategoryBio{
     margin-top: 50%;
     margin-left: 50%;
-    transform: translate(-253%, -54%);
+    transform: translate(-253%, -55%);
     background: radial-gradient(at right, white, var(--g0), rgba(255, 217, 0, 0.5), rgba(168, 143, 0, 0.6));
     box-shadow: 2px 0 10px -5px black;
     animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
@@ -102,10 +103,128 @@
     animation: spinBall 0.8s cubic-bezier(.8, 0, .1, 2);
 }
 
+/* BIO MENU CATEGORY*/
+#menuCategoryBioDo{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-152%, -227%);
+    background: radial-gradient(at right, white, var(--g0), rgba(255, 217, 0, 0.5), rgba(168, 143, 0, 0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryBioParcours{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(144%, -55%);
+    background: radial-gradient(at right, white, var(--g0), rgba(255, 217, 0, 0.5), rgba(168, 143, 0, 0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryBioOutil{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-152%, 117%);
+    background: radial-gradient(at right, white, var(--g0), rgba(255, 217, 0, 0.5), rgba(168, 143, 0, 0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+/* PORFOLIO MENU CATEGORY */
+#menuCategoryPortfolioWeb{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-152%, -227%);
+    background: radial-gradient(at bottom left, white,var(--c0), rgba(100,149,237,0.5), rgba(59,103,184,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryPortfolioPeinture{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(144%, -55%);
+    background: radial-gradient(at bottom left, white,var(--c0), rgba(100,149,237,0.5), rgba(59,103,184,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryPortfolioTexte{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-152%, 117%);
+    background: radial-gradient(at bottom left, white,var(--c0), rgba(100,149,237,0.5), rgba(59,103,184,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+/* GRAPHIEROS MENU CATEGORY */
+#menuCategoryGraphierosCle{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-152%, -227%);
+    background: radial-gradient(at top left, white, var(--t0), rgba(255,99,71,0.5), rgba(180,67,48,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryGraphierosLexique{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(45%, -227%);
+    background: radial-gradient(at top left, white, var(--t0), rgba(255,99,71,0.5), rgba(180,67,48,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryGraphierosEditeur{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(-152%, 117%);
+    background: radial-gradient(at top left, white, var(--t0), rgba(255,99,71,0.5), rgba(180,67,48,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+#menuCategoryGraphierosTexte{
+    margin-top: 50%;
+    margin-left: 50%;
+    transform: translate(45%, 117%);
+    background: radial-gradient(at top left, white, var(--t0), rgba(255,99,71,0.5), rgba(180,67,48,0.6));
+    box-shadow: 2px 0 10px -5px black;
+    animation: spinBall 0.3s cubic-bezier(.8, 0, .1, 2);
+}
+
+/* transition states of clicked menus */
+
+.hidden{
+    display:none;
+    cursor: default;
+    z-index:-1;
+}
+
+.visible{
+    display:initial;
+    cursor: pointer;
+}
+
 .menuClicked{
+    bottom:0;
+}
+
+.bioStandby,
+.portfolioStandby,
+.graphierosStandby{
+    bottom:85px;
+}
+
+.menuClicked,
+.bioStandby,
+.portfolioStandby,
+.graphierosStandby{
     display: block;
     position: fixed;
-    bottom:0;
     right:0;
     height: 100px;
     width:100px;
@@ -126,6 +245,120 @@
     animation-duration: 0.3s;
 }
 
+
+.bioStandby div > svg {
+    height:100px;
+    width:100px;
+    bottom: 200px;
+    filter: drop-shadow(0 0px 1px rgb(63, 54, 29)) !important;
+    animation-duration: 2s;
+    transform-origin: center center;
+    animation: toMiniMenuReverse;
+    animation-duration: 0.3s;
+}
+
+.portfolioStandby div > svg {
+    height:100px;
+    width:100px;
+    bottom: 200px;
+    filter: drop-shadow(0 0px 1px rgb(29, 34, 63)) !important;
+    animation-duration: 2s;
+    transform-origin: center center;
+    animation: toMiniMenuReverse;
+    animation-duration: 0.3s;
+}
+
+.graphierosStandby div > svg {
+    height:100px;
+    width:100px;
+    bottom: 200px;
+    filter: drop-shadow(0 0px 1px rgb(63, 40, 29)) !important;
+    animation-duration: 2s;
+    transform-origin: center center;
+    animation: toMiniMenuReverse;
+    animation-duration: 0.3s;
+}
+
+/* ME */
+
+.meLanding {
+    font-family: 'Megrim', cursive;
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 38px;
+    font-size: 1em;
+    color: rgb(100,100,100);
+    animation: bye 1s;
+}
+
+
+@keyframes bye {
+    0%{
+        opacity: 0;
+        /* font-size: 0.9em; */
+        text-shadow: 0 0px 20px black;
+    }
+    100%{
+        opacity:1;
+        /* font-size:1em; */
+        text-shadow:  none;
+    }
+}
+
+.meLanding span {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.meLeaving{
+    font-family: 'Megrim', cursive;
+    width:200px;
+    text-align: center;
+    display: block;
+    position: fixed;
+    bottom: 40px;
+    right:25px;
+    font-size: 0.6em;
+    color: rgb(100,100,100);
+    animation: hey 0.3s;
+}
+
+@keyframes hey {
+    0%{
+        opacity: 0;
+        transform: rotate(0deg);
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    100%{
+        opacity:1;
+        transform: rotate(360deg);
+        width:200px;
+        text-align: center;
+        display: block;
+    }
+}
+
+.meLeaving span {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.meLeaving #spanA{
+    color: var(--g);
+}
+
+.meLeaving #spanL{
+    color: var(--t);
+}
+
+.meLeaving #spanP{
+    color: var(--c);
+}
+
 @keyframes toMiniMenu {
     0%{
         transform: rotate(0deg);
@@ -135,12 +368,27 @@
     }
 }
 
-.menuClicked .menuCategory{
+@keyframes toMiniMenuReverse {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.menuClicked .menuCategory,
+.bioStandby .menuCategory,
+.portfolioStandby .menuCategory,
+.graphierosStandby .menuCategory{
     display: none;
 }
 
 /* hack to compensate my inability to manage states*/
-#resetMenu{
+#resetMenu,
+.bioStandbyOn,
+.portfolioStandbyOn,
+.graphierosStandbyOn {
     display: block;
     z-Index:200;
     position: fixed;
@@ -153,11 +401,23 @@
     cursor: pointer;
 }
 
+#resetMenu{
+    bottom: 0;
+}
+
+.bioStandbyOn,
+.portfolioStandbyOn,
+.graphierosStandbyOn{
+    bottom: 86px;
+}
+
+
 @keyframes spinBall {
     0%{
         height:0px;
         width:0px;
     }
+
     100%{
         height:70px;
         width:70px;
@@ -165,16 +425,94 @@
 }
 
 @media screen and (max-width: 415px) {
-    .menuInitial{
+    .menuInitial,
+    .bioOn,
+    .portfolioOn{
         height: 300px;
         width:300px;
-        transform: translate(-40%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+    #menuCategoryPortfolioWeb,
+    #menuCategoryBioDo
+    {
+        transform: translate(-127%, -184%);
+    }
+    #menuCategoryPortfolioPeinture,
+    #menuCategoryBioParcours{
+        transform: translate(95%, -55%);
+    }
+    #menuCategoryPortfolioTexte,
+    #menuCategoryBioOutil{
+        transform: translate(-127%, 75%);
+    }
+
+    #menuCategoryGraphierosCle{
+        transform: translate(-127%, -182%);
+    }
+    #menuCategoryGraphierosLexique{
+        transform: translate(23%, -182%);
+    }
+    #menuCategoryGraphierosEditeur{
+        transform: translate(-127%, 75%);
+    }
+    #menuCategoryGraphierosTexte{
+        transform: translate(23%, 75%);
+    }
+
+    #menuCategoryBio{
+        transform: translate(-200%, -55%);
+    }
+    #menuCategoryPorfolio{
+        transform: translate(23%,-182%);
+    }
+    #menuCategoryGraphieros{
+        transform: translate(23%,75%);
     }
 }
 
 @media screen and (max-width: 320px) {
-    .menuInitial{
+    .menuInitial,
+    .bioOn,
+    .portfolioOn,
+    .graphierosOn{
         height: 260px;
         width:260px;
+    }
+
+    #menuCategoryPortfolioWeb,
+    #menuCategoryBioDo{
+        transform: translate(-116%, -166%);
+    }
+    #menuCategoryPortfolioPeinture,
+    #menuCategoryBioParcours{
+        transform: translate(75%, -55%);
+    }
+    #menuCategoryPortfolioTexte,
+    #menuCategoryBioOutil{
+        transform: translate(-116%, 58%);
+    }
+
+    #menuCategoryGraphierosCle{
+        transform: translate(-116%, -166%);
+    }
+    #menuCategoryGraphierosLexique{
+        transform: translate(14%, -166%);
+    }
+    #menuCategoryGraphierosEditeur{
+        transform: translate(-116%, 58%);
+    }
+    #menuCategoryGraphierosTexte{
+        transform: translate(14%, 58%);
+    }
+
+    #menuCategoryBio{
+        transform: translate(-180%, -55%);
+    }
+    #menuCategoryPorfolio{
+        transform: translate(14%,-166%);
+    }
+    #menuCategoryGraphieros{
+        transform: translate(14%,58%);
     }
 }

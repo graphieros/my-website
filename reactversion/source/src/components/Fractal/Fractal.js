@@ -18,9 +18,9 @@ const Fractal = (props) => {
         backgroundRadius: props.backgroundRadius
     });
 
-    return(
-        <div className={props.className} dangerouslySetInnerHTML={{__html: fractal}}></div>
-        )
+    return (
+        <div className={props.className} dangerouslySetInnerHTML={{ __html: fractal }}></div>
+    )
 }
 
 export default Fractal;

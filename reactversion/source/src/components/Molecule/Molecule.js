@@ -12,9 +12,9 @@ const Molecule = (props) => {
         strokeWidth: props.strokeWidth,
         border: props.border
     });
-    
-    return(
-    <div className={props.className} dangerouslySetInnerHTML={{__html: molecule}}></div>
+
+    return (
+        <div className={props.className} dangerouslySetInnerHTML={{ __html: molecule }}></div>
     )
 }
 

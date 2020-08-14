@@ -658,7 +658,7 @@ function callifractal({
     SVG.setAttributeNS(null, "width", svgSize);
     SVG.style.filter = dropShadow;
     SVG.style.borderRadius = backgroundRadius;
-    // SVG.id = `callifractal_${section}`;
+    // SVG.id = sequence.replace(" ", "");
 
     let raw_data = coordinates;
     let lines = raw_data.split(" ");
