@@ -14,6 +14,7 @@ import GraphierosFractal from './Graphieros/GraphierosFractal';
 import MenuCategory from '../components/Menu/MenuCategory';
 import SubMenuContent from '../components/SubMenuContent/SubMenuContent';
 import SubMenuBioDo from '../components/SubMenuContent/SubMenuBioDo';
+import SubMenuParcours from '../components/SubMenuContent/SubMenuParcours';
 // import  Molecule  from '../components/Molecule/Molecule';
 
 function App() {
@@ -65,6 +66,19 @@ function App() {
     upperHandler();
     setBioDoState({
       className: 'bioDoOn'
+    });
+    setBioParcoursState({
+      className: 'hidden'
+    });
+  }
+
+  const clickParcoursHandler = (upperHandler) => {
+    upperHandler();
+    setBioDoState({
+      className: 'hidden'
+    });
+    setBioParcoursState({
+      className: 'bioParcoursOn'
     });
   }
 
@@ -129,6 +143,9 @@ function App() {
     setBioDoState({
       className: 'hidden'
     });
+    setBioParcoursState({
+      className: 'hidden'
+    });
   }
 
   //BOTTOM NAME STATE
@@ -152,6 +169,10 @@ function App() {
   const [bioDoState, setBioDoState] = useState({
     className: 'hidden'
   });
+
+  const [bioParcoursState, setBioParcoursState] = useState({
+    className: 'hidden'
+  })
 
   const clickBioHandler = () => {
     setMenuState({
@@ -182,6 +203,9 @@ function App() {
     setBioDoState({
       className: 'hidden'
     });
+    setBioParcoursState({
+      className: 'hidden'
+    })
   }
 
   //PORTFOLIO SUBMENU STATE
@@ -330,7 +354,7 @@ function App() {
           <SubMenuBioDo className="bioDoContent"></SubMenuBioDo>
         </SubMenuContent>
 
-        <MenuCategory
+        <MenuCategory clicked={() => clickParcoursHandler(clickBioCategoryHandler)}
           className='menuCategory'
           id='menuCategoryBioParcours'
           title='MON PARCOURS'
@@ -342,6 +366,10 @@ function App() {
           stroke='rgb(143,126,50)'
           strokewidth='8'
           fill='rgb(143,126,50)' />
+
+        <SubMenuContent className={bioParcoursState.className}>
+          <SubMenuParcours className="bioParcoursContent"></SubMenuParcours>
+        </SubMenuContent>
 
         <MenuCategory
           className='menuCategory'
