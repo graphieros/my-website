@@ -16,6 +16,7 @@ import SubMenuContent from '../components/SubMenuContent/SubMenuContent';
 import SubMenuBioDo from '../components/SubMenuContent/SubMenuBioDo';
 import SubMenuParcours from '../components/SubMenuContent/SubMenuParcours';
 import SubMenuOutil from '../components/SubMenuContent/SubMenuOutil';
+import SubMenuPeinture from '../components/SubMenuContent/SubMenuPeinture';
 
 
 function App() {
@@ -23,34 +24,6 @@ function App() {
   const [menuState, setMenuState] = useState({
     className: 'menuInitial'
   });
-
-  //MAIN MENU STATE
-  const clickOnMenuItemHandler = () => {
-    setMenuState({
-      className: 'menuClicked'
-    });
-    setMeState({
-      className: 'meLeaving'
-    });
-    setBioStandbyState({
-      className: 'hidden'
-    });
-    setPortfolioStandbyState({
-      className: 'hidden'
-    });
-    setGraphierosStandbyState({
-      className: 'hidden'
-    });
-    setBioDoState({
-      className: 'hidden'
-    });
-    setBioParcoursState({
-      className: 'hidden' //check
-    });
-    setBioOutilState({
-      className: 'hidden' //check
-    })
-  }
 
   //BIO SUBMENU STATE
   const clickBioCategoryHandler = () => {
@@ -124,6 +97,15 @@ function App() {
     });
   }
 
+  //PORTFOLIO SUBCATEGORY HANDLING
+  const clickPeintureHandler = (upperHandler) => {
+    upperHandler();
+    setPeintureState({
+      className: 'peintureOn'
+    });
+  }
+
+
   //GRAPHIEROS SUBMENU STATE
   const clickGraphierosCategoryHandler = () => {
     setGraphierosState({
@@ -151,15 +133,13 @@ function App() {
       loyd: 'loyd',
       robert: 'robert'
     });
-
     setBioState({
       className: 'bioOff'
     });
-
+    
     setBioStandbyState({
       className: 'hidden'
     });
-
     setPortfolioState({
       className: 'hidden'
     });
@@ -170,6 +150,12 @@ function App() {
       className: 'hidden'
     });
     setBioParcoursState({
+      className: 'hidden'
+    });
+    setBioOutilState({
+      className: 'hidden'
+    });
+    setPeintureState({
       className: 'hidden'
     });
   }
@@ -202,7 +188,7 @@ function App() {
 
   const [bioOutilState, setBioOutilState] = useState({
     className: 'hidden'
-  })
+  });
 
   const clickBioHandler = () => {
     setMenuState({
@@ -250,6 +236,10 @@ function App() {
     className: 'hidden'
   });
 
+  const [peintureState, setPeintureState] = useState({
+    className: 'hidden'
+  });
+
   const clickPortfolioHandler = () => {
     setMenuState({
       className: 'menuClicked'
@@ -268,6 +258,9 @@ function App() {
       className: 'portfolioOn'
     });
     setPortfolioStandbyState({
+      className: 'hidden'
+    });
+    setPeintureState({
       className: 'hidden'
     });
   }
@@ -307,8 +300,7 @@ function App() {
     <div className="App">
 
       <div
-        className={menuState.className}
-        onClick={clickOnMenuItemHandler}>
+        className={menuState.className}>
         <MenuFractal />
 
         <MenuCategory
@@ -417,9 +409,9 @@ function App() {
           strokewidth='8'
           fill='rgb(143,126,50)' />
 
-          <SubMenuContent className={bioOutilState.className}>
-            <SubMenuOutil className="bioOutilContent"></SubMenuOutil>
-          </SubMenuContent>
+        <SubMenuContent className={bioOutilState.className}>
+          <SubMenuOutil className="bioOutilContent"></SubMenuOutil>
+        </SubMenuContent>
 
       </Bio>
 
@@ -438,7 +430,7 @@ function App() {
           strokewidth='8'
           fill='rgb(38,70,133)' />
 
-        <MenuCategory
+        <MenuCategory clicked={() => clickPeintureHandler(clickPortfolioCategoryHandler)}
           className='menuCategory'
           id='menuCategoryPortfolioPeinture'
           title='PEINTURE'
@@ -450,6 +442,10 @@ function App() {
           stroke='rgb(38,70,133)'
           strokewidth='8'
           fill='rgb(38,70,133)' />
+
+        <SubMenuContent className={peintureState.className}>
+          <SubMenuPeinture className="peintureContent"></SubMenuPeinture>
+        </SubMenuContent>
 
         <MenuCategory
           className='menuCategory'

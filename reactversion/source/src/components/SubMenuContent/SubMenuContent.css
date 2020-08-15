@@ -1,6 +1,7 @@
 .bioDoOn,
 .bioParcoursOn,
-.bioOutilOn{
+.bioOutilOn,
+.peintureOn{
     /* z-index:-1; */
     display: block;
     position: fixed;
@@ -14,7 +15,8 @@
 }
 
 .bioDoTitle,
-.bioParcoursTitle{
+.bioParcoursTitle,
+.bioOutilTitle{
     top:200px;
     position: relative;
     display: block;
@@ -47,7 +49,8 @@
 }
 
 #fractalBioTitleWrapper,
-#fractalParcoursTitleWrapper {
+#fractalParcoursTitleWrapper,
+#fractalOutilTitleWrapper {
     display: block;
     position: absolute;
     margin-left: -100px;
@@ -63,6 +66,15 @@
     text-align:right;
     box-sizing: border-box;
     padding-right:92px;
+}
+
+.bioOutilListWrapper{
+    display: flex;
+    position: relative;
+    top:250px;
+    margin: 0 auto;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 #justAline0,
@@ -224,6 +236,43 @@ span.spanSmall{
     max-height:300px;
 }
 
+/* outils */
+
+svg.progLogo{
+    animation: none !important;
+    height:50px !important;
+    width:50px !important;
+}
+
+.bioOutilListWrapper{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px;
+    align-items:center;
+    justify-items:center;
+    position: relative;
+    top:250px;
+    margin: 0 auto;
+    max-width: 160px;
+    box-sizing: border-box;
+    padding:20px;
+    background:radial-gradient(at top left, white, transparent);
+    border-radius:3px;
+    animation: outilDrop 1s ease;
+    opacity:1;
+}
+
+@keyframes outilDrop {
+    0%{
+        opacity:0;
+        margin-top: -50px;
+    }
+    100%{
+        opacity:1;
+        margin-top:intial;
+    }
+}
+
 @keyframes faceShow {
     0%{
         opacity:0;
@@ -251,7 +300,8 @@ span.spanSmall{
 @media screen and (max-width: 415px) {
 
     .bioDoTitle,
-    .bioParcoursTitle{
+    .bioParcoursTitle,
+    .bioOutilTitle{
         top:100px;
         width:100vw;
         max-width:250px;
@@ -275,7 +325,8 @@ span.spanSmall{
     }
 
     #fractalBioTitleWrapper,
-    #fractalParcoursTitleWrapper {
+    #fractalParcoursTitleWrapper,
+    #fractalOutilTitleWrapper {
         display: block;
         position: absolute;
         margin-left: -50px;
@@ -289,6 +340,10 @@ span.spanSmall{
         padding-left: 96px;
     }
 
+    .bioOutilListWrapper {
+        top:140px;
+    }
+
     #bioSoList0,
     #bioDoList1,
     #bioDoList2 {
@@ -299,16 +354,23 @@ span.spanSmall{
         max-width:250px;
         left:-10px;
     }
+
+    .bioOutilListWrapper {
+        top:120px;
+        margin-left: 55px;
+    }
 }
 
 @media screen and (max-width: 320px) {
     .bioDoTitle,
-    .bioParcoursTitle{
+    .bioParcoursTitle,
+    .bioOutilTitle{
         top:70px;
     }
 
     #fractalBioTitleWrapper svg,
-    #fractalParcoursTitleWrapper svg {
+    #fractalParcoursTitleWrapper svg,
+    #fractalOutilTitleWrapper svg {
         height:40px !important;
         width:40px !important;
         margin-left:30px !important;
@@ -320,6 +382,11 @@ span.spanSmall{
         text-align:left;
         padding-right:0;
         padding-left: 81px;
+    }
+
+    .bioOutilListWrapper {
+        top:100px;
+        margin-left: 35px;
     }
 
     #parcoursIntro {
@@ -345,7 +412,8 @@ span.spanSmall{
 @media screen and (min-height: 600px) and (max-width: 600px) {
 
     .bioDoTitle,
-    .bioParcoursTitle {
+    .bioParcoursTitle,
+    .bioOutilTitle {
         top:100px;
         max-width:250px;
     }
@@ -371,6 +439,11 @@ span.spanSmall{
     #bioDoList1,
     #bioDoList2 {
         margin-top: 10px;
+    }
+
+    .bioOutilListWrapper {
+        top:150px;
+        margin:0 auto;
     }
 }
 
