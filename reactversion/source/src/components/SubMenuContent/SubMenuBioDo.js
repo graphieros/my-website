@@ -13,7 +13,7 @@ const SubMenuBioDo = () => {
                         colors={[255, 255, 255]}
                         size='30'
                         svgSize='30'
-                        radius='25'
+                        radius='20'
                         background=''
                         light={true}
                         intensity='1.1'
@@ -58,6 +58,8 @@ const SubMenuBioDo = () => {
                         dropShadow=''
                     />
                 création de langue
+                <div id='justAline0'></div>
+                <div id='justAline1'></div>
             </div>
 
                 <div id="bioDoList2">

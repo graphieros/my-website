@@ -1,4 +1,5 @@
-.bioDoOn{
+.bioDoOn,
+.bioParcoursOn{
     /* z-index:-1; */
     display: block;
     position: fixed;
@@ -11,7 +12,8 @@
     cursor: default;
 }
 
-.bioDoTitle{
+.bioDoTitle,
+.bioParcoursTitle{
     top:200px;
     position: relative;
     display: block;
@@ -43,7 +45,8 @@
     }
 }
 
-#fractalBioTitleWrapper {
+#fractalBioTitleWrapper,
+#fractalParcoursTitleWrapper {
     display: block;
     position: absolute;
     margin-left: -100px;
@@ -59,6 +62,31 @@
     text-align:right;
     box-sizing: border-box;
     padding-right:92px;
+}
+
+#justAline0,
+#justAline1{
+    display: inline-block;
+    position: absolute;
+    height: 40px;
+    width:40px;
+    transform: rotate(45deg);
+}
+
+#justAline0{
+    border-left:1px solid rgba(71, 63, 17, 0.212);
+    border-bottom: 1px solid rgba(71, 63, 17, 0.212);
+    margin-top:-92px;
+    margin-left: -200px;
+    box-shadow: -10px 10px 10px -8px white;
+}
+
+#justAline1{
+    border-right:1px solid rgba(71, 63, 17, 0.212);
+    border-top: 1px solid rgba(71, 63, 17, 0.212);
+    margin-top:75px;
+    margin-left: 10px;
+    box-shadow: 10px -10px 10px -8px white;
 }
 
 #bioDoList0,
@@ -134,9 +162,17 @@ span.spanSmall{
     }
 }
 
+@media screen and (max-width:680px) {
+    #justAline0,
+    #justAline1 {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 415px) {
 
-    .bioDoTitle{
+    .bioDoTitle,
+    .bioParcoursTitle{
         top:100px;
         width:100vw;
         max-width:250px;
@@ -159,7 +195,8 @@ span.spanSmall{
         }
     }
 
-    #fractalBioTitleWrapper {
+    #fractalBioTitleWrapper,
+    #fractalParcoursTitleWrapper {
         display: block;
         position: absolute;
         margin-left: -50px;
@@ -182,11 +219,13 @@ span.spanSmall{
 }
 
 @media screen and (max-width: 320px) {
-    .bioDoTitle{
+    .bioDoTitle,
+    .bioParcoursTitle{
         top:70px;
     }
 
-    #fractalBioTitleWrapper svg{
+    #fractalBioTitleWrapper svg,
+    #fractalParcoursTitleWrapper svg {
         height:40px !important;
         width:40px !important;
         margin-left:30px !important;
@@ -211,7 +250,8 @@ span.spanSmall{
 
 @media screen and (min-height: 600px) and (max-width: 600px) {
 
-    .bioDoTitle{
+    .bioDoTitle,
+    .bioParcoursTitle {
         top:100px;
         max-width:250px;
     }
