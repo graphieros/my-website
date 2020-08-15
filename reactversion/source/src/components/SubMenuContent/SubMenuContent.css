@@ -1,5 +1,6 @@
 .bioDoOn,
-.bioParcoursOn{
+.bioParcoursOn,
+.bioOutilOn{
     /* z-index:-1; */
     display: block;
     position: fixed;
@@ -91,7 +92,8 @@
 
 #bioDoList0,
 #bioDoList1,
-#bioDoList2 {
+#bioDoList2,
+#parcoursIntro {
     display: block;
     position: relative;
     margin:0 auto;
@@ -155,6 +157,83 @@ span.spanSmall{
     animation: none !important;
 }
 
+/* Parcours */
+#parcoursIntro {
+    position: absolute;
+    max-width:300px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    text-align:left;
+    z-index:2000;
+    animation: parcoursIntroBlur 1s;
+    opacity:1;
+}
+
+@keyframes parcoursIntroBlur {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+#parcoursArrows{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-left:-20px;
+    width:100px;
+}
+
+.fractalParcoursApres svg {
+    height:70px !important;
+    animation: none !important;
+}
+
+.fractalParcoursApres{
+    opacity:0.35;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.fractalParcoursApres:hover {
+    opacity:1;
+}
+
+.fractalParcoursApres{
+    margin-left: 0px !important;
+}
+
+
+/* IMAGES */
+
+#faceContainer{
+    position: relative;
+    z-index:-1;
+    opacity:0.75;
+    animation: faceShow 2s;
+    margin-left:0 auto;
+    width:100%;
+    max-width:300px;
+    top:50px;
+    left:0px;
+    transition: all 0.3s ease;
+}
+
+#faceContainer img {
+    max-height:300px;
+}
+
+@keyframes faceShow {
+    0%{
+        opacity:0;
+    }
+    100% {
+        opacity:0.75;
+    }
+}
+
+
 @media screen and (max-width:800px) {
     .bioDoList {
         margin-top: 250px;
@@ -216,6 +295,10 @@ span.spanSmall{
         margin-top: 10px;
     }
 
+    #parcoursIntro{
+        max-width:250px;
+        left:-10px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -237,6 +320,17 @@ span.spanSmall{
         text-align:left;
         padding-right:0;
         padding-left: 81px;
+    }
+
+    #parcoursIntro {
+        position: absolute;
+        max-width:200px;
+        margin-left: 50%;
+        transform: translate(-65%);
+        text-align:left;
+    }
+    #faceContainer img {
+        max-height:200px;
     }
 }
 

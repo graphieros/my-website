@@ -15,7 +15,8 @@ import MenuCategory from '../components/Menu/MenuCategory';
 import SubMenuContent from '../components/SubMenuContent/SubMenuContent';
 import SubMenuBioDo from '../components/SubMenuContent/SubMenuBioDo';
 import SubMenuParcours from '../components/SubMenuContent/SubMenuParcours';
-// import  Molecule  from '../components/Molecule/Molecule';
+import SubMenuOutil from '../components/SubMenuContent/SubMenuOutil';
+
 
 function App() {
 
@@ -43,6 +44,12 @@ function App() {
     setBioDoState({
       className: 'hidden'
     });
+    setBioParcoursState({
+      className: 'hidden' //check
+    });
+    setBioOutilState({
+      className: 'hidden' //check
+    })
   }
 
   //BIO SUBMENU STATE
@@ -70,6 +77,9 @@ function App() {
     setBioParcoursState({
       className: 'hidden'
     });
+    setBioOutilState({
+      className: 'hidden'
+    });
   }
 
   const clickParcoursHandler = (upperHandler) => {
@@ -79,6 +89,22 @@ function App() {
     });
     setBioParcoursState({
       className: 'bioParcoursOn'
+    });
+    setBioOutilState({
+      className: 'hidden'
+    });
+  }
+
+  const clickOutilHandler = (upperHandler) => {
+    upperHandler();
+    setBioDoState({
+      className: 'hidden'
+    });
+    setBioParcoursState({
+      className: 'hidden'
+    });
+    setBioOutilState({
+      className: 'bioOutilOn'
     });
   }
 
@@ -172,6 +198,10 @@ function App() {
 
   const [bioParcoursState, setBioParcoursState] = useState({
     className: 'hidden'
+  });
+
+  const [bioOutilState, setBioOutilState] = useState({
+    className: 'hidden'
   })
 
   const clickBioHandler = () => {
@@ -205,7 +235,10 @@ function App() {
     });
     setBioParcoursState({
       className: 'hidden'
-    })
+    });
+    setBioOutilState({
+      className: 'hidden'
+    });
   }
 
   //PORTFOLIO SUBMENU STATE
@@ -371,7 +404,7 @@ function App() {
           <SubMenuParcours className="bioParcoursContent"></SubMenuParcours>
         </SubMenuContent>
 
-        <MenuCategory
+        <MenuCategory clicked={() => clickOutilHandler(clickBioCategoryHandler)}
           className='menuCategory'
           id='menuCategoryBioOutil'
           title='MES OUTILS'
@@ -383,6 +416,11 @@ function App() {
           stroke='rgb(143,126,50)'
           strokewidth='8'
           fill='rgb(143,126,50)' />
+
+          <SubMenuContent className={bioOutilState.className}>
+            <SubMenuOutil className="bioOutilContent"></SubMenuOutil>
+          </SubMenuContent>
+
       </Bio>
 
       <Portfolio className={portfolioState.className}>
