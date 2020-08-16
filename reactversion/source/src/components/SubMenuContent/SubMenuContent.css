@@ -1,7 +1,6 @@
 .bioDoOn,
 .bioParcoursOn,
-.bioOutilOn,
-.peintureOn{
+.bioOutilOn{
     /* z-index:-1; */
     display: block;
     position: fixed;

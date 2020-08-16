@@ -40,6 +40,24 @@
     /* z-index:1; */
 }
 
+.menuContact {
+    display: block;
+    position: fixed;
+    top:0;
+    right:0;
+    animation: contactAppear 2s;
+    opacity:1;
+}
+
+@keyframes contactAppear {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
 @keyframes spin{
     0% {
         transform: translate(-50%,-50%) rotate(0deg) rotateX(-60deg) rotateY(60deg);

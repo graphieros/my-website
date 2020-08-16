@@ -8,6 +8,7 @@ import Portfolio from './Portfolio/Portfolio';
 import Graphieros from './Graphieros/Graphieros';
 import Me from '../components/Me/Me';
 import MenuFractal from '../components/Menu/MenuFractal';
+import MenuContactFractal from '../components/Menu/MenuContactFractal';
 import BioFractal from './Bio/BioFractal';
 import PortfolioFractal from './Portfolio/PorfolioFractal';
 import GraphierosFractal from './Graphieros/GraphierosFractal';
@@ -39,6 +40,9 @@ function App() {
     setGraphierosStandbyState({
       className: 'hidden'
     });
+    setContactState({
+      className: 'hidden'
+    })
   }
 
   //BIO SUBCATEGORY HANDLING
@@ -95,6 +99,9 @@ function App() {
     setGraphierosStandbyState({
       className: 'hidden'
     });
+    setContactState({
+      className: 'hidden'
+    });
   }
 
   //PORTFOLIO SUBCATEGORY HANDLING
@@ -120,6 +127,9 @@ function App() {
     setPortfolioStandbyState({
       className: 'hidden'
     });
+    setContactState({
+      className: 'hidden'
+    });
   }
 
   //RESET MENU STATE
@@ -136,7 +146,7 @@ function App() {
     setBioState({
       className: 'bioOff'
     });
-    
+
     setBioStandbyState({
       className: 'hidden'
     });
@@ -158,6 +168,9 @@ function App() {
     setPeintureState({
       className: 'hidden'
     });
+    setContactState({
+      className:'menuContact'
+    })
   }
 
   //BOTTOM NAME STATE
@@ -225,6 +238,9 @@ function App() {
     setBioOutilState({
       className: 'hidden'
     });
+    setContactState({
+      className: 'menuContact'
+    });
   }
 
   //PORTFOLIO SUBMENU STATE
@@ -249,7 +265,7 @@ function App() {
     });
     setPortfolioState({
       className: 'portfolioOn'
-    })
+    });
   }
 
   //RESET PORTFOLIO SUBMENU STATE
@@ -262,6 +278,9 @@ function App() {
     });
     setPeintureState({
       className: 'hidden'
+    });
+    setContactState({
+      className: 'menuContact'
     });
   }
 
@@ -294,7 +313,15 @@ function App() {
     setGraphierosStandbyState({
       className: 'hidden'
     });
+    setContactState({
+      className: 'menuContact'
+    });
   }
+
+  // CONTACT STATE
+  const [contactState, setContactState] = useState({
+    className: 'menuContact'
+  });
 
   return (
     <div className="App">
@@ -521,6 +548,8 @@ function App() {
         lec={meState.lec}
         loyd={meState.loyd}
         robert={meState.robert} />
+
+      <MenuContactFractal className={contactState.className}/>
 
     </div>
   );

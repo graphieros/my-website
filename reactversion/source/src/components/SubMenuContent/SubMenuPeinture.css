@@ -1,0 +1,170 @@
+.peintureOn {
+    display: block;
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100vh;
+    width:100vw;
+    overflow: auto;
+    background: radial-gradient(at bottom right, transparent,transparent, rgb(200,200,210), rgb(180,180,190));
+    cursor: default;
+}
+
+.galleryScroll{
+    display: block;
+    position: fixed;
+    right:0;
+    bottom: 200px;
+    height:100%;
+    /* background: linear-gradient(to top, transparent, black); */
+    width:100px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-top:220px;
+}
+.galleryScroll::-webkit-scrollbar {
+    width:0px;
+}
+
+.galleryScroll img {
+    width:100%;
+    box-sizing: border-box;
+    padding-left:6px;
+    padding-right:6px;
+    padding-top:3px;
+    padding-bottom:3px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px -3px rgba(0,0,100,.35);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    animation: picDrop 1s ease-in-out;
+}
+
+.galleryScroll img:hover{
+    opacity:1;
+}
+
+@keyframes picDrop {
+    0%{
+        margin-top:-100px;
+        opacity:0;
+    }
+    100%{
+        margin-top:0px;
+        opacity:0.6;
+    }
+}
+
+.galleryShow{
+    display: grid;
+    align-content:center;
+    width:100%;
+    height:100vh;
+    box-sizing: border-box;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-right:100px;
+}
+
+.galleryShow img {
+    width:100%;
+    max-width:500px;
+    transition: all 0.3s ease;
+    border-radius:3px;
+    box-shadow: 10px 20px 40px -12px rgba(0,0,100,.35);
+    animation: picShowArise 0.5s ease-in;
+}
+
+@keyframes picShowArise{
+    0%{
+        opacity:0.65;
+        transform: scaleY(0.97) scaleX(0.97);
+    }
+    100%{
+        opacity:1;
+        transform: scaleY(1) scaleX(1);
+
+    }
+}
+
+span.galleryPresentation{
+    font-family: 'Megrim', cursive !important;
+    font-size: 2.5em !important;
+    font-weight: bold !important;
+}
+
+.paintingTitle{
+    display: block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(15%, -50%);
+    width:300px;
+    height:100px;
+    height:100px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align:center;
+    font-family: 'Megrim', cursive;
+    font-size:1.618em;
+    font-weight:bold;
+    color: rgb(7, 7, 56);
+    border-top:1px solid white;
+    animation: titleAppear 2s;
+}
+
+@keyframes titleAppear{
+    0%{
+        text-shadow: 0 0px 40px black;
+    }
+    100%{
+        text-shadow: none;
+    }
+}
+
+.paintingTitle span {
+    display:block;
+    margin-top:-30px;
+    font-family: 'Roboto', sans-serif;
+    font-size:0.618em;
+    font-weight:initial;
+    opacity: 0.75;
+}
+
+@media screen and (max-width: 950px) {
+    .galleryShow img {
+        width:100%;
+        max-width:400px;
+        box-shadow: 0px 20px 40px -12px rgba(0,0,100,.35);
+    }
+    .galleryShow {
+        justify-items:center;
+        padding-right:110px;
+    }
+    .paintingTitle{
+        border-top:none;
+        display: block;
+        position:initial;
+        width:100%;
+        max-width:400px;
+        transform: none;
+        margin-top:0px;
+    }
+    .paintingTitle span {
+        font-size: 0.4em;
+        margin-top: -50px;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .galleryShow{
+        align-items:center;
+        justify-items:center;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
