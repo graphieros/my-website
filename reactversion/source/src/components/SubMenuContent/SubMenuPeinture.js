@@ -95,7 +95,7 @@ const SubMenuPeinture = () => {
             content: <span>{picArray[i]}</span>
         });
         setTitState({
-            content: <p>{titArray[i]}</p>
+            content: <p>{titArray[i]}</p> 
         });
         setDesState({
             content: <span dangerouslySetInnerHTML={{__html:desArray[i]}}/>
