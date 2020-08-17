@@ -18,7 +18,7 @@ import SubMenuBioDo from '../components/SubMenuContent/SubMenuBioDo';
 import SubMenuParcours from '../components/SubMenuContent/SubMenuParcours';
 import SubMenuOutil from '../components/SubMenuContent/SubMenuOutil';
 import SubMenuPeinture from '../components/SubMenuContent/SubMenuPeinture';
-
+import SubMenuWeb from '../components/SubMenuContent/SubMenuWeb';
 
 function App() {
 
@@ -42,7 +42,7 @@ function App() {
     });
     setContactState({
       className: 'hidden'
-    })
+    });
   }
 
   //BIO SUBCATEGORY HANDLING
@@ -105,6 +105,14 @@ function App() {
   }
 
   //PORTFOLIO SUBCATEGORY HANDLING
+
+  const clickWebHandler = (upperHandler) => {
+    upperHandler();
+    setWebState({
+      className: 'webOn'
+    });
+  }
+
   const clickPeintureHandler = (upperHandler) => {
     upperHandler();
     setPeintureState({
@@ -168,9 +176,12 @@ function App() {
     setPeintureState({
       className: 'hidden'
     });
+    setWebState({
+      className: 'hidden'
+    });
     setContactState({
-      className:'menuContact'
-    })
+      className: 'menuContact'
+    });
   }
 
   //BOTTOM NAME STATE
@@ -256,6 +267,10 @@ function App() {
     className: 'hidden'
   });
 
+  const [webState, setWebState] = useState({
+    className: 'hidden'
+  });
+
   const clickPortfolioHandler = () => {
     setMenuState({
       className: 'menuClicked'
@@ -279,6 +294,9 @@ function App() {
     setPeintureState({
       className: 'hidden'
     });
+    setWebState({
+      className: 'hidden'
+    })
     setContactState({
       className: 'menuContact'
     });
@@ -302,7 +320,7 @@ function App() {
     });
     setGraphierosState({
       className: 'graphierosOn'
-    })
+    });
   }
 
   //RESET GRAPHIEROS SUBMENU STATE
@@ -444,7 +462,7 @@ function App() {
 
       <Portfolio className={portfolioState.className}>
         <PortfolioFractal />
-        <MenuCategory clicked={clickPortfolioCategoryHandler}
+        <MenuCategory clicked={() => clickWebHandler(clickPortfolioCategoryHandler)}
           className='menuCategory'
           id='menuCategoryPortfolioWeb'
           title='WEB DEV'
@@ -456,6 +474,10 @@ function App() {
           stroke='rgb(38,70,133)'
           strokewidth='8'
           fill='rgb(38,70,133)' />
+
+        <SubMenuContent className={webState.className}>
+          <SubMenuWeb className="webContent"></SubMenuWeb>
+        </SubMenuContent>
 
         <MenuCategory clicked={() => clickPeintureHandler(clickPortfolioCategoryHandler)}
           className='menuCategory'
@@ -549,7 +571,7 @@ function App() {
         loyd={meState.loyd}
         robert={meState.robert} />
 
-      <MenuContactFractal className={contactState.className}/>
+      <MenuContactFractal className={contactState.className} />
 
     </div>
   );
