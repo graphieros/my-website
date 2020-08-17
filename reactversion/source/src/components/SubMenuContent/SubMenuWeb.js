@@ -5,6 +5,15 @@ import screenShotCM from '../../assets/screenShotCM.png';
 import touchWriterDemo from '../../assets/touchWriterDemo.mp4';
 
 const SubMenuWeb = () => {
+
+    const playVideo = (props) => {
+        props.target.play();
+    }
+
+    const stopVideo = (props) => {
+        props.target.pause();
+    }
+
     return (
 
         <div>
@@ -19,7 +28,7 @@ const SubMenuWeb = () => {
                     <img src={screenShotCM} alt="Business Analyse" />
                 </div>
                 <div>
-                    <video controls src={touchWriterDemo} type="video/mp4" />
+                    <video data-play="hover" muted="muted" src={touchWriterDemo} type="video/mp4" onMouseEnter={playVideo} onMouseLeave={stopVideo}/>
                 </div>
             </div>
         </div>
