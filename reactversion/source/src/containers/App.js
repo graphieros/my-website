@@ -3,10 +3,12 @@ import './App.css';
 import './Bio/Bio.css';
 import './Portfolio/Portfolio.css';
 import './Graphieros/Graphieros.css';
+import '../components/Menu/MenuTitle.css';
 import Bio from './Bio/Bio';
 import Portfolio from './Portfolio/Portfolio';
 import Graphieros from './Graphieros/Graphieros';
 import Me from '../components/Me/Me';
+import MenuTitle from '../components/Menu/MenuTitle';
 import MenuFractal from '../components/Menu/MenuFractal';
 import MenuContactFractal from '../components/Menu/MenuContactFractal';
 import BioFractal from './Bio/BioFractal';
@@ -23,7 +25,7 @@ import SubMenuWeb from '../components/SubMenuContent/SubMenuWeb';
 function App() {
 
   const [backgroundState, setBackgroundState] = useState({
-    className:'initialBackground'
+    className: 'initialBackground'
   });
 
   const [menuState, setMenuState] = useState({
@@ -33,7 +35,9 @@ function App() {
   //BIO SUBMENU STATE
   const clickBioCategoryHandler = () => {
     setBioState({
-      className: 'bioStandby'
+      className: 'bioStandby',
+      title: 'Bio',
+      titleClassName: 'titleBio'
     });
     setBioStandbyState({
       className: 'bioStandbyOn'
@@ -238,7 +242,9 @@ function App() {
       className: 'meLeaving'
     });
     setBioState({
-      className: 'bioOn'
+      className: 'bioOn',
+      title: 'Bio',
+      titleClassName: 'titleBio'
     });
     setBackgroundState({
       className: 'backgroundGold'
@@ -248,7 +254,9 @@ function App() {
   //RESET BIO SUBMENU STATE
   const resetBioHandler = () => {
     setBioState({
-      className: 'bioOn'
+      className: 'bioOn',
+      title: 'Bio',
+      titleClassName: 'titleBio'
     });
     setBioStandbyState({
       className: 'hidden'
@@ -297,11 +305,14 @@ function App() {
     setMenuState({
       className: 'menuClicked'
     });
+
     setMeState({
       className: 'meLeaving'
     });
     setPortfolioState({
-      className: 'portfolioOn'
+      className: 'portfolioOn',
+      title: 'Portfolio',
+      titleClassName: 'titlePortfolio'
     });
     setBackgroundState({
       className: 'backgroundBlue'
@@ -311,7 +322,9 @@ function App() {
   //RESET PORTFOLIO SUBMENU STATE
   const resetPortfolioHandler = () => {
     setPortfolioState({
-      className: 'portfolioOn'
+      className: 'portfolioOn',
+      title: 'Portfolio',
+      titleClassName: 'titlePortfolio'
     });
     setPortfolioStandbyState({
       className: 'hidden'
@@ -347,7 +360,9 @@ function App() {
       className: 'meLeaving'
     });
     setGraphierosState({
-      className: 'graphierosOn'
+      className: 'graphierosOn',
+      title: 'Graphieros',
+      titleClassName: 'titleGraphieros'
     });
     setBackgroundState({
       className: 'backgroundRed'
@@ -357,7 +372,9 @@ function App() {
   //RESET GRAPHIEROS SUBMENU STATE
   const resetGraphierosHandler = () => {
     setGraphierosState({
-      className: 'graphierosOn'
+      className: 'graphierosOn',
+      title: 'Graphieros',
+      titleClassName: 'titleGraphieros'
     });
     setGraphierosStandbyState({
       className: 'hidden'
@@ -493,6 +510,10 @@ function App() {
           <SubMenuOutil className="bioOutilContent"></SubMenuOutil>
         </SubMenuContent>
 
+        <MenuTitle className={bioState.titleClassName}>
+          {bioState.title}
+        </MenuTitle>
+
       </Bio>
 
       <Portfolio className={portfolioState.className}>
@@ -543,6 +564,11 @@ function App() {
           stroke='rgb(38,70,133)'
           strokewidth='8'
           fill='rgb(38,70,133)' />
+
+        <MenuTitle className={portfolioState.titleClassName}>
+          {portfolioState.title}
+        </MenuTitle>
+
       </Portfolio>
 
       <Graphieros className={graphierosState.className}>
@@ -598,6 +624,11 @@ function App() {
           stroke='rgb(99,38,27)'
           strokewidth='8'
           fill='rgb(99,38,27)' />
+
+        <MenuTitle className={graphierosState.titleClassName}>
+          {graphierosState.title}
+        </MenuTitle>
+
       </Graphieros>
 
       <Me

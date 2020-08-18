@@ -1,0 +1,60 @@
+.titleBio,
+.titlePortfolio,
+.titleGraphieros{
+    display: block;
+    position: fixed;
+    top: -105px;
+    left: 50%;
+    transform: translateX(-145%);
+    font-family: 'Megrim', cursive;
+    font-size: 2.5em;
+    animation: menuTitleAppear 1.5s ease;
+}
+
+.titleBio::first-letter,
+.titlePortfolio::first-letter,
+.titleGraphieros::first-letter{
+    font-weight:bold;
+    font-size:2em;
+}
+
+.titleBio{
+    color: var(--g1);
+}
+
+.titlePortfolio{
+    color: rgb(35, 63, 114);
+    transform: translateX(-50%);
+}
+
+.titleGraphieros{
+    color: rgb(139, 47, 30);
+    transform: translateX(-50%);
+}
+
+@keyframes menuTitleAppear {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@media (max-width:415px){
+    .titleBio{
+        transform: translateX(-125%);
+    }
+}
+
+@media (max-width: 450px) and (max-height: 600px) {
+    .titleBio{
+        top:-75px;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 450px) {
+    .titleBio{
+        display: none;
+    }
+}
