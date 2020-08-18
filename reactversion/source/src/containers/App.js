@@ -22,6 +22,10 @@ import SubMenuWeb from '../components/SubMenuContent/SubMenuWeb';
 
 function App() {
 
+  const [backgroundState, setBackgroundState] = useState({
+    className:'initialBackground'
+  });
+
   const [menuState, setMenuState] = useState({
     className: 'menuInitial'
   });
@@ -42,6 +46,9 @@ function App() {
     });
     setContactState({
       className: 'hidden'
+    });
+    setBackgroundState({
+      className: 'initialBackground'
     });
   }
 
@@ -102,6 +109,9 @@ function App() {
     setContactState({
       className: 'hidden'
     });
+    setBackgroundState({
+      className: 'initialBackground'
+    });
   }
 
   //PORTFOLIO SUBCATEGORY HANDLING
@@ -137,6 +147,9 @@ function App() {
     });
     setContactState({
       className: 'hidden'
+    });
+    setBackgroundState({
+      className: 'initialBackground'
     });
   }
 
@@ -182,6 +195,9 @@ function App() {
     setContactState({
       className: 'menuContact'
     });
+    setBackgroundState({
+      className: 'initialBackground'
+    });
   }
 
   //BOTTOM NAME STATE
@@ -224,6 +240,9 @@ function App() {
     setBioState({
       className: 'bioOn'
     });
+    setBackgroundState({
+      className: 'backgroundGold'
+    });
   }
 
   //RESET BIO SUBMENU STATE
@@ -251,6 +270,9 @@ function App() {
     });
     setContactState({
       className: 'menuContact'
+    });
+    setBackgroundState({
+      className: 'backgroundGold'
     });
   }
 
@@ -281,6 +303,9 @@ function App() {
     setPortfolioState({
       className: 'portfolioOn'
     });
+    setBackgroundState({
+      className: 'backgroundBlue'
+    });
   }
 
   //RESET PORTFOLIO SUBMENU STATE
@@ -299,6 +324,9 @@ function App() {
     })
     setContactState({
       className: 'menuContact'
+    });
+    setBackgroundState({
+      className: 'backgroundBlue'
     });
   }
 
@@ -321,6 +349,9 @@ function App() {
     setGraphierosState({
       className: 'graphierosOn'
     });
+    setBackgroundState({
+      className: 'backgroundRed'
+    });
   }
 
   //RESET GRAPHIEROS SUBMENU STATE
@@ -334,6 +365,9 @@ function App() {
     setContactState({
       className: 'menuContact'
     });
+    setBackgroundState({
+      className: 'backgroundRed'
+    });
   }
 
   // CONTACT STATE
@@ -343,6 +377,7 @@ function App() {
 
   return (
     <div className="App">
+
 
       <div
         className={menuState.className}>
@@ -572,6 +607,7 @@ function App() {
         robert={meState.robert} />
 
       <MenuContactFractal className={contactState.className} />
+      <div className={backgroundState.className} id="backgroundSetUp"></div>
 
     </div>
   );

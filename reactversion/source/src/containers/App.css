@@ -11,6 +11,60 @@
     --gText : rgb(68, 60, 15);
 }
 
+/* background set up */
+
+#backgroundSetUp,
+.initialBackground {
+    display: block;
+    position: fixed;
+    z-index:-1;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    opacity:0.8;
+}
+
+.backgroundGold{
+    background: radial-gradient(at top right, rgb(255, 243, 187), rgb(255,210,0), rgb(167, 140, 23));
+    animation: showBackground 2s ease;
+}
+
+.backgroundBlue{
+    background: radial-gradient(at top right, rgb(158, 189, 247), rgb(100,149,237), rgb(59, 100, 177));
+    animation: showBackground 2s ease;
+}
+
+.backgroundRed{
+    background: radial-gradient(at top right, rgb(255, 149, 130), rgb(255,99,71), rgb(172, 57, 36));
+    animation: showBackground 2s ease;
+}
+
+.backgroundGold:after,
+.backgroundBlue:after,
+.backgroundRed:after{
+    content:'';
+    display: block;
+    position: fixed;
+    z-index:-1;
+    width:100vw;
+    height:100vh;
+    top:0;
+    left:0;
+    opacity:0.8;
+    background: radial-gradient(at bottom right, white, transparent);
+    animation: showBackground 2s ease;
+}
+
+@keyframes showBackground {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.8;
+    }
+}
+
 /*MENU*/
 
 .menuInitial{
@@ -364,6 +418,7 @@
 .meLeaving span {
     font-weight: bold;
     font-size: 2em;
+    text-shadow: 0 1px 1px rgb(94, 93, 93);
 }
 
 .meLeaving #spanA{

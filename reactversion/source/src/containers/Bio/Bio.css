@@ -7,7 +7,7 @@
     height: 400px;
     width:400px;
     border-radius:100%;
-    background:radial-gradient(white,transparent, transparent);
+    /* background:radial-gradient(white,transparent, transparent); */
 }
 
 .bioOn div > svg{
@@ -20,6 +20,7 @@
     animation-duration: 0.5s;
     transform:translate(-50%,-50%);
     transform-origin: center center;
+    filter: drop-shadow(rgba(199, 164, 7, 0.35) 0px 20px 10px) !important;
 }
 
 @keyframes spinBio{

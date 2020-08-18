@@ -20,6 +20,7 @@
     animation-duration: 0.5s;
     transform:translate(-50%,-50%);
     transform-origin: center center;
+    filter: drop-shadow(rgba(199, 61, 7, 0.35) 0px 20px 10px) !important;
 }
 
 @keyframes spinGraphieros{

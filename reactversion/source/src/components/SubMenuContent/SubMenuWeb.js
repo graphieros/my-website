@@ -3,6 +3,7 @@ import './SubMenuWeb.css';
 import yohannLaveant from '../../assets/yohannLaveant.mp4';
 import ka from '../../assets/ka.mp4';
 import touchWriterDemo from '../../assets/touchWriterDemo.mp4';
+import graphieros from '../../assets/graphieros.mp4';
 
 const SubMenuWeb = () => {
 
@@ -19,9 +20,14 @@ const SubMenuWeb = () => {
         },
         {
             video: ka,
-            descr: "Mes débuts avec Javascript pour interagir en SVG", //description clairement à améliorer...
-            link: "#"
+            descr: "Dessiner des glyphes en SVG dans son navigateur, Vanilla JS",
+            link: "#" //add a link or include other site that can be visited
         },
+        {
+            video: graphieros,
+            descr: "Le site web que vous visitez maintenant, React JS",
+            link: '#'
+        }
     ];
 
     let videoArray = [];
@@ -29,13 +35,12 @@ const SubMenuWeb = () => {
     let linkArray = [];
 
     const playVideo = (props) => {
-        let index = props.target.id.replace("vid", ""); //this looks like a hack
+        let index = props.target.id.replace("vid", "");
         props.target.currentTime = 3;
         let playPromise = props.target.play();
-        if (playPromise !== undefined) {
-            playPromise.then(_ => {
-            });
-        }
+        props.target.addEventListener('loadeddata', () => {
+            playPromise();
+        });
 
         webTell(index);
     }
@@ -49,7 +54,8 @@ const SubMenuWeb = () => {
         setWebTellState({
             className: 'webTellOn',
             content: descrArray[index],
-            siteLink: linkArray[index]
+            siteLink: linkArray[index],
+            media: videoArray[index]
         });
     }
 
