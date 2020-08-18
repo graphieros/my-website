@@ -54,18 +54,20 @@
     transform: rotateY(1deg);
 }
 
-.webShow div {
+.webShow video {
     animation: dropWebPage 0.5s ease-in-out;
 }
 
 @keyframes dropWebPage {
     0%{
         margin-top:-300px;
+        width: 0%;
         opacity:0;
     }
     100%{
         margin-top:0px;
         opacity:1;
+        width: 100%;
     }
 }
 
@@ -142,25 +144,25 @@ a.webLink:hover {
     }
 }
 
-@media screen and (max-width: 1210px) {
+@media (max-width: 1210px) {
     .webShow{
         max-width:600px;
     }
 }
 
-@media screen and (max-width: 1140px) {
+@media (max-width: 1140px) {
     .webShow {
         max-width: 500px;
     }
 }
 
-@media screen and (max-width: 1076px) {
+@media (max-width: 1076px) {
     .webShow {
         max-width: 450px;
     }
 }
 
-@media screen and (max-width:1040px) {
+@media (max-width:1040px) {
     .webTitle{
         right:100px;
     }
@@ -170,7 +172,7 @@ a.webLink:hover {
     }
 }
 
-@media screen and (max-width:830px) {
+@media (max-width:830px) {
     .webTitle{
         top:20px;
         right:50px;
@@ -178,7 +180,7 @@ a.webLink:hover {
     }
 }
 
-@media screen and (max-width: 685px){
+@media (max-width: 685px){
     .webShow {
         max-width:230px;
         margin-left:-20px;
@@ -187,7 +189,30 @@ a.webLink:hover {
     /* add media management for site caption*/
 }
 
-@media screen and (max-width: 415px){
+@media (max-width:450px) and (max-height:600px) {
+    .webTitle{
+        right:20px;
+        top:50px;
+    }
+    .webTellOn,
+    .webSiteLink{
+        display:flex;
+        position: fixed;
+        padding:0px;
+        margin-top:100px;
+        left:305px;
+        transform: none;
+        width:105px;
+        text-align:right;
+        font-size:0.5em;
+    }
+    .webSiteLink{
+        margin-top:180px;
+        left:315px;
+    }
+}
+
+@media (max-width: 415px){
     .webShow{
         max-width:230px;
         margin-left:10px;
@@ -199,7 +224,7 @@ a.webLink:hover {
         display:flex;
         position: fixed;
         margin-top:130px;
-        left:272px;
+        left:310px;
         transform: none;
         width:75px;
         text-align:right;
@@ -207,11 +232,28 @@ a.webLink:hover {
     }
     .webSiteLink{
         margin-top:200px;
-        left:272px;
+        left:315px;
     }
 }
 
-@media screen and (max-width: 320px){
+@media (max-width: 375px) {
+    .webTellOn,
+    .webSiteLink{
+        padding:0px;
+        margin-top:130px;
+        left:282px;
+        transform: none;
+        width:75px;
+        text-align:right;
+        font-size:0.4em;
+    }
+    .webSiteLink{
+        margin-top:200px;
+        left:286px;
+    }
+}
+
+@media (max-width: 320px){
     .webShow{
         margin-left:5px;
         margin-top:20px;
@@ -234,5 +276,37 @@ a.webLink:hover {
     .webSiteLink{
         margin-top:160px;
         left:233px;
+    }
+}
+
+@media (max-width:280px) {
+    .webShow{
+        margin-left:5px;
+        margin-top:20px;
+        max-width:160px;
+        height:365.25px;
+        margin-left:-10px;
+    }
+    .webTitle{
+        left: 50%;
+        transform: translateX(-50%);
+        width:150px;
+        top:50px;
+    }
+    .webTellOn,
+    .webSiteLink{
+        display:flex;
+        position: fixed;
+        padding:0px;
+        margin-top:160px;
+        left:110px;
+        transform: none;
+        width:95px;
+        text-align:right;
+        font-size:0.4em;
+    }
+    .webSiteLink{
+        margin-top:220px;
+        left:125px;
     }
 }
