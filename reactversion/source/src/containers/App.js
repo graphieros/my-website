@@ -21,6 +21,11 @@ import SubMenuParcours from '../components/SubMenuContent/SubMenuParcours';
 import SubMenuOutil from '../components/SubMenuContent/SubMenuOutil';
 import SubMenuPeinture from '../components/SubMenuContent/SubMenuPeinture';
 import SubMenuWeb from '../components/SubMenuContent/SubMenuWeb';
+import SubMenuTexte from '../components/SubMenuContent/SubMenuTexte';
+import SubMenuLexique from '../components/SubMenuContent/SubMenuLexique';
+import SubMenuEditeur from '../components/SubMenuContent/SubMenuEditeur';
+import SubMenuCle from '../components/SubMenuContent/SubMenuCle';
+import SubMenuGraphierosTexte from '../components/SubMenuContent/SubMenuGraphierosTexte';
 
 function App() {
 
@@ -29,7 +34,8 @@ function App() {
   });
 
   const [menuState, setMenuState] = useState({
-    className: 'menuInitial'
+    className: 'menuInitial',
+    triade: 'triade'
   });
 
   //BIO SUBMENU STATE
@@ -134,6 +140,43 @@ function App() {
     });
   }
 
+  const clickTexteHandler = (upperHandler) => {
+    upperHandler();
+    setTexteState({
+      className: 'texteOn'
+    });
+  }
+
+  //GRAPHIEROS SUBCATEGORY HANDLING
+
+  const clickCleHandler = (upperHandler) => {
+    upperHandler();
+    setCleState({
+      className: 'cleOn'
+    });
+  }
+
+  const clickLexiqueHandler = (upperHandler) => {
+    upperHandler();
+    setLexiqueState({
+      className: 'lexiqueOn'
+    });
+  }
+
+  const clickEditeurHandler = (upperHandler) => {
+    upperHandler();
+    setEditeurState({
+      className: 'editeurOn'
+    });
+  }
+
+  const clickGraphierosTexteHandler = (upperHandler) => {
+    upperHandler();
+    setGraphierosTexteState({
+      className: 'graphierosTexteOn'
+    });
+  }
+
 
   //GRAPHIEROS SUBMENU STATE
   const clickGraphierosCategoryHandler = () => {
@@ -160,7 +203,8 @@ function App() {
   //RESET MENU STATE
   const resetMenuHandler = () => {
     setMenuState({
-      className: 'menuInitial'
+      className: 'menuInitial',
+      triade: 'triade'
     });
     setMeState({
       className: 'meLanding',
@@ -181,6 +225,7 @@ function App() {
     setGraphierosState({
       className: 'hidden'
     });
+
     setBioDoState({
       className: 'hidden'
     });
@@ -190,12 +235,30 @@ function App() {
     setBioOutilState({
       className: 'hidden'
     });
+
     setPeintureState({
       className: 'hidden'
     });
     setWebState({
       className: 'hidden'
     });
+    setTexteState({
+      className: 'hidden'
+    });
+
+    setCleState({
+      className: 'hidden'
+    });
+    setLexiqueState({
+      className: 'hidden'
+    });
+    setEditeurState({
+      className: 'hidden'
+    });
+    setGraphierosTexteState({
+      className:'hidden'
+    });
+
     setContactState({
       className: 'menuContact'
     });
@@ -236,7 +299,8 @@ function App() {
 
   const clickBioHandler = () => {
     setMenuState({
-      className: 'menuClicked'
+      className: 'menuClicked',
+      triade: 'hidden'
     });
     setMeState({
       className: 'meLeaving'
@@ -301,9 +365,14 @@ function App() {
     className: 'hidden'
   });
 
+  const [texteState, setTexteState] = useState({
+    className: 'hidden'
+  });
+
   const clickPortfolioHandler = () => {
     setMenuState({
-      className: 'menuClicked'
+      className: 'menuClicked',
+      triade: 'hidden'
     });
 
     setMeState({
@@ -334,7 +403,10 @@ function App() {
     });
     setWebState({
       className: 'hidden'
-    })
+    });
+    setTexteState({
+      className: 'hidden'
+    });
     setContactState({
       className: 'menuContact'
     });
@@ -343,7 +415,7 @@ function App() {
     });
   }
 
-  //GRAPHIEROS SUBMENU STATE
+  //GRAPHIEROS MENU STATE
   const [graphierosState, setGraphierosState] = useState({
     className: 'graphierosOff'
   });
@@ -352,9 +424,26 @@ function App() {
     className: 'hidden'
   });
 
+  const [cleState, setCleState] = useState({
+    className: 'hidden'
+  });
+
+  const [lexiqueState, setLexiqueState] = useState({
+    className: 'hidden'
+  });
+
+  const [editeurState, setEditeurState] = useState({
+    className: 'hidden'
+  });
+
+  const [graphierosTexteState, setGraphierosTexteState] = useState({
+    className: 'hidden'
+  });
+
   const clickGraphierosHandler = () => {
     setMenuState({
-      className: 'menuClicked'
+      className: 'menuClicked',
+      triade: 'hidden'
     });
     setMeState({
       className: 'meLeaving'
@@ -377,6 +466,18 @@ function App() {
       titleClassName: 'titleGraphieros'
     });
     setGraphierosStandbyState({
+      className: 'hidden'
+    });
+    setCleState({
+      className: 'hidden'
+    });
+    setLexiqueState({
+      className: 'hidden'
+    });
+    setEditeurState({
+      className: 'hidden'
+    });
+    setGraphierosTexteState({
       className: 'hidden'
     });
     setContactState({
@@ -438,6 +539,14 @@ function App() {
           clicked={clickGraphierosHandler}
           stroke='white'
           fill='white' />
+
+        <div className={menuState.triade}>
+          <span id="triade0" onClick={clickPortfolioHandler}>webdesigner</span>
+          <span id="triade1" onClick={clickBioHandler}>  - artiste -  </span>
+          <span id="triade2" onClick={clickGraphierosHandler}>idéolinguiste</span>
+          <div id="bracketLeft" />
+          <div id="bracketRight" />
+        </div>
       </div>
 
       <div
@@ -552,7 +661,7 @@ function App() {
           <SubMenuPeinture className="peintureContent"></SubMenuPeinture>
         </SubMenuContent>
 
-        <MenuCategory
+        <MenuCategory clicked={() => clickTexteHandler(clickPortfolioCategoryHandler)}
           className='menuCategory'
           id='menuCategoryPortfolioTexte'
           title='TEXTES'
@@ -569,11 +678,16 @@ function App() {
           {portfolioState.title}
         </MenuTitle>
 
+        <SubMenuContent className={texteState.className}>
+          <SubMenuTexte className="texteContent"></SubMenuTexte>
+        </SubMenuContent>
+
       </Portfolio>
 
       <Graphieros className={graphierosState.className}>
         <GraphierosFractal />
-        <MenuCategory clicked={clickGraphierosCategoryHandler}
+
+        <MenuCategory clicked={() => clickCleHandler(clickGraphierosCategoryHandler)}
           className='menuCategory'
           id='menuCategoryGraphierosCle'
           title='LA CLE'
@@ -586,7 +700,11 @@ function App() {
           strokewidth='8'
           fill='rgb(99,38,27)' />
 
-        <MenuCategory
+        <SubMenuContent className={cleState.className}>
+          <SubMenuCle className="cleContent"></SubMenuCle>
+        </SubMenuContent>
+
+        <MenuCategory clicked={() => clickLexiqueHandler(clickGraphierosCategoryHandler)}
           className='menuCategory'
           id='menuCategoryGraphierosLexique'
           title='LEXIQUE'
@@ -599,7 +717,11 @@ function App() {
           strokewidth='8'
           fill='rgb(99,38,27)' />
 
-        <MenuCategory
+        <SubMenuContent className={lexiqueState.className}>
+          <SubMenuLexique className="lexiqueContent"></SubMenuLexique>
+        </SubMenuContent>
+
+        <MenuCategory clicked={() => clickEditeurHandler(clickGraphierosCategoryHandler)}
           className='menuCategory'
           id='menuCategoryGraphierosEditeur'
           title='EDITEUR'
@@ -612,7 +734,11 @@ function App() {
           strokewidth='8'
           fill='rgb(99,38,27)' />
 
-        <MenuCategory
+        <SubMenuContent className={editeurState.className}>
+          <SubMenuEditeur className="editeurContent"></SubMenuEditeur>
+        </SubMenuContent>
+
+        <MenuCategory clicked={() => clickGraphierosTexteHandler(clickGraphierosCategoryHandler)}
           className='menuCategory'
           id='menuCategoryGraphierosTexte'
           title='TEXTES'
@@ -624,6 +750,10 @@ function App() {
           stroke='rgb(99,38,27)'
           strokewidth='8'
           fill='rgb(99,38,27)' />
+
+        <SubMenuContent className={graphierosTexteState.className}>
+          <SubMenuGraphierosTexte className="graphierosTexteContent"></SubMenuGraphierosTexte>
+        </SubMenuContent>
 
         <MenuTitle className={graphierosState.titleClassName}>
           {graphierosState.title}

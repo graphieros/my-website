@@ -59,8 +59,8 @@ const SubMenuBioDo = () => {
                     />
                 création de langue
                 <div id='justAline0'></div>
-                <div id='justAline1'></div>
-            </div>
+                    <div id='justAline1'></div>
+                </div>
 
                 <div id="bioDoList2">
                     <Fractal className='fractalBio2'
@@ -79,7 +79,6 @@ const SubMenuBioDo = () => {
                 peinture
             </div>
             </div>
-
 
         </div>
     )

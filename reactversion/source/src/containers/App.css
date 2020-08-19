@@ -368,7 +368,6 @@
     animation: bye 1s;
 }
 
-
 @keyframes bye {
     0%{
         opacity: 0;
@@ -433,6 +432,82 @@
 
 .meLeaving #spanP{
     color: var(--c);
+}
+
+.triade{
+    display: block;
+    position: fixed;
+    bottom:-100px;
+    left:50%;
+    transform: translateX(-50%);
+    height:40px;
+    width:100%;
+    font-family: 'Roboto', cursive;
+    text-align:center;
+    font-size:1em;
+    padding-top:10px;
+}
+
+#triade0,#triade1,#triade2{
+    border:1px solid transparent;
+    box-sizing: border-box;
+    padding-top:10px;
+    cursor:pointer;
+    opacity:0.8;
+    transition: opacity 0.3s ease, color 0.3s ease, border 0.3s ease-in;
+}
+
+#triade0:hover,triade1:hover,triade2:hover{
+    opacity:1;
+}
+
+#triade0:hover{
+    color: var(--c1);
+    border-top: 1px solid var(--c);
+}
+
+#triade1:hover{
+    color: goldenrod;
+    border-top: 1px solid goldenrod;
+}
+
+#triade2:hover{
+    color: var(--t);
+    border-top: 1px solid var(--t);
+}
+
+#triade0{
+    color: var(--c1);
+}
+#triade1{
+    color: var(--g1);
+}
+#triade2{
+    color: var(--t1);
+}
+
+#triade0{
+    animation: triade 2s ease;
+}
+#triade1 {
+    animation: triade 1s ease;
+}
+#triade2{
+    animation: triade 3s ease;
+}
+
+@keyframes triade {
+    0%{
+        opacity: 0;
+        color: white;
+    }
+    50%{
+        opacity:0;
+        color: inherit;
+    }
+    100%{
+        opacity:0.8;
+    }
 }
 
 @keyframes toMiniMenu {

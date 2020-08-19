@@ -87,7 +87,7 @@ const SubMenuPeinture = () => {
     const [titState, setTitState] = useState(0);
 
     const [desState, setDesState] = useState({
-        content: <span><span className="galleryPresentation">Galerie</span>Sélection de tableaux récents<br/>Cliquez pour agrandir &#x1F59D;</span>
+        content: <span><span className="galleryPresentation">Galerie</span>Sélection de peintures récentes<br/>Cliquez pour agrandir &#x1F59D;</span>
     });
 
     const galleryShowHandler = (i) =>{
