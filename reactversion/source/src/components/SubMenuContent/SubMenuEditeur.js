@@ -23,7 +23,7 @@ const SubMenuEditeur = () => {
     return(
         <div>
             <div style={construction}>
-                Cette page est en cours de construction.
+                Cette page est  en cours de construction.
             </div>
         </div>
     )
