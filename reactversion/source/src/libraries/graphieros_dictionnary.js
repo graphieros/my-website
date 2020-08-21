@@ -164,7 +164,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_pio',
-        fr: 'vegetal',
+        fr: 'végétal',
         path: [[lm, a, lm, w, r, q], [l, q, rm, w], [lm, w, rm, a]],
 
     },
@@ -200,7 +200,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_bse',
-        fr: 'trebucher',
+        fr: 'trébucher',
         path: [[lm, a, rm, a, r, q], [l, q, rm, a], [lm, w, m, q], [rm, w, rm, w]],
 
     },
@@ -254,7 +254,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_tra3',
-        fr: 'theatre',
+        fr: 'théâtre',
         path: [[l, q, l, q], [lm, w, lm, w], [r, q, lm, a, rm, a, m, q, rm, w]],
 
     },
@@ -266,7 +266,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_tea',
-        fr: 'tete',
+        fr: 'tête',
         path: [[l, q, l, q], [lm, w, lm, a, rm, a, m, q], [r, q, r, q], [rm, w, rm, w]],
 
     },
@@ -290,13 +290,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_po',
-        fr: 'temperature',
+        fr: 'température',
         path: [[lm, a, lm, w, rm, w], [l, q, m, q], [rm, a, rm, a], [r, q, r, q]],
 
     },
     {
         name: '_tle',
-        fr: 'telephoner',
+        fr: 'téléphoner',
         path: [[l, q, rm, w, m, q, lm, w, r, q, rm, a, lm, a, l, q, r, q], [lm, w, rm, w]],
 
     },
@@ -314,7 +314,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_stu',
-        fr: 'synthetiser',
+        fr: 'synthétiser',
         path: [[l, q, lm, a, m, q, lm, w, l, q], [rm, a, rm, w], [r, q, r, q]],
 
     },
@@ -416,7 +416,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_trey',
-        fr: 'separer',
+        fr: 'séparer',
         path: [[l, q, lm, a, lm, w, l, q, r, q, rm, a, rm, w, r, q]],
 
     },
@@ -440,7 +440,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_sky',
-        fr: 'securiser',
+        fr: 'sécuriser',
         path: [[lm, w, lm, a, r, q, lm, w], [l, q, l, q], [rm, a, rm, a], [m, q, rm, w]],
 
     },
@@ -512,7 +512,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_rve',
-        fr: 'reveiller',
+        fr: 'réveiller',
         path: [[m, q, lm, w, lm, a, r, q, l, q, rm, a, rm, w, m, q]],
 
     },
@@ -530,7 +530,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_zle',
-        fr: 'resulter',
+        fr: 'résulter',
         path: [[l, q, m, q], [lm, a, lm, a], [lm, w, lm, w], [rm, a, rm, w], [r, q, r, q]],
 
     },
@@ -542,13 +542,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_rpie',
-        fr: 'repeter',
+        fr: 'répéter',
         path: [[r, q, l, q, lm, a, lm, w], [rm, w, rm, a, m, q]],
 
     },
     {
         name: '_fksi',
-        fr: 'reparer',
+        fr: 'réparer',
         path: [[r, q, lm, a, m, q, l, q, lm, w, m, q], [rm, a, rm, w]],
 
     },
@@ -566,7 +566,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_tba',
-        fr: 'recipient',
+        fr: 'récipient',
         path: [[lm, a, l, q, lm, w, rm, w, r, q, rm, a], [m, q, m, q]],
 
     },
@@ -620,7 +620,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_kta',
-        fr: 'quantite',
+        fr: 'quantité',
         path: [[r, q, m, q, rm, w, lm, w, lm, a, rm, a, rm, w], [l, q, l, q]],
 
     },
@@ -632,7 +632,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_3e',
-        fr: 'proteger',
+        fr: 'protéger',
         path: [[lm, w, l, q, lm, a, rm, a, r, q, rm, w], [m, q, m, q]],
 
     },
@@ -656,7 +656,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_pre',
-        fr: 'pres',
+        fr: 'près',
         path: [[lm, w, lm, a, r, q], [l, q, m, q, rm, a, l, q], [rm, w, rm, w]],
 
     },
@@ -764,7 +764,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_pnae',
-        fr: 'planete',
+        fr: 'planète',
         path: [[lm, w, lm, a, r, q, lm, w, l, q, lm, a, rm, a, r, q, rm, w, lm, w], [rm, a, rm, w, l, q, rm, a], [m, q, m, q]],
 
     },
@@ -806,7 +806,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_trai',
-        fr: 'pieger',
+        fr: 'piéger',
         path: [[lm, w, lm, a, l, q, r, q, rm, a, lm, a], [rm, w, rm, w]],
 
     },
@@ -860,7 +860,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_psoi',
-        fr: 'passe',
+        fr: 'passer',
         path: [[r, q, l, q], [rm, a, l, q, rm, w], [lm, a, lm, a], [lm, w, lm, w]],
 
     },
@@ -1022,7 +1022,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_nsio',
-        fr: 'necessiter',
+        fr: 'nécessiter',
         path: [[lm, a, l, q, m, q, rm, a, r, q], [m, q, rm, w, lm, w]],
 
     },
@@ -1076,13 +1076,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_mina',
-        fr: 'mineral',
+        fr: 'minéral',
         path: [[lm, w, lm, a, m, q, rm, a, rm, w, lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
 
     },
     {
         name: '_mlimza',
-        fr: 'millimetre',
+        fr: 'millimètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [l, q, l, q], [m, q, m, q]],
 
     },
@@ -1112,13 +1112,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_mza',
-        fr: 'metre',
+        fr: 'mètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, m, q, lm, w]],
 
     },
     {
         name: '_mto',
-        fr: 'metal',
+        fr: 'métal',
         path: [[lm, w, lm, a, rm, w, rm, a, r, q, lm, w, l, q, rm, a]],
 
     },
@@ -1130,7 +1130,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_mtai',
-        fr: 'matiere',
+        fr: 'matière',
         path: [[lm, a, lm, w, rm, a, rm, w, lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
 
     },
@@ -1160,7 +1160,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_mno',
-        fr: 'male',
+        fr: 'mâle',
         path: [[lm, a, rm, w], [lm, w, m, q, r, q], [l, q, rm, a]],
 
     },
@@ -1190,7 +1190,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_hea',
-        fr: 'lumiere',
+        fr: 'lumière',
         path: [[lm, a, r, q, lm, w, lm, a], [l, q, m, q, rm, a], [m, q, rm, w]],
 
     },
@@ -1220,13 +1220,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_lpae',
-        fr: 'levre',
+        fr: 'lèvre',
         path: [[lm, a, m, q, rm, a], [l, q, r, q], [lm, w, rm, w]],
 
     },
     {
         name: '_lgy',
-        fr: 'legume',
+        fr: 'légume',
         path: [[lm, a, rm, w, lm, w, rm, a], [l, q, r, q]],
 
     },
@@ -1250,7 +1250,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_klomza',
-        fr: 'kilometre',
+        fr: 'kilomètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, m, q, rm, w], [lm, w, m, q]],
 
     },
@@ -1286,7 +1286,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_nsa',
-        fr: 'interieur',
+        fr: 'intérieur',
         path: [[lm, a, rm, a, m, q, rm, w, lm, w], [l, q, l, q], [r, q, r, q]],
 
     },
@@ -1322,7 +1322,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_ngla',
-        fr: 'inegaler',
+        fr: 'inégaler',
         path: [[lm, a, rm, a, lm, w, rm, w], [l, q, r, q]],
 
     },
@@ -1346,7 +1346,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_fo',
-        fr: 'imperatif',
+        fr: 'impératif',
         path: [[rm, w, rm, a, lm, a, lm, w, r, q, lm, a], [l, q, l, q], [m, q, m, q]],
 
     },
@@ -1364,7 +1364,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_dea',
-        fr: 'idee',
+        fr: 'idée',
         path: [[m, q, l, q, rm, a, m, q, rm, w], [lm, w, r, q], [lm, a, lm, a]],
 
     },
@@ -1592,7 +1592,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_kti',
-        fr: 'felin',
+        fr: 'félin',
         path: [[l, q, rm, a, m, q, lm, a, r, q, rm, w, lm, w, l, q]],
 
     },
@@ -1628,7 +1628,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_stre',
-        fr: 'extremite',
+        fr: 'extrémité',
         path: [[r, q, rm, a, rm, w, r, q], [lm, a, lm, a], [l, q, l, q], [m, q, m, q], [lm, w, lm, w]],
 
     },
@@ -1640,31 +1640,31 @@ let graphieros_dictionnary = [
     },
     {
         name: '_tra',
-        fr: 'exterieur',
+        fr: 'extérieur',
         path: [[rm, a, lm, a, m, q, lm, w, rm, w], [l, q, l, q], [r, q, r, q]],
 
     },
     {
         name: '_vlye',
-        fr: 'evoluer',
+        fr: 'évoluer',
         path: [[l, q, l, q], [lm, a, lm, w], [rm, a, r, q, rm, w, m, q, rm, a]],
 
     },
     {
         name: '_vne',
-        fr: 'evenement',
+        fr: 'événement',
         path: [[r, q, rm, a, rm, w, r, q, m, q, lm, a, lm, w, m, q, l, q], [rm, a, lm, a, l, q, lm, w, rm, w]],
 
     },
     {
         name: '_stea',
-        fr: 'etoile',
+        fr: 'étoile',
         path: [[lm, a, r, q, lm, w, lm, a], [rm, a, rm, w, l, q, rm, a], [m, q, m, q]],
 
     },
     {
         name: '_meama',
-        fr: 'etant',
+        fr: 'étant',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, l, q, lm, w, r, q]],
 
     },
@@ -1676,13 +1676,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_bia',
-        fr: 'equilibrer',
+        fr: 'équilibrer',
         path: [[lm, a, rm, a], [l, q, m, q, lm, w, rm, w, m, q, r, q]],
 
     },
     {
         name: '_kdea',
-        fr: 'equide',
+        fr: 'équidé',
         path: [[lm, a, rm, a, rm, w, lm, w, rm, a], [m, q, r, q], [l, q, l, q]],
 
     },
@@ -1718,7 +1718,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_3ia',
-        fr: 'energie',
+        fr: 'énergie',
         path: [[lm, a, r, q, l, q, rm, w, lm, w, rm, a]],
 
     },
@@ -1742,19 +1742,19 @@ let graphieros_dictionnary = [
     },
     {
         name: '_skoi',
-        fr: 'emotion',
+        fr: 'émotion',
         path: [[lm, a, rm, w, lm, w, m, q], [rm, a, l, q, lm, a, rm, a, r, q]],
 
     },
     {
         name: '_vzu',
-        fr: 'electricite',
+        fr: 'électricité',
         path: [[l, q, lm, a, lm, w, rm, a, rm, w, r, q]],
 
     },
     {
         name: '_gla',
-        fr: 'egaler',
+        fr: 'égaler',
         path: [[lm, a, rm, a], [l, q, r, q], [lm, w, rm, w]],
 
     },
@@ -1832,7 +1832,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_dvey',
-        fr: 'differer',
+        fr: 'différer',
         path: [[l, q, l, q], [lm, a, rm, w, r, q, rm, a, lm, w]],
 
     },
@@ -1850,19 +1850,19 @@ let graphieros_dictionnary = [
     },
     {
         name: '_dzye',
-        fr: 'detruire',
+        fr: 'détruire',
         path: [[rm, a, rm, w], [m, q, r, q, lm, a, m, q], [l, q, lm, w]],
 
     },
     {
         name: '_nbia',
-        fr: 'desequilibrer',
+        fr: 'déséquilibrer',
         path: [[lm, a, rm, a, l, q, r, q], [m, q, rm, w, lm, w, m, q]],
 
     },
     {
         name: '_dre',
-        fr: 'derriere',
+        fr: 'derrière',
         path: [[r, q, l, q, lm, a, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w]],
 
     },
@@ -1874,61 +1874,61 @@ let graphieros_dictionnary = [
     },
     {
         name: '_chna',
-        fr: 'demasquer',
+        fr: 'démasquer',
         path: [[lm, a, l, q, lm, w, r, q], [rm, a, r, q, rm, w, l, q], [m, q, m, q]],
 
     },
     {
         name: '_dle',
-        fr: 'delicieux',
+        fr: 'délicieux',
         path: [[l, q, r, q, rm, a, m, q, lm, a, l, q, lm, w, rm, w, r, q]],
 
     },
     {
         name: '_d3a',
-        fr: 'dejà',
+        fr: 'déjà',
         path: [[lm, a, m, q, r, q, rm, a, rm, w, r, q], [lm, w, m, q], [l, q, l, q]],
 
     },
     {
         name: '_klue',
-        fr: 'defaut',
+        fr: 'défaut',
         path: [[lm, a, r, q, rm, w, rm, a, l, q, m, q], [lm, w, lm, w]],
 
     },
     {
         name: '_dfo',
-        fr: 'defaire',
+        fr: 'défaire',
         path: [[rm, a, lm, w, lm, a, rm, a, r, q, lm, w], [l, q, rm, w]],
 
     },
     {
         name: '_3i',
-        fr: 'decouvrir',
+        fr: 'découvrir',
         path: [[l, q, lm, a, lm, w, l, q], [r, q, rm, w, rm, a, r, q], [m, q, m, q]],
 
     },
     {
         name: '_ktye',
-        fr: 'decouper',
+        fr: 'découper',
         path: [[lm, a, lm, w], [l, q, rm, a], [m, q, r, q, rm, w, m, q]],
 
     },
     {
         name: '_dsimza',
-        fr: 'decimere',
+        fr: 'décimètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, m, q, l, q]],
 
     },
     {
         name: '_dsigma',
-        fr: 'decigramme',
+        fr: 'décigramme',
         path: [[lm, a, rm, a, rm, w, lm, w, m, q, l, q], [r, q, r, q]],
 
     },
     {
         name: '_trie',
-        fr: 'dechet',
+        fr: 'déchêt',
         path: [[lm, a, rm, a, l, q], [m, q, lm, w], [r, q, rm, w]],
 
     },
@@ -1970,7 +1970,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_kraw',
-        fr: 'crustace',
+        fr: 'crustacé',
         path: [[lm, a, lm, w, l, q, lm, a, rm, a, r, q, rm, w, rm, a], [m, q, m, q]],
 
     },
@@ -2024,7 +2024,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_kte',
-        fr: 'cote',
+        fr: 'côté',
         path: [[lm, w, r, q, rm, w, lm, w, l, q, rm, a, r, q], [lm, a, m, q]],
 
     },
@@ -2060,7 +2060,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_kno',
-        fr: 'connaitre',
+        fr: 'connaître',
         path: [[m, q, lm, w, l, q, lm, a, rm, a, r, q, lm, w, rm, w]],
 
     },
@@ -2108,7 +2108,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_ki',
-        fr: 'cle',
+        fr: 'clé',
         path: [[lm, a, lm, w, m, q], [l, q, r, q, rm, w], [rm, a, rm, a]],
 
     },
@@ -2168,13 +2168,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_bzea',
-        fr: 'cervide',
+        fr: 'cervidé',
         path: [[lm, a, rm, w, lm, w, r, q], [l, q, m, q, rm, a]],
 
     },
     {
         name: '_srea',
-        fr: 'cereale',
+        fr: 'céréale',
         path: [[rm, w, l, q, lm, w, rm, w, r, q, rm, a, rm, w], [lm, a, m, q]],
 
     },
@@ -2192,7 +2192,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_stimza',
-        fr: 'centimetre',
+        fr: 'centimètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, m, q], [l, q, l, q]],
 
     },
@@ -2270,7 +2270,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_bo',
-        fr: 'bovide',
+        fr: 'bovidé',
         path: [[lm, a, rm, w], [m, q, rm, a], [lm, w, r, q], [l, q, l, q]],
 
     },
@@ -2336,7 +2336,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_ktea',
-        fr: 'arreter',
+        fr: 'arrêter',
         path: [[l, q, r, q], [lm, a, lm, w], [rm, a, r, q, rm, w]],
 
     },
@@ -2348,7 +2348,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_ftea',
-        fr: 'apres',
+        fr: 'après',
         path: [[r, q, rm, a, rm, w, r, q, m, q], [lm, a, lm, a], [l, q, l, q], [lm, w, lm, w]],
 
     },
@@ -2402,7 +2402,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_prba',
-        fr: 'ame',
+        fr: 'âme',
         path: [[lm, a, r, q, lm, w, lm, a, m, q, r, q], [lm, w, m, q], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
 
     },
@@ -2426,13 +2426,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_hio',
-        fr: 'alleger',
+        fr: 'alléger',
         path: [[lm, a, rm, a], [l, q, l, q], [r, q, r, q], [lm, w, m, q, rm, w]],
 
     },
     {
         name: '_lea',
-        fr: 'alea',
+        fr: 'aléa',
         path: [[l, q, r, q, lm, w], [lm, a, lm, a], [rm, a, rm, w]],
 
     },
@@ -2450,7 +2450,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_kli',
-        fr: 'qualite',
+        fr: 'qualité',
         path: [[rm, w, l, q, lm, a, lm, w, r, q, m, q], [rm, a, rm, a]],
 
     },
@@ -2564,13 +2564,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_mea',
-        fr: 'determiner',
+        fr: 'déterminer',
         path: [[lm, a, rm, w], [l, q, rm, a], [lm, w, r, q]],
 
     },
     {
         name: '_ma',
-        fr: 'etre',
+        fr: 'être',
         path: [[lm, a, l, q, lm, w], [m, q, m, q], [rm, a, r, q, rm, w]],
 
     },
@@ -2624,13 +2624,13 @@ let graphieros_dictionnary = [
     },
     {
         name: '_ksu',
-        fr: 'accelerer',
+        fr: 'accélérer',
         path: [[l, q, r, q], [lm, a, m, q, lm, w], [rm, a, r, q, rm, w]],
 
     },
     {
         name: '_boi',
-        fr: 'a',
+        fr: 'à',
         path: [[lm, a, lm, w, l, q, m, q], [rm, a, r, q, rm, w]],
 
     },
@@ -2642,7 +2642,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_fy',
-        fr: 'refleter',
+        fr: 'refléter',
         path: [[lm, a, rm, a, lm, w, rm, w, lm, a], [l, q, r, q]],
 
     },

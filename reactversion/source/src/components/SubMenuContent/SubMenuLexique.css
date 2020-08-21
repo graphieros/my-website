@@ -9,7 +9,298 @@
     background: radial-gradient(at bottom right, transparent,transparent, rgb(210,200,200), rgb(190,180,180));
     cursor: default;
 }
+.lexiqueOn::-webkit-scrollbar{
+    width:0px;
+}
 
-.glyphList > div > svg {
+.inputWrapper{
+    top:30px;
+    position: fixed;
+    z-index:1;
+    left:50%;
+    transform: translateX(-50%);
+    width:100%;
+    max-width:400px;
+    text-align:center;
+}
+
+label.labelWordSearch{
+    display: inline-block;
+    width:100%;
+    max-width:210px;
+    text-align:center;
+    padding-bottom:10px;
+    font-family: 'Roboto', cursive;
+    font-weight: bold;
+    color: rgb(100,50,50);
+}
+
+input.inputSearchGlyphByName{
+    font-family: 'Roboto', cursive;
+    font-weight: bold;
+    font-size:1.2em;
+    color: rgba(100,50,50,.8);
+    width:100%;
+    max-width:210px;
+    max-height:80px;
+    border:none;
+    border-radius:2px;
+    padding:10px;
+    text-align:center;
+    box-shadow: 0 20px 40px -12px rgba(100,0,0,.35), 0px 6px 12px -3px rgba(100,0,0,.35)inset;
+    border: 1px solid white;
+    text-overflow: ellipsis;
+}
+
+button.btnShowList{
+    display: block;
+    position: fixed;
+    left:50%;
+    top:150px;
+    transform: translateX(-50%);
+    z-index:1;
+    box-sizing: border-box;
+    padding:15px;
+    padding-left: 20px;
+    padding-right:20px;
+    width:130px;
+    font-family: 'Roboto', cursive;
+    font-weight:bold;
+    background: radial-gradient(at top, white, tomato);
+    border:1px solid transparent;
+    border-radius:3px;
+    box-shadow: 0 10px 20px -10px rgba(100,0,0,.35);
+    opacity:0.75;
+    transition: opacity 0.3s ease-in-out, border 0.3s ease-in-out;
+    cursor: pointer;
+    color: rgb(100,50,50);
+}
+
+button.btnShowList:hover{
+    opacity:1;
+    border:1px solid rgba(255, 255, 255, 0.432);
+}
+
+.glyphSearchReturn {
+    z-index:2;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    height:150px;
+    width:150px;
+    background: white;
+    top: 250px;
+    border-radius:3px;
+    box-shadow: 0 10px 20px -10px rgba(100,0,0,.35);
+}
+
+.glyphSearchReturn div > svg {
+    animation: searchedGlyphAppear 0.3s ease-in-out !important;
+    height:100px !important;
+    filter: none !important;
+}
+
+.tempSearch{
+    display: block;
+    position: fixed;
+    width:100px;
+    top: 108px;
+    max-height: 200px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    background: white;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 10px 20px -10px rgba(100,0,0,.35);
+    z-index:100;
+    left:50%;
+    transform: translateX(-50%);
+    width:230px;
+    overflow-y: auto;
+}
+
+.tempSearch p {
+    height:15px;
+}
+
+.searchResultPhono span {
+    color: rgb(100,50,50);
+}
+
+.searchResultPhono{
+    margin-top:-10px;
+    width:100%;
+    text-align:center;
+    font-family: 'Roboto', cursive;
+    color: tomato;
+    font-weight:bold;
+}
+
+.quitResult{
+    display: block;
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    height:30px;
+    width:30px;
+    cursor: pointer;
+    opacity:0.8;
+    transition: opacity 0.3s ease;
+}
+
+.results{
+    display: flex;
+}
+
+.results span > div > svg {
     animation: none !important;
+    margin-left: 10px;
+    border:none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    height:20px !important;
+    margin-top:3px !important;
+}
+
+.quitResult:hover {
+    opacity:1;
+}
+
+.quitResult div > svg {
+    height: 30px !important;
+    width: 30px !important;
+    border-radius: 100% !important;
+    box-shadow: 0 3px 6px -3px rgba(100,0,0,.75) !important;
+}
+
+@keyframes searchedGlyphAppear{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.glyphList{
+    margin: 0 auto;
+    margin-top: 245px;
+    width:100%;
+    max-width:600px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 10px;
+    font-family: 'Roboto', cursive;
+    animation: glyphList 1s ease-in;
+}
+
+@keyframes glyphList {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.glyphBox{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    box-sizing: border-box;
+    padding:10px;
+    background: radial-gradient(at top left, white, transparent);
+    border-radius:3px;
+    box-shadow: 0 5px 10px -5px rgba(100,0,0,.35);
+}
+
+.glyphList div > div > svg {
+    animation: none !important;
+    height: 50px !important;
+}
+
+p.glyphPhonology{
+    color: tomato;
+    font-weight:bold;
+}
+
+p.glyphPhonology,
+p.glyphFrench{
+    height:15px;
+    line-height:15px;
+}
+
+
+@media (max-width:900px){
+    .glyphList{
+        max-width:500px;
+        font-size:1em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:800px){
+    .glyphList{
+        max-width:400px;
+        font-size:1em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:700px){
+    .glyphList{
+        max-width:300px;
+        font-size:1em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:450px) and (max-height:600px){
+    .glyphList{
+        max-width:295px;
+        margin-left:0;
+        font-size:0.9em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:600px) and (max-height:450px){
+    .glyphList{
+        max-width:395px;
+        margin-left:10px;
+        font-size:0.9em;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:415px){
+    .glyphList{
+        max-width:270px;
+        margin-left:0;
+        font-size:0.8em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:360px){
+    .glyphList{
+        max-width:250px;
+        margin-left:0;
+        font-size:0.75em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:320px){
+    .glyphList{
+        max-width:220px;
+        margin-left:0;
+        font-size:0.7em;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
