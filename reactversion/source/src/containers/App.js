@@ -369,9 +369,6 @@ function App() {
     className: 'hidden'
   });
 
-  const [waveState, setWaveState] = useState({
-    className: 'hidden'
-  });
 
   const clickPortfolioHandler = () => {
     setMenuState({
@@ -390,12 +387,6 @@ function App() {
     setBackgroundState({
       className: 'backgroundBlue'
     });
-    setTimeout(() => {
-      setWaveState({
-        className: 'wave'
-      });
-    },1000);
-
   }
 
   //RESET PORTFOLIO SUBMENU STATE
@@ -649,10 +640,6 @@ function App() {
           stroke='rgb(38,70,133)'
           strokewidth='8'
           fill='rgb(38,70,133)' />
-
-        <div className={waveState.className} id='wave0_0'></div>
-        <div className={waveState.className} id='wave0_1'></div>
-        <div className={waveState.className} id='wave0_2'></div>
 
         <SubMenuContent className={webState.className}>
           <SubMenuWeb className="webContent"></SubMenuWeb>

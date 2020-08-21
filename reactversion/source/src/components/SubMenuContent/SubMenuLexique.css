@@ -9,3 +9,7 @@
     background: radial-gradient(at bottom right, transparent,transparent, rgb(210,200,200), rgb(190,180,180));
     cursor: default;
 }
+
+.glyphList > div > svg {
+    animation: none !important;
+}

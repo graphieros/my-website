@@ -1,30 +1,52 @@
-import React from 'react';
-// import graphieros library
+import React, { useState } from 'react';
 import './SubMenuEditeur.css';
+import LineGlyph from './EditeurComponents/Linear';
+
 
 const SubMenuEditeur = () => {
-    
-    const construction = {
-        display: 'block',
-        position: 'fixed',
-        left: '50%',
-        top: '50%',
-        transform: 'translate(-50%,-50%)',
-        background: 'tomato',
-        color: 'white',
-        fontSize: '1.3em',
-        boxSizing: 'border-box',
-        padding: '10px',
-        borderRadius: '3px',
-        textAlign: 'center',
-        boxShadow: '0 18px 40px -12px rgba(100,0,0,0.3)'
+
+    const [sequenceState, setSequenceState] = useState({
+        sequence: 'keo-kadwa , kio-tew-ma !',
+        size:50
+    });
+
+
+    const valueHandler = (props) => {
+        setSequenceState({
+            sequence: props.target.value,
+            size: props.size
+        });
+        
     }
 
-    return(
+
+    return (
         <div>
-            <div style={construction}>
-                Cette page est  en cours de construction.
+            <div className="editeurControl">
+                <h1>Editeur</h1>
+                <p>Saisissez des glyphes par leur phonologie<br /><span>Les glyphes d'un même mot sont reliés par un " - "</span></p>
+                <textarea
+                    defaultValue='keo-kadwa , kio-tew-ma !'
+                    type="text"
+                    id="editeurInput"
+                    autoFocus
+                    onFocus={e => e.currentTarget.select()}
+                    onChange={valueHandler}
+                />
+            
             </div>
+            <LineGlyph
+                className="glyphLine"
+                sequence={sequenceState.sequence}
+                size={sequenceState.size}
+                colors={[100,50,50]}
+                background="radial-gradient(at top, white, tomato)"
+                cartouche={true}
+                border='1px solid tomato'
+                padding=''
+                boxShadow='0 20px 40px -12px rgba(100,0,0,.35)'
+            />
+            <div className="backgroundFiddle"></div>
         </div>
     )
 }

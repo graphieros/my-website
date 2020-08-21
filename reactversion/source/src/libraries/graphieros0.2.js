@@ -6,16 +6,15 @@ Special thanx to Thundree, friend & mentor
 
 import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
 
-
 function linear({
-    section,
-    container,
+    sequence,
     size,
     background,
     colors,
     padding,
     cartouche,
-    border
+    border,
+    boxShadow,
 }) {
 
     let [red, green, blue] = colors;
@@ -23,14 +22,11 @@ function linear({
     green = green || 100;
     blue = blue || 100;
     size = size || 50;
-    background = `rgb(${background})` || "transparent";
+    background = background || "transparent";
     padding = padding || 0;
     cartouche = cartouche || false;
     border = border || '0px solid transparent';
-
-    // console.log(section, container);
-    const main_section = document.getElementById(section);
-    let adjust = size / 2.631578947368421;
+    boxShadow = boxShadow || 'none';
 
     const _p = `<path style="stroke-width:10px;stroke-linecap:round;stroke-linejoin:round;fill:none;" d="M `;
     const p_ = '"/>';
@@ -40,176 +36,148 @@ function linear({
     let glyph_database = graphieros_dictionnary.slice(0);
 
     const xmlns = "http://www.w3.org/2000/svg";
+    let svg_paragraph = document.createElementNS(xmlns, "svg");
 
-    const graphieros_text = document.getElementsByClassName(container);
+    svg_paragraph.style.width = `${size}px`;
+    svg_paragraph.style.stroke = glyph_color;
+    svg_paragraph.style.strokeLinejoin = "round";
+    svg_paragraph.style.strokeLinecap = "round";
+    svg_paragraph.style.fill = "none";
+    svg_paragraph.style.boxSizing = "border-box";
+    svg_paragraph.style.paddingTop = `${padding}px`;
+    svg_paragraph.style.paddingBottom = `${padding}px`;
+    svg_paragraph.style.paddingRight = `${padding / 6}px`;
+    svg_paragraph.style.paddingLeft = `${padding / 6}px`;
+    svg_paragraph.style.background = background;
+    svg_paragraph.style.border = border;
+    svg_paragraph.style.boxShadow = boxShadow;
 
-    (function process_text_to_glyphs() {
+    if (cartouche === true) {
+        svg_paragraph.style.borderRadius = `${size}px`;
+    }
 
+    let everyThing = [];
+    everyThing = sequence.replace(/-/g, " ");
+    everyThing = everyThing.split(" ");
 
-        for (let i = 0; i < graphieros_text.length; i += 1) {
+    let rebuilt_glyphs_library = [];
+    let one_array = sequence;
+    let one_array_with_spaces = one_array.split(" ");
+    let one_array_without_spaces = [];
 
-            graphieros_text[i].style.display = "none";
+    for (let j = 0; j < one_array_with_spaces.length; j += 1) {
 
-            let svg_paragraph = document.createElementNS(xmlns, "svg");
-
-            svg_paragraph.style.width = `${size}px`;
-            svg_paragraph.style.background = background;
-            svg_paragraph.style.stroke = glyph_color;
-            svg_paragraph.style.strokeLinejoin = "round";
-            svg_paragraph.style.strokeLinecap = "round";
-            svg_paragraph.style.fill = "none";
-            svg_paragraph.style.boxSizing = "border-box";
-            svg_paragraph.style.paddingTop = `${padding}px`;
-            svg_paragraph.style.paddingBottom = `${padding}px`;
-            svg_paragraph.style.paddingRight = `${padding / 6}px`;
-            svg_paragraph.style.paddingLeft = `${padding / 6}px`;
-            svg_paragraph.style.border = border;
-
-            if (cartouche === true) {
-                svg_paragraph.style.borderRadius = `${size}px`;
-            }
-
-            let rebuilt_glyphs_library = [];
-            let one_array = graphieros_text[i].innerHTML;
-            let one_array_with_spaces = one_array.split(" ");
-            let one_array_without_spaces = [];
-
-            for (let j = 0; j < one_array_with_spaces.length; j += 1) {
-
-                function there_is_some_text() {
-                    return one_array_with_spaces[j];
-                }
-
-                if (there_is_some_text()) {
-                    one_array_without_spaces.push(one_array_with_spaces[j]);
-                }
-            }
-
-            let words_lengths = [];
-
-            for (let j = 0; j < one_array_without_spaces.length; j += 1) {
-
-
-                let one_word_raw_list = one_array_without_spaces[j].split("-");
-                let rebuilt_word = [];
-
-                words_lengths.push(one_word_raw_list.length);
-
-                for (let k = 0; k < one_word_raw_list.length; k += 1) {
-
-                    let one_rebuilt_phono = `_${one_word_raw_list[k]}`;
-
-                    if (one_rebuilt_phono !== "_") {
-                        rebuilt_word.push(one_rebuilt_phono);
-                    }
-
-                }
-
-                rebuilt_glyphs_library.push(rebuilt_word);
-
-            }
-
-            let incr = 0;
-            rebuilt_glyphs_library.forEach(glyph_array => {
-
-
-                glyph_array.forEach((glyph, n) => {
-
-                    glyph_database.forEach(db_element => {
-
-                        function this_phono_is_in_database() {
-                            return glyph === db_element.name;
-                        }
-
-                        if (this_phono_is_in_database()) {
-
-                            let g = document.createElementNS(xmlns, "g");
-                            g.setAttributeNS(null, "class", "word");
-                            g.id = db_element.name;
-                            let db_paths = db_element.path;
-
-                            db_paths.forEach((db_path) => {
-
-                                let new_path = [];
-
-                                db_path.forEach((coordinate, i) => {
-
-                                    if (i % 2 === 1) {
-                                        coordinate += incr;
-                                        new_path.push(coordinate);
-                                    }
-                                    else {
-                                        new_path.push(coordinate);
-                                    }
-
-                                });
-
-                                g.innerHTML += `${_p}${new_path}${p_}$`;
-                                svg_paragraph.appendChild(g);
-
-                            });
-
-                        }
-                    });
-
-                    incr += 200;
-                    svg_paragraph.setAttributeNS(null, "viewBox", `0 0 260 ${(incr + 60)}`);
-
-                });
-            });
-
-            let memory = [];
-
-            words_lengths.forEach((word, i) => {
-
-                let x = 128;
-                let y = 128;
-                let y_start;
-
-                if (i === 0) {
-                    y_start = y + (i * word);
-                }
-                else {
-                    y_start = memory.pop() + 200;
-                }
-
-                let y_end = y_start + ((word - 1) * 200);
-                memory.push(y_end);
-                let g = document.createElementNS(xmlns, "g");
-                g.setAttributeNS(null, "class", "link");
-                g.innerHTML += `${_p}${x} ${y_start},${x} ${y_end}${p_}`;
-                svg_paragraph.appendChild(g);
-
-            });
-
-            let svg_wrapper = document.createElement("DIV");
-            svg_wrapper.style.boxSizing = "border-box";
-            svg_wrapper.className = `svg_paragraph_${section}`;
-            svg_wrapper.appendChild(svg_paragraph);
-            main_section.appendChild(svg_wrapper);
-
-            main_section.style.display = "grid";
-            main_section.style.justifyItems = "center";
-            // grid-class-10
-
-            main_section.style.gridTemplateColumns = `repeat(${graphieros_text.length},1fr)`;
-            console.log(graphieros_text.length);
-
+        function there_is_some_text() {
+            return one_array_with_spaces[j];
         }
 
-    }());
-
-
-
-    let all_paragraphs = document.getElementsByClassName(`svg_paragraph_${section}`);
-
-    for (let i = 0; i < all_paragraphs.length; i += 1) {
-
-        let one_paragraph = all_paragraphs[i];
-        if (i % 2 === 1) {
-            one_paragraph.style.marginTop = `${adjust}px`;
+        if (there_is_some_text()) {
+            one_array_without_spaces.push(one_array_with_spaces[j]);
         }
     }
+
+    let words_lengths = [];
+
+    for (let j = 0; j < one_array_without_spaces.length; j += 1) {
+
+
+        let one_word_raw_list = one_array_without_spaces[j].split("-");
+        let rebuilt_word = [];
+
+        words_lengths.push(one_word_raw_list.length);
+
+        for (let k = 0; k < one_word_raw_list.length; k += 1) {
+
+            let one_rebuilt_phono = `_${one_word_raw_list[k]}`;
+
+            if (one_rebuilt_phono !== "_") {
+                rebuilt_word.push(one_rebuilt_phono);
+            }
+
+        }
+
+        rebuilt_glyphs_library.push(rebuilt_word);
+
+    }
+
+    let incr = 0;
+    rebuilt_glyphs_library.forEach(glyph_array => {
+
+
+        glyph_array.forEach((glyph, n) => {
+
+            glyph_database.forEach(db_element => {
+
+                function this_phono_is_in_database() {
+                    return glyph === db_element.name;
+                }
+
+                if (this_phono_is_in_database()) {
+
+                    let g = document.createElementNS(xmlns, "g");
+                    g.setAttributeNS(null, "class", "word");
+                    g.id = db_element.name;
+                    let db_paths = db_element.path;
+
+                    db_paths.forEach((db_path) => {
+
+                        let new_path = [];
+
+                        db_path.forEach((coordinate, i) => {
+
+                            if (i % 2 === 1) {
+                                coordinate += incr;
+                                new_path.push(coordinate);
+                            }
+                            else {
+                                new_path.push(coordinate);
+                            }
+
+                        });
+
+                        g.innerHTML += `${_p}${new_path}${p_}$`;
+                        svg_paragraph.appendChild(g);
+
+                    });
+
+                }
+            });
+        
+
+            incr += 200;
+            svg_paragraph.setAttributeNS(null, "viewBox", `0 0 260 ${(incr + 60)}`);
+        });
+
+        svg_paragraph.style.height = `${(everyThing.length+1) * (size*0.8)}px`;
+
+    });
+
+    let memory = [];
+
+    words_lengths.forEach((word, i) => {
+
+        let x = 128;
+        let y = 128;
+        let y_start;
+
+        if (i === 0) {
+            y_start = y + (i * word);
+        }
+        else {
+            y_start = memory.pop() + 200;
+        }
+
+        let y_end = y_start + ((word - 1) * 200);
+        memory.push(y_end);
+        let g = document.createElementNS(xmlns, "g");
+        g.setAttributeNS(null, "class", "link");
+        g.innerHTML += `${_p}${x} ${y_start},${x} ${y_end}${p_}`;
+        svg_paragraph.appendChild(g);
+    });
+
+    let svg_wrapper = document.createElement("DIV");
+    svg_wrapper.appendChild(svg_paragraph);
+    return svg_wrapper.innerHTML;
 
 };
 export { linear };
@@ -619,7 +587,7 @@ function callifractal({
     dropShadow,
     wrapperBackground,
     backgroundRadius,
-    fit 
+    fit
 }) {
 
     // let [red, green, blue] = colors;
@@ -629,7 +597,7 @@ function callifractal({
     // red = red || 200;
     // green = green || 200;
     // blue = blue || 200;
-    
+
     radius = radius || size / 5.5;
     background = background || "transparent";
     svgSize = svgSize || 100;
@@ -954,7 +922,7 @@ function callifractal({
                 circle6.setAttributeNS(null, "cy", d6[1]);
                 circle6.setAttributeNS(null, "r", radius);
                 circle6.setAttributeNS(null, "fill", `rgb(${colors})`);
-            }()); 
+            }());
 
             let plots = line.split("-");
             plots.forEach(plot => {
@@ -1052,7 +1020,7 @@ function callifractal({
     if (fit === true) {
         wrapper.style.marginTop = `-${svgSize / 2.35294117647}px`;
     }
-    
+
     wrapper.appendChild(SVG);
 
     return wrapper.innerHTML;
