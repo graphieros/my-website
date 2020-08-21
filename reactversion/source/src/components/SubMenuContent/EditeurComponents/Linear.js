@@ -3,7 +3,7 @@ import { linear } from '../../../libraries/graphieros0.2';
 
 const LineGlyph = (props) => {
 
-    let line = linear({
+    const line = linear({
         sequence: props.sequence,
         size: props.size,
         background: props.background,

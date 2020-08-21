@@ -456,12 +456,12 @@ let graphieros_dictionnary = [
         path: [[lm, a, l, q, lm, w, rm, w, m, q, rm, a], [m, q, r, q, rm, w]],
 
     },
-    {
-        name: '_',
-        fr: '',
-        path: [[]],
+    // {
+    //     name: '_',
+    //     fr: '',
+    //     path: [[]],
 
-    },
+    // },
     {
         name: '_sle',
         fr: 'saler',

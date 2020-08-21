@@ -126,6 +126,16 @@ button.btnShowList:hover{
     height:15px;
 }
 
+.tempSearch::-webkit-scrollbar{
+    background: linear-gradient(to bottom, white, rgba(255, 99, 71, 0.473));
+}
+
+.tempSearch::-webkit-scrollbar-thumb{
+    background: radial-gradient(rgb(255, 178, 164), tomato);
+    border-radius:3px;
+    box-shadow: 0 0px 4px rgb(133, 52, 38);
+}
+
 .searchResultPhono span {
     color: rgb(100,50,50);
 }

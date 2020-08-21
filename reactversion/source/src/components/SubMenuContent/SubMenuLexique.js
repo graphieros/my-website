@@ -45,37 +45,41 @@ const SubMenuLexique = () => {
         }
     }
 
-    const searchWord = (props) => {
+    let delay = null;
 
+    let insideSearch = (searchValue) => {
 
-        graphieros_dictionnary.forEach((glyph, i) => {
+        if (searchValue !== '') {
 
-            if (props.target.value === glyph.fr) {
-
-                setSearchResult({
-                    className: 'glyphSearchReturn',
-                    content: <div><SingleGlyph
-                        sequence={glyph.name.replace("_", "")}
-                        size='100'
-                        colors={[100, 50, 50]}
-                        background='white'
-                        cartouche={true}
-                    />
-                        <div className="searchResultPhono">
-                            <span>{glyph.fr}</span>
-                            <br />
-                            [ {glyph.name.replace("_", "")} ]</div>
-                    </div>
-                });
-            }
-        });
+            graphieros_dictionnary.forEach((glyph, i) => {
+                console.log(searchValue);
+                if (searchValue === glyph.fr) {
+                    console.log('match');
+                    setSearchResult({
+                        className: 'glyphSearchReturn',
+                        content: <div><SingleGlyph
+                            sequence={glyph.name.replace("_", "")}
+                            size='100'
+                            colors={[100, 50, 50]}
+                            background='white'
+                            cartouche={true}
+                        />
+                            <div className="searchResultPhono">
+                                <span>{glyph.fr}</span>
+                                <br />
+                        [ {glyph.name.replace("_", "")} ]</div>
+                        </div>
+                    });
+                }
+            });
+        }
 
         let matches = graphieros_dictionnary.filter(glyph => {
-            const regex = new RegExp(`^${props.target.value}`, 'gi');
+            const regex = new RegExp(`^${searchValue}`, 'gi');
             return glyph.fr.match(regex);
         });
 
-        if (matches.length === 0 || props.target.value === '') {
+        if (matches.length === 0 || searchValue === '') {
             matches = [];
             setSearchResult({
                 className: 'hidden'
@@ -102,7 +106,20 @@ const SubMenuLexique = () => {
                 )
             })
         });
-        
+    }
+
+    const searchWord = (props) => {
+        const searchValue = props.target.value;
+
+        clearTimeout(delay);
+
+        if (searchValue !== '') {
+            delay = setTimeout(() => {
+                insideSearch(searchValue);
+            }, 250);
+        } else {
+            insideSearch('');
+        }
     }
 
     const validateSearch = (props) => {
@@ -140,6 +157,8 @@ const SubMenuLexique = () => {
 
     const glyphArray = [];
 
+    graphieros_dictionnary.sort((a, b) => a.fr.localeCompare(b.fr));
+
     graphieros_dictionnary.forEach((glyph, i) => {
 
         glyphArray.push(
@@ -153,7 +172,7 @@ const SubMenuLexique = () => {
                     padding=''
                 />
                 <p className="glyphPhonology">
-                    [{glyph.name.replace("_", "")}]
+                    [ {glyph.name.replace("_", "")} ]
                 </p>
                 <p className="glyphFrench">
                     {glyph.fr}
