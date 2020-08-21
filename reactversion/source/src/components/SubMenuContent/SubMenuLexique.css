@@ -108,9 +108,10 @@ button.btnShowList:hover{
     position: fixed;
     width:100px;
     top: 108px;
-    max-height: 200px;
+    max-height: 100px;
     box-sizing: border-box;
     padding-left: 10px;
+    padding-bottom:30px;
     background: white;
     border-radius: 0 0 3px 3px;
     box-shadow: 0 10px 20px -10px rgba(100,0,0,.35);
@@ -152,6 +153,26 @@ button.btnShowList:hover{
 
 .results{
     display: flex;
+    height:20px;
+}
+
+.results p {
+    display: inline-block;
+    height: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right:10px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Roboto', cursive;
+    color: rgb(100,50,50);
+    font-weight: bold;
+    background: white;
+    transition: background 0.3s ease;
+}
+
+.results p:hover{
+    background: rgba(255, 99, 71, 0.589);
 }
 
 .results span > div > svg {
@@ -161,7 +182,7 @@ button.btnShowList:hover{
     box-shadow: none !important;
     filter: none !important;
     height:20px !important;
-    margin-top:3px !important;
+    margin-top:16px !important;
 }
 
 .quitResult:hover {

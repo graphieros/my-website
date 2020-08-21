@@ -47,6 +47,7 @@ const SubMenuLexique = () => {
 
     const searchWord = (props) => {
 
+
         graphieros_dictionnary.forEach((glyph, i) => {
 
             if (props.target.value === glyph.fr) {
@@ -86,7 +87,7 @@ const SubMenuLexique = () => {
                 return (
                     <div className="results"
                         key={`${el.fr}${i}`}>
-                        {el.fr}
+                        <p onClick={validateSearch}>{el.fr}</p>
                         <span>
                             <SingleGlyph
                                 sequence={el.name.replace("_", "")}
@@ -100,6 +101,32 @@ const SubMenuLexique = () => {
                     </div>
                 )
             })
+        });
+        
+    }
+
+    const validateSearch = (props) => {
+
+        graphieros_dictionnary.forEach((glyph, i) => {
+
+            if (props.target.innerHTML === glyph.fr) {
+
+                setSearchResult({
+                    className: 'glyphSearchReturn',
+                    content: <div><SingleGlyph
+                        sequence={glyph.name.replace("_", "")}
+                        size='100'
+                        colors={[100, 50, 50]}
+                        background='white'
+                        cartouche={true}
+                    />
+                        <div className="searchResultPhono">
+                            <span>{glyph.fr}</span>
+                            <br />
+                            [ {glyph.name.replace("_", "")} ]</div>
+                    </div>
+                });
+            }
         });
     }
 
