@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './SubMenuEditeur.css';
 import LineGlyph from './EditeurComponents/Linear';
 
+let cartouches = [];
 
 const SubMenuEditeur = () => {
 
@@ -10,7 +11,10 @@ const SubMenuEditeur = () => {
         size: 50
     });
 
-    const cliHeight = window.innerHeight - 380;
+    let cliHeight = window.innerHeight - 380;
+    if(cliHeight > 200){
+        cliHeight = 200;
+    }
     const glyphSize = 30;
     const maxGlyphPerCartouche = Math.floor(cliHeight / glyphSize);
 
@@ -23,10 +27,11 @@ const SubMenuEditeur = () => {
         const glyphCount = clearSequence.length;
         const glyphWords = fullSequence.split(' ');
 
-        const cartoucheArray = [];
-        let temporaryCartouche = [];
 
-        console.log({glyphCount, maxGlyphPerCartouche});
+        let temporaryCartouche = [];
+        const cartoucheArray = [];
+
+        console.log({ glyphCount, maxGlyphPerCartouche });
 
         if (glyphCount <= maxGlyphPerCartouche) {
             cartoucheArray.push(clearSequence.join(' '));
@@ -42,16 +47,17 @@ const SubMenuEditeur = () => {
                 // console.log(glyphNum, temporaryCartouche.length);
 
                 if (glyphNum + temporaryCartouche.length > maxGlyphPerCartouche) {
-                    
+
                     cartoucheArray.push(temporaryCartouche.join(" "));
                     temporaryCartouche = [];
                 }
 
                 temporaryCartouche.push(word);
             });
-        }
 
-        console.log({cartoucheArray, temporaryCartouche});
+            cartouches = [...cartoucheArray];
+        }
+ 
 
         setSequenceState({
             sequence: props.target.value,
@@ -59,6 +65,24 @@ const SubMenuEditeur = () => {
         });
     }
 
+    const showCartouches = () => {
+        return (
+            cartouches.map((cart, i) => <div key={`${cart}${i}`}>
+                <LineGlyph
+                    className="glyphLine"
+                    sequence={cart}
+                    size='50'
+                    colors={[100, 50, 50]}
+                    background="radial-gradient(at top, white, tomato)"
+                    cartouche={true}
+                    border='1px solid tomato'
+                    padding=''
+                    boxShadow='0 20px 40px -12px rgba(100,0,0,.35)'
+                />
+            </div>
+            )
+        )
+    }
 
     return (
         <div>
@@ -77,16 +101,22 @@ const SubMenuEditeur = () => {
             </div>
 
             <LineGlyph
-                className="glyphLine"
+                className="glyphLineCurrent"
                 sequence={sequenceState.sequence}
-                size={sequenceState.size}
+                size='30'
                 colors={[100, 50, 50]}
-                background="radial-gradient(at top, white, tomato)"
-                cartouche={true}
-                border='1px solid tomato'
+                background=''
+                cartouche={false}
+                border=''
                 padding=''
-                boxShadow='0 20px 40px -12px rgba(100,0,0,.35)'
+                boxShadow=''
             />
+
+            <div className="cartoucheGrid">
+                {showCartouches()}
+            </div>
+            
+
             <div className="backgroundFiddle"></div>
         </div>
     )

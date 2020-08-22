@@ -45,11 +45,14 @@
     padding:10px;
     margin-top:20px;
     color: rgb(100,50,50);
+    max-width: 210px;
+    margin:0 auto;
 }
 
 .editeurControl p span {
     font-size:0.83em;
     font-weight:bold;
+    color: rgb(214, 81, 57);
 }
 
 #editeurInput{
@@ -72,7 +75,6 @@
 .glyphLine{
     position: relative;
     margin:0 auto;
-    margin-top:270px;
     width:100%;
     max-width:241px;
     text-align:center;
@@ -83,12 +85,33 @@
 
 .glyphLine svg{
     animation: none !important;
-    display:block;
-    position: absolute;
-    top:0;
-    left:50%;
-    transform: translateX(-50%);
+    display:block !important;
     box-shadow: 0 20px 40px -12px rgba(100,0,0,.35)!important;
+}
+
+.glyphLineCurrent {
+    position:fixed;
+    height:100vh;
+    top:0;
+    left:0;
+    overflow: scroll;
+    background: white;
+}
+
+.glyphLineCurrent svg {
+    animation: none! important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.cartoucheGrid{
+    margin:0 auto;
+    margin-top:250px;
+    display: grid;
+    justify-items:center;
+    grid-template-columns: repeat(4, 60px);
+    justify-items:center;
+    max-width:240px;
 }
 
 @keyframes editeurAppear {
@@ -97,5 +120,46 @@
     }
     100%{
         opacity:1;
+    }
+}
+
+
+
+@media (max-width:414px){
+    .cartoucheGrid{
+        grid-template-columns: repeat(4,60px);
+        max-width:240px;
+        margin-left:35px;
+    }
+}
+
+@media (max-width:411px) {
+    .cartoucheGrid{
+        grid-template-columns: repeat(4,60px);
+        max-width:240px;
+        margin-left:35px;
+    }
+}
+
+@media (max-width: 375px){
+    .cartoucheGrid{
+        grid-template-columns: repeat(3,60px);
+        max-width:180px;
+        margin-left:35px;
+    }
+}
+
+@media (max-width: 360px) {
+    .cartoucheGrid{
+        grid-template-columns: repeat(3,60px);
+        margin-left:35px;
+    }
+}
+
+@media (max-width: 320px){
+    .cartoucheGrid{
+        grid-template-columns: repeat(2,60px);
+        max-width:120px;
+        margin-left:35px;
     }
 }
