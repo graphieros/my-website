@@ -768,9 +768,10 @@ function App() {
         loyd={meState.loyd}
         robert={meState.robert} />
 
-      <MenuContactFractal className={contactState.className} />
-      <div className={backgroundState.className} id="backgroundSetUp"></div>
+      <a target="_blank" rel="noopener noreferrer" href="https://graphieros.com/contact.php"><MenuContactFractal className={contactState.className} />
+      </a>
 
+      <div className={backgroundState.className} id="backgroundSetUp"></div>
     </div>
   );
 }

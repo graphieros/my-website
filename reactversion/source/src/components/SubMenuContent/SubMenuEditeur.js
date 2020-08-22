@@ -104,7 +104,7 @@ const SubMenuEditeur = () => {
                 className="glyphLineCurrent"
                 sequence={sequenceState.sequence}
                 size='30'
-                colors={[100, 50, 50]}
+                colors={[255,255,255]}
                 background=''
                 cartouche={false}
                 border=''

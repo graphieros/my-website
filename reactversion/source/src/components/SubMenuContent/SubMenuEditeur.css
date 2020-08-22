@@ -95,13 +95,27 @@
     top:0;
     left:0;
     overflow: scroll;
-    background: white;
+    background: black;
+    box-shadow: 10px 10px 20px -6px rgba(100,0,0,.35)
+}
+
+.glyphLineCurrent::-webkit-scrollbar {
+    width:12px;
+}
+
+.glyphLineCurrent::-webkit-scrollbar-track{
+    background: linear-gradient(to right,rgb(194, 194, 194), white, rgb(194, 194, 194));
+}
+
+.glyphLineCurrent::-webkit-scrollbar-thumb{
+    background: radial-gradient(white, tomato);
+    border-radius:3px;
+    box-shadow: 0 3px 10px black;
 }
 
 .glyphLineCurrent svg {
     animation: none! important;
     box-shadow: none !important;
-    filter: none !important;
 }
 
 .cartoucheGrid{
@@ -124,12 +138,11 @@
 }
 
 
-
 @media (max-width:414px){
     .cartoucheGrid{
         grid-template-columns: repeat(4,60px);
         max-width:240px;
-        margin-left:35px;
+        margin-left:45px;
     }
 }
 
@@ -137,7 +150,6 @@
     .cartoucheGrid{
         grid-template-columns: repeat(4,60px);
         max-width:240px;
-        margin-left:35px;
     }
 }
 
@@ -145,14 +157,12 @@
     .cartoucheGrid{
         grid-template-columns: repeat(3,60px);
         max-width:180px;
-        margin-left:35px;
     }
 }
 
 @media (max-width: 360px) {
     .cartoucheGrid{
         grid-template-columns: repeat(3,60px);
-        margin-left:35px;
     }
 }
 
@@ -160,6 +170,5 @@
     .cartoucheGrid{
         grid-template-columns: repeat(2,60px);
         max-width:120px;
-        margin-left:35px;
     }
 }

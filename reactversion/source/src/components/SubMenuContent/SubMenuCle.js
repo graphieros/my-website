@@ -1,29 +1,43 @@
 import React from 'react';
+import Fractal from '../Fractal/Fractal';
 import './SubMenuCle.css';
 
-const SubMenuCle = () => {
-    
-    const construction = {
-        display: 'block',
-        position: 'fixed',
-        left: '50%',
-        top: '50%',
-        transform: 'translate(-50%,-50%)',
-        background: 'tomato',
-        color: 'white',
-        fontSize: '1.3em',
-        boxSizing: 'border-box',
-        padding: '10px',
-        borderRadius: '3px',
-        textAlign: 'center',
-        boxShadow: '0 18px 40px -12px rgba(100,0,0,0.3)'
-    }
+const SubMenuCle = (props) => {
 
-    return(
-        <div>
-            <div style={construction}>
-                Cette page est en cours de construction.
+    return (
+        <div className={props.className}>
+
+            <Fractal 
+                className='fractalCle'
+                sequence= 'zw-qd-dx-sw'
+                colors= {[255,99,71]}
+                svgSize=""
+                
+             />
+            <div className='clePresentation'>
+                <strong>Qu'est-ce que le graphieros?</strong>
+                <p>
+                    Le graphieros est une idéolangue (une langue artistique), que j'ai créée pour pouvoir peindre et écrire simultanément.
+                </p>
+                <p className='cleRed'>
+                    Le graphieros est composé d'un corpus de 450 idéogrammes.
+                </p>
+                <p>
+                    En combinant les idéogrammes, toutes les idées peuvent être représentées.
+                </p>
+                <p>
+                    Les idéogrammes sont formés d'après la géométrie de l'hexagone. Les textes peuvent donc être inscrits dans une grille hexagonale.
+                </p>
+                <p className="cleRed">
+                    Le graphieros se parle...
+                </p>
+                
+                <br/>
+                <a target="_blank" rel="noopener noreferrer" href="https://graphieros.com/cle.html">
+                    <button className="cleLink">trouver la clé</button>
+                </a>
             </div>
+    
         </div>
     )
 }
