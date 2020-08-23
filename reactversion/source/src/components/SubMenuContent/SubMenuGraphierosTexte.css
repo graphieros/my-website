@@ -49,13 +49,6 @@ h1.graphierosTextPresentationTitle {
     filter: none! important;
 }
 
-/* .paragraphTitle svg {
-    stroke: tomato !important;
-} */
-
-.paragraphText svg {
-    stroke: black !important;
-}
 
 @keyframes graphierosTexteOn {
     0%{

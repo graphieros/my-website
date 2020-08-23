@@ -17,7 +17,7 @@
             "background": "",
             "colors": [100,50,50],
             "padding": "",
-            "cartouche": "",
+            "cartouche": false,
             "border": ""
         }
     },
@@ -34,12 +34,78 @@
         },
         "linear": {
             "max" : 5,
-            "sequence": "ka-slo nia-frya grae . ka-tsi nsio-tsi sa pkae-da mea-knoi-tsi .",
+            "sequence": "ka-slo nia-frya grae . ka-tsi nsio-tsi sa pkae-da mea-knoi-tsi",
             "size": "30",
             "background": "",
-            "colors": [100,50,50],
+            "colors": [100,20,20],
             "padding": "",
-            "cartouche": "",
+            "cartouche": false,
+            "border": ""
+        }
+    },
+    {
+        "id": "paragraph2",
+        "molecule": {
+            "sequence": "ka sa knoi pio",
+            "size": "200",
+            "colors": [255,99,71],
+            "borderRadius": "",
+            "background": "",
+            "strokeWidth": "",
+            "border": ""
+        },
+        "linear": {
+            "max" : 5,
+            "sequence": "ka-fy-go-tsi dvo-tsi sa vi mea-hae-to-trea-frey , roi ka-fy-go-tsi ftu-lse-sa-tsi , roi ka-fy-go-tsi ftu-ra-sa-soma-tsi",
+            "size": "30",
+            "background": "",
+            "colors": [100,20,20],
+            "padding": "",
+            "cartouche": false,
+            "border": ""
+        }
+    },
+    {
+        "id": "paragraph3",
+        "molecule": {
+            "sequence": "stoia prba le fra",
+            "size": "200",
+            "colors": [255,99,71],
+            "borderRadius": "",
+            "background": "",
+            "strokeWidth": "",
+            "border": ""
+        },
+        "linear": {
+            "max" : 4,
+            "sequence": "ptae-prba-soma flae-kto kio-tsi kli-ney-tsi , ka-fy-go rmi roi ka-fy-go ma kli-hia-dzye ? ka-fy-go ftu-nia-kno",
+            "size": "30",
+            "background": "",
+            "colors": [100,20,20],
+            "padding": "",
+            "cartouche": false,
+            "border": ""
+        }
+    },
+    {
+        "id": "paragraph4",
+        "molecule": {
+            "sequence": "hro lea tae piz dwa",
+            "size": "200",
+            "colors": [255,99,71],
+            "borderRadius": "",
+            "background": "",
+            "strokeWidth": "",
+            "border": ""
+        },
+        "linear": {
+            "max" : 5,
+            "sequence": "ma nmae-kfa mea-hro fkwe mea-prba frya flae , te sta de kio-tew-ma vi-fra . de mea-hro ma kli-vi-keo , sme-zai mea-hro da mea-zai-sa",
+            "size": "30",
+            "background": "",
+            "colors": [100,20,20],
+            "padding": "",
+            "cartouche": false,
             "border": ""
         }
     }
