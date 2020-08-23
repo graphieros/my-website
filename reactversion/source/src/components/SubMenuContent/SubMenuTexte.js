@@ -1,29 +1,47 @@
 import React from 'react';
+import Livre from './texteComponents/Livre';
+import accords from '../../assets/accords.png';
+import cle from '../../assets/cle.png';
+import hexagerations from '../../assets/hexagerations.png';
+import objedtDesir from '../../assets/objedtDesir.png';
 import './SubMenuTexte.css';
 
 const SubMenuTexte = () => {
 
-    const construction = {
-        display: 'block',
-        position: 'fixed',
-        left: '50%',
-        top: '50%',
-        transform: 'translate(-50%,-50%)',
-        background: 'cornflowerblue',
-        color: 'white',
-        fontSize: '1.3em',
-        boxSizing: 'border-box',
-        padding: '10px',
-        borderRadius: '3px',
-        textAlign: 'center',
-        boxShadow: '0 18px 40px -12px rgba(0,0,100,0.3)'
-    }
-
-    return(
+    return (
         <div>
-            <div style={construction}>
-                Cette page est en cours de construction.
+            <div className="textePresentation">
+                <p className="textePresentationTitle">Textes</p>
+                <p>une sélection des livres que j'ai commis durant les deux dernières décennies</p>
             </div>
+            <Livre
+                className='livre'
+                title='Accords'
+                image={accords}
+                imageAlt='accords'
+                description="Comment représenter par écrit des pensées parallèles ? Comment faire en sorte que le lecteur puisse vivre cette expérience de lecture sur plusieurs plans simultanés ? Accords tente de répondre à ces questions avec une écriture sous forme de contrepoints et d'accords."
+            />
+            <Livre
+                className='livre'
+                title='Hexagerations'
+                image={hexagerations}
+                imageAlt='hexagerations'
+                description="Un beau livre où une sélection de peintures façonnées avec le graphieros sont accompagnées par la traduction du texte en français."
+            />
+            <Livre
+                className='livre'
+                title="L'objet du désir"
+                image={objedtDesir}
+                imageAlt='objet du désir'
+                description="Une pièce de théâtre en 3 actes, où le Sujet rencontre l'Objet du désir, sans cesse renouvelé."
+            />
+            <Livre
+                className='livre'
+                title='La clé'
+                image={cle}
+                imageAlt='La clé'
+                description="Le manuel du graphieros, présentant les raisons de la création de cette idéolangue, les fondations de son architecture, les ressources grammaticales, phonologiques, et le lexique."
+            />
         </div>
     )
 }
