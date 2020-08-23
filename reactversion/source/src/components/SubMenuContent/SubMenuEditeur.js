@@ -28,13 +28,14 @@ const SubMenuEditeur = () => {
         const glyphWords = fullSequence.split(' ');
 
 
-        let temporaryCartouche = [];
+        let memory = [];
         const cartoucheArray = [];
 
-        console.log({ glyphCount, maxGlyphPerCartouche });
+        // console.log({ glyphCount, maxGlyphPerCartouche });
 
         if (glyphCount <= maxGlyphPerCartouche) {
-            cartoucheArray.push(clearSequence.join(' '));
+            cartoucheArray.push(fullSequence);
+            console.table({cartoucheArray});
         } else {
             glyphWords.forEach(word => {
 
@@ -42,22 +43,23 @@ const SubMenuEditeur = () => {
                     return;
                 }
 
-                let glyphNum = word.split("-").length;
+                let glyphNumberPerWord = word.split("-").length;
 
-                // console.log(glyphNum, temporaryCartouche.length);
+                // console.log({glyphNumberPerWord, memory});
 
-                if (glyphNum + temporaryCartouche.length > maxGlyphPerCartouche) {
-
-                    cartoucheArray.push(temporaryCartouche.join(" "));
-                    temporaryCartouche = [];
+                if (glyphNumberPerWord + memory.length > maxGlyphPerCartouche) {
+                    cartoucheArray.push(memory.join(" "));
+                    memory = [];
                 }
 
-                temporaryCartouche.push(word);
+                memory.push(word);
+        
             });
 
-            cartouches = [...cartoucheArray];
+            // console.log({memory});
+            cartouches = [...cartoucheArray, ...memory];
+            // console.log({cartouches});
         }
- 
 
         setSequenceState({
             sequence: props.target.value,

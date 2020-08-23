@@ -95,7 +95,7 @@ const SubMenuParcours = () => {
                             size='30'
                             svgSize='10'
                             radius=''
-                            background=''
+                            background='white'
                             light={true}
                             intensity='1.1'
                             border=''

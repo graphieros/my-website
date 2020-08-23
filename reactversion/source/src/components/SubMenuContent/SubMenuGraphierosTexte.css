@@ -9,3 +9,23 @@
     background: radial-gradient(at bottom right, transparent,transparent, rgb(210,200,200), rgb(190,180,180));
     cursor: default;
 }
+
+.paragraphBlock{
+    margin: 0 auto;
+    width:100%;
+    max-width:600px;
+    display: flex;
+}
+
+.paragraphTitle svg,
+.paragraphText svg {
+    animation: none !important;
+}
+
+.paragraphTitle svg {
+    stroke: tomato !important;
+}
+
+.paragraphText svg {
+    stroke: black !important;
+}

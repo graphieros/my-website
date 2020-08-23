@@ -82,9 +82,11 @@ const SubMenuPeinture = () => {
     const titArray = [];
     const desArray = [];
 
-    const [galleryShowState, setGalleryShowState] = useState(0);
+    const [galleryShowState, setGalleryShowState] = useState({
+        content: <span><img src={apresDemain} alt="startPic"/></span>
+    });
 
-    const [titState, setTitState] = useState(0);
+    const [titState, setTitState] = useState('');
 
     const [desState, setDesState] = useState({
         content: <span><span className="galleryPresentation">Galerie</span>Sélection de peintures récentes<br/>Cliquez pour agrandir &#x1F59D;</span>
