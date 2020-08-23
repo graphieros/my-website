@@ -4,17 +4,40 @@
         "molecule": {
             "sequence": "hea fya keo srye",
             "size": "200",
-            "colors": "[100,50,50]",
+            "colors": [255,99,71],
             "borderRadius": "",
             "background": "",
             "strokeWidth": "",
             "border": ""
         },
         "linear": {
-            "sequence": "de mea-hea ma kli-keo-grey-hea , te ka-fy-go sa-kme sta de mea-hae-to-trea-frey . kio-pnae-soma-tsi ma pkae-de mea-pno boi mea-d3e",
-            "size": "50",
+            "max" : 5,
+            "sequence": "de mea-hea ma kli-keo-grey-hea , te ka-fy-go sa-kme sta de mea-hae-to-trea-frey . kio-pnae-soma-tsi ma pkae-da mea-pno boi mea-d3e , te ka-tsi dvo-tsi sta mea-ftu vi-vdio-spea-d3e",
+            "size": "30",
             "background": "",
-            "colors": "[100,50,50]",
+            "colors": [100,50,50],
+            "padding": "",
+            "cartouche": "",
+            "border": ""
+        }
+    },
+    {
+        "id": "paragraph1",
+        "molecule": {
+            "sequence": "kio kwe ka",
+            "size": "200",
+            "colors": [255,99,71],
+            "borderRadius": "",
+            "background": "",
+            "strokeWidth": "",
+            "border": ""
+        },
+        "linear": {
+            "max" : 5,
+            "sequence": "ka-slo nia-frya grae . ka-tsi nsio-tsi sa pkae-da mea-knoi-tsi .",
+            "size": "30",
+            "background": "",
+            "colors": [100,50,50],
             "padding": "",
             "cartouche": "",
             "border": ""

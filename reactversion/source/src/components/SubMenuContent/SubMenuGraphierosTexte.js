@@ -11,16 +11,15 @@ const SubMenuGraphierosTexte = () => {
         let cartouches = [];
         const fullSequence = data.linear.sequence;
         const clearSequence = fullSequence.replace(/\s|\n|\r/g, "-").split("-").filter(el => el !== '');
-        // console.log({clearSequence});
 
-        const maxGlyphPerCartouche = 8;
+        console.log(data.linear.max)
+
+        const maxGlyphPerCartouche = data.linear.max;
         const glyphCount = clearSequence.length;
         const glyphWords = fullSequence.split(' ');
 
         let memory = [];
         const cartoucheArray = [];
-
-        // console.log({ glyphCount, maxGlyphPerCartouche });
 
         if (glyphCount <= maxGlyphPerCartouche) {
             cartoucheArray.push(fullSequence);
@@ -33,8 +32,6 @@ const SubMenuGraphierosTexte = () => {
 
                 let glyphNumberPerWord = word.split("-").length;
 
-                // console.log({glyphNumberPerWord, memory});
-
                 if (glyphNumberPerWord + memory.length > maxGlyphPerCartouche) {
                     cartoucheArray.push(memory.join(" "));
                     memory = [];
@@ -44,9 +41,8 @@ const SubMenuGraphierosTexte = () => {
 
             });
 
-            console.log({memory});
             cartouches = [...cartoucheArray, ...memory];
-            // console.log({cartouches});
+
         }
 
         const showCartouches = () => {
@@ -79,13 +75,20 @@ const SubMenuGraphierosTexte = () => {
                     strokeWidth={data.molecule.strokeWidth}
                     border={data.molecule.border}
                 />
-                {showCartouches()}
+                <div className="allParagraphsWrapper">
+                    {showCartouches()}
+                </div>
+
             </div>
         )
     })
 
     return (
         <div>
+            <div className="graphierosTextPresentation">
+                <h1 className="graphierosTextPresentationTitle">Textes</h1>
+                <p>Une collection de textes rédigés en graphieros. Le lecteur est invité à tenter d'en décrypter le sens.</p>
+            </div>
             {paragraphsData}
         </div>
     )

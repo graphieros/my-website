@@ -8,6 +8,32 @@
     overflow: auto;
     background: radial-gradient(at bottom right, transparent,transparent, rgb(210,200,200), rgb(190,180,180));
     cursor: default;
+    animation: graphierosTexteOn 1s ease-in-out;
+}
+
+.graphierosTextPresentation {
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+}
+
+h1.graphierosTextPresentationTitle {
+    font-family: 'Megrim', cursive;
+    color: rgb(202, 59, 33);
+    margin-top:50px;
+}
+
+.graphierosTextPresentation p {
+    width:300px;
+    margin:0 auto;
+    font-family: 'Roboto', cursive;
+    margin-bottom: 100px;
+    color: rgb(100,50,50);
+}
+
+.allParagraphsWrapper {
+    display: grid;
+    grid-template-columns: repeat(8,30px);
 }
 
 .paragraphBlock{
@@ -20,12 +46,45 @@
 .paragraphTitle svg,
 .paragraphText svg {
     animation: none !important;
+    filter: none! important;
 }
 
-.paragraphTitle svg {
+/* .paragraphTitle svg {
     stroke: tomato !important;
-}
+} */
 
 .paragraphText svg {
     stroke: black !important;
+}
+
+@keyframes graphierosTexteOn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@media (max-width:600px) {
+
+    .graphierosTextPresentation p {
+        margin-bottom:20px;
+    }
+
+    .paragraphTitle{
+        margin-left: -50px;
+    }
+
+    .allParagraphsWrapper{
+        grid-template-columns: repeat(4,30px);
+        margin-left:-60px;
+    }
+
+    .paragraphBlock {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items:center;
+        justify-items: center;
+    }
 }
