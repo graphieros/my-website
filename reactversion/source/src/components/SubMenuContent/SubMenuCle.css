@@ -18,6 +18,7 @@
     justify-items:center;
     margin:0 auto;
     max-width:1000px;
+    margin-top:100px;
 }
 
 .clePresentation {
@@ -76,6 +77,23 @@ p.cleRed{
     animation: clePresentation 1s ease-in-out !important;
 }
 
+.videoWrapper{
+    padding-top:100px;
+    grid-column: 1 /span 2;
+    margin:0 auto;
+    width:100%;
+    max-width:800px;
+    animation: clePresentation 1s ease-in-out;
+}
+
+.videoWrapper video {
+    width:100%;
+    border-radius:3px;
+    border:1px solid white;
+    box-shadow: 0 10px 20px -10px rgba(100,0,0,.75);
+    margin-bottom:100px;
+}
+
 @keyframes clePresentation {
     0%{
         opacity:0;
@@ -96,6 +114,10 @@ p.cleRed{
     .fractalCle {
         height:400px;
     }
+    .videoWrapper{
+        padding-top:20px;
+        max-width:500px;
+    }
     
 }
 
@@ -104,11 +126,16 @@ p.cleRed{
     .cleContent{
         display: block;
         margin-left:-50px;
+        margin-top:30px;
     }
     .fractalCle {
         height:300px;
     }
-    
+    .videoWrapper{
+        padding-top:0px;
+        max-width:200px;
+        margin-left:20px;
+    }
 }
 
 @media (max-width:500px) {
@@ -163,5 +190,11 @@ p.cleRed{
         margin-left:100px;
         font-size:1em;
         margin-bottom:93px;
+    }
+    .videoWrapper{
+        padding-top:0px;
+        margin-top:-50px;
+        max-width:180px;
+        margin-left:20px;
     }
 }

@@ -6,6 +6,7 @@ const SubMenuBioDo = () => {
 
     return (
         <div>
+            
             <div className="bioDoTitle">
                 <div id="fractalBioTitleWrapper">
                     <Fractal className='fractalBioTitle'
@@ -79,7 +80,7 @@ const SubMenuBioDo = () => {
                 peinture
             </div>
             </div>
-
+    
         </div>
     )
 }

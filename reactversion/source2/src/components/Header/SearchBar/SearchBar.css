@@ -1,0 +1,119 @@
+.searchBar{
+    position: fixed;
+    display:block;
+    top:20px;;
+    right:73px;
+    height:30px;
+}
+
+input.searchInput{
+    height:100%;
+    border-radius:30px;
+    border:none;
+    box-sizing: border-box;
+    padding-left:10px;
+    font-family: 'Roboto', cursive;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: rgb(20,20,80);
+    box-shadow: 0 10px 20px -10px rgba(0,0,100,0.25);
+}
+
+.tempSearch {
+    width:190px;
+    max-height:150px;
+    padding-bottom:30px;
+    overflow: auto;
+    background: white;
+    margin-left: 10px;
+    margin-top:5px;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,100,0.25);
+    box-sizing: border-box;
+    padding-left:20px;
+}
+
+.tempSearch::-webkit-scrollbar-thumb{
+    background: rgb(20,20,80);
+}
+
+.results {
+    display: flex;
+    height:25px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.results span {
+    margin-top: 12px;
+}
+
+.results p {
+    box-sizing: border-box;
+    border-radius:2px;
+    padding-left:10px;
+    padding-right:10px;
+    height:25px;
+    transition: background 0.3s ease-in-out;
+}
+
+.results p:hover {
+    background: rgba(255, 99, 71, 0.486);
+}
+
+.glyphSearchReturn {
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    text-align:center;
+    position: fixed;
+    top:250px;
+    left:50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius:3px;
+    width:200px;
+    box-sizing: border-box;
+    padding-bottom:30px;
+    padding-top:40px;
+    box-shadow: 0 20px 40px -20px rgba(0,0,100,0.35);
+}
+
+.quitResult{
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    height:30px;
+    width:30px;
+    border-radius:100%;
+    box-shadow: 0 5px 10px -5px rgba(0,0,100,0.45);
+    cursor: pointer;
+    opacity:0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.quitResult:hover {
+    opacity: 1;
+}
+
+.quitResult div > svg {
+    background: tomato !important;
+    height: 30px !important;
+    width:30px !important;
+}
+
+.glyphSearchReturn svg {
+    height:80px !important;
+    width:80px !important;
+}
+
+.searchResultPhono {
+    color: tomato;
+    font-weight: bold;
+    font-family: 'Roboto', cursive;
+}
+
+.searchResultPhono span {
+    color: rgb(20,20,80);
+    line-height:30px;
+}

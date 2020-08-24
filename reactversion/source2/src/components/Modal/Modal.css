@@ -1,0 +1,62 @@
+.modalVisible{
+    display: block;
+    position: fixed;
+    top:100px;
+    left: 50%;
+    transform: translateX(-50%);
+    height:320px;
+    width:250px;
+    background: linear-gradient(to top, white, rgb(240,240,240));
+    box-sizing: border-box;
+    padding:20px;
+    border-radius:3px;
+    box-shadow: 0 20px 40px -20px rgba(100,0,0,.35), 0 -10px 20px -10px white;
+    animation: modalVisible 0.3s ease-in-out;
+    z-index:100;
+}
+
+.fractalQuit{
+    height:30px;
+    width:30px;
+    display: block;
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    opacity:0.85;
+    transition: opacity 0.3s ease;
+    cursor:pointer;
+}
+
+.fractalQuit:hover {
+    opacity:1;
+}
+
+.fractalQuit svg{
+    box-shadow: 0 5px 10px -5px rgba(100,0,0,.75);
+}
+
+.backState{
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100vw;
+    height:100vh;
+    background: radial-gradient(at top, rgba(255,255,255,.6), rgba(50,50,60,.6));
+    animation: modalVisible 0.3s ease-in-out;
+}
+
+@keyframes modalVisible {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@media (max-width:300px){
+    .modalVisible{
+        width:200px;
+    }
+}

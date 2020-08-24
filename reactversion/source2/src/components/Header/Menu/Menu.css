@@ -1,0 +1,33 @@
+.mainMenu{
+    position:fixed;
+    right:10px;
+    top:8px;
+}
+
+.fractalMenu {
+    width:50px;
+    height:50px;
+    display:flex;
+    cursor: pointer;
+    border-radius:100%;
+    box-shadow: 0 10px 20px -10px rgba(0,0,100,.35);
+}
+
+.fractalMenu:hover{
+    animation: fractalMenu 0.3s ease-in-out;
+}
+
+@keyframes fractalMenu {
+    0%{
+        transform: rotate(0deg);
+    }
+    33%{
+        transform: rotate(-5deg);
+    }
+    66%{
+        transform: rotate(5deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}

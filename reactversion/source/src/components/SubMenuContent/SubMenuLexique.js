@@ -91,7 +91,7 @@ const SubMenuLexique = () => {
                 return (
                     <div className="results"
                         key={`${el.fr}${i}`}>
-                        <p onClick={validateSearch}>{el.fr}</p>
+                        
                         <span>
                             <SingleGlyph
                                 sequence={el.name.replace("_", "")}
@@ -102,6 +102,7 @@ const SubMenuLexique = () => {
                                 padding=''
                             />
                         </span>
+                        <p onClick={validateSearch}>{el.fr}</p>
                     </div>
                 )
             })
@@ -221,6 +222,7 @@ const SubMenuLexique = () => {
                         background='rgb(255,91,79)'
                     />
                 </div>
+                
             </div>
 
             <div

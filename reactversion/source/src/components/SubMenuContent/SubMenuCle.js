@@ -1,5 +1,6 @@
 import React from 'react';
 import Fractal from '../Fractal/Fractal';
+import zoomin from '../../assets/zoomin.mp4';
 import './SubMenuCle.css';
 
 const SubMenuCle = (props) => {
@@ -7,13 +8,13 @@ const SubMenuCle = (props) => {
     return (
         <div className={props.className}>
 
-            <Fractal 
+            <Fractal
                 className='fractalCle'
-                sequence= 'zw-qd-dx-sw'
-                colors= {[255,99,71]}
+                sequence='zw-qd-dx-sw'
+                colors={[255, 99, 71]}
                 svgSize=""
-                
-             />
+
+            />
             <div className='clePresentation'>
                 <strong>Qu'est-ce que le graphieros?</strong>
                 <p>
@@ -31,13 +32,19 @@ const SubMenuCle = (props) => {
                 <p className="cleRed">
                     Le graphieros se parle...
                 </p>
-                
-                <br/>
+
+                <br />
                 <a target="_blank" rel="noopener noreferrer" href="https://graphieros.com/cle.html">
                     <button className="cleLink">trouver la clé</button>
                 </a>
             </div>
-    
+
+            <div className="videoWrapper">
+                <video controls>
+                    <source src={zoomin} type="video/mp4" />
+                </video>
+            </div>
+
         </div>
     )
 }
