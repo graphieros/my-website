@@ -1,0 +1,31 @@
+.subMenu{
+    height:100%;
+    width:100%;
+    background: radial-gradient(at top, rgba(255,255,255,.9), rgba(255,255,255,.0));
+    border-radius:3px;
+    box-shadow: 0 10px 20px -10px var(--blue0);
+    box-sizing: border-box;
+}
+
+.subMenuText{
+    width:100%;
+    text-align:center;
+    color: white;
+    font-size:1.5em;
+    margin-top:-30px;
+    text-shadow: 0 1px 1px var(--blue0);
+    height:50px;
+}
+
+@media(max-width:500px) {
+    .subMenu{
+        height:120px;
+    }
+    .subMenuSvg svg{
+        height: 100px;
+    }
+    .subMenuText{
+        margin-top:-20px;
+        height:20px;
+    }
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Fractal from '../../graphieros/Fractal';
 import Modal from '../../Modal/Modal';
 import MenuItem from './MenuItem/MenuItem';
@@ -51,49 +52,59 @@ const Menu = (props) => {
 
             <Modal className={modalState.className}>
 
-                <MenuItem
-                    className='menuItem'
-                    content='parcours'
-                    color='var(--blue4)'
-                    sequence='dwa'
-                    R={122}
-                    G={161}
-                    B={216}
-                    rotate={-10}
-                />
+                <Link to="/parcours" onClick={handleQuitMenu}>
+                    <MenuItem
+                        className='menuItem'
+                        content='parcours'
+                        color='var(--blue4)'
+                        sequence='dwa'
+                        R={122}
+                        G={161}
+                        B={216}
+                        rotate={-10}
+                    />
+                </Link>
 
-                <MenuItem
-                    className='menuItem'
-                    content='peintures'
-                    color='var(--blue4)'
-                    sequence='sta'
-                    R={122}
-                    G={161}
-                    B={216}
-                    rotate={10}
-                />
+                <Link to="/art" onClick={handleQuitMenu}>
+                    <MenuItem
+                        className='menuItem'
+                        content='art'
+                        color='var(--blue4)'
+                        sequence='sta'
+                        R={122}
+                        G={161}
+                        B={216}
+                        rotate={10}
+                    />
+                </Link>
 
-                <MenuItem
-                    className='menuItem'
-                    content='graphieros'
-                    color='var(--blue4)'
-                    sequence='lgio'
-                    R={122}
-                    G={161}
-                    B={216}
-                    rotate={-10}
-                />
+                <Link to="/webDev" onClick={handleQuitMenu}>
+                    <MenuItem
+                        className='menuItem'
+                        content='web dev'
+                        color='var(--blue4)'
+                        sequence='grae'
+                        R={122}
+                        G={161}
+                        B={216}
+                        rotate={-10}
+                    />
+                </Link>
 
-                <MenuItem
-                    className='menuItem'
-                    content='contact'
-                    color='var(--blue4)'
-                    sequence='krye'
-                    R={122}
-                    G={161}
-                    B={216}
-                    rotate={10}
-                />
+                <Link to='/contact' onClick={handleQuitMenu}>
+                    <MenuItem
+                        className='menuItem'
+                        content='contact'
+                        color='var(--blue4)'
+                        sequence='krye'
+                        R={122}
+                        G={161}
+                        B={216}
+                        rotate={10}
+                    />
+                </Link>
+
+
 
                 <div onClick={handleQuitMenu} >
                     <Fractal

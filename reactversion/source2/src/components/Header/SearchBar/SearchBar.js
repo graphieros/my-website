@@ -19,6 +19,10 @@ const SearchBar = (props) => {
         className: 'hidden'
     });
 
+    const [backState, setBackState] = useState({
+        className: 'hidden'
+    });
+
     let delay = null;
 
     let insideSearch = (searchValue) => {
@@ -109,7 +113,10 @@ const SearchBar = (props) => {
         setSearchResult({
             className: 'hidden',
             content: ''
-        })
+        });
+        setBackState({
+            className: 'hidden'
+        });
     }
 
     const validateSearch = (props) => {
@@ -133,40 +140,48 @@ const SearchBar = (props) => {
                             [ {glyph.name.replace("_", "")} ]</div>
                     </div>
                 });
+                setBackState({
+                    className: 'backState'
+                });
             }
         });
     }
 
 
     return (
-        <div className={props.className}>
-            <input
-                className="searchInput"
-                placeholder="rechercher..."
-                type="text"
-                autoFocus
-                onFocus={e => e.currentTarget.select()}
-                onChange={searchWord}
-            />
-            <div className={tempSearchState.className}>
-                {tempResult.content}
-            </div>
-            <div className={searchResult.className}>
-                {searchResult.content}
-                <div
-                    className="quitResult"
-                    onClick={letsQuitResult}>
-                    <Fractal
-                        sequence='zx-we'
-                        colors={[255, 255, 255]}
-                        svgSize={30}
-                        background='rgb(255,91,79)'
-                        backgroundRadius='100%'
-                    />
+        <React.Fragment>
+            <div className={props.className}>
+                <input
+                    className="searchInput"
+                    placeholder="rechercher..."
+                    type="text"
+                    autoFocus
+                    onFocus={e => e.currentTarget.select()}
+                    onChange={searchWord}
+                />
+                <div className={tempSearchState.className}>
+                    {tempResult.content}
                 </div>
+                <div className={searchResult.className}>
+                    {searchResult.content}
+                    <div
+                        className="quitResult"
+                        onClick={letsQuitResult}>
+                        <Fractal
+                            sequence='zx-we'
+                            colors={[255, 255, 255]}
+                            svgSize={30}
+                            background='rgb(255,91,79)'
+                            backgroundRadius='100%'
+                        />
+                    </div>
 
+                </div>
             </div>
-        </div>
+            <div className={backState.className} />
+        </React.Fragment>
+
+
     )
 }
 
