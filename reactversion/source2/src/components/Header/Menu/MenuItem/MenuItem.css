@@ -1,0 +1,18 @@
+button.menuItemBtn svg{
+    background:transparent !important;
+    height:30px !important;
+}
+
+.menuItem{
+    transform-style: preserve-3d;
+    cursor:pointer;
+}
+
+.menuItem:hover svg{
+    stroke: tomato !important;
+}
+
+button.menuItemBtn{
+    font-family: 'Roboto', cursive;
+    font-weight: bold;
+}

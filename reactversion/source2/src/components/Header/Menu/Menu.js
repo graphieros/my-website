@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Fractal from '../../graphieros/Fractal';
 import Modal from '../../Modal/Modal';
+import MenuItem from './MenuItem/MenuItem';
 import './Menu.css';
 
 const Menu = (props) => {
@@ -9,7 +10,7 @@ const Menu = (props) => {
         className: 'hidden'
     });
 
-    const [ tempBackState, setTempBackState ] = useState({
+    const [tempBackState, setTempBackState] = useState({
         className: 'hidden'
     });
 
@@ -18,7 +19,7 @@ const Menu = (props) => {
             className: 'modalVisible'
         });
         setTempBackState({
-            className:'backState'
+            className: 'backState'
         });
     }
 
@@ -46,8 +47,54 @@ const Menu = (props) => {
                     backgroundRadius='100%'
                     svgSize='50'
                 />
+            </div>
 
-            </div> <Modal className={modalState.className}>
+            <Modal className={modalState.className}>
+
+                <MenuItem
+                    className='menuItem'
+                    content='parcours'
+                    color='var(--blue4)'
+                    sequence='dwa'
+                    R={122}
+                    G={161}
+                    B={216}
+                    rotate={-10}
+                />
+
+                <MenuItem
+                    className='menuItem'
+                    content='peintures'
+                    color='var(--blue4)'
+                    sequence='sta'
+                    R={122}
+                    G={161}
+                    B={216}
+                    rotate={10}
+                />
+
+                <MenuItem
+                    className='menuItem'
+                    content='graphieros'
+                    color='var(--blue4)'
+                    sequence='lgio'
+                    R={122}
+                    G={161}
+                    B={216}
+                    rotate={-10}
+                />
+
+                <MenuItem
+                    className='menuItem'
+                    content='contact'
+                    color='var(--blue4)'
+                    sequence='krye'
+                    R={122}
+                    G={161}
+                    B={216}
+                    rotate={10}
+                />
+
                 <div onClick={handleQuitMenu} >
                     <Fractal
                         className='fractalQuit'
@@ -58,8 +105,11 @@ const Menu = (props) => {
                         svgSize='30'
                     />
                 </div>
+
             </Modal>
+
             <div className={tempBackState.className}></div>
+
         </div>
 
     )

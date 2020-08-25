@@ -18,9 +18,9 @@ const Header = (props) => {
             <div className="smallSiteTitle">
                 <Molecule
                     sequence='nmo ka tae'
-                    colors={[20,20,80]}
+                    colors={[255, 255, 255]}
                     size='200'
-                    strokeWidth='1'
+                    strokeWidth='3'
                 />
             </div>
             <SearchBar className="searchBar" />

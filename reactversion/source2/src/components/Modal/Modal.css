@@ -1,21 +1,26 @@
 .modalVisible{
-    display: block;
+    display: grid;
     position: fixed;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    row-gap:5px;
     top:100px;
     left: 50%;
     transform: translateX(-50%);
-    height:320px;
+    height:238px;
     width:250px;
-    background: linear-gradient(to top, white, rgb(240,240,240));
+    background: radial-gradient(var(--blue3), var(--blue1));
     box-sizing: border-box;
     padding:20px;
-    border-radius:3px;
-    box-shadow: 0 20px 40px -20px rgba(100,0,0,.35), 0 -10px 20px -10px white;
+    border-radius:100%;
+    box-shadow: 0 20px 40px -20px rgba(29,55,104,.95), 0 -10px 20px -10px white;
     animation: modalVisible 0.3s ease-in-out;
     z-index:100;
+    perspective:250px;
 }
 
 .fractalQuit{
+    grid-column: none;
     height:30px;
     width:30px;
     display: block;
