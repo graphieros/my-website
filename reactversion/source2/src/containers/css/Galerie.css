@@ -1,1 +1,156 @@
- 
+.galleryScroll{
+    display: block;
+    position: fixed;
+    right:0;
+    bottom: 0;
+    top:100px;
+    height:100%;
+    width:100px;
+    overflow: auto;
+    box-sizing: border-box;
+    padding-top:20px;
+    padding-bottom:100px;
+}
+.galleryScroll::-webkit-scrollbar {
+    width:0px;
+}
+
+.galleryScroll img {
+    width:100%;
+    box-sizing: border-box;
+    padding-left:6px;
+    padding-right:6px;
+    padding-top:3px;
+    padding-bottom:3px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px -3px rgba(29,55,104,.75);
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    animation: picDrop 2s ease-in-out;
+}
+
+.galleryScroll img:hover{
+    opacity:1;
+}
+
+@keyframes picDrop {
+    0%{
+        margin-top:-100px;
+        opacity:0;
+    }
+    100%{
+        margin-top:0px;
+        opacity:0.6;
+    }
+}
+
+.galleryShow{
+    display: grid;
+    align-content:center;
+    width:100%;
+    max-height:500px;
+    max-width:500px;
+    margin-top:115px;
+    box-sizing: border-box;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-right:100px;
+}
+
+.galleryShow img {
+    width:100%;
+    transition: all 0.3s ease;
+    border-radius:3px;
+    box-shadow: 10px 20px 40px -12px rgba(29,55,104,.75);
+    animation: picShowArise 0.5s ease-in;
+}
+
+.paintingTitle{
+    display: block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(15%, -50%);
+    width:300px;
+    height:100px;
+    height:100px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align:center;
+    font-family: 'Megrim', cursive;
+    font-size:1.618em;
+    font-weight:bold;
+    color: rgb(7, 7, 56);
+    border-top:1px solid white;
+    animation: titleAppear 2s;
+}
+
+.paintingTitle span {
+    display:block;
+    font-family: 'Roboto', sans-serif;
+    font-size:0.618em;
+    font-weight:initial;
+    opacity: 0.75;
+    background: linear-gradient(to right,transparent, white, transparent);
+    box-sizing: border-box;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+
+@keyframes picShowArise{
+    0%{
+        opacity:0.65;
+        transform: scaleY(0.97) scaleX(0.97);
+    }
+    100%{
+        opacity:1;
+        transform: scaleY(1) scaleX(1);
+
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .galleryShow img {
+        width:100%;
+        max-width:400px;
+        box-shadow: 0px 20px 40px -12px rgba(0,0,100,.35);
+    }
+    .galleryShow {
+        justify-items:center;
+        padding-right:110px;
+    }
+    .paintingTitle{
+        border-top:none;
+        display: block;
+        position:initial;
+        width:100%;
+        max-width:400px;
+        transform: none;
+        margin-top:0px;
+    }
+    .paintingTitle span {
+        font-size: 0.4em;
+        margin-top: -50px;
+    }
+
+}
+
+@media screen and (max-width: 414px) {
+    .galleryShow{
+        align-items:center;
+        justify-items:center;
+    }
+
+}
+
+@media (max-width:500px){
+    .galleryScroll{
+        width:60px;
+        right: 10px;
+    }
+    .galleryShow{
+        padding-top:0px;
+    }
+}
+

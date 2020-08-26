@@ -14,7 +14,8 @@
     display: block;
     position: fixed;
     right:0;
-    bottom: 200px;
+    top:200px;
+    bottom: 0;
     height:100%;
     /* background: linear-gradient(to top, transparent, black); */
     width:100px;
