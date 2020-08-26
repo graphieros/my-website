@@ -173,5 +173,481 @@
         "phono": "mea fa grae trea",
         "line": "mea-fa-grae-trea",
         "molecule": "mea fa grae trea"
+    },
+    {
+        "fr": "on",
+        "litteral" : "humain extérieur",
+        "phono": "ka tra",
+        "line": "ka-tra",
+        "molecule": "ka tra"
+    },
+    {
+        "fr": "antique",
+        "litteral" : "qualité vieux passé",
+        "phono": "kli ldo psoi",
+        "line": "kli-ldo-psoi",
+        "molecule": "kli ldo psoi"
+    },
+    {
+        "fr": "barbare",
+        "litteral" : "humain animal",
+        "phono": "ka pkia",
+        "line": "ka-pkia",
+        "molecule": "ka pkia"
+    },
+    {
+        "fr": "barbarie",
+        "litteral" : "déterminer humain animal",
+        "phono": "mea ka pkia",
+        "line": "mea-ka-pkia",
+        "molecule": "mea ka pkia"
+    },
+    {
+        "fr": "mimer",
+        "litteral" : "faire voir corps identique agir",
+        "phono": "fa sta bdi sme pfae",
+        "line": "fa-sta-bdi-sme-pfae",
+        "molecule": "fa sta bdi sme pfae"
+    },
+    {
+        "fr": "bourdonner",
+        "litteral" : "vibrer identique insecte voler",
+        "phono": "vba sme skew flae",
+        "line": "vba-sme-skew-flae",
+        "molecule": "vba sme skew flae"
+    },
+    {
+        "fr": "aigle",
+        "litteral" : "animal oiseau voir loin",
+        "phono": "pkia zo sta fra",
+        "line": "pkia-zo-sta-fra",
+        "molecule": "pkia zo sta fra"
+    },
+    {
+        "fr": "notion",
+        "litteral" : "déterminer connaître oeuf",
+        "phono": "mea kno gwa",
+        "line": "mea-kno-gwa",
+        "molecule": "mea kno gwa"
+    },
+    {
+        "fr": "contraindre",
+        "litteral" : "forcer sous",
+        "phono": "gew nde",
+        "line": "gew-nde",
+        "molecule": "gew nde"
+    },
+    {
+        "fr": "métamorphoser",
+        "litteral" : "ver vers papillon",
+        "phono": "rmye kto mriy",
+        "line": "rmye-kto-mriy",
+        "molecule": "rmye kto mriy"
+    },
+    {
+        "fr": "pulsion",
+        "litteral" : "déterminer programmer animal",
+        "phono": "mea prio pkia",
+        "line": "mea-prio-pkia",
+        "molecule": "mea prio pkia"
+    },
+    {
+        "fr": "violence",
+        "litteral" : "déterminer forcer conflit",
+        "phono": "mea gew troi",
+        "line": "mea-gew-troi",
+        "molecule": "mea gew troi"
+    },
+    {
+        "fr": "agiter",
+        "litteral" : "faire agir répéter",
+        "phono": "fa pfae rpie",
+        "line": "fa-pfae-rpie",
+        "molecule": "fa pfae rpie"
+    },
+    {
+        "fr": "nid",
+        "litteral" : "lieu oiseau",
+        "phono": "kio zo",
+        "line": "kio-zo",
+        "molecule": "kio zo"
+    },
+    {
+        "fr": "interstice",
+        "litteral" : "lieu faible ouvrir entre",
+        "phono": "kio vea pno nto",
+        "line": "kio-vea-pno-nto",
+        "molecule": "kio vea pno nto"
+    },
+    {
+        "fr": "unité",
+        "litteral" : "objet non couper",
+        "phono": "ptae nia kwo",
+        "line": "ptae-nia-kwo",
+        "molecule": "ptae-nia-kwo"
+    },
+    {
+        "fr": "représenter",
+        "litteral" : "faire apparaître imaginer",
+        "phono": "fa zai stoia",
+        "line": "fa-zai-stoia",
+        "molecule": "fa zai stoia"
+    },
+    {
+        "fr": "interagir",
+        "litteral" : "agir entre",
+        "phono": "pfae nto",
+        "line": "pfae-nto",
+        "molecule": "pfae nto"
+    },
+    {
+        "fr": "voisin",
+        "litteral" : "qualité soi côté",
+        "phono": "kli soma kte",
+        "line": "kli-soma-kte",
+        "molecule": "kli soma kte"
+    },
+    {
+        "fr": "illustrer",
+        "litteral" : "donner imaginer à texte",
+        "phono": "fya stoia boi toi",
+        "line": "fya-stoia-boi-toi",
+        "molecule": "fya stoia boi toi"
+    },
+    {
+        "fr": "accoutumer",
+        "litteral" : "pouvoir faire chaque jour",
+        "phono": "frya fa sdae kadwa",
+        "line": "frya-fa-sdae-kadwa",
+        "molecule": "frya fa sdae kadwa"
+    },
+    {
+        "fr": "acculer",
+        "litteral" : "pousser vers extrémité",
+        "phono": "psie kto stre",
+        "line": "psie-kto-stre",
+        "molecule": "psie kto stre"
+    },
+    {
+        "fr": "babiller",
+        "litteral" : "langage enfant",
+        "phono": "kdie lgio",
+        "line": "kdie-lgio",
+        "molecule": "kdie lgio"
+    },
+    {
+        "fr": "babine",
+        "litteral" : "objet lèvre bas",
+        "phono": "ptae lpae ni",
+        "line": "ptae-lpae-ni",
+        "molecule": "ptae lpae ni"
+    },
+    {
+        "fr": "bacille",
+        "litteral" : "animal atome droit",
+        "phono": "pkia tmea dro",
+        "line": "pkia-tmei-dro",
+        "molecule": "pkia tmei dro"
+    },
+    {
+        "fr": "planche",
+        "litteral" : "objet fonction végétal dur plan",
+        "phono": "ptae fkai pio drei pla",
+        "line": "ptae-fkai-pio-drei-pla",
+        "molecule": "ptae fkai pio drei pla"
+    },
+    {
+        "fr": "prostituée",
+        "litteral" : "femelle travailler sexe",
+        "phono": "mna tvai skwa",
+        "line": "mna-tvai-skwa",
+        "molecule": "mna tvai skwa"
+    },
+    {
+        "fr": "forger",
+        "litteral" : "travailler métal",
+        "phono": "tvai mto",
+        "line": "tvai-mto",
+        "molecule": "tvai mto"
+    },
+    {
+        "fr": "forgeron",
+        "litteral" : "humain travailler métal",
+        "phono": "ka tvai mto",
+        "line": "ka-tvai-mto",
+        "molecule": "ka tvai mto"
+    },
+    {
+        "fr": "trembler",
+        "litteral" : "corps vibrer",
+        "phono": "bdi vba",
+        "line": "bdi-vba",
+        "molecule": "bdi vba"
+    },
+    {
+        "fr": "voix",
+        "litteral" : "déterminer goûter vibrer",
+        "phono": "mea tsae vba",
+        "line": "mea-tsae-vba",
+        "molecule": "mea tsae vba"
+    },
+    {
+        "fr": "tragédie",
+        "litteral" : "déterminer jouer vivre",
+        "phono": "mea 3go sa",
+        "line": "mea-3go-sa",
+        "molecule": "mea 3go sa"
+    },
+    {
+        "fr": "pleurer",
+        "litteral" : "pleuvoir voir",
+        "phono": "pto sta",
+        "line": "pto-sta",
+        "molecule": "pto sta"
+    },
+    {
+        "fr": "discrétion",
+        "litteral" : "déterminer apparaître masquer",
+        "phono": "mea zai chka",
+        "line": "mea-zai-chka",
+        "molecule": "mea zai chka"
+    },
+    {
+        "fr": "nuque",
+        "litteral" : "lieu entre tête et corps",
+        "phono": "kio nto tea te bdi",
+        "line": "kio-nto-tea-te-bdi",
+        "molecule": "kio nto tea te bdi"
+    },
+    {
+        "fr": "personnel",
+        "litteral" : "qualité de humain",
+        "phono": "kli da ka",
+        "line": "kli-da-ka",
+        "molecule": "kli da ka"
+    },
+    {
+        "fr": "idéolangue",
+        "litteral" : "objet langue nouvelle",
+        "phono": "ptae lgio ney",
+        "line": "ptae-lgio-ney",
+        "molecule": "ptae lgio ney"
+    },
+    {
+        "fr": "coûter",
+        "litteral" : "vider valeur",
+        "phono": "vde vlia",
+        "line": "vde-vlia",
+        "molecule": "vde vlia"
+    },
+    {
+        "fr": "grammaire",
+        "litteral" : "objet lister fonctionner langue",
+        "phono": "ptae sti fkai lgio",
+        "line": "ptae-sti-fkai-lgio",
+        "molecule": "ptae sti fkai lgio"
+    },
+    {
+        "fr": "essayer",
+        "litteral" : "tester faire",
+        "phono": "ste fa",
+        "line": "ste-fa",
+        "molecule": "ste fa"
+    },
+    {
+        "fr": "approcher",
+        "litteral" : "aller près",
+        "phono": "le pre",
+        "line": "le-pre",
+        "molecule": "le pre"
+    },
+    {
+        "fr": "essence",
+        "litteral" : "objet âme objet",
+        "phono": "ptae prba ptae",
+        "line": "ptae-prba-ptae",
+        "molecule": "ptae prba ptae"
+    },
+    {
+        "fr": "communauté",
+        "litteral" : "objet grouper humain identique",
+        "phono": "ptae kwe ka sme",
+        "line": "ptae-kwe-ka-sme",
+        "molecule": "ptae kwe ka sme"
+    },
+    {
+        "fr": "rare",
+        "litteral" : "qualité quantité aléa faible",
+        "phono": "kli kta lea vea",
+        "line": "kli-kta-lea-vea",
+        "molecule": "kli kta lea vea"
+    },
+    {
+        "fr": "roman",
+        "litteral" : "objet texte parcourir",
+        "phono": "ptae toi prae",
+        "line": "ptae-toi-prae",
+        "molecule": "ptae toi prae"
+    },
+    {
+        "fr": "opéra",
+        "litteral" : "objet vivre alterner entendre lèvre grouper parcourir",
+        "phono": "ptae sa tae sko lpae kwe prae",
+        "line": "ptae-sa-tae-sko-lpae-kwe-prae",
+        "molecule": "ptae sa tae sko lpae kwe prae"
+    },
+    {
+        "fr": "dessiner",
+        "litteral" : "faire voir avec marquer",
+        "phono": "fa sta vi mrai",
+        "line": "fa-sta-vi-mrai",
+        "molecule": "fa sta vi mrai"
+    },
+    {
+        "fr": "cantonner",
+        "litteral" : "aller terre fermer",
+        "phono": "le trea kloi",
+        "line": "le-trea-kloi",
+        "molecule": "le trea kloi"
+    },
+    {
+        "fr": "carnet",
+        "litteral" : "objet grouper feuille marquer texte",
+        "phono": "ptae kwe lvia mrai toi",
+        "line": "ptae-kwe-lvia-mrai-toi",
+        "molecule": "ptae kwe lvia mrai toi"
+    },
+    {
+        "fr": "tiroir",
+        "litteral" : "objet fonctionner récipient glisser",
+        "phono": "ptae fkai tba sla",
+        "line": "ptae-fkai-tba-sla",
+        "molecule": "ptae fkai tba sla"
+    },
+    {
+        "fr": "tellement",
+        "litteral" : "avec trop",
+        "phono": "vi tro",
+        "line": "vi-tro",
+        "molecule": "vi tro"
+    },
+    {
+        "fr": "général",
+        "litteral" : "qualité tout origine identique",
+        "phono": "kli tew via sme",
+        "line": "kli-tew-via-sme",
+        "molecule": "kli tew via sme"
+    },
+    {
+        "fr": "généraliser",
+        "litteral" : "faire tout origine identique",
+        "phono": "fa tew via sme",
+        "line": "fa-tew-via-sme",
+        "molecule": "fa tew via sme"
+    },
+    {
+        "fr": "internet",
+        "litteral" : "lieu connecter tout",
+        "phono": "kio knoi tew",
+        "line": "kio-knoi-tew",
+        "molecule": "kio knoi tew"
+    },
+    {
+        "fr": "site",
+        "litteral" : "lieu positionner lieu",
+        "phono": "kio psu pkio",
+        "line": "kio-psu-kio",
+        "molecule": "kio psu kio"
+    },
+    {
+        "fr": "situer",
+        "litteral" : "positionner lieu",
+        "phono": "psu kio",
+        "line": "psu-kio",
+        "molecule": "psu kio"
+    },
+    {
+        "fr": "astuce",
+        "litteral" : "objet découvrir intelligence",
+        "phono": "ptae 3i kea",
+        "line": "ptae-3i-kea",
+        "molecule": "ptae 3i kea"
+    },
+    {
+        "fr": "folie",
+        "litteral" : "déterminer penser boucler",
+        "phono": "mea hia bu",
+        "line": "mea-hia-bu",
+        "molecule": "mea hia bu"
+    },
+    {
+        "fr": "apprendre",
+        "litteral" : "prendre connaître",
+        "phono": "ra kno",
+        "line": "ra-kno",
+        "molecule": "ra kno"
+    },
+    {
+        "fr": "obstacle",
+        "litteral" : "objet arrêter parcours",
+        "phono": "ptae ktea prae",
+        "line": "ptae-ktea-prae",
+        "molecule": "ptae ktea prae"
+    },
+    {
+        "fr": "vain",
+        "litteral" : "qualité non avec but",
+        "phono": "kli nia vi glio",
+        "line": "kli-nia-vi-glio",
+        "molecule": "kli nia vi glio"
+    },
+    {
+        "fr": "égoïsme",
+        "litteral" : "déterminer soi -isme",
+        "phono": "mea soma smia",
+        "line": "mea-soma-smia",
+        "molecule": "mea soma smia"
+    },
+    {
+        "fr": "plusieurs",
+        "litteral" : "déterminer quantité pluriel",
+        "phono": "mea tsi kta",
+        "line": "mea-tsi-kta",
+        "molecule": "mea tsi kta"
+    },
+    {
+        "fr": "minimum",
+        "litteral" : "déterminer quantité extrémité moins",
+        "phono": "mea kta stre mni",
+        "line": "mea-kta-stre-mni",
+        "molecule": "mea kta stre mni"
+    },
+    {
+        "fr": "maximum",
+        "litteral" : "déterminer quantité extrémité plus",
+        "phono": "mea kta stre vdio",
+        "line": "mea-kta-stre-vdio",
+        "molecule": "mea kta stre vdio"
+    },
+    {
+        "fr": "incruster",
+        "litteral" : "mettre matière dans profondeur",
+        "phono": "pne mtai di tpia",
+        "line": "pne-mtai-di-tpia",
+        "molecule": "pne mtai di tpia"
+    },
+    {
+        "fr": "microscope",
+        "litteral" : "objet fonctionner voir près",
+        "phono": "ptae fkai sta pre",
+        "line": "ptae-fkai-sta-pre",
+        "molecule": "ptae fkai sta pre"
+    },
+    {
+        "fr": "",
+        "litteral" : "",
+        "phono": "",
+        "line": "",
+        "molecule": ""
     }
 ]
