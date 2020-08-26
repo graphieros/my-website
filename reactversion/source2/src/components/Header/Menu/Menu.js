@@ -91,7 +91,7 @@ const Menu = (props) => {
                     />
                 </Link>
 
-                <Link to='/contact' onClick={handleQuitMenu}>
+                <Link to='/contact.php' onClick={handleQuitMenu}>
                     <MenuItem
                         className='menuItem'
                         content='contact'

@@ -5,6 +5,7 @@
     border-radius:3px;
     box-shadow: 0 10px 20px -10px var(--blue0);
     box-sizing: border-box;
+    animation: submenu 0.5s ease;
 }
 
 .subMenuText{
@@ -15,6 +16,15 @@
     margin-top:-30px;
     text-shadow: 0 1px 1px var(--blue0);
     height:50px;
+}
+
+@keyframes submenu {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
 }
 
 @media(max-width:500px) {

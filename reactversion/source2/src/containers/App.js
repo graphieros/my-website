@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Parcours from './Parcours';
 import WebDev from './WebDev';
-import Contact from './Contact';
 import Art from './Art';
 import Bio from './Bio';
 import Media from './Media';
@@ -24,7 +23,9 @@ function App() {
   }
 
   return (
+
     <BrowserRouter>
+
       <div className="App">
         <Header className="mainHeader" />
 
@@ -39,10 +40,10 @@ function App() {
         <Route path='/art/livres' exact component={Livres} />
 
         <Route path='/webDev' exact component={WebDev} />
-        <Route path='/contact' exact component={Contact} />
+        <Route path='contact.php' exact />
 
-        <div className="back" style={style}>
-        </div>
+        <div className="back" style={style} />
+        
       </div>
     </BrowserRouter>
 
