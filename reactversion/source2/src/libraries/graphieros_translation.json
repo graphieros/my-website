@@ -1,0 +1,177 @@
+[
+    {
+        "fr": "",
+        "litteral" : "",
+        "phono": "",
+        "line": "",
+        "molecule": ""
+    },
+    {
+        "fr": "aimer",
+        "litteral": "vivre pour",
+        "phono": "sa kme",
+        "line": "sa-kme",
+        "molecule": "sa kme"
+    },
+    {
+        "fr": "je",
+        "litteral" : "humain avoir reflet",
+        "phono": "ka fy go",
+        "line": "ka-fy-go",
+        "molecule": "ka fy go"
+    },
+    {
+        "fr": "nature",
+        "litteral": "déterminer air eau terre feu",
+        "phono": "mea hae to trea frey",
+        "line": "mea-hae-to-trea-frey",
+        "molecule": "mea hae to trea frey"
+    },
+    {
+        "fr": "tu",
+        "litteral" : "humain donner reflet",
+        "phono": "ka fya fy",
+        "line": "ka-fya-fy",
+        "molecule": "ka fya fy"
+    },
+    {
+        "fr": "distancer",
+        "litteral" : "compter séparer",
+        "phono": "kteu trey",
+        "line": "kteu-trey",
+        "molecule": "kteu trey"
+    },
+    {
+        "fr": "agilité",
+        "litteral" : "déterminer souple corps",
+        "phono": "mea sple bdi",
+        "line": "mea-sple-bdi",
+        "molecule": "mea sple bdi"
+    },
+    {
+        "fr": "canopée",
+        "litteral" : "lieu haut végétal",
+        "phono": "kio pa pio",
+        "line": "kio-pa-pio",
+        "molecule": "koi pa pio"
+    },
+    {
+        "fr": "craindre",
+        "litteral" : "peur avant",
+        "phono": "sfi ntea",
+        "line": "sfi-ntea",
+        "molecule": "sfi ntea"
+    },
+    {
+        "fr": "plonger",
+        "litteral" : "aller pointer bas",
+        "phono": "le fky ni",
+        "line": "le-fky-ni",
+        "molecule": "le fky ni"
+    },
+    {
+        "fr": "tournoyer",
+        "litteral" : "voler cycle entourer",
+        "phono": "flae dwa srye",
+        "line": "flae-dwa-srye",
+        "molecule": "flae dwa srye"
+    },
+    {
+        "fr": "autour",
+        "litteral" : "lieu entourer",
+        "phono": "kio srye",
+        "line": "kio-srye",
+        "molecule": "kio srye"
+    },
+    {
+        "fr": "mémoriser",
+        "litteral" : "garder marquer penser",
+        "phono": "kpae mrai hia",
+        "line": "kpae-mrai-hia",
+        "molecule": "kpae mrai hia"
+    },
+    {
+        "fr": "glorifier",
+        "litteral" : "donner haut valoriser",
+        "phono": "fya pa vlia",
+        "line": "fya-pa-vlia",
+        "molecule": "fya pa vlia"
+    },
+    {
+        "fr": "",
+        "litteral" : "",
+        "phono": "",
+        "line": "",
+        "molecule": ""
+    },
+    {
+        "fr": "englober",
+        "litteral" : "entourer être",
+        "phono": "srye ma",
+        "line": "srye-ma",
+        "molecule": "srye ma"
+    },
+    {
+        "fr": "attirer",
+        "litteral" : "agir graviter",
+        "phono": "pfae gva",
+        "line": "pfae-gva",
+        "molecule": "pfae gva"
+    },
+    {
+        "fr": "conforter",
+        "litteral" : "donner pacifier",
+        "phono": "fya sra",
+        "line": "fya-sra",
+        "molecule": "fya sra"
+    },
+    {
+        "fr": "réconforter",
+        "litteral" : "donner pacifier émotion",
+        "phono": "fya sra skoi",
+        "line": "fya-sra-skoi",
+        "molecule": "fya sra skoi"
+    },
+    {
+        "fr": "moindre",
+        "litteral" : "qualité beaucoup bas",
+        "phono": "kli vdio ni",
+        "line": "kli-vdio-ni",
+        "molecule": "kli vdio ni"
+    },
+    {
+        "fr": "paupière",
+        "litteral" : "objet papillon voir",
+        "phono": "ptae mriy sta",
+        "line": "ptae-mriy-sta",
+        "molecule": "ptae mriy sta"
+    },
+    {
+        "fr": "élément",
+        "litteral" : "objet part originer",
+        "phono": "ptae prye via",
+        "line": "ptae-prye-via",
+        "molecule": "ptae prye via"
+    },
+    {
+        "fr": "parfait",
+        "litteral" : "qualité non à faire évoluer",
+        "phono": "kli nia boi fa vlye",
+        "line": "kli-nia-boi-fa-vlye",
+        "molecule": "kli nia boi fa vlye"
+    },
+    {
+        "fr": "local",
+        "litteral" : "qualité lieu ici",
+        "phono": "kli kio si",
+        "line": "kli-kio-si",
+        "molecule": "kli kio si"
+    },
+    {
+        "fr": "agriculture",
+        "litteral" : "déterminer faire croître terre",
+        "phono": "mea fa grae trea",
+        "line": "mea-fa-grae-trea",
+        "molecule": "mea fa grae trea"
+    }
+]

@@ -40,7 +40,7 @@ input.searchInput{
 
 .results {
     display: flex;
-    height:25px;
+    height:30px;
     cursor: pointer;
     box-sizing: border-box;
     z-index:100;
@@ -118,4 +118,35 @@ input.searchInput{
 .searchResultPhono span {
     color: rgb(20,20,80);
     line-height:30px;
+}
+
+.searchResultWord{
+    font-family: 'Roboto', cursive;
+    color: var(--blue0);
+    font-weight: bold;
+}
+
+.searchResultWord p {
+    display: block;
+}
+
+.searchResultWord h5 {
+    color: var(--blue2);
+    display: block;
+}
+
+.searchResultWord span {
+    display: block;
+    color: tomato;
+}
+
+p.combo {
+    font-weight: bold;
+    color: var(--blue1);
+    margin-left:-10px;
+}
+
+span.moleculeSpan{
+    margin-top:10px;
+    margin-left:-10px;
 }

@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { graphieros_dictionnary } from '../../../libraries/graphieros_dictionnary';
+import graphieros_translation from '../../../libraries/graphieros_translation.json';
 import Linear from '../../graphieros/Linear';
 import Fractal from '../../graphieros/Fractal';
+import Molecule from '../../graphieros/Molecule';
 import './SearchBar.css'
 
 const SearchBar = (props) => {
+
+    const wordList = graphieros_translation;
 
     const [searchResult, setSearchResult] = useState({
         className: 'hidden',
@@ -12,6 +16,10 @@ const SearchBar = (props) => {
     });
 
     const [tempResult, setTempResult] = useState({
+        content: ''
+    });
+
+    const [tempResultWord, setTempResultWord] = useState({
         content: ''
     });
 
@@ -42,7 +50,7 @@ const SearchBar = (props) => {
                         content: <div><Linear
                             sequence={glyph.name.replace("_", "")}
                             size='100'
-                            colors={[100, 50, 50]}
+                            colors={[20, 20, 80]}
                             background='white'
                             cartouche={true}
                         />
@@ -51,10 +59,40 @@ const SearchBar = (props) => {
                                 <br />
                         [ {glyph.name.replace("_", "")} ]</div>
                         </div>
-
+                    });
+                    setBackState({
+                        className: 'backState'
                     });
                 }
             });
+
+            wordList.forEach(word => {
+
+                if (searchValue === word.fr) {
+
+                    setSearchResult({
+                        className: 'glyphSearchReturn',
+                        content: <div><Linear
+                            sequence={word.line}
+                            size='50'
+                            colors={[20, 20, 80]}
+                            background='white'
+                            cartouche={false}
+                        />
+                            <div className="searchResultWord">
+                                <p>"{word.fr}"</p>
+                                <h5>{word.litteral}</h5>
+                                <span>[ {word.phono} ]</span>
+
+                            </div>
+                        </div>
+                    });
+                    setBackState({
+                        className: 'backState'
+                    });
+                }
+            })
+
         }
 
         let matches = graphieros_dictionnary.filter(glyph => {
@@ -62,8 +100,16 @@ const SearchBar = (props) => {
             return glyph.fr.match(regex);
         });
 
-        if (matches.length === 0 || searchValue === '') {
+        let matchesTrans = wordList.filter(w => {
+            const regex = new RegExp(`^${searchValue}`, 'gi');
+            return w.fr.match(regex);
+        });
+
+
+        // eslint-disable-next-line no-mixed-operators
+        if (matchesTrans.length === 0 && matches.length === 0 || searchValue === '') {
             matches = [];
+            matchesTrans = [];
             setSearchResult({
                 className: 'hidden'
             });
@@ -71,6 +117,7 @@ const SearchBar = (props) => {
                 className: 'hidden'
             });
         }
+
 
         setTempResult({
             content: matches.map((el, i) => {
@@ -93,6 +140,26 @@ const SearchBar = (props) => {
                 )
             })
         });
+
+        setTempResultWord({
+            content: matchesTrans.map((el, i) => {
+                return (
+                    <div className="results"
+                        key={`${el.fr}${i}`}>
+                        <span className="moleculeSpan">
+                            <Molecule
+                                sequence={el.molecule}
+                                colors={[75,106,160]}
+                                size='40'
+                            />
+                        </span>   
+                        <p className="combo" onClick={validateSearch}>{el.fr}</p>
+                    </div>
+                )
+            })
+        });
+
+
     }
 
     const searchWord = (props) => {
@@ -145,6 +212,33 @@ const SearchBar = (props) => {
                 });
             }
         });
+
+        wordList.forEach((word, i) => {
+
+            if (props.target.innerHTML === word.fr) {
+
+                setSearchResult({
+                    className: 'glyphSearchReturn',
+                    content: <div><Linear
+                        sequence={word.line}
+                        size='50'
+                        colors={[20, 20, 80]}
+                        background='white'
+                        cartouche={false}
+                    />
+                        <div className="searchResultWord">
+                            <p>"{word.fr}"</p>
+                            <h5>{word.litteral}</h5>
+                            <span>[ {word.phono} ]</span>
+
+                        </div>
+                    </div>
+                });
+                setBackState({
+                    className: 'backState'
+                });
+            }
+        });
     }
 
 
@@ -161,6 +255,7 @@ const SearchBar = (props) => {
                 />
                 <div className={tempSearchState.className}>
                     {tempResult.content}
+                    {tempResultWord.content}
                 </div>
                 <div className={searchResult.className}>
                     {searchResult.content}
