@@ -133,9 +133,12 @@ input.searchInput{
 .searchResultWord h5 {
     color: var(--blue2);
     display: block;
+    width:95%;
+    margin:0 auto;
 }
 
 .searchResultWord span {
+    margin-top:10px;
     display: block;
     color: tomato;
 }
@@ -149,4 +152,10 @@ p.combo {
 span.moleculeSpan{
     margin-top:10px;
     margin-left:-10px;
+}
+
+@media (max-width:500px) {
+    .glyphSearchReturn {
+       top:150px;
+    }
 }
