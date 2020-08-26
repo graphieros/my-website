@@ -644,10 +644,59 @@
         "molecule": "ptae fkai sta pre"
     },
     {
-        "fr": "",
-        "litteral" : "",
-        "phono": "",
-        "line": "",
-        "molecule": ""
+        "fr": "maintenant",
+        "litteral" : "temps ici",
+        "phono": "kpoile si",
+        "line": "kpoile-si",
+        "molecule": "kpoile si"
+    },
+    {
+        "fr": "persister",
+        "litteral" : "durer dans temps",
+        "phono": "drye di kpoile",
+        "line": "drye-di-kpoile",
+        "molecule": "drye di kpoile"
+    },
+    {
+        "fr": "façon",
+        "litteral" : "déterminer sens apparaître",
+        "phono": "mea vye zai",
+        "line": "mea-vye-zai",
+        "molecule": "mea vye zai"
+    },
+    {
+        "fr": "plaisanter",
+        "litteral" : "rire sur",
+        "phono": "lfaw tpe",
+        "line": "lfaw-tpe",
+        "molecule": "lfaw tpe"
+    },
+    {
+        "fr": "moquer",
+        "litteral" : "rire contre",
+        "phono": "lfaw sno",
+        "line": "lfaw-sno",
+        "molecule": "lfaw sno"
+    },
+    {
+        "fr": "bafouiller",
+        "litteral" : "lèvre mal répéter",
+        "phono": "lpae bwa rpie",
+        "line": "lpae-bwa-rpie",
+        "molecule": "lpae bwa rpie"
+    },
+    {
+        "fr": "goinfrer",
+        "litteral" : "trop prendre nourriture",
+        "phono": "tro ra fdu",
+        "line": "tro-ra-fdu",
+        "molecule": "tro ra fdu"
+    },
+    {
+        "fr": "bagage",
+        "litteral" : "objet fonction récipient pour parcourir",
+        "phono": "ptae fkai tba kme prae",
+        "line": "ptae-fkai-tba-kme-prae",
+        "molecule": "ptae fkai tba kme prae"
     }
 ]
