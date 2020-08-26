@@ -9,6 +9,7 @@ import './SearchBar.css'
 const SearchBar = (props) => {
 
     const wordList = graphieros_translation;
+    console.log(`word count:`, wordList.length);
 
     const [searchResult, setSearchResult] = useState({
         className: 'hidden',
@@ -47,13 +48,14 @@ const SearchBar = (props) => {
 
                     setSearchResult({
                         className: 'glyphSearchReturn',
-                        content: <div><Linear
-                            sequence={glyph.name.replace("_", "")}
-                            size='100'
-                            colors={[20, 20, 80]}
-                            background='white'
-                            cartouche={true}
-                        />
+                        content: <div>
+                            <Linear
+                                sequence={glyph.name.replace("_", "")}
+                                size='100'
+                                colors={[20, 20, 80]}
+                                background='white'
+                                cartouche={true}
+                            />
                             <div className="searchResultPhono">
                                 <span>{glyph.fr}</span>
                                 <br />
@@ -72,13 +74,19 @@ const SearchBar = (props) => {
 
                     setSearchResult({
                         className: 'glyphSearchReturn',
-                        content: <div><Linear
-                            sequence={word.line}
-                            size='50'
-                            colors={[20, 20, 80]}
-                            background='white'
-                            cartouche={false}
-                        />
+                        content: <div>
+                            <Linear
+                                sequence={word.line}
+                                size='50'
+                                colors={[29, 55, 104]}
+                                background='white'
+                                cartouche={false}
+                            />
+                            <Molecule
+                                sequence={word.molecule}
+                                colors={[122, 161, 216]}
+                                size='60'
+                            />
                             <div className="searchResultWord">
                                 <p>"{word.fr}"</p>
                                 <h5>{word.litteral}</h5>
@@ -93,6 +101,12 @@ const SearchBar = (props) => {
                 }
             })
 
+        }
+
+        if (searchValue === '') {
+            setBackState({
+                className: 'hidden'
+            });
         }
 
         let matches = graphieros_dictionnary.filter(glyph => {
@@ -149,10 +163,10 @@ const SearchBar = (props) => {
                         <span className="moleculeSpan">
                             <Molecule
                                 sequence={el.molecule}
-                                colors={[75,106,160]}
+                                colors={[75, 106, 160]}
                                 size='40'
                             />
-                        </span>   
+                        </span>
                         <p className="combo" onClick={validateSearch}>{el.fr}</p>
                     </div>
                 )
@@ -194,13 +208,14 @@ const SearchBar = (props) => {
 
                 setSearchResult({
                     className: 'glyphSearchReturn',
-                    content: <div><Linear
-                        sequence={glyph.name.replace("_", "")}
-                        size='100'
-                        colors={[20, 20, 80]}
-                        background='white'
-                        cartouche={true}
-                    />
+                    content: <div>
+                        <Linear
+                            sequence={glyph.name.replace("_", "")}
+                            size='100'
+                            colors={[20, 20, 80]}
+                            background='white'
+                            cartouche={true}
+                        />
                         <div className="searchResultPhono">
                             <span>{glyph.fr}</span>
                             <br />
@@ -219,13 +234,19 @@ const SearchBar = (props) => {
 
                 setSearchResult({
                     className: 'glyphSearchReturn',
-                    content: <div><Linear
-                        sequence={word.line}
-                        size='50'
-                        colors={[20, 20, 80]}
-                        background='white'
-                        cartouche={false}
-                    />
+                    content: <div>
+                        <Linear
+                            sequence={word.line}
+                            size='50'
+                            colors={[29, 55, 104]}
+                            background='white'
+                            cartouche={false}
+                        />
+                        <Molecule
+                            sequence={word.molecule}
+                            colors={[122, 161, 216]}
+                            size='60'
+                        />
                         <div className="searchResultWord">
                             <p>"{word.fr}"</p>
                             <h5>{word.litteral}</h5>
