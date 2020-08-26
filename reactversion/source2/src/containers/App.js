@@ -40,7 +40,10 @@ function App() {
         <Route path='/art/livres' exact component={Livres} />
 
         <Route path='/webDev' exact component={WebDev} />
-        <Route path='contact.php' exact />
+        <Route path='/contact.php' component={() => {
+          window.location.href='https://graphieros.com/contact.php';
+          return null;
+        }} />
 
         <div className="back" style={style} />
         
