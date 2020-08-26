@@ -1,7 +1,7 @@
 import React from 'react';
 import { linear } from '../../libraries/graphieros0.2';
 
-const LineGlyph = (props) => {
+const Linear = (props) => {
 
     const line = linear({
         sequence: props.sequence,
@@ -18,4 +18,4 @@ const LineGlyph = (props) => {
     )
 }
 
-export default LineGlyph;
+export default Linear;
