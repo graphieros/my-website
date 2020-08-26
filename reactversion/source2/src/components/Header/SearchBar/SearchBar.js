@@ -149,7 +149,7 @@ const SearchBar = (props) => {
                                 padding=''
                             />
                         </span>
-                        <p onClick={validateSearch}>{el.fr}</p>
+                <p onClick={validateSearch}>{el.fr}</p><span className="phonoResult">{`[ ${el.name.replace("_","")} ]`}</span>
                     </div>
                 )
             })

@@ -154,6 +154,12 @@ span.moleculeSpan{
     margin-left:-10px;
 }
 
+span.phonoResult {
+    font-size: 0.6em;
+    color: var(--blue1);
+    margin-top: 22px;
+}
+
 @media (max-width:500px) {
     .glyphSearchReturn {
        top:150px;
