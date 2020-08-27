@@ -8,18 +8,21 @@
  }
 
  .bioFractalWrapper{
-     height:300px;
-     width:300px;
-     z-index:0;
-     opacity:1;
-     animation: bioFractal 2s ease-in;
-     opacity:0;
+    opacity:1;
+    animation: bioFractal 2s ease-in;
+ }
+
+ .bioFractalWrapper svg {
+    height:0px;
+    width:0px;
+    animation: bioFractal 2s ease-in;
  }
 
  .biopicWrapper{
     height:200px;
     width:200px;
     opacity:1;
+    border-radius:100%;
     box-shadow: 0 20px 40px -20px rgba(29,55,104,0.75);
     animation: bioPic 2s ease-in;
 }
@@ -29,27 +32,105 @@
      border-radius:100%;
  }
 
+ #storyArrow{
+     height:60px;
+     width:60px;
+     border-radius:100%;
+     position: fixed;
+     top:50%;
+     left:50%;
+     transform: translate(-50%,170%);
+     box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+     cursor: pointer;
+     opacity: 0.8;
+     transition: opacity 0.3s ease;
+     animation: storyArrow 2s ease-in;
+ }
+
+ #storyArrow:hover{
+    opacity:1;
+ }
+
+ #story{
+     display: block;
+     position: fixed;
+     width:90%;
+     max-width:50ch;
+     color: white;
+     top:50%;
+     left:0;
+     transform: translateY(-50%);
+     box-sizing: border-box;
+     padding-left:20px;
+     font-style: italic;
+     animation: bioPic 2s ease-in;
+ }
+
+ #story span {
+     color: tomato;
+     box-sizing: border-box;
+     padding:2px;
+     padding-right:5px;
+     padding-left:5px;
+ }
+
+ @keyframes storyArrow {
+     0%{
+         opacity: 0;
+         transform: translate(-50%,-50%)
+     }
+     100%{
+         opacity: 0.8;
+         transform: translate(-50%,170%);
+     }
+ }
+
  @keyframes bioFractal {
      0%{
          opacity:0;
+         height:300px;
+         width:300px;
      }
      50%{
-         opacity:1;
+         opacity:0.618;
      }
      100%{
-         opacity:0;
+         opacity:1;
+         height:0px;
+         width:0px;
      }
  }
 
  @keyframes bioPic{
      0%{
          opacity:0;
-         height:0px;
-         width:0px;
      }
      100%{
          opacity:1;
-         height: 200px;
-         width:200px;
+     }
+ }
+
+ @media (max-width: 1070px) {
+     #story{
+         left:50%;
+         top:initial;
+         bottom:100px;
+         transform: translateX(-50%);
+         color: var(--blue0);
+     }
+     #story span {
+         color: white;
+     }
+ }
+
+ @media (maw-width:360px){
+     #story{
+         bottom: 70px;
+     }
+ }
+
+ @media (max-width:600px){
+     #story{
+         font-size:0.8em;
      }
  }
