@@ -9,7 +9,11 @@ import './SearchBar.css'
 const SearchBar = (props) => {
 
     const wordList = graphieros_translation;
-    console.log(`word count:`, wordList.length);
+
+    const wordCount = wordList.length;
+    const glyphCount = graphieros_dictionnary.length;
+
+    console.log({ wordCount }, { glyphCount });
 
     const [searchResult, setSearchResult] = useState({
         className: 'hidden',
@@ -149,7 +153,7 @@ const SearchBar = (props) => {
                                 padding=''
                             />
                         </span>
-                <p onClick={validateSearch}>{el.fr}</p><span className="phonoResult">{`[ ${el.name.replace("_","")} ]`}</span>
+                        <p onClick={validateSearch}>{el.fr}</p><span className="phonoResult">{`[ ${el.name.replace("_", "")} ]`}</span>
                     </div>
                 )
             })
@@ -291,7 +295,10 @@ const SearchBar = (props) => {
                             backgroundRadius='100%'
                         />
                     </div>
-
+                </div>
+                <div className="counter">
+                    glyphes: <span className="countTomato">{glyphCount}</span><br />
+                    mots: <span className="countBlue">{wordCount}</span>
                 </div>
             </div>
             <div className={backState.className} />

@@ -161,6 +161,24 @@ span.phonoResult {
     margin-top: 22px;
 }
 
+.counter{
+    display: block;
+    position: fixed;
+    right:80px;
+    text-align:right;
+    font-size:0.75em;
+}
+
+span.countTomato{
+    color: tomato;
+    font-weight:bold;
+}
+
+span.countBlue{
+    color: var(--blue0);
+    font-weight:bold;
+}
+
 @media (max-width:500px) {
     .glyphSearchReturn {
        top:150px;
