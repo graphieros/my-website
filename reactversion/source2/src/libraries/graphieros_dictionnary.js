@@ -13,6 +13,11 @@ let r = 218; //x_right
 
 let graphieros_dictionnary = [
     {
+        name: '_gly',
+        fr: 'pétrole',
+        path: [[l, q, lm, w, m, q, rm, w, r, q],[lm, a, lm, w],[rm, a, rm, w]],
+    },
+    {
         name: '_zba',
         fr: 'syllabe',
         path: [[rm, a, l, q, r, q, lm, w], [lm, a, lm, a], [rm, w, rm, w]],
