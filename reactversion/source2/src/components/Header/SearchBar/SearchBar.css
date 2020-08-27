@@ -164,7 +164,7 @@ span.phonoResult {
 .counter{
     display: block;
     position: fixed;
-    right:80px;
+    right:85px;
     text-align:right;
     font-size:0.75em;
 }
