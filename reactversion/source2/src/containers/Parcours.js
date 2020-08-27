@@ -11,9 +11,9 @@ const Parcours = () => {
                 <SubMenu
                     svgSize={200}
                     sequence='we-xs-xw-wq-qz-ze-ed-dx-dz zx-ws-qe ze-eq-xw-wd'
-                    R={255}
-                    G={99}
-                    B={71}
+                    R={122}
+                    G={161}
+                    B={216}
                     dropShadow='0px 2px 2px rgb(5,5,20)'
                     light={true}
                     intensity='1.5'
@@ -39,9 +39,9 @@ const Parcours = () => {
                 <SubMenu
                     svgSize={200}
                     sequence='ws-sx-xw-wz-ze-ex wz-ze-ex-xw-we-xz-qd'
-                    R={122}
-                    G={161}
-                    B={216}
+                    R={255}
+                    G={99}
+                    B={71}
                     dropShadow='0px 2px 2px rgb(5,5,20)'
                     light={true}
                     intensity='1.5'
