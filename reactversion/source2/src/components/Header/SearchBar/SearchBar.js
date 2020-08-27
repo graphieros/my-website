@@ -13,8 +13,6 @@ const SearchBar = (props) => {
     const wordCount = wordList.length;
     const glyphCount = graphieros_dictionnary.length;
 
-    console.log({ wordCount }, { glyphCount });
-
     const [searchResult, setSearchResult] = useState({
         className: 'hidden',
         content: ''
