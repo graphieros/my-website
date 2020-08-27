@@ -1,0 +1,55 @@
+ .biopicWrapper,
+ .bioFractalWrapper{
+     border-radius:100%;
+     position: fixed;
+     top:50%;
+     left:50%;
+     transform: translate(-50%, -50%);
+ }
+
+ .bioFractalWrapper{
+     height:300px;
+     width:300px;
+     z-index:0;
+     opacity:1;
+     animation: bioFractal 2s ease-in;
+     opacity:0;
+ }
+
+ .biopicWrapper{
+    height:200px;
+    width:200px;
+    opacity:1;
+    box-shadow: 0 20px 40px -20px rgba(29,55,104,0.75);
+    animation: bioPic 2s ease-in;
+}
+
+ .biopicWrapper img {
+     width:100%;
+     border-radius:100%;
+ }
+
+ @keyframes bioFractal {
+     0%{
+         opacity:0;
+     }
+     50%{
+         opacity:1;
+     }
+     100%{
+         opacity:0;
+     }
+ }
+
+ @keyframes bioPic{
+     0%{
+         opacity:0;
+         height:0px;
+         width:0px;
+     }
+     100%{
+         opacity:1;
+         height: 200px;
+         width:200px;
+     }
+ }
