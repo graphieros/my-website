@@ -2,7 +2,9 @@ import React from 'react';
 
 const Outils = () => {
     return(
-        <div>MES OUTILS</div>
+        <div className='temp'>
+            PAGE EN COURS DE DEVELOPPEMENT
+        </div>
     )
 }
 

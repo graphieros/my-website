@@ -15,7 +15,7 @@ let graphieros_dictionnary = [
     {
         name:'_lki',
         fr: 'chaîner',
-        path: [[l, q, rm, a, r, q, rm, w, l, q, lm, a, r, q, lm, w, l, q]]
+        path: [[l, q, rm, a, r, q, rm, w, l, q, lm, a, r, q, lm, w, l, q], [m, q, m, q]]
     },
     {
         name: '_gly',

@@ -2,7 +2,9 @@ import React from 'react';
 
 const Media = () => {
     return(
-        <div>CE QUE JE FAIS</div>
+        <div className='temp'>
+            PAGE EN COURS DE DEVELOPPEMENT
+        </div>
     )
 }
 

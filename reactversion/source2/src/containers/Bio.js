@@ -3,7 +3,9 @@ import Fractal from '../components/graphieros/Fractal';
 import './css/Bio.css';
 import alp from '../assets/alp.jpg';
 
+
 const Bio = () => {
+    
 
     const story = [
         "Suivez la flèche...",
@@ -25,7 +27,7 @@ const Bio = () => {
         "...un style cellulaire, en référence peut-être à ce nouvel organe qui se greffait à nous peu à peu au début du siècle, et sans lequel aujourd'hui nul n'oserait s'aventurer dans le monde.",
         "En pensant la peinture à partir de cellules, je finis par atteindre les fondements de toute création graphique, le point. Et depuis ce point, j'ai inventé un langage."
     ];
-
+ 
     let [count, setCount] = useState(0);
 
 

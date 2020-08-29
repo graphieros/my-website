@@ -1,0 +1,35 @@
+.svgInputWrapper{
+    display: grid;
+    align-content:center;
+    justify-items:center;
+    margin:0 auto;
+    height:200px;
+    width:200px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+svg.svgInput{
+    height:150px;
+    width:150px;
+    background: white;
+    stroke: var(--blue0);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill:none;
+    stroke-width:6px;
+    stroke: var(--blue2);
+}
+
+circle{
+    transition: r 0.3s ease, fill 0.3s ease;
+    fill: var(--blue0);
+    stroke: none;
+    cursor: pointer;
+    
+}
+
+circle:hover{
+    r: 20px;
+    fill: tomato;
+    stroke: none;
+}

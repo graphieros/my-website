@@ -2,11 +2,13 @@
   "name": "source2",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
+    "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.3",
@@ -18,6 +20,7 @@
     "react-test-renderer": "^16.13.1"
   },
   "scripts": {
+    "booya": "node main",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

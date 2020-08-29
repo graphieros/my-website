@@ -13,44 +13,46 @@ import Livres from './Livres';
 import '././css/App.css';
 import clouds from '../assets/clouds.png';
 
-function App() {
 
+
+const App = () => {
+  
   const style = {
-    backgroundImage: `url(${clouds})`,
-    backgroundPosition: 'center',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'repeat'
-  }
+      backgroundImage: `url(${clouds})`,
+      backgroundPosition: 'center',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'repeat'
+    }
 
-  return (
+  return(
+      <BrowserRouter>
 
-    <BrowserRouter>
+        <div className="App">
+          <Header className="mainHeader" />
 
-      <div className="App">
-        <Header className="mainHeader" />
+          <Route path='/parcours' exact component={Parcours} />
+          <Route path='/parcours/bio' exact component={Bio} />
+          <Route path='/parcours/media' exact component={Media} />
+          <Route path='/parcours/outils' exact component={Outils} />
 
-        <Route path='/parcours' exact component={Parcours} />
-        <Route path='/parcours/bio' exact component={Bio} />
-        <Route path='/parcours/media' exact component={Media} />
-        <Route path='/parcours/outils' exact component={Outils} />
+          <Route path='/art' exact component={Art} />
+          <Route path='/art/galerie' exact component={Galerie} />
+          <Route path='/art/graphieros' exact component={Graphieros} />
+          <Route path='/art/livres' exact component={Livres} />
 
-        <Route path='/art' exact component={Art} />
-        <Route path='/art/galerie' exact component={Galerie} />
-        <Route path='/art/graphieros' exact component={Graphieros} />
-        <Route path='/art/livres' exact component={Livres} />
+          <Route path='/webDev' exact component={WebDev} />
+          <Route path='/contact.php' component={() => {
+            window.location.href = 'https://graphieros.com/contact.php';
+            return null;
+          }} />
 
-        <Route path='/webDev' exact component={WebDev} />
-        <Route path='/contact.php' component={() => {
-          window.location.href='https://graphieros.com/contact.php';
-          return null;
-        }} />
+          <div className="back" style={style} />
 
-        <div className="back" style={style} />
-        
-      </div>
-    </BrowserRouter>
+        </div>
+      </BrowserRouter>
 
-  );
+    );
 }
 
+    
 export default App;

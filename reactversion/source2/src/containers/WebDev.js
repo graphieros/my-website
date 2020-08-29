@@ -2,7 +2,9 @@ import React from 'react';
 
 const WebDev = () => {
     return(
-        <div>WEB DEV</div>
+        <div className='temp'>
+            PAGE EN COURS DE DEVELOPPEMENT
+        </div>
     )   
 }
 
