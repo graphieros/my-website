@@ -1,0 +1,120 @@
+.svgInputWrapper{
+    display: grid;
+    position: relative;
+    align-content:center;
+    justify-items:center;
+    margin:0 auto;
+    margin-top:50px;
+    height:350px;
+    width:200px;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.5));
+    border-radius:3px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+}
+
+svg.svgInput{
+    display: block;
+    position: absolute;
+    margin-top:20px;
+    left:50%;
+    transform: translateX(-50%);
+    height:150px;
+    width:150px;
+    background: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill:none;
+    stroke-width:10px;
+    stroke: var(--blue0);
+    border-radius:3px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+}
+
+circle.circleInput{
+    transition: r 0.3s ease, fill 0.3s ease;
+    fill: var(--blue0);
+    stroke: none;
+    cursor: pointer;
+    opacity:0.35;
+}
+
+circle.circleInput:hover{
+    r: 20px;
+    fill: tomato;
+    stroke: none;
+}
+
+.btnControls{
+    position: absolute;
+    margin-top:200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width:150px;
+}
+
+button.btnCUT,
+button.btnRESET{
+    width:100%;
+    height:30px;
+    font-family: 'Roboto', cursive;
+    border:none;
+    border-radius:2px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+button.btnCUT:hover,
+button.btnRESET:hover {
+    opacity:1;
+}
+
+button.btnCUT{
+    background: radial-gradient(at top, var(--blue2), var(--blue0));
+    color: var(--blue4);
+    text-shadow: 0 1px 1px var(--blue0);
+}
+
+button.btnRESET{
+    background: radial-gradient(at top, var(--blue4), tomato);
+    color: var(--blue0);
+}
+
+.result {
+    position: absolute;
+    bottom:-25px;
+    width:150px;
+    text-align:left;
+}
+
+.result p {
+    font-family: 'Roboto', cursive;
+    color: var(--blue0);
+}
+
+span.spanConcept {
+    font-weight:bold;
+}
+
+span.spanPhono {
+    color: tomato;
+    font-weight: bold;
+}
+
+.miniSvgResult {
+    height: 50px;
+    width:50px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    border-radius:100%;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(29,55,104,0.75);
+}
+
+.miniSvgResult svg {
+    height:50px !important;
+    width:50px !important;
+}
