@@ -1,12 +1,11 @@
 import React from 'react';
-import GraphierosShapeFinder from '../components/GraphierosShapeFInder';
+import './css/Graphieros.css';
 
 const Graphieros = () => {
 
-
     return (
         <div>
-            <GraphierosShapeFinder />
+            CONSTR
         </div>
     )
 }

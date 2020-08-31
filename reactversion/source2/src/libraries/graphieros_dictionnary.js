@@ -2665,7 +2665,7 @@ let graphieros_dictionnary = [
     {
         name: '_ka',
         fr: 'humain',
-        path: [[l, q, rm, a], [lm, a, rm, w], [lm, w, m, q], [r, q, r, q]],
+        path: [[lm, a, rm, w],[lm, w, m, q],[l, q, rm, a], [r, q, r, q]],
 
     },
     {

@@ -1,15 +1,28 @@
 .svgInputWrapper{
     display: grid;
-    position: relative;
+    position: fixed;
     align-content:center;
     justify-items:center;
     margin:0 auto;
-    margin-top:50px;
-    height:350px;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top:150px;
+    height:250px;
     width:200px;
     background: linear-gradient(to top, white, rgba(255, 255, 255, 0.5));
     border-radius:3px;
     box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    animation: svgInputWrapper 0.5s ease-in;
+    z-index:10;
+}
+
+@keyframes svgInputWrapper {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
 }
 
 svg.svgInput{
@@ -117,4 +130,102 @@ span.spanPhono {
 .miniSvgResult svg {
     height:50px !important;
     width:50px !important;
+}
+
+.optionDisplay {
+    position: fixed;
+    display: grid;
+    row-gap: 10px;
+    align-items:center;
+    justify-items:center;
+    grid-template-columns: repeat(3,1fr);
+    top:250px;
+    width:200px;
+    left:50%;
+    transform:translateX(-50%);
+    background: radial-gradient(at top, var(--blue2), var(--blue0));
+    overflow: scroll;
+    max-height:200px;
+    border-radius:3px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    box-sizing: border-box;
+    padding-bottom:100px;
+    animation: optionDisplay 0.2s ease-in;
+
+}
+
+@keyframes optionDisplay {
+    0%{
+        opacity: 0;
+        height:100px;
+        width:100px;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.optionDisplay::-webkit-scrollbar{
+    width:5px;
+    height:0px;
+    background: var(--blue3);
+    box-shadow: -2px -2px 5px black;
+}
+
+.optionDisplay::-webkit-scrollbar-thumb{
+    background: radial-gradient(rgb(255, 163, 147), tomato);
+    border-radius:2px;
+    box-shadow: 0 2px 2px black;
+}
+
+.optionDisplay div {
+    display: grid;
+    align-items:center;
+    justify-items:center;
+}
+
+.svgRes svg {
+    height: 30px !important;
+    width:30px !important;
+    transition: background 0.3s ease-in-out, stroke 0.3s ease-in-out;
+    border-radius:2px;
+}
+
+.svgRes svg:hover {
+    background: var(--blue3) !important;
+    stroke: rgb(29,55,104) !important;
+}
+
+.optionDisplay span {
+    font-size:0.6em;
+    width:100%;
+    text-align:center;
+    color: var(--blue4);
+    text-shadow: 0 0.7px 0.7px rgb(29,55,104);
+}
+
+span.spanPhonoOpt {
+    color: rgb(255, 167, 152);
+}
+
+@media (max-width: 320px) {
+    .svgInputWrapper{
+        margin-top: 110px;
+        left: 120px;
+    }
+    .optionDisplay{
+        top:250px;
+        max-height:180px;
+        margin-left:0px;
+    }
+    @keyframes optionDisplay {
+        0%{
+            opacity: 0;
+            height:100px;
+            width:100px;
+        }
+        100%{
+            opacity:1;
+        }
+    }
 }

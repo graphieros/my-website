@@ -1,7 +1,9 @@
 .mainMenu{
     position:fixed;
-    right:10px;
+    right:15px;
     top:8px;
+    border-radius:100%;
+    box-shadow: 0 5px 10px -5px rgba(19,55,104,.75);
 } 
 
 .fractalMenu {

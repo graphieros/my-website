@@ -41,6 +41,57 @@
     color: var(--blue0);
 }
 
+.quitGlyphSearch {
+    position: absolute;
+    display:grid;
+    right:-15px;
+    top:-15px;
+    opacity:0.8;
+    transition: opacity 0.3s ease;
+    border-radius:100%;
+    cursor: pointer;
+    box-shadow: 0 5px 10px -5px rgba(19,55,104,.75);
+}
+
+.quitGlyphSearch:hover{
+    opacity:1;
+}
+
+button.btnSearchShape {
+    position: fixed;
+    right:15px;
+    top:70px;
+    height:50px;
+    width:50px;
+    border:none;
+    border-radius:100%;
+    font-size:0.63em;
+    text-align:center;
+    cursor: pointer;
+    box-shadow: 0 5px 10px -5px rgba(19,55,104,.75);
+    background: radial-gradient(at top, white, tomato);
+}
+
+button.btnSearchShape:hover {
+    animation: wobble 0.3s ease-in-out;
+}
+
+@keyframes wobble {
+    0%{
+        tranform: rotate(-5deg);
+    }
+    33%{
+        transform: rotate(5deg);
+    }
+    66%{
+        transform: rotate(-3deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
 @media (max-width:500px) {
     .siteTitle{
         display:none;

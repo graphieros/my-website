@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Menu from './Menu/Menu';
 import SearchBar from './SearchBar/SearchBar';
+import GraphierosShapeFinder from '../GraphierosShapeFInder';
+import Fractal from '../graphieros/Fractal';
 import './Header.css';
 
 const Header = (props) => {
 
-    //display graphieros glyph search at all times
+    const [finderState, setFinderState] = useState({
+        className: 'hidden'
+    });
+
+    const handleOpenFinder = () => {
+        setFinderState({
+            className: 'visible'
+        });
+    }
+
+    const handleCloseGlyphSearch = () => {
+        setFinderState({
+            className: 'hidden'
+        });
+    }
 
     return (
         <div className={props.className}>
@@ -17,6 +33,30 @@ const Header = (props) => {
 
             <SearchBar className="searchBar" />
             <Menu className="mainMenu" />
+
+            <div className='graphierosMenu'>
+                <button
+                    className='btnSearchShape'
+                    onClick={handleOpenFinder}>
+                    Quel est ce glyphe?
+                </button>
+            </div>
+
+            <GraphierosShapeFinder className={finderState.className}>
+
+                <div onClick={handleCloseGlyphSearch}>
+                    <Fractal
+                        className='quitGlyphSearch'
+                        sequence='zx-we'
+                        colors={[255, 255, 255]}
+                        svgSize={30}
+                        background='rgb(255,91,79)'
+                        backgroundRadius='100%'
+                    />
+                </div>
+
+            </GraphierosShapeFinder>
+
         </div>
     )
 }

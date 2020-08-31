@@ -1,0 +1,15 @@
+.quitGlyphSearch {
+    position: absolute;
+    display:grid;
+    right:-15px;
+    top:-15px;
+    opacity:0.8;
+    transition: opacity 0.3s ease;
+    border-radius:100%;
+    cursor: pointer;
+    box-shadow: 0 5px 10px -5px rgba(19,55,104,.75);
+}
+
+.quitGlyphSearch:hover{
+    opacity:1;
+}

@@ -7,8 +7,9 @@ let memory = [];
 let cutPath = [];
 let codeMemory = [];
 let cutCode = [];
+let possibleResults = [];
 
-const GraphierosShapeFinder = () => {
+const GraphierosShapeFinder = (props) => {
 
     const [svgGroup, setSvgGroupState] = useState({
         content: <g />
@@ -16,7 +17,11 @@ const GraphierosShapeFinder = () => {
 
     const [resultState, setResultState] = useState({
         content: ''
-    })
+    });
+
+    const [optionsState, setOptionsState] = useState({
+        content: ''
+    });
 
 
     const handleCoordinates = (props) => {
@@ -43,37 +48,279 @@ const GraphierosShapeFinder = () => {
     const db = [...graphieros_dictionnary];
 
     const handleCut = () => {
+
+        possibleResults = [];
+
         let flat = memory.flat();
         cutPath.push(`M ${flat}`);
         memory = [];
 
         let flatCode = codeMemory.flat();
-
         cutCode.push(flatCode);
+
         codeMemory = [];
-        console.log({ cutCode });
+        let reversedArray = [];
+        let reversedArray1 = [];
+        let reversedArray2 = [];
+
+        if (cutCode[0].length === 4) {
+            reversedArray.push(cutCode[0][2]);
+            reversedArray.push(cutCode[0][3]);
+            reversedArray.push(cutCode[0][0]);
+            reversedArray.push(cutCode[0][1]);
+        }
+
+        if (cutCode[1] && cutCode[1].length === 4) {
+            reversedArray1.push(cutCode[0][2]);
+            reversedArray1.push(cutCode[0][3]);
+            reversedArray1.push(cutCode[0][0]);
+            reversedArray1.push(cutCode[0][1]);
+        }
+
+        if (cutCode[2] && cutCode[2].length === 4) {
+            reversedArray2.push(cutCode[0][2]);
+            reversedArray2.push(cutCode[0][3]);
+            reversedArray2.push(cutCode[0][0]);
+            reversedArray2.push(cutCode[0][1]);
+        }
+
+        if (cutCode[0].length === 6) {
+            reversedArray.push(cutCode[0][4]);
+            reversedArray.push(cutCode[0][5]);
+            reversedArray.push(cutCode[0][2]);
+            reversedArray.push(cutCode[0][3]);
+            reversedArray.push(cutCode[0][0]);
+            reversedArray.push(cutCode[0][1]);
+        }
+
+        if (cutCode[1] && cutCode[1].length === 6) {
+            reversedArray1.push(cutCode[0][4]);
+            reversedArray1.push(cutCode[0][5]);
+            reversedArray1.push(cutCode[0][2]);
+            reversedArray1.push(cutCode[0][3]);
+            reversedArray1.push(cutCode[0][0]);
+            reversedArray1.push(cutCode[0][1]);
+        }
+
+        if (cutCode[2] && cutCode[2].length === 6) {
+            reversedArray2.push(cutCode[0][4]);
+            reversedArray2.push(cutCode[0][5]);
+            reversedArray2.push(cutCode[0][2]);
+            reversedArray2.push(cutCode[0][3]);
+            reversedArray2.push(cutCode[0][0]);
+            reversedArray2.push(cutCode[0][1]);
+        }
+
+        if (cutCode[0].length === 8) {
+            reversedArray.push(cutCode[0][6]);
+            reversedArray.push(cutCode[0][7]);
+            reversedArray.push(cutCode[0][4]);
+            reversedArray.push(cutCode[0][5]);
+            reversedArray.push(cutCode[0][2]);
+            reversedArray.push(cutCode[0][3]);
+            reversedArray.push(cutCode[0][0]);
+            reversedArray.push(cutCode[0][1]);
+        }
+
+        if (cutCode[1] && cutCode[1].length === 8) {
+            reversedArray1.push(cutCode[0][6]);
+            reversedArray1.push(cutCode[0][7]);
+            reversedArray1.push(cutCode[0][4]);
+            reversedArray1.push(cutCode[0][5]);
+            reversedArray1.push(cutCode[0][2]);
+            reversedArray1.push(cutCode[0][3]);
+            reversedArray1.push(cutCode[0][0]);
+            reversedArray1.push(cutCode[0][1]);
+        }
+
+        if (cutCode[2] && cutCode[2].length === 8) {
+            reversedArray2.push(cutCode[0][6]);
+            reversedArray2.push(cutCode[0][7]);
+            reversedArray2.push(cutCode[0][4]);
+            reversedArray2.push(cutCode[0][5]);
+            reversedArray2.push(cutCode[0][2]);
+            reversedArray2.push(cutCode[0][3]);
+            reversedArray2.push(cutCode[0][0]);
+            reversedArray2.push(cutCode[0][1]);
+        }
+
+        if (cutCode[0].length === 10) {
+            reversedArray.push(cutCode[0][8]);
+            reversedArray.push(cutCode[0][9]);
+            reversedArray.push(cutCode[0][6]);
+            reversedArray.push(cutCode[0][7]);
+            reversedArray.push(cutCode[0][4]);
+            reversedArray.push(cutCode[0][5]);
+            reversedArray.push(cutCode[0][2]);
+            reversedArray.push(cutCode[0][3]);
+            reversedArray.push(cutCode[0][0]);
+            reversedArray.push(cutCode[0][1]);
+        }
+
+        if (cutCode[1] && cutCode[1].length === 10) {
+            reversedArray1.push(cutCode[0][8]);
+            reversedArray1.push(cutCode[0][9]);
+            reversedArray1.push(cutCode[0][6]);
+            reversedArray1.push(cutCode[0][7]);
+            reversedArray1.push(cutCode[0][4]);
+            reversedArray1.push(cutCode[0][5]);
+            reversedArray1.push(cutCode[0][2]);
+            reversedArray1.push(cutCode[0][3]);
+            reversedArray1.push(cutCode[0][0]);
+            reversedArray1.push(cutCode[0][1]);
+        }
+
+        if (cutCode[2] && cutCode[2].length === 10) {
+            reversedArray2.push(cutCode[0][8]);
+            reversedArray2.push(cutCode[0][9]);
+            reversedArray2.push(cutCode[0][6]);
+            reversedArray2.push(cutCode[0][7]);
+            reversedArray2.push(cutCode[0][4]);
+            reversedArray2.push(cutCode[0][5]);
+            reversedArray2.push(cutCode[0][2]);
+            reversedArray2.push(cutCode[0][3]);
+            reversedArray2.push(cutCode[0][0]);
+            reversedArray2.push(cutCode[0][1]);
+        }
+
+        if (cutCode[0].length === 12) {
+            reversedArray.push(cutCode[0][10]);
+            reversedArray.push(cutCode[0][11]);
+            reversedArray.push(cutCode[0][8]);
+            reversedArray.push(cutCode[0][9]);
+            reversedArray.push(cutCode[0][6]);
+            reversedArray.push(cutCode[0][7]);
+            reversedArray.push(cutCode[0][4]);
+            reversedArray.push(cutCode[0][5]);
+            reversedArray.push(cutCode[0][2]);
+            reversedArray.push(cutCode[0][3]);
+            reversedArray.push(cutCode[0][0]);
+            reversedArray.push(cutCode[0][1]);
+        }
+
+        if (cutCode[1] && cutCode[1].length === 12) {
+            reversedArray1.push(cutCode[0][10]);
+            reversedArray1.push(cutCode[0][11]);
+            reversedArray1.push(cutCode[0][8]);
+            reversedArray1.push(cutCode[0][9]);
+            reversedArray1.push(cutCode[0][6]);
+            reversedArray1.push(cutCode[0][7]);
+            reversedArray1.push(cutCode[0][4]);
+            reversedArray1.push(cutCode[0][5]);
+            reversedArray1.push(cutCode[0][2]);
+            reversedArray1.push(cutCode[0][3]);
+            reversedArray1.push(cutCode[0][0]);
+            reversedArray1.push(cutCode[0][1]);
+        }
+
+        if (cutCode[2] && cutCode[2].length === 12) {
+            reversedArray2.push(cutCode[0][10]);
+            reversedArray2.push(cutCode[0][11]);
+            reversedArray2.push(cutCode[0][8]);
+            reversedArray2.push(cutCode[0][9]);
+            reversedArray2.push(cutCode[0][6]);
+            reversedArray2.push(cutCode[0][7]);
+            reversedArray2.push(cutCode[0][4]);
+            reversedArray2.push(cutCode[0][5]);
+            reversedArray2.push(cutCode[0][2]);
+            reversedArray2.push(cutCode[0][3]);
+            reversedArray2.push(cutCode[0][0]);
+            reversedArray2.push(cutCode[0][1]);
+        }
+
+        if (cutCode[0].length === 14) {
+            reversedArray.push(cutCode[0][12]);
+            reversedArray.push(cutCode[0][13]);
+            reversedArray.push(cutCode[0][10]);
+            reversedArray.push(cutCode[0][11]);
+            reversedArray.push(cutCode[0][8]);
+            reversedArray.push(cutCode[0][9]);
+            reversedArray.push(cutCode[0][6]);
+            reversedArray.push(cutCode[0][7]);
+            reversedArray.push(cutCode[0][4]);
+            reversedArray.push(cutCode[0][5]);
+            reversedArray.push(cutCode[0][2]);
+            reversedArray.push(cutCode[0][3]);
+            reversedArray.push(cutCode[0][0]);
+            reversedArray.push(cutCode[0][1]);
+        }
+
+        if (cutCode[1] && cutCode[1].length === 14) {
+            reversedArray1.push(cutCode[0][12]);
+            reversedArray1.push(cutCode[0][13]);
+            reversedArray1.push(cutCode[0][10]);
+            reversedArray1.push(cutCode[0][11]);
+            reversedArray1.push(cutCode[0][8]);
+            reversedArray1.push(cutCode[0][9]);
+            reversedArray1.push(cutCode[0][6]);
+            reversedArray1.push(cutCode[0][7]);
+            reversedArray1.push(cutCode[0][4]);
+            reversedArray1.push(cutCode[0][5]);
+            reversedArray1.push(cutCode[0][2]);
+            reversedArray1.push(cutCode[0][3]);
+            reversedArray1.push(cutCode[0][0]);
+            reversedArray1.push(cutCode[0][1]);
+        }
+
+        if (cutCode[2] && cutCode[2].length === 14) {
+            reversedArray2.push(cutCode[0][12]);
+            reversedArray2.push(cutCode[0][13]);
+            reversedArray2.push(cutCode[0][10]);
+            reversedArray2.push(cutCode[0][11]);
+            reversedArray2.push(cutCode[0][8]);
+            reversedArray2.push(cutCode[0][9]);
+            reversedArray2.push(cutCode[0][6]);
+            reversedArray2.push(cutCode[0][7]);
+            reversedArray2.push(cutCode[0][4]);
+            reversedArray2.push(cutCode[0][5]);
+            reversedArray2.push(cutCode[0][2]);
+            reversedArray2.push(cutCode[0][3]);
+            reversedArray2.push(cutCode[0][0]);
+            reversedArray2.push(cutCode[0][1]);
+        }
 
         //now check if content of each array is the same as cutCode
         db.forEach(entry => {
-            if (entry.path.toString() === cutCode.toString()) {
-                setResultState({
-                    content: <div>
-                        <p>
-                            concept: <span className='spanConcept'>{entry.fr}</span><br />
-                            phono: <span className='spanPhono'>[ {entry.name.replace("_", "")} ]</span>
-                        </p>
-                        <Linear className='miniSvgResult'
-                            sequence= {entry.name.replace("_","")}
-                            colors={[255,99,71]}
-                            size='50'
-                        />
-                    </div>
-                })
-            }
 
-        })
-        //also check if resversed paths also work
+            if (entry.path.toString().includes(cutCode[0].toString())) {
+                if (cutCode[1] && entry.path.toString().includes(cutCode[1].toString())) {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                } else if (cutCode[1] && entry.path.toString().includes(reversedArray1.toString())) {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                } else {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                }
+
+            } else if (entry.path.toString().includes(reversedArray.toString())) {
+                if (cutCode[1] && entry.path.toString().includes(cutCode[1].toString())) {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                } else if (cutCode[1] && entry.path.toString().includes(reversedArray1.toString())) {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                }
+            } else if (entry.path.toString().includes(reversedArray1.toString())) {
+                if (cutCode[2] && entry.path.toString().includes(cutCode[2].toString())) {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                } else if (cutCode[2] && entry.path.toString().includes(reversedArray2.toString())) {
+                    possibleResults.push({ n: entry.name.replace("_", ""), f: entry.fr });
+                }
+            }
+        });
+        
+        setOptionsState({
+            content: <div className="optionDisplay">
+                {possibleResults.map((res, i) => <div key={`${res}_${i}`}>
+                    <Linear className='svgRes'
+                        sequence={res.n}
+                        colors={[250,254,255]}
+                        size='30'
+                    />
+                    <span>{res.f}</span>
+                    <span className="spanPhonoOpt">[ {res.n} ]</span>
+                </div>)}
+            </div>
+        });
     }
+
 
     const handleReset = () => {
         setSvgGroupState({
@@ -82,17 +329,21 @@ const GraphierosShapeFinder = () => {
         setResultState({
             content: ''
         });
+        setOptionsState({
+            content: ''
+        });
         memory = [];
         cutPath = [];
         codeMemory = [];
         cutCode = [];
-
+        possibleResults = [];
     }
 
     return (
-        <div>
+        <div className={props.className}>
 
             <div className="svgInputWrapper">
+                {props.children}
                 <svg
                     viewBox='0 0 256 256'
                     className="svgInput"
@@ -116,6 +367,9 @@ const GraphierosShapeFinder = () => {
 
                 <div className="result">
                     {resultState.content}
+                </div>
+                <div>
+                    {optionsState.content}
                 </div>
             </div>
 
