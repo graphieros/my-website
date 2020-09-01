@@ -71,6 +71,7 @@ const GraphierosShapeFinder = (props) => {
 
         permutedArray = permute(cutCode);
         permutedReversedArray = permute(reversedArray);
+        console.log({permutedReversedArray});
 
         let pushResult = function (origin) {
             return possibleResults.push({ n: origin.name.replace("_", ""), f: origin.fr });
@@ -359,9 +360,10 @@ const GraphierosShapeFinder = (props) => {
 
     return (
         <div className={props.className}>
-
+            
             <div className="svgInputWrapper">
                 {props.children}
+                <p className='svgInputTitle'>Cliquez sur les points, et sur <b>CUT</b> pour lever le stylo</p>
                 <svg
                     viewBox='0 0 256 256'
                     className="svgInput"
