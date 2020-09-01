@@ -11,14 +11,24 @@ const Header = (props) => {
         className: 'hidden'
     });
 
+    const [tempBackState, setTempBackState] = useState({
+        className: 'hidden'
+    });
+
     const handleOpenFinder = () => {
         setFinderState({
             className: 'visible'
+        });
+        setTempBackState({
+            className: 'backState'
         });
     }
 
     const handleCloseGlyphSearch = () => {
         setFinderState({
+            className: 'hidden'
+        });
+        setTempBackState({
             className: 'hidden'
         });
     }
@@ -56,7 +66,7 @@ const Header = (props) => {
                 </div>
 
             </GraphierosShapeFinder>
-
+            <div className={tempBackState.className}></div>
         </div>
     )
 }
