@@ -28,7 +28,7 @@
 svg.svgInput{
     display: block;
     position: absolute;
-    margin-top:20px;
+    margin-top:40px;
     left:50%;
     transform: translateX(-50%);
     height:150px;
@@ -206,6 +206,14 @@ span.spanPhono {
 
 span.spanPhonoOpt {
     color: rgb(255, 167, 152);
+}
+
+p.svgInputTitle{
+    position: absolute;
+    margin-top:5px;
+    font-size:0.7em;
+    width:75%;
+    color: var(--blue0);
 }
 
 @media (max-width: 320px) {
