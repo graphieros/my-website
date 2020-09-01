@@ -63,14 +63,14 @@ const GraphierosShapeFinder = (props) => {
         codeMemory = [];
         let reversedArray = [];
         let permutedArray = [];
+        let permutedReversedArray = [];
 
         for (let i = 0; i < cutCode.length; i += 1) {
             reversedArray.push(pairSwap(cutCode[i]));
         }
 
         permutedArray = permute(cutCode);
-
-        console.log({ permutedArray })
+        permutedReversedArray = permute(reversedArray);
 
         let pushResult = function (origin) {
             return possibleResults.push({ n: origin.name.replace("_", ""), f: origin.fr });
@@ -81,7 +81,15 @@ const GraphierosShapeFinder = (props) => {
 
             let thatSearch = entry.path.toString();
 
-            if (thatSearch.includes(cutCode[0].toString())) {
+            if (thatSearch.includes(cutCode.toString())) {
+                pushResult(entry);
+            } else if (thatSearch.includes(reversedArray.toString())){
+                pushResult(entry);
+            } else if(thatSearch.includes(permutedArray.toString())){
+                pushResult(entry);
+            } else if(thatSearch.includes(permutedReversedArray.toString())){
+                pushResult(entry);
+            } else if (thatSearch.includes(cutCode[0].toString())) {
                 if (cutCode[1] && thatSearch.includes(cutCode[1].toString())) {
                     if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
                         pushResult(entry);
@@ -89,9 +97,12 @@ const GraphierosShapeFinder = (props) => {
                         pushResult(entry);
                     } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
                         pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
+
                 } else if (reversedArray[1] && thatSearch.includes(reversedArray[1].toString())) {
                     if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
                         pushResult(entry);
@@ -99,12 +110,28 @@ const GraphierosShapeFinder = (props) => {
                         pushResult(entry);
                     } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
                         pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
 
                 } else if (permutedArray[1] && thatSearch.includes(permutedArray[1].toString())) {
                     if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (permutedReversedArray[1] && thatSearch.includes(permutedReversedArray[1].toString())) {
+                    if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toSting())) {
                         pushResult(entry);
                     } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
                         pushResult(entry);
@@ -123,6 +150,8 @@ const GraphierosShapeFinder = (props) => {
                         pushResult(entry);
                     } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
                         pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
@@ -134,6 +163,8 @@ const GraphierosShapeFinder = (props) => {
                         pushResult(entry);
                     } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
                         pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
@@ -144,6 +175,8 @@ const GraphierosShapeFinder = (props) => {
                     } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
                         pushResult(entry);
                     } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
@@ -157,6 +190,8 @@ const GraphierosShapeFinder = (props) => {
                         pushResult(entry);
                     } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
                         pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
@@ -164,6 +199,58 @@ const GraphierosShapeFinder = (props) => {
                     if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
                         pushResult(entry);
                     } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (cutCode[1] && thatSearch.includes(cutCode[1].toString())) {
+                    if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                }
+            } else if (thatSearch.includes(permutedReversedArray[0].toString())) {
+                if (permutedReversedArray[1] && thatSearch.includes(permutedReversedArray[1].toString())) {
+                    if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (permutedArray[1] && thatSearch.includes(permutedArray[1].toString())) {
+                    if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (reversedArray[1] && thatSearch.includes(reversedArray[1].toString())) {
+                    if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
                         pushResult(entry);
                     } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
                         pushResult(entry);
@@ -175,13 +262,66 @@ const GraphierosShapeFinder = (props) => {
                         pushResult(entry);
                     } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
                         pushResult(entry);
-                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())){
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 }
-            } 
+            } else if (cutCode[1] && thatSearch.includes(cutCode[1].toString())) {
+                if (thatSearch.includes(cutCode[0].toString())) {
+                    if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (thatSearch.includes(reversedArray[0].toString())) {
+                    if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (thatSearch.includes(permutedArray[0].toString())) {
+                    if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else if (thatSearch.includes(permutedReversedArray[0].toString)) {
+                    if (permutedReversedArray[2] && thatSearch.includes(permutedReversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (permutedArray[2] && thatSearch.includes(permutedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (reversedArray[2] && thatSearch.includes(reversedArray[2].toString())) {
+                        pushResult(entry);
+                    } else if (cutCode[2] && thatSearch.includes(cutCode[2].toString())) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                }
+            }
+
         });
 
         setOptionsState({
