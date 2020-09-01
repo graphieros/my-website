@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import LandingPage from '../components/LandingPage';
 import Header from '../components/Header/Header';
 import Parcours from './Parcours';
 import WebDev from './WebDev';
@@ -13,8 +14,6 @@ import Livres from './Livres';
 import '././css/App.css';
 import clouds from '../assets/clouds.png';
 
-
-
 const App = () => {
   
   const style = {
@@ -24,10 +23,19 @@ const App = () => {
       backgroundRepeat: 'repeat'
     }
 
+    const [landingState, setLandingState] = useState({
+      className: 'landingVisible'
+    });
+
   return(
       <BrowserRouter>
 
         <div className="App">
+          
+          <LandingPage
+            className={landingState.className}
+          />
+
           <Header className="mainHeader" />
 
           <Route path='/parcours' exact component={Parcours} />
