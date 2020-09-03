@@ -6,13 +6,90 @@ button.menuItemBtn svg{
 .menuItem{
     transform-style: preserve-3d;
     cursor:pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .menuItem:hover svg{
     stroke: tomato !important;
 }
 
+.menuItem:hover {
+    transform:scale(1.1,1.1);
+}
+
 button.menuItemBtn{
     font-family: 'Roboto', cursive;
     font-weight: bold;
+}
+
+#menuItemParcours{
+    animation: menuItemParcours 0.3s ease-in-out;
+}
+
+@keyframes menuItemParcours {
+    0%{
+        opacity:0;
+        transform:rotateY(-90deg) rotateX(30deg);
+    }
+    80%{
+        transform: rotateY(10deg);
+    }
+    100%{
+        opacity:1;
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+
+#menuItemArt {
+    animation: menuItemArt 0.3s ease-in-out;
+}
+
+@keyframes menuItemArt{
+    0%{
+        opacity:0;
+        transform: rotateY(90deg) rotateX(30deg);
+    }
+    80%{
+        transform: rotateY(-10deg);
+    }
+    100%{
+        opacity:1;
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+
+#menuItemContact{
+    animation: menuItemContact 0.3s ease-in-out;
+}
+
+@keyframes menuItemContact{
+    0%{
+        opacity:0;
+        transform: rotateY(90deg) rotateX(-30deg);
+    }
+    80%{
+        transform: rotateY(-10deg);
+    }
+    100%{
+        opacity:1;
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+
+#menuItemWeb {
+    animation: menuItemWeb 0.3s ease-in-out;
+}
+
+@keyframes menuItemWeb{
+    0%{
+        opacity:0;
+        transform: rotateY(-90deg) rotateX(-30deg);
+    }
+    80%{
+        transform: rotateY(10deg);
+    }
+    100%{
+        opacity:1;
+        transform: rotateY(0deg) rotateX(0deg);
+    }
 }

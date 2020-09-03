@@ -12,14 +12,14 @@ const MenuItem = (props) => {
         height: '90px',
         marginBottom: '10px',
         fontSize: '1.1em',
-        boxShadow: '0 5px 10px -5px rgba(29,55,104,0.35)',
+        boxShadow: '0 5px 10px -5px rgba(29,55,104,0.95)',
         color: 'var(--blue1)',
         transform: `rotateY(${props.rotate}deg)`,
         cursor: 'pointer'
     }
 
     return (
-        <div className={props.className}>
+        <div className={props.className} id={props.id}>
 
             <button
                 className='menuItemBtn'

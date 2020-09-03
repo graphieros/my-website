@@ -54,6 +54,7 @@ const Menu = (props) => {
 
                 <Link to="/parcours" onClick={handleQuitMenu}>
                     <MenuItem
+                        id='menuItemParcours'
                         className='menuItem'
                         content='parcours'
                         color='var(--blue4)'
@@ -67,6 +68,7 @@ const Menu = (props) => {
 
                 <Link to="/art" onClick={handleQuitMenu}>
                     <MenuItem
+                        id='menuItemArt'
                         className='menuItem'
                         content='art'
                         color='var(--blue4)'
@@ -80,6 +82,7 @@ const Menu = (props) => {
 
                 <Link to="/webDev" onClick={handleQuitMenu}>
                     <MenuItem
+                        id='menuItemWeb'
                         className='menuItem'
                         content='web dev'
                         color='var(--blue4)'
@@ -93,6 +96,7 @@ const Menu = (props) => {
 
                 <Link to='/contact.php' onClick={handleQuitMenu}>
                     <MenuItem
+                        id='menuItemContact'
                         className='menuItem'
                         content='contact'
                         color='var(--blue4)'
