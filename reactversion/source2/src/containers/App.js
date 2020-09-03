@@ -27,6 +27,12 @@ const App = () => {
       className: 'landingVisible'
     });
 
+    const handleCloseLanding = () => {
+      setLandingState({
+        className:'hidden'
+      });
+    }
+
   return(
       <BrowserRouter>
 
@@ -34,9 +40,10 @@ const App = () => {
           
           <LandingPage
             className={landingState.className}
+            close={handleCloseLanding}
           />
 
-          <Header className="mainHeader" />
+          <Header className='mainHeader' />
 
           <Route path='/parcours' exact component={Parcours} />
           <Route path='/parcours/bio' exact component={Bio} />
