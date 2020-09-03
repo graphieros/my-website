@@ -157,8 +157,7 @@ span.spanPhono {
 @keyframes optionDisplay {
     0%{
         opacity: 0;
-        height:100px;
-        width:100px;
+        transform: translateX(-50%) scale(0,1);
     }
     100%{
         opacity:1;
@@ -187,13 +186,14 @@ span.spanPhono {
 .svgRes svg {
     height: 30px !important;
     width:30px !important;
-    transition: background 0.3s ease-in-out, stroke 0.3s ease-in-out;
+    transition: scale 0.5s ease-in-out;
     border-radius:2px;
 }
 
 .svgRes svg:hover {
     background: var(--blue3) !important;
     stroke: rgb(29,55,104) !important;
+    transform: scale(1.2,1.2);
 }
 
 .optionDisplay span {
