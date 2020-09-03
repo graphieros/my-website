@@ -2728,5 +2728,82 @@
         "phono": "pne lki",
         "line": "pne-lki",
         "molecule": "pne lki"
+    },
+    {
+        "fr": "validation",
+        "litteral" : "déterminer donner valeur fonctionner",
+        "phono": "mea fya vlia fkai",
+        "line": "mea-fya-vlia-fkai",
+        "molecule": "mea fya vlia fkai"
+    },
+    {
+        "fr": "valider",
+        "litteral" : "donner valeur fonctionner",
+        "phono": "fya vlia fkai",
+        "line": "fya-vlia-fkai",
+        "molecule": "fya vlia fkai"
+    },
+    {
+        "fr": "provisoire",
+        "litteral" : "qualité temps non arrêter",
+        "phono": "kli kpoile nia ktea",
+        "line": "kli-kpoile-nia-ktea",
+        "molecule": "kli kpoile nia ktea"
+    },
+    {
+        "fr": "provisoirement",
+        "litteral" : "avec temps non arrêter",
+        "phono": "vi kpoile nia ktea",
+        "line": "vi-kpoile-nia-ktea",
+        "molecule": "vi kpoile nia ktea"
+    },
+    {
+        "fr": "cataclysme",
+        "litteral" : "objet événement détruire tout être",
+        "phono": "ptae vne dzye tew ma",
+        "line": "ptae-vne-dzye-tew-ma",
+        "molecule": "ptae vne dzye tew ma"    
+    },
+    {
+        "fr": "cataclysmique",
+        "litteral" : "qualité événement détruire tout être",
+        "phono": "kli vne dzye tew ma",
+        "line": "kli-vne-dzye-tew-ma",
+        "molecule": "kli vne dzye tew ma"
+    },
+    {
+        "fr": "sournois",
+        "litteral" : "qualité conflit par dessous",
+        "phono": "kli troi ba nde",
+        "line": "kli-troi-ba-nde",
+        "molecule": "kli troi ba nde"
+    },
+    {
+        "fr": "sournoisement",
+        "litteral" : "avec conflit par dessous",
+        "phono": "vi troi ba nde",
+        "line": "vi-troi-ba-nde",
+        "molecule": "vi troi ba nde"
+    },
+    {
+        "fr": "sournoiserie",
+        "litteral" : "déterminer conflit par dessous",
+        "phono": "mea troi ba nde",
+        "line": "mea-troi-ba-nde",
+        "molecule": "mea troi ba nde"
+    },
+    {
+        "fr": "célébration",
+        "litteral" : "déterminer crier fleur",
+        "phono": "mea kri blea",
+        "line": "mea-kri-blea",
+        "molecule": "mea kri blea"
+    },
+    {
+        "fr": "célébrer",
+        "litteral" : "crier fleur",
+        "phono": "kri blea",
+        "line": "kri-blea",
+        "molecule": "kri blea"
     }
 ]
