@@ -43,12 +43,6 @@ a{
 
 @media (max-width:730px) {
     .parcours{
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-@media (max-width:500px) {
-    .parcours{
         grid-template-columns: repeat(1,1fr);
         grid-gap: 10px;
         max-width: 200px;
