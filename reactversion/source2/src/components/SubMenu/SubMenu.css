@@ -27,7 +27,7 @@
     }
 }
 
-@media(max-width:500px) {
+@media(max-width:730px) {
     .subMenu{
         height:120px;
     }

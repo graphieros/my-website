@@ -4,7 +4,7 @@ import '../css/Description.css';
 const Description = (props) => {
     return(
         <div className={props.className}>
-            {props.text}
+            {props.children}
         </div>
     )
 }

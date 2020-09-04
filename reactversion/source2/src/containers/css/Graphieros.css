@@ -13,3 +13,128 @@
 .quitGlyphSearch:hover{
     opacity:1;
 }
+
+.vitruve{
+    display: block;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    top:200px;
+    height:60%;
+    max-width:300px;
+    transition: all 0.3s ease;
+}
+
+.vitruve::-webkit-scrollbar{
+    width:0px;
+}
+
+.graphierosDescriptionTranslation svg {
+    filter: drop-shadow(0 2px 0px var(--blue0));
+    stroke-dasharray: 1000px;
+    stroke-dashoffset: 1000px;
+    animation: move 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.graphierosDescription{
+    display: block;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+    color: var(--blue0);
+    text-shadow: none;
+    top:150px;
+    background: radial-gradient(at top left, rgba(255,255,255,.35), rgba(255, 255, 255, 0.726));
+    box-sizing: border-box;
+    padding-left:20px;
+    padding-right:20px;
+    border-radius:10px;
+    animation: graphierosDescription 0.5s ease-in-out;
+}
+
+@keyframes graphierosDescription {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.arrowsWrapper{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display: block;
+    width:200px;
+    height:20px;
+}
+
+.arrows{
+    cursor: pointer;
+}
+
+.gArrows{
+    display: grid;
+    align-items:center;
+    justify-items: center;
+    height:60px;
+    width:60px;
+    border-radius:100%;
+    box-shadow: -5px 5px 10px -5px var(--blue0);
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.right{
+    right:0;
+    background: radial-gradient(at right, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
+}
+
+.left{
+    left:0;
+    background: radial-gradient(at left, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
+}
+
+.right:hover{
+    transform: scale(1.1,1.1);
+    filter: hue-rotate(-20deg);
+}
+
+.left:hover{
+    transform: scale(1.1,1.1);
+    filter: hue-rotate(20deg);
+}
+
+.gArrows svg {
+    height:100% !important;
+}
+
+@keyframes move {
+    100%{
+        stroke-dashoffset:0;
+    }
+}
+
+@keyframes vitruve {
+    0%{
+        display: block;
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+
+@media (max-width:500px){
+    .graphierosDescription{
+        font-size:0.8em;
+    }
+}
