@@ -15,59 +15,75 @@ import '././css/App.css';
 import clouds from '../assets/clouds.png';
 
 const App = () => {
-  
+
   const style = {
-      backgroundImage: `url(${clouds})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'repeat'
-    }
+    backgroundImage: `url(${clouds})`,
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'repeat'
+  }
 
-    const [landingState, setLandingState] = useState({
-      className: 'landingVisible'
+  const [landingState, setLandingState] = useState({
+    className: 'landingVisible'
+  });
+
+  const handleCloseLanding = () => {
+    setLandingState({
+      className: 'hidden'
     });
+  }
 
-    const handleCloseLanding = () => {
-      setLandingState({
-        className:'hidden'
-      });
-    }
+  return (
+    <BrowserRouter>
 
-  return(
-      <BrowserRouter>
+      <div className="App">
 
-        <div className="App">
-          
-          <LandingPage
-            className={landingState.className}
-            close={handleCloseLanding}
-          />
+        <LandingPage
+          className={landingState.className}
+          close={handleCloseLanding}
+        />
 
-          <Header className='mainHeader' />
+        <Header className='mainHeader' />
 
-          <Route path='/parcours' exact component={Parcours} />
-          <Route path='/parcours/bio' exact component={Bio} />
-          <Route path='/parcours/media' exact component={Media} />
-          <Route path='/parcours/outils' exact component={Outils} />
+        <Route path='/parcours' exact component={Parcours} />
+        <Route path='/parcours/bio' exact component={Bio} />
+        <Route path='/parcours/media' exact component={Media} />
+        <Route path='/parcours/outils' exact component={Outils} />
 
-          <Route path='/art' exact component={Art} />
-          <Route path='/art/galerie' exact component={Galerie} />
-          <Route path='/art/graphieros' exact component={Graphieros} />
-          <Route path='/art/livres' exact component={Livres} />
+        <Route path='/art' exact component={Art} />
+        <Route path='/art/galerie' exact component={Galerie} />
+        <Route path='/art/graphieros' exact component={Graphieros} />
+        <Route path='/art/livres' exact component={Livres} />
 
-          <Route path='/webDev' exact component={WebDev} />
-          <Route path='/contact.php' component={() => {
-            window.location.href = 'https://graphieros.com/contact.php';
-            return null;
-          }} />
+        <Route path='/webDev' exact component={WebDev} />
+        <Route path='/contact.php' component={() => {
+          window.location.href = 'https://graphieros.com/contact.php';
+          return null;
+        }} />
 
-          <div className="back" style={style} />
+        <a
+          className='touchWriterLink'
+          target='_blank'
+          rel="noopener noreferrer"
+          href="https://graphieros.com/touch_writer/touch_writer.html">
+          éditeur de graphieros
+            </a>
 
-        </div>
-      </BrowserRouter>
+        <a
+          className='cleLink'
+          target='_blank'
+          rel='noopener noreferrer'
+          href='https://graphieros.com/cle.html'>
+          Lire La clé
+            </a>
 
-    );
+        <div className="back" style={style} />
+
+      </div>
+    </BrowserRouter>
+
+  );
 }
 
-    
+
 export default App;
