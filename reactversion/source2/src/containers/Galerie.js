@@ -150,7 +150,7 @@ const Galerie = () => {
     const temp_descr = [];
 
     const [galleryShowState, setGalleryShowState] = useState({
-        content: <span><img src={entendre} alt="startPic" /></span>
+        content: <span><img src={origin_1} alt="startPic" /></span>
     });
 
     const [titleState, setTitleState] = useState({
