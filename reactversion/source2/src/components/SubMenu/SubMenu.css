@@ -1,9 +1,7 @@
 .subMenu{
     height:100%;
     width:100%;
-    background: radial-gradient(at top, rgba(255,255,255,.9), rgba(255,255,255,.0));
     border-radius:3px;
-    box-shadow: 0 10px 20px -10px var(--blue0);
     box-sizing: border-box;
     animation: submenu 0.5s ease;
 }
