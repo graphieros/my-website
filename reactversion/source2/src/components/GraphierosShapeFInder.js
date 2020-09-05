@@ -71,7 +71,7 @@ const GraphierosShapeFinder = (props) => {
 
         permutedArray = permute(cutCode);
         permutedReversedArray = permute(reversedArray);
-        console.log({permutedReversedArray});
+        
 
         let pushResult = function (origin) {
             return possibleResults.push({ n: origin.name.replace("_", ""), f: origin.fr });
