@@ -20,7 +20,6 @@
     "react-test-renderer": "^16.13.1"
   },
   "scripts": {
-    "booya": "node main",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
