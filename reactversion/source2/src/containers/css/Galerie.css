@@ -47,10 +47,7 @@
 .galleryShow{
     display: grid;
     align-content:center;
-    width:100%;
-    max-height:500px;
-    max-width:500px;
-    margin-top:115px;
+    margin-top:125px;
     box-sizing: border-box;
     padding-top: 22px;
     padding-left: 22px;
@@ -67,34 +64,40 @@
 
 .paintingTitle{
     display: block;
-    position: absolute;
-    top:50%;
-    left:50%;
-    transform: translate(15%, -50%);
-    width:300px;
-    height:100px;
-    height:100px;
+    position: fixed;
+    top:100px;
+    left:20px;
+    width:200px;
+    height:50px;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 0px;
     text-align:center;
     font-family: 'Megrim', cursive;
-    font-size:1.618em;
+    font-size:1.3em;
     font-weight:bold;
     color: rgb(7, 7, 56);
     border-top:1px solid white;
     animation: titleAppear 2s;
 }
 
+.paintingTitle p{
+    margin-top: 0px;
+    color: var(--blue4);
+    text-shadow: 1px 1px var(--blue0);
+}
+
 .paintingTitle span {
     display:block;
     font-family: 'Roboto', sans-serif;
-    font-size:0.618em;
+    font-size:0.75em;
     font-weight:initial;
     opacity: 0.75;
-    background: linear-gradient(to right,transparent, white, transparent);
     box-sizing: border-box;
     padding-top:10px;
     padding-bottom:10px;
+    margin-top: -50px;
+    color: var(--blue4);
+    text-shadow: 1px 1px var(--blue0);
 }
 
 @keyframes titleAppear {
@@ -119,35 +122,15 @@
 }
 
 @media screen and (max-width: 950px) {
-    .galleryShow img {
-        width:100%;
-        max-width:400px;
-        box-shadow: 0px 20px 40px -12px rgba(0,0,100,.35);
-    }
     .galleryShow {
         justify-items:center;
         padding-right:110px;
     }
     .paintingTitle{
-        border-top:none;
-        display: block;
-        position:initial;
-        width:100%;
-        max-width:400px;
-        transform: none;
-        margin-top:0px;
+
     }
     .paintingTitle span {
-        font-size: 0.4em;
-        margin-top: -50px;
-    }
-
-}
-
-@media screen and (max-width: 414px) {
-    .galleryShow{
-        align-items:center;
-        justify-items:center;
+        font-size: 0.5em;
     }
 
 }
@@ -156,9 +139,6 @@
     .galleryScroll{
         width:60px;
         right: 10px;
-    }
-    .galleryShow{
-        padding-top:0px;
     }
 }
 

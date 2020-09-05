@@ -192,17 +192,21 @@ const Galerie = () => {
                     temp_sizes.push(asset.size);
                     temp_years.push(asset.year);
                     temp_descr.push(asset.descr);
-                    return <img key={i} src={asset.pic} alt="gallerie" onClick={() => handleShow(i)} />
+                    return <img
+                        key={i}
+                        src={asset.pic}
+                        alt="gallerie"
+                        onClick={() => handleShow(i)} />
                 })}
             </div>
 
             <div className="galleryShow">
                 {galleryShowState.content}
-                <div className="paintingTitle">
-                    {titleState.content}
-                    <br />
-                    {infoState.content}
-                </div>
+            </div>
+            <div className="paintingTitle">
+                {titleState.content}
+                <br />
+                {infoState.content}
             </div>
 
         </div>
