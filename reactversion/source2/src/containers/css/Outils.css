@@ -1,0 +1,54 @@
+p.outilTitle{
+    text-align:center;
+    font-family: 'Megrim', cursive;
+    font-size:1.3em;
+    font-weight:bold;
+    animation: progLogos 1s ease-in-out;
+    position: fixed;
+    width:150px;
+    top:50%;
+    left:50%;
+    transform:translate(-160%,-50%);
+    color:var(--blue4);
+    text-shadow: 1px 1px 0 var(--blue0);
+}
+
+.progLogos{
+    width:150px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px;
+    position: fixed;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(at top, white, rgb(255,255,255,0.75));
+    box-sizing: border-box;
+    padding:20px;
+    border-radius:3px;
+    box-shadow: 0 10px 20px -10px rgb(29,55,104,.75);
+    animation: progLogos 1s ease-in-out;
+}
+
+@keyframes progLogos {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+svg.progLogo{
+    filter: drop-shadow(0 3px 2px rgb(29,55,104,.75));
+}
+
+@media (max-width:500px) {
+    p.outilTitle{
+        display: block;
+        position: fixed;
+        top: 80px;
+        left: 50%;
+        transform: translate(-50%,0%);
+    }
+}
