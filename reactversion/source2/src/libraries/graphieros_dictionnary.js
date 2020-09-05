@@ -13,6 +13,21 @@ let r = 218; //x_right
 
 let graphieros_dictionnary = [
     {
+        name:'_drydwa',
+        fr:'année',
+        path:[[rm,a,lm,a,l,q,lm,w,rm,w,r,q,m,q],[lm,a,r,q,lm,w,m,q,lm,a]]
+    },
+    {
+        name:'_dryktu',
+        fr:'mois',
+        path:[[lm,a,r,q,lm,w,m,q,lm,a,rm,a,rm,w,lm,w,lm,a],[l,q,l,q]]
+    },
+    {
+        name:'_dryksi',
+        fr:'semaine',
+        path:[[lm,a,r,q,lm,w,m,q,lm,a,rm,a,r,q,rm,w,lm,w,l,q,lm,a]]
+    },
+    {
         name:'_lki',
         fr: 'chaîner',
         path: [[l, q, rm, a, r, q, rm, w, l, q, lm, a, r, q, lm, w, l, q], [m, q, m, q]]
