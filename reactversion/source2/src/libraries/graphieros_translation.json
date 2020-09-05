@@ -2805,5 +2805,173 @@
         "phono": "kri blea",
         "line": "kri-blea",
         "molecule": "kri blea"
+    },
+    {
+        "fr": "écrire",
+        "litteral" : "marquer texte",
+        "phono": "mrai toi",
+        "line": "mrai-toi",
+        "molecule": "mrai toi"
+    },
+    {
+        "fr": "écrit",
+        "litteral" : "objet marquer texte",
+        "phono": "ptae mrai toi",
+        "line": "ptae-mrai-toi",
+        "molecule": "ptae mrai toi"
+    },
+    {
+        "fr": "écriture",
+        "litteral" : "déterminer marquer texte",
+        "phono": "mea mrai toi",
+        "line": "mea-mrai-toi",
+        "molecule": "mea mrai toi"
+    },
+    {
+        "fr": "écrivain",
+        "litteral" : "humain marquer texte",
+        "phono": "ka mrai toi",
+        "line": "ka-mrai-toi",
+        "molecule": "ka mrai toi"
+    },
+    {
+        "fr": "volontaire",
+        "litteral" : "qualité vouloir",
+        "phono": "kli v3ai",
+        "line": "kli-v3ai",
+        "molecule": "kli v3ai"
+    },
+    {
+        "fr": "volontairement",
+        "litteral" : "avec volonté",
+        "phono": "vi v3ai",
+        "line": "vi-v3ai",
+        "molecule": "vi v3ai"
+    },
+    {
+        "fr": "volonté",
+        "litteral" : "déterminer vouloir",
+        "phono": "mea v3ai",
+        "line": "mea-v3ai",
+        "molecule": "mea v3ai"
+    },
+    {
+        "fr": "attente",
+        "litteral" : "déterminer attendre",
+        "phono": "mea spea",
+        "line": "mea-spea",
+        "molecule": "mea spea"
+    },
+    {
+        "fr": "patiemmment",
+        "litteral" : "avec connaître attendre",
+        "phono": "vi kno spea",
+        "line": "vi-kno-spea",
+        "molecule": "vi kno spea"
+    },
+    {
+        "fr": "patienter",
+        "litteral" : "connaître attendre",
+        "phono": "kno spea",
+        "line": "kno-spea",
+        "molecule": "kno spea"
+    },
+    {
+        "fr": "patience",
+        "litteral" : "déterminer connaître attendre",
+        "phono": "mea kno spea",
+        "line": "mea-kno-spea",
+        "molecule": "mea kno spea"
+    },
+    {
+        "fr": "patient",
+        "litteral" : "qualité connaître attendre",
+        "phono": "kli kno spea",
+        "line": "kli-kno-spea",
+        "molecule": "kli kno spea"
+    },
+    {
+        "fr": "impatiemment",
+        "litteral" : "avec non connaître attendre",
+        "phono": "vi nia kno spea",
+        "line": "vi-nia-kno-spea",
+        "molecule": "vi nia kno spea"
+    },
+    {
+        "fr": "impatienter",
+        "litteral" : "non connaître attendre",
+        "phono": "nia kno spea",
+        "line": "nia-kno-spea",
+        "molecule": "nia kno spea"
+    },
+    {
+        "fr": "impatience",
+        "litteral" : "déterminer non connaître attendre",
+        "phono": "mea nia kno spea",
+        "line": "mea-nia-kno-spea",
+        "molecule": "mea nia kno spea"
+    },
+    {
+        "fr": "impatient",
+        "litteral" : "qualité non connaître attendre",
+        "phono": "kli nia kno spea",
+        "line": "kli-nia-kno-spea",
+        "molecule": "kli nia kno spea"
+    },
+    {
+        "fr": "moi",
+        "litteral" : "humain avoir reflet",
+        "phono": "ka fy go",
+        "line": "ka-fy-go",
+        "molecule": "ka fy go"
+    },
+    {
+        "fr": "nous",
+        "litteral" : "humain avoir reflet pluriel",
+        "phono": "ka fy go tsi",
+        "line": "ka-fy-go-tsi",
+        "molecule": "ka fy go tsi"
+    },
+    {
+        "fr": "toi",
+        "litteral" : "humain donner reflet",
+        "phono": "ka fya fy",
+        "line": "ka-fya-fy",
+        "molecule": "ka fya fy"
+    },
+    {
+        "fr": "vous",
+        "litteral" : "humain donner reflet pluriel",
+        "phono": "ka fya fy tsi",
+        "line": "ka-fya-fy-tsi",
+        "molecule": "ka fya fy tsi"
+    },
+    {
+        "fr": "il",
+        "litteral" : "mâle extérieur",
+        "phono": "mno tra",
+        "line": "mno-tra",
+        "molecule": "mno tra"
+    },
+    {
+        "fr": "ils",
+        "litteral" : "mâle extérieur pluriel",
+        "phono": "mno tra tsi",
+        "line": "mno-tra-tsi",
+        "molecule": "mno tra tsi"
+    },
+    {
+        "fr": "elle",
+        "litteral" : "femelle extérieur",
+        "phono": "mna tra",
+        "line": "mna-tra",
+        "molecule": "mna tra"
+    },
+    {
+        "fr": "elles",
+        "litteral" : "femelle extérieur pluriel",
+        "phono": "mna tra tsi",
+        "line": "mna-tra-tsi",
+        "molecule": "mna tra tsi"
     }
 ]
