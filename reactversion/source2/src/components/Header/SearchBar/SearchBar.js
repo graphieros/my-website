@@ -270,7 +270,7 @@ const SearchBar = (props) => {
             <div className={props.className}>
                 <input
                     className="searchInput"
-                    placeholder="rechercher..."
+                    placeholder="rechercher un mot..."
                     type="text"
                     autoFocus
                     onFocus={e => e.currentTarget.select()}
