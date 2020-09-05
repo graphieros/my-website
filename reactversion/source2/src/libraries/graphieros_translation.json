@@ -2973,5 +2973,390 @@
         "phono": "mna tra tsi",
         "line": "mna-tra-tsi",
         "molecule": "mna tra tsi"
+    },
+    {
+        "fr": "débris",
+        "litteral" : "objet part détruire",
+        "phono": "ptae prye dzye",
+        "line": "ptae-prye-dzye",
+        "molecule": "ptae prye dzye"
+    },
+    {
+        "fr": "épaule",
+        "litteral" : "objet os chaîner haut bras",
+        "phono": "ptae bnio lki pa bra",
+        "line": "ptae-bnio-lki-pa-bra",
+        "molecule": "ptae bnio lki pa bra"
+    },
+    {
+        "fr": "coude",
+        "litteral" : "objet os chaîner milieu bras",
+        "phono": "ptae bnio lki mdo bra",
+        "line": "ptae-bnio-lki-mdo-bra",
+        "molecule": "ptae bnio lki mdo bra"
+    },
+    {
+        "fr": "poignet",
+        "litteral" : "objet os chaîner bas bras",
+        "phono": "ptae bnio lki ni bra",
+        "line": "ptae-bnio-lki-ni-bra",
+        "molecule": "ptae bnio lki ni bra"
+    },
+    {
+        "fr": "hanche",
+        "litteral" : "objet os chaîner haut jambe",
+        "phono": "ptae bnio lki pa lgae",
+        "line": "ptae-bnio-lki-pa-lgae",
+        "molecule": "ptae bnio lki pa lgae"
+    },
+    {
+        "fr": "genou",
+        "litteral" : "objet os chaîner milieu jambe",
+        "phono": "ptae bnio lki mdo lgae",
+        "line": "ptae-bnio-lki-mdo-lgae",
+        "molecule": "ptae bnio lki mdo lgae"
+    },
+    {
+        "fr": "cheville",
+        "litteral" : "objet os chaîner bas jambe",
+        "phono": "ptae bnio lki ni lgae",
+        "line": "ptae-bnio-lki-ni-lgae",
+        "molecule": "ptae bnio lki ni lgae"
+    },
+    {
+        "fr": "aisselle",
+        "litteral" : "objet sous bras",
+        "phono": "ptae nde bra",
+        "line": "ptae-nde-bra",
+        "molecule": "ptae nde bra"
+    },
+    {
+        "fr": "tendon",
+        "litteral" : "objet souple connecter os",
+        "phono": "ptae sple knoi bnio",
+        "line": "ptae-sple-knoi-bnio",
+        "molecule": "ptae sple knoi bnio"
+    },
+    {
+        "fr": "lundi",
+        "litteral" : "déterminer jour nombre zéro",
+        "phono": "mea kadwa nmae sro",
+        "line": "mea-kadwa-nmae-sro",
+        "molecule": "mea kadwa nmae sro"
+    },
+    {
+        "fr": "mardi",
+        "litteral" : "déterminer jour nombre un",
+        "phono": "mea kadwa nmae kfa",
+        "line": "mea-kadwa-nmae-kfa",
+        "molecule": "mea kadwa nmae kfa"
+    },
+    {
+        "fr": "mercredi",
+        "litteral" : "déterminer jour nombre deux",
+        "phono": "mea kadwa nmae du",
+        "line": "mea-kadwa-nmae-du",
+        "molecule": "mea kadwa nmae du"
+    },
+    {
+        "fr": "jeudi",
+        "litteral" : "déterminer jour nombre trois",
+        "phono": "mea kadwa nmae srei",
+        "line": "mea-kadwa-nmae-srei",
+        "molecule": "mea kadwa nmae srei"
+    },
+    {
+        "fr": "vendredi",
+        "litteral" : "déterminer jour nombre quatre",
+        "phono": "mea kadwa nmae ktu",
+        "line": "mea-kadwa-nmae-ktu",
+        "molecule": "mea kadwa nmae ktu"
+    },
+    {
+        "fr": "samedi",
+        "litteral" : "déterminer jour nombre cinq",
+        "phono": "mea kadwa nmae foi",
+        "line": "mea-kadwa-nmae-foi",
+        "molecule": "mea kadwa nmae foi"
+    },
+    {
+        "fr": "dimanche",
+        "litteral" : "déterminer jour nombre six",
+        "phono": "mea kadwa nmae foi",
+        "line": "mea-kadwa-nmae-ksi",
+        "molecule": "mea kadwa nmae ksi"
+    },
+    {
+        "fr": "mère",
+        "litteral" : "femelle origine",
+        "phono": "mna via",
+        "line": "mna-via",
+        "molecule": "mna via"
+    },
+    {
+        "fr": "père",
+        "litteral" : "mâle origine",
+        "phono": "mno via",
+        "line": "mno-via",
+        "molecule": "mno via"
+    },
+    {
+        "fr": "fille",
+        "litteral" : "enfant femelle",
+        "phono": "kdie mna",
+        "line": "kdie-mna",
+        "molecule": "kdie mna"
+    },
+    {
+        "fr": "garçon",
+        "litteral" : "enfant mâle",
+        "phono": "kdie mno",
+        "line": "kdie-mno",
+        "molecule": "kdie mno"
+    },
+    {
+        "fr": "frère",
+        "litteral" : "mâle enfant origine égal",
+        "phono": "mno kdie via gla",
+        "line": "mno-kdie-via-gla",
+        "molecule": "mno kdie via gla"
+    },
+    {
+        "fr": "soeur",
+        "litteral" : "femelle enfant origine égal",
+        "phono": "mna kdie via gla",
+        "line": "mna-kdie-via-gla",
+        "molecule": "mna kdie via gla"
+    },
+    {
+        "fr": "mammifère",
+        "litteral" : "animal oeuf intérieur",
+        "phono": "pkia gwa nsa",
+        "line": "pkia-gwa-nsa",
+        "molecule": "pkia gwa nsa"
+    },
+    {
+        "fr": "ovipare",
+        "litteral" : "animal oeuf extérieur",
+        "phono": "pkia gwa tra",
+        "line": "pkia-gwa-tra",
+        "molecule": "pkia gwa tra"
+    },
+    {
+        "fr": "verrou",
+        "litteral" : "objet clé fermer",
+        "phono": "ptae ki kloi",
+        "line": "ptae-kli-kloi",
+        "molecule": "ptae ki kloi"
+    },
+    {
+        "fr": "verrouillage",
+        "litteral" : "déterminer clé fermer",
+        "phono": "mea ki kloi",
+        "line": "mea-ki-kloi",
+        "molecule": "mea ki kloi"
+    },
+    {
+        "fr": "verrouiller",
+        "litteral" : "clé fermer",
+        "phono": "ki kloi",
+        "line": "ki-kloi",
+        "molecule": "ki kloi"
+    },
+    {
+        "fr": "déverrouillage",
+        "litteral" : "déterminer clé ouvrir",
+        "phono": "mea ki pno",
+        "line": "mea-ki-pno",
+        "molecule": "mea ki pno"
+    },
+    {
+        "fr": "déverrouiller",
+        "litteral" : "clé ouvrir",
+        "phono": "ki pno",
+        "line": "ki-pno",
+        "molecule": "ki pno"
+    },
+    {
+        "fr": "génération",
+        "litteral" : "déterminer construire enfant",
+        "phono": "mea ksea kdie",
+        "line": "mea-ksea-kdie",
+        "molecule": "mea ksea kdie"
+    },
+    {
+        "fr": "générer",
+        "litteral" : "construire enfant",
+        "phono": "ksea kdie",
+        "line": "ksea-kdie",
+        "molecule": "ksea kdie"
+    },
+    {
+        "fr": "boîte aux lettres",
+        "litteral" : "objet fonction récipient courrier",
+        "phono": "ptae fkai tba krye",
+        "line": "ptae-fkai-tba-krye",
+        "molecule": "ptae fkai tba krye"
+    },
+    {
+        "fr": "poster",
+        "litteral" : "lancer courrier",
+        "phono": "ska krye",
+        "line": "ska-krye",
+        "molecule": "ska krye"
+    },
+    {
+        "fr": "post",
+        "litteral" : "objet lancer courrier",
+        "phono": "ptae ska krye",
+        "line": "ptae-ska-krye",
+        "molecule": "ptae ska krye"
+    },
+    {
+        "fr": "dévalorisant",
+        "litteral" : "qualité retirer valeur",
+        "phono": "kli lvoi vlia",
+        "line": "kli-lvoi-vlia",
+        "molecule": "kli lvoi vlia"
+    },
+    {
+        "fr": "dévalorisation",
+        "litteral" : "déterminer retirer valeur",
+        "phono": "mea lvoi vlia",
+        "line": "mea-lvoi-lvia",
+        "molecule": "mea lvoi vlia"
+    },
+    {
+        "fr": "dévaloriser",
+        "litteral" : "retirer valeur",
+        "phono": "lvoi vlia",
+        "line": "lvoi-vlia",
+        "molecule": "lvoi vlia"
+    },
+    {
+        "fr": "cohabitation",
+        "litteral" : "déterminer vivre avec",
+        "phono": "mea sa vi",
+        "line": "mea-sa-vi",
+        "molecule": "mea sa vi"
+    },
+    {
+        "fr": "cohabiter",
+        "litteral" : "vivre avec",
+        "phono": "sa vi",
+        "line": "sa-vi",
+        "molecule": "sa vi"
+    },
+    {
+        "fr": "ami",
+        "litteral" : "humain connaître humain",
+        "phono": "ka kno ka",
+        "line": "ka-kno-ka",
+        "molecule": "ka kno ka"
+    },
+    {
+        "fr": "amical",
+        "litteral" : "qualité connaître humain",
+        "phono": "kli kno ka",
+        "line": "kli-kno-ka",
+        "molecule": "kli kno ka"
+    },
+    {
+        "fr": "amicalement",
+        "litteral" : "avec connaître humain",
+        "phono": "vi kno ka",
+        "line": "vi-kno-ka",
+        "molecule": "vi kno ka"
+    },
+    {
+        "fr": "amitié",
+        "litteral" : "déterminer connaître humain",
+        "phono": "mea kno ka",
+        "line": "mea-kno-ka",
+        "molecule": "mea kno ka"
+    },
+    {
+        "fr": "ennemi",
+        "litteral" : "humain conflit humain",
+        "phono": "ka troi ka",
+        "line": "ka-troi-ka",
+        "molecule": "ka troi ka"
+    },
+    {
+        "fr": "accomodation",
+        "litteral" : "déterminer faire avec",
+        "phono": "mea fa vi",
+        "line": "mea-fa-vi",
+        "molecule": "mea fa vi"
+    },
+    {
+        "fr": "accomoder",
+        "litteral" : "faire avec",
+        "phono": "fa vi",
+        "line": "fa-vi",
+        "molecule": "fa vi"
+    },
+    {
+        "fr": "évaporation",
+        "litteral" : "déterminer eau voler",
+        "phono": "mea to flae",
+        "line": "mea-to-flae",
+        "molecule": "mea to flae"
+    },
+    {
+        "fr": "évaporer",
+        "litteral" : "eau voler",
+        "phono": "to flae",
+        "line": "to-flae",
+        "molecule": "to flae"
+    },
+    {
+        "fr": "éducateur",
+        "litteral" : "humain former enfant",
+        "phono": "ka fai kdie",
+        "line": "ka-fai-kdie",
+        "molecule": "ka fai kdie"
+    },
+    {
+        "fr": "éducatif",
+        "litteral" : "qualité former enfant",
+        "phono": "kli fai kdie",
+        "line": "kli-fai-kdie",
+        "molecule": "kli fai kdie"
+    },
+    {
+        "fr": "éducation",
+        "litteral" : "déterminer former enfant",
+        "phono": "mea fai kdie",
+        "line": "mea-fai-kdie",
+        "molecule": "mea fai kdie"
+    },
+    {
+        "fr": "éduquer",
+        "litteral" : "former enfant",
+        "phono": "fai kdie",
+        "line": "fai-kdie",
+        "molecule": "fai kdie"
+    },
+    {
+        "fr": "bois",
+        "litteral" : "matière végétal dur",
+        "phono": "mtai pio drei",
+        "line": "mtai-pio-drei",
+        "molecule": "mtai pio drei"
+    },
+    {
+        "fr": "vapeur",
+        "litteral" : "gaz eau",
+        "phono": "gzai to ",
+        "line": "gzai-to",
+        "molecule": "gzai to"
+    },
+    {
+        "fr": "végétation",
+        "litteral" : "déterminer former végétal",
+        "phono": "mea fai pio",
+        "line": "mea-fai-pio",
+        "molecule": "mea fai pio"
     }
 ]
