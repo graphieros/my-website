@@ -15,7 +15,7 @@ const LandingPage = (props) => {
 
     return (
         <div className={props.className}>
-            <p className='quote'>L'art en un léger déséquilibre.</p>
+            <p className='quote'>L'art est un léger déséquilibre.</p>
             <div onClick={props.close}>
                 <Fractal
                     className='landingFractal'
