@@ -2,6 +2,7 @@ import React from 'react';
 import Fractal from '../components/graphieros/Fractal';
 import clouds from '../assets/clouds.png';
 import '../css/LandingPage.css';
+import Alp from '../components/Alp';
 
 
 const LandingPage = (props) => {
@@ -15,6 +16,7 @@ const LandingPage = (props) => {
 
     return (
         <div className={props.className}>
+            <Alp className='alpLanding'/>
             <p className='quote'>L'art est un léger déséquilibre.</p>
             <div onClick={props.close}>
                 <Fractal
@@ -34,7 +36,7 @@ const LandingPage = (props) => {
             <div className='landingName'>
                 <span>A</span>lec <span>L</span>loyd <span>P</span>robert
                 </div>
-
+            
 
         </div>
     )

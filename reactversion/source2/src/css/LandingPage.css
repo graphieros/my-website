@@ -11,6 +11,7 @@
 }
 
 p.quote{
+    display: block;
     margin-top:250px;
     width:100%;
     text-align:center;
@@ -109,7 +110,7 @@ p.quote{
     }
     100%{
         opacity:1;
-        marfin-top:250px;
+        margin-top:250px;
     }
 }
 
