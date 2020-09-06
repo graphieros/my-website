@@ -58,6 +58,7 @@
 }
 
 button.btnSearchShape {
+    z-index:1;
     position: fixed;
     right:15px;
     top:70px;

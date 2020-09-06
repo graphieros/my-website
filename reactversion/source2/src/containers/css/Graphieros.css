@@ -34,7 +34,7 @@
     stroke-dasharray: 1000px;
     stroke-dashoffset: 1000px;
     animation: move 1s linear;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; 
 }
 
 .graphierosDescription{

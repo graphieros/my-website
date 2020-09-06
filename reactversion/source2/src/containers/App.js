@@ -75,7 +75,7 @@ const App = () => {
           rel='noopener noreferrer'
           href='https://graphieros.com/cle.html'>
           Lire La clé
-            </a>
+            </a>   
 
         <div className="back" style={style} />
 
