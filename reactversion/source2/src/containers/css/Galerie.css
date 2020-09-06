@@ -4,12 +4,12 @@
     right:0;
     bottom: 0;
     top:250px;
-    height:100%;
+    height:90%;
     width:100px;
     overflow: auto;
     box-sizing: border-box;
     padding-top:20px;
-    padding-bottom:100px;
+    padding-bottom:200px;
 }
 .galleryScroll::-webkit-scrollbar {
     width:0px;
@@ -47,11 +47,11 @@
 .galleryShow{
     display: grid;
     align-content:center;
-    margin-top:125px;
+    margin-top:145px;
     box-sizing: border-box;
-    padding-top: 22px;
-    padding-left: 22px;
-    padding-right:100px;
+    width:70%;
+    margin-left:50%;
+    transform: translateX(-60%);
 }
 
 .galleryShow img {
@@ -100,6 +100,135 @@
     text-shadow: 1px 1px var(--blue0);
 }
 
+button.btnWallSwitch {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items:center;
+    justify-items:center;
+    top:150px;
+    left:50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border:none;
+    min-height:30px;
+    border-radius:3px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,.75);
+    background: radial-gradient(at top, white, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
+    color: var(--blue0);
+    font-weight:bold;
+    font-family: 'Roboto', cursive;
+    transition: all 0.3s ease;
+    text-align:left;
+    grid-gap:0px;
+    width:150px;
+    z-index:10;
+    border:1px solid white;
+}
+
+button.btnWallSwitch:hover{
+    filter: sepia(100%);
+}
+
+.btnWallSwitchIcon{
+    margin-left:-10px;
+}
+
+.galleryWall {
+    width:90%;
+    margin:0 auto;
+    box-sizing: border-box;
+    padding:20px;
+    border-radius:3px;
+    perspective: 1200px;
+    height:90vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:40px;
+}
+
+.leftWall,
+.rightWall{
+    background: grey;
+    height:80%;
+    width:100%;
+    transform-style: preserve-3d;
+    background: radial-gradient(at top, white, rgb(173, 169, 160));
+    display: grid;
+    align-items:center;
+    justify-items:center;
+}
+
+.leftWall{
+    transform: rotateY(30deg);
+    box-shadow: 0px 10px 40px white;
+}
+
+.rightWall{
+    transform: rotateY(-30deg);
+    box-shadow: 10px 0px 40px white;
+}
+
+.leftWall img,
+.rightWall img {
+    max-width:50%;
+    max-height:50%;
+    box-shadow: 0 25px 50px -25px black;
+    animation: walls 0.5s ease-in-out;
+}
+
+@keyframes walls {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.leftWall img {
+    border-left: 7px solid rgb(39, 39, 39);
+    border-radius:10px 0 0 10px;
+}
+
+.rightWall img {
+    border-right: 7px solid rgb(39,39,39);
+    border-radius: 0 10px 10px 0;
+}
+
+button.btnNextPainting{
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items:center;
+    justify-items:center;
+    bottom: 10px;
+    left:50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    border:none;
+    min-height:30px;
+    box-sizing: border-box;
+    padding-left:30px;
+    padding-right:30px;
+    border-radius:3px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,.75);
+    background: radial-gradient(at top, white, tomato);
+    color: var(--blue0);
+    font-family: 'Roboto', cursive;
+    transition: all 0.3s ease;
+    text-align:left;
+    grid-gap:0px;
+    width:200px;
+    z-index:10;
+    border:1px solid white;
+    font-weight:bold;
+}
+
+button.btnNextPainting:hover{
+    filter: sepia(100%);
+}
+
 @keyframes titleAppear {
     0%{
         opacity:0;
@@ -124,21 +253,42 @@
 @media screen and (max-width: 950px) {
     .galleryShow {
         justify-items:center;
-        padding-right:110px;
-    }
-    .paintingTitle{
-
+        width:70%;
+        margin-left:20px;
+        transform: translateX(0%);
     }
     .paintingTitle span {
         font-size: 0.5em;
     }
+    button.btnWallSwitch{
+        bottom:10px;
+        top:initial;
+        height:40px;
+    }
+
+    button.btnNextPainting{
+        bottom:60px;
+    }
 
 }
 
-@media (max-width:500px){
+@media (max-width:800px){
+    .galleryWall{
+        display: block;
+    }
+    .rightWall{
+        display:none;
+    }
+}
+
+@media (max-width:600px){
     .galleryScroll{
         width:60px;
         right: 10px;
+        padding-bottom:200px;
+    }
+    .leftWall{
+        margin-top:-100px;
     }
 }
 
