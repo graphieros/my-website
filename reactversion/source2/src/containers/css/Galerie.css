@@ -114,7 +114,7 @@ button.btnWallSwitch {
     min-height:30px;
     border-radius:3px;
     box-shadow: 0 5px 10px -5px rgba(29,55,104,.75);
-    background: radial-gradient(at top, white, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
+    background: radial-gradient(at left, white, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
     color: var(--blue0);
     font-weight:bold;
     font-family: 'Roboto', cursive;
@@ -132,6 +132,7 @@ button.btnWallSwitch:hover{
 
 .btnWallSwitchIcon{
     margin-left:-10px;
+    height:30px;
 }
 
 .galleryWall {
@@ -213,7 +214,7 @@ button.btnNextPainting{
     padding-right:30px;
     border-radius:3px;
     box-shadow: 0 5px 10px -5px rgba(29,55,104,.75);
-    background: radial-gradient(at top, white, tomato);
+    background: radial-gradient(at left, white, tomato);
     color: var(--blue0);
     font-family: 'Roboto', cursive;
     transition: all 0.3s ease;
