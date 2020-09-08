@@ -48,7 +48,6 @@ const Parcours = () => {
                     content='mes outils'
                 />
             </Link>
-
         </div>
     )
 }

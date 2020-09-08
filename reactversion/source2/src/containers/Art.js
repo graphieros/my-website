@@ -39,9 +39,9 @@ const Art = () => {
                 <SubMenu
                     svgSize={200}
                     sequence='wz-ze-ex-xw-ws-sx ze-qs-wx zs-sd-ws'
-                    R={155}
-                    G={100}
-                    B={155}
+                    R={122}
+                    G={90}
+                    B={219}
                     dropShadow='0px 2px 2px rgb(5,5,20)'
                     light={true}
                     intensity='1.5'

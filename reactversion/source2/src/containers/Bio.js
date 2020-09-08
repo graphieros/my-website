@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Fractal from '../components/graphieros/Fractal';
 import './css/Bio.css';
 import alp from '../assets/alp.jpg';
+import Alp from '../components/Alp';
 
 
 const Bio = () => {
-    
+
 
     const story = [
         "Suivez la flèche...",
@@ -27,7 +28,7 @@ const Bio = () => {
         "...un style cellulaire, en référence peut-être à ce nouvel organe qui se greffait à nous peu à peu au début du siècle, et sans lequel aujourd'hui nul n'oserait s'aventurer dans le monde.",
         "En pensant la peinture à partir de cellules, je finis par atteindre les fondements de toute création graphique, le point. Et depuis ce point, j'ai inventé un langage."
     ];
- 
+
     let [count, setCount] = useState(0);
 
 
@@ -62,11 +63,11 @@ const Bio = () => {
         console.log(count);
     }
 
-    let publicCount = count-1;
-    if (publicCount === -1){
+    let publicCount = count - 1;
+    if (publicCount === -1) {
         publicCount = ''
-    }else{
-        publicCount = `${publicCount} / ${story.length -1}`
+    } else {
+        publicCount = `${publicCount} / ${story.length - 1}`
     }
 
     return (
@@ -87,25 +88,27 @@ const Bio = () => {
             </div>
 
             <div id="storyArrow" onClick={handleStory}>
-                        <Fractal
-                            sequence='qd-ed-dx'
-                            colors={[75,106,160]}
-                            size='40'
-                            svgSize='60'
-                            radius=''
-                            background='white'
-                            light={true}
-                            intensity='1.1'
-                            border=''
-                            backgroundRadius='100%'
-                            dropShadow=''
-                        />
-                    </div>
+                <Fractal
+                    sequence='qd-ed-dx'
+                    colors={[75, 106, 160]}
+                    size='40'
+                    svgSize='60'
+                    radius=''
+                    background='white'
+                    light={true}
+                    intensity='1.1'
+                    border=''
+                    backgroundRadius='100%'
+                    dropShadow=''
+                />
+            </div>
 
             <div id='story'>
                 <span>{publicCount}</span>
                 {contentState.content}
             </div>
+
+            <Alp className='alpBio' />
 
         </div>
     )
