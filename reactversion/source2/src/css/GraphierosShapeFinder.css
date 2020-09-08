@@ -43,6 +43,22 @@ svg.svgInput{
     box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
 }
 
+svg.svgInput path{
+    animation: dash 5s infinite;
+}
+
+@keyframes dash{
+    0%{
+        stroke: var(--blue0);
+    }
+    50%{
+        stroke: var(--blue2);
+    }
+    100%{
+        stroke: var(--blue0);
+    }     
+}
+
 circle.circleInput{
     transition: r 0.3s ease, fill 0.3s ease;
     fill: var(--blue0);
@@ -214,6 +230,31 @@ p.svgInputTitle{
     font-size:0.7em;
     width:75%;
     color: var(--blue0);
+}
+
+.resultCounter{
+    display: block;
+    position: fixed;
+    bottom:2px;
+    font-size:0.7em;
+    color: var(--blue0);
+    font-weight:bold;
+    animation: resultCounter 1.618s ease-in-out infinite;
+}
+
+@keyframes resultCounter{
+    0%{
+        opacity:0;
+        color: tomato;
+    }
+    50%{
+        color: var(--blue0);
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        color: tomato;
+    }
 }
 
 @media (max-width: 320px) {

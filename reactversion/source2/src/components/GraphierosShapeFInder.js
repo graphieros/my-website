@@ -25,6 +25,11 @@ const GraphierosShapeFinder = (props) => {
         content: ''
     });
 
+    const [resultCounterState, setResultCounterState] = useState({
+        className: 'hidden',
+        content: ''
+    })
+
 
     const handleCoordinates = (props) => {
 
@@ -65,7 +70,8 @@ const GraphierosShapeFinder = (props) => {
         let permutedArray = [];
         let permutedReversedArray = [];
         let shifted0 = changeLoop(cutCode[0]);
-        
+        let rs0;
+
         let shifted0a;
         let rs0a;
         let shifted0b;
@@ -117,11 +123,59 @@ const GraphierosShapeFinder = (props) => {
 
 
         let shifted1;
+        let rs1;
         let shifted1a;
+        let rs1a;
+        let shifted1b;
+        let rs1b;
+        let shifted1c;
+        let rs1c;
+        let shifted1d;
+        let rs1d;
+        let shifted1e;
+        let rs1e;
+        let shifted1f;
+        let rs1f;
+        let shifted1g;
+        let rs1g;
+        let shifted1h;
+        let rs1h;
+        let shifted1i;
+        let rs1i;
+        let shifted1j;
+        let rs1j;
+        let shifted1k;
+        let rs1k;
+        let shifted1l;
+        let rs1l;
+        let shifted1m;
+        let rs1m;
+        let shifted1n;
+        let rs1n;
+        let shifted1o;
+        let rs1o;
+        let shifted1p;
+        let rs1p;
+        let shifted1q;
+        let rs1q;
+        let shifted1r;
+        let rs1r;
+        let shifted1s;
+        let rs1s;
+        let shifted1t;
+        let rs1t;
+        let shifted1u;
+        let rs1u;
+        let shifted1v;
+        let rs1v;
+        let shifted1w;
+        let rs1w;
+        let shifted1x;
+        let rs1x;
 
         let shifted2;
         let shifted2a;
-        
+
         if (shifted0 && cutCode[0]) {
             shifted0a = changeLoop(shifted0);
             shifted0b = changeLoop(shifted0a);
@@ -147,6 +201,7 @@ const GraphierosShapeFinder = (props) => {
             shifted0v = changeLoop(shifted0u);
             shifted0w = changeLoop(shifted0v);
             shifted0x = changeLoop(shifted0w);
+            rs0 = pairSwap(shifted0);
             rs0a = pairSwap(shifted0a);
             rs0b = pairSwap(shifted0b);
             rs0c = pairSwap(shifted0c);
@@ -170,13 +225,62 @@ const GraphierosShapeFinder = (props) => {
             rs0u = pairSwap(shifted0u);
             rs0v = pairSwap(shifted0v);
             rs0w = pairSwap(shifted0w);
-            rs0x = pairSwap(shifted0x);   
+            rs0x = pairSwap(shifted0x);
         }
 
         if (shifted1 && cutCode[1]) {
             shifted1 = changeLoop(cutCode[1]);
             shifted1a = changeLoop(shifted1);
+            shifted1b = changeLoop(shifted1a);
+            shifted1c = changeLoop(shifted1b);
+            shifted1d = changeLoop(shifted1c);
+            shifted1e = changeLoop(shifted1d);
+            shifted1f = changeLoop(shifted1e);
+            shifted1g = changeLoop(shifted1f);
+            shifted1h = changeLoop(shifted1g);
+            shifted1i = changeLoop(shifted1h);
+            shifted1j = changeLoop(shifted1i);
+            shifted1k = changeLoop(shifted1j);
+            shifted1l = changeLoop(shifted1k);
+            shifted1m = changeLoop(shifted1l);
+            shifted1n = changeLoop(shifted1m);
+            shifted1o = changeLoop(shifted1n);
+            shifted1p = changeLoop(shifted1o);
+            shifted1q = changeLoop(shifted1p);
+            shifted1r = changeLoop(shifted1q);
+            shifted1s = changeLoop(shifted1r);
+            shifted1t = changeLoop(shifted1s);
+            shifted1u = changeLoop(shifted1t);
+            shifted1v = changeLoop(shifted1u);
+            shifted1w = changeLoop(shifted1v);
+            shifted1x = changeLoop(shifted1w);
+            rs1 = pairSwap(shifted1);
+            rs1a = pairSwap(shifted1a);
+            rs1b = pairSwap(shifted1b);
+            rs1c = pairSwap(shifted1c);
+            rs1d = pairSwap(shifted1d);
+            rs1e = pairSwap(shifted1e);
+            rs1f = pairSwap(shifted1f);
+            rs1g = pairSwap(shifted1g);
+            rs1h = pairSwap(shifted1h);
+            rs1i = pairSwap(shifted1i);
+            rs1j = pairSwap(shifted1j);
+            rs1k = pairSwap(shifted1k);
+            rs1l = pairSwap(shifted1l);
+            rs1m = pairSwap(shifted1m);
+            rs1n = pairSwap(shifted1n);
+            rs1o = pairSwap(shifted1o);
+            rs1p = pairSwap(shifted1p);
+            rs1q = pairSwap(shifted1q);
+            rs1r = pairSwap(shifted1r);
+            rs1s = pairSwap(shifted1s);
+            rs1t = pairSwap(shifted1t);
+            rs1u = pairSwap(shifted1u);
+            rs1v = pairSwap(shifted1v);
+            rs1w = pairSwap(shifted1w);
+            rs1x = pairSwap(shifted1x);
         }
+
         if (shifted2 && cutCode[2]) {
             shifted2 = changeLoop(cutCode[2]);
             shifted2a = changeLoop(shifted2);
@@ -185,8 +289,6 @@ const GraphierosShapeFinder = (props) => {
         for (let i = 0; i < cutCode.length; i += 1) {
             reversedArray.push(pairSwap(cutCode[i]));
         }
-
-
 
         permutedArray = permute(cutCode);
         permutedReversedArray = permute(reversedArray);
@@ -204,10 +306,26 @@ const GraphierosShapeFinder = (props) => {
 
             let thatSearch = entry.path.toString();
 
-            if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatches(thatSearch, shifted0) || itMatches(thatSearch, shifted0a) || itMatches(thatSearch, shifted0b) || itMatches(thatSearch, shifted0c) || itMatches(thatSearch, shifted0d) || itMatches(thatSearch, shifted0e) || itMatches(thatSearch, shifted0f) || itMatches(thatSearch, shifted0g) || itMatches(thatSearch, shifted0h) || itMatches(thatSearch, shifted0i) || itMatches(thatSearch, shifted0j) || itMatches(thatSearch, shifted0k) || itMatches(thatSearch, shifted0l) || itMatches(thatSearch, shifted0m) || itMatches(thatSearch, shifted0n) || itMatches(thatSearch, shifted0o) || itMatches(thatSearch, shifted0p) || itMatches(thatSearch, shifted0q) || itMatches(thatSearch, shifted0r) || itMatches(thatSearch, shifted0s) || itMatches(thatSearch, shifted0t) || itMatches(thatSearch, shifted0u) || itMatches(thatSearch, shifted0v) || itMatches(thatSearch, shifted0w) || itMatches(thatSearch, shifted0x) || itMatches(thatSearch, shifted1) || itMatches(thatSearch, shifted1a) || itMatches(thatSearch, shifted2) || itMatches(thatSearch, shifted2a) || itMatches(thatSearch, rs0a) || itMatches(thatSearch, rs0b) || itMatches(thatSearch, rs0c) || itMatches(thatSearch, rs0d) || itMatches(thatSearch, rs0e) || itMatches(thatSearch, rs0f) || itMatches(thatSearch, rs0g) || itMatches(thatSearch, rs0h) || itMatches(thatSearch, rs0i) || itMatches(thatSearch,rs0j) || itMatches(thatSearch, rs0k) || itMatches(thatSearch, rs0l) || itMatches(thatSearch, rs0m) || itMatches(thatSearch, rs0n) || itMatches(thatSearch, rs0o) || itMatches(thatSearch, rs0p) || itMatches(thatSearch, rs0q) || itMatches(thatSearch, rs0r) || itMatches(thatSearch, rs0s) || itMatches(thatSearch, rs0t) || itMatches(thatSearch, rs0u) || itMatches(thatSearch, rs0v) || itMatches(thatSearch, rs0w) || itMatches(thatSearch, rs0x)) {
-                pushResult(entry);
+            //do the same with all combinations, use OR
+            let itMatchesAllShifts0 = function () {
+                return itMatches(thatSearch, shifted0) || itMatches(thatSearch, shifted0a) || itMatches(thatSearch, shifted0b) || itMatches(thatSearch, shifted0c) || itMatches(thatSearch, shifted0d) || itMatches(thatSearch, shifted0e) || itMatches(thatSearch, shifted0f) || itMatches(thatSearch, shifted0g) || itMatches(thatSearch, shifted0h) || itMatches(thatSearch, shifted0i) || itMatches(thatSearch, shifted0j) || itMatches(thatSearch, shifted0k) || itMatches(thatSearch, shifted0l) || itMatches(thatSearch, shifted0m) || itMatches(thatSearch, shifted0n) || itMatches(thatSearch, shifted0o) || itMatches(thatSearch, shifted0p) || itMatches(thatSearch, shifted0q) || itMatches(thatSearch, shifted0r) || itMatches(thatSearch, shifted0s) || itMatches(thatSearch, shifted0t) || itMatches(thatSearch, shifted0u) || itMatches(thatSearch, shifted0v) || itMatches(thatSearch, shifted0w) || itMatches(thatSearch, shifted0x) || itMatches(thatSearch, shifted1) || itMatches(thatSearch, shifted1a) || itMatches(thatSearch, shifted2) || itMatches(thatSearch, shifted2a) || itMatches(thatSearch, rs0) || itMatches(thatSearch, rs0a) || itMatches(thatSearch, rs0b) || itMatches(thatSearch, rs0c) || itMatches(thatSearch, rs0d) || itMatches(thatSearch, rs0e) || itMatches(thatSearch, rs0f) || itMatches(thatSearch, rs0g) || itMatches(thatSearch, rs0h) || itMatches(thatSearch, rs0i) || itMatches(thatSearch, rs0j) || itMatches(thatSearch, rs0k) || itMatches(thatSearch, rs0l) || itMatches(thatSearch, rs0m) || itMatches(thatSearch, rs0n) || itMatches(thatSearch, rs0o) || itMatches(thatSearch, rs0p) || itMatches(thatSearch, rs0q) || itMatches(thatSearch, rs0r) || itMatches(thatSearch, rs0s) || itMatches(thatSearch, rs0t) || itMatches(thatSearch, rs0u) || itMatches(thatSearch, rs0v) || itMatches(thatSearch, rs0w) || itMatches(thatSearch, rs0x)
+            }
+
+            let itMatchesAllShifts1 = function () {
+                return itMatches(thatSearch, shifted1) || itMatches(thatSearch, shifted1a) || itMatches(thatSearch, shifted1b) || itMatches(thatSearch, shifted1c) || itMatches(thatSearch, shifted1d) || itMatches(thatSearch, shifted1e) || itMatches(thatSearch, shifted1f) || itMatches(thatSearch, shifted1g) || itMatches(thatSearch, shifted1h) || itMatches(thatSearch, shifted1i) || itMatches(thatSearch, shifted1j) || itMatches(thatSearch, shifted1k) || itMatches(thatSearch, shifted1l) || itMatches(thatSearch, shifted1m) || itMatches(thatSearch, shifted1n) || itMatches(thatSearch, shifted1o) || itMatches(thatSearch, shifted1p) || itMatches(thatSearch, shifted1q) || itMatches(thatSearch, shifted1r) || itMatches(thatSearch, shifted1s) || itMatches(thatSearch, shifted1t) || itMatches(thatSearch, shifted1u) || itMatches(thatSearch, shifted1v) || itMatches(thatSearch, shifted1w) || itMatches(thatSearch, shifted1x) || itMatches(thatSearch, rs1) || itMatches(thatSearch, rs1a) || itMatches(thatSearch, rs1b) || itMatches(thatSearch, rs1c) || itMatches(thatSearch, rs1d) || itMatches(thatSearch, rs1e) || itMatches(thatSearch, rs1f) || itMatches(thatSearch, rs1g) || itMatches(thatSearch, rs1h) || itMatches(thatSearch, rs1i) || itMatches(thatSearch, rs1j) || itMatches(thatSearch, rs1k) || itMatches(thatSearch, rs1l) || itMatches(thatSearch, rs1m) || itMatches(thatSearch, rs1n) || itMatches(thatSearch, rs1o) || itMatches(thatSearch, rs1p) || itMatches(thatSearch, rs1q) || itMatches(thatSearch, rs1r) || itMatches(thatSearch, rs1s) || itMatches(thatSearch, rs1t) || itMatches(thatSearch, rs1u) || itMatches(thatSearch, rs1v) || itMatches(thatSearch, rs1w) || itMatches(thatSearch, rs1x)
+            }
+
+            if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatchesAllShifts0()) {
+                if (itMatches(thatSearch, cutCode[1]) || itMatches(thatSearch, reversedArray[1]) || itMatches(thatSearch, permutedArray[1]) || itMatches(thatSearch, permutedReversedArray[1]) || itMatchesAllShifts1()) {
+                    pushResult(entry);
+                } else {
+                    pushResult(entry);
+                }
+
             } else if (itMatches(thatSearch, cutCode[0])) {
-                if (itMatches(thatSearch, cutCode[1])) {
+                if (itMatchesAllShifts1()) {
+                    pushResult(entry);
+                } else if (itMatches(thatSearch, cutCode[1])) {
                     if (itMatches(thatSearch, cutCode[2])) {
                         pushResult(entry);
                     } else if (itMatches(thatSearch, reversedArray[2])) {
@@ -273,14 +391,12 @@ const GraphierosShapeFinder = (props) => {
                     } else {
                         pushResult(entry);
                     }
-                } else if (itMatches(thatSearch, shifted1)) {
-                    pushResult(entry);
-                } else if (itMatches(thatSearch, shifted1a)) {
-                    pushResult(entry);
                 }
 
             } else if (itMatches(thatSearch, reversedArray[0])) {
-                if (itMatches(thatSearch, reversedArray[1])) {
+                if (itMatchesAllShifts1()) {
+                    pushResult(entry);
+                } else if (itMatches(thatSearch, reversedArray[1])) {
                     if (itMatches(thatSearch, reversedArray[2])) {
                         pushResult(entry);
                     } else if (itMatches(thatSearch, permutedArray[2])) {
@@ -330,13 +446,11 @@ const GraphierosShapeFinder = (props) => {
                     } else {
                         pushResult(entry);
                     }
-                } else if (itMatches(thatSearch, shifted1)) {
-                    pushResult(entry);
-                } else if (itMatches(thatSearch, shifted1a)) {
-                    pushResult(entry);
                 }
             } else if (itMatches(thatSearch, permutedArray[0])) {
-                if (itMatches(thatSearch, permutedArray[1])) {
+                if (itMatchesAllShifts1()) {
+                    pushResult(entry);
+                } else if (itMatches(thatSearch, permutedArray[1])) {
                     if (itMatches(thatSearch, permutedArray[2])) {
                         pushResult(entry);
                     } else if (itMatches(thatSearch, reversedArray[2])) {
@@ -384,13 +498,11 @@ const GraphierosShapeFinder = (props) => {
                     } else {
                         pushResult(entry);
                     }
-                } else if (itMatches(thatSearch, shifted1)) {
-                    pushResult(entry);
-                } else if (itMatches(thatSearch, shifted1a)) {
-                    pushResult(entry);
                 }
             } else if (itMatches(thatSearch, permutedReversedArray[0])) {
-                if (itMatches(thatSearch, permutedReversedArray[1])) {
+                if (itMatchesAllShifts1()) {
+                    pushResult(entry);
+                } else if (itMatches(thatSearch, permutedReversedArray[1])) {
                     if (itMatches(thatSearch, permutedReversedArray[2])) {
                         pushResult(entry);
                     } else if (itMatches(thatSearch, permutedArray[2])) {
@@ -454,13 +566,11 @@ const GraphierosShapeFinder = (props) => {
                     } else {
                         pushResult(entry);
                     }
-                } else if (itMatches(thatSearch, shifted1)) {
-                    pushResult(entry);
-                } else if (itMatches(thatSearch, shifted1a)) {
-                    pushResult(entry);
                 }
             } else if (itMatches(thatSearch, cutCode[1])) {
-                if (itMatches(thatSearch, cutCode[0])) {
+                if (itMatchesAllShifts0()) {
+                    pushResult(entry);
+                } else if (itMatches(thatSearch, cutCode[0])) {
                     if (itMatches(thatSearch, cutCode[2])) {
                         pushResult(entry);
                     } else if (itMatches(thatSearch, reversedArray[2])) {
@@ -523,6 +633,11 @@ const GraphierosShapeFinder = (props) => {
                 }
             }
 
+            setResultCounterState({
+                className:'resultCounter',
+                content: `${possibleResults.length} glyphes trouvés`
+            });
+
         });
 
         setOptionsState({
@@ -550,6 +665,10 @@ const GraphierosShapeFinder = (props) => {
         });
         setOptionsState({
             content: ''
+        });
+        setResultCounterState({
+            className:'hidden',
+            content:''
         });
         memory = [];
         cutPath = [];
@@ -584,6 +703,7 @@ const GraphierosShapeFinder = (props) => {
                     <button className='btnRESET' onClick={handleReset}>RESET</button>
                 </div>
 
+                <div className={resultCounterState.className}>{resultCounterState.content}</div>
 
                 <div className="result">
                     {resultState.content}
