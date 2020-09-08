@@ -23,7 +23,7 @@ export function changeLoop(array){
     if(start.toString() === end.toString()){
 
         output.push([...copy]);
-        //remove last pair
+        //remove last pair 
         let last1 = output[0].pop();
         let last0 = output[0].pop();
 

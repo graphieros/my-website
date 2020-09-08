@@ -8,6 +8,16 @@ svg.alpLanding{
     opacity:0.5;
 }
 
+svg.alpBio {
+    z-index:0;
+    position: fixed;
+    height:90vh;
+    left:50%;
+    transform: translateX(-50%);
+    stroke: var(--blue3);
+    opacity:0.5;
+}
+
 @media (max-width:600px) {
     svg.alpLanding{
         left:50%;
