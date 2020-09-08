@@ -106,7 +106,7 @@ button.btnWallSwitch {
     grid-template-columns: repeat(2,auto);
     align-items:center;
     justify-items:center;
-    top:150px;
+    bottom:10px;
     left:50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -121,7 +121,7 @@ button.btnWallSwitch {
     transition: all 0.3s ease;
     text-align:left;
     grid-gap:0px;
-    width:150px;
+    width:200px;
     z-index:10;
     border:1px solid white;
 }
@@ -203,7 +203,7 @@ button.btnNextPainting{
     grid-template-columns: repeat(2,auto);
     align-items:center;
     justify-items:center;
-    bottom: 10px;
+    bottom: 60px;
     left:50%;
     transform: translateX(-50%);
     cursor: pointer;
@@ -260,15 +260,6 @@ button.btnNextPainting:hover{
     }
     .paintingTitle span {
         font-size: 0.5em;
-    }
-    button.btnWallSwitch{
-        bottom:10px;
-        top:initial;
-        height:40px;
-    }
-
-    button.btnNextPainting{
-        bottom:60px;
     }
 
 }
