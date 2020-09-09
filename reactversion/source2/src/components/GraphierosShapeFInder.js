@@ -3,7 +3,7 @@ import Linear from '../components/graphieros/Linear';
 import { a, q, w, l, lm, m, r, rm, graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import permute from '../libraries/permute';
 import '../css/GraphierosShapeFinder.css';
-import { pairSwap, changeLoop } from '../libraries/pairSwap';
+import { pairSwap, changeLoop, checkMatch } from '../libraries/pairSwap';
 
 let memory = [];
 let cutPath = [];
@@ -315,7 +315,18 @@ const GraphierosShapeFinder = (props) => {
                 return itMatches(thatSearch, shifted1) || itMatches(thatSearch, shifted1a) || itMatches(thatSearch, shifted1b) || itMatches(thatSearch, shifted1c) || itMatches(thatSearch, shifted1d) || itMatches(thatSearch, shifted1e) || itMatches(thatSearch, shifted1f) || itMatches(thatSearch, shifted1g) || itMatches(thatSearch, shifted1h) || itMatches(thatSearch, shifted1i) || itMatches(thatSearch, shifted1j) || itMatches(thatSearch, shifted1k) || itMatches(thatSearch, shifted1l) || itMatches(thatSearch, shifted1m) || itMatches(thatSearch, shifted1n) || itMatches(thatSearch, shifted1o) || itMatches(thatSearch, shifted1p) || itMatches(thatSearch, shifted1q) || itMatches(thatSearch, shifted1r) || itMatches(thatSearch, shifted1s) || itMatches(thatSearch, shifted1t) || itMatches(thatSearch, shifted1u) || itMatches(thatSearch, shifted1v) || itMatches(thatSearch, shifted1w) || itMatches(thatSearch, shifted1x) || itMatches(thatSearch, rs1) || itMatches(thatSearch, rs1a) || itMatches(thatSearch, rs1b) || itMatches(thatSearch, rs1c) || itMatches(thatSearch, rs1d) || itMatches(thatSearch, rs1e) || itMatches(thatSearch, rs1f) || itMatches(thatSearch, rs1g) || itMatches(thatSearch, rs1h) || itMatches(thatSearch, rs1i) || itMatches(thatSearch, rs1j) || itMatches(thatSearch, rs1k) || itMatches(thatSearch, rs1l) || itMatches(thatSearch, rs1m) || itMatches(thatSearch, rs1n) || itMatches(thatSearch, rs1o) || itMatches(thatSearch, rs1p) || itMatches(thatSearch, rs1q) || itMatches(thatSearch, rs1r) || itMatches(thatSearch, rs1s) || itMatches(thatSearch, rs1t) || itMatches(thatSearch, rs1u) || itMatches(thatSearch, rs1v) || itMatches(thatSearch, rs1w) || itMatches(thatSearch, rs1x)
             }
 
-            if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatchesAllShifts0()) {
+            if (checkMatch(cutCode[0], entry.path) === true) {
+                if(cutCode[1] && checkMatch(cutCode[1], entry.path) === true){
+                    if(cutCode[2] && checkMatch(cutCode[2], entry.path) === true) {
+                        possibleResults.push(entry);
+                    } else {
+                        possibleResults.push(entry);
+                    }
+                } else {
+                    possibleResults.push(entry);
+                }
+                
+            } else if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatchesAllShifts0()) {
                 if (itMatches(thatSearch, cutCode[1]) || itMatches(thatSearch, reversedArray[1]) || itMatches(thatSearch, permutedArray[1]) || itMatches(thatSearch, permutedReversedArray[1]) || itMatchesAllShifts1()) {
                     pushResult(entry);
                 } else {
@@ -633,9 +644,17 @@ const GraphierosShapeFinder = (props) => {
                 }
             }
 
+            let grammarMatters;
+
+            if (possibleResults.length > 1) {
+                grammarMatters = 'glyphes trouvés';
+            } else {
+                grammarMatters = 'glyphe trouvé'
+            }
+
             setResultCounterState({
-                className:'resultCounter',
-                content: `${possibleResults.length} glyphes trouvés`
+                className: 'resultCounter',
+                content: `${possibleResults.length} ${grammarMatters}`
             });
 
         });
@@ -667,8 +686,8 @@ const GraphierosShapeFinder = (props) => {
             content: ''
         });
         setResultCounterState({
-            className:'hidden',
-            content:''
+            className: 'hidden',
+            content: ''
         });
         memory = [];
         cutPath = [];
