@@ -28,7 +28,7 @@
 .vitruve::-webkit-scrollbar{
     width:0px;
 }
-
+ 
 .graphierosDescriptionTranslation svg {
     filter: drop-shadow(0 2px 0px var(--blue0));
     stroke-dasharray: 1000px;
@@ -37,7 +37,8 @@
     animation-fill-mode: forwards; 
 }
 
-.graphierosDescription{
+.graphierosDescription,
+.graphierosDescriptionStart {
     display: block;
     position: fixed;
     top:50%;
@@ -46,13 +47,27 @@
     text-align:center;
     color: var(--blue0);
     text-shadow: none;
-    top:150px;
     background: radial-gradient(at top left, rgba(255,255,255,.35), rgba(255, 255, 255, 0.726));
     box-sizing: border-box;
     padding-left:20px;
     padding-right:20px;
     border-radius:10px;
     animation: graphierosDescription 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.graphierosDescriptionStart{
+    top: 300px;
+}
+
+.graphierosDescription {
+    top:150px;
+}
+
+.fracNum{
+    height: 40px;
+    margin-top:10px;
+    margin-bottom:-10px;
 }
 
 @keyframes graphierosDescription {
@@ -134,7 +149,8 @@
 }
 
 @media (max-width:500px){
-    .graphierosDescription{
+    .graphierosDescription,
+    .graphierosDescriptionStart{
         font-size:0.8em;
     }
 }
