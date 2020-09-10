@@ -154,4 +154,4 @@ const Graphieros = () => {
     )
 }
 
-export default Graphieros;
+export default React.memo(Graphieros);

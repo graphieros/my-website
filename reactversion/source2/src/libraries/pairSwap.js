@@ -52,7 +52,7 @@ export function checkMatch(array, source) {
 
         if (start.toString() === end.toString()) {
 
-            for(let k = 0; k < aL; k += 1) {
+            for(let k = 0; k < aL/2; k += 1) {
                 //remove last pair
                 let last1 = copy1.pop();
                 let last0 = copy1.pop();
@@ -73,14 +73,13 @@ export function checkMatch(array, source) {
                 
                 //insert ancient pair in second place
                 copy1.splice(2, 0, first1);
-              
                 copy1.splice(2, 0, first0);
                 copy1 = copy1.flat();
 
                 out.push(copy1);
             }            
             
-            console.log({ out });
+            // console.log({ out });
             return out;
         } else {
             for (let i = 0; i < aL; i += 1) {
@@ -94,14 +93,15 @@ export function checkMatch(array, source) {
             out.pop();
             return out;
         }
+        
     }
 
     let options = shift(array);
 
     source.forEach(arr => {
         options.forEach(option => {
-            if (option.toString() === arr.toString()) {
-                console.log('BOOYA !')
+            if (arr.toString().includes(option.toString())) {
+                // console.log('BOOYA !', option);
                 return true;
             }
         })

@@ -316,8 +316,8 @@ const GraphierosShapeFinder = (props) => {
             }
 
             if (checkMatch(cutCode[0], entry.path) === true) {
-                if(cutCode[1] && checkMatch(cutCode[1], entry.path) === true){
-                    if(cutCode[2] && checkMatch(cutCode[2], entry.path) === true) {
+                if (cutCode[1] && checkMatch(cutCode[1], entry.path) === true) {
+                    if (cutCode[2] && checkMatch(cutCode[2], entry.path) === true) {
                         possibleResults.push(entry);
                     } else {
                         possibleResults.push(entry);
@@ -325,7 +325,7 @@ const GraphierosShapeFinder = (props) => {
                 } else {
                     possibleResults.push(entry);
                 }
-                
+
             } else if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatchesAllShifts0()) {
                 if (itMatches(thatSearch, cutCode[1]) || itMatches(thatSearch, reversedArray[1]) || itMatches(thatSearch, permutedArray[1]) || itMatches(thatSearch, permutedReversedArray[1]) || itMatchesAllShifts1()) {
                     pushResult(entry);
@@ -336,6 +336,12 @@ const GraphierosShapeFinder = (props) => {
             } else if (itMatches(thatSearch, cutCode[0])) {
                 if (itMatchesAllShifts1()) {
                     pushResult(entry);
+                } else if (cutCode[1] && checkMatch(cutCode[1], entry.path) === true) {
+                    if (cutCode[2] && checkMatch(cutCode[2], entry.path) === true) {
+                        possibleResults.push(entry);
+                    } else {
+                        possibleResults.push(entry);
+                    }
                 } else if (itMatches(thatSearch, cutCode[1])) {
                     if (itMatches(thatSearch, cutCode[2])) {
                         pushResult(entry);
@@ -736,4 +742,4 @@ const GraphierosShapeFinder = (props) => {
     )
 }
 
-export default GraphierosShapeFinder;
+export default React.memo(GraphierosShapeFinder);

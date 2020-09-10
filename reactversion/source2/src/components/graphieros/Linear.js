@@ -18,4 +18,4 @@ const Linear = (props) => {
     )
 }
 
-export default Linear;
+export default React.memo(Linear);

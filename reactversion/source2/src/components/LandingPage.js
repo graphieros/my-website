@@ -42,4 +42,4 @@ const LandingPage = (props) => {
     )
 }
 
-export default LandingPage;
+export default React.memo(LandingPage);

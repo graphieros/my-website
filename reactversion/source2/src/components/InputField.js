@@ -18,4 +18,4 @@ class InputField extends React.Component {
     }
 }
 
-export default InputField;
+export default React.memo(InputField);

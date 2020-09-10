@@ -18,4 +18,4 @@ const Molecule = (props) => {
     )
 }
 
-export default Molecule;
+export default React.memo(Molecule);

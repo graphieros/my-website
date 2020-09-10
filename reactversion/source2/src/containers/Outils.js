@@ -38,4 +38,4 @@ const Outils = () => {
     )
 }
 
-export default Outils;
+export default React.memo(Outils);

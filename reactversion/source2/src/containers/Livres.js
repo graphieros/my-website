@@ -8,4 +8,4 @@ const Livres = () => {
     )
 }
 
-export default Livres;
+export default React.memo(Livres);

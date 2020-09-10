@@ -17,4 +17,4 @@ const Arrow = (props) => {
     )
 }
 
-export default Arrow;
+export default React.memo(Arrow);

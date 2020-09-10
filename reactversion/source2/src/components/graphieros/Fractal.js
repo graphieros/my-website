@@ -23,4 +23,4 @@ const Fractal = (props) => {
     )
 }
 
-export default Fractal;
+export default React.memo(Fractal);

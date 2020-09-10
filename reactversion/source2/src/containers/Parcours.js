@@ -52,4 +52,4 @@ const Parcours = () => {
     )
 }
 
-export default Parcours;
+export default React.memo(Parcours);

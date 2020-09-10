@@ -53,4 +53,4 @@ const Art = () => {
     )
 }
 
-export default Art;
+export default React.memo(Art);

@@ -8,4 +8,4 @@ const WebDev = () => {
     )   
 }
 
-export default WebDev;
+export default React.memo(WebDev);

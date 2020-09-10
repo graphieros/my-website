@@ -9,4 +9,4 @@ const Description = (props) => {
     )
 }
 
-export default Description;
+export default React.memo(Description);

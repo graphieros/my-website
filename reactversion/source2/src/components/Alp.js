@@ -15,4 +15,4 @@ const Alp = (props) => {
     )
 }
 
-export default Alp;
+export default React.memo(Alp);

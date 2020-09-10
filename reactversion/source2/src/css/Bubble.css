@@ -1,0 +1,163 @@
+.bubbleStartStop,
+.bubble1Stop,
+.bubble2Stop,
+.bubble3Stop,
+.bubble4Stop{
+    position: fixed;
+    left:50%;
+    top:50%;
+    width:100px;
+    height:100px;
+    background: radial-gradient(at top, white, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
+    box-shadow: 0 10px 20px -10px var(--blue0);
+    border-radius:100%;
+    display: grid;
+    align-content:center;
+    justify-content: center;
+    text-align:center;
+    color: var(--blue3);
+    text-shadow: 1px 1px 1px var(--blue0);
+}
+
+.bubbleStartStop{
+    transform: translate(-50%,30%);
+}
+
+.bubble1Stop{
+    transform: translate(-150%, 30%);
+}
+
+.bubble2Stop{
+    transform: translate(50%, 30%);
+}
+
+.bubble3Stop{
+    transform: translate(-100%,-57%);
+}
+
+.bubble4Stop{
+    transform: translate(0%, 118%);
+}
+
+.bubbleStart,
+.bubble1,
+.bubble2,
+.bubble3,
+.bubble4 {
+    top:50%;
+    left:50%;
+    position: fixed;
+    width:100px;
+    height:100px;
+    background: white;
+    border-radius:100%;
+    display: grid;
+    align-content:center;
+    justify-content: center;
+    text-align:center;
+    box-shadow: 0 10px 20px -10px var(--blue0);
+    cursor: pointer;
+    color: var(--blue1);
+}
+
+.bubbleStart{
+    transform: translate(-50%,30%);
+    animation: bubblePulseStart 1s ease-in-out infinite;
+}
+
+.bubble1{
+    transform: translate(-150%, 30%);
+    animation: bubblePulse1 1s ease-in-out infinite;
+}
+
+.bubble2{
+    transform: translate(50%, 30%);
+    animation: bubblePulse2 1s ease-in-out infinite;
+}
+
+.bubble3{
+    transform: translate(-100%, -57%);
+    animation: bubblePulse3 1s ease-in-out infinite;
+}
+
+.bubble4{
+    transform: translate(0%, 118%);
+    animation: bubblePulse4 1s ease-in-out infinite;
+}
+
+
+
+@keyframes bubblePulseStart{
+    0%{
+        transform: translate(-50%,30%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(-50%,30%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(-50%,30%) scale(1,1);
+        opacity:0.3;
+    }
+}
+
+@keyframes bubblePulse1{
+    0%{
+        transform: translate(-150%,30%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(-150%,30%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(-150%,30%) scale(1,1);
+        opacity:0.3;
+    }
+}
+
+@keyframes bubblePulse2{
+    0%{
+        transform: translate(50%,30%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(50%,30%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(50%,30%) scale(1,1);
+        opacity:0.3;
+    }
+}
+
+@keyframes bubblePulse3{
+    0%{
+        transform: translate(-100%,-57%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(-100%,-57%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(-100%,-57%) scale(1,1);
+        opacity:0.3;
+    }
+}
+
+@keyframes bubblePulse4{
+    0%{
+        transform: translate(0%,118%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(0%,118%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(0%,118%) scale(1,1);
+        opacity:0.3;
+    }
+}
