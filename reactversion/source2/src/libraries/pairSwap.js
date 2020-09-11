@@ -77,6 +77,9 @@ export function checkMatch(array, source) {
                 copy1 = copy1.flat();
 
                 out.push(copy1);
+
+                 //invert 2nd and 3rd pairs
+
             }            
             
             // console.log({ out });
