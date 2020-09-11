@@ -174,7 +174,56 @@ const GraphierosShapeFinder = (props) => {
         let rs1x;
 
         let shifted2;
+        let rs2;
         let shifted2a;
+        let rs2a;
+        let shifted2b;
+        let rs2b;
+        let shifted2c;
+        let rs2c;
+        let shifted2d;
+        let rs2d;
+        let shifted2e;
+        let rs2e;
+        let shifted2f;
+        let rs2f;
+        let shifted2g;
+        let rs2g;
+        let shifted2h;
+        let rs2h;
+        let shifted2i;
+        let rs2i;
+        let shifted2j;
+        let rs2j;
+        let shifted2k;
+        let rs2k;
+        let shifted2l;
+        let rs2l;
+        let shifted2m;
+        let rs2m;
+        let shifted2n;
+        let rs2n;
+        let shifted2o;
+        let rs2o;
+        let shifted2p;
+        let rs2p;
+        let shifted2q;
+        let rs2q;
+        let shifted2r;
+        let rs2r;
+        let shifted2s;
+        let rs2s;
+        let shifted2t;
+        let rs2t;
+        let shifted2u;
+        let rs2u;
+        let shifted2v;
+        let rs2v;
+        let shifted2w;
+        let rs2w;
+        let shifted2x;
+        let rs2x;
+
 
         if (shifted0 && cutCode[0]) {
             shifted0a = changeLoop(shifted0);
@@ -284,6 +333,54 @@ const GraphierosShapeFinder = (props) => {
         if (shifted2 && cutCode[2]) {
             shifted2 = changeLoop(cutCode[2]);
             shifted2a = changeLoop(shifted2);
+            shifted2b = changeLoop(shifted2a);
+            shifted2c = changeLoop(shifted2b);
+            shifted2d = changeLoop(shifted2c);
+            shifted2e = changeLoop(shifted2d);
+            shifted2f = changeLoop(shifted2e);
+            shifted2g = changeLoop(shifted2f);
+            shifted2h = changeLoop(shifted2g);
+            shifted2i = changeLoop(shifted2h);
+            shifted2j = changeLoop(shifted2i);
+            shifted2k = changeLoop(shifted2j);
+            shifted2l = changeLoop(shifted2k);
+            shifted2m = changeLoop(shifted2l);
+            shifted2n = changeLoop(shifted2m);
+            shifted2o = changeLoop(shifted2n);
+            shifted2p = changeLoop(shifted2o);
+            shifted2q = changeLoop(shifted2p);
+            shifted2r = changeLoop(shifted2q);
+            shifted2s = changeLoop(shifted2r);
+            shifted2t = changeLoop(shifted2s);
+            shifted2u = changeLoop(shifted2t);
+            shifted2v = changeLoop(shifted2u);
+            shifted2w = changeLoop(shifted2v);
+            shifted2x = changeLoop(shifted2w);
+            rs2 = pairSwap(shifted2);
+            rs2a = pairSwap(shifted2a);
+            rs2b = pairSwap(shifted2b);
+            rs2c = pairSwap(shifted2c);
+            rs2d = pairSwap(shifted2d);
+            rs2e = pairSwap(shifted2e);
+            rs2f = pairSwap(shifted2f);
+            rs2g = pairSwap(shifted2g);
+            rs2h = pairSwap(shifted2h);
+            rs2i = pairSwap(shifted2i);
+            rs2j = pairSwap(shifted2j);
+            rs2k = pairSwap(shifted2k);
+            rs2l = pairSwap(shifted2l);
+            rs2m = pairSwap(shifted2m);
+            rs2n = pairSwap(shifted2n);
+            rs2o = pairSwap(shifted2o);
+            rs2p = pairSwap(shifted2p);
+            rs2q = pairSwap(shifted2q);
+            rs2r = pairSwap(shifted2r);
+            rs2s = pairSwap(shifted2s);
+            rs2t = pairSwap(shifted2t);
+            rs2u = pairSwap(shifted2u);
+            rs2v = pairSwap(shifted2v);
+            rs2w = pairSwap(shifted2w);
+            rs2x = pairSwap(shifted2x);
         }
 
         for (let i = 0; i < cutCode.length; i += 1) {
@@ -315,6 +412,10 @@ const GraphierosShapeFinder = (props) => {
                 return itMatches(thatSearch, shifted1) || itMatches(thatSearch, shifted1a) || itMatches(thatSearch, shifted1b) || itMatches(thatSearch, shifted1c) || itMatches(thatSearch, shifted1d) || itMatches(thatSearch, shifted1e) || itMatches(thatSearch, shifted1f) || itMatches(thatSearch, shifted1g) || itMatches(thatSearch, shifted1h) || itMatches(thatSearch, shifted1i) || itMatches(thatSearch, shifted1j) || itMatches(thatSearch, shifted1k) || itMatches(thatSearch, shifted1l) || itMatches(thatSearch, shifted1m) || itMatches(thatSearch, shifted1n) || itMatches(thatSearch, shifted1o) || itMatches(thatSearch, shifted1p) || itMatches(thatSearch, shifted1q) || itMatches(thatSearch, shifted1r) || itMatches(thatSearch, shifted1s) || itMatches(thatSearch, shifted1t) || itMatches(thatSearch, shifted1u) || itMatches(thatSearch, shifted1v) || itMatches(thatSearch, shifted1w) || itMatches(thatSearch, shifted1x) || itMatches(thatSearch, rs1) || itMatches(thatSearch, rs1a) || itMatches(thatSearch, rs1b) || itMatches(thatSearch, rs1c) || itMatches(thatSearch, rs1d) || itMatches(thatSearch, rs1e) || itMatches(thatSearch, rs1f) || itMatches(thatSearch, rs1g) || itMatches(thatSearch, rs1h) || itMatches(thatSearch, rs1i) || itMatches(thatSearch, rs1j) || itMatches(thatSearch, rs1k) || itMatches(thatSearch, rs1l) || itMatches(thatSearch, rs1m) || itMatches(thatSearch, rs1n) || itMatches(thatSearch, rs1o) || itMatches(thatSearch, rs1p) || itMatches(thatSearch, rs1q) || itMatches(thatSearch, rs1r) || itMatches(thatSearch, rs1s) || itMatches(thatSearch, rs1t) || itMatches(thatSearch, rs1u) || itMatches(thatSearch, rs1v) || itMatches(thatSearch, rs1w) || itMatches(thatSearch, rs1x)
             }
 
+            let itMatchesAllShifts2 = function () {
+                return itMatches(thatSearch, shifted2) || itMatches(thatSearch, shifted2a) || itMatches(thatSearch, shifted2b) || itMatches(thatSearch, shifted2c) || itMatches(thatSearch, shifted2d) || itMatches(thatSearch, shifted2e) || itMatches(thatSearch, shifted2f) || itMatches(thatSearch, shifted2g) || itMatches(thatSearch, shifted2h) || itMatches(thatSearch, shifted2i) || itMatches(thatSearch, shifted2j) || itMatches(thatSearch, shifted2k) || itMatches(thatSearch, shifted2l) || itMatches(thatSearch, shifted2m) || itMatches(thatSearch, shifted2n) || itMatches(thatSearch, shifted2o) || itMatches(thatSearch, shifted2p) || itMatches(thatSearch, shifted2q) || itMatches(thatSearch, shifted2r) || itMatches(thatSearch, shifted2s) || itMatches(thatSearch, shifted2t) || itMatches(thatSearch, shifted2u) || itMatches(thatSearch, shifted2v) || itMatches(thatSearch, shifted2w) || itMatches(thatSearch, shifted2x) || itMatches(thatSearch, rs2) || itMatches(thatSearch, rs2a) || itMatches(thatSearch, rs2b) || itMatches(thatSearch, rs2c) || itMatches(thatSearch, rs2d) || itMatches(thatSearch, rs2e) || itMatches(thatSearch, rs2f) || itMatches(thatSearch, rs2g) || itMatches(thatSearch, rs2h) || itMatches(thatSearch, rs2i) || itMatches(thatSearch, rs2j) || itMatches(thatSearch, rs2k) || itMatches(thatSearch, rs2l) || itMatches(thatSearch, rs2m) || itMatches(thatSearch, rs2n) || itMatches(thatSearch, rs2o) || itMatches(thatSearch, rs2p) || itMatches(thatSearch, rs2q) || itMatches(thatSearch, rs2r) || itMatches(thatSearch, rs2s) || itMatches(thatSearch, rs2t) || itMatches(thatSearch, rs2u) || itMatches(thatSearch, rs2v) || itMatches(thatSearch, rs2w) || itMatches(thatSearch, rs2x)
+            }
+
             if (checkMatch(cutCode[0], entry.path) === true) {
                 if (cutCode[1] && checkMatch(cutCode[1], entry.path) === true) {
                     if (cutCode[2] && checkMatch(cutCode[2], entry.path) === true) {
@@ -326,16 +427,35 @@ const GraphierosShapeFinder = (props) => {
                     possibleResults.push(entry);
                 }
 
-            } else if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatchesAllShifts0()) {
+            } if (itMatches(thatSearch, cutCode) || itMatches(thatSearch, reversedArray) || itMatches(thatSearch, permutedArray) || itMatches(thatSearch, permutedReversedArray) || itMatchesAllShifts0()) {
                 if (itMatches(thatSearch, cutCode[1]) || itMatches(thatSearch, reversedArray[1]) || itMatches(thatSearch, permutedArray[1]) || itMatches(thatSearch, permutedReversedArray[1]) || itMatchesAllShifts1()) {
+                    if (itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts2()) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
+                } else {
                     pushResult(entry);
+                }
+
+            } else if (itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                if (itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                    if (itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
                 } else {
                     pushResult(entry);
                 }
 
             } else if (itMatches(thatSearch, cutCode[0])) {
                 if (itMatchesAllShifts1()) {
-                    pushResult(entry);
+                    if (itMatchesAllShifts2()) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
                 } else if (cutCode[1] && checkMatch(cutCode[1], entry.path) === true) {
                     if (cutCode[2] && checkMatch(cutCode[2], entry.path) === true) {
                         possibleResults.push(entry);
@@ -343,67 +463,33 @@ const GraphierosShapeFinder = (props) => {
                         possibleResults.push(entry);
                     }
                 } else if (itMatches(thatSearch, cutCode[1])) {
-                    if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2] || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts2())) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
 
+                } else if (reversedArray[1] && checkMatch(reversedArray[1], entry.path) === true) {
+                    if (itMatchesAllShifts1()) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
                 } else if (itMatches(thatSearch, reversedArray[1])) {
-                    if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
 
                 } else if (itMatches(thatSearch, permutedArray[1])) {
-                    if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, permutedReversedArray[1])) {
-                    if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
@@ -411,243 +497,117 @@ const GraphierosShapeFinder = (props) => {
                 }
 
             } else if (itMatches(thatSearch, reversedArray[0])) {
-                if (itMatchesAllShifts1()) {
-                    pushResult(entry);
+                if (itMatchesAllShifts1() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                    if (itMatchesAllShifts2()) {
+                        pushResult(entry);
+                    } else {
+                        pushResult(entry);
+                    }
                 } else if (itMatches(thatSearch, reversedArray[1])) {
-                    if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, reversedArray[2]) || itMatches(permutedArray[2]) || itMatches(cutCode[2]) || itMatches(permutedReversedArray[2]) || itMatchesAllShifts2() || itMatchesAllShifts0() || itMatchesAllShifts0()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
 
                 } else if (itMatches(thatSearch, permutedArray[1])) {
-                    if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
 
                 } else if (itMatches(thatSearch, cutCode[1])) {
-                    if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 }
             } else if (itMatches(thatSearch, permutedArray[0])) {
-                if (itMatchesAllShifts1()) {
+                if (itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                     pushResult(entry);
                 } else if (itMatches(thatSearch, permutedArray[1])) {
-                    if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, reversedArray[1])) {
-                    if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, cutCode[1])) {
-                    if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(permutedArray[2]) || itMatches(permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 }
             } else if (itMatches(thatSearch, permutedReversedArray[0])) {
-                if (itMatchesAllShifts1()) {
+                if (itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                     pushResult(entry);
                 } else if (itMatches(thatSearch, permutedReversedArray[1])) {
-                    if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, permutedArray[1])) {
-                    if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, reversedArray[1])) {
-                    if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(permutedReversedArray[2]) || itMatches(cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, cutCode[1])) {
-                    if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 }
             } else if (itMatches(thatSearch, cutCode[1])) {
-                if (itMatchesAllShifts0()) {
+                if (itMatchesAllShifts0() ||itMatchesAllShifts1() ||itMatchesAllShifts2()) {
                     pushResult(entry);
                 } else if (itMatches(thatSearch, cutCode[0])) {
-                    if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, cutCode[2]) ||itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() ||itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, reversedArray[0])) {
-                    if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
+                    if (itMatches(thatSearch, reversedArray[2]) ||itMatches(thatSearch, cutCode[2]) ||itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, permutedArray[0])) {
-                    if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedArray[2]) ||itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, permutedReversedArray[0])) {
-                    if (itMatches(thatSearch, permutedReversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, permutedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, reversedArray[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, cutCode[2])) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2)) {
-                        pushResult(entry);
-                    } else if (itMatches(thatSearch, shifted2a)) {
+                    if (itMatches(thatSearch, permutedReversedArray[2]) ||itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 }
+            } else if (itMatchesAllShifts0()) {
+                pushResult(entry);
+            } else if (itMatchesAllShifts1()) {
+                pushResult(entry);
+            } else if (itMatchesAllShifts2()) {
+                pushResult(entry);
             }
 
             let grammarMatters;
