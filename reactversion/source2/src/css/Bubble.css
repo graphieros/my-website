@@ -2,7 +2,8 @@
 .bubble1Stop,
 .bubble2Stop,
 .bubble3Stop,
-.bubble4Stop{
+.bubble4Stop,
+.bubble5Stop{
     position: fixed;
     left:50%;
     top:50%;
@@ -39,11 +40,17 @@
     transform: translate(0%, 118%);
 }
 
+.bubble5Stop{
+    transform: translate(-100%, 118%);
+}
+
 .bubbleStart,
 .bubble1,
 .bubble2,
 .bubble3,
-.bubble4 {
+.bubble4,
+.bubble5,
+.bubble6 {
     top:50%;
     left:50%;
     position: fixed;
@@ -55,9 +62,11 @@
     align-content:center;
     justify-content: center;
     text-align:center;
-    box-shadow: 0 10px 20px -10px var(--blue0);
+    box-shadow: 0 10px 20px -10px var(--blue0), 0 10px 10px var(--blue0) inset;
     cursor: pointer;
     color: var(--blue1);
+    border:2px solid  rgb(255, 152, 133);
+    box-sizing: border-box;
 }
 
 .bubbleStart{
@@ -84,7 +93,162 @@
     transform: translate(0%, 118%);
     animation: bubblePulse4 1s ease-in-out infinite;
 }
+.bubble5{
+    transform: translate(-100%, 118%);
+    animation: bubblePulse5 1s ease-in-out infinite;
+}
 
+.bubble6{
+    transform: translate(0%, -57%);
+    animation: bubblePulse6 1s ease-in-out infinite;
+}
+
+.bubble1Contract,
+.bubble2Contract,
+.bubble3Contract,
+.bubble4Contract,
+.bubble5Contract,
+.bubble6Contract {
+    display: block;
+    position: fixed;
+    top:50%;
+    left:50%;
+    height:50px;
+    width:50px;
+    transform: translate(-50%,110%);
+    background: radial-gradient(at top, white, tomato);
+    border-radius:100%;
+    box-shadow: 0 10px 20px -20px var(--blue0);
+    opacity:0.7;
+}
+
+.bubble1Contract{
+    animation: contract1 0.25s ease-in-out ;
+}
+.bubble2Contract{
+    animation: contract2 0.25s ease-in-out ;
+}
+.bubble3Contract{
+    animation: contract3 0.25s ease-in-out ;
+}
+.bubble4Contract{
+    animation: contract4 0.25s ease-in-out ;
+}
+.bubble5Contract{
+    animation: contract5 0.25s ease-in-out ;
+}
+.bubble6Contract{
+    animation: contract6 0.25s ease-in-out ;
+}
+
+.fractalBang{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-49.5%,-22%);
+    animation: fractalBang 1s ease-in-out;
+    cursor: pointer;
+}
+
+.contactLink{
+    position: fixed;
+    display: grid;
+    text-align:center;
+    align-items:center;
+    border-radius:30px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,410%);
+    width:150px;
+    height:50px;
+    font-size:1.3em;
+    background: radial-gradient(at top, white, var(--blue3), var(--blue2), var(--blue1), var(--blue0));
+    box-shadow: 0 10px 20px -10px var(--blue0);
+    color:white;
+    text-decoration:none;
+    text-shadow: 1px 1px 1px var(--blue0);
+    animation: contactLink 1s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    border:2px solid rgb(255, 152, 133);
+}
+
+.contactLink:hover{
+    transform:translate(-50%,420%) scale(1.05,1.05);
+}
+
+@keyframes contactLink{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+@keyframes fractalBang{
+    0%{
+        opacity:0;
+        transform: translate(-49.5%,-22%) rotate(0deg);
+    }
+    100%{
+        opacity:1;
+        transform: translate(-49.5%,-22%) rotate(360deg);
+    }
+}
+
+@keyframes contract1{
+    0%{
+        transform: scale(2,2) translate(-130%, 55%);
+    }
+    100%{
+        transform: translate(-50%,110%);
+    }
+}
+
+@keyframes contract2{
+    0%{
+        transform: scale(2,2) translate(75%, 55%);
+    }
+    100%{
+        transform: translate(-50%,110%);
+    }
+}
+
+@keyframes contract3{
+    0%{
+        transform: scale(2,2) translate(-73%, -35%);
+    }
+    100%{
+        transform: translate(-50%,110%);
+    }
+}
+
+@keyframes contract4{
+    0%{
+        transform: scale(2,2) translate(25%, 145%);
+    }
+    100%{
+        transform: translate(-50%,110%);
+    }
+}
+
+@keyframes contract5{
+    0%{
+        transform: scale(2,2) translate(-73%, 145%);
+    }
+    100%{
+        transform: translate(-50%,110%);
+    }
+}
+
+@keyframes contract6{
+    0%{
+        transform: scale(2,2) translate(25%, -35%);
+    }
+    100%{
+        transform: translate(-50%,110%);
+    }
+}
 
 
 @keyframes bubblePulseStart{
@@ -158,6 +322,36 @@
     }
     100%{
         transform: translate(0%,118%) scale(1,1);
+        opacity:0.3;
+    }
+}
+
+@keyframes bubblePulse5{
+    0%{
+        transform: translate(-100%, 118%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(-100%, 118%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(-100%, 118%) scale(1,1);
+        opacity:0.3;
+    }
+}
+
+@keyframes bubblePulse6{
+    0%{
+        transform: translate(0%, -57%) scale(1,1);
+        opacity: 0.3;
+    }
+    50%{
+        transform: translate(0%, -57%) scale(0.9,0.9);
+        opacity:1;
+    }
+    100%{
+        transform: translate(0%, -57%) scale(1,1);
         opacity:0.3;
     }
 }
