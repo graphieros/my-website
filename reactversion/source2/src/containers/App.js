@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Header from '../components/Header/Header';
 import Parcours from './Parcours';

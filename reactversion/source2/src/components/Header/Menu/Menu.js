@@ -95,7 +95,10 @@ const Menu = (props) => {
                     />
                 </Link>
 
-                <Link to='/contact.php' onClick={handleQuitMenu}>
+                <Link 
+                    to='/contact.php' 
+                    target='_blank'
+                    onClick={handleQuitMenu}>
                     <MenuItem
                         id='menuItemContact'
                         className='menuItem'
