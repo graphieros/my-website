@@ -359,4 +359,4 @@ const Galerie = () => {
     )
 }
 
-export default React.memo(Galerie);
+export default Galerie;

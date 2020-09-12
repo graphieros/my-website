@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Header from '../components/Header/Header';
 import Parcours from './Parcours';
@@ -27,6 +27,7 @@ const App = () => {
     className: 'landingVisible'
   });
 
+
   const handleCloseLanding = () => {
     setLandingState({
       className: 'hidden'
@@ -43,7 +44,9 @@ const App = () => {
           close={handleCloseLanding}
         />
 
-        <Header className='mainHeader' />
+        <Header 
+          className='mainHeader'
+        />
 
         <Route path='/parcours' exact component={Parcours} />
         <Route path='/parcours/bio' exact component={Bio} />
@@ -75,7 +78,7 @@ const App = () => {
           rel='noopener noreferrer'
           href='https://graphieros.com/cle.html'>
           Lire La clé
-            </a>   
+            </a>
 
         <div className="back" style={style} />
 

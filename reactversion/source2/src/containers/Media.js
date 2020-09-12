@@ -247,4 +247,4 @@ const Media = () => {
     )
 }
 
-export default React.memo(Media);
+export default Media;

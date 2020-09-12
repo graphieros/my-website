@@ -4,6 +4,8 @@ import './MenuItem.css';
 
 const MenuItem = (props) => {
 
+    
+
     const btnStyle = {
         background: props.color,
         width: '100%',
@@ -22,6 +24,7 @@ const MenuItem = (props) => {
         <div className={props.className} id={props.id}>
 
             <button
+                onClick={props.onClick}
                 className='menuItemBtn'
                 style={btnStyle}>
 

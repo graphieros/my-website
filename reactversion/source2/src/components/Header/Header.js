@@ -42,7 +42,9 @@ const Header = (props) => {
             </div>
 
             <SearchBar className="searchBar" />
-            <Menu className="mainMenu" />
+            <Menu 
+            className="mainMenu"
+            />
 
             <div className='graphierosMenu'>
                 <button

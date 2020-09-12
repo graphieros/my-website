@@ -4,6 +4,8 @@ import SubMenu from '../components/SubMenu/SubMenu';
 import '././css/Parcours.css';
 
 const Parcours = () => {
+
+
     return (
         <div className="parcours">
 

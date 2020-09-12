@@ -702,4 +702,4 @@ const GraphierosShapeFinder = (props) => {
     )
 }
 
-export default React.memo(GraphierosShapeFinder);
+export default GraphierosShapeFinder;

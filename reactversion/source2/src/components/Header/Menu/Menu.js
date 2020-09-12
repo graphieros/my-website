@@ -16,6 +16,7 @@ const Menu = (props) => {
     });
 
     const handleShowMenu = () => {
+
         setModalState({
             className: 'modalVisible'
         });

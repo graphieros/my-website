@@ -6,7 +6,6 @@ import Arrow from '../components/Arrow';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import './css/Graphieros.css';
 
-//https://graphieros.com/touch_writer/touch_writer.html
 
 const Graphieros = () => {
 
@@ -154,4 +153,4 @@ const Graphieros = () => {
     )
 }
 
-export default React.memo(Graphieros);
+export default Graphieros;
