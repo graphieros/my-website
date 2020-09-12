@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Fractal from '../components/graphieros/Fractal';
 import clouds from '../assets/clouds.png';
 import '../css/LandingPage.css';
@@ -18,19 +19,22 @@ const LandingPage = (props) => {
         <div className={props.className}>
             <Alp className='alpLanding' />
             <p className='quote'>L'art est un léger déséquilibre.</p>
-            <div onClick={props.close}>
-                <Fractal
-                    className='landingFractal'
-                    colors={[75, 106, 160]}
-                    sequence='wz-zd-dw-qs-se-xs wq-qz-ze-ed-dx-xw-we-xz-qd ed-dx-qd ze-ed-eq-ex-ew'
-                    svgSize='200'
-                    light={true}
-                    intensity='1.3'
-                    dropShadow='0 10px 2px rgba(29,55,104,0.75)'
-                    background='linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.2))'
-                    backgroundRadius='50px'
-                />
-            </div>
+            <Link to="/parcours">
+                <div onClick={props.close}>
+                    <Fractal
+                        className='landingFractal'
+                        colors={[75, 106, 160]}
+                        sequence='wz-zd-dw-qs-se-xs wq-qz-ze-ed-dx-xw-we-xz-qd ed-dx-qd ze-ed-eq-ex-ew'
+                        svgSize='200'
+                        light={true}
+                        intensity='1.3'
+                        dropShadow='0 10px 2px rgba(29,55,104,0.75)'
+                        background='linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.2))'
+                        backgroundRadius='50px'
+                    />
+                </div>
+            </Link>
+
             <div className="backLanding" style={style} />
 
             <div className='landingName'>
