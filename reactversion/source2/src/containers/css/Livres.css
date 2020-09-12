@@ -1,0 +1,25 @@
+.textePresentation {
+    width:100%;
+    max-width:300px;
+    margin:0 auto;
+    text-align:center;
+    font-family: 'Inter', cursive;
+    text-shadow: 1px 1px var(--blue0);
+    margin-top:50px;
+    color: white;
+    animation: texteOn 1s ease-in-out;
+    margin-bottom: 50px;
+}
+
+.textePresentationTitle {
+    font-size: 1.6em;
+    font-weight:bold;
+    font-family: 'Megrim', cursive;
+}
+
+@media (max-width: 500px) {
+    .textePresentation{
+        max-width: 200px;
+        margin-left: 20px;
+    }
+}
