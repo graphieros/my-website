@@ -3,10 +3,9 @@
     position: fixed;
     height:100vh;
     width:100vw;
-    /* background: radial-gradient(at top, var(--blue4), var(--blue3), var(--blue2), var(--blue1),var(--blue0)); */
+    background: radial-gradient(at top, var(--blue3), var(--blue2), var(--blue1),var(--blue0));
     z-index:100;
     opacity:1;
-    background: radial-gradient(at top, white, tomato);
     perspective: 400px;
 }
 
@@ -40,7 +39,7 @@ p.quote{
 
 .landingFractal:hover svg{
     animation: landing 0.5s ease-in-out;
-}
+} 
 
 .backLanding{
     display:block;
@@ -95,11 +94,9 @@ p.quote{
 @keyframes landingFractalAppear{
     0%{
         opacity:0;
-        transform:translate(-50%,-50%) rotateX(90deg);
     }
     100%{
         opacity:1;
-        transform:translate(-50%,-0%)  rotateX(0deg);
     }
 }
 
