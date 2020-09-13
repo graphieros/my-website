@@ -5,15 +5,26 @@ import accords from '../assets/books/accords.png';
 import hexagerations from '../assets/books/hexagerations.png';
 import objedtDesir from '../assets/books/objedtDesir.png';
 import cle from '../assets/books/cle.png';
+import pangolin from '../assets/books/pangolin.png';
 
 const Livres = () => {
-    return(
+    return (
         <div>
             <div className="textePresentation">
                 <p className="textePresentationTitle">Textes</p>
-                <p>une sélection des livres que j'ai commis durant les deux dernières décennies</p>
+                <p>une sélection des textes que j'ai commis durant les deux dernières décennies</p>
             </div>
-             <Livre
+            <a target='_blank' rel='noopener noreferrer' href='https://graphieros.com/journal.html'>
+                <Livre
+                    className='livre'
+                    title='Le cri du pangolin'
+                    image={pangolin}
+                    imageAlt='pangolin'
+                    description='Les 76 jours de confinement en 2020. Cliquez pour visiter.'
+                />
+            </a>
+
+            <Livre
                 className='livre'
                 title='Accords'
                 image={accords}
