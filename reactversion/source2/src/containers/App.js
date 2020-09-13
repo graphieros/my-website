@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LandingPage from '../components/LandingPage';
 import Header from '../components/Header/Header';
 import Parcours from './Parcours';
@@ -13,6 +13,7 @@ import Graphieros from './Graphieros';
 import Livres from './Livres';
 import '././css/App.css';
 import clouds from '../assets/clouds.png';
+import GA from '../utils/GoogleAnalytics';
 
 const App = () => {
 
@@ -37,6 +38,8 @@ const App = () => {
   return (
     <BrowserRouter>
 
+      {GA.initialize() && <GA.RouteTracker />}
+
       <div className="App">
 
         <LandingPage
@@ -44,25 +47,28 @@ const App = () => {
           close={handleCloseLanding}
         />
 
-        <Header 
+        <Header
           className='mainHeader'
         />
 
-        <Route path='/parcours' exact component={Parcours} />
-        <Route path='/parcours/bio' exact component={Bio} />
-        <Route path='/parcours/media' exact component={Media} />
-        <Route path='/parcours/outils' exact component={Outils} />
+        <Switch>
+          <Route path='/parcours' exact component={Parcours} />
+          <Route path='/parcours/bio' exact component={Bio} />
+          <Route path='/parcours/media' exact component={Media} />
+          <Route path='/parcours/outils' exact component={Outils} />
 
-        <Route path='/art' exact component={Art} />
-        <Route path='/art/galerie' exact component={Galerie} />
-        <Route path='/art/graphieros' exact component={Graphieros} />
-        <Route path='/art/livres' exact component={Livres} />
+          <Route path='/art' exact component={Art} />
+          <Route path='/art/galerie' exact component={Galerie} />
+          <Route path='/art/graphieros' exact component={Graphieros} />
+          <Route path='/art/livres' exact component={Livres} />
 
-        <Route path='/webDev' exact component={WebDev} />
-        <Route path='/contact.php' component={() => {
-          window.location.href = 'https://graphieros.com/contact.php';
-          return null;
-        }} />
+          <Route path='/webDev' exact component={WebDev} />
+          <Route path='/contact.php' component={() => {
+            window.location.href = 'https://graphieros.com/contact.php';
+            return null;
+          }} />
+        </Switch>
+
 
         <a
           className='touchWriterLink'
