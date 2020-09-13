@@ -3358,5 +3358,152 @@
         "phono": "mea fai pio",
         "line": "mea-fai-pio",
         "molecule": "mea fai pio"
+    },
+    {
+        "fr": "vertical",
+        "litteral" : "qualité positionner bas haut",
+        "phono": "kli psu ni pa",
+        "line": "kli-psu-ni-pa",
+        "molecule": "kli psu ni pa"
+    },
+    {
+        "fr": "verticalement",
+        "litteral" : "avec positionner bas haut",
+        "phono": "vi psu ni pa",
+        "line": "vi-psu-ni-pa",
+        "molecule": "vi psu ni pa"
+    },
+    {
+        "fr": "horizontal",
+        "litteral" : "qualité horizon",
+        "phono": "kli rzo",
+        "line": "kli-rzo",
+        "molecule": "kli rzo"
+    },
+    {
+        "fr": "horizontalement",
+        "litteral" : "avec horizon",
+        "phono": "vi rzo",
+        "line": "vi-rzo",
+        "molecule": "vi rzo"
+    },
+    {
+        "fr": "contagion",
+        "litteral" : "déterminer maladie croître",
+        "phono": "mea nfea grae",
+        "line": "mea-nfea-grae",
+        "molecule": "mea nfea grae"
+    },
+    {
+        "fr": "contagieux",
+        "litteral" : "avec maladie croître",
+        "phono": "vi nfea grae",
+        "line": "vi-nfea-grae",
+        "molecule": "vi nfea grae"
+    },
+    {
+        "fr": "mensuration",
+        "litteral" : "déterminer couper dimensionner",
+        "phono": "mea kwo dme",
+        "line": "mea-kwo-dme",
+        "molecule": "mea kwo dme"
+    },
+    {
+        "fr": "mesurer",
+        "litteral" : "couper dimensionner",
+        "phono": "kwo dme",
+        "line": "kwo-dme",
+        "molecule": "kwo dme"
+    },
+    {
+        "fr": "mesure",
+        "litteral" : "objet couper dimensionner",
+        "phono": "ptae kwo dme",
+        "line": "ptae-kwo-dme",
+        "molecule": "ptae kwo dme"
+    },
+    {
+        "fr": "gavage",
+        "litteral" : "déterminer remplir nourrir animal",
+        "phono": "mea floi fdu pkia",
+        "line": "mea-floi-fdu-pkia",
+        "molecule": "mea floi fdu pkia"
+    },
+    {
+        "fr": "gaver",
+        "litteral" : "remplir nourrir animal",
+        "phono": "floi fdu pkia",
+        "line": "floi-fdu-pkia",
+        "molecule": "floi fdu pkia"
+    },
+    {
+        "fr": "",
+        "litteral" : "",
+        "phono": "",
+        "line": "",
+        "molecule": ""
+    },
+    {
+        "fr": "versement",
+        "litteral" : "déterminer vider eau",
+        "phono": "mea floi to",
+        "line": "mea-floi-to",
+        "molecule": "mea floi to"
+    },
+    {
+        "fr": "verser",
+        "litteral" : "vider eau",
+        "phono": "floi to",
+        "line": "floi-to",
+        "molecule": "floi to"
+    },
+    {
+        "fr": "tomber",
+        "litteral" : "aller vitesse bas",
+        "phono": "le vlo ni",
+        "line": "le-vlo-ni",
+        "molecule": "le vlo ni"
+    },
+    {
+        "fr": "adresse",
+        "litteral" : "objet marquer habiter",
+        "phono": "ptae mrai kio",
+        "line": "ptae-mrai-kio",
+        "molecule": "ptae mrai kio"
+    },
+    {
+        "fr": "brevet",
+        "litteral" : "objet marquer découvrir",
+        "phono": "ptae mrai 3i",
+        "line": "ptae-mrai-3i",
+        "molecule": "ptae mrai 3i"
+    },
+    {
+        "fr": "breveter",
+        "litteral" : "marquer découvrir",
+        "phono": "mrai 3i",
+        "line": "mrai-3i",
+        "molecule": "mrai 3i"
+    },
+    {
+        "fr": "balisage",
+        "litteral" : "déterminer marquer parcourir",
+        "phono": "mea mrai prae",
+        "line": "mea-mrai-prae",
+        "molecule": "mea mrai prae"
+    },
+    {
+        "fr": "balise",
+        "litteral" : "objet marquer parcourir",
+        "phono": "ptae mrai prae",
+        "line": "ptae-mrai-prae",
+        "molecule": "ptae mrai prae"
+    },
+    {
+        "fr": "baliser",
+        "litteral" : "marquer parcourir",
+        "phono": "mrai prae",
+        "line": "mrai-prae",
+        "molecule": "mrai prae"
     }
 ]
