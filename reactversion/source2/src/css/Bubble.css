@@ -67,6 +67,8 @@
     color: var(--blue1);
     border:2px solid  rgb(255, 152, 133);
     box-sizing: border-box;
+    font-family: 'Inter', cursive;
+    font-weight:bold;
 }
 
 .bubbleStart{
@@ -170,6 +172,7 @@
     animation: contactLink 1s ease-in-out;
     transition: all 0.25s ease-in-out;
     border:2px solid rgb(255, 152, 133);
+    font-family: 'Inter', cursive;
 }
 
 .contactLink:hover{
