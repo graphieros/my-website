@@ -673,13 +673,13 @@ const GraphierosShapeFinder = (props) => {
                     className="svgInput"
                 >
                     {svgGroup.content}
-                    <circle className='circleInput' id='m q' cx={m} cy={q} r='16' onClick={handleCoordinates} />
-                    <circle className='circleInput' id='l q' cx={l} cy={q} r='16' onClick={handleCoordinates} />
-                    <circle className='circleInput' id='lm a' cx={lm} cy={a} r='16' onClick={handleCoordinates} />
-                    <circle className='circleInput' id='rm a' cx={rm} cy={a} r='16' onClick={handleCoordinates} />
-                    <circle className='circleInput' id='r q' cx={r} cy={q} r='16' onClick={handleCoordinates} />
-                    <circle className='circleInput' id='rm w' cx={rm} cy={w} r='16' onClick={handleCoordinates} />
-                    <circle className='circleInput' id='lm w' cx={lm} cy={w} r='16' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='m q' cx={m} cy={q} r='30' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='l q' cx={l} cy={q} r='30' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='lm a' cx={lm} cy={a} r='30' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='rm a' cx={rm} cy={a} r='30' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='r q' cx={r} cy={q} r='30' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='rm w' cx={rm} cy={w} r='30' onClick={handleCoordinates} />
+                    <circle className='circleInput' id='lm w' cx={lm} cy={w} r='30' onClick={handleCoordinates} />
 
                 </svg>
 

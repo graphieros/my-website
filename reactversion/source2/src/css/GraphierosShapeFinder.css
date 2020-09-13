@@ -68,7 +68,7 @@ circle.circleInput{
 }
 
 circle.circleInput:hover{
-    r: 20px;
+    r: 35px;
     fill: tomato;
     stroke: none;
 }
