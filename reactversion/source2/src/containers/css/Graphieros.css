@@ -47,13 +47,14 @@
     text-align:center;
     color: var(--blue0);
     text-shadow: none;
-    background: radial-gradient(at top left, rgba(255,255,255,.35), rgba(255, 255, 255, 0.726));
+    background: radial-gradient(at top, rgba(255, 255, 255, 0.466), white);
     box-sizing: border-box;
     padding-left:20px;
     padding-right:20px;
     border-radius:10px;
     animation: graphierosDescription 0.5s ease-in-out;
     transition: all 0.3s ease-in-out;
+    font-family: 'Inter', cursive;
 }
 
 .graphierosDescriptionStart{
