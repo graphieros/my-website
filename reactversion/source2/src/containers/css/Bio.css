@@ -58,19 +58,26 @@
      position: fixed;
      width:90%;
      max-width:50ch;
-     color: white;
+     color: var(--blue0);
      top:50%;
-     left:0;
+     left:10px;
      transform: translateY(-50%);
      box-sizing: border-box;
      padding-left:20px;
      font-style: italic;
+     background: radial-gradient(at top, rgba(255, 255, 255, 0.438), white);
+     border-radius:3px;
+     box-shadow: 0 10px 20px -10px var(--blue0);
+     box-sizing: border-box;
+     padding:10px;
      animation: bioPic 2s ease-in;
+     font-family: 'Inter', cursive;
  }
 
  #story span {
      color: tomato;
      box-sizing: border-box;
+     font-weight:bold;
      padding:2px;
      padding-right:5px;
      padding-left:5px;
@@ -118,10 +125,6 @@
          top:initial;
          bottom:100px;
          transform: translateX(-50%);
-         color: var(--blue0);
-     }
-     #story span {
-         color: white;
      }
  }
 
