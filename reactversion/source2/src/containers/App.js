@@ -38,7 +38,7 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      {GA.initialize() && <GA.RouteTracker />}
+      {GA.init() && <GA.RouteTracker />}
 
       <div className="App">
 
