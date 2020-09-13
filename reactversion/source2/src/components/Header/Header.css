@@ -66,11 +66,13 @@ button.btnSearchShape {
     width:50px;
     border:none;
     border-radius:100%;
-    font-size:0.63em;
+    font-size:0.6em;
     text-align:center;
     cursor: pointer;
     box-shadow: 0 5px 10px -5px rgba(19,55,104,.75);
     background: radial-gradient(at top, white, tomato);
+    font-family: 'Inter', cursive;
+    font-weight:bold;
 }
 
 button.btnSearchShape:hover {
