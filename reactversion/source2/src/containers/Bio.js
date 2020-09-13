@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Fractal from '../components/graphieros/Fractal';
 import './css/Bio.css';
-import alp from '../assets/alp.jpg';
+import face from '../assets/face.jpg';
 import Alp from '../components/Alp';
 
 
@@ -84,7 +84,7 @@ const Bio = () => {
             </div>
 
             <div className="biopicWrapper">
-                <img src={alp} alt="alp" />
+                <img src={face} alt="alp" />
             </div>
 
             <div id="storyArrow" onClick={handleStory}>
