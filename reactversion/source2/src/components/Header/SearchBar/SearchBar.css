@@ -70,16 +70,17 @@ input.searchInput{
     justify-items:center;
     text-align:center;
     position: fixed;
-    top:250px;
+    margin-top:90px;
     left:50%;
     transform: translateX(-50%);
     background: white;
     border-radius:3px;
     width:200px;
     box-sizing: border-box;
-    padding-bottom:30px;
-    padding-top:40px;
+    padding-bottom:20px;
+    padding-top:10px;
     box-shadow: 0 20px 40px -20px rgba(0,0,100,0.35);
+    z-index:100;
 }
 
 .quitResult{

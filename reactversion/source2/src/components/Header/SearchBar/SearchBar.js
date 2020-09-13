@@ -237,18 +237,21 @@ const SearchBar = (props) => {
                 setSearchResult({
                     className: 'glyphSearchReturn',
                     content: <div>
-                        <Linear
-                            sequence={word.line}
-                            size='50'
-                            colors={[29, 55, 104]}
-                            background='white'
-                            cartouche={false}
-                        />
-                        <Molecule
-                            sequence={word.molecule}
-                            colors={[122, 161, 216]}
-                            size='60'
-                        />
+                        <div>
+                            <Linear
+                                sequence={word.line}
+                                size='50'
+                                colors={[29, 55, 104]}
+                                background='white'
+                                cartouche={false}
+                            />
+                            <Molecule
+                                sequence={word.molecule}
+                                colors={[122, 161, 216]}
+                                size='60'
+                            />
+                        </div>
+
                         <div className="searchResultWord">
                             <p>"{word.fr}"</p>
                             <h5>{word.litteral}</h5>
