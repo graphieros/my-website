@@ -3505,5 +3505,145 @@
         "phono": "mrai prae",
         "line": "mrai-prae",
         "molecule": "mrai prae"
+    },
+    {
+        "fr": "carte",
+        "litteral" : "objet fonction planifier terre",
+        "phono": "ptae fkai pla trea",
+        "line": "ptae-fkai-pla-trea",
+        "molecule": "ptae fkai pla trea"
+    },
+    {
+        "fr": "cartographe",
+        "litteral" : "humain planifier terre",
+        "phono": "ka pla trea",
+        "line": "ka-pla-trea",
+        "molecule": "ka pla trea"
+    },
+    {
+        "fr": "cartographie",
+        "litteral" : "déterminer planifier terre",
+        "phono": "mea pla trea",
+        "line": "mea-pla-trea",
+        "molecule": "mea pla trea"
+    },
+    {
+        "fr": "cartographier",
+        "litteral" : "planifier terre",
+        "phono": "pla trea",
+        "line": "pla-trea",
+        "molecule": "pla trea"
+    },
+    {
+        "fr": "cartographique",
+        "litteral" : "qualité planifier terre",
+        "phono": "kli pla trea",
+        "line": "kli-pla-trea",
+        "molecule": "kli pla trea"
+    },
+    {
+        "fr": "planisphère",
+        "litteral" : "objet fonction planifier planète vivre",
+        "phono": "ptae fkai pla pnae sa",
+        "line": "ptae-fkai-pla-pnae-sa",
+        "molecule": "ptae fkai pla pnae sa"
+    },
+    {
+        "fr": "parapluie",
+        "litteral" : "objet fonction protéger pleuvoir",
+        "phono": "ptae fkai 3e pto",
+        "line": "ptae-fkai-3e-pto",
+        "molecule": "ptae fkai 3e pto"
+    },
+    {
+        "fr": "propos",
+        "litteral" : "objet lancer sujet",
+        "phono": "ptae ska pkae",
+        "line": "ptae-ska-pkae",
+        "molecule": "ptae ska pkae"
+    },
+    {
+        "fr": "proposer",
+        "litteral" : "lancer sujet",
+        "phono": "ska pkae",
+        "line": "ska-pkae",
+        "molecule": "ska pkae"
+    },
+    {
+        "fr": "proposition",
+        "litteral" : "déterminer lancer sujet",
+        "phono": "mea ska pkae",
+        "line": "mea-ska-pkae",
+        "molecule": "mea ska pkae"
+    },
+    {
+        "fr": "examen",
+        "litteral" : "objet tester sujet",
+        "phono": "ptae ste pkae",
+        "line": "ptae-ste-pkae",
+        "molecule": "ptae ste pkae"
+    },
+    {
+        "fr": "examinateur",
+        "litteral" : "humain tester sujet",
+        "phono": "ka ste pkae",
+        "line": "ka-ste-pkae",
+        "molecule": "ka ste pkae"
+    },
+    {
+        "fr": "examiner",
+        "litteral" : "tester sujet",
+        "phono": "ste pkae",
+        "line": "ste-pkae",
+        "molecule": "ste pkae"
+    },
+    {
+        "fr": "sondage",
+        "litteral" : "déterminer lancer tester",
+        "phono": "mea ska ste",
+        "line": "mea-ska-ste",
+        "molecule": "mea ska ste"
+    },
+    {
+        "fr": "sonde",
+        "litteral" : "objet fonction lancer tester",
+        "phono": "ptae fkai ska ste",
+        "line": "ptae-fkai-ska-ste",
+        "molecule": "ptae fkai ska ste"
+    },
+    {
+        "fr": "sonder",
+        "litteral" : "lancer tester",
+        "phono": "ska ste",
+        "line": "ska-ste",
+        "molecule": "ska ste"
+    },
+    {
+        "fr": "sondeur",
+        "litteral" : "humain lancer tester",
+        "phono": "ka ska ste",
+        "line": "ka-ska-ste",
+        "molecule": "ka ska ste"
+    },
+    {
+        "fr": "tordre",
+        "litteral" : "former croiser",
+        "phono": "fai kru",
+        "line": "fai-kru",
+        "molecule": "fai kru"
+    },
+    {
+        "fr": "tordu",
+        "litteral" : "qualité former croiser",
+        "phono": "kli fai kru",
+        "line": "kli-fai-kru",
+        "molecule": "kli fai kru"
+    },
+    {
+        "fr": "torsion",
+        "litteral" : "déterminer former croiser",
+        "phono": "mea fai kru",
+        "line": "mea-fai-kru",
+        "molecule": "mea fai kru"
     }
 ]
