@@ -1,0 +1,23 @@
+.thinkLogo{
+    font-family: var(--think);
+}
+
+.thinkLogoWrapper{
+    display: flex;
+}
+
+.fractalLogo{
+    margin-top:42px;
+    height:80px;
+    width:80px;
+    animation: logo-spin infinite 5s linear;
+}
+
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
