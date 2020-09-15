@@ -4,13 +4,14 @@
 
 .thinkLogoWrapper{
     display: flex;
+    width:100px;
 }
 
 .fractalLogo{
     margin-top:42px;
     height:80px;
     width:80px;
-    animation: logo-spin infinite 5s linear;
+    animation: logo-spin infinite 6s linear;
 }
 
 @keyframes logo-spin {
@@ -18,6 +19,6 @@
       transform: rotate(0deg);
     }
     to {
-      transform: rotate(-360deg);
+      transform: rotate(360deg);
     }
   }

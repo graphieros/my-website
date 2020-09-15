@@ -1,5 +1,6 @@
 import React from 'react';
 import Think from '../components/Think';
+import LandingForm from './LandingForm';
 import './css/LandingPage.css'
 
 const LandingPage = () => {
@@ -12,7 +13,9 @@ const LandingPage = () => {
                 </div>
             </div>
             <div className='landingRight'>
+                <LandingForm />
             </div>
+            
         </div>
     )
 }
