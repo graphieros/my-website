@@ -3645,5 +3645,19 @@
         "phono": "mea fai kru",
         "line": "mea-fai-kru",
         "molecule": "mea fai kru"
+    },
+    {
+        "fr": "contorsion",
+        "litteral" : "déterminer corps former croiser",
+        "phono": "mea bdi fai kru",
+        "line": "mea-bdi-fai-kru",
+        "molecule": "mea bdi fai kru"
+    },
+    {
+        "fr": "contorsionner",
+        "litteral" : "corps former croiser",
+        "phono": "bdi fai kru",
+        "line": "bdi-fai-kru",
+        "molecule": "bdi fai kru"
     }
 ]
