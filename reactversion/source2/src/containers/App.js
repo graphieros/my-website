@@ -11,6 +11,7 @@ import Outils from './Outils';
 import Galerie from './Galerie';
 import Graphieros from './Graphieros';
 import Livres from './Livres';
+import Blog from './Blog';
 import '././css/App.css';
 import clouds from '../assets/clouds.png';
 import GA from '../utils/GoogleAnalytics';
@@ -56,6 +57,8 @@ const App = () => {
           <Route path='/parcours/bio' exact component={Bio} />
           <Route path='/parcours/media' exact component={Media} />
           <Route path='/parcours/outils' exact component={Outils} />
+
+          <Route path='/blog' exact component={Blog} />
 
           <Route path='/art' exact component={Art} />
           <Route path='/art/galerie' exact component={Galerie} />

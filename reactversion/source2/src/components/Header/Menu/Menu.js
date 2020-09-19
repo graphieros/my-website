@@ -95,8 +95,8 @@ const Menu = (props) => {
                     />
                 </Link>
 
-                <Link 
-                    to='/contact.php' 
+                <Link
+                    to='/contact.php'
                     target='_blank'
                     onClick={handleQuitMenu}>
                     <MenuItem
@@ -113,7 +113,6 @@ const Menu = (props) => {
                 </Link>
 
 
-
                 <div onClick={handleQuitMenu} >
                     <Fractal
                         className='fractalQuit'
@@ -124,6 +123,12 @@ const Menu = (props) => {
                         svgSize='30'
                     />
                 </div>
+
+                <Link to='/blog' onClick={handleQuitMenu}>
+                    <div className='blogLink'>
+                        blog
+                    </div>
+                </Link>
 
             </Modal>
 

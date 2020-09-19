@@ -9,7 +9,7 @@ const LandingPage = () => {
             <div className='landingLeft'>
                 <div className='landingLeftLogoWrapper'>
                     <Think fontSize='3em' color='white' />
-                    <p className='motto'>juste vos idées.</p>
+                    <p className='motto'>it's cheap to dream.</p>
                 </div>
             </div>
             <div className='landingRight'>

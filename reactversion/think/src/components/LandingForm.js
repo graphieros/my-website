@@ -25,11 +25,11 @@ const LandingForm = () => {
                 </label>
 
                 <label>
-                    mot de passe.
+                    password.
         <input className='landingInput' type="text" {...bindPwd} />
                 </label>
-                <p>si vous connaissez un ami vous rentrerez.</p>
-                <input className='inputBtn' type="submit" value="entrer." />
+                <p>if you know someone you'll get in.</p>
+                <input className='inputBtn' type="submit" value="log in." />
             </form>
         </div>
 

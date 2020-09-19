@@ -637,7 +637,7 @@ const GraphierosShapeFinder = (props) => {
                     <span className="spanPhonoOpt">[ {res.n} ]</span>
                 </div>)}
             </div>
-        });
+        }); 
     }
 
 

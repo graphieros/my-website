@@ -1,0 +1,22 @@
+.blog-body{
+    display: block;
+    position: fixed;
+    overflow: scroll;
+    left:50%;
+    top: 100px;
+    transform: translateX(-50%);
+    width:100%;
+    max-width:500px;
+    height:100%;
+}
+.blog-body::-webkit-scrollbar{
+    width:0px;
+}
+
+@media (max-width:700px){
+    .blog-body{
+        transform: none;
+        left:20px;
+        width: 220px;
+    }
+}

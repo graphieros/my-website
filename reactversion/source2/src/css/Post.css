@@ -1,0 +1,46 @@
+.post-body{
+    width:100%;
+    background: white;
+    border-radius:12px;
+    box-sizing: border-box;
+    padding:12px;
+    box-shadow: 0 10px 20px -10px var(--blue0);
+    font-family: 'Inter', sans-serif;
+    margin-top:24px;
+}
+
+.post-title{
+    width:100%;
+    height:40px;
+    background: linear-gradient(to right, var(--blue3), var(--blue2));
+    border-radius: 6px 6px 2px 2px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left:12px;
+    font-weight:bold;
+    color: var(--blue0);
+}
+
+.post-fractal{
+    height:30px;
+    width:30px;
+    margin-right:20px;
+}
+
+.post-idea{
+    margin-top:12px;
+    color: var(--blue0);
+    text-indent: 18px;
+}
+
+.post-idea::first-letter{
+    background: var(--blue2);
+    display: inline-block;
+    padding-right: 3px;
+    padding-left:3px;
+    font-size:1.2em;
+    font-weight:bold;
+    color: var(--blue3);
+    font-family: 'Megrim', cursive;
+}

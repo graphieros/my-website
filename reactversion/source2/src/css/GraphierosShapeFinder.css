@@ -60,11 +60,11 @@ svg.svgInput path{
 }
 
 circle.circleInput{
-    transition: r 0.3s ease, fill 0.3s ease;
     fill: var(--blue0);
     stroke: none;
     cursor: pointer;
     opacity:0.35;
+    transition: all 0.25s ease-in-out;
 }
 
 circle.circleInput:hover{

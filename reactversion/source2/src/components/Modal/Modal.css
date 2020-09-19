@@ -2,12 +2,12 @@
     display: grid;
     position: fixed;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 15px;
-    row-gap:5px;
+    grid-gap: 30px;
+    row-gap:20px;
     top:50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height:238px;
+    height:250px;
     width:250px;
     background: radial-gradient(var(--blue3), var(--blue1));
     box-sizing: border-box;

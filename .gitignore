@@ -83,3 +83,5 @@ reactversion/source2/src/assets/books/pangolin.png
 reactversion/think/public/favicon.ico
 reactversion/think/public/logo192.png
 reactversion/think/public/logo512.png
+reactversion/think/.firebaserc
+reactversion/think/firebase.json

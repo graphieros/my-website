@@ -19,6 +19,23 @@
     animation: fractalMenu 0.3s ease-in-out;
 }
 
+.blogLink{
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    height:50px;
+    width:50px;
+    transform: translate(-50%,-50%);
+    background: radial-gradient(at bottom right, var(--blue2), var(--blue3));
+    z-index: 20000;
+    border-radius:3px;
+    box-shadow: 0 0 30px black;
+    color: var(--blue0);
+}
+
 @keyframes fractalMenu {
     0%{
         transform: rotate(0deg);
