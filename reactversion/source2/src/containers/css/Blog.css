@@ -1,8 +1,6 @@
 .blog-body{
     display: block;
-    position: fixed;
-    overflow: scroll;
-    left:50%;
+    margin-left:50%;
     top: 100px;
     transform: translateX(-50%);
     width:100%;
@@ -16,7 +14,7 @@
 @media (max-width:700px){
     .blog-body{
         transform: none;
-        left:20px;
+        margin-left:20px;
         width: 220px;
     }
 }

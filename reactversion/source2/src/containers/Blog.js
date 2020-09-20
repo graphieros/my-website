@@ -6,9 +6,14 @@ import posts from '../libraries/posts.json';
 const Blog = () => {
 
     const postList = [];
-    posts.forEach(post => {
+    posts.forEach((post, i) => {
         postList.push(
-            <Post title={post.title} idea={post.idea} />
+            <Post
+                key={`post_${i}`}
+                title={post.title} 
+                date={post.date}
+                idea={post.idea} 
+            />
         );
     });
 
