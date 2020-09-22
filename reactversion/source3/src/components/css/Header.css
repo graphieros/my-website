@@ -1,0 +1,9 @@
+.header{
+    height:61.8px;
+    width:100%;
+    position: sticky;
+    top:0;
+    left:0;
+    background: rgb(210,210,205);
+    z-index:100;
+}

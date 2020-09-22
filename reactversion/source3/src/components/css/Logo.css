@@ -1,0 +1,23 @@
+.logo-body{
+    font-family: var(--logo);
+    display: flex;
+    align-items:center;
+    box-sizing: border-box;
+    padding:5px;
+    padding-left:20px;
+}
+
+.logo-fractal{
+    height:50px;
+    width:50px;
+    animation: logo-spin infinite 6s linear;
+}
+
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

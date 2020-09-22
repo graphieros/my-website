@@ -1,0 +1,16 @@
+:root{
+  --c0:29,55,104;
+  --c1:75,106,160;
+  --c2:122,161,216;
+  --c3:211,227,252;
+  --gradTop: radial-gradient(at top, rgb(var(--c0)), rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
+  --gradTopLeft: radial-gradient(at top left, rgb(var(--c0)), rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
+  --inter: 'Inter', sans-serif;
+  --megrim: 'Megrim', cursive;
+  --logo: 'Righteous', cursive;
+  --elite: 'Special Elite', cursive;
+}
+
+body{
+  background: rgb(230,230,225);
+}
