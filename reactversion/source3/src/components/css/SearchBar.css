@@ -1,0 +1,194 @@
+.searchBar{
+    position: relative;
+    display:block;
+    top:4px;
+    height:30px;
+    z-index:100;
+}
+
+input.searchInput{
+    height:100%;
+    border-radius:12px;
+    border:none;
+    box-sizing: border-box;
+    padding-left:10px;
+    font-family: 'Inter', cursive;
+    font-weight: bold;
+    font-size: 1em;
+    color: rgb(20,20,80);
+    box-shadow: 0 10px 20px -10px rgba(0,0,100,0.25);
+    width:170px;
+    margin-left: 18px;
+}
+
+.tempSearch {
+    width:210px;
+    max-height:150px;
+    padding-bottom:30px;
+    overflow: auto;
+    background: white;
+    margin-left: 10px;
+    margin-top:5px;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 10px 20px -10px rgba(0,0,100,0.25);
+    box-sizing: border-box;
+    padding-left:20px;
+    overflow-x: hidden;
+}
+
+.tempSearch::-webkit-scrollbar-thumb{
+    background: rgb(20,20,80);
+}
+
+.results {
+    display: flex;
+    height:30px;
+    cursor: pointer;
+    box-sizing: border-box;
+    z-index:100;
+}
+
+.results span {
+    margin-top: 12px;
+}
+
+.results p {
+    box-sizing: border-box;
+    border-radius:2px;
+    padding-left:10px;
+    padding-right:10px;
+    height:25px;
+    transition: background 0.3s ease-in-out;
+}
+
+.results p:hover {
+    background: rgba(255, 99, 71, 0.486);
+}
+
+.glyphSearchReturn {
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    text-align:center;
+    position: fixed;
+    margin-top:90px;
+    left:50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius:3px;
+    width:200px;
+    box-sizing: border-box;
+    padding-bottom:20px;
+    padding-top:10px;
+    box-shadow: 0 20px 40px -20px rgba(0,0,100,0.35);
+    z-index:100;
+}
+
+.quitResult{
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    height:30px;
+    width:30px;
+    border-radius:100%;
+    box-shadow: 0 5px 10px -5px rgba(0,0,100,0.45);
+    cursor: pointer;
+    opacity:0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.quitResult:hover {
+    opacity: 1;
+}
+
+.quitResult div > svg {
+    background: tomato !important;
+    height: 30px !important;
+    width:30px !important;
+}
+
+.glyphSearchReturn svg {
+    height:80px !important;
+    width:80px !important;
+}
+
+.searchResultPhono {
+    color: tomato;
+    font-weight: bold;
+    font-family: 'Inter', cursive;
+}
+
+.searchResultPhono span {
+    color: rgb(20,20,80);
+    line-height:30px;
+}
+
+.searchResultWord{
+    font-family: 'Inter', cursive;
+    color: var(--blue0);
+    font-weight: bold;
+}
+
+.searchResultWord p {
+    display: block;
+}
+
+.searchResultWord h5 {
+    color: var(--blue2);
+    display: block;
+    width:95%;
+    margin:0 auto;
+}
+
+.searchResultWord span {
+    margin-top:10px;
+    display: block;
+    color: tomato;
+}
+
+p.combo {
+    font-weight: bold;
+    color: var(--blue1);
+    margin-left:-10px;
+}
+
+span.moleculeSpan{
+    margin-top:10px;
+    margin-left:-10px;
+}
+
+span.phonoResult {
+    font-size: 0.6em;
+    color: var(--blue1);
+    margin-top: 22px;
+}
+
+.counter{
+    font-family: var(--inter);
+    text-align:left;
+    box-sizing: border-box;
+    padding-left:20px;
+    padding-top: 10px;
+    font-size:0.75em;
+}
+
+span.countTomato{
+    color: tomato;
+    font-weight:bold;
+}
+
+span.countBlue{
+    color: var(--blue0);
+    font-weight:bold;
+}
+
+@media (max-width:500px) {
+    input.searchInput{
+        font-size:0.8em;
+        width:140px;
+
+    }
+    .glyphSearchReturn {
+       top:150px;
+    }
+}

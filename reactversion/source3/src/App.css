@@ -5,6 +5,7 @@
   --c3:211,227,252;
   --gradTop: radial-gradient(at top, rgb(var(--c0)), rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
   --gradTopLeft: radial-gradient(at top left, rgb(var(--c0)), rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
+  --gradTopLight: radial-gradient(at top, rgb(var(--c2)), rgb(var(--c0)));
   --inter: 'Inter', sans-serif;
   --megrim: 'Megrim', cursive;
   --logo: 'Righteous', cursive;
@@ -13,4 +14,12 @@
 
 body{
   background: rgb(230,230,225);
+}
+
+.hidden{
+  display:none;
+}
+
+a.link{
+  text-decoration: none;
 }

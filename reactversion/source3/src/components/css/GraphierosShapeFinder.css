@@ -1,0 +1,292 @@
+.svgInputWrapper{
+    display: grid;
+    position: fixed;
+    align-content:center;
+    justify-items:center;
+    margin:0 auto;
+    left:50%;
+    transform: translateX(-50%);
+    margin-top:150px;
+    height:250px;
+    width:200px;
+    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.5));
+    border-radius:12px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    animation: svgInputWrapper 0.5s ease-in;
+    z-index:10;
+    font-family: var(--inter);
+}
+
+@keyframes svgInputWrapper {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.quitGlyphSearch{
+    height:30px;
+    width:30px;
+    border-radius:100%;
+    z-index:200;
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    transition: all 0.23s ease-in-out;
+    opacity:0.8;
+    cursor: pointer;
+    box-shadow: 0 5px 10px -5px rgb(var(--c0));
+}
+
+.quitGlyphSearch:hover {
+    opacity:1;
+}
+
+svg.svgInput{
+    display: block;
+    position: absolute;
+    margin-top:40px;
+    left:50%;
+    transform: translateX(-50%);
+    height:150px;
+    width:150px;
+    background: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill:none;
+    stroke-width:10px;
+    stroke: rgb(var(--c0));
+    border-radius:12px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+}
+
+svg.svgInput path{
+    animation: dash 5s infinite;
+}
+
+@keyframes dash{
+    0%{
+        stroke: rgb(var(--c0));
+    }
+    50%{
+        stroke: rgb(var(--c2));
+    }
+    100%{
+        stroke: rgb(var(--c0));
+    }     
+}
+
+circle.circleInput{
+    fill: rgb(var(--c0));
+    stroke: none;
+    cursor: pointer;
+    opacity:0.35;
+    transition: all 0.25s ease-in-out;
+}
+
+circle.circleInput:hover{
+    r: 35px;
+    fill: tomato;
+    stroke: none;
+}
+
+.btnControls{
+    position: absolute;
+    margin-top:200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width:150px;
+}
+
+button.btnCUT,
+button.btnRESET{
+    width:100%;
+    height:30px;
+    font-family: var(--logo);
+    border:none;
+    border-radius:6px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+button.btnCUT:hover,
+button.btnRESET:hover {
+    opacity:1;
+}
+
+button.btnCUT{
+    background: radial-gradient(at top, rgb(var(--c2)), rgb(var(--c0)));
+    color: white;
+    text-shadow: 0 1px 1px rgb(var(--c0));
+}
+
+button.btnRESET{
+    background: radial-gradient(at top, white, tomato);
+    color: rgb(var(--c0));
+}
+
+.result {
+    position: absolute;
+    bottom:-25px;
+    width:150px;
+    text-align:left;
+}
+
+.result p {
+    font-family: 'Roboto', cursive;
+    color: rgb(var(--c0));
+}
+
+span.spanConcept {
+    font-weight:bold;
+}
+
+span.spanPhono {
+    color: tomato;
+    font-weight: bold;
+}
+
+.miniSvgResult {
+    height: 50px;
+    width:50px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    border-radius:100%;
+    background: white;
+    box-shadow: 0px 0px 10px -1px rgba(29,55,104,0.75);
+}
+
+.miniSvgResult svg {
+    height:50px !important;
+    width:50px !important;
+}
+
+.optionDisplay {
+    position: fixed;
+    display: grid;
+    row-gap: 10px;
+    align-items:center;
+    justify-items:center;
+    grid-template-columns: repeat(3,1fr);
+    top:250px;
+    width:200px;
+    left:50%;
+    transform:translateX(-50%);
+    background: radial-gradient(at top, rgb(var(--c2)), rgb(var(--c0)));
+    overflow: scroll;
+    max-height:200px;
+    border-radius:12px;
+    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    box-sizing: border-box;
+    padding-bottom:100px;
+    animation: optionDisplay 0.2s ease-in;
+
+}
+
+@keyframes optionDisplay {
+    0%{
+        opacity: 0;
+        transform: translateX(-50%) scale(0,1);
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.optionDisplay::-webkit-scrollbar{
+    width:5px;
+    height:0px;
+    background: rgb(var(--c3));
+    box-shadow: -2px -2px 5px black;
+}
+
+.optionDisplay::-webkit-scrollbar-thumb{
+    background: radial-gradient(rgb(255, 163, 147), tomato);
+    border-radius:2px;
+    box-shadow: 0 2px 2px black;
+}
+
+.optionDisplay div {
+    display: grid;
+    align-items:center;
+    justify-items:center;
+}
+
+.svgRes svg {
+    height: 30px !important;
+    width:30px !important;
+    transition: scale 0.5s ease-in-out;
+    border-radius:2px;
+}
+
+.optionDisplay span {
+    font-size:0.6em;
+    width:100%;
+    text-align:center;
+    color: white;
+    text-shadow: 0 0.7px 0.7px rgb(29,55,104);
+}
+
+span.spanPhonoOpt {
+    color: rgb(255, 167, 152);
+}
+
+p.svgInputTitle{
+    position: absolute;
+    margin-top:5px;
+    font-size:0.7em;
+    width:75%;
+    color: rgb(var(--c0));
+}
+
+.resultCounter{
+    display: block;
+    position: fixed;
+    bottom:2px;
+    font-size:0.7em;
+    color: rgb(var(--c0));
+    font-weight:bold;
+    animation: resultCounter 1.618s ease-in-out infinite;
+}
+
+@keyframes resultCounter{
+    0%{
+        opacity:0;
+        color: tomato;
+    }
+    50%{
+        color: rgb(var(--c0));
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        color: tomato;
+    }
+}
+
+@media (max-width: 320px) {
+    .svgInputWrapper{
+        margin-top: 110px;
+    }
+    .optionDisplay{
+        top:250px;
+        max-height:140px;
+        margin-left:0px;
+    }
+    @keyframes optionDisplay {
+        0%{
+            opacity: 0;
+            height:100px;
+            width:100px;
+        }
+        100%{
+            opacity:1;
+        }
+    }
+}

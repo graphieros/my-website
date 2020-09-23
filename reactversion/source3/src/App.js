@@ -12,6 +12,16 @@ function App() {
 
       <div className="App">
         <Header />
+        <Route path='/galerie' exact component={''} />
+        <Route path='/blog' exact component={''} />
+        <Route path='/cle.html' component={() => {
+            window.location.href = 'https://graphieros.com/cle.html';
+            return null;
+          }} />
+        <Route path='/contact.php' component={() => {
+            window.location.href = 'https://graphieros.com/contact.php';
+            return null;
+          }} />
       </div>
 
     </BrowserRouter>

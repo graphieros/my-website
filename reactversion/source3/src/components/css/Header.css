@@ -1,9 +1,54 @@
 .header{
+    display: flex;
     height:61.8px;
     width:100%;
-    position: sticky;
+    position: fixed;
     top:0;
     left:0;
     background: rgb(210,210,205);
     z-index:100;
+}
+
+.sub-header{
+    display: flex;
+    height: 38.19px;
+    width:100%;
+    position: fixed;
+    top: 61.8px;
+    left:0;
+    background: linear-gradient(to right, rgb(var(--c1)), transparent);
+    z-index:100;
+}
+
+button.button-search-shape{
+    height:30px;
+    margin-top:4px;
+    margin-left:6px;
+    border-top:1px solid rgb(var(--c3));
+    border-left: 1px solid rgb(var(--c3));
+    border-right: 1px solid rgb(var(--c2));
+    border-bottom: 1px solid rgb(var(--c2));
+    border-radius:12px;
+    width:150px;
+    font-family: var(--inter);
+    background: rgb(var(--c1));
+    color: white;
+    font-size:1.04em;
+    line-height:1.0em;
+    cursor: pointer;
+    box-shadow: 0 2px 4px -2px rgb(var(--c0));
+    transition: all 0.23s ease-in-out;
+}
+
+button.button-search-shape:hover {
+    background: rgb(var(--c2));
+    color: rgb(var(--c0));
+}
+
+@media (max-width:500px) {
+
+    button.button-search-shape{
+        font-size:0.8em;
+        width:140px;
+    }
 }
