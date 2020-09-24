@@ -75,7 +75,7 @@ input.searchInput{
     left:50%;
     transform: translateX(-50%);
     background: white;
-    border-radius:3px;
+    border-radius:12px;
     width:200px;
     box-sizing: border-box;
     padding-bottom:20px;
@@ -115,7 +115,7 @@ input.searchInput{
 .searchResultPhono {
     color: tomato;
     font-weight: bold;
-    font-family: 'Inter', cursive;
+    font-family: var(--inter);
 }
 
 .searchResultPhono span {
@@ -124,8 +124,8 @@ input.searchInput{
 }
 
 .searchResultWord{
-    font-family: 'Inter', cursive;
-    color: var(--blue0);
+    font-family: var(--inter);
+    color: var(--c0);
     font-weight: bold;
 }
 
@@ -134,7 +134,7 @@ input.searchInput{
 }
 
 .searchResultWord h5 {
-    color: var(--blue2);
+    color: rgb(var(--c2));
     display: block;
     width:95%;
     margin:0 auto;
@@ -148,7 +148,7 @@ input.searchInput{
 
 p.combo {
     font-weight: bold;
-    color: var(--blue1);
+    color: rgb(var(--c1));
     margin-left:-10px;
 }
 
@@ -159,7 +159,7 @@ span.moleculeSpan{
 
 span.phonoResult {
     font-size: 0.6em;
-    color: var(--blue1);
+    color: rgb(var(--c1));
     margin-top: 22px;
 }
 
@@ -178,7 +178,7 @@ span.countTomato{
 }
 
 span.countBlue{
-    color: var(--blue0);
+    color: rgb(var(--c0));
     font-weight:bold;
 }
 

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GA from '../src/utils/GoogleAnalytics';
 import './App.css';
 import Header from './components/Header';
+import Landing from './components/Landing';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
 
       <div className="App">
         <Header />
+        <Landing />
         <Route path='/galerie' exact component={''} />
         <Route path='/blog' exact component={''} />
         <Route path='/cle.html' component={() => {

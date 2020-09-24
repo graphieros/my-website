@@ -1,0 +1,34 @@
+.landing-body{
+    width:100%;
+    margin-top:140px;
+    box-sizing: border-box;
+    padding: 18px;
+    font-family: var(--inter);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    justify-items:center;
+    grid-gap: 24px;
+    color: rgb(var(--c0));
+}
+
+h2.wtf{
+    font-family: var(--logo);
+    color: rgb(var(--c1));
+    font-weight: normal;
+}
+
+.graphieros-presentation{
+    background: white;
+    box-sizing: border-box;
+    padding:12px;
+    border-radius:12px;
+    width:100%;
+    max-width:60ch;
+}
+
+@media (max-width:700px){
+    .landing-body{
+        display: block;
+    }
+}
