@@ -1,34 +1,157 @@
+.landing-body-wrapper{
+    background: rgb(var(--c0));
+}
+
 .landing-body{
     width:100%;
-    margin-top:140px;
-    box-sizing: border-box;
-    padding: 18px;
+    padding:18px;
     font-family: var(--inter);
+}
+
+.landing-body,
+.graphieros-physics,
+.graphieros-works,
+.landing-links{
+    font-family: var(--inter);
+}
+
+.landing-body{
+    margin-top:100px;
+    box-sizing: border-box;
+    padding-top:48px;
+    padding-bottom: 192px;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     align-items:center;
     justify-items:center;
     grid-gap: 24px;
     color: rgb(var(--c0));
+    background: var(--gradTopLeftDark);
+    border-radius: 0 0 200px 0;
 }
 
-h2.wtf{
+.graphieros-physics{
+    background: rgb(var(--c0));
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.graphieros-physics p,
+.landing-links p {
+    margin: 0 auto;
+    max-width:50ch;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    padding:24px;
+}
+
+.graphieros-physics p {
+    color: rgb(var(--c2));
+}
+
+.landing-fractal,
+.landing-fractal svg {
+    height:192px;
+    width:192px;
+}
+
+.landing-fractal{
+    margin-top: -224px;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    background: radial-gradient(white, rgb(var(--c2)));
+    border-radius:100%;
+    transition: all 0.25s ease-in-out;
+    box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.205), 10px 10px 20px 0px rgb(var(--c0));
+}
+
+h1.wtf,
+h1.wtf2{
     font-family: var(--logo);
-    color: rgb(var(--c1));
+    color: rgb(var(--c3));
     font-weight: normal;
 }
 
+h1.wtf{
+    color: rgb(var(--c3));
+}
+
+h1.wtf2{
+    color: rgb(var(--c2));
+    width:100%;
+    text-align:center;
+}
+
 .graphieros-presentation{
-    background: white;
     box-sizing: border-box;
     padding:12px;
     border-radius:12px;
     width:100%;
-    max-width:60ch;
+    max-width:50ch;
+    font-size:1.2em;
+    color:white;
+    font-family: var(--inter);
+}
+
+span.greySpan{
+    color: rgba(var(--c2));
+}
+
+span.blueSpan{
+    color: rgb(var(--c1));
+}
+
+.graphieros-works {
+    display: block;
+    position: relative;
+    background: radial-gradient(at bottom left, white,rgb(210,210,205));
+    border-radius: 200px 0px 200px 0;
+    padding: 18px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    justify-items:center;
+    grid-gap: 24px;
+    z-index:1;
+    box-shadow: 20px 20px 40px -20px rgba(var(--c0),0.6);
+}
+
+.graphieros-works p {
+    margin: 0 auto;
+    max-width:50ch;
+    color: rgb(var(--c1));
+    font-size: 1.2em;
+    box-sizing: border-box;
+    padding:24px;
+}
+
+.graphieros-works-linear {
+    width:100%;
+    text-align:center;
+}
+
+.landing-links {
+    box-sizing: border-box;
+    padding-top: 250px;
+    margin-top:-200px;
+    z-index:0;
+    background: white;
+    color: rgb(var(--c1));
+}
+
+.landing-links-wrapper{
+    display: grid;
 }
 
 @media (max-width:700px){
-    .landing-body{
+    .landing-body,
+    .graphieros-works,
+    .graphieros-physics,
+    .landing-links{
         display: block;
+        font-size: 0.9em;
     }
 }

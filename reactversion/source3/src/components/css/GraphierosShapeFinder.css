@@ -9,9 +9,9 @@
     margin-top:150px;
     height:250px;
     width:200px;
-    background: linear-gradient(to top, white, rgba(255, 255, 255, 0.5));
+    background: linear-gradient(to top, white, rgba(var(--c2)), rgb(var(--c1)));
     border-radius:12px;
-    box-shadow: 0 5px 10px -5px rgba(29,55,104,0.75);
+    box-shadow: 5px 5px 10px -5px rgb(var(--c0)), -5px -5px 10px -5px rgb(255, 255, 255);
     animation: svgInputWrapper 0.5s ease-in;
     z-index:10;
     font-family: var(--inter);
@@ -242,7 +242,7 @@ p.svgInputTitle{
     margin-top:5px;
     font-size:0.7em;
     width:75%;
-    color: rgb(var(--c0));
+    color: rgb(var(--c3));
 }
 
 .resultCounter{

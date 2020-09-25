@@ -14,16 +14,19 @@ function App() {
       <div className="App">
         <Header />
         <Landing />
-        <Route path='/galerie' exact component={''} />
-        <Route path='/blog' exact component={''} />
-        <Route path='/cle.html' component={() => {
+        <Switch>
+          <Route path='/galerie' exact component={''} />
+          <Route path='/blog' exact component={''} />
+          <Route path='/cle.html' component={() => {
             window.location.href = 'https://graphieros.com/cle.html';
             return null;
           }} />
-        <Route path='/contact.php' component={() => {
+          <Route path='/contact.php' component={() => {
             window.location.href = 'https://graphieros.com/contact.php';
             return null;
           }} />
+        </Switch>
+
       </div>
 
     </BrowserRouter>

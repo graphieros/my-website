@@ -38,6 +38,7 @@ function Menu() {
                     className='link'
                     to='/galerie'>
                     <Button
+                        onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
                         colors={[211,227,252]}
@@ -52,6 +53,7 @@ function Menu() {
                     className='link'
                     to='/blog'>
                     <Button
+                        onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
                         colors={[211,227,252]}
@@ -67,6 +69,7 @@ function Menu() {
                     to='/cle.html'
                     target="_blank">
                     <Button
+                        onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
                         colors={[211,227,252]}
@@ -82,6 +85,7 @@ function Menu() {
                     to='/contact.php'
                     target='_blank'>
                     <Button
+                        onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
                         colors={[211,227,252]}

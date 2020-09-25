@@ -4,7 +4,7 @@ import './css/Button.css';
 
 function Button(props) {
     return (
-        <button className={props.className}>
+        <button className={props.className} onClick={props.onClick}>
             <Fractal
                 className={props.fractalClassName}
                 sequence={props.sequence}

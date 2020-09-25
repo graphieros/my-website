@@ -170,6 +170,7 @@ span.phonoResult {
     padding-left:20px;
     padding-top: 10px;
     font-size:0.75em;
+    color: rgb(var(--c3));
 }
 
 span.countTomato{
@@ -178,7 +179,7 @@ span.countTomato{
 }
 
 span.countBlue{
-    color: rgb(var(--c0));
+    color: rgb(var(--c2));
     font-weight:bold;
 }
 
