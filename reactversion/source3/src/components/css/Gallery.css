@@ -1,0 +1,23 @@
+.gallery-body {
+    margin-top:100px;
+    background: rgb(230,230,225);
+}
+
+.gallery-title{
+    height:200px;
+    border-radius: 0 0 200px 0;
+    background: var(--gradTopLeftDark);
+    font-family: var(--logo);
+    color: rgb(var(--c2));
+    align-items:center;
+    font-size:1.5em;
+    box-sizing: border-box;
+    padding:24px;
+    padding-top: 65px;
+    text-align:center;
+}
+
+.gallery-title p {
+    font-size: 0.65em;
+    color: rgb(var(--c3));
+}
