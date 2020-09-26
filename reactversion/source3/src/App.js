@@ -1,12 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GA from '../src/utils/GoogleAnalytics';
 import './App.css';
 import Header from './components/Header';
 import Landing from './components/Landing';
-import Footer from './components/Footer';
+import GlyphList from './components/GlyphList';
+import Gallery from './components/Gallery';
 
 function App() {
+
+  const [ landingState, setLandingState ] = useState({
+    className:''
+  })
+
   return (
     <BrowserRouter>
 
@@ -14,9 +20,10 @@ function App() {
 
       <div className="App">
         <Header />
-        <Landing />
         <Switch>
-          <Route path='/galerie' exact component={''} />
+          <Route path='/' exact component={Landing} />
+          <Route path='/glyphes' exact component={GlyphList} />
+          <Route path='/galerie' exact component={Gallery} />
           <Route path='/blog' exact component={''} />
           <Route path='/cle.html' component={() => {
             window.location.href = 'https://graphieros.com/cle.html';
@@ -27,8 +34,6 @@ function App() {
             return null;
           }} />
         </Switch>
-
-        <Footer />
       </div>
 
     </BrowserRouter>

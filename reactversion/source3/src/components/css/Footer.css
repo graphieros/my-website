@@ -8,6 +8,7 @@
     font-weight: bold;
     font-size:0.8em;
     color: rgb(var(--c1));
+    background: rgb(230,230,225);
 }
 
 .footer p {

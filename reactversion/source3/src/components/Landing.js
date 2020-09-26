@@ -5,6 +5,7 @@ import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import Fractal from './graphieros/Fractal';
 import Linear from './graphieros/Linear';
 import Button from './Button';
+import Footer from './Footer';
 
 function Landing() {
 
@@ -82,6 +83,7 @@ function Landing() {
                     
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

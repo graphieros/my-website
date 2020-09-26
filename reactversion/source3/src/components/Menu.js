@@ -41,7 +41,7 @@ function Menu() {
                         onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
-                        colors={[211,227,252]}
+                        colors={[211, 227, 252]}
                         sequence='eq-qd-qx-zs-sw'
                         svgSize='60'
                         pClass='button-label'
@@ -56,7 +56,7 @@ function Menu() {
                         onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
-                        colors={[211,227,252]}
+                        colors={[211, 227, 252]}
                         sequence='zw-ws-qd-dx'
                         svgSize='60'
                         pClass='button-label'
@@ -72,7 +72,7 @@ function Menu() {
                         onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
-                        colors={[211,227,252]}
+                        colors={[211, 227, 252]}
                         sequence='zw-ws-qd-dx'
                         svgSize='60'
                         pClass='button-label'
@@ -88,12 +88,23 @@ function Menu() {
                         onClick={handleQuitMenu}
                         className='menu-button'
                         fractalClassName='menu-fractal-choice'
-                        colors={[211,227,252]}
+                        colors={[211, 227, 252]}
                         sequence='qw-wd-de-eq-qs-se'
                         svgSize='60'
                         pClass='button-label'
                         label='contact'
                     />
+                </Link>
+                <Link to='/'>
+                    <div onClick={handleQuitMenu}>
+                        <Fractal
+                            className='fractal-menu-home'
+                            sequence='zw-wx-xe-ez-zq-qd-de'
+                            svgSize='60'
+                            colors={[75, 106, 160]}
+                        />
+                    </div>
+
                 </Link>
                 <div className='quitResult' onClick={handleQuitMenu}>
                     <Fractal
@@ -104,6 +115,7 @@ function Menu() {
                         backgroundRadius='100%'
                     />
                 </div>
+
             </div>
         </div>
     )
