@@ -4,6 +4,7 @@ import GA from '../src/utils/GoogleAnalytics';
 import './App.css';
 import Header from './components/Header';
 import Landing from './components/Landing';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           }} />
         </Switch>
 
+        <Footer />
       </div>
 
     </BrowserRouter>

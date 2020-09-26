@@ -1,8 +1,8 @@
-button.menu-button{
+button.menu-button,
+button.menu-button-landing{
     border:none;
     border-radius:12px;
     box-shadow: 5px 5px 10px rgb(var(--c0)), -5px -5px 10px rgba(255, 255, 255, 0.5);
-    background: rgb(var(--c1));
     transition: all 0.25s ease-in-out;
     cursor: pointer;
     display: grid;
@@ -12,25 +12,50 @@ button.menu-button{
     width:100%;
 }
 
-Button.menu-button:hover{
+button.menu-button{
+    background: rgb(var(--c1));
+}
+
+button.menu-button-landing{
+    background: var(--gradTopLight);
+}
+
+button.menu-button:hover,
+button.menu-button-landing:hover{
     animation: button 0.25s ease-in-out;
 }
 
-Button.menu-button:hover p{
+button.menu-button:hover p,
+button.menu-button-landing:hover p{
     color: white;
 }
 
-.menu-fractal-choice{
+.menu-fractal-choice,
+.menu-fractal-landing{
     height:60px;
     width:60px;
 }
 
-p.button-label{
+.menu-fractal-landing{
+    margin-top:10px;
+}
+
+p.button-label,
+p.button-label-landing{
     color: rgb(var(--c3));
     font-family: var(--logo);
     font-size:1.2em;
+}
+
+p.button-label{
     margin-top:-10px;
 }
+
+p.button-label-landing {
+    margin-top:-20px !important;
+}
+
+
 
 @keyframes button {
     0%{

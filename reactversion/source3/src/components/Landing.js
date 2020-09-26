@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './css/Landing.css';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import Fractal from './graphieros/Fractal';
 import Linear from './graphieros/Linear';
+import Button from './Button';
 
 function Landing() {
 
@@ -20,21 +22,21 @@ function Landing() {
                 <Fractal
                     className='landing-fractal'
                     sequence='zx-qe-wd qw-we xq-xs-sw-wd-ze zw-wd-dz-qs-se-xs'
-                    colors={[122,161,216]}
+                    colors={[122, 161, 216]}
                     svgSize='256'
                     light={false}
                 />
                 <p>
-                   L'hexagone fait partie des quelques formes géométriques avec lesquelles il est possible de construire un <strong>pavage régulier</strong>, comme celui de la surface externe des alvéoles bâties par les abeilles. 
+                    L'hexagone fait partie des quelques formes géométriques avec lesquelles il est possible de construire un <strong>pavage régulier</strong>, comme celui de la surface externe des alvéoles bâties par les abeilles.
                 </p>
             </div>
             <div className='graphieros-works'>
                 <div>
-                    <Linear 
+                    <Linear
                         className='graphieros-works-linear'
                         sequence='mea-hea le-fmai kio-nsa-bdi'
                         size=''
-                        colors={[75,106,160]}
+                        colors={[75, 106, 160]}
                     />
                 </div>
                 <p>
@@ -43,8 +45,40 @@ function Landing() {
             </div>
             <div className='landing-links'>
                 <h1 className='wtf2'>Comment apprendre le <span className='blueSpan'>graphieros ?</span></h1>
-                <p>Toutes les <strong>ressources</strong> sont disponibles gratuitement pour apprendre le graphieros:</p>
+                <p>Toutes les <strong>ressources</strong> sont disponibles gratuitement pour apprendre et pratiquer le graphieros:</p>
                 <div className='landing-links-wrapper'>
+                    <Link
+                        className='link'
+                        to='/cle.html'
+                        target="_blank">
+                        <Button
+                            className='menu-button-landing'
+                            fractalClassName='menu-fractal-landing'
+                            colors={[211, 227, 252]}
+                            sequence='zw-ws-qd-dx'
+                            svgSize='60'
+                            pClass='button-label-landing'
+                            label='la clé'
+                        />
+                    </Link>
+                    <div className='button-description-right'>
+                        Le manuel du graphieros en ligne
+                    </div>
+                    <div className='button-description-left'>
+                        L'éditeur de graphieros en ligne
+                    </div>
+                    <a href='https://graphieros.com/touch_writer/touch_writer.html' target='_blank' rel='noopener noreferrer'>
+                        <Button
+                            className='menu-button-landing'
+                            fractalClassName='menu-fractal-landing'
+                            colors={[211, 227, 252]}
+                            sequence='qd-zs-sw'
+                            svgSize='60'
+                            pClass='button-label-landing'
+                            label='touch writer'
+                        />
+                    </a>
+                    
                     
                 </div>
             </div>

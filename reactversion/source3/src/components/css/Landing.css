@@ -136,6 +136,7 @@ span.blueSpan{
 .landing-links {
     box-sizing: border-box;
     padding-top: 250px;
+    padding-bottom: 96px;
     margin-top:-200px;
     z-index:0;
     background: white;
@@ -144,6 +145,29 @@ span.blueSpan{
 
 .landing-links-wrapper{
     display: grid;
+    grid-gap: 12px;
+    row-gap:12px;
+    grid-template-columns: repeat(2,120px);
+    grid-template-rows: repeat(2, 120px);
+    margin: 0 auto;
+    width:250px;
+}
+
+.button-description-right,
+.button-description-left {
+    height:100%;
+    width:100%;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    font-size:0.8em;
+    font-weight: bold;
+    box-sizing: border-box;
+    padding:6px;
+}
+
+.button-description-left {
+    text-align: right;
 }
 
 @media (max-width:700px){
