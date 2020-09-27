@@ -11,7 +11,12 @@ function Footer() {
             </Link>
 
             <div className='footer-end'>
-                
+                <Link 
+                    className='link'
+                    to='/alp'>
+                    <li>infos sur l'auteur</li>
+                </Link>        
+
                 <Link
                     className='link'
                     to='/glyphes'>

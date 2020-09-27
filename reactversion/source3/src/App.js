@@ -7,6 +7,7 @@ import Landing from './components/Landing';
 import GlyphList from './components/GlyphList';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
+import Alp from './components/Alp';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
+          <Route path='/alp' exact component={Alp} />
           <Route path='/' exact component={Landing} />
           <Route path='/glyphes' exact component={GlyphList} />
           <Route path='/galerie' exact component={Gallery} />
