@@ -16,12 +16,19 @@ function Header() {
         className: 'button-search-shape'
     });
 
+    const [backState, setBackState] = useState({
+        className:'hidden'
+    });
+
     const handleShowShapeSearch = () => {
         setShapeSearchState({
             className: ''
         });
         setButtonSeachState({
             className: 'hidden'
+        });
+        setBackState({
+            className:'backState'
         });
     }
 
@@ -31,6 +38,9 @@ function Header() {
         });
         setShapeSearchState({
             className: 'hidden'
+        });
+        setBackState({
+            className:'hidden'
         });
     }
 
@@ -65,6 +75,7 @@ function Header() {
                     </div>
                 </GraphierosShapeFinder>
             </div>
+            <div className={backState.className}/>
 
         </div>
     )

@@ -1,0 +1,85 @@
+.thought-body{
+    position: relative;
+    width:100%;
+    max-width:50ch;
+    box-sizing: border-box;
+    padding:24px;
+    font-family: var(--inter);
+    background: radial-gradient(at top, white, rgb(var(--c3)));
+    margin: 0 auto;
+    margin-top:61.8px;
+    border-radius: 30px 3px 3px 3px;
+}
+
+.thought-help {
+    position: absolute;
+    right:0;
+    top:-35px;
+    color: white;
+    font-size: 0.8em;
+}
+
+.thought-fractal{
+    height:61.8px;
+    width:61.8px;
+    left:-1px;
+    position: absolute;
+    background: var(--gradTopLeftDark);
+    border-radius:100%;
+    box-shadow: 0 5px 10px -5px black;
+}
+
+.thought-title{
+    position: relative;
+    width:100%;
+    height: 61.8px;
+    background: var(--gradTopLeft);
+    line-height:61.8px;
+    color: white;
+    font-family: var(--logo);
+    font-size: 1.3em;
+    border-radius: 30px 3px 3px 30px;
+    box-sizing: border-box;
+    text-align:center;
+    cursor: pointer;
+}
+
+.thought-date{
+    text-align: right;
+    font-size: 0.8em;
+    color: rgb(var(--c1));
+    font-weight: bold;
+    height:40px;
+    line-height:40px;
+}
+
+.thought-text{
+    text-indent: 22px;
+    white-space: pre-wrap;
+    color: rgb(var(--c0));
+    font-weight: bold;
+    animation: thought-text 0.25s ease-in-out;
+}
+
+.thought-text::first-letter{
+    background: rgb(var(--c1));
+    display: inline-block;
+    padding-right: 3px;
+    padding-left:3px;
+    font-size:1.2em;
+    font-weight:bold;
+    color: rgb(var(--c3));
+    font-family: var(--logo);
+    border-radius:100%;
+}
+
+@keyframes thought-text {
+    0%{
+        width:0%;
+        font-size:0em;
+    }
+    100%{
+        width:100%;
+        font-size:1em;
+    }
+}

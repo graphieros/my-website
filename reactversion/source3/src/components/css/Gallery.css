@@ -1,6 +1,7 @@
 .gallery-body {
     margin-top:100px;
-    background: rgb(230,230,225);
+    background: rgb(var(--c0));
+    width:100%;
 }
 
 .gallery-title{
@@ -20,4 +21,76 @@
 .gallery-title p {
     font-size: 0.65em;
     color: rgb(var(--c3));
+}
+
+img.gallery-pic {
+    height:90%;
+    border-radius:2px;
+    border:6px solid rgb(var(--c1));
+    box-sizing: border-box;
+    box-shadow: 0 5px 10px -5px black;
+    cursor: pointer;
+    opacity:0.9;
+    transition: all 0.25s ease-in-out;
+}
+
+img.gallery-pic:hover{
+    opacity:1;
+    animation: wobble 0.25s ease-in-out;
+}
+
+.gallery-carousel{
+    grid-gap: 12px;
+    overflow: scroll;
+    height:200px;
+    box-sizing: border-box;
+    padding-top: 24px;
+}
+
+.gallery-carousel::-webkit-scrollbar{
+    width:0px;
+}
+
+.gallery-show{
+    width:100%;
+    text-align:center;
+    box-sizing: border-box;
+    padding:24px;
+    background: black;
+}
+
+.gallery-show img {
+    margin: 0 auto;
+    width:90%;
+    max-width:600px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    border:12px solid rgb(var(--c3));
+}
+
+p.show-title{
+    color: rgb(var(--c3));
+    font-size:1.2em;
+    font-family: var(--logo);
+}
+
+p.show-description {
+    color: rgb(var(--c1));
+    font-family: var(--inter);
+    font-weight:bold;
+}
+
+p.show-message{
+    color: white;
+    font-family: var(--logo);
+    color: rgb(var(--c2));
+}
+
+@media (max-width:500px){
+    .gallery-carousel{
+        height:100px;
+    }
+    img.gallery-pic{
+        border:3px solid rgb(var(--c1));
+    }
 }

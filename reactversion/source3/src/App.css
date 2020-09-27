@@ -26,3 +26,12 @@ a.link{
   text-decoration: none;
   color: inherit;
 }
+
+.backState{
+  height:100%;
+  width:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  background: radial-gradient(rgba(var(--c1),0.5),black);
+}

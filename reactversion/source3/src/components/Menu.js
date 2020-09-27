@@ -10,15 +10,25 @@ function Menu() {
         className: 'hidden'
     });
 
+    const [backState, setBackState] = useState({
+        className:'hidden'
+    });
+
     const handleShowMenu = () => {
         setMenuState({
             className: 'menu-body'
+        });
+        setBackState({
+            className:'backState'
         });
     }
 
     const handleQuitMenu = () => {
         setMenuState({
             className: 'hidden'
+        });
+        setBackState({
+            className:'hidden'
         });
     }
 
@@ -115,8 +125,8 @@ function Menu() {
                         backgroundRadius='100%'
                     />
                 </div>
-
             </div>
+            <div className={backState.className}/>
         </div>
     )
 }

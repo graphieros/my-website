@@ -1,0 +1,29 @@
+.blog-body{
+    background: rgb(var(--c0));
+    margin-top:100px;
+    box-sizing: border-box;
+    padding-bottom: 100px;
+}
+
+.blog-title{
+    height:200px;
+    border-radius: 0 0 200px 0;
+    background: var(--gradTopLeftDark);
+    font-family: var(--logo);
+    color: rgb(var(--c2));
+    align-items:center;
+    font-size:1.5em;
+    box-sizing: border-box;
+    padding:24px;
+    padding-top: 65px;
+    text-align:center;
+}
+
+.blog-title p {
+    font-size: 0.65em;
+    color: rgb(var(--c3))
+}
+
+.post-count{
+    font-family: var(--inter);
+}
