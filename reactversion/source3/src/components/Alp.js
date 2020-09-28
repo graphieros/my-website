@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import './css/Alp.css';
 import face from '../assets/face.jpg';
 import Fractal from './graphieros/Fractal';
 
 function Alp() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    });
+
     return (
         <div className='alp-body'>
             <div className='alp-title'>

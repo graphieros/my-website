@@ -6,7 +6,8 @@ function Thought(props) {
 
     const [switcher, setSwitcher] = useState({
         switchValue: 0,
-        textValue:'afficher'
+        textValue:'afficher',
+        sequence:'qw-wd-de-es-sq-qe'
     });
 
     const [textState, setTextState] = useState({
@@ -20,7 +21,8 @@ function Thought(props) {
             });
             setSwitcher({
                 switchValue:1,
-                textValue:'réduire'
+                textValue:'réduire',
+                sequence:'ez-zq-qs-se-ed-dw-wq'
             });
         } else {
             setTextState({
@@ -28,7 +30,8 @@ function Thought(props) {
             });
             setSwitcher({
                 switchValue:0,
-                textValue:'afficher'
+                textValue:'afficher',
+                sequence:'qw-wd-de-es-sq-qe'
             });
         }
 
@@ -41,7 +44,7 @@ function Thought(props) {
                 <Fractal
                     className='thought-fractal'
                     svgSize='61.8'
-                    sequence={props.sequence}
+                    sequence={switcher.sequence}
                     colors={props.colors}
                     light={true}
                 />{props.title}</div>

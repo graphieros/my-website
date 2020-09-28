@@ -5,6 +5,7 @@ import Linear from './graphieros/Linear';
 import Fractal from './graphieros/Fractal';
 import Molecule from './graphieros/Molecule';
 import './css/SearchBar.css';
+import { linearToFractal } from '../libraries/linearToFractal';
 
 const SearchBar = (props) => {
 
@@ -33,7 +34,7 @@ const SearchBar = (props) => {
     const [backState, setBackState] = useState({
         className: 'hidden'
     });
-    
+
 
     let delay = null;
 
@@ -78,18 +79,29 @@ const SearchBar = (props) => {
                     setSearchResult({
                         className: 'glyphSearchReturn',
                         content: <div>
-                            <Linear
-                                sequence={word.line}
-                                size='50'
-                                colors={[29, 55, 104]}
-                                background='white'
-                                cartouche={false}
-                            />
-                            <Molecule
-                                sequence={word.molecule}
-                                colors={[122, 161, 216]}
-                                size='60'
-                            />
+                            <div className='three-results'>
+                                <Linear
+                                    className='result-linear'
+                                    sequence={word.line}
+                                    size='50'
+                                    colors={[29, 55, 104]}
+                                    background='white'
+                                    cartouche={false}
+                                />
+                                <Molecule
+                                    className='result-molecule'
+                                    sequence={word.molecule}
+                                    colors={[122, 161, 216]}
+                                    size='60'
+                                />
+                                <Fractal
+                                    sequence={linearToFractal(word.molecule, graphieros_dictionnary)}
+                                    colors={[211,227,252]}
+                                    svgSize='100'
+                                    light={false}
+                                />
+                            </div>
+
                             <div className="searchResultWord">
                                 <p>"{word.fr}"</p>
                                 <h5>{word.litteral}</h5>
@@ -238,7 +250,7 @@ const SearchBar = (props) => {
                 setSearchResult({
                     className: 'glyphSearchReturn',
                     content: <div>
-                        <div>
+                        <div className='three-results'>
                             <Linear
                                 sequence={word.line}
                                 size='50'
@@ -250,6 +262,12 @@ const SearchBar = (props) => {
                                 sequence={word.molecule}
                                 colors={[122, 161, 216]}
                                 size='60'
+                            />
+                            <Fractal
+                                sequence={linearToFractal(word.molecule, graphieros_dictionnary)}
+                                colors={[211,227,252]}
+                                svgSize='100'
+                                light={false}
                             />
                         </div>
 

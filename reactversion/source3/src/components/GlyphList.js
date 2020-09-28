@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import Linear from './graphieros/Linear';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
@@ -6,6 +6,10 @@ import './css/GlyphList.css';
 import Fractal from './graphieros/Fractal';
 
 function GlyphList() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    });
 
     const glyphCount = graphieros_dictionnary.length;
 

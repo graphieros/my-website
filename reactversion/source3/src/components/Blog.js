@@ -34,7 +34,6 @@ function Blog() {
                 key={`post_${i}`}
                 title={post.title}
                 date={post.date}
-                sequence='qw-wd-de-es-sq-qe'
                 colors={[255,255,255]}
                 text={post.idea}
             />)}
