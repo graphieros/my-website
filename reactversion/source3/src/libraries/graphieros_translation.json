@@ -1,12 +1,5 @@
 [
     {
-        "fr": "",
-        "litteral" : "",
-        "phono": "",
-        "line": "",
-        "molecule": ""
-    },
-    {
         "fr": "aimer",
         "litteral": "vivre pour",
         "phono": "sa kme",
@@ -3435,13 +3428,6 @@
         "phono": "floi fdu pkia",
         "line": "floi-fdu-pkia",
         "molecule": "floi fdu pkia"
-    },
-    {
-        "fr": "",
-        "litteral" : "",
-        "phono": "",
-        "line": "",
-        "molecule": ""
     },
     {
         "fr": "versement",

@@ -5,7 +5,6 @@ import Linear from './graphieros/Linear';
 import Fractal from './graphieros/Fractal';
 import Molecule from './graphieros/Molecule';
 import './css/SearchBar.css';
-import { linearToFractal } from '../libraries/linearToFractal';
 
 const SearchBar = (props) => {
 
@@ -87,18 +86,6 @@ const SearchBar = (props) => {
                                     colors={[29, 55, 104]}
                                     background='white'
                                     cartouche={false}
-                                />
-                                <Molecule
-                                    className='result-molecule'
-                                    sequence={word.molecule}
-                                    colors={[122, 161, 216]}
-                                    size='60'
-                                />
-                                <Fractal
-                                    sequence={linearToFractal(word.molecule, graphieros_dictionnary)}
-                                    colors={[211,227,252]}
-                                    svgSize='100'
-                                    light={false}
                                 />
                             </div>
 
@@ -257,17 +244,6 @@ const SearchBar = (props) => {
                                 colors={[29, 55, 104]}
                                 background='white'
                                 cartouche={false}
-                            />
-                            <Molecule
-                                sequence={word.molecule}
-                                colors={[122, 161, 216]}
-                                size='60'
-                            />
-                            <Fractal
-                                sequence={linearToFractal(word.molecule, graphieros_dictionnary)}
-                                colors={[211,227,252]}
-                                svgSize='100'
-                                light={false}
                             />
                         </div>
 

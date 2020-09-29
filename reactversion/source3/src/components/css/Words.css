@@ -1,0 +1,77 @@
+.words-body{
+    margin-top:100px;
+    background: rgb(230,230,225);
+}
+
+.words-title{
+    height:200px;
+    border-radius: 0 0 200px 0;
+    background: var(--gradTopLeftDark);
+    font-family: var(--logo);
+    color: rgb(var(--c2));
+    align-items:center;
+    font-size:1.5em;
+    box-sizing: border-box;
+    padding:24px;
+    padding-top: 76px;
+    text-align:center;
+}
+
+.words-list {
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items:center;
+    grid-gap: 24px;
+    width:90%;
+}
+
+.words-presentation{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items:center;
+    justify-items:center;
+    border-radius:12px;
+    box-shadow: 5px 10px 10px -5px rgba(var(--c0),.3), -5px -10px 10px -5px white;
+}
+
+p.word-fr{
+    grid-column: 1 /span 3;
+    margin-bottom:-12px;
+    font-family: var(--logo);
+    color: rgb(var(--c3));
+    box-shadow: 5px 10px 10px -5px rgba(var(--c0),.3), -5px -10px 10px -5px white;
+    background: var(--gradTopLeftDark);
+    width:90%;
+    text-align: center;
+    box-sizing: border-box;
+    padding:6px;
+    border-radius:6px;
+  }
+
+p.words-phono {
+    grid-column: 1/span 3;
+    color: rgb(var(--c1));
+    font-family: var(--inter);
+    margin-top:-20px;
+    width:90%;
+    text-align: center;
+    box-sizing: border-box;
+    padding:6px;
+    border-radius:6px;
+}  
+
+.words-presentation-paragraph{
+    width:100%;
+    max-width:500px;
+    font-family: var(--inter);
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 24px;
+    color: rgb(var(--c1));
+    box-sizing: border-box;
+    padding:24px;
+}

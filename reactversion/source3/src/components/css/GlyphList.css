@@ -23,16 +23,13 @@ span.span-list-title{
 
 .glyphList-list {
     position: relative;
-    margin-left: 50%;
-    transform: translateX(-50%);
     box-sizing: border-box;
-    padding: 48px;
-    padding-top: 96px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     justify-items:center;
     grid-gap: 12px;
-    width:90%;
+    margin: 0 auto;
+    max-width:70%;
 }
 
 p.glyphList-presentation{

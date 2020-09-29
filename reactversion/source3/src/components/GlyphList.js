@@ -8,7 +8,7 @@ import Fractal from './graphieros/Fractal';
 function GlyphList() {
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
     });
 
     const glyphCount = graphieros_dictionnary.length;

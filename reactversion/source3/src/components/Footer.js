@@ -11,16 +11,22 @@ function Footer() {
             </Link>
 
             <div className='footer-end'>
-                <Link 
+                <Link
                     className='link'
                     to='/alp'>
                     <li>infos sur l'auteur</li>
-                </Link>        
+                </Link>
 
                 <Link
                     className='link'
                     to='/glyphes'>
                     <li>liste des glyphes</li>
+                </Link>
+
+                <Link
+                    className='link'
+                    to='/mots'>
+                    <li>liste des mots</li>
                 </Link>
 
                 <Link

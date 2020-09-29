@@ -8,6 +8,7 @@ import GlyphList from './components/GlyphList';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
 import Alp from './components/Alp';
+import Words from './components/Words';
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route path='/alp' exact component={Alp} />
           <Route path='/' exact component={Landing} />
+          <Route path='/mots' exact component={Words} />
           <Route path='/glyphes' exact component={GlyphList} />
           <Route path='/galerie' exact component={Gallery} />
           <Route path='/blog' exact component={Blog} />
