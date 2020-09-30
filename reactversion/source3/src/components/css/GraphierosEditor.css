@@ -1,0 +1,96 @@
+.graphierosEditor-init{
+    display: block;
+    position:fixed;
+    bottom: 0;
+    width:96%;
+    height:61.8px;
+    background: black;
+    z-index:200;
+    box-shadow: -5px -10px 10px -10px black;
+    border-radius: 0 24px 24px 0;
+    animation: show-editor 0.25s ease-in-out;
+    color: white;
+}
+
+.graphierosEditor-init textarea{
+    width:80%;
+    height:40px;
+    position: absolute;
+    right:20px;
+    top:7px;
+    border-radius:0 24px 24px 0;
+    resize:none;
+    font-family: var(--elite);
+    color: greenyellow;
+    background: black;
+    border:none;
+}
+
+.reduce{
+    display: block;
+    position:fixed;
+    bottom: 0;
+    width:61.6px;
+    height:61.8px;
+    background: black;
+    z-index:200;
+    cursor: pointer;
+    border-radius:0 12px 12px 0;
+    box-shadow: -5px -10px 10px -10px black;
+    color: transparent;
+}
+
+.reduce textarea{
+    display:none;
+}
+
+.reduce::before{
+    display: block;
+    margin-top: 10px;
+    margin-left:30%;
+    content:"_";
+    color:greenyellow;
+    font-family: var(--elite);
+    animation: reduce 1s infinite;
+    font-size:2em;
+}
+
+@keyframes reduce{
+    0%{
+        content: "_";
+    }
+    50%{
+        content:""
+    }
+    100%{
+        content:"_"
+    }
+}
+
+.btn-hide-editor{
+    position: fixed;
+    bottom:0;
+    z-index:201;
+    height:61.8px;
+    width:61.8px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.fractal-reduce{
+    height:61.8px;
+    width:61.8px;
+}
+
+.fractal-reduce:hover {
+    animation: wobble 0.25s ease-in-out;
+}
+
+@keyframes show-editor{
+    0%{
+        width:61.8px;
+    }
+    100%{
+        width:96%;
+    }
+}

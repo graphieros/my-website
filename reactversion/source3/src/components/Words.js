@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/Words.css';
-import { linearToFractal } from '../libraries/linearToFractal';
 import graphieros_translation from '../libraries/graphieros_translation.json';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import Linear from './graphieros/Linear';
@@ -9,10 +8,61 @@ import Fractal from './graphieros/Fractal';
 
 function Words() {
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
+    const [wordState, setWordState] = useState({
+        content:''
     });
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        setWordState({
+            content: graphieros_translation.map((entry, i) => {
+                return (
+                    <div key={`word_${i}`} className='words-presentation'>
+                        <p className='word-fr'>{entry.fr}</p>
+                        <Linear 
+                            className='words-linear'
+                            sequence={entry.line}
+                            colors={[75,106,160]}
+                        />
+                        <Molecule 
+                            className='words-molecule'
+                            sequence={entry.molecule}
+                            colors={[75,106,160]}
+                            size='100'
+                        />
+                        <Fractal
+                            className='words-fractal'
+                            sequence={linearToFractal(entry.molecule)}
+                            colors={[122,161,216]}
+                            light={false}
+                        />
+                        <p className='words-phono'>{`[ ${entry.phono} ]`}</p>
+                    </div>
+                )
+            })
+        })
+    }, []);
+
+    function linearToFractal(mol){
+        let linearCode = [];
+        let convertedCode = [];
+        let fractalCode = [];
+    
+        linearCode = mol.split(' ');
+        linearCode.forEach(code => {
+            convertedCode.push(`_${code}`)
+        });
+        
+        convertedCode.forEach(code => {
+            graphieros_dictionnary.forEach(word => {
+                if(word.name === code) {
+                    fractalCode.push(word.fractal)
+                }
+            });
+        });
+    
+        return fractalCode.toString().replaceAll(',', ' ');
+    }
 
 
     return (
@@ -22,31 +72,7 @@ function Words() {
                 Retrouvez ci-dessous la liste non exhaustive des mots composés présents actuellement dans le dictionnaire, présentés de gauche à droite en modes linéaire, moléculaire et fractal.
             </div>
             <div className='words-list'>
-                {graphieros_translation.map((entry, i) => {
-                    return (
-                        <div key={`word_${i}`} className='words-presentation'>
-                            <p className='word-fr'>{entry.fr}</p>
-                            <Linear 
-                                className='words-linear'
-                                sequence={entry.line}
-                                colors={[75,106,160]}
-                            />
-                            <Molecule 
-                                className='words-molecule'
-                                sequence={entry.molecule}
-                                colors={[75,106,160]}
-                                size='100'
-                            />
-                            <Fractal
-                                className='words-fractal'
-                                sequence={linearToFractal(entry.molecule, graphieros_dictionnary)}
-                                colors={[122,161,216]}
-                                light={false}
-                            />
-                            <p className='words-phono'>{`[ ${entry.phono} ]`}</p>
-                        </div>
-                    )
-                })}
+                {wordState.content}
             </div>
         </div>
     )

@@ -5,6 +5,7 @@ import Logo from './Logo';
 import Menu from './Menu';
 import SearchBar from './SearchBar';
 import GraphierosShapeFinder from './GraphierosShapeFInder';
+import GraphierosEditor from './GraphierosEditor';
 
 function Header() {
 
@@ -17,6 +18,14 @@ function Header() {
     });
 
     const [backState, setBackState] = useState({
+        className: 'hidden'
+    });
+
+    const [editorState, setEditorState] = useState({
+        className:'reduce'
+    });
+
+    const [btnEditor, setBtnEditor] = useState({
         className:'hidden'
     });
 
@@ -28,7 +37,7 @@ function Header() {
             className: 'hidden'
         });
         setBackState({
-            className:'backState'
+            className: 'backState'
         });
     }
 
@@ -40,44 +49,78 @@ function Header() {
             className: 'hidden'
         });
         setBackState({
+            className: 'hidden'
+        });
+    }
+
+    const handleShowEditor = ()=> {
+        setEditorState({
+            className:'graphierosEditor-init'
+        });
+        setBtnEditor({
+            className:'btn-hide-editor'
+        });
+    }
+
+    const handleHideEditor = () => {
+        setEditorState({
+            className:'reduce'
+        });
+        setBtnEditor({
             className:'hidden'
         });
     }
 
     return (
-        <div className='header'>
-            <Logo
-                className='logo-fractal'
-                fontSize='1.618em'
-                color='rgb(75,106,160)'
-                svgSize='50'
-                colors={[75, 106, 160]}
-            />
-            <Menu />
-            <div className='sub-header'>
-                <SearchBar className='searchBar' />
-                <button
-                    className={buttonSeachState.className}
-                    onClick={handleShowShapeSearch}>
-                    ... ou une forme
+        <>
+            <div className='header'>
+                <Logo
+                    className='logo-fractal'
+                    fontSize='1.618em'
+                    color='rgb(75,106,160)'
+                    svgSize='50'
+                    colors={[75, 106, 160]}
+                />
+                <Menu />
+                <div className='sub-header'>
+                    <SearchBar className='searchBar' />
+                    <button
+                        className={buttonSeachState.className}
+                        onClick={handleShowShapeSearch}>
+                        ... ou une forme
                 </button>
 
-                <GraphierosShapeFinder className={shapeSearchState.className}>
-                    <div onClick={handleCloseSearch}>
-                        <Fractal
-                            className='quitGlyphSearch'
-                            sequence='zx-we'
-                            colors={[255, 255, 255]}
-                            svgSize={30}
-                            background='rgb(255,91,79)'
-                            backgroundRadius='100%'
-                        />
-                    </div>
-                </GraphierosShapeFinder>
-            </div>
-            <div className={backState.className}/>
+                    <GraphierosShapeFinder className={shapeSearchState.className}>
+                        <div onClick={handleCloseSearch}>
+                            <Fractal
+                                className='quitGlyphSearch'
+                                sequence='zx-we'
+                                colors={[255, 255, 255]}
+                                svgSize={30}
+                                background='rgb(255,91,79)'
+                                backgroundRadius='100%'
+                            />
+                        </div>
+                    </GraphierosShapeFinder>
+        
+                </div>
+                <div className={backState.className} />
 
-        </div>
+            </div>
+            
+            <div onClick={handleShowEditor}>
+                <GraphierosEditor className={editorState.className} />
+            </div>
+            <div className={btnEditor.className} onClick={handleHideEditor}>
+                <Fractal 
+                    className='fractal-reduce'
+                    sequence='zq-qw-es-sx'
+                    svgSize='61.8'
+                    colors={[173,255,47]}
+                />
+            </div>
+            
+        </>
     )
 }
 

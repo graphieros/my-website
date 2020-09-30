@@ -88,7 +88,7 @@
         "litteral" : "lieu haut végétal",
         "phono": "kio pa pio",
         "line": "kio-pa-pio",
-        "molecule": "koi pa pio"
+        "molecule": "kio pa pio"
     },
     {
         "fr": "craindre",
@@ -3645,5 +3645,19 @@
         "phono": "bdi fai kru",
         "line": "bdi-fai-kru",
         "molecule": "bdi fai kru"
+    },
+    {
+        "fr": "méditation",
+        "litteral" : "déterminer penser centrer équilibrer",
+        "phono": "mea hia sye bia",
+        "line": "mea-hia-sye-bia",
+        "molecule": "mea hia sye bia"
+    },
+    {
+        "fr": "méditer",
+        "litteral" : "penser centrer équilibrer",
+        "phono": "hia sye bia",
+        "line": "hia-sye-bia",
+        "molecule": "hia sye bia"
     }
 ]

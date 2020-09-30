@@ -19,6 +19,7 @@ function App() {
 
       <div className="App">
         <Header />
+  
         <Switch>
           <Route path='/alp' exact component={Alp} />
           <Route path='/' exact component={Landing} />

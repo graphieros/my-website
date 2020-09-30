@@ -1,6 +1,4 @@
 export function linearToFractal(mol, dic){
-    //mea sa kme ---> [_mea,_sa,_kme] ---> return 'zx-qe-wd ze-ed-dx-xw-wq-qz-zx-we-qd zw-qs-edx'
-
     let linearCode = [];
     let convertedCode = [];
     let fractalCode = [];
@@ -19,6 +17,5 @@ export function linearToFractal(mol, dic){
     });
 
     return fractalCode.toString().replaceAll(',', ' ');
-
 }
 
