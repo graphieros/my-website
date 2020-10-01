@@ -86,11 +86,66 @@
     animation: wobble 0.25s ease-in-out;
 }
 
+.graphieros-terminal{
+    display: block;
+    position: fixed;
+    width:80%;
+    height:80%;
+    bottom:100px;
+    background: radial-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.89));
+    border-radius:24px;
+    left:50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding:24px;
+    overflow: scroll;
+    text-align:center;
+}
+
+.graphieros-terminal::-webkit-scrollbar{
+    width:0px;
+}
+
+.terminal-close-button{
+    bottom:84px;
+    position: fixed;
+    left:50%;
+    transform:translateX(-50%);
+    background: black;
+    height:32px;
+    width:32px;
+    border-radius:100%;
+    box-shadow: 5px 10px 10px -10px black;
+    cursor: pointer;
+}
+
+.terminal-close-button:hover{
+    animation: tcb 0.25s ease-in-out;
+}
+
 @keyframes show-editor{
     0%{
         width:61.8px;
     }
     100%{
         width:96%;
+    }
+}
+
+@keyframes tcb{
+    0%{
+        transform: translateX(-50%) rotate(-10deg);
+    }
+    25%{
+        transform: translateX(-50%) rotate(9deg);
+    }
+    50%{
+        transform: translateX(-50%) rotate(-8deg);
+    }
+    75%{
+        transform: translateX(-50%) rotate(7deg);
+    }
+    100%{
+        transform: translateX(-50%) rotate(0deg);
     }
 }
