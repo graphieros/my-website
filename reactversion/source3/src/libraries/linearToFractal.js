@@ -1,4 +1,5 @@
 export function linearToFractal(mol, dic){
+    console.log({mol})
     let linearCode = [];
     let convertedCode = [];
     let fractalCode = [];
@@ -9,9 +10,9 @@ export function linearToFractal(mol, dic){
     });
     
     convertedCode.forEach(code => {
-        dic.forEach(word => {
-            if(word.name === code) {
-                fractalCode.push(word.fractal)
+        dic.forEach(wd => {
+            if(wd.name === code) {
+                fractalCode.push(wd.fractal)
             }
         });
     });

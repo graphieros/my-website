@@ -100,6 +100,7 @@
     padding:24px;
     overflow: scroll;
     text-align:center;
+    max-width:500px;
 }
 
 .graphieros-terminal::-webkit-scrollbar{
@@ -148,4 +149,18 @@
     100%{
         transform: translateX(-50%) rotate(0deg);
     }
+}
+
+span.current-word{
+    display: block;
+    position: sticky;
+    margin-left:50%;
+    top:0px;
+    box-sizing: border-box;
+    background: black;
+    transform: translateX(-50%);
+    font-family: var(--elite);
+    color: tomato;
+    text-align:center;
+    border-radius:3px;
 }
