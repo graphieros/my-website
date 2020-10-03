@@ -48,6 +48,13 @@ function Footer() {
                     <li>la clé</li>
                 </Link>
 
+                <Link
+                    className='link'
+                    to='/fractalspace'>
+                    <li>fractal space</li>
+                </Link>
+
+
 
             </div>
         </div>

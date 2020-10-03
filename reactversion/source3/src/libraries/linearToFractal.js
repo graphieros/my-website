@@ -1,5 +1,5 @@
 export function linearToFractal(mol, dic){
-    console.log({mol})
+
     let linearCode = [];
     let convertedCode = [];
     let fractalCode = [];
@@ -20,3 +20,24 @@ export function linearToFractal(mol, dic){
     return fractalCode.toString().replaceAll(',', ' ');
 }
 
+export function buildActiveFractal(glyphs, dic){
+
+    let linearCode = [];
+    let convertedCode = [];
+    let fractalCode = [];
+
+    linearCode = glyphs.split(' ');
+    linearCode.forEach(code => {
+        convertedCode.push(`_${code}`)
+    });
+    
+    convertedCode.forEach(code => {
+        dic.forEach(wd => {
+            if(wd.name === code) {
+                fractalCode.push(wd.fractal)
+            }
+        });
+    });
+
+    return fractalCode.toString().replaceAll(',', ' ');
+}
