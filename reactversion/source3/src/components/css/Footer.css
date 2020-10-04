@@ -1,6 +1,6 @@
 .footer {
     width:100%;
-    height:250px;
+    height:300px;
     box-sizing: border-box;
     padding: 48px;
     font-family: var(--inter);
@@ -35,6 +35,7 @@
 .footer-end li {
     transition: all 0.25s ease-in-out;
     width:100%;
+    line-height:2em;
 }
 
 .footer-end li:hover {

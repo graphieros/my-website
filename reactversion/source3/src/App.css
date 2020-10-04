@@ -3,6 +3,7 @@
   --c1:75,106,160;
   --c2:122,161,216;
   --c3:211,227,252;
+  --gold:255,215,0;
   --gradTop: radial-gradient(at top, rgb(var(--c0)), rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
   --gradTopLeft: radial-gradient(at top left, rgb(var(--c0)), rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
   --gradTopLight: radial-gradient(at top, rgb(var(--c2)), rgb(var(--c0)));
