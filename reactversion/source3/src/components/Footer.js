@@ -5,7 +5,7 @@ import './css/Footer.css';
 function Footer() {
     return (
         <div className='footer'>
-            graphieros.com est réalisé et maintenu par Alec Lloyd Probert, 2020
+            graphieros.com est développé et maintenu par <Link className='link' to='/alp'><u>Alec Lloyd Probert</u></Link>, 2020
             <Link to='/contact.php' target='_blank'>
                 <p>contact</p>
             </Link>

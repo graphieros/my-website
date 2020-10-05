@@ -79,8 +79,23 @@ function Landing() {
                             label='touch writer'
                         />
                     </a>
-                    
-                    
+                    <Link
+                        className='link'
+                        to='/fractalspace'>
+                        <Button
+                            className='menu-button-landing'
+                            fractalClassName='menu-fractal-landing'
+                            colors={[211, 227, 252]}
+                            sequence='ss ss ss ss ss'
+                            svgSize='60'
+                            pClass='button-label-landing'
+                            label='fractal space'
+                        />
+                    </Link>
+                    <div className='button-description-right'>
+                        Ecrire en profondeur en graphieros fractal
+                    </div>
+                
                 </div>
             </div>
             <Footer />

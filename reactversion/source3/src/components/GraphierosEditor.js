@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './css/GraphierosEditor.css';
-import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import Linear from './graphieros/Linear';
 import Fractal from './graphieros/Fractal';
 

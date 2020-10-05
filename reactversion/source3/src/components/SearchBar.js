@@ -47,7 +47,7 @@ const SearchBar = (props) => {
 
             graphieros_dictionnary.forEach((glyph, i) => {
 
-                if (searchValue === glyph.fr) {
+                if (searchValue.toLowerCase() === glyph.fr) {
 
                     setSearchResult({
                         className: 'glyphSearchReturn',
@@ -73,7 +73,7 @@ const SearchBar = (props) => {
 
             wordList.forEach(word => {
 
-                if (searchValue === word.fr) {
+                if (searchValue.toLowerCase() === word.fr) {
 
                     setSearchResult({
                         className: 'glyphSearchReturn',

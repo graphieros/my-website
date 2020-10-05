@@ -10,6 +10,7 @@ function Button(props) {
                 sequence={props.sequence}
                 colors={props.colors}
                 svgSize={props.svgSize}
+                light={true}
             />
             <p className={props.pClass}>
                 {props.label}
