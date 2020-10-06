@@ -108,7 +108,7 @@
 }
 
 .terminal-close-button{
-    bottom:84px;
+    bottom:70px;
     position: fixed;
     left:50%;
     transform:translateX(-50%);
@@ -122,6 +122,48 @@
 
 .terminal-close-button:hover{
     animation: tcb 0.25s ease-in-out;
+}
+
+.mode-toggles{
+    z-index: 200;
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    bottom: 100px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+button.toggle-graphieros-mode{
+    border:none;
+    font-family: var(--logo);
+    color: green;
+    background: black;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-radius:30px;
+    cursor: pointer;
+    border:1px solid black;
+    transition: all 0.25s ease-in-out;
+}
+
+button.toggle-graphieros-mode:hover{
+    color: greenyellow;
+    box-shadow: 0 0px 15px -5px  greenyellow;
+}
+
+.molecule-output{
+    height:100px;
+    width:100px;
+    margin-top:-10px;
+    margin-left:50%;
+    transform:translateX(-50%);
+}
+
+.fractal-output svg {
+  height:200px;
+  width:200px;
+  margin-top:-20px;
 }
 
 @keyframes show-editor{
@@ -163,4 +205,10 @@ span.current-word{
     color: tomato;
     text-align:center;
     border-radius:3px;
+}
+
+@media (max-width:500px){
+    button.toggle-graphieros-mode{
+        font-size:0.7em;
+    }
 }

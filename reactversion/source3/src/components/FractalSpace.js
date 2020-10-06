@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './css/FractalSpace.css';
 import Fractal from './graphieros/Fractal';
