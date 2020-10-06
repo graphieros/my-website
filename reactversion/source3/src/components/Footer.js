@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/Footer.css';
+import Fractal from './graphieros/Fractal';
 
 function Footer() {
     return (
@@ -54,7 +55,19 @@ function Footer() {
                     <li>fractal space</li>
                 </Link>
 
+                <Link
+                    className='link'
+                    to='/kio'>
+                    <li className='li-graphieros'>
+                        <Fractal
+                            className='fractal-small-link'
+                            sequence='zw-wx-xe-ez-zq-qd-de'
+                            svgSize='30'
+                            colors={[75, 106, 160]}
+                        />
+                    </li>
 
+                </Link>
 
             </div>
         </div>

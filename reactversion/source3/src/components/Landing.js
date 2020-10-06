@@ -95,7 +95,23 @@ function Landing() {
                     <div className='button-description-right'>
                         Ecrire en profondeur en graphieros fractal
                     </div>
-                
+                    <div className='button-description-left'>
+                        Le site graphieroPhone, pour les experts
+                    </div>
+                    <Link
+                        className='link'
+                        to='/kio'>
+                        <Button
+                            className='menu-button-landing'
+                            fractalClassName='menu-fractal-landing'
+                            colors={[211, 227, 252]}
+                            sequence='zw-wx-xe-ez-zq-qd-de zq-qw-ws-sx-xd-de'
+                            svgSize='60'
+                            pClass='button-label-landing'
+                            label='[ kio ]'
+                        />
+                    </Link>
+
                 </div>
             </div>
             <Footer />

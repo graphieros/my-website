@@ -58,12 +58,16 @@
 @keyframes reduce{
     0%{
         content: "_";
+        opacity:1;
     }
     50%{
-        content:""
+        color:tomato;
+        content:"_";
+        opacity:0;
     }
     100%{
-        content:"_"
+        content:"_";
+        opacity:1;
     }
 }
 
@@ -92,7 +96,7 @@
     width:80%;
     height:80%;
     bottom:100px;
-    background: radial-gradient(rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.89));
+    background: radial-gradient(rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.938));
     border-radius:24px;
     left:50%;
     transform: translateX(-50%);
@@ -118,6 +122,7 @@
     border-radius:100%;
     box-shadow: 5px 10px 10px -10px black;
     cursor: pointer;
+    z-index:300;
 }
 
 .terminal-close-button:hover{
@@ -137,19 +142,49 @@
 button.toggle-graphieros-mode{
     border:none;
     font-family: var(--logo);
-    color: green;
     background: black;
     box-sizing: border-box;
     padding: 5px 10px;
-    border-radius:30px;
     cursor: pointer;
     border:1px solid black;
     transition: all 0.25s ease-in-out;
 }
 
-button.toggle-graphieros-mode:hover{
+.btn-linear{
     color: greenyellow;
+    border-radius: 30px 3px 3px 30px;
+    border:1px solid black;
+}
+
+.btn-linear:hover{
     box-shadow: 0 0px 15px -5px  greenyellow;
+    color: green;
+    border-left: 1px solid white;
+}
+
+.btn-fractal{
+    color: rgb(var(--c2));
+    border-radius:3px 30px 30px 3px;
+    border:1px solid black;
+}
+
+.btn-fractal:hover{
+    box-shadow: 0 0px 15px -5px  rgb(var(--c2));
+    color: rgb(var(--c1));
+    border-right: 1px solid white;
+}
+
+.btn-molecular{
+    color: white;
+    border-radius: 3px;
+    border:1px solid black;
+}
+
+.btn-molecular:hover{
+    box-shadow: 0 0px 15px -5px white;
+    color: rgb(180, 180, 180);
+    border-left: 1px solid white;
+    border-right: 1px solid white;
 }
 
 .molecule-output{
@@ -161,9 +196,19 @@ button.toggle-graphieros-mode:hover{
 }
 
 .fractal-output svg {
-  height:200px;
-  width:200px;
+  height:150px;
+  width:150px;
   margin-top:-20px;
+}
+
+.translation-list{
+    display: block;
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    font-family: var(--logo);
+    color: grey;
+    text-align:left;
 }
 
 @keyframes show-editor{

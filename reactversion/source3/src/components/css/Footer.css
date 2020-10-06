@@ -42,6 +42,22 @@
     color: rgb(var(--c2));
 }
 
+li.li-graphieros{
+
+}
+
+.fractal-small-link {
+    display: inline-block;
+}
+
+.fractal-small-link svg{
+    height:30px !important;
+    width:30px !important;
+    position: absolute;
+    margin-top:-20px;
+    margin-left:-5px;
+}
+
 @media (max-width:500px) {
     .footer-end li {
         font-size:0.8em;

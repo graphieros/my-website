@@ -85,7 +85,7 @@ function Header() {
                     />
                 </Link>
 
-                <Menu />
+                <Menu /> 
                 <div className='sub-header'>
                     <SearchBar className='searchBar' />
                     <button

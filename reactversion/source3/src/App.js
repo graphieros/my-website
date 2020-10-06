@@ -10,6 +10,7 @@ import Blog from './components/Blog';
 import Alp from './components/Alp';
 import Words from './components/Words';
 import FractalSpace from './components/FractalSpace';
+import Kio from './components/graphieros_subsite/Kio';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
         <Header />
   
         <Switch>
+          <Route path='/kio' exact component={Kio} />
           <Route path='/fractalspace' exact component={FractalSpace} />
           <Route path='/alp' exact component={Alp} />
           <Route path='/' exact component={Landing} />

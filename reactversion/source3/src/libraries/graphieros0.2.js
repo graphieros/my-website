@@ -67,11 +67,7 @@ function linear({
 
     for (let j = 0; j < one_array_with_spaces.length; j += 1) {
 
-        function there_is_some_text() {
-            return one_array_with_spaces[j];
-        }
-
-        if (there_is_some_text()) {
+        if (one_array_with_spaces[j]) {
             one_array_without_spaces.push(one_array_with_spaces[j]);
         }
     }
@@ -142,13 +138,13 @@ function linear({
 
                 }
             });
-        
+
 
             incr += 200;
             svg_paragraph.setAttributeNS(null, "viewBox", `0 0 260 ${(incr + 60)}`);
         });
 
-        svg_paragraph.style.height = `${(everyThing.length+1) * (size*0.8)}px`;
+        svg_paragraph.style.height = `${(everyThing.length + 1) * (size * 0.8)}px`;
 
     });
 
@@ -179,7 +175,7 @@ function linear({
     svg_wrapper.appendChild(svg_paragraph);
     return svg_wrapper.innerHTML;
 
-};
+}
 export { linear };
 
 
@@ -312,7 +308,7 @@ function fractal({
             let g = document.createElementNS(xmlns, "g");
             g.innerHTML += `${_p} class="test" stroke-width="${stk}"style="stroke:${glyph_color}; stroke-linejoin: round; stroke-linecap:round; fill:none;"${_p_}${dot},${dot}${p_}`;
             svg_output.appendChild(g);
-        })
+        });
 
         fractalize();
 
@@ -354,7 +350,7 @@ function molecular({
     let glyph_color = `rgb(${R},${G},${B})`;
 
     let svg = document.createElementNS(xmlns, "svg");
-    svg.setAttributeNS(null, "viewBox", "0 0 512 512")
+    svg.setAttributeNS(null, "viewBox", "0 0 512 512");
     svg.style.width = `${size}px`;
     svg.style.height = `${size}px`;
     svg.style.background = background;
@@ -867,7 +863,7 @@ function callifractal({
                         ${d1[0] + x_equShift} ${d1[1] - y_equShift},
                         ${d1[0] - x_equShift} ${d1[1] + y_equShift}
                         Z${p_}`;
-        };
+        }
 
         stroke_defs();
 

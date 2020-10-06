@@ -21,20 +21,11 @@ function GraphierosEditor(props) {
         className: 'hidden'
     });
 
-    const handleEditorMode = (props) => {
-        let buttonValue = props.target.innerText;
-        if (buttonValue === 'linéaire') {
-            initValue = 0;
-        } else if (buttonValue === 'moléculaire') {
-            initValue = 1;
-        } else if (buttonValue === 'fractal') {
-            initValue = 2;
-        } else {
-            initValue = 0;
+    const [inputColor, setInputColor] = useState({
+        style: {
+            color: 'greenyellow'
         }
-    }
-
-
+    });
 
     const activateTerminal = (props) => {
 
@@ -55,6 +46,13 @@ function GraphierosEditor(props) {
         //linear mode
 
         if (initValue === 0) {
+
+            setInputColor({
+                style: {
+                    color: 'greenyellow'
+                }
+            });
+
             setTerminalState({
                 className: 'graphieros-terminal',
                 content: <>
@@ -72,13 +70,20 @@ function GraphierosEditor(props) {
 
         if (initValue === 1) {
             let molecularInput = codeInput.split(' ');
+
+            setInputColor({
+                style: {
+                    color: 'rgb(255,255,255)'
+                }
+            });
+
             setTerminalState({
                 className: 'graphieros-terminal',
                 content: molecularInput.map((mol, i) => <Molecule
                     className='molecule-output'
                     key={`mol_${i}`}
                     sequence={mol.replaceAll("-", " ")}
-                    colors={[173, 255, 47]}
+                    colors={[255,255,255]}
                     size='100'
                     strokeWidth='6'
                 />)
@@ -93,6 +98,12 @@ function GraphierosEditor(props) {
             let stack = [];
             let convertedStack = [];
             let finalStack = [];
+
+            setInputColor({
+                style: {
+                    color: 'rgb(122,161,216)'
+                }
+            });
 
             fractalInput.forEach(fi => {
                 stack = [];
@@ -118,14 +129,28 @@ function GraphierosEditor(props) {
                     className='fractal-output'
                     key={`fra_${i}`}
                     sequence={`ss-${sta}`}
-                    colors={[173, 255, 47]}
-                    svgSize='200'
-                    light={false}
-                    intensity='1.6'
+                    colors={[75, 106, 160]}
+                    svgSize='150'
+                    light={true}
+                    intensity='1.3'
+                    size='30'
                 />)
             });
         }
+    }
 
+    const handleEditorMode = (props) => {
+        let buttonValue = props.target.innerText;
+        if (buttonValue === 'linéaire') {
+            initValue = 0;
+        } else if (buttonValue === 'moléculaire') {
+            initValue = 1;
+        } else if (buttonValue === 'fractal') {
+            initValue = 2;
+        } else {
+            initValue = 0;
+        }
+        document.getElementById("kcuf").focus();
     }
 
     const handleCloseTerminal = () => {
@@ -141,40 +166,45 @@ function GraphierosEditor(props) {
     }
 
     return (
+        <>
         <div className={props.className}>
             {props.children}
 
             <div className={buttonState.className}>
-                <button onClick={handleEditorMode} className='toggle-graphieros-mode'>
+                <button onClick={handleEditorMode} className='toggle-graphieros-mode btn-linear'>
                     linéaire
                 </button>
-                <button onClick={handleEditorMode} className='toggle-graphieros-mode'>
+                <button onClick={handleEditorMode} className='toggle-graphieros-mode btn-molecular'>
                     moléculaire
                 </button>
-                <button onClick={handleEditorMode} className='toggle-graphieros-mode'>
+                <button onClick={handleEditorMode} className='toggle-graphieros-mode btn-fractal'>
                     fractal
                 </button>
             </div>
 
             <textarea
+                id="kcuf"
+                autoFocus
                 placeholder='...'
+                style={inputColor.style}
                 onChange={activateTerminal}
+                onFocus={activateTerminal}
             />
             <div className={terminalState.className}>
-
                 {terminalState.content}
             </div>
 
-            <div className={closeBtnState.className} onClick={handleCloseTerminal}>
+        </div>
+        <div className={closeBtnState.className} onClick={handleCloseTerminal}>
                 <Fractal
+                    onClick={handleCloseTerminal}
                     className='fractal-close-terminal'
                     sequence='zx-we'
-                    colors={[173, 255, 47]}
+                    colors={[255, 255, 255]}
                     svgSize='32'
                 />
             </div>
-
-        </div>
+        </>
     )
 }
 
