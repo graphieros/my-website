@@ -1,0 +1,54 @@
+.graph-landing-body{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: radial-gradient(at top left, rgb(var(--c1)), rgb(var(--c2)), rgb(var(--c3)));
+    overflow: scroll;
+}
+
+.graph-landing-body::-webkit-scrollbar{
+    width:0px;
+}
+
+.kio-menu{
+    width:60px;
+    position: fixed;
+    top:100px;
+    right:15px;
+}
+
+.kio-menu-button{
+    width:100%;
+    display: grid;
+    box-sizing: border-box;
+    height:60px;
+    border:none;
+    border-radius:12px;
+    margin-top:12px;
+    background: radial-gradient(at top left, rgb(var(--c2)), rgb(var(--c3)));
+    box-shadow: -5px -5px 10px -5px white, 3px 3px 6px 3px rgba(var(--c1),0.6);
+    cursor:pointer;
+}
+
+.kio-menu-button svg {
+    margin-left:-5px;
+}
+
+.kio-menu-button:hover{
+    animation: wobble 0.5s ease-in-out;
+    background: radial-gradient(at bottom right, rgb(var(--c2)), rgb(var(--c3)));
+}
+
+.kio-landing{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.kio-landing-fractal{
+    height:300px;
+    width:300px;
+}

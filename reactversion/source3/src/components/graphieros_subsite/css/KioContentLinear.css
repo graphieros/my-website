@@ -1,0 +1,40 @@
+.kio-open-0{
+    position: fixed;
+    height:100%;
+    max-width:100%;
+    right:90px;
+    left:0px;
+    top:100px;
+    box-sizing: border-box;
+    padding:50px;
+    padding-left:20px;
+    overflow: scroll;
+    box-sizing: border-box;
+    padding-bottom:128px;
+}
+
+.kio-open-0::-webkit-scrollbar{
+    width:0px;
+}
+
+.kio-linear-body{
+    display: grid;
+    grid-template-columns: repeat(12,30px);
+    width:360px;
+    margin-left:50%;
+    transform:translateX(-50%);
+    box-sizing: border-box;
+    padding-top:24px;
+    padding-bottom:24px;
+}
+
+.line-odd{
+    margin-top:15px;
+}
+
+@media (max-width:500px){
+    .kio-linear-body{
+        grid-template-columns: repeat(6,30px);
+        width:210px;
+    }
+}

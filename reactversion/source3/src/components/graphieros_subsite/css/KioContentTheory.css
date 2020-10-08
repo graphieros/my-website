@@ -1,0 +1,11 @@
+.kio-open-2{
+    position: fixed;
+    height:100%;
+    max-width:100%;
+    right:90px;
+    left:0px;
+    top:100px;
+    box-sizing: border-box;
+    padding:50px;
+    padding-left:20px;
+}

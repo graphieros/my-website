@@ -1,0 +1,14 @@
+.kio-header{
+    display: grid;
+    align-content: center;
+    justify-content:center;
+    box-sizing: border-box;
+    border-radius: 3px 3px 100px 3px;
+    box-shadow: 10px 10px 10px -5px rgba(var(--c1),0.6);
+    background: radial-gradient(at bottom right, rgba(255, 255, 255, 0.342), transparent, transparent);
+}
+
+.kio-header-fractal{
+    height:150px;
+    width:150px;
+}
