@@ -96,7 +96,7 @@ function Landing() {
                         Ecrire en profondeur en graphieros fractal
                     </div>
                     <div className='button-description-left'>
-                        Le site graphieroPhone, pour les experts
+                        La section graphieroPhone, pour les experts
                     </div>
                     <Link
                         className='link'
