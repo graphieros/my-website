@@ -118,7 +118,7 @@ function GraphierosEditor(props) {
                             }
                         });
 
-                    })
+                    });
                 });
                 finalStack.push(convertedStack.toString().replaceAll(',', ' '));
             });
