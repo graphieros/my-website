@@ -575,28 +575,28 @@ const GraphierosShapeFinder = (props) => {
                     }
                 }
             } else if (itMatches(thatSearch, cutCode[1])) {
-                if (itMatchesAllShifts0() ||itMatchesAllShifts1() ||itMatchesAllShifts2()) {
+                if (itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                     pushResult(entry);
                 } else if (itMatches(thatSearch, cutCode[0])) {
-                    if (itMatches(thatSearch, cutCode[2]) ||itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() ||itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                    if (itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, reversedArray[0])) {
-                    if (itMatches(thatSearch, reversedArray[2]) ||itMatches(thatSearch, cutCode[2]) ||itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                    if (itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, permutedArray[0])) {
-                    if (itMatches(thatSearch, permutedArray[2]) ||itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                    if (itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
                     }
                 } else if (itMatches(thatSearch, permutedReversedArray[0])) {
-                    if (itMatches(thatSearch, permutedReversedArray[2]) ||itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
+                    if (itMatches(thatSearch, permutedReversedArray[2]) || itMatches(thatSearch, permutedArray[2]) || itMatches(thatSearch, reversedArray[2]) || itMatches(thatSearch, cutCode[2]) || itMatchesAllShifts0() || itMatchesAllShifts1() || itMatchesAllShifts2()) {
                         pushResult(entry);
                     } else {
                         pushResult(entry);
@@ -637,7 +637,7 @@ const GraphierosShapeFinder = (props) => {
                     <span className="spanPhonoOpt">[ {res.n} ]</span>
                 </div>)}
             </div>
-        }); 
+        });
     }
 
 
