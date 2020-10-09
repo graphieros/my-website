@@ -61,7 +61,7 @@ function Footer() {
                     <li className='li-graphieros'>
                         <Fractal
                             className='fractal-small-link'
-                            sequence='zw-wx-xe-ez-zq-qd-de'
+                            sequence='zw-wx-xe-ez-zq-qd-de zq-qw-ws-sx-xd-de'
                             svgSize='30'
                             colors={[75, 106, 160]}
                         />
