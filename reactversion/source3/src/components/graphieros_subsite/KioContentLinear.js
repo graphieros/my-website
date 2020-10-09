@@ -27,7 +27,7 @@ function KioContentLinear(props) {
                                     size='30'
                                     colors={[29, 55, 104]}
                                 />
-                            )
+                            );
                         } else {
                             return (
                                 <Linear
@@ -37,14 +37,13 @@ function KioContentLinear(props) {
                                     size='30'
                                     colors={[29, 55, 104]}
                                 />
-                            )
+                            );
                         }
-
-                    })
+                    });
                 })}
             </div>
         </div>
     )
 }
 
-export default KioContentLinear
+export default KioContentLinear;
