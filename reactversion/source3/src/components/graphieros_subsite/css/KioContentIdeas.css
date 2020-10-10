@@ -2,10 +2,47 @@
     position: fixed;
     height:100%;
     max-width:100%;
-    right:90px;
+    right:50px;
     left:0px;
     top:100px;
     box-sizing: border-box;
     padding:50px;
     padding-left:20px;
+    overflow: scroll;
+    padding-bottom:128px;
+}
+
+.kio-open-1::-webkit-scrollbar{
+    width:0px;
+}
+
+.kio-idea-content{
+    width:100%;
+    max-width:624px;
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    grid-gap:24px;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+.kio-molecules{
+    position: absolute;
+    width:100%;
+    margin-top:50px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items:center;
+    justify-items:center;
+}
+
+.kio-molecule{
+    height:100px;
+    width:100px;
+}
+
+@media (max-width:700px){
+    .kio-idea-content{
+        display: block;
+    }
 }
