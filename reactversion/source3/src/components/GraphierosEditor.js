@@ -134,6 +134,7 @@ function GraphierosEditor(props) {
                     light={true}
                     intensity='1.3'
                     size='30'
+                    dropShadow='0px 0px 3px rgba(255,255,255,0.6)'
                 />)
             });
         }
