@@ -23,4 +23,27 @@
     box-shadow: 0px 15px 30px -15px rgb(var(--c0)), 0px -15px 30px -15px rgba(255, 255, 255, 0.948);
 }
 
+.white-margin{
+    width: 98%;
+    height: 98%;
+    width: calc(100% - 2em);
+    height: calc(100% - 2em);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.404), transparent);
+    display: block;
+    position: absolute;
+    border-radius: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.712);
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 10px 1px rgba(var(--c1),.6) inset;
+}
+
 /*try rotating that svg*/
+
+
+@media (max-width: 500px){
+    .white-margin{
+        display: none;
+    }
+}
