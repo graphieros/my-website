@@ -4,7 +4,7 @@ import './css/FractalSpace.css';
 import Fractal from './graphieros/Fractal';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 
-let memory = 'ss';
+let memory = 'ss'; 
 let size = 390;
 
 let style = {
@@ -63,6 +63,9 @@ function FractalSpace() {
             fractalCount += 1;
         }
     }
+
+    //show a portion of an array of glyphs
+    //set a stack
 
     const handlePlus = () => {
         size *= 1.2;
