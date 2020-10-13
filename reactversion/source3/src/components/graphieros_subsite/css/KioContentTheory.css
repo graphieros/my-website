@@ -2,11 +2,82 @@
     position: fixed;
     height:100%;
     max-width:100%;
-    right:90px;
+    right:50px;
     left:0px;
     top:100px;
     box-sizing: border-box;
     padding:50px;
     padding-left:20px;
+    overflow: scroll;
+    padding-bottom:128px;
 }
 
+.kio-open-2::-webkit-scrollbar{
+    width:0px;
+}
+
+svg.theory-board{
+    height:300px;
+    width:300px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top:24px;
+    border-radius:100%;
+    filter: drop-shadow(0 5px 5px rgba(var(--c1),.6));
+    transition: all 0.25s ease-in-out;
+}
+
+circle.circles{
+    r:10;
+    fill:rgba(var(--c3),.6);
+    transition: all 0.25s ease;
+}
+
+circle.circles:hover{
+    fill: rgb(var(--c3));
+}
+
+path.theory-path{
+    stroke: rgb(var(--c1));
+    stroke-width:3px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill:none;
+}
+
+.eraser-buttons{
+    margin-left:50%;
+    transform: translateX(-50%);
+    width: fit-content;
+    display:grid;
+    align-items:center;
+    justify-items:center;
+    grid-template-columns: repeat(2,1fr);
+}
+
+button.memory-eraser{
+    border:none;
+    background:none;
+    cursor: pointer;
+    border-radius:100%;
+}
+
+.theory-fractal-btn{
+    height:50px;
+    width:50px;
+    border-radius:100%;
+    border:1px solid white;
+    box-shadow: 0px 5px 15px -5px rgba(var(--c1),.8), 0px -5px 10px -5px white;
+    background: radial-gradient(at top, rgba(255, 255, 255, 0.384), transparent);
+}
+
+.theory-fractal-btn:hover{
+    animation: wobble 0.25s ease-in-out;
+}
+
+@media (max-width:500px){
+    svg.theory-board{
+        height:200px;
+        width:200px;
+    }
+}
