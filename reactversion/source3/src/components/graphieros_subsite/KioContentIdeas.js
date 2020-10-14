@@ -6,7 +6,7 @@ import ideas_library from './subsite_library/ideas_library.json';
 
 function KioContentIdeas(props) {
 
-    return (
+    return ( 
         <div className={props.className}>
             <KioHeader sequence='qs-se-eq-xs-wd zw-wd-dz-qs-se-xs' />
             <div className='kio-idea-content'>
@@ -29,4 +29,4 @@ function KioContentIdeas(props) {
     )
 }
 
-export default KioContentIdeas
+export default KioContentIdeas;
