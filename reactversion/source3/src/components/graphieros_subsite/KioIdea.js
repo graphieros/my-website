@@ -4,12 +4,13 @@ import Linear from '../graphieros/Linear';
 import Molecule from '../graphieros/Molecule';
 import Fractal from '../graphieros/Fractal';
 
-function KioIdea(props) {
+function KioIdea(props) { 
 
     const molecules = props.molecule_set;
 
     return (
         <div className={props.className}>
+            <div className="white-margin"/>
             <Fractal
                 className={props.frac_class}
                 sequence={props.frac_sequence}
