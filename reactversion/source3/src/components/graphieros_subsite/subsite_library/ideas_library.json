@@ -28,7 +28,7 @@
         ]
     },
     {
-        "frac_sequence":"ez-qw-wx-xd-ds ez-zq-qw-wx-xd-ds-sw",
+        "frac_sequence":"ez-zq-qw-wx-xd-ds ez-zq-qw-wx-xd-ds-sw",
         "molecules":[
             "v3ai le kto fra",
             "kme rto kto soma"
@@ -39,6 +39,20 @@
         "molecules":[
             "stoia ney pnae sa",
             "vi ldo grey hea"
+        ]
+    },
+    {
+        "frac_sequence":"wz-zq-qx-xe-ed-dw qs-se-xs-wd",
+        "molecules": [
+            "ptae bdi nfea",
+            "sta kto skai"
+        ]
+    },
+    {
+        "frac_sequence":"zx-sd-de sz-zd-dw-wz",
+        "molecules": [
+            "sfi d3e fmai tra",
+            "psie pkia kto fwo"
         ]
     }
 ]
