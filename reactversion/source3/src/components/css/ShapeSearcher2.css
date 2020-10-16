@@ -1,0 +1,126 @@
+.shape-searcher2-body,
+.sub-options{
+    width:250px;
+    background: rgb(var(--c3));
+    display: grid;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius:12px;
+    margin-top:12px;
+    align-items:center;
+    justify-items:center;
+    grid-gap: 10px;
+    box-sizing: border-box;
+    padding:5px;
+    padding-top:12px;
+    padding-bottom:12px;
+    box-shadow: 5px 5px 10px -5px rgb(var(--c1)), -5px -5px 10px -5px white;
+}
+
+.shape-searcher2-body{
+    grid-template-columns: repeat(3,50px);
+    width:180px;
+}
+
+.sub-options{
+    grid-template-columns: repeat(6,30px);
+    transition: all 0.25s ease-in-out;
+}
+
+
+.sb-wrapper{
+    display:block;
+    position: relative;
+    height:100%;
+    width:100%;
+    cursor: pointer;
+    animation: sb-wrapper 0.25s ease-in-out;
+}
+
+.wrapper-click{
+    cursor: pointer;
+    z-index:1;
+    height:100%;
+    width:100%;
+    display: block;
+    position: absolute;
+}
+
+
+.search-option,
+.search-option-main{
+    background: radial-gradient(at bottom right, rgb(var(--c2)), rgb(var(--c1)));
+}
+
+.search-option{
+    background: radial-gradient(at bottom right, white, rgb(var(--c3)));
+    box-shadow: 3px 3px 6px -3px rgb(var(--c1)), -3px -3px 6px -3px white;
+    border-radius:6px;
+    height:30px;
+    width:30px;
+}
+
+.search-option-main{
+    box-shadow: 5px 5px 10px -5px rgb(var(--c1)), -5px -5px 10px -5px white;
+    border-radius:12px;
+    height:50px;
+    width:50px;
+}
+
+@keyframes som {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.sb-wrapper:hover{
+    animation: wobble 0.25s ease;
+}
+
+.new-search-results{
+    width:250px;
+    display: grid;
+    position: relative;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius:12px;
+    background: var(--gradTopLeftDark);
+    box-sizing: border-box;
+    padding-top:12px;
+    padding-bottom:12px;
+    margin-top:12px;
+    grid-template-columns: repeat(4,1fr);
+    align-items:center;
+    justify-items:center;
+    grid-gap:10px;
+    box-shadow: 5px 5px 10px -5px rgb(var(--c1)), -5px -5px 10px -5px white;
+}
+
+.linear-result,
+.linear-result svg{
+    height:40px !important;
+    width:40px;
+}
+
+.linear-result svg {
+    filter: drop-shadow(0 1px 2px black);
+}
+
+.glyph-result{
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    width:100%;
+    font-size:0.7em;
+    font-family: var(--inter);
+}
+
+span.span-result-fr,
+span.span-result-phono{
+    color: white;
+}
+
