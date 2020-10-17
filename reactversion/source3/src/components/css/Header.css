@@ -45,6 +45,44 @@ button.button-search-shape:hover {
     color: rgb(var(--c0));
 }
 
+.search-choice{
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    height:100px;
+    width:200px;
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background: white;
+    border-radius:6px;
+    box-sizing: border-box;
+    padding:12px;
+    row-gap:12px;
+    background: radial-gradient(at top left, white, rgb(var(--c2)));
+    box-shadow: 0 0 20px black;
+}
+
+.search-choice button {
+    width:100%;
+    height:100%;
+    cursor: pointer;
+    font-family: var(--logo);
+    border:none;
+    border-radius:3px;
+    background: rgb(var(--c3));
+    box-shadow: 0 5px 10px -5px rgba(var(--c1));
+    color: rgb(var(--c0));
+    text-align:left;
+    transition: all 0.15s ease-in-out;
+}
+
+.search-choice button:hover {
+    background: rgb(var(--c1));
+    color: rgb(var(--c3));
+}
+
 @media (max-width:500px) {
 
     button.button-search-shape{

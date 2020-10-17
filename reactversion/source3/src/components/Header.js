@@ -6,11 +6,16 @@ import Logo from './Logo';
 import Menu from './Menu';
 import SearchBar from './SearchBar';
 import GraphierosShapeFinder from './GraphierosShapeFInder';
+import ShapeSearcher2 from './ShapeSearcher2';
 import GraphierosEditor from './GraphierosEditor';
 
 function Header() {
 
     const [shapeSearchState, setShapeSearchState] = useState({
+        className: 'hidden'
+    });
+
+    const [shapeSearch2State, setShapeSearch2State] = useState({
         className: 'hidden'
     });
 
@@ -30,16 +35,20 @@ function Header() {
         className: 'hidden'
     });
 
+    const [searchOptionsState, setSearchOptionsState] = useState({
+        className:'hidden'
+    });
+
     const handleShowShapeSearch = () => {
-        setShapeSearchState({
-            className: ''
-        });
         setButtonSeachState({
             className: 'hidden'
         });
         setBackState({
             className: 'backState'
         });
+        setSearchOptionsState({
+            className:'search-choice'
+        })
     }
 
     const handleCloseSearch = () => {
@@ -49,9 +58,27 @@ function Header() {
         setShapeSearchState({
             className: 'hidden'
         });
+        setShapeSearch2State({
+            className:'hidden'
+        });
         setBackState({
             className: 'hidden'
         });
+        setSearchOptionsState({
+            className:'hidden'
+        });
+    }
+
+    const handleDrawSearch = () => {
+        setShapeSearchState({
+            className:''
+        });
+    }
+
+    const handleClickSearch = () => {
+        setShapeSearch2State({
+            className:'searchBigBody'
+        })
     }
 
     const handleShowEditor = () => {
@@ -85,7 +112,7 @@ function Header() {
                     />
                 </Link>
 
-                <Menu /> 
+                <Menu />
                 <div className='sub-header'>
                     <SearchBar className='searchBar' />
                     <button
@@ -93,6 +120,11 @@ function Header() {
                         onClick={handleShowShapeSearch}>
                         ... ou une forme
                 </button>
+
+                    <div className={searchOptionsState.className}>
+                        <button onClick={handleDrawSearch}>dessiner la forme</button>
+                        <button onClick={handleClickSearch}>trouver d'après la forme</button>
+                    </div>
 
                     <GraphierosShapeFinder className={shapeSearchState.className}>
                         <div onClick={handleCloseSearch}>
@@ -106,6 +138,18 @@ function Header() {
                             />
                         </div>
                     </GraphierosShapeFinder>
+                    <ShapeSearcher2 className={shapeSearch2State.className}>
+                        <div onClick={handleCloseSearch}>
+                            <Fractal
+                                className='quitGlyphSearch'
+                                sequence='zx-we'
+                                colors={[255, 255, 255]}
+                                svgSize={30}
+                                background='rgb(255,91,79)'
+                                backgroundRadius='100%'
+                            />
+                        </div>
+                    </ShapeSearcher2>
 
                 </div>
                 <div className={backState.className} />
