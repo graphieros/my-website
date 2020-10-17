@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './css/GraphierosEditor.css';
 import Linear from './graphieros/Linear';
-import Fractal from './graphieros/Fractal';
+import Fractal from './graphieros/Fractal'; 
 import Molecule from './graphieros/Molecule';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 
@@ -105,6 +105,8 @@ function GraphierosEditor(props) {
                 }
             });
 
+            //that's a really bigO useEffect?
+
             fractalInput.forEach(fi => {
                 stack = [];
                 convertedStack = [];
@@ -113,6 +115,7 @@ function GraphierosEditor(props) {
                     let words = el.split(' ');
                     words.forEach(word => {
                         graphieros_dictionnary.forEach(entry => {
+            
                             if (entry.name.replace('_', '') === word) {
                                 convertedStack.push(entry.fractal);
                             }
