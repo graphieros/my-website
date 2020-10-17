@@ -180,7 +180,6 @@ function KioContentTheory(props) {
                     />
                 </button>
             </div>
-
         </div>
     )
 }
