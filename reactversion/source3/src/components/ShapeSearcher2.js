@@ -89,6 +89,10 @@ function ShapeSearcher2() {
         {
             shape:'EQ',
             cords:'ze-qd-wx'
+        },
+        {
+            shape:'NE',
+            cords:'ss'
         }
     ];
 
@@ -148,6 +152,10 @@ function ShapeSearcher2() {
         {
             shape:'U_rev',
             cords:'wz-ze-ex'
+        },
+        {
+            shape:'DIAM',
+            cords:'eq-qw-wx-xe'
         }
 
     ];
@@ -218,7 +226,7 @@ function ShapeSearcher2() {
             cords:'qs-se-eq'
         },
         {
-            shape:'TRI-in-br',
+            shape:'TRI_in_br',
             cords:'ws-sd-dw'
         },
         {
@@ -230,7 +238,7 @@ function ShapeSearcher2() {
             cords:'ze-ed-dz'
         },
         {
-            shape:'TRI-in-tr',
+            shape:'TRI_in_tr',
             cords:'zs-sd-dz'
         },
         {
@@ -373,7 +381,7 @@ function ShapeSearcher2() {
         },
         {
             shape:'DASH',
-            cords:'wx'
+            cords:'wx-zd'
         }
     ];
 
@@ -391,7 +399,7 @@ function ShapeSearcher2() {
             cords: 'ze-ew-wx'
         },
         {
-            shape: 'Z-rev',
+            shape: 'Z_rev',
             cords: 'ez-zx-xw'
         },
         {
@@ -399,7 +407,7 @@ function ShapeSearcher2() {
             cords: 'qe-ew-wd'
         },
         {
-            shape: 'N-l',
+            shape: 'N_l',
             cords: 'xq-qd-dz'
         },
         {
