@@ -1810,28 +1810,28 @@ let graphieros_dictionnary = [
         fr: 'frapper',
         path: [[lm, a, r, q, l, q], [rm, a, lm, w], [m, q, rm, w]],
         fractal:'qd-dz-ew-xs',
-        shapes:['']
+        shapes:['X_all','KA']
     },
     {
         name: '_gew',
         fr: 'fort',
         path: [[l, q, lm, a, m, q], [lm, a, lm, w], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'wz-qz-zs',
-        shapes:['']
+        shapes:['arr_t']
     },
     {
         name: '_fai',
         fr: 'former',
         path: [[rm, a, lm, a, lm, w], [l, q, m, q], [r, q, rm, w]],
         fractal:'wz-ze-qs-xd',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_fkai',
         fr: 'fonctionner',
         path: [[lm, a, rm, w, rm, a, lm, a, lm, w, rm, w], [lm, w, rm, a], [l, q, r, q]],
         fractal:'ze-ex-xw-wz-zx-we-qd',
-        shapes:['']
+        shapes:['X','RECT','X_all']
     },
     {
         name: '_blea',
@@ -1845,798 +1845,798 @@ let graphieros_dictionnary = [
         fr: 'finir',
         path: [[l, q, lm, a, r, q, lm, w, l, q], [rm, a, rm, w], [m, q, m, q]],
         fractal:'dz-zq-qw-wd-ex',
-        shapes:['']
+        shapes:['DIAM']
     },
     {
         name: '_brea',
         fr: 'filtrer',
         path: [[l, q, r, q, lm, a, lm, w, r, q], [rm, a, rm, w]],
         fractal:'ex-qd-dz-zw-wd',
-        shapes:['']
+        shapes:['TRI_0']
     },
     {
         name: '_fli',
         fr: 'fil',
         path: [[l, q, lm, a, lm, w, rm, a, r, q], [rm, w, rm, w]],
         fractal:'qz-zw-we-ed',
-        shapes:['']
+        shapes:['N','DASH']
     },
     {
         name: '_lvia',
         fr: 'feuille',
         path: [[lm, a, lm, w, r, q], [l, q, rm, w], [rm, a, m, q]],
         fractal:'zw-wd-qx-es',
-        shapes:['']
+        shapes:['PIC_bl']
     },
     {
         name: '_frey',
         fr: 'feu',
         path: [[lm, w, rm, w, l, q, r, q, lm, a], [rm, a, rm, a]],
         fractal:'wx-xq-qd-dz',
-        shapes:['']
+        shapes:['N_l']
     },
     {
         name: '_kloi',
         fr: 'fermer',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [rm, a, rm, w], [l, q, m, q]],
         fractal:'ze-ed-dx-xw-ex-qs',
-        shapes:['']
+        shapes:['C_l','TRI_out_r']
     },
     {
         name: '_mna',
         fr: 'femelle',
         path: [[lm, a, m, q, r, q, rm, w, lm, w, m, q], [l, q, rm, a]],
         fractal:'zs-sd-dx-xw-ws-qe',
-        shapes:['']
+        shapes:['KA','LOS_br']
     },
     {
         name: '_kti',
         fr: 'félin',
         path: [[l, q, rm, a, m, q, lm, a, r, q, rm, w, lm, w, l, q]],
         fractal:'zs-se-eq-qw-wx-xd-dz',
-        shapes:['']
+        shapes:['COL_b','CROSS_t']
     },
     {
         name: '_nrea',
         fr: 'faux',
         path: [[l, q, lm, a, rm, w], [lm, w, lm, w], [rm, a, rm, a], [r, q, r, q]],
         fractal:'qz-zx',
-        shapes:['']
+        shapes:['DASH','TREC_tl']
     },
     {
         name: '_sga',
         fr: 'faucher',
         path: [[l, q, m, q, rm, a, r, q], [lm, a, m, q], [rm, a, rm, w], [lm, w, lm, w]],
         fractal:'zs-qs-se-ed-ex',
-        shapes:['']
+        shapes:['arr_t']
     },
     {
         name: '_fa',
         fr: 'faire',
         path: [[m, q, lm, a, rm, a, m, q, r, q, rm, w, lm, w, l, q, m, q]],
         fractal:'zs-se-ez-qd-dx-xw-wq',
-        shapes:['']
+        shapes:['MEX_b','tri_t']
     },
     {
         name: '_vea',
         fr: 'faible',
         path: [[lm, a, lm, w], [l, q, lm, w, m, q], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'zw-qw-ws',
-        shapes:['']
+        shapes:['arr_b']
     },
     {
         name: '_fsa',
         fr: 'face',
         path: [[l, q, rm, w, rm, a, l, q, lm, w, rm, w, r, q, rm, a, l, q], [lm, a, m, q]],
         fractal:'qe-ex-xq-qw-wx-xd-de-zs',
-        shapes:['']
+        shapes:['TRI_1','TRI_out_bl','TRI_out_r']
     },
     {
         name: '_stre',
         fr: 'extrémité',
         path: [[r, q, rm, a, rm, w, r, q], [lm, a, lm, a], [l, q, l, q], [m, q, m, q], [lm, w, lm, w]],
         fractal:'de-ex-xd',
-        shapes:['']
+        shapes:['TRI_out_r']
     },
     {
         name: '_stra',
         fr: 'extraire',
         path: [[l, q, r, q, rm, a, lm, w, l, q], [lm, a, lm, w], [rm, a, rm, w]],
         fractal:'zw-xe-qd-de-ew-wq',
-        shapes:['']
+        shapes:['arr_b','arr_t','PIPE']
     },
     {
         name: '_tra',
         fr: 'extérieur',
         path: [[rm, a, lm, a, m, q, lm, w, rm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'ez-zs-sw-wx',
-        shapes:['']
+        shapes:['E']
     },
     {
         name: '_vlye',
         fr: 'évoluer',
         path: [[l, q, l, q], [lm, a, lm, w], [rm, a, r, q, rm, w, m, q, rm, a]],
         fractal:'zw-se-ed-dx-xs',
-        shapes:['']
+        shapes:['LOS_r']
     },
     {
         name: '_vne',
         fr: 'événement',
         path: [[r, q, rm, a, rm, w, r, q, m, q, lm, a, lm, w, m, q, l, q], [rm, a, lm, a, l, q, lm, w, rm, w]],
         fractal:'qz-ze-ed-dx-xw-wq-qd-ex-sz-zw-ws',
-        shapes:['']
+        shapes:['HEX']
     },
     {
         name: '_stea',
         fr: 'étoile',
         path: [[lm, a, r, q, lm, w, lm, a], [rm, a, rm, w, l, q, rm, a], [m, q, m, q]],
         fractal:'wz-zd-dw-xe-eq-qx',
-        shapes:['']
+        shapes:['TRI_2']
     },
     {
         name: '_meama',
         fr: 'étant',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, l, q, lm, w, r, q]],
         fractal:'qz-zx-xd-de-eq-qw-wd',
-        shapes:['']
+        shapes:['MA','RECT_r']
     },
     {
         name: '_te',
         fr: 'et',
         path: [[lm, a, l, q, lm, w], [l, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zq-qw-qs-ed-dx',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_bia',
         fr: 'équilibrer',
         path: [[lm, a, rm, a], [l, q, m, q, lm, w, rm, w, m, q, r, q]],
         fractal:'ze-qd-ws-sx-xw',
-        shapes:['']
+        shapes:['EQ','tri_b']
     },
     {
         name: '_kdea',
         fr: 'équidé',
         path: [[lm, a, rm, a, rm, w, lm, w, rm, a], [m, q, r, q], [l, q, l, q]],
         fractal:'ze-ex-xw-we-ds',
-        shapes:['']
+        shapes:['TREC_sbr','Z']
     },
     {
         name: '_nto',
         fr: 'entre',
         path: [[lm, a, rm, a, lm, w, rm, w], [l, q, rm, a], [lm, w, r, q]],
         fractal:'ze-ew-wx-qe-wd',
-        shapes:['']
+        shapes:['Z']
     },
     {
         name: '_srye',
         fr: 'entourer',
         path: [[m, q, m, q], [l, q, lm, a], [rm, a, r, q], [lm, w, rm, w]],
         fractal:'zq-ed-wx',
-        shapes:['']
+        shapes:['N_r']
     },
     {
         name: '_sko',
         fr: 'entendre',
         path: [[l, q, l, q], [r, q, m, q, rm, a, lm, a, lm, a, lm, w, rm, w, m, q]],
         fractal:'ds-se-ez-zw-wx-xs',
-        shapes:['']
+        shapes:['MEC_l','E_rev']
     },
     {
         name: '_nki',
         fr: 'entailler',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, m, q], [r, q, r, q]],
         fractal:'wz-ze-ex-xw-qs',
-        shapes:['']
+        shapes:['RECT']
     },
     {
         name: '_kdie',
         fr: 'enfant',
         path: [[lm, w, rm, a, rm, w, lm, w], [l, q, m, q], [lm, a, r, q]],
         fractal:'we-ex-xw-qs-zd',
-        shapes:['']
+        shapes:['KA','TREC_sbr']
     },
     {
         name: '_3ia',
         fr: 'énergie',
         path: [[lm, a, r, q, l, q, rm, w, lm, w, rm, a]],
         fractal:'ew-wx-xq-qd-dz',
-        shapes:['']
+        shapes:['N_l']
     },
     {
         name: '_ni',
         fr: 'bas',
         path: [[lm, w, rm, w], [lm, a, lm, a], [rm, a, rm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'wx',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_nwo',
         fr: 'en',
         path: [[lm, w, l, q, m, q, lm, w, lm, a, rm, a, rm, w, lm, w], [r, q, r, q]],
         fractal:'ws-sq-qw-wz-ze-ex-xw',
-        shapes:['']
+        shapes:['RECT','arr_b','tri_bl']
     },
     {
         name: '_pkoi',
         fr: 'empaqueter',
         path: [[l, q, rm, a, rm, w], [lm, w, l, q, lm, a, rm, a, r, q, rm, w, lm, w, m, q], [lm, a, m, q, r, q]],
         fractal:'qz-ze-ed-dx-xw-wq-qe-ex-zs-sd-ws',
-        shapes:['']
+        shapes:['HEX','X_plur','PIC_tr']
     },
     {
         name: '_skoi',
         fr: 'émotion',
         path: [[lm, a, rm, w, lm, w, m, q], [rm, a, l, q, lm, a, rm, a, r, q]],
         fractal:'zx-xw-ws-de-eq-qz-ze',
-        shapes:['']
+        shapes:['KA', 'COL_t','TRI_out_tl','tri_b']
     },
     {
         name: '_vzu',
         fr: 'électricité',
         path: [[l, q, lm, a, lm, w, rm, a, rm, w, r, q]],
         fractal:'qz-zw-we-ex-xd',
-        shapes:['']
+        shapes:['N_rev']
     },
     {
         name: '_gla',
         fr: 'égaler',
         path: [[lm, a, rm, a], [l, q, r, q], [lm, w, rm, w]],
         fractal:'ze-qd-wx',
-        shapes:['']
+        shapes:['EQ']
     },
     {
         name: '_fke',
         fr: 'effet',
         path: [[r, q, l, q, lm, a, rm, a, r, q, rm, w], [lm, a, m, q], [lm, w, lm, w]],
         fractal:'xd-de-ez-zq-qd-zs',
-        shapes:['']
+        shapes:['ARR_r','tri_tl','MEX_t','LOS_tr']
     },
     {
         name: '_to',
         fr: 'eau',
         path: [[lm, a, rm, a], [l, q, lm, w, m, q, rm, w, r, q]],
         fractal:'ze-qw-ws-sx-xd',
-        shapes:['']
+        shapes:['W']
     },
     {
         name: '_drye',
         fr: 'durer',
         path: [[m, q, lm, a, r, q, lm, w, m, q], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'dz-zs-sw-wd',
-        shapes:['']
+        shapes:['POINT_r']
     },
     {
         name: '_drei',
         fr: 'dur',
         path: [[l, q, lm, w, lm, a, rm, a, rm, w, r, q], [lm, a, m, q, rm, a]],
         fractal:'qw-wz-ze-ex-xd-zs-se',
-        shapes:['']
+        shapes:['U_rev','tri_t']
     },
     {
         name: '_drya',
         fr: 'droite',
         path: [[l, q, l, q], [lm, a, lm, a], [lm, w, lm, w], [m, q, m, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'ex',
-        shapes:['']
+        shapes:['PIPE','DASH']
     },
     {
         name: '_dro',
         fr: 'droit',
         path: [[l, q, l, q], [lm, a, lm, w], [m, q, m, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'zw-ex',
-        shapes:['']
+        shapes:['PIPE']
     },
     {
         name: '_rdwa',
         fr: 'draper',
         path: [[lm, w, l, q, lm, a, r, q, rm, w, lm, w, m, q, r, q], [rm, a, rm, a]],
         fractal:'ws-sd-dx-xw-wq-qz-zd',
-        shapes:['']
+        shapes:['LOS_br']
     },
     {
         name: '_rmi',
         fr: 'dormir',
         path: [[l, q, rm, a, r, q, rm, w, l, q], [m, q, lm, w, lm, a, m, q]],
         fractal:'qe-ed-dx-xq-sz-zw-ws',
-        shapes:['']
+        shapes:['TRI_in_l','DIAM']
     },
     {
         name: '_glo',
         fr: 'dont',
         path: [[rm, a, lm, a, lm, w, m, q, l, q], [r, q, r, q], [rm, w, rm, w]],
         fractal:'ez-zw-ws-sq',
-        shapes:['']
+        shapes:['arr_b','TREC_stl']
     },
     {
         name: '_dku',
         fr: 'donc',
         path: [[rm, a, lm, a, lm, w, rm, w], [m, q, r, q], [l, q, l, q]],
         fractal:'ez-zw-wx-ds',
-        shapes:['']
+        shapes:['MEC_l']
     },
     {
         name: '_dvi',
         fr: 'diviser',
         path: [[lm, w, rm, a], [l, q, l, q], [lm, a, lm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'ew',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_dme',
         fr: 'dimensionner',
         path: [[lm, a, lm, w, rm, w, r, q, rm, a, lm, a], [l, q, l, q], [m, q, m, q]],
         fractal:'de-ez-zw-wx-xd',
-        shapes:['']
+        shapes:['PENTA_l']
     },
     {
         name: '_dvey',
         fr: 'différer',
         path: [[l, q, l, q], [lm, a, rm, w, r, q, rm, a, lm, w]],
         fractal:'zx-xd-de-ew',
-        shapes:['']
+        shapes:['X','LOS_r']
     },
     {
         name: '_dvo',
         fr: 'devoir',
         path: [[lm, w, lm, a, rm, a, rm, w], [lm, a, m, q, rm, a], [l, q, l, q], [r, q, r, q]],
         fractal:'wz-ze-ex-zs-se',
-        shapes:['']
+        shapes:['U_rev','tri_t']
     },
     {
         name: '_dva',
         fr: 'devant',
         path: [[l, q, r, q, rm, a, rm, w, r, q], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qd-de-ex-xd',
-        shapes:['']
+        shapes:['ARR_r','TRI_out_r']
     },
     {
         name: '_dzye',
         fr: 'détruire',
         path: [[rm, a, rm, w], [m, q, r, q, lm, a, m, q], [l, q, lm, w]],
         fractal:'xe-dz-zs-sd-qw',
-        shapes:['']
+        shapes:['TRI_in_tr']
     },
     {
         name: '_nbia',
         fr: 'déséquilibrer',
         path: [[lm, a, rm, a, l, q, r, q], [m, q, rm, w, lm, w, m, q]],
         fractal:'ze-eq-qd-ws-sx-xw',
-        shapes:['']
+        shapes:['tri_b']
     },
     {
         name: '_dre',
         fr: 'derrière',
         path: [[r, q, l, q, lm, a, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'dq-qz-zw-wq',
-        shapes:['']
+        shapes:['ARR_l','tri_out_l']
     },
     {
         name: '_fmai',
         fr: 'depuis',
         path: [[r, q, l, q], [lm, a, l, q, lm, w], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'zq-qw-dq',
-        shapes:['']
+        shapes:['ARR_l']
     },
     {
         name: '_chna',
         fr: 'démasquer',
         path: [[lm, a, l, q, lm, w, r, q], [rm, a, r, q, rm, w, l, q], [m, q, m, q]],
         fractal:'zq-qw-wd-ed-dx-xq',
-        shapes:['']
+        shapes:['MA','CROSS_b']
     },
     {
         name: '_dle',
         fr: 'délicieux',
         path: [[l, q, r, q, rm, a, m, q, lm, a, l, q, lm, w, rm, w, r, q]],
         fractal:'dq-qz-zs-se-ed-dx-xw-wq',
-        shapes:['']
+        shapes:['M','C_b','MEX_b']
     },
     {
         name: '_d3a',
         fr: 'déjà',
         path: [[lm, a, m, q, r, q, rm, a, rm, w, r, q], [lm, w, m, q], [l, q, l, q]],
         fractal:'zs-sw-sd-de-ex-xd',
-        shapes:['']
+        shapes:['X_plur','TRI_out_r']
     },
     {
         name: '_klue',
         fr: 'défaut',
         path: [[lm, a, r, q, rm, w, rm, a, l, q, m, q], [lm, w, lm, w]],
         fractal:'sq-qe-ex-xd-dz',
-        shapes:['']
+        shapes:['PIC_tr']
     },
     {
         name: '_dfo',
         fr: 'défaire',
         path: [[rm, a, lm, w, lm, a, rm, a, r, q, lm, w], [l, q, rm, w]],
         fractal:'qx-wz-ze-ed-dw-we',
-        shapes:['']
+        shapes:['DIAM','TREC_stl','TREC_tr']
     },
     {
         name: '_3i',
         fr: 'découvrir',
         path: [[l, q, lm, a, lm, w, l, q], [r, q, rm, w, rm, a, r, q], [m, q, m, q]],
         fractal:'wz-zq-qw-xe-ed-dx',
-        shapes:['']
+        shapes:['MA','TRI_out_r','TRI_out_l']
     },
     {
         name: '_ktye',
         fr: 'découper',
         path: [[lm, a, lm, w], [l, q, rm, a], [m, q, r, q, rm, w, m, q]],
         fractal:'zw-qe-sd-dx-xs',
-        shapes:['']
+        shapes:['tri_br']
     },
     {
         name: '_dsimza',
         fr: 'décimètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, m, q, l, q]],
         fractal:'ze-ed-dx-xw-ws-sq',
-        shapes:['']
+        shapes:['PENTA_l']
     },
     {
         name: '_dsigma',
         fr: 'décigramme',
         path: [[lm, a, rm, a, rm, w, lm, w, m, q, l, q], [r, q, r, q]],
         fractal:'ze-ex-xw-ws-sq',
-        shapes:['']
+        shapes:['MEC_r']
     },
     {
         name: '_trie',
         fr: 'déchêt',
         path: [[lm, a, rm, a, l, q], [m, q, lm, w], [r, q, rm, w]],
         fractal:'ze-eq-ws-xd',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_da',
         fr: 'de',
         path: [[l, q, lm, a, rm, a], [lm, a, m, q], [lm, w, lm, w], [rm, w, rm, w], [r, q, r, q]],
         fractal:'qz-ze-zs',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_dfie',
         fr: 'dauphin',
         path: [[rm, a, l, q, lm, a, m, q, l, q], [lm, a, rm, a, rm, w, r, q], [lm, w, lm, w]],
         fractal:'dx-xe-ez-zq-qs-sz-eq',
-        shapes:['']
+        shapes:['tri_tl','TRI_out_tl']
     },
     {
         name: '_dse',
         fr: 'danser',
         path: [[l, q, rm, a, rm, w], [lm, a, r, q], [lm, w, m, q]],
         fractal:'qe-ex-ws-zd',
-        shapes:['']
+        shapes:['PIC_tr']
     },
     {
         name: '_di',
         fr: 'dans',
         path: [[l, q, lm, a, rm, w, lm, w, rm, a, r, q, l, q]],
         fractal:'qz-zx-xw-we-ed-dq',
-        shapes:['']
+        shapes:['X_all','X']
     },
     {
         name: '_d3e',
         fr: 'danger',
         path: [[m, q, lm, a, r, q, lm, w, lm, a], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'sz-zd-dw-wz',
-        shapes:['']
+        shapes:['TRI_0']
     },
     {
         name: '_dwa',
         fr: 'cycle',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, r, q, m, q, lm, w]],
         fractal:'ez-zq-qw-wx-xd-ds-sw',
-        shapes:['']
+        shapes:['LOS_br']
     },
     {
         name: '_kraw',
         fr: 'crustacé',
         path: [[lm, a, lm, w, l, q, lm, a, rm, a, r, q, rm, w, rm, a], [m, q, m, q]],
         fractal:'zw-wq-qz-ze-ed-dx-xe',
-        shapes:['']
+        shapes:['U_rev','TRI_out_r','TRI_out_l']
     },
     {
         name: '_grae',
         fr: 'croître',
         path: [[l, q, lm, w, rm, w], [lm, a, lm, w, r, q], [rm, a, lm, w]],
         fractal:'qw-wx-zw-wd-ew',
-        shapes:['']
+        shapes:['PIC_bl']
     },
     {
         name: '_kru',
         fr: 'croiser',
         path: [[lm, a, r, q], [rm, a, l, q], [m, q, m, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'qe-dz',
-        shapes:['']
+        shapes:['CROSS_t']
     },
     {
         name: '_kro',
         fr: 'croire',
         path: [[lm, a, rm, a, l, q, rm, w, lm, w], [rm, a, m, q, rm, w], [r, q, r, q]],
         fractal:'ze-es-sx-xw-eq-qx',
-        shapes:['']
+        shapes:['E_rev','POINT_l']
     },
     {
         name: '_kri',
         fr: 'crier',
         path: [[lm, a, m, q], [l, q, lm, w, r, q, rm, a, rm, w]],
         fractal:'qw-wd-de-ex-zs',
-        shapes:['']
+        shapes:['RECT_r']
     },
     {
         name: '_kvae',
         fr: 'couvrir',
         path: [[lm, a, lm, w, rm, w, rm, a, m, q, lm, a, l, q, r, q, rm, a]],
         fractal:'zw-wx-xe-ed-dq-qz-zs-se',
-        shapes:['']
+        shapes:['U','M','arr_t']
     },
     {
         name: '_kry',
         fr: 'court',
         path: [[l, q, lm, w, r, q, rm, w], [lm, a, lm, a], [m, q, m, q], [rm, a, rm, a]],
         fractal:'qw-wd-dx',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_krye',
         fr: 'courrier',
         path: [[l, q, m, q, rm, a, l, q, lm, w, r, q, rm, a], [lm, a, lm, a], [rm, w, rm, w]],
         fractal:'qw-wd-de-es-sq-qe',
-        shapes:['']
+        shapes:['RECT_r','TRI_in_tl']
     },
     {
         name: '_klo',
         fr: 'colorer',
         path: [[r, q, l, q, rm, a, lm, a, lm, w, rm, w, l, q]],
         fractal:'dq-qe-ez-zw-wx-xq',
-        shapes:['']
+        shapes:['POINT_l','MEC_l']
     },
     {
         name: '_kte',
         fr: 'côté',
         path: [[lm, w, r, q, rm, w, lm, w, l, q, rm, a, r, q], [lm, a, m, q]],
         fractal:'qw-wx-xd-de-eq-wd-zs',
-        shapes:['']
+        shapes:['RECT_r','TRI_out_br']
     },
     {
         name: '_bdi',
         fr: 'corps',
         path: [[l, q, lm, a, lm, w, r, q, rm, a, rm, w, l, q], [m, q, m, q]],
         fractal:'wz-zq-qx-xe-ed-dw',
-        shapes:['']
+        shapes:['MA','PIPE']
     },
     {
         name: '_sno',
         fr: 'contre',
         path: [[rm, a, r, q, rm, w], [l, q, m, q], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qs-ed-dx',
-        shapes:['']
+        shapes:['MA','DASH']
     },
     {
         name: '_kpoi',
         fr: 'continuer',
         path: [[r, q, rm, a, rm, w, r, q, m, q], [lm, a, r, q, lm, w], [l, q, l, q]],
         fractal:'de-ex-xd-ds-zd-dw',
-        shapes:['']
+        shapes:['POINT_r','TRI_out_r']
     },
     {
         name: '_ksea',
         fr: 'construire',
         path: [[rm, a, rm, w], [r, q, lm, a, l, q, m, q, lm, w]],
         fractal:'ex-dz-zq-qs-sw',
-        shapes:['']
+        shapes:['CROSS_t']
     },
     {
         name: '_knoi',
         fr: 'connecter',
         path: [[lm, a, l, q, lm, w], [l, q, r, q], [rm, a, r, q, rm, w]],
         fractal:'zq-qw-ed-dx-qd',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_kno',
         fr: 'connaître',
         path: [[m, q, lm, w, l, q, lm, a, rm, a, r, q, lm, w, rm, w]],
         fractal:'xw-wq-qz-ze-ed-dw-ws',
-        shapes:['']
+        shapes:['PENTA_l']
     },
     {
         name: '_kfay',
         fr: 'confondre',
         path: [[rm, a, r, q, rm, w], [l, q, r, q], [m, q, lm, a, l, q, lm, w, lm, a]],
         fractal:'zw-wq-qz-zs-qd-ed-dx',
-        shapes:['']
+        shapes:['MA','ARR_r','TRI_out_l']
     },
     {
         name: '_troi',
         fr: 'conflit',
         path: [[l, q, lm, w, rm, a], [r, q, rm, w, lm, a]],
         fractal:'qw-we-dx-xz',
-        shapes:['']
+        shapes:['X']
     },
     {
         name: '_hi',
         fr: 'condition',
         path: [[rm, a, l, q, rm, w], [lm, a, r, q, lm, w], [m, q, m, q]],
         fractal:'eq-qx-zd-dw',
-        shapes:['']
+        shapes:['HI']
     },
     {
         name: '_kteu',
         fr: 'compter',
         path: [[m, q, lm, a, lm, w, m, q, r, q], [l, q, rm, a, rm, w, l, q]],
         fractal:'xe-eq-qx-wz-zs-sw-ds',
-        shapes:['']
+        shapes:['TRI_l','TRI_in_l','X_plur']
     },
     {
         name: '_plea',
         fr: 'complexe',
         path: [[l, q, l, q], [lm, a, m, q, lm, w], [m, q, rm, a, rm, w, r, q, m, q]],
         fractal:'zs-sw-se-ex-xd-ds',
-        shapes:['']
+        shapes:['X_plur']
     },
     {
         name: '_haw',
         fr: 'comment',
         path: [[lm, a, rm, a, l, q, rm, w], [lm, w, rm, w, r, q], [m, q, m, q]],
         fractal:'ze-eq-qx-wx-xd',
-        shapes:['']
+        shapes:['POINT_l']
     },
     {
         name: '_fta',
         fr: 'commencer',
         path: [[m, q, l, q, lm, a, r, q, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'sq-qz-zd-dw-wq',
-        shapes:['']
+        shapes:['POINT_r','DIAM']
     },
     {
         name: '_ki',
         fr: 'clé',
         path: [[lm, a, lm, w, m, q], [l, q, r, q, rm, w], [rm, a, rm, a]],
         fractal:'zw-ws-qd-dx',
-        shapes:['']
+        shapes:['LOS_br']
     },
     {
         name: '_rkai',
         fr: 'classer',
         path: [[lm, a, rm, a], [l, q, l, q], [lm, w, rm, w, m, q, r, q]],
         fractal:'ze-ds-sx-xw',
-        shapes:['']
+        shapes:['DASH','Z_rev']
     },
     {
         name: '_srie',
         fr: 'circuit',
         path: [[l, q, lm, a, lm, w, rm, a, rm, w, r, q, l, q]],
         fractal:'qz-zw-we-ex-xd-dq',
-        shapes:['']
+        shapes:['N_rev']
     },
     {
         name: '_kwo',
         fr: 'couper',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, r, q]],
         fractal:'wz-ze-ex-xw-qd',
-        shapes:['']
+        shapes:['RECT']
     },
     {
         name: '_skai',
         fr: 'ciel',
         path: [[lm, w, rm, a, lm, a, rm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'xz-ze-ew',
-        shapes:['']
+        shapes:['X','tri_t']
     },
     {
         name: '_swa',
         fr: 'choisir',
         path: [[lm, a, lm, w, rm, w, rm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'zw-wx-xe',
-        shapes:['']
+        shapes:['U']
     },
     {
         name: '_sdae',
         fr: 'chaque',
         path: [[l, q, lm, a, m, q, l, q], [rm, w, r, q], [lm, w, lm, w], [rm, a, rm, a]],
         fractal:'qs-sz-zq-xd',
-        shapes:['']
+        shapes:['tri_tl']
     },
     {
         name: '_sni',
         fr: 'chanter',
         path: [[lm, a, l, q, lm, w, rm, w, r, q], [l, q, rm, w, m, q, l, q], [rm, a, rm, a]],
         fractal:'zq-qw-wx-xd-qs-sx-xq',
-        shapes:['']
+        shapes:['LOS_bl','TRI_out_bl','TRI_in_bl']
     },
     {
         name: '_fgy',
         fr: 'champignon',
         path: [[l, q, rm, w, rm, a, r, q, m, q, rm, a], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qx-xe-ed-ds-se',
-        shapes:['']
+        shapes:['arr_t','PIC_br']
     },
     {
         name: '_fle',
         fr: 'chair',
         path: [[l, q, rm, a, m, q, rm, w, l, q, lm, a, rm, a, rm, w, lm, w, l, q], [r, q, r, q]],
         fractal:'ez-zq-qw-wx-xe-eq-qx-xs-se',
-        shapes:['']
+        shapes:['POINT_l','PENTA_l','TRI_out_tl','TRI_out_bl','TRI_in_r']
     },
     {
         name: '_bzea',
         fr: 'cervidé',
         path: [[lm, a, rm, w, lm, w, r, q], [l, q, m, q, rm, a]],
         fractal:'zx-xw-wd-qs-se',
-        shapes:['']
+        shapes:['KA']
     },
     {
         name: '_srea',
         fr: 'céréale',
         path: [[rm, w, l, q, lm, w, rm, w, r, q, rm, a, rm, w], [lm, a, m, q]],
         fractal:'xq-qw-wx-xd-de-ex-zs',
-        shapes:['']
+        shapes:['PIC_br','TRI_out_r','TRI_out_bl']
     },
     {
         name: '_tru',
         fr: 'cercler',
         path: [[m, q, l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q]],
         fractal:'sq-qz-ze-ed-dx-xw-wq',
-        shapes:['']
+        shapes:['HEX']
     },
     {
         name: '_sye',
         fr: 'centrer',
         path: [[lm, a, rm, w], [lm, w, rm, a], [l, q, r, q]],
         fractal:'zx-we-qd',
-        shapes:['']
+        shapes:['X_all']
     },
     {
         name: '_stimza',
         fr: 'centimètre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, m, q], [l, q, l, q]],
         fractal:'ze-ed-dx-xw-ws',
-        shapes:['']
+        shapes:['C_l']
     },
     {
         name: '_stigma',
         fr: 'centigramme',
         path: [[lm, a, rm, a, rm, w, lm, w, m, q], [l, q, l, q], [r, q, r, q]],
         fractal:'ze-ex-xw-ws',
-        shapes:['']
+        shapes:['MEC_r']
     },
     {
         name: '_sley',
         fr: 'cellule',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ez-zq-qw-wx',
-        shapes:['']
+        shapes:['C_l']
     },
     {
         name: '_de',
         fr: 'ce',
         path: [[lm, a, rm, a], [lm, w, rm, w], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-wx',
-        shapes:['']
+        shapes:['EQ','DASH']
     },
     {
         name: '_kzo',
         fr: 'causer',
         path: [[rm, a, lm, a, l, q, lm, w], [l, q, r, q], [lm, a, m, q], [rm, w, rm, w]],
         fractal:'wq-qz-ze-dq-zs',
-        shapes:['']
+        shapes:['tri_tl','MEX_tl']
     },
     {
         name: '_gzo',
         fr: 'car',
         path: [[lm, a, r, q, lm, w, rm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a]],
         fractal:'xw-wd-dz',
-        shapes:['']
+        shapes:['POINT_r']
     },
     {
         name: '_knew',
         fr: 'canonner',
         path: [[lm, a, l, q, rm, w, r, q], [lm, w, m, q], [rm, a, rm, a]],
         fractal:'zq-qx-xd-ws',
-        shapes:['']
+        shapes:['RECT_l']
     },
     {
         name: '_klio',
@@ -2650,56 +2650,56 @@ let graphieros_dictionnary = [
         fr: 'caillou',
         path: [[lm, a, rm, w, lm, w, lm, a, r, q, rm, w], [l, q, l, q], [rm, a, rm, a]],
         fractal:'xz-zw-wx-xd-dz',
-        shapes:['']
+        shapes:['DIAM','TREC_sbl','TREC_br']
     },
     {
         name: '_glio',
         fr: 'but',
         path: [[m, q, l, q, lm, a, rm, a, rm, w], [lm, w, rm, w, r, q]],
         fractal:'sq-qz-ze-ex-wx-xd',
-        shapes:['']
+        shapes:['LOS_tl']
     },
     {
         name: '_bze',
         fr: 'business',
         path: [[rm, a, lm, a, l, q, r, q, rm, w, lm, w], [lm, a, rm, w]],
         fractal:'ez-zq-qd-dx-xw-zx',
-        shapes:['']
+        shapes:['X','tri_tl','tri_br','Z_rev']
     },
     {
         name: '_bra',
         fr: 'bras',
         path: [[lm, w, lm, a, m, q, r, q, lm, w], [l, q, rm, w], [rm, a, rm, a]],
         fractal:'zs-sd-dw-wz-qx',
-        shapes:['']
+        shapes:['PIC_bl']
     },
     {
         name: '_dvea',
         fr: 'brancher',
         path: [[lm, a, rm, w], [l, q, m, q], [lm, w, rm, w, rm, a], [r, q, r, q]],
         fractal:'ex-xw-zx-qs',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_bo',
         fr: 'bovidé',
         path: [[lm, a, rm, w], [m, q, rm, a], [lm, w, r, q], [l, q, l, q]],
         fractal:'zx-es-wd',
-        shapes:['']
+        shapes:['KA']
     },
     {
         name: '_bu',
         fr: 'boucler',
         path: [[l, q, m, q, rm, a, lm, a, lm, w, rm, w, r, q]],
         fractal:'qs-se-ez-zw-wx-xd',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_blu',
         fr: 'bleu',
         path: [[lm, w, rm, w, r, q], [l, q, l, q], [lm, a, lm, a], [m, q, m, q], [rm, a, rm, a]],
         fractal:'wx-xd',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_keo',
@@ -2713,308 +2713,308 @@ let graphieros_dictionnary = [
         fr: 'baleine',
         path: [[l, q, m, q, lm, a, l, q, lm, w, r, q, rm, w, rm, a, lm, a], [m, q, lm, w]],
         fractal:'sz-zq-qw-ws-sq-ze-ex-xd-dw',
-        shapes:['']
+        shapes:['LOS_l','CROSS_b','tri_tl','tri_bl']
     },
     {
         name: '_zaw',
         fr: 'aussi',
         path: [[lm, a, lm, w, l, q, lm, a, rm, w, r, q, rm, a, lm, w], [rm, a, rm, w]],
         fractal:'qz-zx-xd-de-ew-wq-zw-ex',
-        shapes:['']
+        shapes:['PIPE','X','LOS_l','LOS_r']
     },
     {
         name: '_vi',
         fr: 'avec',
         path: [[lm, w, lm, a, rm, w, rm, a, lm, w], [l, q, r, q]],
         fractal:'wz-zx-xe-ew-qd',
-        shapes:['']
+        shapes:['X','X_all','TRI_in_l','TRI_in_r']
     },
     {
         name: '_ntea',
         fr: 'avant',
         path: [[m, q, l, q, lm, a, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w], [r, q, r, q]],
         fractal:'sq-qz-zw-wq',
-        shapes:['']
+        shapes:['TRI_out_l']
     },
     {
         name: '_rpa',
         fr: 'attraper',
         path: [[l, q, r, q, rm, a, m, q], [lm, a, lm, w], [rm, w, rm, w]],
         fractal:'qd-de-es-zw',
-        shapes:['']
+        shapes:['tri_tr']
     },
     {
         name: '_spea',
         fr: 'attendre',
         path: [[l, q, lm, a, lm, w], [m, q, rm, a, rm, w], [r, q, r, q]],
         fractal:'qz-zw-se-ex',
-        shapes:['']
+        shapes:['PIPE']
     },
     {
         name: '_tmei',
         fr: 'atome',
         path: [[lm, w, rm, a, rm, w], [l, q, r, q], [lm, a, lm, a]],
         fractal:'we-ex-qd',
-        shapes:['']
+        shapes:['X']
     },
     {
         name: '_ktea',
         fr: 'arrêter',
         path: [[l, q, r, q], [lm, a, lm, w], [rm, a, r, q, rm, w]],
         fractal:'ed-dx-qd-zw',
-        shapes:['']
+        shapes:['ARR_r']
     },
     {
         name: '_rkye',
         fr: 'arachnide',
         path: [[l, q, lm, a, rm, a, r, q, rm, w], [m, q, rm, a], [lm, a, lm, w]],
         fractal:'qz-ze-ed-dx-es-zw',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_ftea',
         fr: 'après',
         path: [[r, q, rm, a, rm, w, r, q, m, q], [lm, a, lm, a], [l, q, l, q], [lm, w, lm, w]],
         fractal:'sd-de-ex-xd',
-        shapes:['']
+        shapes:['TRI_out_r']
     },
     {
         name: '_znie',
         fr: 'appuyer',
         path: [[lm, a, lm, w, rm, w, m, q, l, q, rm, a, r, q]],
         fractal:'de-eq-qs-sx-xw-wz',
-        shapes:['']
+        shapes:['TREC_htr','TREC_sbl']
     },
     {
         name: '_zai',
         fr: 'apparaître',
         path: [[lm, w, m, q, rm, w, lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
         fractal:'ws-sx-xw-wq-qz-ze-ed-dx',
-        shapes:['']
+        shapes:['HEX','tri_b']
     },
     {
         name: '_piz',
         fr: 'apaiser',
         path: [[l, q, lm, a, lm, w, m, q, r, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'qz-zw-ws-sd',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_kpaw',
         fr: 'antenne',
         path: [[lm, a, l, q, rm, w, m, q, lm, w, r, q, rm, a]],
         fractal:'zq-qx-xs-sw-wd-de',
-        shapes:['']
+        shapes:['CROSS_b']
     },
     {
         name: '_pkia',
         fr: 'animal',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, m, q, rm, a, l, q], [r, q, r, q]],
         fractal:'qe-ez-zq-qw-wx-xs-se',
-        shapes:['']
+        shapes:['ARR_db_l','TRI_out_tl']
     },
     {
         name: '_glei',
         fr: 'angle',
         path: [[lm, a, rm, a, rm, w], [l, q, l, q], [lm, w, lm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-ex',
-        shapes:['']
+        shapes:['DASH','TREC_str']
     },
     {
         name: '_mrya',
         fr: 'amplifier',
         path: [[l, q, rm, w, rm, a, r, q, lm, w, l, q, rm, a], [lm, a, m, q]],
         fractal:'qw-wd-de-eq-qx-xe-zs',
-        shapes:['']
+        shapes:['PIC_br','RECT_r']
     },
     {
         name: '_mre',
         fr: 'amer',
         path: [[l, q, lm, a, m, q, rm, a, r, q, l, q], [lm, w, rm, w]],
         fractal:'qd-de-es-sz-zq-wx',
-        shapes:['']
+        shapes:['M','tri_tl','tri_tr']
     },
     {
         name: '_prba',
         fr: 'âme',
         path: [[lm, a, r, q, lm, w, lm, a, m, q, r, q], [lm, w, m, q], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'wz-zd-dw-ws-sd-zs',
-        shapes:['']
+        shapes:['TRI_0','X_plur']
     },
     {
         name: '_tae',
         fr: 'alterner',
         path: [[lm, a, rm, a, l, q], [m, q, m, q], [rm, w, lm, w, r, q]],
         fractal:'ze-eq-xw-wd',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_slio',
         fr: 'alors',
         path: [[lm, a, m, q, r, q], [rm, a, r, q, rm, w], [l, q, l, q], [lm, w, lm, w]],
         fractal:'zs-sd-ed-dx',
-        shapes:['']
+        shapes:['ARR_r']
     },
     {
         name: '_le',
         fr: 'aller',
         path: [[r, q, rm, a, rm, w, r, q, m, q, lm, a, lm, w, m, q, l, q]],
         fractal:'qd-de-ex-xd-sz-zw-ws',
-        shapes:['']
+        shapes:['ARR_r','TRI_out_r','TRI_in_l']
     },
     {
         name: '_hio',
         fr: 'alléger',
         path: [[lm, a, rm, a], [l, q, l, q], [r, q, r, q], [lm, w, m, q, rm, w]],
         fractal:'ws-sx-ze',
-        shapes:['']
+        shapes:['DASH']
     },
     {
         name: '_lea',
         fr: 'aléa',
         path: [[l, q, r, q, lm, w], [lm, a, lm, a], [rm, a, rm, w]],
         fractal:'ex-qd-dw',
-        shapes:['']
+        shapes:['TREC_hbl']
     },
     {
         name: '_fsu',
         fr: 'ajuster',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, lm, w, l, q, r, q]],
         fractal:'qz-zx-xd-de-ew-wq-qd',
-        shapes:['']
+        shapes:['X','X_all','MA']
     },
     {
         name: '_hae',
         fr: 'air',
         path: [[lm, a, rm, a, r, q], [l, q, m, q, rm, w], [lm, w, rm, a]],
         fractal:'ze-ed-qs-sx-we',
-        shapes:['']
+        shapes:['ARR_dbl_r','ARR_r']
     },
     {
         name: '_kli',
         fr: 'qualité',
         path: [[rm, w, l, q, lm, a, lm, w, r, q, m, q], [rm, a, rm, a]],
         fractal:'xq-qz-zw-wd-ds',
-        shapes:['']
+        shapes:['PIC_bl']
     },
     {
         name: '_nmae',
         fr: 'nombre',
         path: [[lm, w, lm, a, rm, w, rm, a], [l, q, l, q], [r, q, r, q]],
         fractal:'wz-zx-xe',
-        shapes:['']
+        shapes:['N']
     },
     {
         name: '_zno',
         fr: '11',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q, r, q], [m, q, lm, w, lm, a, r, q]],
         fractal:'qz-ze-ed-dx-xw-wq-wz-zd-zs-sd-ws',
-        shapes:['']
+        shapes:['HEX','PIC_tl']
     },
     {
         name: '_dza',
         fr: '10',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q, r, q], [m, q, lm, w, lm, a]],
         fractal:'qz-ze-ed-dx-xw-wq-wz-zs-sd-ws',
-        shapes:['']
+        shapes:['HEX','X_plur']
     },
     {
         name: '_nwa',
         fr: '9',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q, r, q], [lm, w, m, q]],
         fractal:'ze-ed-dx-xw-wq-qz-zs-sd-ws',
-        shapes:['']
+        shapes:['HEX','X_plur']
     },
     {
         name: '_sme',
         fr: 'identique',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, lm, w, l, q]],
         fractal:'qz-zx-xd-de-ew-wq',
-        shapes:['']
+        shapes:['X','LOS_l','LOS_r']
     },
     {
         name: '_tsio',
         fr: '8',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, lm, w, l, q]],
         fractal:'qz-zx-xd-de-ew-wq',
-        shapes:['']
+        shapes:['X','LOS_l','LOS_r']
     },
     {
         name: '_stei',
         fr: '7',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q, r, q]],
         fractal:'dq-qz-ze-ed-dx-xw-wq',
-        shapes:['']
+        shapes:['HEX','MEX_t','MEX_b']
     },
     {
         name: '_ksi',
         fr: '6',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q], [m, q, m, q]],
         fractal:'qz-ze-ed-dx-xw-wq',
-        shapes:['']
+        shapes:['HEX']
     },
     {
         name: '_foi',
         fr: '5',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, r, q]],
         fractal:'ze-ex-xw-wz-qd',
-        shapes:['']
+        shapes:['RECT']
     },
     {
         name: '_ktu',
         fr: '4',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-ex-xw-wz',
-        shapes:['']
+        shapes:['RECT']
     },
     {
         name: '_srei',
         fr: '3',
         path: [[lm, w, lm, a, r, q, lm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'wz-zd-dw',
-        shapes:['']
+        shapes:['TRI_0']
     },
     {
         name: '_du',
         fr: '2',
         path: [[lm, w, lm, a, r, q], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'wz-zd',
-        shapes:['']
+        shapes:['PIC_tl']
     },
     {
         name: '_kfa',
         fr: '1',
         path: [[lm, a, lm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'wz',
-        shapes:['']
+        shapes:['PIPE']
     },
     {
         name: '_sro',
         fr: '0',
         path: [[lm, a, rm, w], [lm, w, rm, a], [l, q, r, q]],
         fractal:'zx-we-qd',
-        shapes:['']
+        shapes:['X_all']
     },
     {
         name: '_,',
         fr: ',',
         path: [[rm, a, m, q, rm, w], [lm, a, lm, a], [l, q, l, q], [lm, w, lm, w], [r, q, r, q]],
         fractal:'es-sx',
-        shapes:['']
+        shapes:['ARR_db,l','DASH']
     },
     {
         name: '_!',
         fr: '!',
         path: [[lm, a, m, q], [l, q, lm, w], [rm, a, r, q], [rm, w, rm, w]],
         fractal:'qw-zs-ed',
-        shapes:['']
+        shapes:['EQ','DASH']
     },
     {
         name: '_?',
         fr: '?',
         path: [[lm, a, rm, a, l, q, rm, w], [lm, w, lm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-eq-qx',
-        shapes:['']
+        shapes:['POINT_l']
     },
     {
         name: '_.',
@@ -3028,133 +3028,133 @@ let graphieros_dictionnary = [
         fr: 'déterminer',
         path: [[lm, a, rm, w], [l, q, rm, a], [lm, w, r, q]],
         fractal:'zx-qe-wd',
-        shapes:['']
+        shapes:['X','DASH']
     },
     {
         name: '_ma',
         fr: 'être',
         path: [[lm, a, l, q, lm, w], [m, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zq-qw-ed-dx',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_kde',
         fr: 'adolescent',
         path: [[rm, a, lm, w], [m, q, rm, w], [l, q, r, q], [lm, a, lm, a]],
         fractal:'qd-we-xs',
-        shapes:['']
+        shapes:['KA','X']
     },
     {
         name: '_dly',
         fr: 'adulte',
         path: [[r, q, lm, a, rm, a, lm, w, lm, a], [m, q, rm, w], [l, q, l, q]],
         fractal:'we-ez-zw-xs-dz',
-        shapes:['']
+        shapes:['KA','TREC_stl']
     },
     {
         name: '_pfae',
         fr: 'agir',
         path: [[l, q, lm, w, lm, a, r, q, lm, w], [rm, a, lm, a], [rm, w, r, q], [m, q, m, q]],
         fractal:'qw-wz-zd-dw-ez-xd',
-        shapes:['']
+        shapes:['TRI_0']
     },
     {
         name: '_dna',
         fr: 'adn',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, r, q, l, q], [lm, w, rm, a, rm, w]],
         fractal:'we-ex-qd-dx-xw-wq-qz-ze',
-        shapes:['']
+        shapes:['LOS_tl','TREC_sbr','MEX_b']
     },
     {
         name: '_sde',
         fr: 'acide',
         path: [[lm, a, m, q, l, q, lm, w, rm, w, r, q, m, q, rm, a], [l, q, rm, w], [r, q, lm, w]],
         fractal:'zs-se-qd-dx-xw-wq-qx-wd',
-        shapes:['']
+        shapes:['MEX_b','CROSS_b']
     },
     {
         name: '_bai',
         fr: 'acheter',
         path: [[lm, a, m, q, rm, a, lm, a, l, q, r, q, rm, a], [lm, w, rm, w]],
         fractal:'qd-de-ez-zq-zs-se-wx',
-        shapes:['']
+        shapes:['MEX_t']
     },
     {
         name: '_kmia',
         fr: 'accumuler',
         path: [[lm, a, r, q, m, q, lm, a], [l, q, rm, w], [lm, w, lm, w], [rm, a, rm, a]],
         fractal:'zs-sd-dz-qx',
-        shapes:['']
+        shapes:['TRI_in_tr']
     },
     {
         name: '_grey',
         fr: 'accrocher',
         path: [[lm, a, rm, a, r, q, l, q], [rm, a, rm, w], [lm, w, lm, w]],
         fractal:'ze-ed-dq-ex',
-        shapes:['']
+        shapes:['MEX_t']
     },
     {
         name: '_ksu',
         fr: 'accélérer',
         path: [[l, q, r, q], [lm, a, m, q, lm, w], [rm, a, r, q, rm, w]],
         fractal:'zs-sw-ed-dx-qd',
-        shapes:['']
+        shapes:['ARR_dbl_r','ARR_r']
     },
     {
         name: '_boi',
         fr: 'à',
         path: [[lm, a, lm, w, l, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zw-wq-qs-ed-dx',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_fya',
         fr: 'donner',
         path: [[lm, a, rm, a, m, q, lm, a], [l, q, lm, w, rm, w, r, q]],
         fractal:'zs-se-ez-qw-wx-xd',
-        shapes:['']
+        shapes:['COL_b','tri_t']
     },
     {
         name: '_fy',
         fr: 'refléter',
         path: [[lm, a, rm, a, lm, w, rm, w, lm, a], [l, q, r, q]],
         fractal:'ze-ew-wx-xz-qd',
-        shapes:['']
+        shapes:['X','X_all','tri_t','tri_b']
     },
     {
         name: '_go',
         fr: 'avoir',
         path: [[lm, w, m, q, rm, w, lm, w], [l, q, lm, a, rm, a, r, q]],
         fractal:'ws-sx-xw-qz-ze-ed',
-        shapes:['']
+        shapes:['tri_b','COL_t']
     },
     {
         name: '_ka',
         fr: 'humain',
         path: [[lm, a, rm, w],[lm, w, m, q],[l, q, rm, a], [r, q, r, q]],
         fractal:'zx-ws-qe',
-        shapes:['']
+        shapes:['KA']
     },
     {
         name: '_kme',
         fr: 'pour',
         path: [[lm, a, lm, w], [l, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zw-qs-ed-dx',
-        shapes:['']
+        shapes:['MA']
     },
     {
         name: '_sa',
         fr: 'vivre',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a], [lm, a, rm, w], [rm, a, lm, w], [l, q, r, q]],
         fractal:'qz-ze-ed-dx-xw-wq-qd-zx-we',
-        shapes:['']
+        shapes:['HEX','X_all','X']
     },
     {
         name: '_smia',
         fr: 'isme',
         path: [[rm, w, l, q, r, q, lm, w, m, q, rm, w, lm, w], [lm, a, lm, a], [rm, a, rm, a]],
         fractal:'qd-dw-wx-xs-sw-wd-qx',
-        shapes:['']
+        shapes:['CROSS_b','tri_b']
     }
 ];
 
