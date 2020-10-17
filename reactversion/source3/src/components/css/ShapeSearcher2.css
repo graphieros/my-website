@@ -98,6 +98,21 @@
     justify-items:center;
     grid-gap:10px;
     box-shadow: 5px 5px 10px -5px rgb(var(--c1)), -5px -5px 10px -5px white;
+    max-height:160px;
+    overflow: scroll;
+}
+
+.new-search-results::-webkit-scrollbar{
+    width:5px;
+    height:0px;
+    background: rgb(var(--c3));
+    box-shadow: -2px -2px 5px black;
+}
+
+.new-search-results::-webkit-scrollbar-thumb{
+    background: radial-gradient(rgb(255, 163, 147), tomato);
+    border-radius:2px;
+    box-shadow: 0 2px 2px black;
 }
 
 .linear-result,
