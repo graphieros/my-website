@@ -4,7 +4,7 @@ import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import Fractal from './graphieros/Fractal';
 import Linear from './graphieros/Linear';
 
-function ShapeSearcher2() {
+function ShapeSearcher2(props) {
 
     const mainSearchOptions = [
         {
@@ -59,10 +59,6 @@ function ShapeSearcher2() {
             cords: 'ze-ed-dx-xz'
         },
         {
-            shape: 'MEX_br',
-            cords: 'wx-xd-de-ew'
-        },
-        {
             shape: 'C_l',
             cords: 'ez-zq-qw-wx'
         },
@@ -75,24 +71,24 @@ function ShapeSearcher2() {
             cords: 'zq-qw-wx-xd-de'
         },
         {
-            shape:'COL_b',
-            cords:'qw-wx-xd'
+            shape: 'COL_b',
+            cords: 'qw-wx-xd'
         },
         {
-            shape:'COL_t',
-            cords:'qz-ze-ed'
+            shape: 'COL_t',
+            cords: 'qz-ze-ed'
         },
         {
-            shape:'PENTA_l',
-            cords:'zw-wx-xd-de-ez'
+            shape: 'PENTA_l',
+            cords: 'zw-wx-xd-de-ez'
         },
         {
-            shape:'EQ',
-            cords:'ze-qd-wx'
+            shape: 'EQ',
+            cords: 'ze-qd-wx'
         },
         {
-            shape:'NE',
-            cords:'ss'
+            shape: 'NE',
+            cords: 'ss'
         }
     ];
 
@@ -138,24 +134,24 @@ function ShapeSearcher2() {
             cords: 'xw-wq-qs-sx'
         },
         {
-            shape:'MEC_l',
-            cords:'ez-zw-wx'
+            shape: 'MEC_l',
+            cords: 'ez-zw-wx'
         },
         {
-            shape:'MEC_r',
-            cords:'ze-ex-xw'
+            shape: 'MEC_r',
+            cords: 'ze-ex-xw'
         },
         {
-            shape:'U',
-            cords:'zw-wx-xe'
+            shape: 'U',
+            cords: 'zw-wx-xe'
         },
         {
-            shape:'U_rev',
-            cords:'wz-ze-ex'
+            shape: 'U_rev',
+            cords: 'wz-ze-ex'
         },
         {
-            shape:'DIAM',
-            cords:'eq-qw-wx-xe'
+            shape: 'DIAM',
+            cords: 'eq-qw-wx-xe'
         }
 
     ];
@@ -198,100 +194,96 @@ function ShapeSearcher2() {
             cords: 'ws-sx-xw'
         },
         {
-            shape:'TRI_out_l',
-            cords:'wq-qz-zw'
+            shape: 'TRI_out_l',
+            cords: 'wq-qz-zw'
         },
         {
-            shape:'TRI_out_r',
-            cords:'ed-dx-xe'
+            shape: 'TRI_out_r',
+            cords: 'ed-dx-xe'
         },
         {
-            shape:'TRI_in_r',
-            cords:'es-sx-xe'
+            shape: 'TRI_in_r',
+            cords: 'es-sx-xe'
         },
         {
-            shape:'TRI_in_l',
-            cords:'zs-sw-wz'
+            shape: 'TRI_in_l',
+            cords: 'zs-sw-wz'
         },
         {
-            shape:'TRI_out_br',
-            cords:'wx-xd-dw'
+            shape: 'TRI_out_br',
+            cords: 'wx-xd-dw'
         },
         {
-            shape:'TRI_out_tl',
-            cords:'qz-ze-eq'
+            shape: 'TRI_out_tl',
+            cords: 'qz-ze-eq'
         },
         {
-            shape:'TRI_in_tl',
-            cords:'qs-se-eq'
+            shape: 'TRI_in_tl',
+            cords: 'qs-se-eq'
         },
         {
-            shape:'TRI_in_br',
-            cords:'ws-sd-dw'
+            shape: 'TRI_in_br',
+            cords: 'ws-sd-dw'
         },
         {
-            shape:'TRI_out_bl',
-            cords:'qw-wx-xq'
+            shape: 'TRI_out_bl',
+            cords: 'qw-wx-xq'
         },
         {
-            shape:'TRI_out_tr',
-            cords:'ze-ed-dz'
+            shape: 'TRI_out_tr',
+            cords: 'ze-ed-dz'
         },
         {
-            shape:'TRI_in_tr',
-            cords:'zs-sd-dz'
+            shape: 'TRI_in_tr',
+            cords: 'zs-sd-dz'
         },
         {
-            shape:'TRI_in_bl',
-            cords:'qs-sx-xq'
+            shape: 'TRI_in_bl',
+            cords: 'qs-sx-xq'
         },
         {
-            shape:'TREC_sbl',
-            cords:'zw-wx-xz'
+            shape: 'TREC_sbl',
+            cords: 'zw-wx-xz'
         },
         {
-            shape:'TREC_sbr',
-            cords:'we-ex-xw'
+            shape: 'TREC_sbr',
+            cords: 'we-ex-xw'
         },
         {
-            shape:'TREC_stl',
-            cords:'wz-ze-ew'
+            shape: 'TREC_stl',
+            cords: 'wz-ze-ew'
         },
         {
-            shape:'TREC_str',
-            cords:'ze-ex-xz'
+            shape: 'TREC_str',
+            cords: 'ze-ex-xz'
         },
         {
-            shape:'TREC_bl',
-            cords:'wq-qe-ew'
+            shape: 'TREC_bl',
+            cords: 'wq-qe-ew'
         },
         {
-            shape:'TREC_br',
-            cords:'dx-xz-zd'
+            shape: 'TREC_br',
+            cords: 'dx-xz-zd'
         },
         {
-            shape:'TREC_tl',
-            cords:'xq-qz-zx'
+            shape: 'TREC_tl',
+            cords: 'xq-qz-zx'
         },
         {
-            shape:'TREC_tr',
-            cords:'ed-dw-we'
+            shape: 'TREC_tr',
+            cords: 'ed-dw-we'
         },
         {
-            shape:'TREC_hbl',
-            cords:'wq-qd-dw'
+            shape: 'TREC_hbl',
+            cords: 'wq-qd-dw'
         },
         {
-            shape:'TREC_hbr',
-            cords:'qd-dx-xq'
+            shape: 'TREC_hbr',
+            cords: 'qd-dx-xq'
         },
         {
-            shape:'TREC_htl',
-            cords:'qz-zd-dq'
-        },
-        {
-            shape:'TREC_htr',
-            cords:'ed-dq-qe'
+            shape: 'TREC_htr',
+            cords: 'ed-dq-qe'
         }
     ];
 
@@ -321,36 +313,36 @@ function ShapeSearcher2() {
             cords: 'zd-dw-eq-qx'
         },
         {
-            shape:'ARR_db_l',
-            cords:'zq-qw-es-sx'
+            shape: 'ARR_db_l',
+            cords: 'zq-qw-es-sx'
         },
         {
-            shape:'ARR_dbl_r',
-            cords:'zs-sw-ed-dx'
+            shape: 'ARR_dbl_r',
+            cords: 'zs-sw-ed-dx'
         },
         {
-            shape:'PIC_br',
-            cords:'qx-xe'
+            shape: 'PIC_br',
+            cords: 'qx-xe'
         },
         {
-            shape:'PIC_tl',
-            cords:'wz-zd'
+            shape: 'PIC_tl',
+            cords: 'wz-zd'
         },
         {
-            shape:'PIC_bl',
-            cords:'zw-wd'
+            shape: 'PIC_bl',
+            cords: 'zw-wd'
         },
         {
-            shape:'PIC_tr',
-            cords:'qe-ex'
+            shape: 'PIC_tr',
+            cords: 'qe-ex'
         },
         {
-            shape:'arr_t',
-            cords:'wz-qz-zs'
+            shape: 'arr_t',
+            cords: 'wz-qz-zs'
         },
         {
-            shape:'arr_b',
-            cords:'zw-qw-ws'
+            shape: 'arr_b',
+            cords: 'zw-qw-ws'
         }
     ];
 
@@ -368,20 +360,20 @@ function ShapeSearcher2() {
             cords: 'zx-we-qd'
         },
         {
-            shape:'KA',
-            cords:'zx-ws-qe'
+            shape: 'KA',
+            cords: 'zx-ws-qe'
         },
         {
-            shape:'CROSS_b',
-            cords:'qx-dw'
+            shape: 'CROSS_b',
+            cords: 'qx-dw'
         },
         {
-            shape:'CROSS_t',
-            cords:'zd-qe'
+            shape: 'CROSS_t',
+            cords: 'zd-qe'
         },
         {
-            shape:'DASH',
-            cords:'wx-zd'
+            shape: 'DASH',
+            cords: 'wx-zd'
         }
     ];
 
@@ -419,24 +411,24 @@ function ShapeSearcher2() {
             cords: 'eq-qd-dw'
         },
         {
-            shape:'W',
-            cords:'qw-ws-sx-xd'
+            shape: 'W',
+            cords: 'qw-ws-sx-xd'
         },
         {
-            shape:'M',
-            cords:'qz-zs-se-ed'
+            shape: 'M',
+            cords: 'qz-zs-se-ed'
         },
         {
-            shape:'E',
-            cords:'ez-zs-sw-wx'
+            shape: 'E',
+            cords: 'ez-zs-sw-wx'
         },
         {
-            shape:'E_rev',
-            cords:'ze-es-sx-xw'
+            shape: 'E_rev',
+            cords: 'ze-es-sx-xw'
         },
         {
-            shape:'N_weird',
-            cords:'qd-dw-wx'
+            shape: 'N_weird',
+            cords: 'qd-dw-wx'
         }
     ]
 
@@ -464,13 +456,15 @@ function ShapeSearcher2() {
             });
         });
 
+        const len = memoryGlyphs.length;
+
         setResultState({
             content: memoryGlyphs.map((m, i) => <div className='glyph-result' key={`res_${i}`}>
                 <span className='span-result-fr'>{memoryFr[i]}</span>
                 <Linear
                     className='linear-result'
                     sequence={m}
-                    size='40'
+                    size='35'
                     colors={[255, 255, 255]}
                 />
                 <span className='span-result-phono'>{`[ ${m} ]`}</span>
@@ -599,28 +593,32 @@ function ShapeSearcher2() {
 
     return (
         <>
-            <div className='shape-searcher2-body'>
+            <div className={props.className}>
+                {props.children}
+                <div className='shape-searcher2-body'>
 
-                {mainSearchOptions.map((so, i) =>
-                    <div className='sb-wrapper' key={`fracOpt_${i}`}>
-                        <div onClick={(e) => handleSubOptionDisplay(e)}
-                            className='wrapper-click'
-                            id={`opt_${i}`} />
-                        <Fractal
-                            className='search-option-main'
-                            sequence={so.cords}
-                            colors={[255,255,255]}
-                            size='40'
-                            svgSize='50'
-                        />
-                    </div>)}
+                    {mainSearchOptions.map((so, i) =>
+                        <div className='sb-wrapper' key={`fracOpt_${i}`}>
+                            <div onClick={(e) => handleSubOptionDisplay(e)}
+                                className='wrapper-click'
+                                id={`opt_${i}`} />
+                            <Fractal
+                                className='search-option-main'
+                                sequence={so.cords}
+                                colors={[255, 255, 255]}
+                                size='40'
+                                svgSize='30'
+                            />
+                        </div>)}
+                </div>
+                <div className='sub-options'>
+                    {subOptionState.content}
+                </div>
+                <div className='new-search-results'>
+                    {resultState.content}
+                </div>
             </div>
-            <div className='sub-options'>
-                {subOptionState.content}
-            </div>
-            <div className='new-search-results'>
-                {resultState.content}
-            </div>
+
         </>
     )
 }
