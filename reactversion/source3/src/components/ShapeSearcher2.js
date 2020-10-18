@@ -480,12 +480,13 @@ function ShapeSearcher2(props) {
             content: ''
         });
 
-        if (option_id === 'opt_0') {
+        const drawResult = (arr) => {
+
             setSubOptionState({
-                content: search_HEX.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
+                content: arr.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
                     <div
                         className='wrapper-click'
-                        onClick={(e) => handleResult(e)}
+                        onClick={(el) => handleResult(el)}
                         id={sh.shape} />
                     <Fractal
                         className='search-option'
@@ -497,97 +498,29 @@ function ShapeSearcher2(props) {
                 </div>)
             })
         }
-        if (option_id === 'opt_1') {
-            setSubOptionState({
-                content: search_RECT.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
-                    <div
-                        className='wrapper-click'
-                        onClick={(e) => handleResult(e)}
-                        id={sh.shape} />
-                    <Fractal
-                        className='search-option'
-                        sequence={sh.cords}
-                        colors={[122, 161, 216]}
-                        size='40'
-                        svgSize='30'
-                    />
-                </div>
-                )
-            })
-        }
-        if (option_id === 'opt_2') {
-            setSubOptionState({
-                content: search_TRI.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
-                    <div
-                        className='wrapper-click'
-                        onClick={(e) => handleResult(e)}
-                        id={sh.shape} />
-                    <Fractal
-                        className='search-option'
-                        sequence={sh.cords}
-                        colors={[122, 161, 216]}
-                        size='40'
-                        svgSize='30'
-                    />
-                </div>
-                )
-            })
-        }
-        if (option_id === 'opt_3') {
-            setSubOptionState({
-                content: search_ARR.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
-                    <div
-                        className='wrapper-click'
-                        onClick={(e) => handleResult(e)}
-                        id={sh.shape} />
-                    <Fractal
-                        className='search-option'
-                        sequence={sh.cords}
-                        colors={[122, 161, 216]}
-                        size='40'
-                        svgSize='30'
-                    />
-                </div>
-                )
-            })
-        }
-        if (option_id === 'opt_4') {
-            setSubOptionState({
-                content: search_X.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
-                    <div
-                        className='wrapper-click'
-                        onClick={(e) => handleResult(e)}
 
-                        id={sh.shape} />
-                    <Fractal
-                        className='search-option'
-                        sequence={sh.cords}
-                        colors={[122, 161, 216]}
-                        size='40'
-                        svgSize='30'
-                    />
-                </div>
-                )
-            });
-        }
-        if (option_id === 'opt_5') {
-            setSubOptionState({
-                content: search_N.map((sh, i) => <div className='sb-wrapper' key={`HEXopt_${i}`}>
-                    <div
-                        className='wrapper-click'
-                        onClick={(e) => handleResult(e)}
+        switch (option_id) {
+            case 'opt_0':
+                drawResult(search_HEX)
+                break;
+            case 'opt_1':
+                drawResult(search_RECT)
+                break;
+            case 'opt_2':
+                drawResult(search_TRI)
+                break;
+            case 'opt_3':
+                drawResult(search_ARR)
+                break;
+            case 'opt_4':
+                drawResult(search_X)
+                break;
+            case 'opt_5':
+                drawResult(search_N)
+                break;
 
-                        id={sh.shape} />
-                    <Fractal
-                        className='search-option'
-                        sequence={sh.cords}
-                        colors={[122, 161, 216]}
-                        size='40'
-                        svgSize='30'
-                    />
-                </div>
-                )
-            });
+            default:
+                break;
         }
     }
 
