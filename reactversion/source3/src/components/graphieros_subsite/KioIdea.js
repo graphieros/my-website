@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/KioIdea.css';
-import Linear from '../graphieros/Linear';
 import Molecule from '../graphieros/Molecule';
 import Fractal from '../graphieros/Fractal';
 

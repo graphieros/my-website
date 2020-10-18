@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './css/Kio.css';
 import Button from '../Button';
 import Fractal from '../graphieros/Fractal';
-import Molecule from '../graphieros/Molecule';
-import Linear from '../graphieros/Linear';
 import KioContentLinear from './KioContentLinear';
 import KioContentIdeas from './KioContentIdeas';
 import KioContentTheory from './KioContentTheory';

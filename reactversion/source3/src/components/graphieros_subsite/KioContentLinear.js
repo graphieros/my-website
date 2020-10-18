@@ -3,7 +3,6 @@ import Linear from '../graphieros/Linear';
 import KioHeader from './KioHeader';
 import './css/KioContentLinear.css';
 import linear_texts from './subsite_library/linear_texts.json';
-import { linear } from '../../libraries/graphieros0.2';
 
 function KioContentLinear(props) {
 
