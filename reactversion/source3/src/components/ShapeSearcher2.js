@@ -430,7 +430,7 @@ function ShapeSearcher2(props) {
             shape: 'N_weird',
             cords: 'qd-dw-wx'
         }
-    ]
+    ];
 
 
     const [subOptionState, setSubOptionState] = useState({
@@ -438,6 +438,7 @@ function ShapeSearcher2(props) {
     });
 
     const [resultState, setResultState] = useState({
+        resCount: '',
         content: ''
     });
 
@@ -456,9 +457,16 @@ function ShapeSearcher2(props) {
             });
         });
 
-        const len = memoryGlyphs.length;
+        let resultCount = memoryGlyphs.length;
+        let orth;
+        if (resultCount > 1) {
+            orth = 'glyphes correspondent'
+        } else {
+            orth = 'glyphe correspond'
+        }
 
         setResultState({
+            resCount: <p><span className='fatSpan'>{resultCount}</span> {orth} à cette forme</p>,
             content: memoryGlyphs.map((m, i) => <div className='glyph-result' key={`res_${i}`}>
                 <span className='span-result-fr'>{memoryFr[i]}</span>
                 <Linear
@@ -470,13 +478,14 @@ function ShapeSearcher2(props) {
                 <span className='span-result-phono'>{`[ ${m} ]`}</span>
             </div>)
         });
-    } 
+    }
 
     const handleSubOptionDisplay = (props) => {
         console.log(props.target.id)
         const option_id = props.target.id;
 
         setResultState({
+            resCount: '',
             content: ''
         });
 
@@ -491,7 +500,7 @@ function ShapeSearcher2(props) {
                     <Fractal
                         className='search-option'
                         sequence={sh.cords}
-                        colors={[75,106,160]}
+                        colors={[75, 106, 160]}
                         size='40'
                         svgSize='30'
                     />
@@ -547,6 +556,7 @@ function ShapeSearcher2(props) {
                 <div className='sub-options'>
                     {subOptionState.content}
                 </div>
+                <div className='resCount'>{resultState.resCount}</div>
                 <div className='new-search-results'>
                     {resultState.content}
                 </div>
