@@ -36,7 +36,7 @@ function Header() {
     });
 
     const [searchOptionsState, setSearchOptionsState] = useState({
-        className:'hidden'
+        className: 'hidden'
     });
 
     const handleShowShapeSearch = () => {
@@ -47,7 +47,7 @@ function Header() {
             className: 'backState'
         });
         setSearchOptionsState({
-            className:'search-choice'
+            className: 'search-choice'
         })
     }
 
@@ -59,31 +59,31 @@ function Header() {
             className: 'hidden'
         });
         setShapeSearch2State({
-            className:'hidden'
+            className: 'hidden'
         });
         setBackState({
             className: 'hidden'
         });
         setSearchOptionsState({
-            className:'hidden'
+            className: 'hidden'
         });
     }
 
     const handleDrawSearch = () => {
         setShapeSearchState({
-            className:''
+            className: ''
         });
         setSearchOptionsState({
-            className:'hidden'
+            className: 'hidden'
         });
     }
 
     const handleClickSearch = () => {
         setShapeSearch2State({
-            className:'searchBigBody'
+            className: 'searchBigBody'
         });
         setSearchOptionsState({
-            className:'hidden'
+            className: 'hidden'
         });
     }
 
@@ -120,12 +120,14 @@ function Header() {
 
                 <Menu />
                 <div className='sub-header'>
+
                     <SearchBar className='searchBar' />
+
                     <button
                         className={buttonSeachState.className}
                         onClick={handleShowShapeSearch}>
                         ... ou une forme
-                </button>
+                    </button>
 
                     <div className={searchOptionsState.className}>
                         <button onClick={handleDrawSearch}>dessiner la forme</button>
@@ -144,6 +146,7 @@ function Header() {
                             />
                         </div>
                     </GraphierosShapeFinder>
+
                     <ShapeSearcher2 className={shapeSearch2State.className}>
                         <div onClick={handleCloseSearch}>
                             <Fractal
