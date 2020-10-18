@@ -14,6 +14,9 @@ import Kio from './components/graphieros_subsite/Kio';
 
 function App() {
 
+  //simple react login _ axios requests API
+  //host backend heroku
+
   return (
     <BrowserRouter>
 
@@ -21,7 +24,7 @@ function App() {
 
       <div className="App">
         <Header />
-  
+
         <Switch>
           <Route path='/kio' exact component={Kio} />
           <Route path='/fractalspace' exact component={FractalSpace} />
