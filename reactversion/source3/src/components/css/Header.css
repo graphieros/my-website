@@ -62,6 +62,16 @@ button.button-search-shape:hover {
     row-gap:12px;
     background: radial-gradient(at top left, white, rgb(var(--c2)));
     box-shadow: 0 0 20px black;
+    animation: search-choice 0.25s ease-in-out;
+}
+
+@keyframes search-choice {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
 }
 
 .search-choice button {

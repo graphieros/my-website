@@ -470,7 +470,7 @@ function ShapeSearcher2(props) {
                 <span className='span-result-phono'>{`[ ${m} ]`}</span>
             </div>)
         });
-    }
+    } 
 
     const handleSubOptionDisplay = (props) => {
         console.log(props.target.id)
@@ -491,7 +491,7 @@ function ShapeSearcher2(props) {
                     <Fractal
                         className='search-option'
                         sequence={sh.cords}
-                        colors={[122, 161, 216]}
+                        colors={[75,106,160]}
                         size='40'
                         svgSize='30'
                     />

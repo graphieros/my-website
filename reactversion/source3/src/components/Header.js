@@ -73,12 +73,18 @@ function Header() {
         setShapeSearchState({
             className:''
         });
+        setSearchOptionsState({
+            className:'hidden'
+        });
     }
 
     const handleClickSearch = () => {
         setShapeSearch2State({
             className:'searchBigBody'
-        })
+        });
+        setSearchOptionsState({
+            className:'hidden'
+        });
     }
 
     const handleShowEditor = () => {
