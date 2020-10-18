@@ -6,7 +6,7 @@ import Fractal from './graphieros/Fractal';
 function Footer() {
     return (
         <div className='footer'>
-            graphieros.com est développé et maintenu par <Link className='link' to='/alp'><u>Alec Lloyd Probert</u></Link>, 2020
+            graphieros.com est développé et maintenu par <br/><Link className='link' to='/alp'><u>Alec Lloyd Probert</u></Link>, 2020
             <Link to='/contact.php' target='_blank'>
                 <p>contact</p>
             </Link>
