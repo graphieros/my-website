@@ -7,7 +7,7 @@ import Linear from './graphieros/Linear';
 import Button from './Button';
 import Footer from './Footer';
 
-function Landing() {
+function Landing() { 
 
     const glyphCount = graphieros_dictionnary.length;
 
@@ -22,7 +22,7 @@ function Landing() {
             <div className='graphieros-physics'>
                 <Fractal
                     className='landing-fractal'
-                    sequence='zx-qe-wd qw-we xq-xs-sw-wd-ze zw-wd-dz-qs-se-xs'
+                    sequence='zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs'
                     colors={[122, 161, 216]}
                     svgSize='256'
                     light={false}
