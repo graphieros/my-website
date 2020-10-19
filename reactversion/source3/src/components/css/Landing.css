@@ -66,6 +66,36 @@
     box-shadow: -10px -10px 20px 0px rgba(255, 255, 255, 0.205), 10px 10px 20px 0px rgb(var(--c0));
 }
 
+.landing-fractal svg {
+    animation: landing-fractal 0.25s ease-in-out;
+    filter: drop-shadow(0 3px 3px rgb(var(--c2)));
+}
+
+p.landing-trad{
+    width:100%;
+    text-align:center;
+    margin-top:-30px;
+    font-family: var(--logo);
+    color: rgb(var(--c3));
+    font-size:0.9em;
+}
+
+p.landing-trad span {
+    font-family: var(--inter);
+}
+
+@keyframes landing-fractal {
+    0%{
+        opacity:0;
+        stroke: tomato;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+
 h1.wtf,
 h1.wtf2{
     font-family: var(--logo);
@@ -168,6 +198,23 @@ span.blueSpan{
 
 .button-description-left {
     text-align: right;
+}
+
+.abeilles{
+    height:100px;
+    width:100px;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+.abeilles svg {
+    opacity:.8;
+    stroke:rgb(var(--c3));
+    fill:none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width:3px;
+    filter: drop-shadow(0 3px 1px black);
 }
 
 @media (max-width:700px){
