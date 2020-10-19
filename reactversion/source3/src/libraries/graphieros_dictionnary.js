@@ -129,7 +129,7 @@ let graphieros_dictionnary = [
         name: '_ko',
         fr: 'voici',
         path: [[lm, a, lm, a], [rm, a, rm, a], [m, q, m, q], [m,q, l, q, lm, w, rm, w, r, q]],
-        fractal:'qw-wx-xd',
+        fractal:'sq-qw-wx-xd',
         shapes:['COL_b']
     },
     {
@@ -312,7 +312,7 @@ let graphieros_dictionnary = [
         fr: 'tout',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q], [lm, w, lm, a, r, q, lm, w], [rm, a, rm, w, l, q, rm, a], [l, q, r, q], [lm, a, rm, w], [rm, a, lm, w]],
         fractal:'qz-ze-ed-dx-xw-wq-qd-zx-we-xe-eq-qx-wz-zd-dw',
-        shapes:['HEX']
+        shapes:['HEX','TRI_2']
     },
     {
         name: '_pko',
