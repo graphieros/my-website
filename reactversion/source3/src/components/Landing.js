@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './css/Landing.css';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
@@ -7,9 +7,34 @@ import Linear from './graphieros/Linear';
 import Button from './Button';
 import Footer from './Footer';
 
-function Landing() { 
+function Landing() {
 
     const glyphCount = graphieros_dictionnary.length;
+
+    const [landSeqState, setLandSeqState] = useState({
+        sequence: 'zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs',
+        fr:'',
+        name:''
+    });
+
+
+    useEffect(() => {
+        let i= 0;
+        const interval = setInterval(() => {
+            setLandSeqState({
+                sequence:graphieros_dictionnary[i].fractal,
+                fr: graphieros_dictionnary[i].fr,
+                name: `[ ${graphieros_dictionnary[i].name.replace('_','')} ]`
+            });
+            i += 1;
+            if(i === graphieros_dictionnary.length){
+                i = 0;
+            }
+            return () => clearInterval(interval);
+        },2000);
+    },[])
+
+
 
     return (
         <div className='landing-body-wrapper'>
@@ -22,14 +47,20 @@ function Landing() {
             <div className='graphieros-physics'>
                 <Fractal
                     className='landing-fractal'
-                    sequence='zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs'
-                    colors={[122, 161, 216]}
+                    sequence={landSeqState.sequence}
+                    colors={[75,106,160]}
                     svgSize='256'
                     light={false}
                 />
+                <p className='landing-trad'>{landSeqState.fr}<br/><span>{landSeqState.name}</span></p>
                 <p>
                     L'hexagone fait partie des quelques formes géométriques avec lesquelles il est possible de construire un <strong>pavage régulier</strong>, comme celui de la surface externe des alvéoles bâties par les abeilles.
                 </p>
+                <div className='abeilles'>
+                    <svg viewBox='0 0 300 300'>
+                    <path d="M 60,55,80,89,60,124,20,124"/><path d="M 60,124,80,158,60,193"/><path d="M 80,89,120,89,140,55"/><path d="M 120,89,140,124,120,158,80,158"/><path d="M 140,124,180,124,200,89,180,55"/><path d="M 200,89,240,89,260,124,240,158,200,158,180,124"/><path d="M 120,158,140,193,180,193,200,158"/><path d="M 140,193,120,228,80,228"/><path d="M 120,228,140,262"/><path d="M 180,193,200,228"/><path d="M 260,124,300,124"/><path d="M 240,89,260,55"/>
+                    </svg>
+                </div>
             </div>
             <div className='graphieros-works'>
                 <div>
