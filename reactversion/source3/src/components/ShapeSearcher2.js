@@ -444,7 +444,7 @@ function ShapeSearcher2(props) {
 
     const handleResult = (props) => {
         const selectedShape = props.target.id;
-        console.log(selectedShape);
+        
         let memoryGlyphs = [],
             memoryFr = [];
 
@@ -481,7 +481,7 @@ function ShapeSearcher2(props) {
     }
 
     const handleSubOptionDisplay = (props) => {
-        console.log(props.target.id)
+        
         const option_id = props.target.id;
 
         setResultState({
