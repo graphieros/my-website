@@ -59,6 +59,7 @@
     color: rgb(var(--c0));
     font-weight: bold;
     animation: thought-text 0.25s ease-in-out;
+    margin-bottom:90px;
 }
 
 .thought-text::first-letter{
@@ -72,6 +73,55 @@
     font-family: var(--logo);
     border-radius:100%;
 }
+
+.comment{
+    position: absolute;
+    background: var(--gradTopLeft);
+    width:200px;
+    right:20px;
+    bottom:5px;
+    text-align:center;
+    box-sizing: border-box;
+    padding:6px;
+    padding-left:75px;
+    text-align:left;
+    border-radius:30px 30px 3px 30px;
+    height:65px;
+    display:grid;
+    align-items:center;
+    box-shadow: 0 10px 20px -10px rgb(var(--c0));
+    color: white;
+    font-family: var(--logo);
+    font-size:0.9em;
+    transition: opacity 0.25s ease-in-out;
+    opacity:0.8;
+    animation: comment 1s ease-in-out;
+}
+
+
+.comment:hover{
+    opacity:1;
+}
+
+.blog-comment-fractal{
+    position: absolute;
+    top:7px;
+    left:15px;
+}
+
+.blog-comment-fractal svg {
+    animation: logo-spin 6s infinite linear;
+}
+
+@keyframes comment {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:0.8;
+    }
+}
+
 
 @keyframes thought-text {
     0%{
