@@ -86,6 +86,28 @@ p.show-message{
     color: rgb(var(--c2));
 }
 
+.link-to-contact{
+    color: rgb(var(--c2));
+    font-family: var(--logo);
+    transition: all 0.25s ease-in-out;
+    border:1px solid rgb(var(--c2));
+    width:200px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    padding:12px;
+    border-radius:12px;
+    background: radial-gradient(rgb(41, 41, 41),black);
+}
+
+.link-to-contact:hover{
+    color: rgb(var(--c3));
+}
+
+.link-to-contact-fractal svg{
+    animation: logo-spin 1.618s infinite;
+}
+
 @media (max-width:500px){
     .gallery-carousel{
         height:100px;
@@ -94,3 +116,4 @@ p.show-message{
         border:3px solid rgb(var(--c1));
     }
 }
+
