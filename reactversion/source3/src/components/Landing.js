@@ -31,7 +31,7 @@ function Landing() {
                 i = 0;
             }
             return () => clearInterval(interval);
-        },2000);
+        },1618);
     },[])
 
 
