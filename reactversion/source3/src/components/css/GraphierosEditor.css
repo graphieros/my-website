@@ -93,7 +93,7 @@
 .graphieros-terminal{
     display: block;
     position: fixed;
-    width:80%;
+    width:200px;
     height:80%;
     bottom:100px;
     background: radial-gradient(rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.938));
