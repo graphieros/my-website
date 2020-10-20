@@ -2,26 +2,11 @@ import React from 'react';
 import posts from '../libraries/posts.json';
 import './css/Blog.css';
 import Thought from './Thought';
+import Fractal from './graphieros/Fractal';
 
 function Blog() {
 
     const postCount = posts.length;
-    // const col = () => {
-    //     let rand = Math.floor(Math.random()*255);
-    //     return rand;
-    // };
-
-    // const randomGlyph = () => {
-    //     let segments = ['ze','ed','dx','xw','wq','qz','zx','we','qd','zd','dw','qe','wd'];
-    //     let randomNum = Math.floor(Math.random()*segments.length);
-    //     let finalSelect = [];
-
-    //     for(let i = 0; i < randomNum; i += 1) {
-    //         let randomSelect = Math.floor(Math.random()*segments.length);
-    //         finalSelect.push(segments[randomSelect]);
-    //     }
-    //     return `${finalSelect.toString().replaceAll(',','-')}`;
-    // }
 
     return (
         <div className='blog-body'>
