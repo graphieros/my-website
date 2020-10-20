@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import './css/Gallery.css';
+import Fractal from './graphieros/Fractal';
 
 import entendre from '../assets/entendre.jpg';
 import chat_small from '../assets/chat_small.jpg';
@@ -168,7 +170,8 @@ function Gallery() {
 
     const [ showState, setShowState] = useState({
         content: '',
-        message: <p className='show-message'>Cliquez sur une image pour voir les détails</p>
+        message: <p className='show-message'>Cliquez sur une image pour voir les détails</p>,
+        contact: ''
     });
 
     const handleShow = (i) => {
@@ -185,7 +188,14 @@ function Gallery() {
                 {assets[i].size}
                 <br/>
                 {assets[i].year}
-            </p>
+            </p>,
+            contact:<div className='link-to-contact'><Link to='/contact.php' target='_blank'><Fractal
+                className='link-to-contact-fractal'
+                sequence='qw-wd-de-eq-qs-se'
+                svgSize='60'
+                size='30'
+                colors={[122,161,216]} 
+            /><br/>Un avis? Laissez votre message ici !</Link></div>
         });
     }
 
@@ -207,6 +217,7 @@ function Gallery() {
                 {showState.content}
                 {showState.title}
                 {showState.description}
+                {showState.contact}
             </div>
         </div>
     )
