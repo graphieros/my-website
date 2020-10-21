@@ -209,7 +209,7 @@ function Gallery() {
                 {assets.map((asset, i) => <img
                     className='gallery-pic'
                     key={i} src={asset.pic}
-                    alt={asset.title}
+                    alt={`peinture en graphieros nommée ${asset.title}`}
                     onClick={() => handleShow(i)} />)}
             </div>
             <div className='gallery-show'>
