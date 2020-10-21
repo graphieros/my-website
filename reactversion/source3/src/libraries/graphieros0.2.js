@@ -104,11 +104,7 @@ function linear({
 
             glyph_database.forEach(db_element => {
 
-                function this_phono_is_in_database() {
-                    return glyph === db_element.name;
-                }
-
-                if (this_phono_is_in_database()) {
+                if (glyph === db_element.name) {
 
                     let g = document.createElementNS(xmlns, "g");
                     g.setAttributeNS(null, "class", "word");
@@ -180,14 +176,15 @@ export { linear };
 
 
 function fractal({
-    section,
     sequence,
     size,
+    svgSize,
     colors,
     light,
     intensity
 }) {
 
+    svgSize = svgSize || 100;
     size = size || 100;
     light = light || null;
     let [r, g, b] = colors;
@@ -200,7 +197,7 @@ function fractal({
     const xmlns = "http://www.w3.org/2000/svg";
     let svg_width = size * 2.5;
     let svg_height = size * 2.5;
-    const svg_container = document.getElementById(section);
+    
     const raw_content = sequence;
 
     let _p = `<path`;
@@ -210,13 +207,12 @@ function fractal({
     let glyph_size = svg_width / 2;
     let stk = glyph_size / 10;
 
-    svg_container.style.height = `${size}px`;
-    svg_container.style.width = `${size}px`;
-
     let svg_output = document.createElementNS(xmlns, "svg");
     svg_output.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
+    svg_output.style.height=size;
+    svg_output.style.width=size;
     svg_output.setAttributeNS(null, "stroke-width", stk);
-    svg_output.id = `fractal_${section}`;
+    // svg_output.id = `fractal_${section}`;
 
     let R = r;
     let G = g;
@@ -314,7 +310,14 @@ function fractal({
 
     });
 
+    let svg_container = document.createElement("DIV");
+    svg_container.style.display = "grid";
+    svg_container.style.justifyItems = "center";
+    svg_container.style.alignItems = "center";
+
     svg_container.appendChild(svg_output);
+ 
+    return svg_container.innerHTML;
 
 }
 export { fractal };
