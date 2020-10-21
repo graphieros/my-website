@@ -42,6 +42,10 @@ function App() {
             window.location.href = 'https://graphieros.com/contact.php';
             return null;
           }} />
+          <Route path='/journal.html' component={() => {
+            window.location.href = 'https://graphieros.com/journal.html';
+            return null;
+          }} />
         </Switch>
       </div>
 
