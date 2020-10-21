@@ -108,3 +108,13 @@ reactversion/source3/src/assets/socrate2.png
 reactversion/source3/src/assets/vanite.jpg
 reactversion/source3/src/assets/voir.jpg
 reactversion/source3/src/assets/face.jpg
+reactversion/node-crud-aktie/.env
+reactversion/node-crud-aktie/.gitignore
+reactversion/node-crud-aktie/package-lock.json
+reactversion/node-crud-aktie/package.json
+reactversion/node-crud-aktie/.vscode/settings.json
+reactversion/node-crud-aktie/src/index.js
+reactversion/node-crud-aktie/src/routes.js
+reactversion/node-crud-aktie/src/controllers/BookController.js
+reactversion/node-crud-aktie/src/database/index.js
+reactversion/node-crud-aktie/src/models/Book.js
