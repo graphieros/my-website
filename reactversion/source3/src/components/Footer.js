@@ -26,12 +26,6 @@ function Footer() {
 
                 <Link
                     className='link'
-                    to='/mots'>
-                    <li>liste des mots</li>
-                </Link>
-
-                <Link
-                    className='link'
                     to='/galerie'>
                     <li>galerie de peintures</li>
                 </Link>
@@ -40,6 +34,13 @@ function Footer() {
                     className='link'
                     to='/blog'>
                     <li>blog</li>
+                </Link>
+
+                <Link
+                    className='link'
+                    to='/journal.html'
+                    target='_blank'>
+                    <li>le cri du pangolin</li>
                 </Link>
 
                 <Link
