@@ -18,7 +18,7 @@ function Alp() {
             <div className='alp-bio'>
                 <img className='alp-portrait'
                     src={face}
-                    alt='portrait' />
+                    alt='portrait Alec Lloyd Probert, créateur du graphieros' />
                 <p className='subTitle'>BIO</p>
                 <p className='alp-text'>Je suis né en 1979, dans le parc de Maisons-Laffitte, des mains d'un docteur qui portait le nom opportun de Docteur Hazard.
                 <br /><br />
