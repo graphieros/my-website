@@ -5,12 +5,18 @@
     box-sizing: border-box;
     padding:5px;
     padding-left:20px; 
+    transition: all 0.25s ease-in-out;
 }
 
 .logo-fractal{
     height:50px;
     width:50px;
     animation: logo-spin infinite 6s linear;
+    transition: all 0.25s ease-in-out;
+}
+
+.logo-body:hover .logo-fractal{
+  animation: logo-spin-fast infinite 0.5s linear;
 }
 
 @keyframes logo-spin {
@@ -21,3 +27,12 @@
       transform: rotate(360deg);
     }
   }
+
+@keyframes logo-spin-fast {
+  from {
+    transform: rotate(0deg) scale(0.816,0.618);
+  }
+  to{
+    transform: rotate(360deg) scale(0.618,0.618);
+  }
+}
