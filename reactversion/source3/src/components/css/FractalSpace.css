@@ -19,10 +19,11 @@
 .fractalspace-homelink{
     height:80px;
     width:80px;
+    animation: logo-spin 6s infinite linear;
 }
 
 .fractalspace-homelink:hover{
-    animation: wobble 0.25s ease-in-out;
+  animation: logo-spin-fast 0.5s infinite linear;
 }
 
 .fractalspace-textinput{
