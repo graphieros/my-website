@@ -64,7 +64,7 @@ function Thought(props) {
                 {props.text}
             </p>
             <Link to='/contact.php' target='_blank'>
-                <p className={commentState.className}>
+                <div className={commentState.className}>
                     <Fractal
                         className='blog-comment-fractal'
                         sequence='qw-wd-de-eq-qs-se'
@@ -73,7 +73,7 @@ function Thought(props) {
                         size='30'
                     />
                 Offrir un commentaire
-            </p>
+            </div>
             </Link>
 
         </div>
