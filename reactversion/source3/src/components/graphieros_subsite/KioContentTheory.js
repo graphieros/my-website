@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './css/KioContentTheory.css';
 import KioHeader from './KioHeader';
 import Fractal from '../graphieros/Fractal';
-import FlatFractal from '../graphieros/FlatFractal';
 
 let t_codeMemory = [];
 let t_memory=[];
