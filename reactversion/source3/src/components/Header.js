@@ -8,6 +8,7 @@ import SearchBar from './SearchBar';
 import GraphierosShapeFinder from './GraphierosShapeFInder';
 import ShapeSearcher2 from './ShapeSearcher2';
 import GraphierosEditor from './GraphierosEditor';
+import FlatFractal from './graphieros/FlatFractal';
 
 function Header() {
 
@@ -130,8 +131,26 @@ function Header() {
                     </button>
 
                     <div className={searchOptionsState.className}>
-                        <button onClick={handleDrawSearch}>dessiner la forme</button>
-                        <button onClick={handleClickSearch}>trouver d'après la forme</button>
+                        <button onClick={handleDrawSearch}>
+                            <FlatFractal onClick={handleDrawSearch}
+                                className='flatfrac-opt'
+                                sequence='dq-zs-ws'
+                                colors={[29,55,104]}
+                                size='30'
+                                svgSize='30'
+                            />
+                            dessiner la forme
+                        </button>
+                        <button onClick={handleClickSearch}>
+                            trouver la forme
+                            <FlatFractal onClick={handleClickSearch}
+                                className='flatfrac-opt'
+                                sequence='qz-ed-xw wq-qz-ze-ed-dx-xw'
+                                colors={[29,55,104]}
+                                size='30'
+                                svgSize='30'
+                            />
+                        </button>
                     </div>
 
                     <GraphierosShapeFinder className={shapeSearchState.className}>
