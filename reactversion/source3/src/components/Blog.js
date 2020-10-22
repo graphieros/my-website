@@ -2,7 +2,6 @@ import React from 'react';
 import posts from '../libraries/posts.json';
 import './css/Blog.css';
 import Thought from './Thought';
-import Fractal from './graphieros/Fractal';
 
 function Blog() {
 
