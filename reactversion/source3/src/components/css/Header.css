@@ -50,7 +50,7 @@ button.button-search-shape:hover {
     align-items:center;
     justify-items:center;
     height:100px;
-    width:200px;
+    width:210px;
     position: fixed;
     top:50%;
     left:50%;
@@ -60,7 +60,7 @@ button.button-search-shape:hover {
     box-sizing: border-box;
     padding:12px;
     row-gap:12px;
-    background: radial-gradient(at top left, white, rgb(var(--c2)));
+    background: radial-gradient(at top left,rgb(var(--c3)), rgb(var(--c1)));
     box-shadow: 0 0 20px black;
     animation: search-choice 0.25s ease-in-out;
 }
@@ -86,11 +86,33 @@ button.button-search-shape:hover {
     color: rgb(var(--c0));
     text-align:left;
     transition: all 0.15s ease-in-out;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    align-items:center;
+    justify-items:center;
+    transition: all 0.25s ease-in-out;
 }
 
 .search-choice button:hover {
-    background: rgb(var(--c1));
-    color: rgb(var(--c3));
+    background: white;
+    color: rgb(var(--c0));
+    box-shadow: 0 10px 20px -10px rgba(var(--c0));
+}
+
+.search-choice button:hover .flatfrac-opt{
+    animation: flatfrac 2s infinite;
+}
+
+@keyframes flatfrac {
+    0% {
+        transform: rotate(0deg);
+      }
+    50%{
+        transform: rotate(180deg) scale(0.618,0.618)
+    }  
+    100% {
+        transform: rotate(360deg) scale(1,1);
+      }
 }
 
 @media (max-width:500px) {
