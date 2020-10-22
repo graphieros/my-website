@@ -5,9 +5,7 @@ const FlatFractal = (props) => {
 
     const style={
         width:`${props.svgSize}px`,
-        height:`${props.svgSize}px`,
-        marginLeft: '50%',
-        transform: 'translateX(-50%)'
+        height:`${props.svgSize}px`
     }
 
     let frac = fractal({
