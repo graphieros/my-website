@@ -41,6 +41,11 @@ p.glyphList-presentation{
     text-align:left;
 }
 
+span.spanStrong{
+    font-family: var(--logo);
+    color: rgb(var(--c0));
+}
+
 .glyph-block{
     width:100px;
     display: grid;
@@ -53,6 +58,13 @@ p.glyphList-presentation{
     box-shadow: 0 5px 10px -5px rgba(var(--c1),.3);
     font-family: var(--logo);
     color: rgb(var(--c1));
+    transition: all 0.0618s ease-in-out;
+    position: relative;
+}
+
+.glyph-block:hover{
+    transform: scale(1.0618,1.0618);
+    box-shadow: 0 10px 20px -10px rgba(var(--c1),.618);
 }
 
 .glyph-list-phono {
@@ -103,6 +115,104 @@ p.glyphList-presentation{
 
 .fractal-link-home:hover {
     animation: wobble 0.25s ease-in-out;
+}
+
+.capper{
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.card{
+    height:400px;
+    width:250px;
+    position: fixed;
+    background: radial-gradient(at top left, rgb(240, 236, 232), white);
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index:100;
+    box-shadow: 0 10px 20px -10px rgb(var(--c0));
+    border-radius:6px;
+    box-sizing: border-box;
+    padding:6px;
+    padding-top:24px;
+    animation: card 0.25s ease-in-out;
+}
+
+@keyframes card {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.card-fractal{
+    height:100px;
+    width:100px;
+}
+
+.card-close-fractal{
+    position: absolute;
+    top:-15px;
+    right:-15px;
+    height:30px;
+    width:30px;
+    background: tomato;
+    border-radius:100%;
+    box-shadow: 0 5px 10px -5px rgb(var(--c0));
+    cursor: pointer;
+    transition: opacity 0.25s ease-in-out;
+    opacity:0.8;
+}
+
+.card-close-fractal:hover{
+    opacity:1;
+}
+
+.card-id{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-items: center;
+    font-family: var(--logo);
+    color: rgb(var(--c0));
+    text-align:right;
+}
+
+p.card-id-details-phono{
+    font-family: var(--inter);
+    color: tomato;
+    font-size:1.2em;
+}
+
+p.card-id-details-type{
+    grid-column: 1/span 2;
+    color: rgb(var(--c1));
+    font-family: var(--inter);
+    font-size:0.75em;
+    text-align:left;
+    width:100%;
+    box-sizing: border-box;
+    padding-left:24px;
+}
+
+p.card-id-story{
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    height:190px;
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-right:24px;
+    font-family: var(--inter);
+    color: rgb(var(--c0));
 }
 
 @keyframes wobble {

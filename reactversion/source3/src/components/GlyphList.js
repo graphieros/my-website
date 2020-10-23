@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Linear from './graphieros/Linear';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
@@ -7,11 +7,84 @@ import Fractal from './graphieros/Fractal';
 
 function GlyphList() {
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
+    const glyphCount = graphieros_dictionnary.length;
+    let ideograms = 0;
+    let pictograms = 0;
+
+    graphieros_dictionnary.forEach(entry => {
+        if (entry.type === 'ideo') {
+            ideograms += 1;
+        } else {
+            pictograms += 1;
+        }
     });
 
-    const glyphCount = graphieros_dictionnary.length;
+    console.log(ideograms, pictograms);
+
+    const [cardState, setCardState] = useState({
+        className: 'hidden',
+        content: ''
+    });
+
+    const handleCardClose = () => {
+        setCardState({
+            className: 'hidden'
+        });
+    }
+
+    const handleCard = (e) => {
+
+        e.persist();
+
+        const index = e._targetInst.memoizedProps.value;
+        const glyph = graphieros_dictionnary[index];
+        const glyphDescription = graphieros_dictionnary[index].description;
+
+        let glyphType;
+
+        if (graphieros_dictionnary[index].type === 'ideo') {
+            glyphType = 'idéogramme'
+        } else {
+            glyphType = 'pictogramme'
+        }
+
+        setCardState({
+            className: 'card',
+            content: <>
+                <div className='card-close' onClick={handleCardClose}>
+                    <Fractal
+                        className='card-close-fractal'
+                        sequence='zx-we'
+                        svgSize='30'
+                        colors={[255, 255, 255]}
+                    />
+                </div>
+
+                <div className='card-id'>
+
+                    <Fractal
+                        className='card-fractal'
+                        sequence={glyph.fractal}
+                        svgSize='100'
+                        colors={[75, 106, 160]}
+                    />
+
+                    <div className='card-id-details'>
+                        <p>{glyph.fr}</p>
+                        <p className='card-id-details-phono'>[ {glyph.name.replace('_', '')} ]</p>
+                    </div>
+
+                    <p className="card-id-details-type">
+                        type: {glyphType}
+                    </p>
+
+                </div>
+
+                <p className='card-id-story'>{glyphDescription}</p>
+
+            </>
+        })
+    }
 
     return (
         <div className='glyphList-body'>
@@ -20,7 +93,7 @@ function GlyphList() {
             </div>
             <div className='glyphList-list'>
                 <p className='glyphList-presentation'>
-                    <strong>{glyphCount}</strong> briques fondamentales, pour représenter tout ce que contient notre univers
+                    <span className='spanStrong'>{glyphCount}</span> briques fondamentales, réparties en <span className='spanStrong'>{ideograms}</span> idéogrammes et <span className='spanStrong'>{pictograms}</span> pictogrammes, pour représenter tout ce que contient notre Univers.
                 </p>
                 {graphieros_dictionnary.map((entry, i) => <div className='glyph-block' key={i}>
                     <label className='glyph-list-translation'>{entry.fr}</label>
@@ -31,19 +104,23 @@ function GlyphList() {
                         colors={[29, 55, 104]}
                     />
                     <label className='glyph-list-phono'>{`[ ${entry.name.replace('_', '')} ]`}</label>
+                    <div className='capper' value={i} onClick={e => handleCard(e)} />
                 </div>)}
             </div>
             <Link to='/'>
                 <div className='link-home'>
                     <p>home sweet home</p>
-                    <Fractal 
+                    <Fractal
                         className='fractal-link-home'
                         sequence='zw-wx-xe-ez-zq-qd-de'
                         svgSize='100'
-                        colors={[211,227,252]}
+                        colors={[211, 227, 252]}
                     />
                 </div>
             </Link>
+            <div className={cardState.className}>
+                {cardState.content}
+            </div>
         </div>
     )
 }
