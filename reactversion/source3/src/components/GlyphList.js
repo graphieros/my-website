@@ -32,6 +32,7 @@ function GlyphList() {
         });
     }
 
+
     const handleCard = (e) => {
 
         e.persist();
