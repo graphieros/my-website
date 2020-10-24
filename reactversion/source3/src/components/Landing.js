@@ -41,7 +41,7 @@ function Landing() {
             <div className='landing-body'>
                 <h1 className='wtf'><span className='greySpan'>Qu'est-ce que le</span> graphieros ?</h1>
                 <div className='graphieros-presentation'>
-                    Le graphieros est une <strong><a href="https://fr.wikipedia.org/wiki/Langue_construite#:~:text=Une%20langue%20construite%20ou%20planifi%C3%A9e,l'%C3%A9laboration%20est%20largement%20spontan%C3%A9e." target="_blank" rel="noopener noreferrer">idéolangue</a></strong>, créée par Alec Lloyd Probert à partir de 2016. Cette langue est fondée sur un corpus de <strong>{glyphCount}</strong> idéogrammes ou glyphes, dont l'aspect est déterminé par la géométrie de l'<strong>hexagone régulier</strong>, des sept points qui constituent ses sommets et son centre.
+                    Le graphieros est une <strong><a href="https://fr.wikipedia.org/wiki/Langue_construite#:~:text=Une%20langue%20construite%20ou%20planifi%C3%A9e,l'%C3%A9laboration%20est%20largement%20spontan%C3%A9e." target="_blank" rel="noopener noreferrer">idéolangue</a></strong>, créée par Alec Lloyd Probert à partir de 2016. Cette langue est fondée sur un corpus de <Link to='/glyphes'><span className='inLink'>{glyphCount} idéogrammes</span></Link> ou glyphes, dont l'aspect est déterminé par la géométrie de l'<strong>hexagone régulier</strong>, des sept points qui constituent ses sommets et son centre.
             </div>
             </div>
             <div className='graphieros-physics'>
@@ -72,7 +72,7 @@ function Landing() {
                     />
                 </div>
                 <p>
-                    <strong>Le graphieros s'écrit, se parle et se peint.</strong> Il se prête à la poésie, à la patience et à la philosophie. Avec {glyphCount} glyphes comme autant de briques conceptuelles fondamentales, le graphieros peut représenter les idées des plus simples aux plus complexes, comme des objets du quotidien aux machines technologiques les plus affûtées.
+                    <strong>Le graphieros s'écrit, se parle et se peint.</strong> Il se prête à la poésie, à la patience et à la philosophie. Avec <Link to='/glyphes'><span className='inLink'>{glyphCount} glyphes</span></Link> comme autant de briques conceptuelles fondamentales, le graphieros peut représenter les idées des plus simples aux plus complexes, comme des objets du quotidien aux machines technologiques les plus affûtées.
                 </p>
             </div>
             <div className='landing-links'>
