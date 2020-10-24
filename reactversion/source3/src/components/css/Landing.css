@@ -217,6 +217,15 @@ span.blueSpan{
     filter: drop-shadow(0 3px 1px black);
 }
 
+span.inLink{
+    font-weight:bold;
+    transition: color 0.25s ease-in-out;
+}
+
+span.inLink:hover{
+    color: tomato;
+}
+
 @media (max-width:700px){
     .landing-body,
     .graphieros-works,
