@@ -1,3 +1,5 @@
+import { findAllInRenderedTree } from "react-dom/test-utils";
+
 //initial y coordinates
 let a = 50; //y_top 
 let q = 128; //y_mid
@@ -830,7 +832,7 @@ let graphieros_dictionnary = [
         fractal:'zw-ws-sq-qw-ed-dx',
         shapes:['arr_b','MA','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Cette forme est complètement aritraire, et dérivée du glyphe utilisé pour le mot 'pour'."
     },
     {
         name: '_zle',
@@ -839,7 +841,7 @@ let graphieros_dictionnary = [
         fractal:'qs-ex',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Des données dans un tableau, avec un seul point en sortie."
     },
     {
         name: '_pta',
@@ -848,7 +850,7 @@ let graphieros_dictionnary = [
         fractal:'wx-xq-qd-dz-se',
         shapes:['N_l'],
         type: 'picto',
-        description: 'to do'
+        description: "C'est une sorte de caducée."
     },
     {
         name: '_rpie',
@@ -857,7 +859,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qz-zw-xe-es',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "La même forme en série, pour illustrer l'idée de répétition."
     },
     {
         name: '_fksi',
@@ -866,7 +868,7 @@ let graphieros_dictionnary = [
         fractal:'xe-dz-zs-sq-qw-ws',
         shapes:['tri_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Un humain, un outil à la main, agissant sur un objet. Le glyphe utilisé pour le verbe 'travailler' ressort d'un principe similaire."
     },
     {
         name: '_floi',
@@ -875,7 +877,7 @@ let graphieros_dictionnary = [
         fractal:'qd-dx-xs-ex',
         shapes:['arr_b','tri_br'],
         type: 'ideo',
-        description: 'to do'
+        description: "C'est une sorte de casserole dans laquelle un liquide serait versé."
     },
     {
         name: '_rdai',
@@ -884,7 +886,7 @@ let graphieros_dictionnary = [
         fractal:'sz-ze-es-qd-dw-wx-xq',
         shapes:['tri_t','CROSS_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'faire', avec une torsion dans la partie basse pour illustrer la répétition."
     },
     {
         name: '_tba',
@@ -893,7 +895,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-wx-xd-de',
         shapes:['C_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Un vase, un bol, un verre, un bac, un pot, une vasque."
     },
     {
         name: '_rsea',
@@ -902,7 +904,7 @@ let graphieros_dictionnary = [
         fractal:'ze-qx-xs-sw-wd',
         shapes:['CROSS_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme deux bras prêts à recevoir un objet tombé du ciel."
     },
     {
         name: '_rbae',
@@ -911,7 +913,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xe-wd',
         shapes:['N'],
         type: 'ideo',
-        description: 'to do'
+        description: "La trajectoire d'une balle, lancée avec force sur un sol incliné."
     },
     {
         name: '_snoi',
@@ -920,7 +922,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-eq-ex-ew',
         shapes:['PIC_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "Des rays de lumière émanant d'une source."
     },
     {
         name: '_groi',
@@ -929,7 +931,7 @@ let graphieros_dictionnary = [
         fractal:'sz-zq-qd-dx-xe-ew',
         shapes:['tri_tl'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte d'humain avec une tête triangulaire, un coude au sol, et un buste étrangement formulé."
     },
     {
         name: '_rma',
@@ -938,7 +940,7 @@ let graphieros_dictionnary = [
         fractal:'zw-ws-qe-ed',
         shapes:['TRI_in_l','TREC_htr'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte de bec, prêt à ramasser une graine à même le sol."
     },
     {
         name: '_slo',
@@ -947,7 +949,7 @@ let graphieros_dictionnary = [
         fractal:'dq-zq-qw-es-sx',
         shapes:['ARR_db_l','ARR_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux petites flèches répétées vers l'arrière, pour signifier la décélération."
     },
     {
         name: '_wo',
@@ -956,7 +958,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-qx',
         shapes:['POINT_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Cette forme ressemble-elle vraiment au point d'interrogation que l'on connaît ? Le glyphe s'tulise en verbe, ou en point."
     },
     {
         name: '_kwa',
@@ -965,7 +967,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-qe-ex',
         shapes:['PIC_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de flèche qui désigne quelque chose du passé."
     },
     {
         name: '_kta',
@@ -974,7 +976,7 @@ let graphieros_dictionnary = [
         fractal:'ds-sx-xe-ez-zw-wx',
         shapes:['RECT'],
         type: 'ideo',
-        description: 'to do'
+        description: "En voulant crééer une forme qui ressemblât à la lettre Q, voilà ce qui ressortit."
     },
     {
         name: '_fkwe',
@@ -983,7 +985,7 @@ let graphieros_dictionnary = [
         fractal:'sd-dw-wz-ze',
         shapes:['MEC_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le début d'un cadre et la moitié d'une flèche vers le futur."
     },
     {
         name: '_3e',
@@ -992,7 +994,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qz-ze-ed-dx',
         shapes:['C_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un habitacle, un toit ou une enveloppe, qui protège un point."
     },
     {
         name: '_prai',
@@ -1001,7 +1003,7 @@ let graphieros_dictionnary = [
         fractal:'ds-sx-xd-dz-zw-wd',
         shapes:['TRI_0','tri_br'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un grand triangle équilatéral, un petit triangle éponyme, quoi de mieux pour suggérer l'idée de proportionnalité."
     },
     {
         name: '_prio',
@@ -1010,7 +1012,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-ez-zw-wx-xe',
         shapes:['RECT','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "C'est droit, rectangulaire, cadré. C'est aussi l'image inverse du glyphe utilisé pour désigner un 'objet'."
     },
     {
         name: '_tpia',
@@ -1019,7 +1021,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zq-qw-wx-xd-dq',
         shapes:['TRI_out_l','MEX_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une feuille de papier plié, dont la partie basse représenterait la profondeur de sa troisième dimension."
     },
     {
         name: '_pre',
@@ -1028,7 +1030,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zd-qs-se-eq',
         shapes:['TRI_in_tl','PIC_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le glyphe utilisé pour le verbe 'voir', incliné vers le bas, le proche, le petit, le microscopique."
     },
     {
         name: '_ra',
@@ -1037,7 +1039,7 @@ let graphieros_dictionnary = [
         fractal:'se-ez-zs-wq-qd-dx',
         shapes:['MEX_b','tri_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une pince prête à prendre ce qui passerait à sa portée."
     },
     {
         name: '_frya',
@@ -1046,7 +1048,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-qz-ze-ed',
         shapes:['tri_b','COL_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Hérité de la forme attribuée au verbe 'avoir', puisque avoir c'est le début de la domination."
     },
     {
         name: '_psie',
@@ -1055,7 +1057,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sw-ed-dx',
         shapes:['ARR_dbl_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux pointes vers l'avant, comme l'effort nécessaire à la poussée."
     },
     {
         name: '_vwa',
@@ -1064,7 +1066,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-qx-wd',
         shapes:['CROSS_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'questionner', avec une résolution qui viendrait trancher la question."
     },
     {
         name: '_psu',
@@ -1073,7 +1075,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ew-qs-xd',
         shapes:['TREC_stl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un glyphe formé de façon totalement arbitraire."
     },
     {
         name: '_ptoi',
@@ -1082,7 +1084,7 @@ let graphieros_dictionnary = [
         fractal:'we-xs-zd-de-ez',
         shapes:['TRI_out_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Un humain, qui porterait un fardeau sur la tête."
     },
     {
         name: '_lbay',
@@ -1091,7 +1093,7 @@ let graphieros_dictionnary = [
         fractal:'sw-wq-qz-ze-ed-dx-xe',
         shapes:['TRI_out_r','C_t'],
         type: 'picto',
-        description: 'to do'
+        description: "On en distingue le groin, et le corps rond et massif."
     },
     {
         name: '_ptea',
@@ -1100,7 +1102,7 @@ let graphieros_dictionnary = [
         fractal:'xs-we-eq-qs',
         shapes:['TRI_in_tl'],
         type: 'picto',
-        description: 'to do'
+        description: "La fierté d'un buste dardé, comme un vainqueur recevant les louanges après son exploit."
     },
     {
         name: '_psaw',
@@ -1109,7 +1111,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qe-ex-xd-dw',
         shapes:['RECT_r'],
         type: 'picto',
-        description: 'to do'
+        description: "Un petit poisson avec sa queue et ses deux yeux."
     },
     {
         name: '_fky',
@@ -1118,7 +1120,7 @@ let graphieros_dictionnary = [
         fractal:'qx-xe',
         shapes:['PIC_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Parmi les multiples façons de représenter une pointe, voci celle qui fut retenue."
     },
     {
         name: '_ploi',
@@ -1127,7 +1129,7 @@ let graphieros_dictionnary = [
         fractal:'qw-sz-ex',
         shapes:['DASH'],
         type: 'picto',
-        description: 'to do'
+        description: "Deux courts et un long, trois poils."
     },
     {
         name: '_vdio',
@@ -1136,7 +1138,7 @@ let graphieros_dictionnary = [
         fractal:'zw-qs',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme le signe +"
     },
     {
         name: '_tsi',
@@ -1145,7 +1147,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sd-ws',
         shapes:['X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le suffixe utilisé pour mettre des mots au pluriel."
     },
     {
         name: '_plwe',
@@ -1154,7 +1156,7 @@ let graphieros_dictionnary = [
         fractal:'qd-dx-xq',
         shapes:['TREC_hbr'],
         type: 'picto',
-        description: 'to do'
+        description: "Celle que les oiseaux nécessitent, et que les plumitifs utilisent pour écrire."
     },
     {
         name: '_pli',
@@ -1163,7 +1165,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dq-qw-wx',
         shapes:['Z'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un morceau de carton brun alvéolé que l'on tente de plier, et qui ne se plie pas totalement à notre volonté."
     },
     {
         name: '_pto',
@@ -1172,7 +1174,7 @@ let graphieros_dictionnary = [
         fractal:'qw-ws-sx-xd',
         shapes:['W'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'eau, avec des gouttes de pluie."
     },
     {
         name: '_pla',
@@ -1181,7 +1183,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qz-ze-ed-dx-xw-wq-zw-xe',
         shapes:['HEX'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un plan avec des murs, et des axes de mesure."
     },
     {
         name: '_pnae',
@@ -1190,7 +1192,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq-qx-xe-eq-wz-zd-dw',
         shapes:['HEX','TRI_2'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sphère, avec un coeur chaud, qui ressemblerait à une étoile, si l'on retirait sa croûte."
     },
     {
         name: '_aria',
@@ -1199,7 +1201,7 @@ let graphieros_dictionnary = [
         fractal:'eq-qz-zs-se-ed-dz',
         shapes:['CROSS_t'],
         type: 'picto',
-        description: 'to do'
+        description: "On y verrait presque l'un de ces dispositifs inventés par Léonard de Vinci, pour tenter de faire voler nos corps atterrés."
     },
     {
         name: '_ueoa',
@@ -1208,7 +1210,7 @@ let graphieros_dictionnary = [
         fractal:'sz-zq-qw-wx-xd-de-es',
         shapes:['C_b','M'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un dérivé du glyphe utilisé pour désigner les lèvres, et comme une bouche ouverte par l'effet de la pâmoison."
     },
     {
         name: '_pvo',
@@ -1217,7 +1219,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sz-zw-wx-xd-dw',
         shapes:['TRI_in_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "La même forme représentée avant et après pivotation, avec un point commun."
     },
     {
         name: '_vdibwa',
@@ -1226,7 +1228,7 @@ let graphieros_dictionnary = [
         fractal:'xz-zq-qs-wz-ed',
         shapes:['arr_t','tri_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une fusion des glyphes utilisés pour désigner le 'mauvais' et 'plus'."
     },
     {
         name: '_pke',
@@ -1235,7 +1237,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zs-se-ex-xw-wq-qd-dx',
         shapes:['MEX_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un glyphe de goût, dérivé du glyphe utilisé pour désigner les 'lèvres'."
     },
     {
         name: '_gwi',
@@ -1244,7 +1246,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-qw-wx-xe-ed',
         shapes:['DIAM'],
         type: 'picto',
-        description: 'to do'
+        description: "Pris au moment de son dandinement, et les ailes en soutien de son équilibre fragile."
     },
     {
         name: '_trai',
@@ -1253,7 +1255,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zq-qd-de-ez',
         shapes:['MEX_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un piège prêt à tomber sur l'animal qui se risquerait à chiper l'appât."
     },
     {
         name: '_fti',
@@ -1262,7 +1264,7 @@ let graphieros_dictionnary = [
         fractal:'sw-wz-ze-ex-xs-qd',
         shapes:['RECT'],
         type: 'picto',
-        description: 'to do'
+        description: "Où les deux pointes à la base de la forme figurent les pieds."
     },
     {
         name: '_sfi',
@@ -1271,7 +1273,7 @@ let graphieros_dictionnary = [
         fractal:'zx-sd-de',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un glyphe totalement aritraire, avec quelque chose d'inquiétant."
     },
     {
         name: '_psia',
@@ -1280,7 +1282,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-ws-sx',
         shapes:['MEC_r','tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Lestée par le bas, avec une poignée pour le soulever, cette forme figure un poids de balance."
     },
     {
         name: '_lse',
@@ -1289,7 +1291,7 @@ let graphieros_dictionnary = [
         fractal:'xz-ze-ex-qx-xd',
         shapes:['TREC_str'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de flèche vers le bas, pour signifier qu'un objet a fui, obéissant à la gravité."
     },
     {
         name: '_dri',
@@ -1298,7 +1300,7 @@ let graphieros_dictionnary = [
         fractal:'de-es-sx-xd-dz-zq-qw-wd-dq',
         shapes:['LOS_r','ARR_r','POINT_r'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme la pointe d'une perceuse pénétrant une surface."
     },
     {
         name: '_hia',
@@ -1307,7 +1309,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-xw-qd-de-ez-zq',
         shapes:['MEX_t','tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une petite surface pour figurer un corps, une grande surface pour figurer la pensée."
     },
     {
         name: '_pda',
@@ -1316,7 +1318,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-qd-xe',
         shapes:['ARR_r','TRI_out_r','C_l','EQ'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers l'avenir, figurée dans une traînée de continuité."
     },
     {
         name: '_prye',
@@ -1325,7 +1327,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-xw',
         shapes:['tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une part de tarte ou de pizza."
     },
     {
         name: '_psoi',
@@ -1334,7 +1336,7 @@ let graphieros_dictionnary = [
         fractal:'eq-qx-dq',
         shapes:['POINT_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le préfixe utilisé pour conjuguer un verbe au passé, avec une flèche vers l'arrière."
     },
     {
         name: '_pmi',
@@ -1343,7 +1345,7 @@ let graphieros_dictionnary = [
         fractal:'we-ed-dq-qz-zx-xw-ze',
         shapes:['tri_tl','tri_t','tri_tr','tri_b','X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une variation du glyphe utilisé pour le mot 'dans'."
     },
     {
         name: '_vga',
@@ -1352,7 +1354,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-wx-xd-qe-ex-es',
         shapes:['C_l','PIC_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "D2rivé du glyphe utilisé pour le verbe sentir, avec la figuration d'une inspiration des narines."
     },
     {
         name: '_smai',
@@ -1361,7 +1363,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zs-wx-xd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Encore un glyphe totalement arbitraire."
     },
     {
         name: '_prae',
@@ -1370,7 +1372,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zq-qw-wx-xd-ds',
         shapes:['C_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le parcours d'un marcheur ordonné sur une surface hexagonale."
     },
     {
         name: '_ba',
@@ -1379,7 +1381,7 @@ let graphieros_dictionnary = [
         fractal:'wx-xd-xs',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Encore un glyphe complètement arbitraire."
     },
     {
         name: '_mriy',
@@ -1388,7 +1390,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ew-qd-dx-xq',
         shapes:['TREC_stl','TREC_hbr'],
         type: 'picto',
-        description: 'to do'
+        description: "Avec ses ailes fugaces et son corps de diamant."
     },
     {
         name: '_sra',
@@ -1397,7 +1399,7 @@ let graphieros_dictionnary = [
         fractal:'qw-we-ez-zx-xd',
         shapes:['X','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'conflit', résolu par une liaison qui serait un accord entre les deux parties."
     },
     {
         name: '_pno',
@@ -1406,7 +1408,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-qs',
         shapes:['C_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une clé dans le trou d'une serrure."
     },
     {
         name: '_he',
@@ -1415,7 +1417,7 @@ let graphieros_dictionnary = [
         fractal:'zw-ws-ex',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "La main sur le coeur en signe d'affirmation."
     },
     {
         name: '_roi',
@@ -1424,7 +1426,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ew-wx-xz',
         shapes:['X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe refléter, deux triangles en miroir pour illustrer l'apparition d'un choix."
     },
     {
         name: '_sdey',
@@ -1433,7 +1435,7 @@ let graphieros_dictionnary = [
         fractal:'zx-wx-xd',
         shapes:['ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers le bas pointe la terre à l'endroit où..."
     },
     {
         name: '_bnio',
@@ -1442,7 +1444,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-es-sq-qe-zx-xw-wq-ex',
         shapes:['LOS_tl','LOS_bl','TRI_in_r','TREC_str'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un os coupé exhibe sa moelle."
     },
     {
         name: '_via',
@@ -1451,7 +1453,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wz-ze-sd-dx-xs',
         shapes:['tri_br'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme le symbole utilisé en mathématiques pour la racine."
     },
     {
         name: '_rgia',
@@ -1460,7 +1462,7 @@ let graphieros_dictionnary = [
         fractal:'-zx-ws-sq-qe-ez-zq-qw-wx-xd-de',
         shapes:['KA','HEX'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'humain."
     },
     {
         name: '_rdo',
@@ -1469,7 +1471,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ex',
         shapes:['U_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'imposition d'un cadre, d'un ordre émanant d'en haut."
     },
     {
         name: '_r3y',
@@ -1478,7 +1480,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "En faisant le tour du cercle chromatique, c'est ici que l'orange se dispose."
     },
     {
         name: '_vroi',
@@ -1487,7 +1489,7 @@ let graphieros_dictionnary = [
         fractal:'qs-zs-sw-xe-ed-dx',
         shapes:['TRI_out_r','ARR_dbl_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour 'mais', avec l'évocation d'une continuité."
     },
     {
         name: '_gnae',
@@ -1496,7 +1498,7 @@ let graphieros_dictionnary = [
         fractal:'qw-xz-ed',
         shapes:['EQ'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une averse de printemps qui tomberait sans prévenir."
     },
     {
         name: '_broi',
@@ -1505,7 +1507,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ex-xw-zs',
         shapes:['PIC_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un ray de lumière sur une surface, et la figuration de son ombre portée."
     },
     {
         name: '_zo',
@@ -1514,7 +1516,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qw-we-ze-ed',
         shapes:['ARR_r','tri_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Une flèche vers le ciel, une sorte de queue."
     },
     {
         name: '_gwa',
@@ -1523,7 +1525,7 @@ let graphieros_dictionnary = [
         fractal:'sz-zq-qw-ws-ed-dx',
         shapes:['LOS_l'],
         type: 'picto',
-        description: 'to do'
+        description: "Un losange pour un oeuf, et deux segments pour un fragment de coquille."
     },
     {
         name: '_ptae',
@@ -1532,7 +1534,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-xw-wz-ze-ex',
         shapes:['RECT','tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "C'est droit, rectangulaire, défini."
     },
     {
         name: '_ney',
@@ -1541,7 +1543,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-ws-sx-xd-de',
         shapes:['MA','W'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme le W à la fin du mot 'new' en anglais."
     },
     {
         name: '_fdu',
@@ -1550,7 +1552,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wz-ze-ed-dx-xq',
         shapes:['CROSS_b'],
         type: 'picto',
-        description: 'to do'
+        description: "C'est une sorte de poisson, qui figure la pitence."
     },
     {
         name: '_nia',
@@ -1559,7 +1561,7 @@ let graphieros_dictionnary = [
         fractal:'zx-we',
         shapes:['X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une croix, c'est souvent non."
     },
     {
         name: '_na',
@@ -1568,7 +1570,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xd-we-qs',
         shapes:['X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour 'non', avec des dépendances."
     },
     {
         name: '_nsio',
@@ -1577,7 +1579,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qs-se-ed-sx-xw',
         shapes:['X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une roue nécessitant des pales pour pouvoir tourner."
     },
     {
         name: '_zmi',
@@ -1586,7 +1588,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wz-ze-ed-es-sx-xw',
         shapes:['E_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'entendre'."
     },
     {
         name: '_mso',
@@ -1595,7 +1597,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xq-qs-sx',
         shapes:['TRI_in_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Un bras plié pour faire gonfler un biceps."
     },
     {
         name: '_mksi',
@@ -1604,7 +1606,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wx-xd',
         shapes:['COL_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Trois pommes dans une coupe illustrent l'idée de multiplication."
     },
     {
         name: '_ftey',
@@ -1613,7 +1615,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-wx-xe-ed-ws-sx',
         shapes:['U','tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une façon totalement arbitraire de désigner la molesse."
     },
     {
         name: '_mtu',
@@ -1622,7 +1624,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zs-se-ed-wx',
         shapes:['M'],
         type: 'picto',
-        description: 'to do'
+        description: "Deux pics et un col, avec un lac à leur base."
     },
     {
         name: '_mu',
@@ -1631,7 +1633,7 @@ let graphieros_dictionnary = [
         fractal:'qs-sz-zq-qw-wx-xd-de-dw-wz',
         shapes:['C_b','tri_tl','TRI_out_l','TRI_out_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte de méduse."
     },
     {
         name: '_mni',
@@ -1640,7 +1642,7 @@ let graphieros_dictionnary = [
         fractal:'qs',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme le signe -"
     },
     {
         name: '_d3io',
@@ -1649,7 +1651,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zs-se-ex',
         shapes:['M'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre M."
     },
     {
         name: '_mina',
@@ -1658,7 +1660,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zs-se-ex-xw-wq-qz-ze-ed-dx',
         shapes:['HEX'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre M enfermée dans un caillou."
     },
     {
         name: '_mlimza',
@@ -1667,7 +1669,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw',
         shapes:['C_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_mligma',
@@ -1676,7 +1678,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw',
         shapes:['MEC_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_mdo',
@@ -1685,7 +1687,7 @@ let graphieros_dictionnary = [
         fractal:'qd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Et au milieu coulait une frontière."
     },
     {
         name: '_vdikeo',
@@ -1694,7 +1696,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qw-we-zw-xd',
         shapes:['arr_b','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour désigner le 'bien' et 'plus'."
     },
     {
         name: '_pne',
@@ -1703,7 +1705,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zs-sq-qz-ed-dx',
         shapes:['tri_tl','arr_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Cette forme est complètement aritraire, et dérivée du glyphe utilisé pour le mot 'pour'."
     },
     {
         name: '_mza',
@@ -1712,7 +1714,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-wq-qs-sw',
         shapes:['C_l','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_mto',
@@ -1721,7 +1723,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zx-xe-ed-dw-wq-qe',
         shapes:['N','RECT_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un rectangle figure la dureté, et le zigzag la conductivité."
     },
     {
         name: '_bwa',
@@ -1730,7 +1732,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-ed',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'faux'."
     },
     {
         name: '_mtai',
@@ -1739,7 +1741,7 @@ let graphieros_dictionnary = [
         fractal:'zw-we-ex-xw-wq-qz-ze-ed-dx',
         shapes:['N_rev','HEX'],
         type: 'ideo',
-        description: 'to do'
+        description: "La matière englobe toute la surface, et contient de la conductivité."
     },
     {
         name: '_lfe',
@@ -1748,7 +1750,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ed-dx-xz',
         shapes:['MEX_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Un oeil, une trompe, une grande oreille."
     },
     {
         name: '_chka',
@@ -1757,7 +1759,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qx-xd-dw-ze',
         shapes:['CROSS_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Un masque pour les yeux, pour la fête."
     },
     {
         name: '_msy',
@@ -1766,7 +1768,7 @@ let graphieros_dictionnary = [
         fractal:'qz-se-dx-xw-wz-ze-ex',
         shapes:['RECT'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte de kangourou sans la poche."
     },
     {
         name: '_mrai',
@@ -1775,7 +1777,7 @@ let graphieros_dictionnary = [
         fractal:'qd-zs-sw',
         shapes:['X_plur'],
         type: 'picto',
-        description: 'to do'
+        description: "L'empreinte d'une patte d'oiseau laissée dans la glaise."
     },
     {
         name: '_mno',
@@ -1784,7 +1786,7 @@ let graphieros_dictionnary = [
         fractal:'zx-ws-sd-qe',
         shapes:['KA'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'humain, avec un pénis."
     },
     {
         name: '_nfea',
@@ -1793,7 +1795,7 @@ let graphieros_dictionnary = [
         fractal:'qs-se-xs-wd',
         shapes:['KA','X_plur'],
         type: 'picto',
-        description: 'to do'
+        description: "Un humain à l'envers, comme abattu par la maladie."
     },
     {
         name: '_pro',
@@ -1802,7 +1804,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sw-qs-ex',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche arrêtée par un mur. Ce que l'on ressent quand on nous dit 'mais'."
     },
     {
         name: '_sna',
@@ -1811,7 +1813,7 @@ let graphieros_dictionnary = [
         fractal:'de-ex-xd-dq-qz-zs-sw-wq',
         shapes:['LOS_l','TRI_out_r','ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "D'un losange bien gras à un triangle isocèle aminci."
     },
     {
         name: '_lya',
@@ -1820,7 +1822,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wq-qz-ze-ed-dx-xw',
         shapes:['HEX','TRI_out_l'],
         type: 'picto',
-        description: 'to do'
+        description: "La lune et son croissant."
     },
     {
         name: '_hea',
@@ -1829,7 +1831,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zd-dw-qs-se-xs',
         shapes:['TRI_0','X_plur'],
         type: 'picto',
-        description: 'to do'
+        description: "Le triangle est probablement la forme la plus adaptée pour recueillir la couleur jaune, qui est probablement la plus adaptée pour figurer la lumière. Du centre émanent des rayons."
     },
     {
         name: '_lro',
@@ -1838,7 +1840,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-wx',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une pointe vers le bas pour figurer la pesanteur."
     },
     {
         name: '_lgya',
@@ -1847,7 +1849,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wd-dx-xs-se-ez',
         shapes:['DASH','E_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une variation du glyphe utilisé pour désigner le 'court', avec plus de longueur."
     },
     {
         name: '_fra',
@@ -1856,7 +1858,7 @@ let graphieros_dictionnary = [
         fractal:'qx-xe-ws-sd-dw',
         shapes:['TRI_in_br','PIC_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Le glyphe utilisé pour le verbe 'voir', incliné vers le haut, le lointain, le grand, le macroscopique."
     },
     {
         name: '_sti',
@@ -1865,7 +1867,7 @@ let graphieros_dictionnary = [
         fractal:'xq-xz-xe-xw-wq-qz-ze-ed-dx',
         shapes:['HEX','PIC_br'],
         type: 'ideo',
-        description: 'to do'
+        description: "Pas vraiment une liste, mais plus une jolie forme de coquillage."
     },
     {
         name: '_lpae',
@@ -1874,7 +1876,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-qd-wx',
         shapes:['EQ'],
         type: 'picto',
-        description: 'to do'
+        description: "Une bouche fermée, sa lèvre inférieure, et sa gouttière."
     },
     {
         name: '_lgy',
@@ -1883,7 +1885,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xw-we-qd',
         shapes:['X','tri_b','X_all'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner la terre, le légume ancre son bulbe sous la surface et lance ses feuilles vers le ciel."
     },
     {
         name: '_lgio',
@@ -1892,7 +1894,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wz-sx-xe',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme deux symboles cunéiformes sur une vieille tablette."
     },
     {
         name: '_ska',
@@ -1901,7 +1903,7 @@ let graphieros_dictionnary = [
         fractal:'zw-qd-dx-xs',
         shapes:['tri_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Un humain qui tiendrait un panier, dont il lancerait le contenu vers le ciel."
     },
     {
         name: '_klotogma',
@@ -1910,7 +1912,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xe-ez-zq-qw-wx-qs-sw',
         shapes:['TREC_str','PENTA_1','MEX_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_klomza',
@@ -1919,7 +1921,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-wq-qs-sx-ws',
         shapes:['C_l','LOS_bl','tri_b','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_klogma',
@@ -1928,7 +1930,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-wq-qs-sx-sw',
         shapes:['MEC_r','LOS_bl','tri_b','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_tli',
@@ -1937,7 +1939,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-ws-sd-ed-dx',
         shapes:['ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une direction vers l'avenir, précédée d'une fluctuation finalement résolue."
     },
     {
         name: '_kadwa',
@@ -1946,7 +1948,7 @@ let graphieros_dictionnary = [
         fractal:'zx-qe-ez-zq-qw-wx-xd-ds-sw',
         shapes:['KA','LOS_br','TRI_out_tl'],
         type: 'picto',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour désigner l'humain et le 'cycle' produit l'idée du 'jour'."
     },
     {
         name: '_3go',
@@ -1955,7 +1957,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ws-sx',
         shapes:['KA','DASH'],
         type: 'picto',
-        description: 'to do'
+        description: "Un humain et une balle. Cela suffit pour jouer."
     },
     {
         name: '_ntew',
@@ -1964,7 +1966,7 @@ let graphieros_dictionnary = [
         fractal:'sz-zw-ws-qd-de-ex',
         shapes:['ARR_dbl_r','PIPE','TRI_in_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'aller', avec la seconde flèche interrompue."
     },
     {
         name: '_nsa',
@@ -1973,7 +1975,7 @@ let graphieros_dictionnary = [
         fractal:'ze-es-sx-xw',
         shapes:['E_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "La forme inverse du glyphe utilisé pour désigner l'extérieur, qui ressemble à un E."
     },
     {
         name: '_kea',
@@ -1982,7 +1984,7 @@ let graphieros_dictionnary = [
         fractal:'zx-we-eq-qs-wz-zd-dw',
         shapes:['KA','X','TRI_0'],
         type: 'picto',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour désigner l'humain et la 'lumière' traduisent l'idée de l'intelligence."
     },
     {
         name: '_chra',
@@ -1991,7 +1993,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ex-xz',
         shapes:['PIC_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un bras d'honneur."
     },
     {
         name: '_pse',
@@ -2000,7 +2002,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qz-ze-ed-dx-qd-zs-se',
         shapes:['C_t','MEX_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse du glyphe utilisé pour désigner le 'trop', lui-même totalement arbitraire dans sa formulation."
     },
     {
         name: '_skew',
@@ -2009,7 +2011,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qz-ze-ed-dx-xw-wq-ex',
         shapes:['HEX','TRI_out_r'],
         type: 'picto',
-        description: 'to do'
+        description: "Un insecte avec sa carapace, fendue pour que des ailes s'en déploient, et une tête à l'avant. Peut-être quelque coccinelle."
     },
     {
         name: '_nfo',
@@ -2018,7 +2020,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xd',
         shapes:['Z'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le fil de l'information qui va et qui vient, comme une sinusoïde sans fin."
     },
     {
         name: '_ngla',
@@ -2027,7 +2029,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ew-wx-qd',
         shapes:['Z','EQ'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'égalité, mais avec une barre diagonale comme une négation."
     },
     {
         name: '_tso',
@@ -2036,7 +2038,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-es-sz',
         shapes:['tri_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte de panneau fiché dans le sol."
     },
     {
         name: '_knea',
@@ -2045,7 +2047,7 @@ let graphieros_dictionnary = [
         fractal:'de-ez-zq-qs-xe',
         shapes:['MEX_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un humain qui ferait une sorte de révérence, un bras replié vers son torse, un autre bras en arrière, et le dos voûté."
     },
     {
         name: '_kpie',
@@ -2054,7 +2056,7 @@ let graphieros_dictionnary = [
         fractal:'qw-we-ed-dx-xz',
         shapes:['X','LOS_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'idée d'identique, mais avec un segment manquant."
     },
     {
         name: '_fo',
@@ -2063,7 +2065,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wd-dz-ze-ex',
         shapes:['TRI_0'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'ordonner', avec un début de flèche vers le futur."
     },
     {
         name: '_stoia',
@@ -2072,7 +2074,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qe-ex-xq-zs-sw',
         shapes:['TRI_1','X_plur'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'voir', avec un panneau vertical, comme un écran projeté devant soi où se joueraient les images du désir."
     },
     {
         name: '_3ne',
@@ -2081,7 +2083,7 @@ let graphieros_dictionnary = [
         fractal:'zx-qs-se-eq',
         shapes:['TRI_in_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse du glyphe utilisé pour désigner l'idée de 'vieux', comme une canne inversée."
     },
     {
         name: '_dea',
@@ -2090,7 +2092,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qe-es-sx-wd',
         shapes:['TRI_in_tl','X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner la 'maladie', avec l'apposition d'un segment supplémentaire, comme l'amorce d'un traitement."
     },
     {
         name: '_si',
@@ -2099,7 +2101,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qz-ze-ex-sx-xd',
         shapes:['arr_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une longue flèche pointe vers le sol le lieu actuel désigné."
     },
     {
         name: '_r3a',
@@ -2108,7 +2110,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "En faisant le tour du cercle chromatique, c'est ici que le jaune vient rayonner."
     },
     {
         name: '_lgae',
@@ -2117,7 +2119,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sd-dz-zw-qe',
         shapes:['PIC_tl'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte d'humain figuré dans l'enjambement d'un obstacle sur le sol."
     },
     {
         name: '_fwo',
@@ -2126,7 +2128,7 @@ let graphieros_dictionnary = [
         fractal:'xz-zq-qd-de-ew',
         shapes:['X','X_all'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'dans', avec une ouverture."
     },
     {
         name: '_rzo',
@@ -2135,7 +2137,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qd-dx',
         shapes:['MEX_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une ligne droite, deux nuages, et une perspective renversée."
     },
     {
         name: '_hro',
@@ -2144,7 +2146,7 @@ let graphieros_dictionnary = [
         fractal:'zw-ex-qd',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre H."
     },
     {
         name: '_fro',
@@ -2153,7 +2155,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xw-ws-sd-dx-qe',
         shapes:['KA','LOS_br'],
         type: 'picto',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour 'femelle' et 'mâle'."
     },
     {
         name: '_pa',
@@ -2162,7 +2164,7 @@ let graphieros_dictionnary = [
         fractal:'ze',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un segment en haut, c'est bien le haut."
     },
     {
         name: '_kio',
@@ -2171,7 +2173,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wx-xe-ez-zq-qd-de',
         shapes:['RECT','MEX_t'],
         type: 'picto',
-        description: 'to do'
+        description: "La figuration d'une maison ou d'un pavillon, comme un enfant la dessinerait."
     },
     {
         name: '_dvie',
@@ -2180,7 +2182,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ex-xw-wq-qd-dx',
         shapes:['RECT','MEX_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un t-shirt posé à plat, venant d'être repassé."
     },
     {
         name: '_kwe',
@@ -2189,7 +2191,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ew-dz-zx',
         shapes:['X','CROSS_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte d'humain à deux têtes permet de désigner l'idée de groupe, de foule, de pluralité."
     },
     {
         name: '_gro',
@@ -2198,7 +2200,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-wq-qd-de-es-sx-xd',
         shapes:['MA','LOS_r','TRI_out_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "D'un triangle isocèle aminci à un losange bien gras."
     },
     {
         name: '_gva',
@@ -2207,7 +2209,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zq-qw-wx-xd-ds-zw',
         shapes:['TRI_out_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre G."
     },
     {
         name: '_gma',
@@ -2216,7 +2218,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-wq-qs-sw',
         shapes:['MEC_r','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_gra',
@@ -2225,7 +2227,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qw-wx-xd-de-ez-zx',
         shapes:['LOS_bl','MEX_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "Des formes larges, comme des tissus adipeux."
     },
     {
         name: '_tsae',
@@ -2234,7 +2236,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-wx-es-sd',
         shapes:['MEX_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte de bouche grande ouverte."
     },
     {
         name: '_sla',
@@ -2243,7 +2245,7 @@ let graphieros_dictionnary = [
         fractal:'qe-es-sd-wx',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un humain qui glisserait sur le sol, en faisant une figure artistique."
     },
     {
         name: '_gzai',
@@ -2252,7 +2254,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un tuyau, des particules en suspens."
     },
     {
         name: '_dray',
@@ -2261,7 +2263,7 @@ let graphieros_dictionnary = [
         fractal:'zw',
         shapes:['dash','PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une barre à gauche, c'est bien la gauche."
     },
     {
         name: '_kpae',
@@ -2270,7 +2272,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-ez-zw-wq-qd-dx-xe',
         shapes:['U_rev','tri_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme la tête d'un garde casqué, sur des épaules arnachées."
     },
     {
         name: '_ftu',
@@ -2279,7 +2281,7 @@ let graphieros_dictionnary = [
         fractal:'qd-zd-dw',
         shapes:['POINT_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers l'avenir, c'est le préfixe utilisé pour conjuguer les verbes au futur."
     },
     {
         name: '_fzo',
@@ -2288,7 +2290,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qz-ze-ed-dx-xw-wq',
         shapes:['HEX'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux formes en passe de devenir une seule."
     },
     {
         name: '_ray',
@@ -2297,7 +2299,7 @@ let graphieros_dictionnary = [
         fractal:'qw-we-xs-zd',
         shapes:['KA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un humain paniqué qui fuirait un incendie."
     },
     {
         name: '_ftae',
@@ -2306,7 +2308,7 @@ let graphieros_dictionnary = [
         fractal:'we-ze-ed-qx',
         shapes:[''],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'voler', avec un ancrage au sol qui en interdirait l'essor."
     },
     {
         name: '_fry',
@@ -2315,7 +2317,7 @@ let graphieros_dictionnary = [
         fractal:'xz-ze-ew-qd',
         shapes:['X','tri_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le ciel."
     },
     {
         name: '_gry',
@@ -2324,7 +2326,7 @@ let graphieros_dictionnary = [
         fractal:'qd-dz-ew-xs',
         shapes:['X_all','KA'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un humain dans le mouvement d'infliger une gifle."
     },
     {
         name: '_gew',
@@ -2333,7 +2335,7 @@ let graphieros_dictionnary = [
         fractal:'wz-qz-zs',
         shapes:['arr_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers le haut, c'est la force."
     },
     {
         name: '_fai',
@@ -2342,7 +2344,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-qs-xd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre F."
     },
     {
         name: '_fkai',
@@ -2351,7 +2353,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-wz-zx-we-qd',
         shapes:['X','RECT','X_all'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour désigner 'objet', 'programmer' et 'centrer', pour indiquer l'idée de fonctionnalité."
     },
     {
         name: '_blea',
@@ -2360,7 +2362,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qx-ed-dw',
         shapes:[''],
         type: 'picto',
-        description: 'to do'
+        description: "Une fleur, avec pétales, sépales et pistil."
     },
     {
         name: '_fni',
@@ -2369,7 +2371,7 @@ let graphieros_dictionnary = [
         fractal:'dz-zq-qw-wd-ex',
         shapes:['DIAM'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une barre verticale indique la fin."
     },
     {
         name: '_brea',
@@ -2377,8 +2379,8 @@ let graphieros_dictionnary = [
         path: [[l, q, r, q, lm, a, lm, w, r, q], [rm, a, rm, w]],
         fractal:'ex-qd-dz-zw-wd',
         shapes:['TRI_0'],
-        type: 'ideo',
-        description: 'to do'
+        type: 'picto',
+        description: "Une sorte d'entonnoir, muni d'un pressoir."
     },
     {
         name: '_fli',
@@ -2387,7 +2389,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-we-ed',
         shapes:['N','DASH'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un morceau de fil, tout simplement."
     },
     {
         name: '_lvia',
@@ -2396,7 +2398,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wd-qx-es',
         shapes:['PIC_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'végétal', avec un brin semblant s'en détacher."
     },
     {
         name: '_frey',
@@ -2405,7 +2407,7 @@ let graphieros_dictionnary = [
         fractal:'wx-xq-qd-dz',
         shapes:['N_l'],
         type: 'picto',
-        description: 'to do'
+        description: "Le mouvement du feu, ou de la fumée qui s'en échapppe."
     },
     {
         name: '_kloi',
@@ -2414,7 +2416,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-ex-qs',
         shapes:['C_l','TRI_out_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une barre verticale indique que l'issue est fermée."
     },
     {
         name: '_mna',
@@ -2423,7 +2425,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sd-dx-xw-ws-qe',
         shapes:['KA','LOS_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'humain, avec un vagin."
     },
     {
         name: '_kti',
@@ -2432,7 +2434,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-eq-qw-wx-xd-dz',
         shapes:['COL_b','CROSS_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un chat vu de face, allongé, les pattes repliées sous lui-même."
     },
     {
         name: '_nrea',
@@ -2441,7 +2443,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx',
         shapes:['DASH','TREC_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse du glyphe utilisé pour désigner le 'vrai'."
     },
     {
         name: '_sga',
@@ -2450,7 +2452,7 @@ let graphieros_dictionnary = [
         fractal:'zs-qs-se-ed-ex',
         shapes:['arr_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une faux passant sur les blés."
     },
     {
         name: '_fa',
@@ -2459,7 +2461,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-ez-qd-dx-xw-wq',
         shapes:['MEX_b','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le faire est lié au corps, c'est cette grande surface au niveau de la terre."
     },
     {
         name: '_vea',
@@ -2468,7 +2470,7 @@ let graphieros_dictionnary = [
         fractal:'zw-qw-ws',
         shapes:['arr_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers le bas, c'est la faiblesse."
     },
     {
         name: '_fsa',
@@ -2477,7 +2479,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ex-xq-qw-wx-xd-de-zs',
         shapes:['TRI_1','TRI_out_bl','TRI_out_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'une des faces d'un polygone est désignée par un trait."
     },
     {
         name: '_stre',
@@ -2486,7 +2488,7 @@ let graphieros_dictionnary = [
         fractal:'de-ex-xd',
         shapes:['TRI_out_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un coin à l'extrémité."
     },
     {
         name: '_stra',
@@ -2495,7 +2497,7 @@ let graphieros_dictionnary = [
         fractal:'zw-xe-qd-de-ew-wq',
         shapes:['arr_b','arr_t','PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "En un point l'on pousse, en l'autre il en sort quelque chose."
     },
     {
         name: '_tra',
@@ -2504,7 +2506,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zs-sw-wx',
         shapes:['E'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre E."
     },
     {
         name: '_vlye',
@@ -2513,7 +2515,7 @@ let graphieros_dictionnary = [
         fractal:'zw-se-ed-dx-xs',
         shapes:['LOS_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Du point, vers le segment, vers la surface. L'évolution figurée par le passage d'une dimension supplémentaire."
     },
     {
         name: '_vne',
@@ -2522,7 +2524,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq-qd-ex-sz-zw-ws',
         shapes:['HEX'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour les verbes 'aller' et 'planifier'."
     },
     {
         name: '_stea',
@@ -2531,7 +2533,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zd-dw-xe-eq-qx',
         shapes:['TRI_2'],
         type: 'picto',
-        description: 'to do'
+        description: "La façon la plus classique de représenter une étoile avec les points d'un hexagone."
     },
     {
         name: '_meama',
@@ -2540,7 +2542,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xd-de-eq-qw-wd',
         shapes:['MA','RECT_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour les verbes 'être' et 'déterminer' produit le préfixe du gérondif."
     },
     {
         name: '_te',
@@ -2549,7 +2551,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-qs-ed-dx',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Rappelle de loin les lettres ET."
     },
     {
         name: '_bia',
@@ -2558,7 +2560,7 @@ let graphieros_dictionnary = [
         fractal:'ze-qd-ws-sx-xw',
         shapes:['EQ','tri_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une balance dans un parfait équilibre."
     },
     {
         name: '_kdea',
@@ -2567,7 +2569,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-we-ds',
         shapes:['TREC_sbr','Z'],
         type: 'picto',
-        description: 'to do'
+        description: "Une tête de cheval, droite comme un cavalier."
     },
     {
         name: '_nto',
@@ -2576,7 +2578,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ew-wx-qe-wd',
         shapes:['Z'],
         type: 'ideo',
-        description: 'to do'
+        description: "La figuration d'une forme pliée entre deux axes."
     },
     {
         name: '_srye',
@@ -2585,7 +2587,7 @@ let graphieros_dictionnary = [
         fractal:'zq-ed-wx',
         shapes:['N_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Trois segments entourent un point."
     },
     {
         name: '_sko',
@@ -2594,7 +2596,7 @@ let graphieros_dictionnary = [
         fractal:'ds-se-ez-zw-wx-xs',
         shapes:['MEC_l','E_rev'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une oreille, avec une flèche indiquant le passage des ondes sonores."
     },
     {
         name: '_nki',
@@ -2603,7 +2605,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ex-xw-qs',
         shapes:['RECT'],
         type: 'picto',
-        description: 'to do'
+        description: "Le passaged d'une lame sur une surface, pour y laisser une entaille."
     },
     {
         name: '_kdie',
@@ -2612,7 +2614,7 @@ let graphieros_dictionnary = [
         fractal:'we-ex-xw-qs-zd',
         shapes:['KA','TREC_sbr'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'humain, mais celui-ci serait encore dans un landeau ou une poussette."
     },
     {
         name: '_3ia',
@@ -2621,7 +2623,7 @@ let graphieros_dictionnary = [
         fractal:'ew-wx-xq-qd-dz',
         shapes:['N_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'feu'."
     },
     {
         name: '_ni',
@@ -2630,7 +2632,7 @@ let graphieros_dictionnary = [
         fractal:'wx',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un segment en bas, c'est le bas."
     },
     {
         name: '_nwo',
@@ -2639,7 +2641,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sq-qw-wz-ze-ex-xw',
         shapes:['RECT','arr_b','tri_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers le bas dans un cadre fini, évoque le concept 'en'."
     },
     {
         name: '_pkoi',
@@ -2648,7 +2650,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq-qe-ex-zs-sd-ws',
         shapes:['HEX','X_plur','PIC_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un objet dans une boîte."
     },
     {
         name: '_skoi',
@@ -2657,7 +2659,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xw-ws-de-eq-qz-ze',
         shapes:['KA', 'COL_t','TRI_out_tl','tri_b'],
         type: 'picto',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour désigner l'humain et le verbe avoir. Avoir de l'humanité, c'est ressentir des émotions."
     },
     {
         name: '_vzu',
@@ -2666,7 +2668,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-we-ex-xd',
         shapes:['N_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "Figurée par le courant alternatif."
     },
     {
         name: '_gla',
@@ -2675,7 +2677,7 @@ let graphieros_dictionnary = [
         fractal:'ze-qd-wx',
         shapes:['EQ'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un triple égal, l'égalité absolue."
     },
     {
         name: '_fke',
@@ -2684,7 +2686,7 @@ let graphieros_dictionnary = [
         fractal:'xd-de-ez-zq-qd-zs',
         shapes:['ARR_r','tri_tl','MEX_t','LOS_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour 'de' et 'vers'."
     },
     {
         name: '_to',
@@ -2693,7 +2695,7 @@ let graphieros_dictionnary = [
         fractal:'ze-qw-ws-sx-xd',
         shapes:['W'],
         type: 'picto',
-        description: 'to do'
+        description: "Les anciens Egyptiens représentaient l'eau un peu de cette façon. C'est un hommage."
     },
     {
         name: '_drye',
@@ -2702,7 +2704,7 @@ let graphieros_dictionnary = [
         fractal:'dz-zs-sw-wd',
         shapes:['POINT_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "La pointe d'une flèche, coulée dans un métal dur comme l'airain. Monumentum aere perennius."
     },
     {
         name: '_drei',
@@ -2711,7 +2713,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wz-ze-ex-xd-zs-se',
         shapes:['U_rev','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une façon totalement arbitraire de désigner la dureté."
     },
     {
         name: '_drya',
@@ -2720,7 +2722,7 @@ let graphieros_dictionnary = [
         fractal:'ex',
         shapes:['PIPE','DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une barre à droite, c'est la droite."
     },
     {
         name: '_dro',
@@ -2729,7 +2731,7 @@ let graphieros_dictionnary = [
         fractal:'zw-ex',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "Droit, comme deux piquets."
     },
     {
         name: '_rdwa',
@@ -2738,7 +2740,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sd-dx-xw-wq-qz-zd',
         shapes:['LOS_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un drap dans l'action d'être plié."
     },
     {
         name: '_rmi',
@@ -2747,7 +2749,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ed-dx-xq-sz-zw-ws',
         shapes:['TRI_in_l','DIAM'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'voir', dans l'univers refermé songe."
     },
     {
         name: '_glo',
@@ -2756,7 +2758,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zw-ws-sq',
         shapes:['arr_b','TREC_stl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un choix totalement arbitraire."
     },
     {
         name: '_dku',
@@ -2765,7 +2767,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zw-wx-ds',
         shapes:['MEC_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe traverser, avec l'idée que la traversée à déjà eu lieu, pour illustrer la conséquentialité."
     },
     {
         name: '_dvi',
@@ -2774,7 +2776,7 @@ let graphieros_dictionnary = [
         fractal:'ew',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme le signe /"
     },
     {
         name: '_dme',
@@ -2783,7 +2785,7 @@ let graphieros_dictionnary = [
         fractal:'de-ez-zw-wx-xd',
         shapes:['PENTA_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre D."
     },
     {
         name: '_dvey',
@@ -2792,7 +2794,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xd-de-ew',
         shapes:['X','LOS_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l''identique'."
     },
     {
         name: '_dvo',
@@ -2801,7 +2803,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ex-zs-se',
         shapes:['U_rev','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé des glyphes utilisé pour les verbes 'ordonner' et 'porgrammer'."
     },
     {
         name: '_dva',
@@ -2810,7 +2812,7 @@ let graphieros_dictionnary = [
         fractal:'qd-de-ex-xd',
         shapes:['ARR_r','TRI_out_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche imposante vers l'avant."
     },
     {
         name: '_dzye',
@@ -2819,7 +2821,7 @@ let graphieros_dictionnary = [
         fractal:'xe-dz-zs-sd-qw',
         shapes:['TRI_in_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une hâche prête à s'abattre sur une bûche."
     },
     {
         name: '_nbia',
@@ -2828,7 +2830,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-qd-ws-sx-xw',
         shapes:['tri_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'équilibrer', comme une balance déséquilibrée par un poids plus important d'un côté."
     },
     {
         name: '_dre',
@@ -2837,7 +2839,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qz-zw-wq',
         shapes:['ARR_l','tri_out_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche imposante vers l'arrière."
     },
     {
         name: '_fmai',
@@ -2846,7 +2848,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-dq',
         shapes:['ARR_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche vers l'arrière, pour désigner la provenance."
     },
     {
         name: '_chna',
@@ -2855,7 +2857,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-wd-ed-dx-xq',
         shapes:['MA','CROSS_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'masquer'. Le masque est tombé, on en voit les fils."
     },
     {
         name: '_dle',
@@ -2864,7 +2866,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qz-zs-se-ed-dx-xw-wq',
         shapes:['M','C_b','MEX_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'un des glyphes de goût, dérivé du glyphe utilisé pour désigner les lèvres."
     },
     {
         name: '_d3a',
@@ -2873,7 +2875,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sw-sd-de-ex-xd',
         shapes:['X_plur','TRI_out_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'aller', mais avec l'une des flèches à peine esquissée, comme pour signifier qu'on serait déjà arrivé."
     },
     {
         name: '_klue',
@@ -2882,7 +2884,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qe-ex-xd-dz',
         shapes:['PIC_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse du glyphe utilisé pour désigner la 'qualité', et comme lui, peut s'utiliser en préfixe."
     },
     {
         name: '_dfo',
@@ -2891,7 +2893,7 @@ let graphieros_dictionnary = [
         fractal:'qx-wz-ze-ed-dw-we',
         shapes:['DIAM','TREC_stl','TREC_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse du glyphe utilisé pour le verbe 'vaincre', comme une flèche plantée dans un corps à terre."
     },
     {
         name: '_3i',
@@ -2900,7 +2902,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zq-qw-xe-ed-dx',
         shapes:['MA','TRI_out_r','TRI_out_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux pans s'acartant, pour découvrir une particule au centre."
     },
     {
         name: '_ktye',
@@ -2909,7 +2911,7 @@ let graphieros_dictionnary = [
         fractal:'zw-qe-sd-dx-xs',
         shapes:['tri_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une paire de ciseaux et un morceau de papier triangulaire."
     },
     {
         name: '_dsimza',
@@ -2918,7 +2920,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-ws-sq',
         shapes:['PENTA_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_dsigma',
@@ -2927,7 +2929,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-ws-sq',
         shapes:['MEC_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_trie',
@@ -2936,7 +2938,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-ws-xd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une sorte de balai, qui viendrait ramasser deux segments sur le sol."
     },
     {
         name: '_da',
@@ -2945,7 +2947,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-zs',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un choix totalement arbitraire pour désigner cette préposition."
     },
     {
         name: '_dfie',
@@ -2954,7 +2956,7 @@ let graphieros_dictionnary = [
         fractal:'dx-xe-ez-zq-qs-sz-eq',
         shapes:['tri_tl','TRI_out_tl'],
         type: 'picto',
-        description: 'to do'
+        description: "Figuré dans le saut caractéristique et superbe de cet animal sublime."
     },
     {
         name: '_dse',
@@ -2963,7 +2965,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ex-ws-zd',
         shapes:['PIC_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un humain qui danserait une sorte de fox trot, avec tant de célérité qu'on lui verrait trois jambes."
     },
     {
         name: '_di',
@@ -2972,7 +2974,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xw-we-ed-dq',
         shapes:['X_all','X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un glyphe où tout pousse à regarder le centre, comme trois pointes désignant ce qui est 'dans'."
     },
     {
         name: '_d3e',
@@ -2981,7 +2983,7 @@ let graphieros_dictionnary = [
         fractal:'sz-zd-dw-wz',
         shapes:['TRI_0'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme le panneau danger, avec son point d'exclamation fiché dans un triangle."
     },
     {
         name: '_dwa',
@@ -2990,7 +2992,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zq-qw-wx-xd-ds-sw',
         shapes:['LOS_br'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une spirale repliée sur elle-même."
     },
     {
         name: '_kraw',
@@ -2999,7 +3001,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wq-qz-ze-ed-dx-xe',
         shapes:['U_rev','TRI_out_r','TRI_out_l'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une sorte de crabe avec deux belles pinces."
     },
     {
         name: '_grae',
@@ -3008,7 +3010,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wx-zw-wd-ew',
         shapes:['PIC_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une graîne de laquelle jailliraient des tiges végétales."
     },
     {
         name: '_kru',
@@ -3017,7 +3019,7 @@ let graphieros_dictionnary = [
         fractal:'qe-dz',
         shapes:['CROSS_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux segments croisés, tout simplement."
     },
     {
         name: '_kro',
@@ -3026,7 +3028,7 @@ let graphieros_dictionnary = [
         fractal:'ze-es-sx-xw-eq-qx',
         shapes:['E_rev','POINT_l'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme la bouche d'un poisson, prête à gober n'importe-quoi."
     },
     {
         name: '_kri',
@@ -3034,8 +3036,8 @@ let graphieros_dictionnary = [
         path: [[lm, a, m, q], [l, q, lm, w, r, q, rm, a, rm, w]],
         fractal:'qw-wd-de-ex-zs',
         shapes:['RECT_r'],
-        type: 'ideo',
-        description: 'to do'
+        type: 'picto',
+        description: "Une sorte de bouche ouverte, avec la langue dehors, pour figurer un cri."
     },
     {
         name: '_kvae',
@@ -3044,7 +3046,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wx-xe-ed-dq-qz-zs-se',
         shapes:['U','M','arr_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un toit qui serait déposé sur un édifice."
     },
     {
         name: '_kry',
@@ -3053,7 +3055,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wd-dx',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un petit fil."
     },
     {
         name: '_krye',
@@ -3062,7 +3064,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wd-de-es-sq-qe',
         shapes:['RECT_r','TRI_in_tl'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une enveloppe. On ne pouvait pas rêver meilleure représentation."
     },
     {
         name: '_klo',
@@ -3071,7 +3073,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qe-ez-zw-wx-xq',
         shapes:['POINT_l','MEC_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'voir', avec un plan situé à la base de l'oeil, là où se forment les couleurs. C'est aussi un préfixe."
     },
     {
         name: '_kte',
@@ -3080,7 +3082,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wx-xd-de-eq-wd-zs',
         shapes:['RECT_r','TRI_out_br'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un trait désigne le côté d'un polygone."
     },
     {
         name: '_bdi',
@@ -3089,7 +3091,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zq-qx-xe-ed-dw',
         shapes:['MA','PIPE'],
         type: 'picto',
-        description: 'to do'
+        description: "C'est la figuration d'un corps auquel il manquerait une tête. On y voit le nombril."
     },
     {
         name: '_sno',
@@ -3098,7 +3100,7 @@ let graphieros_dictionnary = [
         fractal:'qs-ed-dx',
         shapes:['MA','DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "dérivé du glyphe utilisé pour désigner le 'moins'."
     },
     {
         name: '_kpoi',
@@ -3106,8 +3108,8 @@ let graphieros_dictionnary = [
         path: [[r, q, rm, a, rm, w, r, q, m, q], [lm, a, r, q, lm, w], [l, q, l, q]],
         fractal:'de-ex-xd-ds-zd-dw',
         shapes:['POINT_r','TRI_out_r'],
-        type: 'ideo',
-        description: 'to do'
+        type: 'picto',
+        description: "En hommage au Spoutnik, qui continua d'emettre, et preuve de la persévérance des humains dans l'esprit de conquête."
     },
     {
         name: '_ksea',
@@ -3116,7 +3118,7 @@ let graphieros_dictionnary = [
         fractal:'ex-dz-zq-qs-sw',
         shapes:['CROSS_t'],
         type: 'picto',
-        description: 'to do'
+        description: "Dans la lignée des glyphes utilisés pour les verbes 'travailler', 'réparer', c'est un humain armé d'un outil."
     },
     {
         name: '_knoi',
@@ -3125,7 +3127,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-ed-dx-qd',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un segment horizontal relie deux parenthèses."
     },
     {
         name: '_kno',
@@ -3134,7 +3136,7 @@ let graphieros_dictionnary = [
         fractal:'xw-wq-qz-ze-ed-dw-ws',
         shapes:['PENTA_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une flèche revient à sa base, c'est le cycle de la connaissance."
     },
     {
         name: '_kfay',
@@ -3143,7 +3145,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wq-qz-zs-qd-ed-dx',
         shapes:['MA','ARR_r','TRI_out_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "La confusion est évoquée par l'indécision quant à la forme choisie à gauche du glyphe."
     },
     {
         name: '_troi',
@@ -3152,7 +3154,7 @@ let graphieros_dictionnary = [
         fractal:'qw-we-dx-xz',
         shapes:['X'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme deux épées croisant le fer."
     },
     {
         name: '_hi',
@@ -3161,7 +3163,7 @@ let graphieros_dictionnary = [
         fractal:'eq-qx-zd-dw',
         shapes:['HI'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'avenir et le passé se croisant dans la formation d'une hypothèse."
     },
     {
         name: '_kteu',
@@ -3170,7 +3172,7 @@ let graphieros_dictionnary = [
         fractal:'xe-eq-qx-wz-zs-sw-ds',
         shapes:['TRI_l','TRI_in_l','X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour le verbe 'voir' et le 'pluriel'."
     },
     {
         name: '_plea',
@@ -3179,7 +3181,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sw-se-ex-xd-ds',
         shapes:['X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Depuis une forme simple, vers une forme intriquée."
     },
     {
         name: '_haw',
@@ -3188,7 +3190,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-qx-wx-xd',
         shapes:['POINT_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'interroger'."
     },
     {
         name: '_fta',
@@ -3197,7 +3199,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qz-zd-dw-wq',
         shapes:['POINT_r','DIAM'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une flèche encore inachevée."
     },
     {
         name: '_ki',
@@ -3206,7 +3208,7 @@ let graphieros_dictionnary = [
         fractal:'zw-ws-qd-dx',
         shapes:['LOS_br'],
         type: 'picto',
-        description: 'to do'
+        description: "La figuration d'une véritable clé."
     },
     {
         name: '_rkai',
@@ -3215,7 +3217,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ds-sx-xw',
         shapes:['DASH','Z_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "Relier, classer... relier, classer... relier..."
     },
     {
         name: '_srie',
@@ -3224,7 +3226,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-we-ex-xd-dq',
         shapes:['N_rev'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'électricité, dans un circuit fermé."
     },
     {
         name: '_kwo',
@@ -3233,7 +3235,7 @@ let graphieros_dictionnary = [
         fractal:'wz-ze-ex-xw-qd',
         shapes:['RECT'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un rectangle incisé dans le sens de la largeur."
     },
     {
         name: '_skai',
@@ -3242,7 +3244,7 @@ let graphieros_dictionnary = [
         fractal:'xz-ze-ew',
         shapes:['X','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Des fondations en haut, et des bras vers la terre. Ainsi des nuées."
     },
     {
         name: '_swa',
@@ -3251,7 +3253,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wx-xe',
         shapes:['U'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse du glyphe utilisé pour le vebe 'ordonner', comme une ouverture vers le ciel et la liberté."
     },
     {
         name: '_sdae',
@@ -3260,7 +3262,7 @@ let graphieros_dictionnary = [
         fractal:'qs-sz-zq-xd',
         shapes:['tri_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une pointe désine un segment, et le ferait à chaque fois."
     },
     {
         name: '_sni',
@@ -3269,7 +3271,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-wx-xd-qs-sx-xq',
         shapes:['LOS_bl','TRI_out_bl','TRI_in_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une bouche ouverte, au fond de laquelle se distinguerait une luette vibrante."
     },
     {
         name: '_fgy',
@@ -3278,7 +3280,7 @@ let graphieros_dictionnary = [
         fractal:'qx-xe-ed-ds-se',
         shapes:['arr_t','PIC_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un champignon sorti du sol, avec quelques spores."
     },
     {
         name: '_fle',
@@ -3287,7 +3289,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zq-qw-wx-xe-eq-qx-xs-se',
         shapes:['POINT_l','PENTA_l','TRI_out_tl','TRI_out_bl','TRI_in_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une incision sur un morceau de peau en révèle la chair."
     },
     {
         name: '_bzea',
@@ -3296,7 +3298,7 @@ let graphieros_dictionnary = [
         fractal:'zx-xw-wd-qs-se',
         shapes:['KA'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme les bois nobles de la tête d'un cervidé."
     },
     {
         name: '_srea',
@@ -3305,7 +3307,7 @@ let graphieros_dictionnary = [
         fractal:'xq-qw-wx-xd-de-ex-zs',
         shapes:['PIC_br','TRI_out_r','TRI_out_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "L'épi du blé, piquant et bien ordonné, pointé vers le ciel avant la récolte."
     },
     {
         name: '_tru',
@@ -3314,7 +3316,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qz-ze-ed-dx-xw-wq',
         shapes:['HEX'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comment figurer un cercle avec un hexagone? Dans le doute, on indiqua le rayon."
     },
     {
         name: '_sye',
@@ -3323,7 +3325,7 @@ let graphieros_dictionnary = [
         fractal:'zx-we-qd',
         shapes:['X_all'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un point perspectif au centre de la forme."
     },
     {
         name: '_stimza',
@@ -3332,7 +3334,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-ws',
         shapes:['C_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_stigma',
@@ -3341,7 +3343,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-ws',
         shapes:['MEC_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un des glyphes de mesure, avec son système arbitraire."
     },
     {
         name: '_sley',
@@ -3350,7 +3352,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zq-qw-wx',
         shapes:['C_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre C. Cellule ouverte d'où peuvent entrer et sortir des informations."
     },
     {
         name: '_de',
@@ -3359,7 +3361,7 @@ let graphieros_dictionnary = [
         fractal:'ze-wx',
         shapes:['EQ','DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une désignation aribtraire."
     },
     {
         name: '_kzo',
@@ -3368,7 +3370,7 @@ let graphieros_dictionnary = [
         fractal:'wq-qz-ze-dq-zs',
         shapes:['tri_tl','MEX_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour déigner 'de' et 'depuis'."
     },
     {
         name: '_gzo',
@@ -3377,7 +3379,7 @@ let graphieros_dictionnary = [
         fractal:'xw-wd-dz',
         shapes:['POINT_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "La forme inverse du glyphe utilisé pour le verbe 'questionner'. Comme un point d'interrogation à l'envers."
     },
     {
         name: '_knew',
@@ -3386,7 +3388,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qx-xd-ws',
         shapes:['RECT_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un canon lançant un boulet."
     },
     {
         name: '_klio',
@@ -3395,7 +3397,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zw-ws-sd-qx',
         shapes:[''],
         type: 'picto',
-        description: 'to do'
+        description: "Comme la tête d'un de ces chiens aux longues oreilles, flottant en arrière pendant la course."
     },
     {
         name: '_rko',
@@ -3404,7 +3406,7 @@ let graphieros_dictionnary = [
         fractal:'xz-zw-wx-xd-dz',
         shapes:['DIAM','TREC_sbl','TREC_br'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte de diamant taillé pour illustrer la pierre."
     },
     {
         name: '_glio',
@@ -3413,7 +3415,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qz-ze-ex-wx-xd',
         shapes:['LOS_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de flèche parcourant une part de circonférence, avant de tomber à pic."
     },
     {
         name: '_bze',
@@ -3422,7 +3424,7 @@ let graphieros_dictionnary = [
         fractal:'ez-zq-qd-dx-xw-zx',
         shapes:['X','tri_tl','tri_br','Z_rev'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme le signe $"
     },
     {
         name: '_bra',
@@ -3431,7 +3433,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sd-dw-wz-qx',
         shapes:['PIC_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte d'humain qui, sautant un obstacle, lancerait des bras forts en l'air."
     },
     {
         name: '_dvea',
@@ -3440,7 +3442,7 @@ let graphieros_dictionnary = [
         fractal:'ex-xw-zx-qs',
         shapes:['DASH'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme les branches d'un arbre."
     },
     {
         name: '_bo',
@@ -3449,7 +3451,7 @@ let graphieros_dictionnary = [
         fractal:'zx-es-wd',
         shapes:['KA'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme une tête avec des cornes, et aussi, curieusement, l'inverse du glyphe utilisé pour désigner l'humain..."
     },
     {
         name: '_bu',
@@ -3458,7 +3460,7 @@ let graphieros_dictionnary = [
         fractal:'qs-se-ez-zw-wx-xd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "La figuration d'un lacet faisant une boucle."
     },
     {
         name: '_blu',
@@ -3467,7 +3469,7 @@ let graphieros_dictionnary = [
         fractal:'wx-xd',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "En faisant le tour du cercle chromatique, c'est ici que le bleu se repose."
     },
     {
         name: '_keo',
@@ -3476,7 +3478,7 @@ let graphieros_dictionnary = [
         fractal:'qw-we-xd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'vrai'."
     },
     {
         name: '_bly',
@@ -3485,7 +3487,7 @@ let graphieros_dictionnary = [
         fractal:'sz-zq-qw-ws-sq-ze-ex-xd-dw',
         shapes:['LOS_l','CROSS_b','tri_tl','tri_bl'],
         type: 'picto',
-        description: 'to do'
+        description: "Baleine, bouche ouverte, fanons dehors."
     },
     {
         name: '_zaw',
@@ -3494,7 +3496,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xd-de-ew-wq-zw-ex',
         shapes:['PIPE','X','LOS_l','LOS_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé des glyphes utilisés pour désigner l'identique et le 'droit'."
     },
     {
         name: '_vi',
@@ -3503,7 +3505,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zx-xe-ew-qd',
         shapes:['X','X_all','TRI_in_l','TRI_in_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux flèches se touchant au niveau de la pointe."
     },
     {
         name: '_ntea',
@@ -3512,7 +3514,7 @@ let graphieros_dictionnary = [
         fractal:'sq-qz-zw-wq',
         shapes:['TRI_out_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une petite flèche grasse vers le passé."
     },
     {
         name: '_rpa',
@@ -3521,7 +3523,7 @@ let graphieros_dictionnary = [
         fractal:'qd-de-es-zw',
         shapes:['tri_tr'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme un humain muni d'un filet prêt à attraper un papillon."
     },
     {
         name: '_spea',
@@ -3530,7 +3532,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-se-ex',
         shapes:['PIPE'],
         type: 'picto',
-        description: 'to do'
+        description: "Comme deux humains l'un derrière l'autre, faisant la queue."
     },
     {
         name: '_tmei',
@@ -3539,7 +3541,7 @@ let graphieros_dictionnary = [
         fractal:'we-ex-qd',
         shapes:['X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre A."
     },
     {
         name: '_ktea',
@@ -3548,7 +3550,7 @@ let graphieros_dictionnary = [
         fractal:'ed-dx-qd-zw',
         shapes:['ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner 'vers', avec une barre verticale pour l'arrêter."
     },
     {
         name: '_rkye',
@@ -3557,7 +3559,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-es-zw',
         shapes:['DASH'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte étrange d'araignée avec quelques pattes en moins."
     },
     {
         name: '_ftea',
@@ -3566,7 +3568,7 @@ let graphieros_dictionnary = [
         fractal:'sd-de-ex-xd',
         shapes:['TRI_out_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une petite flèche grasse vers l'avenir."
     },
     {
         name: '_znie',
@@ -3575,7 +3577,7 @@ let graphieros_dictionnary = [
         fractal:'de-eq-qs-sx-xw-wz',
         shapes:['TREC_htr','TREC_sbl'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte d'humain qui viendrait appuyer du bras sur quelque chose d'absent."
     },
     {
         name: '_zai',
@@ -3584,7 +3586,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-xw-wq-qz-ze-ed-dx',
         shapes:['HEX','tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un triangle apparaît dans un hexagone."
     },
     {
         name: '_piz',
@@ -3593,7 +3595,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zw-ws-sd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le passage d'une oscillation vers le calme plat."
     },
     {
         name: '_kpaw',
@@ -3602,7 +3604,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qx-xs-sw-wd-de',
         shapes:['CROSS_b'],
         type: 'picto',
-        description: 'to do'
+        description: "La figuration d'une antenne sur un toit."
     },
     {
         name: '_pkia',
@@ -3611,7 +3613,7 @@ let graphieros_dictionnary = [
         fractal:'qe-ez-zq-qw-wx-xs-se',
         shapes:['ARR_db_l','TRI_out_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une bouche ouverte vers l'avenir."
     },
     {
         name: '_glei',
@@ -3620,7 +3622,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex',
         shapes:['DASH','TREC_str'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux segments avec un angle droit."
     },
     {
         name: '_mrya',
@@ -3628,8 +3630,8 @@ let graphieros_dictionnary = [
         path: [[l, q, rm, w, rm, a, r, q, lm, w, l, q, rm, a], [lm, a, m, q]],
         fractal:'qw-wd-de-eq-qx-xe-zs',
         shapes:['PIC_br','RECT_r'],
-        type: 'ideo',
-        description: 'to do'
+        type: 'picto',
+        description: "Comme un haut-parleur duquel sortirait une onde sonore."
     },
     {
         name: '_mre',
@@ -3638,7 +3640,7 @@ let graphieros_dictionnary = [
         fractal:'qd-de-es-sz-zq-wx',
         shapes:['M','tri_tl','tri_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'n des glyphes du goût, dérivé du glyphe utilisé pour désigner les lèvres."
     },
     {
         name: '_prba',
@@ -3647,7 +3649,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zd-dw-ws-sd-zs',
         shapes:['TRI_0','X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une pyramide triangulaire vue d'en haut. La phonologie fait aussi référence à la pyramide. Un joli symbole pour cette vieille idée."
     },
     {
         name: '_tae',
@@ -3656,7 +3658,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-xw-wd',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un coup en haut, un coup en bas."
     },
     {
         name: '_slio',
@@ -3665,7 +3667,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sd-ed-dx',
         shapes:['ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de flèche vers l'avenir, qui serait héritée d'un étage supérieur."
     },
     {
         name: '_le',
@@ -3674,7 +3676,7 @@ let graphieros_dictionnary = [
         fractal:'qd-de-ex-xd-sz-zw-ws',
         shapes:['ARR_r','TRI_out_r','TRI_in_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux flèches vers l'avenir, pour illustrer le mouvement qui y mène."
     },
     {
         name: '_hio',
@@ -3683,7 +3685,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-ze',
         shapes:['DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une pointe vers le haut pour figurer la légèreté."
     },
     {
         name: '_lea',
@@ -3692,7 +3694,7 @@ let graphieros_dictionnary = [
         fractal:'ex-qd-dw',
         shapes:['TREC_hbl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un humain lançant une pièce."
     },
     {
         name: '_fsu',
@@ -3701,7 +3703,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xd-de-ew-wq-qd',
         shapes:['X','X_all','MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'identique, l'ajustement se fait bord à bord."
     },
     {
         name: '_hae',
@@ -3710,7 +3712,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-qs-sx-we',
         shapes:['ARR_dbl_r','ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux flèches vers le ciel, légères comme l'air."
     },
     {
         name: '_kli',
@@ -3719,7 +3721,7 @@ let graphieros_dictionnary = [
         fractal:'xq-qz-zw-wd-ds',
         shapes:['PIC_bl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Préfixe de qualité, utilisé pour changer un verbe en adjectif. Sa forme est totalement arbitraire."
     },
     {
         name: '_nmae',
@@ -3728,7 +3730,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zx-xe',
         shapes:['N'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme la lettre N."
     },
     {
         name: '_zno',
@@ -3737,7 +3739,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq-wz-zd-zs-sd-ws',
         shapes:['HEX','PIC_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Onze segments."
     },
     {
         name: '_dza',
@@ -3746,7 +3748,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq-wz-zs-sd-ws',
         shapes:['HEX','X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dix segments."
     },
     {
         name: '_nwa',
@@ -3755,7 +3757,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dx-xw-wq-qz-zs-sd-ws',
         shapes:['HEX','X_plur'],
         type: 'ideo',
-        description: 'to do'
+        description: "Neuf segments."
     },
     {
         name: '_sme',
@@ -3764,7 +3766,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xd-de-ew-wq',
         shapes:['X','LOS_l','LOS_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux formes identiques."
     },
     {
         name: '_tsio',
@@ -3773,7 +3775,7 @@ let graphieros_dictionnary = [
         fractal:'qz-zx-xd-de-ew-wq',
         shapes:['X','LOS_l','LOS_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Huit segments."
     },
     {
         name: '_stei',
@@ -3782,7 +3784,7 @@ let graphieros_dictionnary = [
         fractal:'dq-qz-ze-ed-dx-xw-wq',
         shapes:['HEX','MEX_t','MEX_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Sept segments."
     },
     {
         name: '_ksi',
@@ -3791,7 +3793,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq',
         shapes:['HEX'],
         type: 'ideo',
-        description: 'to do'
+        description: "Six segments."
     },
     {
         name: '_foi',
@@ -3800,7 +3802,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-wz-qd',
         shapes:['RECT'],
         type: 'ideo',
-        description: 'to do'
+        description: "Cinq segments."
     },
     {
         name: '_ktu',
@@ -3809,7 +3811,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ex-xw-wz',
         shapes:['RECT'],
         type: 'ideo',
-        description: 'to do'
+        description: "Quatre segments."
     },
     {
         name: '_srei',
@@ -3818,7 +3820,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zd-dw',
         shapes:['TRI_0'],
         type: 'ideo',
-        description: 'to do'
+        description: "Trois segments."
     },
     {
         name: '_du',
@@ -3827,7 +3829,7 @@ let graphieros_dictionnary = [
         fractal:'wz-zd',
         shapes:['PIC_tl'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux segments."
     },
     {
         name: '_kfa',
@@ -3836,7 +3838,7 @@ let graphieros_dictionnary = [
         fractal:'wz',
         shapes:['PIPE'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un segment."
     },
     {
         name: '_sro',
@@ -3845,7 +3847,7 @@ let graphieros_dictionnary = [
         fractal:'zx-we-qd',
         shapes:['X_all'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le centre perspectif, c'est aussi le point de départ des nombres."
     },
     {
         name: '_,',
@@ -3854,7 +3856,7 @@ let graphieros_dictionnary = [
         fractal:'es-sx',
         shapes:['ARR_db,l','DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme le symbole utilisé pour la virgule."
     },
     {
         name: '_!',
@@ -3863,7 +3865,7 @@ let graphieros_dictionnary = [
         fractal:'qw-zs-ed',
         shapes:['EQ','DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de point d'exclamation !"
     },
     {
         name: '_?',
@@ -3872,7 +3874,7 @@ let graphieros_dictionnary = [
         fractal:'ze-eq-qx',
         shapes:['POINT_l'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de point d'interrogation."
     },
     {
         name: '_.',
@@ -3881,7 +3883,7 @@ let graphieros_dictionnary = [
         fractal:'ss',
         shapes:[''],
         type: 'ideo',
-        description: 'to do'
+        description: "Un point, comme un rien."
     },
     {
         name: '_mea',
@@ -3890,7 +3892,7 @@ let graphieros_dictionnary = [
         fractal:'zx-qe-wd',
         shapes:['X','DASH'],
         type: 'ideo',
-        description: 'to do'
+        description: "Le préfixe qui change un verbe en substantif. Une barre vient relier deux parallèles, pour en désigner la connexion, et déterminer une signification."
     },
     {
         name: '_ma',
@@ -3899,7 +3901,7 @@ let graphieros_dictionnary = [
         fractal:'zq-qw-ed-dx',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux parenthèses autour d'un point."
     },
     {
         name: '_kde',
@@ -3908,7 +3910,7 @@ let graphieros_dictionnary = [
         fractal:'qd-we-xs',
         shapes:['KA','X'],
         type: 'picto',
-        description: 'to do'
+        description: "Une sorte d'humain, jouant avec une balle."
     },
     {
         name: '_dly',
@@ -3917,7 +3919,7 @@ let graphieros_dictionnary = [
         fractal:'we-ez-zw-xs-dz',
         shapes:['KA','TREC_stl'],
         type: 'picto',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner l'humain. L'adulte est empêtré dans un cadre, dont il ne peut s'extraire."
     },
     {
         name: '_pfae',
@@ -3926,7 +3928,7 @@ let graphieros_dictionnary = [
         fractal:'qw-wz-zd-dw-ez-xd',
         shapes:['TRI_0'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme une roue qui tournerait, si de l'eau en agissait les pales."
     },
     {
         name: '_dna',
@@ -3935,7 +3937,7 @@ let graphieros_dictionnary = [
         fractal:'we-ex-qd-dx-xw-wq-qz-ze',
         shapes:['LOS_tl','TREC_sbr','MEX_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "La fusion des glyphes utilisés pour désigner la 'cellule' et l'atome."
     },
     {
         name: '_sde',
@@ -3944,7 +3946,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-qd-dx-xw-wq-qx-wd',
         shapes:['MEX_b','CROSS_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'un des glyphe du goût, dérivé du glyphe utilisé pour désigner les lèvres."
     },
     {
         name: '_bai',
@@ -3953,7 +3955,7 @@ let graphieros_dictionnary = [
         fractal:'qd-de-ez-zq-zs-se-wx',
         shapes:['MEX_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Hérité du glyphe représentant l'idée de 'sous'."
     },
     {
         name: '_kmia',
@@ -3962,7 +3964,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sd-dz-qx',
         shapes:['TRI_in_tr'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un segment dirigé vers un autre, bientôt s'accumulant."
     },
     {
         name: '_grey',
@@ -3971,7 +3973,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ed-dq-ex',
         shapes:['MEX_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Comme un pied de table, accroché à sa planche."
     },
     {
         name: '_ksu',
@@ -3980,7 +3982,7 @@ let graphieros_dictionnary = [
         fractal:'zs-sw-ed-dx-qd',
         shapes:['ARR_dbl_r','ARR_r'],
         type: 'ideo',
-        description: 'to do'
+        description: "Deux petites flèches répétées vers l'avant, pour signifier l'accélération."
     },
     {
         name: '_boi',
@@ -3989,7 +3991,7 @@ let graphieros_dictionnary = [
         fractal:'zw-wq-qs-ed-dx',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un glyphe totalement aribtraire pour cette préposition."
     },
     {
         name: '_fya',
@@ -3998,7 +4000,7 @@ let graphieros_dictionnary = [
         fractal:'zs-se-ez-qw-wx-xd',
         shapes:['COL_b','tri_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "Un triangle tombant dans ce qui pourrait être des paumes ouvertes."
     },
     {
         name: '_fy',
@@ -4007,7 +4009,7 @@ let graphieros_dictionnary = [
         fractal:'ze-ew-wx-xz-qd',
         shapes:['X','X_all','tri_t','tri_b'],
         type: 'picto',
-        description: 'to do'
+        description: "Un triangle se reflétant à la surface de l'eau."
     },
     {
         name: '_go',
@@ -4016,7 +4018,7 @@ let graphieros_dictionnary = [
         fractal:'ws-sx-xw-qz-ze-ed',
         shapes:['tri_b','COL_t'],
         type: 'ideo',
-        description: 'to do'
+        description: "L'inverse de la forme du glyphe attribuée à l'idée de 'donner', comme une paume refermée sur un objet."
     },
     {
         name: '_ka',
@@ -4025,7 +4027,7 @@ let graphieros_dictionnary = [
         fractal:'zx-ws-qe',
         shapes:['KA'],
         type: 'picto',
-        description: 'to do'
+        description: "Deux jambes, un buste, deux bras, une tête, et une balle."
     },
     {
         name: '_kme',
@@ -4034,7 +4036,7 @@ let graphieros_dictionnary = [
         fractal:'zw-qs-ed-dx',
         shapes:['MA'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour désigner le 'plus'."
     },
     {
         name: '_sa',
@@ -4043,7 +4045,7 @@ let graphieros_dictionnary = [
         fractal:'qz-ze-ed-dx-xw-wq-qd-zx-we',
         shapes:['HEX','X_all','X'],
         type: 'ideo',
-        description: 'to do'
+        description: "Une sorte de totalité."
     },
     {
         name: '_smia',
@@ -4052,7 +4054,7 @@ let graphieros_dictionnary = [
         fractal:'qd-dw-wx-xs-sw-wd-qx',
         shapes:['CROSS_b','tri_b'],
         type: 'ideo',
-        description: 'to do'
+        description: "Dérivé du glyphe utilisé pour le verbe 'valoriser'."
     }
 ];
 
