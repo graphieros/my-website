@@ -19,8 +19,6 @@ function GlyphList() {
         }
     });
 
-    console.log(ideograms, pictograms);
-
     const [cardState, setCardState] = useState({
         className: 'hidden',
         content: ''
@@ -33,20 +31,15 @@ function GlyphList() {
     }
 
 
-    const handleCard = (e) => {
+    const handleCard = (index) => {
 
-        e.persist();
-
-        const index = e._targetInst.memoizedProps.value;
         const glyph = graphieros_dictionnary[index];
         const glyphDescription = graphieros_dictionnary[index].description;
 
-        let glyphType;
+        let glyphType = 'pictogramme';
 
         if (graphieros_dictionnary[index].type === 'ideo') {
             glyphType = 'idéogramme'
-        } else {
-            glyphType = 'pictogramme'
         }
 
         setCardState({
@@ -84,18 +77,22 @@ function GlyphList() {
                 <p className='card-id-story'>{glyphDescription}</p>
 
             </>
-        })
+        });
     }
 
     return (
         <div className='glyphList-body'>
+
             <div className='glyphList-title'>
                 Liste des glyphes du <span className='span-list-title'> graphieros</span>
             </div>
+
             <div className='glyphList-list'>
+
                 <p className='glyphList-presentation'>
                     <span className='spanStrong'>{glyphCount}</span> briques fondamentales, réparties en <span className='spanStrong'>{ideograms}</span> idéogrammes et <span className='spanStrong'>{pictograms}</span> pictogrammes, pour représenter tout ce que contient notre Univers.
                 </p>
+
                 {graphieros_dictionnary.map((entry, i) => <div className='glyph-block' key={i}>
                     <label className='glyph-list-translation'>{entry.fr}</label>
                     <Linear
@@ -105,9 +102,11 @@ function GlyphList() {
                         colors={[29, 55, 104]}
                     />
                     <label className='glyph-list-phono'>{`[ ${entry.name.replace('_', '')} ]`}</label>
-                    <div className='capper' value={i} onClick={e => handleCard(e)} />
+                    <div className='capper' value={i} onClick={() => handleCard(i)} />
                 </div>)}
+
             </div>
+
             <Link to='/'>
                 <div className='link-home'>
                     <p>home sweet home</p>
@@ -119,9 +118,11 @@ function GlyphList() {
                     />
                 </div>
             </Link>
+
             <div className={cardState.className}>
                 {cardState.content}
             </div>
+
         </div>
     )
 }
