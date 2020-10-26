@@ -232,3 +232,11 @@ p.card-id-story{
         transform: rotate(0deg);
     }
 }
+
+@media (max-width: 500px) {
+    .glyphList-list {
+        grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+        margin-left:50%;
+        transform: translateX(-56%);
+    }
+}
