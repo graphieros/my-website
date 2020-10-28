@@ -4,6 +4,7 @@ import Linear from './graphieros/Linear';
 import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import './css/GlyphList.css';
 import Fractal from './graphieros/Fractal';
+import Card from './Card';
 
 function GlyphList() {
 
@@ -44,39 +45,14 @@ function GlyphList() {
 
         setCardState({
             className: 'card',
-            content: <>
-                <div className='card-close' onClick={handleCardClose}>
-                    <Fractal
-                        className='card-close-fractal'
-                        sequence='zx-we'
-                        svgSize='30'
-                        colors={[255, 255, 255]}
-                    />
-                </div>
-
-                <div className='card-id'>
-
-                    <Fractal
-                        className='card-fractal'
-                        sequence={glyph.fractal}
-                        svgSize='100'
-                        colors={[75, 106, 160]}
-                    />
-
-                    <div className='card-id-details'>
-                        <p>{glyph.fr}</p>
-                        <p className='card-id-details-phono'>[ {glyph.name.replace('_', '')} ]</p>
-                    </div>
-
-                    <p className="card-id-details-type">
-                        type: {glyphType}
-                    </p>
-
-                </div>
-
-                <p className='card-id-story'>{glyphDescription}</p>
-
-            </>
+            content:
+                <Card
+                    close={handleCardClose}
+                    sequence={glyph.fractal}
+                    glyphName={glyph.name}
+                    glyphType={glyphType}
+                    glyphDescription={glyphDescription}
+                />
         });
     }
 
