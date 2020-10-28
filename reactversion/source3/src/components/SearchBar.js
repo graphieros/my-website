@@ -8,6 +8,7 @@ import './css/SearchBar.css';
 
 const SearchBar = (props) => {
 
+    const mainInputSearch = document.getElementById("main-input-search");
     const wordList = graphieros_translation;
 
     const wordCount = wordList.length;
@@ -193,6 +194,9 @@ const SearchBar = (props) => {
     }
 
     const letsQuitResult = () => {
+        mainInputSearch.value = '';
+        mainInputSearch.focus();
+
         setSearchResult({
             className: 'hidden',
             content: ''
@@ -200,6 +204,15 @@ const SearchBar = (props) => {
         setBackState({
             className: 'hidden'
         });
+
+        if (mainInputSearch.value === '') {
+            setSearchResult({
+                className: 'hidden'
+            });
+            setTempSearchState({
+                className: 'hidden'
+            });
+        }
     }
 
     const validateSearch = (props) => {
@@ -267,6 +280,7 @@ const SearchBar = (props) => {
         <React.Fragment>
             <div className={props.className}>
                 <input
+                    id="main-input-search"
                     className="searchInput"
                     placeholder="rechercher un mot..."
                     type="text"
