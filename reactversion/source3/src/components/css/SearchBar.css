@@ -80,7 +80,7 @@ input.searchInput{
     box-sizing: border-box;
     padding-bottom:20px;
     padding-top:10px;
-    box-shadow: 0 20px 40px -20px rgba(0,0,100,0.35);
+    box-shadow: 0 0px 40px -20px rgba(0,0,100,0.95);
     z-index:100;
 }
 
