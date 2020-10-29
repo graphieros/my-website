@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Fractal from './graphieros/Fractal';
 import Button from './Button';
 import './css/Menu.css';
+import Logo from './Logo';
 
 function Menu() {
 
@@ -44,6 +45,16 @@ function Menu() {
             </div>
 
             <div className={menuState.className}>
+                <div className="menuLogo">
+                    <Logo
+                        className='menuL'
+                        fontSize='1em'
+                        color='white'
+                        svgSize='30'
+                        colors={[255,255,255]}
+                    />
+                </div>
+                
                 <Link
                     className='link'
                     to='/galerie'>
@@ -57,7 +68,7 @@ function Menu() {
                         pClass='button-label'
                         label='galerie'
                     />
-                </Link>
+                </Link> 
 
                 <Link
                     className='link'
@@ -109,7 +120,7 @@ function Menu() {
                     <div onClick={handleQuitMenu}>
                         <Fractal
                             className='fractal-menu-home'
-                            sequence='zw-wx-xe-ez-zq-qd-de'
+                            sequence='zw-wd-dz-qs-se-xs'
                             svgSize='60'
                             colors={[75, 106, 160]}
                         />
