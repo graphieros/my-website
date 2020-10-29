@@ -1,23 +1,13 @@
 [
     {
-        "frac_sequence": "ws-sx-xw-wz-ze-ex wz-zq-qx-xe-ed-dw zw-wd-dz-xe-eq-qx",
-        "molecules": [
-            "kio hae to trea frey",
-            "bdi skoi stea tsi"
-        ]
-    },
-    {
-        "frac_sequence":"eq-qx-qd-zs-sw qx-xe-ws-sd-dw",
-        "molecules":[
-            "mea rgia kme sta tsi",
-            "rgia kme ra keo grey hea tsi"
-        ]
-    },
-    {
         "frac_sequence":"zs-se-ez-wq-qd-dx de-ex-xd-dq-sz-zw-ws-dz-zw-wd",
         "molecules":[
             "bdi vi hia bia",
             "hia vi bdi gew"
+        ],
+        "translation":[
+            "Corps avec pensée d'équilibre",
+            "Pensée avec un corps fort"
         ]
     },
     {
@@ -25,6 +15,10 @@
         "molecules":[
             "tew di go hea",
             "ne kpae vzu sa"
+        ],
+        "translation":[
+            "Tout dedans lumière",
+            "Rien ne garde la vie électrique"
         ]
     },
     {
@@ -32,6 +26,10 @@
         "molecules":[
             "v3ai le kto fra",
             "kme rto kto soma"
+        ],
+        "translation":[
+            "Vouloir aller loin",
+            "Pour retourner vers soi"
         ]
     },
     {
@@ -39,6 +37,10 @@
         "molecules":[
             "stoia ney pnae sa",
             "vi ldo grey hea"
+        ],
+        "translation":[
+            "Imaginer nouvelle Terre",
+            "Avec une vieille lumière"
         ]
     },
     {
@@ -46,6 +48,10 @@
         "molecules": [
             "ptae bdi nfea",
             "sta kto skai"
+        ],
+        "translation":[
+            "Le corps malade",
+            "Regarde vers le ciel"
         ]
     },
     {
@@ -53,6 +59,10 @@
         "molecules": [
             "sfi d3e fmai tra",
             "psie pkia kto fwo"
+        ],
+        "translation":[
+            "La peur du danger intérieur",
+            "Pousse l'animal vers le dehors"
         ]
     },
     {
@@ -60,6 +70,21 @@
         "molecules": [
             "3e lea sa",
             "kpae mea ftu"
+        ],
+        "translation":[
+            "Protéger la vie aléatoire",
+            "Garder l'avenir"
+        ]
+    },
+    {
+        "frac_sequence":"zx-ws-sq-qe-ez-zq-qw-wx-xd-de ze-ed-dx-xw-wq-qz-zw-wd-dz-xe-eq-qx-qd-we-xz",
+        "molecules": [
+            "kio tew ma blu",
+            "mea rgia kme sye rgo"
+        ],
+        "translation":[
+            "Univers bleu",
+            "Coeur rouge"
         ]
     }
 ]
