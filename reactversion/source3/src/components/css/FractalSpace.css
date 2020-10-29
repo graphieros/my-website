@@ -84,7 +84,7 @@
     box-shadow: 0 0 70px 5px rgb(var(--c2)), 0 0 20px -5px rgb(var(--c3));
     align-items:center;
     justify-items:center;
-    overflow: hidden;
+    /* overflow: hidden; */
     background: black;
 }
 
