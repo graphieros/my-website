@@ -33,7 +33,7 @@
 .graphieros-physics{
     background: rgb(var(--c0));
     padding-top: 96px;
-    padding-bottom: 96px;
+    padding-bottom: 64px;
 }
 
 .graphieros-physics p,
@@ -201,6 +201,7 @@ span.blueSpan{
 }
 
 .abeilles{
+    margin-top:36px;
     height:100px;
     width:100px;
     margin-left:50%;
@@ -209,12 +210,24 @@ span.blueSpan{
 
 .abeilles svg {
     opacity:.8;
-    stroke:rgb(var(--c3));
+    stroke:rgb(184, 184, 184);
     fill:none;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke-width:3px;
+    stroke-width:6px;
     filter: drop-shadow(0 3px 1px black);
+}
+
+path.ka{
+    stroke: rgb(255, 132, 111);
+}
+
+path.hea{
+    stroke: rgb(253, 230, 95);
+}
+
+path.snoi{
+    stroke: rgb(126, 126, 255);
 }
 
 span.inLink{
@@ -224,6 +237,34 @@ span.inLink{
 
 span.inLink:hover{
     color: tomato;
+}
+
+.haiku-today{
+    width:100%;
+    background: var(--gradTopLeft);
+    box-sizing: border-box;
+    padding-top: 24px;
+    padding-bottom: 64px;
+}
+
+.haiku-today p {
+    width:100%;
+    text-align:center;
+    color: rgb(207, 207, 207);
+    font-family:  var(--hand1);
+    font-size:2em;
+}
+
+.haiku-translation {
+    display: block;
+    margin-top: 40px;
+}
+
+.haiku-translation p{
+    font-style: italic;
+    color: rgb(var(--c0));
+    font-family: var(--inter);
+    font-size:1em;
 }
 
 @media (max-width:700px){
