@@ -5,7 +5,12 @@ import { graphieros_dictionnary } from '../libraries/graphieros_dictionnary';
 import Fractal from './graphieros/Fractal';
 import Linear from './graphieros/Linear';
 import Button from './Button';
+import KioIdea from './graphieros_subsite/KioIdea';
+import './graphieros_subsite/css/KioIdea.css';
+import ideas_library from './graphieros_subsite/subsite_library/ideas_library.json';
 import Footer from './Footer';
+
+const randomHaiku = Math.floor(Math.random()*ideas_library.length);
 
 function Landing() {
 
@@ -13,27 +18,27 @@ function Landing() {
 
     const [landSeqState, setLandSeqState] = useState({
         sequence: 'zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs',
-        fr:'',
-        name:''
+        fr: '',
+        name: ''
     });
 
 
     useEffect(() => {
 
-        let i= Math.floor(Math.random()*graphieros_dictionnary.length);
+        let i = Math.floor(Math.random() * graphieros_dictionnary.length);
         const interval = setInterval(() => {
             setLandSeqState({
-                sequence:graphieros_dictionnary[i].fractal,
+                sequence: graphieros_dictionnary[i].fractal,
                 fr: graphieros_dictionnary[i].fr,
-                name: `[ ${graphieros_dictionnary[i].name.replace('_','')} ]`
+                name: `[ ${graphieros_dictionnary[i].name.replace('_', '')} ]`
             });
-            i = Math.floor(Math.random()*graphieros_dictionnary.length);
-            if(i === graphieros_dictionnary.length){
+            i = Math.floor(Math.random() * graphieros_dictionnary.length);
+            if (i === graphieros_dictionnary.length) {
                 i = 0;
             }
             return () => clearInterval(interval);
-        },1618);
-    },[])
+        }, 1618);
+    }, [])
 
 
 
@@ -43,23 +48,23 @@ function Landing() {
                 <h1 className='wtf'><span className='greySpan'>Qu'est-ce que le</span> graphieros ?</h1>
                 <div className='graphieros-presentation'>
                     Le graphieros est une <span className='inLink'><a href="https://fr.wikipedia.org/wiki/Langue_construite#:~:text=Une%20langue%20construite%20ou%20planifi%C3%A9e,l'%C3%A9laboration%20est%20largement%20spontan%C3%A9e." target="_blank" rel="noopener noreferrer">idéolangue</a></span>, créée par <span className='inLink'><Link to='/alp'>Alec Lloyd Probert</Link></span> à partir de 2016. Cette langue est fondée sur un corpus de <Link to='/glyphes'><span className='inLink'>{glyphCount} idéogrammes</span></Link> ou glyphes, dont l'aspect est déterminé par la géométrie de l'<strong>hexagone régulier</strong>, des sept points qui constituent ses sommets et son centre.
-            </div> 
+            </div>
             </div>
             <div className='graphieros-physics'>
                 <Fractal
                     className='landing-fractal'
                     sequence={landSeqState.sequence}
-                    colors={[75,106,160]}
+                    colors={[75, 106, 160]}
                     svgSize='256'
                     light={false}
                 />
-                <p className='landing-trad'>{landSeqState.fr}<br/><span>{landSeqState.name}</span></p>
+                <p className='landing-trad'>{landSeqState.fr}<br /><span>{landSeqState.name}</span></p>
                 <p>
                     L'hexagone fait partie des quelques formes géométriques avec lesquelles il est possible de construire un <strong>pavage régulier</strong>, comme celui de la surface externe des alvéoles bâties par les abeilles.
                 </p>
                 <div className='abeilles'>
-                    <svg viewBox='0 0 300 300'>
-                    <path d="M 60,55,80,89,60,124,20,124"/><path d="M 60,124,80,158,60,193"/><path d="M 80,89,120,89,140,55"/><path d="M 120,89,140,124,120,158,80,158"/><path d="M 140,124,180,124,200,89,180,55"/><path d="M 200,89,240,89,260,124,240,158,200,158,180,124"/><path d="M 120,158,140,193,180,193,200,158"/><path d="M 140,193,120,228,80,228"/><path d="M 120,228,140,262"/><path d="M 180,193,200,228"/><path d="M 260,124,300,124"/><path d="M 240,89,260,55"/>
+                    <svg viewBox='0 0 500 450'>
+                    <path d="M 40,20,80,89,40,158,80,228,40,297" /><path d="M 80,89,160,89,200,20" /><path d="M 160,89,200,158,280,158,320,228,400,228,440,297" /><path d="M 200,158,160,228,80,228" /><path d="M 280,158,320,89" /><path d="M 400,228,440,158,400,89,320,89,280,20" /><path d="M 400,89,440,20" /><path d="M 160,228,200,297,280,297,320,228" /><path d="M 200,297,160,366,80,366" /><path d="M 160,366,200,435" /><path d="M 280,297,320,366" /><path d="M 520,158,440,158" /><path className='ka' d="M 220,193,260,262" /><path className='ka' d="M 220,262,240,228" /><path className='ka' d="M 200,228,260,193" /><path className='ka' d="M 280,228,280,228" /><path className='hea' d="M 100,124,100,193,160,158,100,124"/><path className='hea' d="M 80,158,120,158,140,124"/><path className='hea' d="M 140,193,120,158"/><path className='snoi' d="M 340,124,380,124,400,158"/><path className='snoi' d="M 320,158,380,124,380,193"/><path className='snoi' d="M 340,193,380,124"/>
                     </svg>
                 </div>
             </div>
@@ -146,6 +151,25 @@ function Landing() {
 
                 </div>
             </div>
+            <div className='haiku-today'>
+                <p>...un poème au hasard</p>
+                    <KioIdea
+                        className='kio-idea'
+                        frac_class='kio-idea-frac'
+                        frac_sequence={ideas_library[randomHaiku].frac_sequence}
+                        frac_svgSize='100'
+                        frac_size='30'
+                        frac_colors={[75, 106, 160]}
+                        frac_dropShadow='0px 0px 3px rgba(255,255,255,0.6)'
+                        frac_light={true}
+                        molecule_set={ideas_library[randomHaiku].molecules}
+                    />
+                <div className='haiku-translation'>
+                    {ideas_library[randomHaiku].translation.map((tr,i)=> <p key={`trans_${i}`}>{tr}</p>)}
+                </div>
+                        
+
+                </div>
             <Footer />
         </div>
     )
