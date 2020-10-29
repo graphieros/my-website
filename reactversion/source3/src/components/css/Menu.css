@@ -56,6 +56,20 @@
     animation: fmh 0.25s ease-in-out;
 }
 
+.menuLogo{
+    position: absolute;
+    margin-top:-40px;
+    margin-left:-12px;
+}
+
+.menuL{
+    margin-top:5px;
+}
+
+.menuL svg {
+    animation: logo-spin 6s infinite linear;
+}
+
 @keyframes menu-body {
     0%{
         opacity:0;
