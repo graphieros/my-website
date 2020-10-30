@@ -69,7 +69,7 @@
         "frac_sequence":"wq-qz-ze-ed-dx qz-ze-ed-dx-xw-wq-qd-we-xz",
         "molecules": [
             "3e lea sa",
-            "kpae mea ftu"
+            "kpae de ftu"
         ],
         "translation":[
             "Protéger la vie aléatoire",
@@ -85,6 +85,17 @@
         "translation":[
             "Univers bleu",
             "Coeur rouge"
+        ]
+    },
+    {
+        "frac_sequence":"qw-we-xs-zd ed-dx-qd ze-es-sx-xw",
+        "molecules": [
+            "kio pkae da mea kloi",
+            "ptae prba pno kto nsa"
+        ],
+        "translation": [
+            "Lieu fermé",
+            "Âme ouverte"
         ]
     }
 ]
