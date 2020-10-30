@@ -1,0 +1,173 @@
+import React, { useState } from 'react';
+import './css/Pangolin.css';
+import Fractal from './graphieros/Fractal';
+import labyrinth_posts from '../libraries/labyrinth_posts.json';
+
+function Pangolin() {
+
+    const [dayState, setDayState] = useState({
+        className: "hidden",
+        day:'',
+        content: ""
+    });
+
+    const handleModal = (el) => {
+        console.log(el)
+        setDayState({
+            className: "visible-day",
+            day: el.day,
+            content: el.cypher
+        });
+    }
+
+    const handleQuit = () => {
+        setDayState({
+            className: 'hidden',
+            day:'',
+            content:''
+        });
+    }
+
+    const week0 = labyrinth_posts.map((post, i) => {
+        if (i < 5) {
+            return (
+                <div key={i} onClick={() => handleModal(post)}>
+                    <Fractal
+                        className='fractal-labyrinth'
+                        sequence={post.sequence}
+                        colors={post.colors}
+                        svgSize='66'
+                        light={post.light}
+                    />
+                </div>
+
+            )
+        }
+    });
+    const week1 = labyrinth_posts.map((post, i) => {
+        if (i >= 5 && i < 10) {
+            return (
+                <div key={i} onClick={() => handleModal(post)}>
+                    <Fractal
+                        className='fractal-labyrinth'
+                        sequence={post.sequence}
+                        colors={post.colors}
+                        svgSize='66'
+                        light={post.light}
+                    />
+                </div>
+
+            )
+        }
+    });
+    const week2 = labyrinth_posts.map((post, i) => {
+        if (i >= 10 && i < 15) {
+            return (
+                <div key={i} onClick={() => handleModal(post)}>
+                    <Fractal
+                        className='fractal-labyrinth'
+                        sequence={post.sequence}
+                        colors={post.colors}
+                        svgSize='65'
+                        light={post.light}
+                    />
+                </div>
+
+            )
+        }
+    });
+    const week3 = labyrinth_posts.map((post, i) => {
+        if (i >= 15 && i < 20) {
+            return (
+                <div key={i} onClick={() => handleModal(post)}>
+                    <Fractal
+                        className='fractal-labyrinth'
+                        sequence={post.sequence}
+                        colors={post.colors}
+                        svgSize='65'
+                        light={post.light}
+                    />
+                </div>
+
+            )
+        }
+    });
+    const week4 = labyrinth_posts.map((post, i) => {
+        if (i >= 20 && i < 25) {
+            return (
+                <div key={i} onClick={() => handleModal(post)}>
+                    <Fractal
+                        className='fractal-labyrinth'
+                        sequence={post.sequence}
+                        colors={post.colors}
+                        svgSize='65'
+                        light={post.light}
+                    />
+                </div>
+
+            )
+        }
+    });
+    const week5 = labyrinth_posts.map((post, i) => {
+        if (i >= 25 && i < 30) {
+            return (
+                <div key={i} onClick={() => handleModal(post)}>
+                    <Fractal
+                        className='fractal-labyrinth'
+                        sequence={post.sequence}
+                        colors={post.colors}
+                        svgSize='65'
+                        light={post.light}
+                    />
+                </div>
+
+            )
+        }
+    });
+
+    return (
+        <div className='pangolin-body'>
+
+            <div className='labyrinth-grid'>
+                <div className="labyrinth-name">labyrinthe</div>
+                <div className='labyrinth-week-odd'>
+                    {week0}
+                </div>
+                <div className='labyrinth-week-even'>
+                    {week1}
+                </div>
+                <div className='labyrinth-week-odd'>
+                    {week2}
+                </div>
+                <div className='labyrinth-week-even'>
+                    {week3}
+                </div>
+                <div className='labyrinth-week-odd'>
+                    {week4}
+                </div>
+                <div className='labyrinth-week-even'>
+                    {week5}
+                </div>
+            </div>
+
+            <div className={dayState.className}>
+                <div className='btn-quit-day' onClick={handleQuit}>
+                    <Fractal 
+                        className='quit-day'
+                        sequence='zx-we'
+                        svgSize='30'
+                        colors={[255,255,255]}
+                    />
+                </div>
+                <p className='numDay'>jour <span>{dayState.day}</span></p>
+                <div className='textDay'>
+                    {dayState.content}
+                </div>
+                
+            </div>
+
+        </div>
+    )
+}
+
+export default Pangolin;
