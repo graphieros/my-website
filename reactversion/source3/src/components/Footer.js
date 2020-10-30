@@ -26,6 +26,12 @@ function Footer() {
 
                 <Link
                     className='link'
+                    to='/labyrinthe'>
+                    <li>le labyrinthe</li>
+                </Link>
+
+                <Link
+                    className='link'
                     to='/galerie'>
                     <li>galerie de peintures</li>
                 </Link>
