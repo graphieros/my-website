@@ -11,6 +11,7 @@ import Alp from './components/Alp';
 import Words from './components/Words';
 import FractalSpace from './components/FractalSpace';
 import Kio from './components/graphieros_subsite/Kio';
+import Pangolin from './components/Pangolin';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
           <Route path='/glyphes' exact component={GlyphList} />
           <Route path='/galerie' exact component={Gallery} />
           <Route path='/blog' exact component={Blog} />
+          <Route path='/labyrinthe' exact component={Pangolin} />
           <Route path='/cle.html' component={() => {
             window.location.href = 'https://graphieros.com/cle.html';
             return null;
