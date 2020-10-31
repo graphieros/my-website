@@ -54,7 +54,7 @@
 
 .fractal-menu-home:hover{
     animation: fmh 0.25s ease-in-out;
-}
+} 
 
 .menuLogo{
     position: absolute;
@@ -68,6 +68,36 @@
 
 .menuL svg {
     animation: logo-spin 6s infinite linear;
+}
+
+.laby-link{
+    position: absolute;
+    left:50%;
+    bottom:50%;
+    transform: translate(-50%,40%) rotate(-5deg);
+    width:70px;
+    height:50px;
+    background: radial-gradient(at top, white, tomato);
+    border-radius:6px;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    box-shadow: 0 10px 20px -10px rgb(var(--c0));
+    font-family: var(--mono0);
+    font-weight:bold;
+    color: rgb(var(--c0));
+    font-size:0.7em;
+    opacity:0.8;
+    transition: all 0.25s ease-in-out;
+}
+
+.laby-link span{
+    transform: rotate(-30deg);
+}
+
+.laby-link:hover{
+    opacity:1;
+    transform: translate(-50%,40%) rotate(5deg)
 }
 
 @keyframes menu-body {
