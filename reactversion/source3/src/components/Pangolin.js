@@ -7,24 +7,29 @@ function Pangolin() {
 
     const [dayState, setDayState] = useState({
         className: "hidden",
-        day:'',
-        content: ""
+        day: '',
+        date: '',
+        content: '',
+        sequence: 'ss'
     });
 
-    const handleModal = (el) => {
-        console.log(el)
+    const handleModal = (post) => {
         setDayState({
             className: "visible-day",
-            day: el.day,
-            content: el.cypher
+            day: post.day,
+            date: post.date,
+            content: post.cypher,
+            sequence: post.sequence
         });
     }
 
     const handleQuit = () => {
         setDayState({
             className: 'hidden',
-            day:'',
-            content:''
+            day: '',
+            date: '',
+            content: '',
+            sequence: 'ss'
         });
     }
 
@@ -40,10 +45,11 @@ function Pangolin() {
                         light={post.light}
                     />
                 </div>
-
             )
         }
+        return null;
     });
+
     const week1 = labyrinth_posts.map((post, i) => {
         if (i >= 5 && i < 10) {
             return (
@@ -56,10 +62,11 @@ function Pangolin() {
                         light={post.light}
                     />
                 </div>
-
             )
         }
+        return null;
     });
+
     const week2 = labyrinth_posts.map((post, i) => {
         if (i >= 10 && i < 15) {
             return (
@@ -72,10 +79,11 @@ function Pangolin() {
                         light={post.light}
                     />
                 </div>
-
             )
         }
+        return null;
     });
+
     const week3 = labyrinth_posts.map((post, i) => {
         if (i >= 15 && i < 20) {
             return (
@@ -88,10 +96,11 @@ function Pangolin() {
                         light={post.light}
                     />
                 </div>
-
             )
         }
+        return null;
     });
+
     const week4 = labyrinth_posts.map((post, i) => {
         if (i >= 20 && i < 25) {
             return (
@@ -104,10 +113,11 @@ function Pangolin() {
                         light={post.light}
                     />
                 </div>
-
             )
         }
+        return null;
     });
+
     const week5 = labyrinth_posts.map((post, i) => {
         if (i >= 25 && i < 30) {
             return (
@@ -120,9 +130,9 @@ function Pangolin() {
                         light={post.light}
                     />
                 </div>
-
             )
         }
+        return null;
     });
 
     return (
@@ -151,19 +161,33 @@ function Pangolin() {
             </div>
 
             <div className={dayState.className}>
+
                 <div className='btn-quit-day' onClick={handleQuit}>
-                    <Fractal 
+                    <Fractal
                         className='quit-day'
                         sequence='zx-we'
                         svgSize='30'
-                        colors={[255,255,255]}
+                        colors={[255, 255, 255]}
                     />
                 </div>
-                <p className='numDay'>jour <span>{dayState.day}</span></p>
+
+                <Fractal
+                    className='watermark'
+                    sequence={dayState.sequence}
+                    svgSize='250'
+                    colors={[211, 227, 252]}
+                />
+
+                <p className='numDay'>
+                    jour
+                    <span> {dayState.day}</span>
+                    <span className='labySpanDate'>{dayState.date}</span>
+                </p>
+
                 <div className='textDay'>
                     {dayState.content}
                 </div>
-                
+
             </div>
 
         </div>
