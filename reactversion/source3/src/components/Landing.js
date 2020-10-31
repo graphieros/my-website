@@ -59,7 +59,7 @@ function Landing() {
                     light={false}
                 />
                 <p className='landing-trad'>{landSeqState.fr}<br /><span>{landSeqState.name}</span></p>
-                <p>
+                <p> 
                     L'hexagone fait partie des quelques formes géométriques avec lesquelles il est possible de construire un <strong>pavage régulier</strong>, comme celui de la surface externe des alvéoles bâties par les abeilles.
                 </p>
                 <div className='abeilles'>
