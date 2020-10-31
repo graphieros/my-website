@@ -3129,6 +3129,20 @@
         "molecule": "pkia gwa nsa"
     },
     {
+        "fr":"manger",
+        "litteral":"prendre nourrir",
+        "phono":"ra fdu",
+        "line":"ra-fdu",
+        "molecule":"ra fdu"
+    },
+    {
+        "fr":"mangeur",
+        "litteral":"humain prendre nourrir",
+        "phono":"ka ra fdu",
+        "line":"ka-ra-fdu",
+        "molecule":"ka ra fdu"
+    },
+    {
         "fr": "ovipare",
         "litteral" : "animal oeuf extérieur",
         "phono": "pkia gwa tra",
