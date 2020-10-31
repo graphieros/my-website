@@ -15,6 +15,15 @@ let r = 218; //x_right
 
 let graphieros_dictionnary = [
     {
+        name:'_vlai',
+        fr:'volaille',
+        path:[[rm,a,lm,a,r,q,l,q],[m,q,rm,w],[lm,w,lm,w]],
+        fractal:'ez-zd-dq-sx',
+        shapes:['DASH'],
+        type:'picto',
+        description:"Une volaille, ou tout autre type d'oiseau ayant perdu la capacité de voler. Avec son oeuf."
+    },
+    {
         name:'_drydwa',
         fr:'année',
         path:[[rm,a,lm,a,l,q,lm,w,rm,w,r,q,m,q],[lm,a,r,q,lm,w,m,q,lm,a]],
