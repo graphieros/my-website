@@ -69,6 +69,7 @@
 .landing-fractal svg {
     animation: landing-fractal 0.25s ease-in-out;
     filter: drop-shadow(0 3px 3px rgb(var(--c2)));
+    transition: all ease-in-out;
 }
 
 p.landing-trad{
@@ -88,13 +89,14 @@ p.landing-trad span {
     0%{
         opacity:0;
         stroke: tomato;
+        path: tomato;
+        transform: scale(0.7,0.7);
     }
     100%{
         opacity:1;
+        transform: scale(1.1,1.1)
     }
 }
-
-
 
 h1.wtf,
 h1.wtf2{
