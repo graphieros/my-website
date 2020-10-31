@@ -61,7 +61,15 @@
 }
 
 .fractal-labyrinth:hover svg {
-    filter: drop-shadow(0 2px 2px rgb(var(--c0)))
+    filter: drop-shadow(0 2px 2px rgb(var(--c0)));
+}
+
+.fractal-labyrinth:hover circle{
+    fill:tomato;
+}
+
+.fractal-labyrinth:hover path{
+    fill:tomato;
 }
 
 .visible-day{
@@ -71,14 +79,15 @@
     transform: translate(-50%,-30%);
     height:300px;
     width:280px;
-    background: white;
+    background: radial-gradient(at top left, rgb(var(--c3)), white);
     color: rgb(var(--c0));
     box-sizing: border-box;
     padding:20px;
     border-radius:6px;
     box-shadow: 0 10px 20px -10px rgb(var(--c0));
     font-family: var(--inter);
-    font-size:0.95em;
+    font-size:0.9em;
+    text-align: justify;
     animation: visible-day 0.25s ease-in;
 }
 
@@ -128,15 +137,47 @@ p.numDay span {
     color: tomato;
 }
 
+span.labySpanDate{
+    background: tomato;
+    color:white !important;
+    font-size:0.7em;
+    display: inline-block;
+    position: absolute;
+    right:20px;
+    top:28px;
+    font-family: var(--logo);
+    box-sizing: border-box;
+    padding-left: 3px;
+    padding-right:3px;
+    border-bottom:1px solid tomato;
+}
+
 .textDay{
+    position: relative;
     height:85%;
     width:100%;
-    overflow: scroll;
+    overflow-x: hidden;
     box-sizing: border-box;
     text-indent:24px;
-    text-align:justify;
 }
 
 .textDay::-webkit-scrollbar{
-    width:0px;
+    width:1px;
+}
+
+.textDay::-webkit-scrollbar-thumb{
+    width:3px;
+    background: tomato;
+}
+
+.textDay::-webkit-scrollbar-track{
+    background: lightgrey;
+}
+
+.watermark{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-40%);
+    opacity:0.6;
 }
