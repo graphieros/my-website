@@ -14,6 +14,8 @@
   --elite: 'Special Elite', cursive;
   --hand0: 'Monsieur La Doulaise', cursive;
   --hand1:  'Mr Dafoe', cursive;
+  --mono0: 'Anonymous Pro', monospace;
+  --mono1: 'Nova Mono', monospace;
 }
 
 body{
