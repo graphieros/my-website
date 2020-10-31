@@ -444,6 +444,7 @@ function ShapeSearcher2(props) {
 
     const handleResult = (props) => {
         const selectedShape = props.target.id;
+        console.log(selectedShape);
         
         let memoryGlyphs = [],
             memoryFr = [];
