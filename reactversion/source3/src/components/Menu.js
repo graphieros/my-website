@@ -99,7 +99,7 @@ function Menu() {
                         pClass='button-label'
                         label='la clé'
                     />
-                </Link>
+                </Link> 
 
                 <Link
                     className='link'
@@ -126,6 +126,11 @@ function Menu() {
                         />
                     </div>
 
+                </Link>
+                <Link to='/labyrinthe'>
+                    <div className='laby-link' onClick={handleQuitMenu}>
+                        <span>labyrinthe</span>
+                    </div>
                 </Link>
                 <div className='quitResult' onClick={handleQuitMenu}>
                     <Fractal
