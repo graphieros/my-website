@@ -1,5 +1,3 @@
-import { findAllInRenderedTree } from "react-dom/test-utils";
-
 //initial y coordinates
 let a = 50; //y_top 
 let q = 128; //y_mid
