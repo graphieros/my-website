@@ -27,9 +27,9 @@
         "sequence":"ex-qd-dw",
         "light":true,
         "colors":[255,255,255],
-        "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "cypher":"Naviguer à vue dans un océan d'aléas brumeux, éviter au hasard des écueils imaginés, reconstituer à tâtons les contours des terres absentes, demander son chemin aux sirènes intérieures, voir à minuit des sortes d'étoiles, prétendre qu'elles nous parlent de routes dégagées et de mers lisses, coire entendre dans le bois du bateau qui craque les conversations de demain.",
+        "day":2,
+        "date":"dimanche 1 novembre 2020"
     },
     {
         "sequence":"de-ex-xd-zw-ws-sz-dq-zd-dw",
@@ -195,8 +195,8 @@
         "sequence":"qe-ex-xz",
         "light":true,
         "colors":[255,255,255],
-        "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "cypher":"L'univers des interactions sociales est simple, quand il n'est pas d'arrière-monde pour imposer des valeurs absurdes et dédaigneuses du corps. C'est cette vie ici, maintenant qui est réelle et sensible, c'est celle-là aussi qui est intelligible, et elle n'est pas opposable à l'imaginaire corrompu issu des limbes faméliques et tortueux des périodes sans lumière, dont les lois demandent aux corps de se meurtrir et de se mentir, pour atteindre l'idéal comme une récompense promise à la bête ainsi tenue.",
+        "day":1,
+        "date":"samedi 31 octobre 2020"
     }
 ]
