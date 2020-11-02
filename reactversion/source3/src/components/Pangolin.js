@@ -5,6 +5,8 @@ import labyrinth_posts from '../libraries/labyrinth_posts.json';
 
 function Pangolin() {
 
+    const size = 66;
+
     const [dayState, setDayState] = useState({
         className: "hidden",
         day: '',
@@ -41,7 +43,7 @@ function Pangolin() {
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize='66'
+                        svgSize= {size}
                         light={post.light}
                     />
                 </div>
@@ -49,6 +51,8 @@ function Pangolin() {
         }
         return null;
     });
+
+    // if (n % 5 === 0) switch className
 
     const week1 = labyrinth_posts.map((post, i) => {
         if (i >= 5 && i < 10) {
@@ -58,7 +62,7 @@ function Pangolin() {
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize='66'
+                        svgSize={size}
                         light={post.light}
                     />
                 </div>
@@ -75,7 +79,7 @@ function Pangolin() {
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize='65'
+                        svgSize={size}
                         light={post.light}
                     />
                 </div>
@@ -92,7 +96,7 @@ function Pangolin() {
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize='65'
+                        svgSize={size}
                         light={post.light}
                     />
                 </div>
@@ -109,7 +113,7 @@ function Pangolin() {
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize='65'
+                        svgSize={size}
                         light={post.light}
                     />
                 </div>
@@ -126,7 +130,7 @@ function Pangolin() {
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize='65'
+                        svgSize={size}
                         light={post.light}
                     />
                 </div>
