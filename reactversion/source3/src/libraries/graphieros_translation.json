@@ -1,4 +1,109 @@
 [
+    {   
+        "fr":"mensonge",
+        "litteral":"déterminer faire entendre faux",
+        "phono":"mea fa sko nrea",
+        "line":"mea-fa-sko-nrea",
+        "molecule":"mea fa sko nrea"
+    },
+    {
+        "fr":"faussement",
+        "litteral":"avec faux",
+        "phono":"vi nrea",
+        "line":"vi-nrea",
+        "molecule":"vi nrea"
+    },
+    {
+        "fr":"véritablement",
+        "litteral":"avec vrai",
+        "phono":"vi vrea",
+        "line":"vi-vrea",
+        "molecule":"vi vrea"
+    },
+    {
+        "fr":"vérité",
+        "litteral":"déterminer vrai",
+        "phono":"mea vrea",
+        "line":"mea-vrea",
+        "molecule":"mea vrea"
+    },
+    {
+        "fr":"illogique",
+        "litteral":"qualité non former vrai",
+        "phono":"kli nia fai vrea",
+        "line":"kli-nia-fai-vrea",
+        "molecule":"kli nia fai vrea"
+    },
+    {
+        "fr":"logicien",
+        "litteral":"humain former vrai",
+        "phono":"ka fai vrea",
+        "line":"ka-fai-vrea",
+        "molecule":"ka fai vrea"
+    },
+    {
+        "fr":"logique",
+        "litteral":"déterminer former vrai",
+        "phono":"mea fai vrea",
+        "line":"mea-fai-vrea",
+        "molecule":"mea fai vrea"
+    },
+    {
+        "fr":"étrange",
+        "litteral":"déterminer non former connaître",
+        "phono":"mea nia fai kno",
+        "line":"mea-nia-fai-kno",
+        "molecule":"mea nia fai kno"
+    },
+    {
+        "fr":"étranger",
+        "litteral":"qualité non soi",
+        "phono":"kli nia soma",
+        "line":"kli-nia-soma",
+        "molecule":"kli nia soma"
+    },
+    {
+        "fr":"étrangeté",
+        "litteral":"objet non former connaître",
+        "phono":"ptae nia fai kno",
+        "line":"ptae-nia-fai-kno",
+        "molecule":"ptae nia fai kno"
+    },
+    {
+        "fr":"organisateur",
+        "litteral":"humain donner fonctionner",
+        "phono":"ka fya fkai",
+        "line":"ka-fya-fkai",
+        "molecule":"ka fya fkai"
+    },
+    {
+        "fr":"organisation",
+        "litteral":"déterminer donner fonctionner",
+        "phono":"mea fya fkai",
+        "line":"mea-fya-fkai",
+        "molecule":"mea fya fkai"
+    },
+    {
+        "fr":"organiser",
+        "litteral":"donner fonctionner",
+        "phono":"fya fkai",
+        "line":"fya-fkai",
+        "molecule":"fya fkai"
+    },
+    {
+        "fr":"longtemps",
+        "litteral":"long temps",
+        "phono":"lgya kpoile",
+        "line":"lgya-kpoile",
+        "molecule":"lgya kpoile"
+    },
+    {
+        "fr":"miroir",
+        "litteral":"objet fonctionner refléter",
+        "phono":"ptae fkai fy",
+        "line":"ptae-fkai-fy",
+        "molecule":"ptae fkai fy"
+    },
     {
         "fr": "aimer",
         "litteral": "vivre pour",
