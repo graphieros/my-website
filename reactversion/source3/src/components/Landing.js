@@ -10,16 +10,27 @@ import './graphieros_subsite/css/KioIdea.css';
 import ideas_library from './graphieros_subsite/subsite_library/ideas_library.json';
 import Footer from './Footer';
 
-const randomHaiku = Math.floor(Math.random()*ideas_library.length);
 
 function Landing() {
 
+    const randomHaiku = Math.floor(Math.random()*ideas_library.length);
+
     const glyphCount = graphieros_dictionnary.length;
 
+    const [haikuState, setHaikuState] = useState({
+        rand: randomHaiku
+    });
+
+    const handleNewHaiku = () => {
+        setHaikuState({
+            rand:randomHaiku
+        });
+    }
+
     const [landSeqState, setLandSeqState] = useState({
-        sequence: 'zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs',
-        fr: '',
-        name: ''
+        sequence: 'xq-qz-zw-wd-ds qw-we zx-qe-wd zx-ws-qe-ez-zq-qw-wx-xd-ds qw-zs-ed',
+        fr: 'bonjour !',
+        name: '[ kli-keo mea-kadwa ! ]'
     });
 
 
@@ -156,17 +167,19 @@ function Landing() {
                     <KioIdea
                         className='kio-idea'
                         frac_class='kio-idea-frac'
-                        frac_sequence={ideas_library[randomHaiku].frac_sequence}
+                        frac_sequence={ideas_library[haikuState.rand].frac_sequence}
                         frac_svgSize='100'
                         frac_size='30'
                         frac_colors={[75, 106, 160]}
                         frac_dropShadow='0px 0px 3px rgba(255,255,255,0.6)'
                         frac_light={true}
-                        molecule_set={ideas_library[randomHaiku].molecules}
+                        molecule_set={ideas_library[haikuState.rand].molecules}
                     />
                 <div className='haiku-translation'>
-                    {ideas_library[randomHaiku].translation.map((tr,i)=> <p key={`trans_${i}`}>{tr}</p>)}
+                    {ideas_library[haikuState.rand].translation.map((tr,i)=> <p key={`trans_${i}`}>{tr}</p>)}
                 </div>
+
+                <button className='other-haiku' onClick={handleNewHaiku}>un autre?</button>
                         
 
                 </div>
