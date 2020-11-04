@@ -269,6 +269,39 @@ span.inLink:hover{
     font-size:1em;
 }
 
+button.other-haiku{
+    margin-top: 24px;
+    margin-left:50%;
+    transform: translateX(-50%);
+    border:none;
+    box-sizing: border-box;
+    padding:12px;
+    padding-left:18px;
+    padding-right:18px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -10px rgb(var(--c1));
+    border-radius:3px;
+    font-family: var(--logo);
+    color: rgb(var(--c1));
+    background: rgb(var(--c3));
+}
+
+button.other-haiku:hover{
+    animation: other-haiku 1s infinite linear;
+}
+
+@keyframes other-haiku{
+    0%{
+        transform: translateX(-50%) scale(1,1);
+    }
+    50%{
+        transform: translateX(-50%) scale(1.0618,1.0618);
+    }
+    10%{
+        transform: translateX(-50%) scale(1,1);
+    }
+}
+
 @media (max-width:700px){
     .landing-body,
     .graphieros-works,
