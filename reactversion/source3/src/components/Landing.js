@@ -166,7 +166,7 @@ function Landing() {
                 <p>...un poème au hasard</p>
                     <KioIdea
                         className='kio-idea'
-                        frac_class='kio-idea-frac'
+                        frac_class='kio-idea-frac-landing'
                         frac_sequence={ideas_library[haikuState.rand].frac_sequence}
                         frac_svgSize='100'
                         frac_size='30'
