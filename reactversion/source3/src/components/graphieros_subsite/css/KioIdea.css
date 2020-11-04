@@ -11,7 +11,8 @@
     box-shadow: 0 10px 20px -10px rgba(var(--c1),0.6),0px -15px 30px -15px rgba(255, 255, 255, 0.651);
 }
 
-.kio-idea-frac{
+.kio-idea-frac,
+.kio-idea-frac-landing{
     position: absolute;
     left:50%;
     top:-50px;
@@ -21,6 +22,26 @@
     height: 100px;
     width:100px;
     box-shadow: 0px 15px 30px -15px rgb(var(--c0)), 0px -15px 30px -15px rgba(255, 255, 255, 0.948);
+}
+
+.haiku-today .kio-molecule svg{
+    animation: kifl 0.25s ease-in;
+}
+
+.kio-idea-frac-landing svg{
+    animation: kifl 0.25s ease-in;
+}
+
+@keyframes kifl{
+    0%{
+        opacity:0;
+        transform:scale(0.618,0.618);
+        stroke: tomato;
+    }
+    100%{
+        opacity:1;
+        transform:scale(1.1618,1.1618);
+    }
 }
 
 .white-margin{
