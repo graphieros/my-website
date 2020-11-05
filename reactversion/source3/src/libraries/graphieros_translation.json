@@ -1,4 +1,109 @@
 [
+    {
+        "fr":"proliférer",
+        "litteral":"croître mutliplier",
+        "phono":"grae mksi",
+        "line":"grae-mksi",
+        "molecule":"grae mksi"
+    },
+    {
+        "fr":"cloche",
+        "litteral":"objet fonction frapper vibrer entendre",
+        "phono":"ptae fkai gry vba sko",
+        "line":"ptae-fkai-gry-vba-sko",
+        "molecule":"ptae fkai gry vba sko"
+    },
+    {
+        "fr":"idéal",
+        "litteral":"objet idée loin",
+        "phono":"ptae dea fra",
+        "line":"ptae-dea-fra",
+        "molecule":"ptae dea fra"
+    },
+    {
+        "fr":"idéalement",
+        "litteral":"avec idée loin",
+        "phono":"vi dea fra",
+        "line":"vi-dea-fra",
+        "molecule":"vi dea fra"
+    },
+    {
+        "fr":"idéaliste",
+        "litteral":"qualité idée loin",
+        "phono":"kli dea fra",
+        "line":"kli-dea-fra",
+        "molecule":"kli dea fra"
+    },
+    {
+        "fr":"extraordinaire",
+        "litteral":"qualité hors déjà voir",
+        "phono":"kli fwo d3a sta",
+        "line":"kli-fwo-d3a-sta",
+        "molecule":"kli fwo d3a sta"
+    },
+    {
+        "fr":"ordinaire",
+        "litteral":"qualité déjà voir",
+        "phono":"kli d3a sta",
+        "line":"kli-d3a-sta",
+        "molecule":"kli d3a sta"
+    },
+    {
+        "fr":"colon",
+        "litteral":"humain prendre lieu",
+        "phono":"ka ra kio",
+        "line":"ka-ra-kio",
+        "molecule":"ka ra kio"
+    },
+    {
+        "fr":"colonie",
+        "litteral":"lieu prendre lieu",
+        "phono":"kio ra kio",
+        "line": "kio-ra-kio",
+        "molecule":"kio ra kio"
+    },
+    {
+        "fr":"colonisateur",
+        "litteral":"qualité prendre lieu",
+        "phono":"kli ra kio",
+        "line":"kli-ra-kio",
+        "molecule":"kli ra kio"
+    },
+    {
+        "fr":"colonisation",
+        "litteral":"déterminer prendre lieu",
+        "phono":"mea ra kio",
+        "line":"mea-ra-kio",
+        "molecule":"mea ra kio"
+    },
+    {
+        "fr":"coloniser",
+        "litteral":"prendre lieu",
+        "phono":"ra kio",
+        "line":"ra-kio",
+        "molecule":"ra kio"
+    },
+    {
+        "fr":"utopie",
+        "litteral":"lieu non être",
+        "phono":"kio nia ma",
+        "line":"kio-nia-ma",
+        "molecule":"kio nia ma"
+    },
+    {
+        "fr":"utopique",
+        "litteral":"qualité lieu non être",
+        "phono":"kli kio nia ma",
+        "line":"kli-kio-nia-ma",
+        "molecule":"kli kio nia ma"
+    },
+    {
+        "fr":"utopiste",
+        "litteral":"humain lieu non être",
+        "phono":"ka kio nia ma",
+        "line":"ka-kio-nia-ma",
+        "molecule":"ka kio nia ma"
+    },
     {   
         "fr":"mensonge",
         "litteral":"déterminer faire entendre faux",
