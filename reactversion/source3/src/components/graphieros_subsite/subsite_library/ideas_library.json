@@ -1,94 +1,94 @@
 [
     {
-        "frac_sequence":"zs-se-ez-wq-qd-dx de-ex-xd-dq-sz-zw-ws-dz-zw-wd",
-        "molecules":[
+        "frac_sequence": "zs-se-ez-wq-qd-dx de-ex-xd-dq-sz-zw-ws-dz-zw-wd",
+        "molecules": [
             "bdi vi hia bia",
             "hia vi bdi gew"
         ],
-        "translation":[
+        "translation": [
             "Corps avec pensée d'équilibre",
             "Pensée avec un corps fort"
         ]
     },
     {
-        "frac_sequence":"zw-wx-xz-qz-zd qz-ze-ed-dx-xw-wq-qd-xz-we",
-        "molecules":[
+        "frac_sequence": "zw-wx-xz-qz-zd qz-ze-ed-dx-xw-wq-qd-xz-we",
+        "molecules": [
             "tew di go hea",
             "ne kpae vzu sa"
         ],
-        "translation":[
+        "translation": [
             "Tout dedans lumière",
             "Rien ne garde la vie électrique"
         ]
     },
     {
-        "frac_sequence":"ez-zq-qw-wx-xd-ds ez-zq-qw-wx-xd-ds-sw",
-        "molecules":[
+        "frac_sequence": "ez-zq-qw-wx-xd-ds ez-zq-qw-wx-xd-ds-sw",
+        "molecules": [
             "v3ai le kto fra",
             "kme rto kto soma"
         ],
-        "translation":[
+        "translation": [
             "Vouloir aller loin",
             "Pour retourner vers soi"
         ]
     },
     {
-        "frac_sequence":"zx-xw-we zq-qw-wz-qs",
-        "molecules":[
+        "frac_sequence": "zx-xw-we zq-qw-wz-qs",
+        "molecules": [
             "stoia ney pnae sa",
             "vi ldo grey hea"
         ],
-        "translation":[
+        "translation": [
             "Imaginer nouvelle Terre",
             "Avec une vieille lumière"
         ]
     },
     {
-        "frac_sequence":"wz-zq-qx-xe-ed-dw qs-se-xs-wd",
+        "frac_sequence": "wz-zq-qx-xe-ed-dw qs-se-xs-wd",
         "molecules": [
             "ptae bdi nfea",
             "sta kto skai"
         ],
-        "translation":[
+        "translation": [
             "Le corps malade",
             "Regarde vers le ciel"
         ]
     },
     {
-        "frac_sequence":"zx-sd-de sz-zd-dw-wz",
+        "frac_sequence": "zx-sd-de sz-zd-dw-wz",
         "molecules": [
             "sfi d3e fmai tra",
             "psie pkia kto fwo"
         ],
-        "translation":[
+        "translation": [
             "La peur du danger intérieur",
             "Pousse l'animal vers le dehors"
         ]
     },
     {
-        "frac_sequence":"wq-qz-ze-ed-dx qz-ze-ed-dx-xw-wq-qd-we-xz",
+        "frac_sequence": "wq-qz-ze-ed-dx qz-ze-ed-dx-xw-wq-qd-we-xz",
         "molecules": [
             "3e lea sa",
             "kpae de ftu"
         ],
-        "translation":[
+        "translation": [
             "Protéger la vie aléatoire",
             "Garder l'avenir"
         ]
     },
     {
-        "frac_sequence":"zx-ws-sq-qe-ez-zq-qw-wx-xd-de ze-ed-dx-xw-wq-qz-zw-wd-dz-xe-eq-qx-qd-we-xz",
+        "frac_sequence": "zx-ws-sq-qe-ez-zq-qw-wx-xd-de ze-ed-dx-xw-wq-qz-zw-wd-dz-xe-eq-qx-qd-we-xz",
         "molecules": [
             "kio tew ma blu",
             "mea rgia kme sye rgo"
         ],
-        "translation":[
+        "translation": [
             "Univers bleu",
             "Coeur rouge"
         ]
     },
     {
-        "frac_sequence":"qw-we-xs-zd ed-dx-qd ze-es-sx-xw",
+        "frac_sequence": "qw-we-xs-zd ed-dx-qd ze-es-sx-xw",
         "molecules": [
             "kio pkae da mea kloi",
             "ptae prba pno kto nsa"
@@ -99,8 +99,8 @@
         ]
     },
     {
-        "frac_sequence":"ws-sx-xw-qd-de-ez-zq ze-ed-dx-xw",
-        "molecules":[
+        "frac_sequence": "ws-sx-xw-qd-de-ez-zq ze-ed-dx-xw",
+        "molecules": [
             "pno hia kto kadwa ftu",
             "kloi dwa da ldo psoi"
         ],
@@ -110,14 +110,25 @@
         ]
     },
     {
-        "frac_sequence":"eq-xq-dq-zs-sw qw-we qz-zx",
-        "molecules":[
+        "frac_sequence": "eq-xq-dq-zs-sw qw-we qz-zx",
+        "molecules": [
             "sta nrea di vrea",
             "ma vrea di nrea"
         ],
-        "translation":[
+        "translation": [
             "voir le faux dans le vrai",
             "être vrai dans le faux"
+        ]
+    },
+    {
+        "frac_sequence": "zw-qw-ws qz-ze-ed-dx-xw-wq-qd-we-xz",
+        "molecules": [
+            "mea sa vea si",
+            "kwi via ftae gew"
+        ],
+        "translation": [
+            "vie faible ici",
+            "qui désire la force"
         ]
     }
 ]
