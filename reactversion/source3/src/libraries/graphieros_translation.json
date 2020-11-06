@@ -1,5 +1,117 @@
 [
     {
+        "fr":"doute",
+        "litteral":"déterminer penser non connaître",
+        "phono":"mea hia nia kno",
+        "line":"mea-hia-nia-kno",
+        "molecule":"mea hia nia kno"
+    },
+    {
+        "fr":"douter",
+        "litteral":"penser non connaître",
+        "phono":"hia nia kno",
+        "line":"hia-nia-kno",
+        "molecule":"hia nia kno"
+    },
+    {
+        "fr":"douteux",
+        "litteral":"qualité penser non connaître",
+        "phono":"kli hia nia kno",
+        "line":"kli-hia-nia-kno",
+        "molecule":"kli hia nia kno"
+    },
+    {
+        "fr":"besoin",
+        "litteral":"déterminer corps nécessiter",
+        "phono":"mea bdi nsio",
+        "line":"mea-bdi-nsio",
+        "molecule":"mea bdi nsio"
+    },
+    {
+        "fr":"inexact",
+        "litteral":"qualité résulter faux",
+        "phono":"kli zle nrea",
+        "line":"kli-zle-nrea",
+        "molecule":"kli zle nrea"
+    },
+    {
+        "fr":"inexactement",
+        "litteral":"avec résulter faux",
+        "phono":"vi zle nrea",
+        "line":"vi-zle-nrea",
+        "molecule":"vi zle nrea"
+    },
+    {
+        "fr":"inexactitude",
+        "litteral":"déterminer résulter faux",
+        "phono":"kli zle nrea",
+        "line":"kli-zle-nrea",
+        "molecule":"kli zle nrea"
+    },
+    {
+        "fr":"exact",
+        "litteral":"qualité résulter vrai",
+        "phono":"kli zle vrea",
+        "line":"kli-zle-vrea",
+        "molecule":"kli zle vrea"
+    },
+    {
+        "fr":"exactement",
+        "litteral":"avec résulter vrai",
+        "phono":"vi zle vrea",
+        "line":"vi-zle-vrea",
+        "molecule":"vi zle vrea"
+    },
+    {
+        "fr":"exactitude",
+        "litteral":"déterminer résulter vrai",
+        "phono":"mea zle vrea",
+        "line":"mea-zle-vrea",
+        "molecule":"mea zle vrea"
+    },
+    {
+        "fr":"intervenir",
+        "litteral":"corps agir entre",
+        "phono":"bdi pfae nto",
+        "line":"bdi-pfae-nto",
+        "molecule":"bdi pfae nto"
+    },
+    {
+        "fr":"intervention",
+        "litteral":"déterminer corps agir entre",
+        "phono":"mea bdi pfae nto",
+        "line":"mea-bdi-pfae-nto",
+        "molecule":"mea bdi pfae nto"
+    },
+    {
+        "fr":"demain",
+        "litteral":"déterminer jour après",
+        "phono":"mea kadwa ftea",
+        "line":"mea-kadwa-ftea",
+        "molecule":"mea kadwa ftea"
+    },
+    {
+        "fr":"hier",
+        "litteral":"déterminer jour avant",
+        "phono":"mea kadwa ntea",
+        "line":"mea-kadwa-ntea",
+        "molecule":"mea kadwa ntea"
+    },
+    {
+        "fr":"aujourd'hui",
+        "litteral":"déterminer jour ici",
+        "phono":"mea kadwa si",
+        "line":"mea-kadwa-si",
+        "molecule":"mea kadwa si"
+    },
+    {
+        "fr":"étape",
+        "litteral":"déterminer marquer parcourir couper",
+        "phono":"mea mrai prae kwo",
+        "line":"mea-mrai-prae-kwo",
+        "molecule":"mea mrai prae kwo"
+    },
+    {
         "fr":"proliférer",
         "litteral":"croître mutliplier",
         "phono":"grae mksi",
