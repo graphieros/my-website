@@ -197,7 +197,7 @@ function fractal({
     const xmlns = "http://www.w3.org/2000/svg";
     let svg_width = size * 2.5;
     let svg_height = size * 2.5;
-    
+
     const raw_content = sequence;
 
     let _p = `<path`;
@@ -209,8 +209,8 @@ function fractal({
 
     let svg_output = document.createElementNS(xmlns, "svg");
     svg_output.setAttributeNS(null, "viewBox", `0 0 ${svg_width} ${svg_height}`);
-    svg_output.style.height=size;
-    svg_output.style.width=size;
+    svg_output.style.height = size;
+    svg_output.style.width = size;
     svg_output.setAttributeNS(null, "stroke-width", stk);
     // svg_output.id = `fractal_${section}`;
 
@@ -316,7 +316,7 @@ function fractal({
     svg_container.style.alignItems = "center";
 
     svg_container.appendChild(svg_output);
- 
+
     return svg_container.innerHTML;
 
 }
@@ -1027,3 +1027,156 @@ function callifractal({
 
 }
 export { callifractal };
+
+
+function fastLine({
+    sequence,
+    width,
+    colors
+}) {
+
+    //globals
+    const XMLNS = "http://www.w3.org/2000/svg";
+    const SVG = document.createElementNS(XMLNS, 'svg');
+    const G = document.createElementNS(XMLNS, 'g');
+    let STROKE_WIDTH = width || 10;
+    colors = colors || [0, 0, 0];
+    let GLYPH_HEIGHT = 156;
+    let SVG_WIDTH = 256;
+    let incrementX = 0;
+    const ADDER = 200;
+    let INCR = 200;
+    let SPACE = 44;
+    let X = 128;
+
+
+    // almost pure functions
+
+    function mySplit(arr, splitter) {
+        return arr.split(splitter);
+    }
+
+
+    const concat = (string0, string1) => `${string1}${string0}`;
+
+    const convertString = (sequence, split0, split1, conc) => {
+        return mySplit(sequence, split0)
+            .map(el => mySplit(el, split1))
+            .map(arr => {
+                return arr.map(el => el = concat(el, conc));
+            });
+    }
+
+
+    const getOneGlyphCords = (glyph, database, incrY, incrX, oddIncr) => {
+        INCR += ADDER;
+        return database.filter(el => el.name === glyph)
+            .map((entry, k) => k === 0 ? entry.path
+                .map(cords => cords
+                    .map((cord, i) => i % 2 === 1 ? cord + incrY + oddIncr : cord + incrX)) : entry.path
+                        .map(cords => cords
+                            .map((cord, i) => i % 2 === 1 ? cord + incrY : cord + incrX)));
+    }
+
+
+
+    const getAllCords = (array, database, incrX, oddIncr) => {
+        return array.map(arr => arr.map(el => getOneGlyphCords(el, database, INCR, incrX, oddIncr)))
+    }
+
+
+
+    const populatePath = (array, classnm) => array
+        .map(el => `<path class=${classnm} d='M ${el}'/>`)
+        .toString()
+        .replaceAll(',', ' ');
+
+
+    const getWordCountAndLength = arr => {
+        const output = [];
+        mySplit(arr, ' ')
+            .forEach(split => output
+                .push(mySplit(split, '-').length));
+        return output;
+    }
+
+
+    const buildLinks = (array, incrX, oddIncr) => {
+        const output = [];
+        let Y = 328;
+        array.forEach((el, i) => {
+            if (el > 1) {
+                output.push([X + incrX, Y + oddIncr, X + incrX, Y + oddIncr + (((el - 1) * GLYPH_HEIGHT)) + (((el - 1) * SPACE))]);
+                Y += (((el) * GLYPH_HEIGHT)) + (((el) * SPACE));
+            } else {
+                Y += (((el) * GLYPH_HEIGHT)) + (((el) * SPACE));
+            }
+        });
+        return output;
+    }
+
+
+    // glyphs DOM mounting
+
+    const DOM_paths = [];
+    const DOM_lines = mySplit(sequence, ' / ');
+
+    const renderGlyphs = (seq, incrX, oddIncr) => {
+        const DOM_render_glyphs = getAllCords(convertString(seq, ' ', '-', '_'), graphieros_dictionnary, incrX, oddIncr);
+        let DOM_links = [];
+
+        DOM_links = buildLinks(getWordCountAndLength(seq), incrX, oddIncr);
+        DOM_paths.push(populatePath(DOM_links, 'link'));
+
+        DOM_render_glyphs.forEach(level0 => {
+            level0.forEach(level1 => {
+                level1.forEach(level2 => {
+                    DOM_paths.push(populatePath(level2, 'glyph'));
+                });
+            });
+        });
+    }
+
+
+    const allHeights = [];
+
+    for (let i = 0; i < DOM_lines.length; i += 1) {
+
+        let oddIncr;
+        i % 2 === 1 ? oddIncr = 100 : oddIncr = 0;
+
+        renderGlyphs(DOM_lines[i], incrementX, oddIncr);
+        incrementX += 170;
+        INCR = 200;
+        oddIncr = 0;
+        let wordsHeights = getWordCountAndLength(DOM_lines[i]).reduce((n0, n1) => n0 + n1);
+        allHeights.push(wordsHeights);
+    }
+
+    if (DOM_lines.length === 1) {
+        SVG_WIDTH += 70; //stupid hack
+    }
+
+    let maxHeight = Math.max(...allHeights);
+
+
+    // SVG styling
+    SVG.setAttributeNS(null, 'viewBox', `0 0 ${(SVG_WIDTH - 70) * DOM_lines.length} ${maxHeight * (GLYPH_HEIGHT + SPACE) + 550}`);
+    SVG.setAttributeNS(null, 'height', '100%');
+    SVG.setAttributeNS(null, 'width', '100%'); // adapt width to number of lines
+    G.setAttributeNS(null, 'fill', 'none');
+    G.setAttributeNS(null, 'stroke-linejoin', 'round');
+    G.setAttributeNS(null, 'stroke-linecap', 'round');
+    G.setAttributeNS(null, 'stroke-width', STROKE_WIDTH)// set width according to final size ?
+    G.setAttributeNS(null, 'stroke', `rgb(${colors})`) // set color in parameter
+
+    // final mounting
+    G.innerHTML = DOM_paths;
+    SVG.appendChild(G);
+
+    let svg_wrapper = document.createElement("DIV");
+    svg_wrapper.appendChild(SVG);
+    return svg_wrapper.innerHTML;
+}
+
+export { fastLine };
