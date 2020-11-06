@@ -180,6 +180,7 @@ function Pangolin() {
                     sequence={dayState.sequence}
                     svgSize='250'
                     colors={[211, 227, 252]}
+                    light={true}
                 />
 
                 <p className='numDay'>
