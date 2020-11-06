@@ -130,5 +130,27 @@
             "vie faible ici",
             "qui désire la force"
         ]
+    },
+    {
+        "frac_sequence":"qz-ed-xw zw-wd-dz-qs-se-xs",
+        "molecules":[
+            "srye hea vi kno spea",
+            "pkia pta trea da kno"
+        ],
+        "translation":[
+            "Encercler la lumière patiemment",
+            "Serpent de la connaissance"
+        ]
+    },
+    {
+        "frac_sequence":"qz-zx-xe-wd qd-dw-ex",
+        "molecules":[
+            "hia rbae tpe soma",
+            "mea mrai tpe bdi"
+        ],
+        "translation":[
+            "penser rebondit sur soi",
+            "marque sur le corps"
+        ]
     }
 ]
