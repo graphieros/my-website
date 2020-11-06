@@ -42,7 +42,7 @@
 
 .reduce textarea{
     display:none;
-}
+} 
 
 .reduce::before{
     display: block;
@@ -93,10 +93,10 @@
 .graphieros-terminal{
     display: block;
     position: fixed;
-    width:200px;
+    width:250px;
     height:80%;
     bottom:100px;
-    background: radial-gradient(rgba(0, 0, 0, 0.849), rgba(0, 0, 0, 0.938));
+    background: black;
     border-radius:24px;
     left:50%;
     transform: translateX(-50%);
