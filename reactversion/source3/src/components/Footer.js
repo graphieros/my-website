@@ -64,6 +64,12 @@ function Footer() {
 
                 <Link
                     className='link'
+                    to='/paragraph'>
+                        <li>composer</li>
+                </Link>
+
+                <Link
+                    className='link'
                     to='/kio'>
                     <li className='li-graphieros'>
                         <Fractal
