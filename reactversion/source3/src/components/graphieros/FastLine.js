@@ -16,4 +16,4 @@ const FastLine = (props) => {
     );
 }
 
-export default React.memo(FastLine);
+export default FastLine;
