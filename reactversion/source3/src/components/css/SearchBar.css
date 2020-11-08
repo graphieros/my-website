@@ -80,7 +80,7 @@ input.searchInput{
     box-sizing: border-box;
     padding-bottom:20px;
     padding-top:10px;
-    box-shadow: 0 0px 40px -20px rgba(0,0,100,0.95);
+    box-shadow: 0 0px 40px -10px black;
     z-index:100;
 }
 
@@ -126,6 +126,7 @@ input.searchInput{
 .searchResultPhono span {
     color: rgb(20,20,80);
     line-height:30px;
+    font-family: var(--logo);
 }
 
 .searchResultWord{
@@ -136,6 +137,8 @@ input.searchInput{
 
 .searchResultWord p {
     display: block;
+    font-family: var(--logo);
+    color: rgb(var(--c0));
 }
 
 .searchResultWord h5 {
