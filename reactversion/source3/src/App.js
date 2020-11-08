@@ -12,6 +12,8 @@ import Words from './components/Words';
 import FractalSpace from './components/FractalSpace';
 import Kio from './components/graphieros_subsite/Kio';
 import Pangolin from './components/Pangolin';
+import Login from './components/Login';
+import Paragraphs from './components/Paragraphs';
 
 function App() {
 
@@ -27,6 +29,7 @@ function App() {
         <Header />
 
         <Switch>
+          <Route path='/login' exact component={Login} />
           <Route path='/kio' exact component={Kio} />
           <Route path='/fractalspace' exact component={FractalSpace} />
           <Route path='/alp' exact component={Alp} />
@@ -36,6 +39,7 @@ function App() {
           <Route path='/galerie' exact component={Gallery} />
           <Route path='/blog' exact component={Blog} />
           <Route path='/labyrinthe' exact component={Pangolin} />
+          <Route path='/paragraph' exact component={Paragraphs}/>
           <Route path='/cle.html' component={() => {
             window.location.href = 'https://graphieros.com/cle.html';
             return null;
