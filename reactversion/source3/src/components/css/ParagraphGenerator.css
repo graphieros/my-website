@@ -9,7 +9,7 @@
     margin-bottom: 50px;
     background: white;
     z-index:100;
-    border-radius:3px;
+    border-radius:3px 48px 3px 3px;
     box-shadow: 0 10px 20px -10px rgb(var(--c0));
     box-sizing: border-box;
     padding:12px;
@@ -47,10 +47,12 @@ textarea.paragraph-generator-textarea{
     width:100%;
     box-sizing: border-box;
     padding:6px;
+    padding-left:12px;
     border:1px solid grey;
     border-radius: 3px;
     color: rgb(var(--c1));
     font-family: var(--logo);
+    box-shadow: 2px 2px 8px 1px rgb(var(--c0)) inset;
 }
 
 .paragraph-generator-clear{
@@ -68,6 +70,7 @@ textarea.paragraph-generator-textarea{
     opacity:0.8;
     transition: opacity 0.25s ease-in-out;
     font-family: var(--logo);
+    box-shadow: 0 5px 10px -5px rgb(var(--c0));
 }
 
 .paragraph-generator-clear:hover{
