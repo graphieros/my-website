@@ -20,8 +20,8 @@
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":10,
+        "date":"lundi 9 novembre 2020"
     },
     {
         "sequence":"ex-qd-dw",
@@ -36,24 +36,24 @@
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":15,
+        "date":"samedi 14 novembre 2020"
     },
     {
         "sequence":"eq-xq-ex-as-sw-dq-zs",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":20,
+        "date":"jeudi 19 novembre 2020"
     },
     {
         "sequence":"we-ex-qd",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":22,
+        "date":"samedi 21 novembre 2020"
     },
     {
         "sequence":"zw-se-ed-dx-xs",
@@ -68,8 +68,8 @@
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":16,
+        "date":"dimanche 15 novembre 2020"
     },
     {
         "sequence":"qe-xe-ws-zd",
@@ -84,16 +84,16 @@
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":12,
+        "date":"mercredi 11 novembre 2020"
     },
     {
         "sequence":"ex-xw-zx-qs",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":11,
+        "date":"mardi 10 novembre 2020"
     },
     {
         "sequence":"ze-eq-xw-wd",
@@ -108,24 +108,24 @@
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":21,
+        "date":"vendredi 20 novembre 2020"
     },
     {
         "sequence":"wz-zd-dx-xw-xz",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":17,
+        "date":"lundi 16 novembre 2020"
     },
     {
         "sequence":"zx-ws-sq-qe-ez-zq-qw-wx-xd-de",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":23,
+        "date":"dimanche 22 novembre 2020"
     },
     {
         "sequence":"ex-dz-zq-qs-sw",
@@ -140,16 +140,16 @@
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":18,
+        "date":"mardi 17 novembre 2020"
     },
     {
         "sequence":"ze-ew-wx-xz-qd",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":13,
+        "date":"jeudi 12 novembre 2020"
     },
     {
         "sequence":"wz-zd-qs-se-eq",
@@ -163,33 +163,33 @@
         "sequence":"zw-wx-xe",
         "light":true,
         "colors":[255,255,255],
-        "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "cypher":"Et dans quelle direction se tourner maintenant ? Il était bien simple de suivre le fil, quand celui-ci nous guidait droit vers l'espoir d'une sortie. Mais arrivé au bout de nos doigts tremblants, le fil coupé sans contrepartie a rendu à l'air tour l'espoir qu'il promettait, et imposé à nos sens de choisir dorénavant notre propre sens. Il y avait des insensés qui s'ignoraient, et quand le fil fut coupé, ils se révélèrent.",
+        "day":9,
+        "date":"dimanche 8 novembre 2020"
     },
     {
         "sequence":"de-es-sx-xd-dz-zq-qw-wd-dq",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":24,
+        "date":"lundi 23 novembre 2020"
     },
     {
         "sequence":"qs-se-xs-wd",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":14,
+        "date":"vendredi 13 novembre 2020"
     },
     {
         "sequence":"xs-se-ez-zd",
         "light":true,
         "colors":[255,255,255],
         "cypher":"Ce jour n'a pas encore été écrit",
-        "day":"inconnu",
-        "date":""
+        "day":19,
+        "date":"mercredi 18 novembre 2020"
     },
     {
         "sequence":"qe-ex-xz",
