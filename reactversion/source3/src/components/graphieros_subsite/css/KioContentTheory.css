@@ -75,6 +75,20 @@ button.memory-eraser{
     animation: wobble 0.25s ease-in-out;
 }
 
+.testPar{
+    position: absolute;
+    display:block;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height:300px;
+    background: white;
+}
+
+.par {
+    height:100%;
+}
+
 @media (max-width:500px){
     svg.theory-board{
         height:200px;
