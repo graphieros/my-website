@@ -163,7 +163,7 @@ function Landing() {
                 </div>
             </div>
             <div className='haiku-today'>
-                <p>...un poème au hasard</p>
+                <p>...un poème pseudo-aléatoire</p>
                     <KioIdea
                         className='kio-idea'
                         frac_class='kio-idea-frac-landing'
