@@ -13,6 +13,15 @@ let r = 218; //x_right
 
 let graphieros_dictionnary = [
     {
+        name:'_pri',
+        fr:'important',
+        path:[[l,q,rm,a,rm,w],[lm,w,rm,a],[lm,a,lm,a],[r,q,r,q]],
+        fractal:'qe-ex-we',
+        shapes:['PIC_tr'],
+        type:'ideo',
+        description:"Une longue flèche vers le haut, ou bien une triangulation pour signifier l'importance de la zone éclairée."
+    },
+    {
         name:'_vlai',
         fr:'volaille',
         path:[[rm,a,lm,a,r,q,l,q],[m,q,rm,w],[lm,w,lm,w]],
