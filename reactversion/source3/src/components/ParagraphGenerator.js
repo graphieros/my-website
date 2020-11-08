@@ -19,7 +19,7 @@ function ParagraphGenerator() {
     //         .map(x => parseInt(x, 16))
 
     const handleInput = (data) => {
-        const text = data.target.value;
+        const text = data.target.value.toLowerCase();
         // const color = data.target.parentNode.nextSibling.value;
         setParagraphState({
             content: <FastLine
