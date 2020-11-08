@@ -9,7 +9,7 @@
 
 .pangolin-body::-webkit-scrollbar{
     width:0px;
-}
+} 
 
 .labyrinth-grid{
     position: fixed;
@@ -180,4 +180,122 @@ span.labySpanDate{
     left:50%;
     transform: translate(-50%,-40%);
     opacity:0.6;
+}
+
+#lab-0 path, #lab-0 circle,
+#lab-1 path, #lab-1 circle,
+#lab-2 path, #lab-2 circle,
+#lab-3 path, #lab-3 circle,
+#lab-4 path, #lab-4 circle,
+#lab-5 path, #lab-5 circle,
+#lab-6 path, #lab-6 circle,
+#lab-7 path, #lab-7 circle,
+#lab-8 path, #lab-8 circle,
+#lab-9 path, #lab-9 circle,
+#lab-10 path, #lab-10 circle,
+#lab-11 path, #lab-11 circle,
+#lab-12 path, #lab-12 circle,
+#lab-13 path, #lab-13 circle,
+#lab-14 path, #lab-14 circle,
+#lab-15 path, #lab-15 circle,
+#lab-16 path, #lab-16 circle,
+#lab-17 path, #lab-17 circle,
+#lab-18 path, #lab-18 circle,
+#lab-19 path, #lab-19 circle,
+#lab-20 path, #lab-20 circle,
+#lab-21 path, #lab-21 circle,
+#lab-22 path, #lab-22 circle,
+#lab-23 path, #lab-23 circle,
+#lab-24 path, #lab-24 circle{
+    animation: lab 1s linear;
+    animation-iteration-count: 1;
+}
+
+#lab-24 path, #lab-24 circle{
+   animation-delay:0.5s;
+}
+#lab-3 path, #lab-3 circle{
+    animation-delay:1s;
+}
+#lab-16 path, #lab-16 circle{
+    animation-delay:1.5s;
+}
+#lab-19 path, #lab-19 circle{
+    animation-delay:2s;
+}
+#lab-7 path, #lab-7 circle{
+    animation-delay:2.5s;
+}
+#lab-1 path, #lab-1 circle{
+    animation-delay:3s;
+}
+#lab-9 path, #lab-9 circle{
+    animation-delay:3.5s;
+}
+#lab-12 path, #lab-12 circle{
+    animation-delay:4s;
+}
+#lab-20 path, #lab-20 circle{
+    animation-delay:4.5s;
+}
+#lab-2 path, #lab-2 circle{
+    animation-delay:5s;
+}
+#lab-11 path, #lab-11 circle{
+    animation-delay:5.5s;
+}
+#lab-10 path, #lab-10 circle{
+    animation-delay:6s;
+}
+#lab-18 path, #lab-18 circle{
+    animation-delay:6.5s;
+}
+#lab-22 path, #lab-22 circle{
+    animation-delay:7s;
+}
+#lab-4 path, #lab-4 circle{
+    animation-delay:7.5s;
+}
+#lab-8 path, #lab-8 circle{
+    animation-delay:8s;
+}
+#lab-14 path, #lab-14 circle{
+    animation-delay:8.5s;
+}
+#lab-17 path, #lab-17 circle{
+    animation-delay:9s;
+}
+#lab-23 path, #lab-23 circle{
+    animation-delay:9.5s;
+}
+#lab-5 path, #lab-5 circle{
+    animation-delay:10s;
+}
+#lab-13 path, #lab-13 circle{
+    animation-delay:10.5s;
+}
+#lab-6 path, #lab-6 circle{
+    animation-delay:11s;
+}
+#lab-15 path, #lab-15 circle{
+    animation-delay:11.5s;
+}
+#lab-21 path, #lab-21 circle{
+    animation-delay:12s;
+}
+
+@keyframes lab {
+    0%{
+        stroke: white;
+        fill: white;
+    }
+    50%{
+        stroke: tomato;
+        fill: tomato;
+        transform: scale(1.1,1.1);
+    }
+    100%{
+        stroke: white;
+        fill: white;
+    }
 }
