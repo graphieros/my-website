@@ -76,9 +76,9 @@
     bottom:50%;
     transform: translate(-50%,40%) rotate(-5deg);
     width:70px;
-    height:50px;
+    height:70px;
     background: radial-gradient(at top, white, tomato);
-    border-radius:6px;
+    border-radius:12px 6px;
     display: grid;
     align-items:center;
     justify-items:center;
@@ -92,8 +92,10 @@
 }
 
 .laby-link span{
-    transform: rotate(-30deg);
-}
+    transform: rotate(0deg);
+    margin-top:-6px;
+    font-family: var(--logo)
+;}
 
 .laby-link:hover{
     opacity:1;
