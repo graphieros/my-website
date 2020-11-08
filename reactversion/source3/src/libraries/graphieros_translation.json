@@ -1,5 +1,208 @@
 [
     {
+        "fr":"autre",
+        "litteral":"non soi",
+        "phono":"nia soma",
+        "line":"nia-soma",
+        "molecule":"nia soma"
+    },
+    {
+        "fr":"aération",
+        "litteral":"déterminer air circuit agir",
+        "phono":"mea hae srie pfae",
+        "line":"mea-hae-srie-pfae",
+        "molecule":"mea hae srie pfae"
+    },
+    {
+        "fr":"aérer",
+        "litteral":"air circuit agir",
+        "phono":"hae srie pfae",
+        "line":"hae-srie-pfae",
+        "molecule":"hae srie pfae"
+    },
+    {
+        "fr":"technicien",
+        "litteral":"humain travailler humain",
+        "phono":"ka tvai ka",
+        "line":"ka-tvai-ka",
+        "molecule":"ka tvai ka"
+    },
+    {
+        "fr":"technicité",
+        "litteral":"déterminer travailler humain",
+        "phono":"mea tvai ka",
+        "line":"mea-tvai-ka",
+        "molecule":"mea tvai ka"
+    },
+    {
+        "fr":"technique",
+        "litteral":"objet travailler humain",
+        "phono":"ptae tvai ka",
+        "line":"ptae-tvai-ka",
+        "molecule":"ptae tvai ka"
+    },
+    {
+        "fr":"crâne",
+        "litteral":"objet os tête",
+        "phono":"ptae bnio tea",
+        "line":"ptae-bnio-tea",
+        "molecule":"ptae bnio tea"
+    },
+    {
+        "fr":"crânien",
+        "litteral":"qualité os tête",
+        "phono":"kli bnio tea",
+        "line":"kli-bnio-tea",
+        "molecule":"kli bnio tea"
+    },
+    {
+        "fr":"communication",
+        "litteral":"déterminer donner information",
+        "phono":"mea fya nfo",
+        "line":"mea-fya-nfo",
+        "molecule":"mea fya nfo"
+    },
+    {
+        "fr":"communiquer",
+        "litteral":"donner information",
+        "phono":"fya nfo",
+        "line":"fya-nfo",
+        "molecule":"fya nfo"
+    },
+    {
+        "fr":"vraiment",
+        "litteral":"avec vrai",
+        "phono":"vi vrea",
+        "line":"vi-vrea",
+        "molecule":"vi vrea"
+    },
+    {
+        "fr":"foetal",
+        "litteral":"qualité animal apparaître",
+        "phono":"kli pkia zai",
+        "line":"kli-pkia-zai",
+        "molecule":"kli pkia zai"
+    },
+    {
+        "fr":"foetus",
+        "litteral":"objet animal croître",
+        "phono":"ptae pkia zai",
+        "line":"ptae-pkia-zai",
+        "molecule":"ptae pkia zai"
+    },
+    {
+        "fr":"cadavérique",
+        "litteral":"qualité corps non avec vie",
+        "phono":"kli bdi nia vi sa",
+        "line":"kli-bdi-nia-vi-sa",
+        "molecule":"kli bdi nia vi sa"
+    },
+    {
+        "fr":"cadavre",
+        "litteral":"objet corps non avec vie",
+        "phono":"ptae bdi nia vi sa",
+        "line":"ptae-bdi-nia-vi-sa",
+        "molecule":"ptae bdi nia vi sa"
+    },
+    {
+        "fr":"noyau",
+        "litteral":"lieu centrer atome",
+        "phono":"kio sye tmei",
+        "line":"kio-sye-tmei",
+        "molecule":"kio sye tmei"
+    },
+    {
+        "fr":"jardin",
+        "litteral":"lieu fonctionner ordonner végétal",
+        "phono":"kio fkai rdo pio",
+        "line":"kio-fkai-rdo-pio",
+        "molecule":"kio fkai rdo pio"
+    },
+    {
+        "fr":"jardinage",
+        "litteral":"déterminer ordonner végétal",
+        "phono":"mea rdo pio",
+        "line":"mea-rdo-pio",
+        "molecule":"mea rdo pio"
+    },
+    {
+        "fr":"jardiner",
+        "litteral":"ordonner végétal",
+        "phono":"rdo pio",
+        "line":"rdo-pio",
+        "molecule":"rdo pio"
+    },
+    {
+        "fr":"jardinier",
+        "litteral":"humain ordonner végétal",
+        "phono":"ka rdo pio",
+        "line":"ka-rdo-pio",
+        "molecule":"ka rdo pio"
+    },
+    {
+        "fr":"histoire",
+        "litteral":"déterminer marquer texte passé",
+        "phono":"mea mrai toi psoi",
+        "line":"mea-mrai-toi-psoi",
+        "molecule":"mea mrai toi psoi"
+    },
+    {
+        "fr":"historien",
+        "litteral":"humain marquer texte passé",
+        "phono":"ka mrai toi psoi",
+        "line":"ka-mrai-toi-psoi",
+        "molecule":"ka mrai toi psoi"
+    },
+    {
+        "fr":"historique",
+        "litteral":"qualité marquer texte passé",
+        "phono":"kli mrai toi psoi",
+        "line":"kli-mrai-toi-psoi",
+        "molecule":"kli mrai toi psoi"
+    },
+    {
+        "fr":"bibliothécaire",
+        "litteral":"humain garder objet texte",
+        "phono":"ka kpae ptae toi",
+        "line":"ka-kpae-ptae-toi",
+        "molecule":"ka kpae ptae toi"
+    },
+    {
+        "fr":"bibliothèque",
+        "litteral":"lieu garder objet texte",
+        "phono":"kio kpae ptae toi",
+        "line":"kio-kpae-ptae-toi",
+        "molecule":"kio kpae ptae toi"
+    },
+    {
+        "fr":"contenir",
+        "litteral":"garder dans récipient",
+        "phono":"kpae di tba",
+        "line":"kpae-di-tba",
+        "molecule":"kpae di tba"
+    },
+    {
+        "fr":"contension",
+        "litteral":"déterminer garder dans récipient",
+        "phono":"mea kpae di tba",
+        "line":"mea-kpae-di-tba",
+        "molecule":"mea kpae di tba"  
+    },
+    {
+        "fr":"contenu",
+        "litteral":"objet garder dans récipient",
+        "phono":"ptae kpae di tba",
+        "line":"ptae-kpae-di-tba",
+        "molecule":"ptae kpae di tba"
+    },
+    {
+        "fr":"espace",
+        "litteral":"lieu entre atome",
+        "phono":"kio nto tmei",
+        "line":"kio-nto-tmei",
+        "molecule":"kio nto tmei"
+    },
+    {
         "fr":"doute",
         "litteral":"déterminer penser non connaître",
         "phono":"mea hia nia kno",
