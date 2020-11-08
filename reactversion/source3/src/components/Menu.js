@@ -4,6 +4,7 @@ import Fractal from './graphieros/Fractal';
 import Button from './Button';
 import './css/Menu.css';
 import Logo from './Logo';
+import LabyrinthLogo from './LabyrinthLogo';
 
 function Menu() {
 
@@ -129,6 +130,7 @@ function Menu() {
                 </Link>
                 <Link to='/labyrinthe'>
                     <div className='laby-link' onClick={handleQuitMenu}>
+                        <LabyrinthLogo size='50px'/>
                         <span>labyrinthe</span>
                     </div>
                 </Link>
