@@ -38,7 +38,7 @@ function Pangolin() {
     const week0 = labyrinth_posts.map((post, i) => {
         if (i < 5) {
             return (
-                <div key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -57,7 +57,7 @@ function Pangolin() {
     const week1 = labyrinth_posts.map((post, i) => {
         if (i >= 5 && i < 10) {
             return (
-                <div key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -74,7 +74,7 @@ function Pangolin() {
     const week2 = labyrinth_posts.map((post, i) => {
         if (i >= 10 && i < 15) {
             return (
-                <div key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -91,7 +91,7 @@ function Pangolin() {
     const week3 = labyrinth_posts.map((post, i) => {
         if (i >= 15 && i < 20) {
             return (
-                <div key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -108,7 +108,7 @@ function Pangolin() {
     const week4 = labyrinth_posts.map((post, i) => {
         if (i >= 20 && i < 25) {
             return (
-                <div key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -125,7 +125,7 @@ function Pangolin() {
     const week5 = labyrinth_posts.map((post, i) => {
         if (i >= 25 && i < 30) {
             return (
-                <div key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
