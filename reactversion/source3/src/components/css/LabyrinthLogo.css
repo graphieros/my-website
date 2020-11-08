@@ -1,0 +1,10 @@
+svg.labyrinth-logo{
+    stroke-width: 10px;
+    stroke: rgb(var(--c0));
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill:none;
+    margin-left:-2px;
+    background:rgba(255, 99, 71, 0.664);
+    border-radius:100%;
+}
