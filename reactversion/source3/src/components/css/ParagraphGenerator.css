@@ -89,6 +89,29 @@ input.paragraph-generator-color{
     box-sizing: border-box;
 }
 
+.svg-cypher{
+    width:100%;
+    position: absolute;
+    background: radial-gradient(at top left, black, rgb(var(--c0)));
+    height:50px;
+    bottom: 60px;
+    transition: all 0.25s ease-in-out;
+    box-sizing: border-box;
+    padding: 12px;
+    font-family: var(--mono0);
+    color: rgb(var(--c3));
+    border-radius:3px;
+    cursor: text;
+    box-shadow: 0 10px 20px -10px rgb(var(--c0));
+    font-size:0.6em;
+    overflow: scroll;
+    user-select:all;
+}
+
+.svg-cypher::-webkit-scrollbar{
+    width:0px;
+}
+
 @media (max-width:500px){
     .paragraph-generator-body{
         max-width:300px;
