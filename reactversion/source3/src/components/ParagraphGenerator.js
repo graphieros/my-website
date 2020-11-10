@@ -6,39 +6,52 @@ function ParagraphGenerator() {
 
     const [paragraphState, setParagraphState] = useState({
         content: <FastLine
-        sequence={''}
-        colors={[0,0,0]}
-        size={10}
-    />
+            sequence={'ne'}
+            colors={[0, 0, 0]}
+            size={10}
+        />
     });
 
-    // const hexToRgb = hex =>
-    //     hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i
-    //         , (m, r, g, b) => '#' + r + r + g + g + b + b)
-    //         .substring(1).match(/.{2}/g)
-    //         .map(x => parseInt(x, 16))
+    let svgToCopy = '';
+
+    const [cypherState, setCypherState] = useState({
+        content: <div id="copyMe"></div>
+    });
 
     const handleInput = (data) => {
         const text = data.target.value.toLowerCase();
         // const color = data.target.parentNode.nextSibling.value;
         setParagraphState({
-            content: <FastLine
-                sequence={text}
-                colors={[0,0,0]}
-                size={10}
-            />
+            content: <div id="svg-to-copy">
+                <FastLine
+                    sequence={text}
+                    colors={[0, 0, 0]}
+                    size={10}
+                />
+            </div>
         });
+
+        setTimeout(() => { 
+            svgToCopy = document.getElementById("svg-to-copy").innerHTML;
+            setCypherState({
+                content: <div id="copyMe">{svgToCopy}</div>
+            });
+        }, 10); //this looks like a hack
+
     }
+
 
     const handleClear = (props) => {
         props.target.parentNode.children[0].value = '';
         setParagraphState({
             content: <FastLine
-            sequence={''}
-            colors={[0,0,0]}
-            size={10}
-        />
+                sequence={'ne'}
+                colors={[0, 0, 0]}
+                size={10}
+            />
         });
+
+        //okay stick that in another function linked to a show code button
     }
 
     return (
@@ -49,8 +62,10 @@ function ParagraphGenerator() {
             <div className='paragraph-generator-controls'>
                 <textarea className='paragraph-generator-textarea' onChange={(data) => handleInput(data)} />
                 <div className='paragraph-generator-clear' onClick={handleClear}>Clear</div>
+                <div className="svg-cypher">
+                    {cypherState.content}
+                </div>
             </div>
-            {/* <input className='paragraph-generator-color' type="color"/> */}
 
         </div>
     )
