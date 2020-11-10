@@ -75,3 +75,13 @@ p.words-phono {
     box-sizing: border-box;
     padding:24px;
 }
+
+span.title-word-count-span{
+    color: rgb(var(--c3));
+    text-shadow: 0 2px 4px black;
+}
+
+span.word-count-span{
+    font-family: var(--logo);
+    color: rgb(var(--c0));
+}
