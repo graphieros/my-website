@@ -1,5 +1,222 @@
 [
     {
+        "fr":"chercher",
+        "litteral":"vouloir trouver",
+        "phono":"v3ai waa",
+        "line":"v3ai-waa",
+        "molecule":"v3ai waa"
+    },
+    {
+        "fr":"chercheur",
+        "litteral":"humain vouloir trouver",
+        "phono":"ka v3ai waa",
+        "line":"ka-v3ai-waa",
+        "molecule":"ka v3ai waa"
+    },
+    {
+        "fr":"exemplaire",
+        "litteral":"qualité sujet identique apparaître",
+        "phono":"kli pkae sme zai",
+        "line":"kli-pkae-sme-zai",
+        "molecule":"kli pkae sme zai"
+    },
+    {
+        "fr":"exemplarité",
+        "litteral":"déterminer sujet identique apparaître",
+        "phono":"mea pkae sme zai",
+        "line":"mea-pkae-sme-zai",
+        "molecule":"mea pkae sme zai"
+    },
+    {
+        "fr":"exemple",
+        "litteral":"sujet identique apparaître",
+        "phono":"pkae sme zai",
+        "line":"pkae-sme-zai",
+        "molecule":"pkae sme zai"
+    },
+    {
+        "fr":"cimetière",
+        "litteral":"lieu fonctionner corps sous terre",
+        "phono":"kio fkai bdi nde trea",
+        "line":"kio-fkai-bdi-nde-trea",
+        "molecule":"kio fkai bdi nde trea"
+    },
+    {
+        "fr":"immatériel",
+        "litteral":"qualité non avec matière",
+        "phono":"kli nia vi mtai",
+        "line":"kli-nia-vi-mtai",
+        "molecule":"kli nia vi mtai"
+    },
+    {
+        "fr":"immatériellement",
+        "litteral":"avec non avec matière",
+        "phono":"vi nia vi mtai",
+        "line":"vi-nia-vi-mtai",
+        "molecule":"vi nia vi mtai"
+    },
+    {
+        "fr":"immédiat",
+        "litteral":"qualité non avec temps",
+        "phono":"kli nia vi kpoile",
+        "line":"kli-nia-vi-kpoile",
+        "molecule":"kli nia vi kpoile"
+    },
+    {
+        "fr":"immédiatement",
+        "litteral":"avec non avec temps",
+        "phono":"vi nia vi kpoile",
+        "line":"vi-nia-vi-kpoile",
+        "molecule":"vi nia vi kpoile"
+    },
+    {
+        "fr":"architecte",
+        "litteral":"humain planifier construire lieu",
+        "phono":"ka pla ksea kio",
+        "line":"ka-pla-ksea-kio",
+        "molecule":"ka pla ksea kio"
+    },
+    {
+        "fr":"architectural",
+        "litteral":"qualité planifier construire lieu",
+        "phono":"kli pla ksea kio",
+        "line":"kli-pla-ksea-kio",
+        "molecule":"kli pla ksea kio"
+    },
+    {
+        "fr":"architecturalement",
+        "litteral":"avec planifier construire lieu",
+        "phono":"vi pla ksea kio",
+        "line":"vi-pla-ksea-kio",
+        "molecule":"vi pla ksea kio"
+    },
+    {
+        "fr":"architecture",
+        "litteral":"déterminer planifier construire lieu",
+        "phono":"mea pla ksea kio",
+        "line":"mea-pla-ksea-kio",
+        "molecule":"mea pla ksea kio"
+    },
+    {
+        "fr":"désormais",
+        "litteral":"depuis ici",
+        "phono":"fmai si",
+        "line":"fmai-si",
+        "molecule":"fmai si"
+    },
+    {
+        "fr":"étude",
+        "litteral":"déterminer faire croître connaissance",
+        "phono":"mea fa grae kno",
+        "line":"mea-fa-grae-kno",
+        "molecule":"mea fa grae kno"
+    },
+    {
+        "fr":"étudiant",
+        "litteral":"humain faire croître connaissance",
+        "phono":"ka fa grae kno",
+        "line":"ka-fa-grae-kno",
+        "molecule":"ka fa grae kno"
+    },
+    {
+        "fr":"étudier",
+        "litteral":"faire croître connaissance",
+        "phono":"fa grae kno",
+        "line":"fa-grae-kno",
+        "molecule":"fa grae kno"
+    },
+    {
+        "fr":"accueil",
+        "litteral":"déterminer recevoir dans",
+        "phono":"mea rsea di",
+        "line":"mea-rsea-di",
+        "molecule":"mea rsea di"
+    },
+    {
+        "fr":"accueillant",
+        "litteral":"qualité recevoir dans",
+        "phono":"kli rsea di",
+        "line":"kli-rsea-di",
+        "molecule":"kli rsea di"
+    },
+    {
+        "fr":"accueillir",
+        "litteral":"recevoir dans",
+        "phono":"rsea di",
+        "line":"rsea-di",
+        "molecule":"rsea di"
+    },
+    {
+        "fr":"marche",
+        "litteral":"déterminer jambe alterner",
+        "phono":"mea lgae tae",
+        "line":"mea-lgae-tae",
+        "molecule":"mea lgae tae"
+    },
+    {
+        "fr":"marcher",
+        "litteral":"jambe alterner",
+        "phono":"lgae tae",
+        "line":"lgae-tae",
+        "molecule":"lgae tae"
+    },
+    {
+        "fr":"marcheur",
+        "litteral":"humain jambe alterner",
+        "phono":"ka lgae tae",
+        "line":"ka-lgae-tae",
+        "molecule":"ka lgae tae"
+    },
+    {
+        "fr":"tour",
+        "litteral":"objet parcourir autour",
+        "phono":"ptae prae srye",
+        "line":"ptae-prae-srye",
+        "molecule":"ptae prae srye"
+    },
+    {
+        "fr":"tourner",
+        "litteral":"parcourir autour",
+        "phono":"prae srye",
+        "line":"prae-srye",
+        "molecule":"prae srye"
+    },
+    {
+        "fr":"caresse",
+        "litteral":"déterminer toucher extrémité corps",
+        "phono":"mea pko stre bdi",
+        "line":"mea-pko-stre-bdi",
+        "molecule":"mea pko stre bdi"
+    },
+    {
+        "fr":"caresser",
+        "litteral":"toucher extrémité corps",
+        "phono":"pko stre bdi",
+        "line":"pko-stre-bdi",
+        "molecule":"pko stre bdi"
+    },
+    {
+        "fr":"caresseur",
+        "litteral":"humain toucher extrémité corps",
+        "phono":"ka pko stre bdi",
+        "line":"ka-pko-stre-bdi",
+        "molecule":"ka pko stre bdi"
+    },
+    {
+        "fr":"plaire",
+        "litteral":"apparaître avec sexe",
+        "phono":"zai vi skwa",
+        "line":"zai-vi-skwa",
+        "molecule":"zai vi skwa"
+    },
+    {
+        "fr":"plaisant",
+        "litteral":"qualité apparaître avec sexe",
+        "phono":"kli zai vi skwa",
+        "line":"kli-zai-vi-skwa",
+        "molecule":"kli zai vi skwa"
+    },
+    {
         "fr":"autre",
         "litteral":"non soi",
         "phono":"nia soma",
