@@ -8,6 +8,8 @@ import Fractal from './graphieros/Fractal';
 
 function Words() {
 
+    const wordCount = graphieros_translation.length;
+
     const [wordState, setWordState] = useState({
         content:''
     });
@@ -67,9 +69,9 @@ function Words() {
 
     return (
         <div className='words-body'>
-            <div className='words-title'>Liste des mots composés</div>
+            <div className='words-title'>Liste des <span className="title-word-count-span">{wordCount}</span> mots composés</div>
             <div className='words-presentation-paragraph'>
-                Retrouvez ci-dessous la liste non exhaustive des mots composés présents actuellement dans le dictionnaire, présentés de gauche à droite en modes linéaire, moléculaire et fractal.
+    Retrouvez ci-dessous la liste non exhaustive des <span className="word-count-span">{wordCount}</span> mots composés présents actuellement dans le dictionnaire, présentés de gauche à droite en modes linéaire, moléculaire et fractal.
             </div>
             <div className='words-list'>
                 {wordState.content}
