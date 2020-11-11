@@ -1,5 +1,187 @@
 [
     {
+        "fr":"chaud",
+        "litteral":"qualité température haut",
+        "phono":"kli po pa",
+        "line":"kli-po-pa",
+        "molecule":"kli po pa"
+    },
+    {
+        "fr":"chauffage",
+        "litteral":"déterminer faire température haut",
+        "phono":"mea fa po pa",
+        "line":"mea-fa-po-pa",
+        "molecule":"mea fa po pa"
+    },
+    {
+        "fr":"chauffer",
+        "litteral":"faire température haut",
+        "phono":"fa po pa",
+        "line":"fa-po-pa",
+        "molecule":"fa po pa"
+    },
+    {
+        "fr":"froid",
+        "litteral":"qualité température bas",
+        "phono":"kli po ni",
+        "line":"kli-po-ni",
+        "molecule":"kli po ni"
+    },
+    {
+        "fr":"refroidir",
+        "litteral":"faire température bas",
+        "phono":"fa po ni",
+        "line":"fa-po-ni",
+        "molecule":"fa po ni"
+    },
+    {
+        "fr":"refroidissement",
+        "litteral":"déterminer faire température bas",
+        "phono":"mea fa po ni",
+        "line":"mea-fa-po-ni",
+        "molecule":"mea fa po ni"
+    },
+    {
+        "fr":"loge",
+        "litteral":"objet positionner dans lieu",
+        "phono":"ptae psu di kio",
+        "line":"ptae-psu-di-kio",
+        "molecule":"ptae psu di kio"
+    },
+    {
+        "fr":"logement",
+        "litteral":"déterminer positionner dans lieu",
+        "phono":"mea psu di kio",
+        "line":"mea-psu-di-kio",
+        "molecule":"mea psu di kio"
+    },
+    {
+        "fr":"loger",
+        "litteral":"positionner dans lieu",
+        "phono":"psu di kio",
+        "line":"psu-di-kio",
+        "molecule":"psu di kio"
+    },
+    {
+        "fr":"logeur",
+        "litteral":"humain positionner dans lieu",
+        "phono":"ka psu di kio",
+        "line":"ka-psu-di-kio",
+        "molecule":"ka psu di kio"
+    },
+    {
+        "fr":"excellement",
+        "litteral":"avec bien non avec égal",
+        "phono":"vi keo nia vi gla",
+        "line":"vi-keo-nia-vi-gla",
+        "molecule":"vi keo nia vi gla"
+    },
+    {
+        "fr":"excellence",
+        "litteral":"déterminer bien non avec égal",
+        "phono":"mea keo nia vi gla",
+        "line":"mea-keo-nia-vi-gla",
+        "molecule":"mea keo nia vi gla"
+    },
+    {
+        "fr":"excellent",
+        "litteral":"qualité bien non avec égal",
+        "phono":"kli keo nia vi gla",
+        "line":"kli-keo-nia-vi-gla",
+        "molecule":"kli keo nia vi gla"
+    },
+    {
+        "fr":"exceller",
+        "litteral":"bien non avec égal",
+        "phono":"keo nia vi gla",
+        "line":"keo-nia-vi-gla",
+        "molecule":"keo nia vi gla"
+    },
+    {
+        "fr":"troupeau",
+        "litteral":"objet grouper animal",
+        "phono":"ptae kwe pkia",
+        "line":"ptae-kwe-pkia",
+        "molecule":"ptae kwe pkia"
+    },
+    {
+        "fr":"dépassement",
+        "litteral":"déterminer aller loin devant",
+        "phono":"mea le fra dva",
+        "line":"mea-le-fra-dva",
+        "molecule":"mea le fra dva"
+    },
+    {
+        "fr":"dépasser",
+        "litteral":"aller loin devant",
+        "phono":"le fra dva",
+        "line":"le-fra-dva",
+        "molecule":"le fra dva"
+    },
+    {
+        "fr":"prévision",
+        "litteral":"déterminer voir avant",
+        "phono":"mea sta ntea",
+        "line":"mea-sta-ntea",
+        "molecule":"mea sta ntea"
+    },
+    {
+        "fr":"prévisionnel",
+        "litteral":"qualité voir avant",
+        "phono":"kli sta ntea",
+        "line":"kli-sta-ntea",
+        "molecule":"kli sta ntea"
+    },
+    {
+        "fr":"prévoir",
+        "litteral":"voir avant",
+        "phono":"sta ntea",
+        "line":"sta-ntea",
+        "molecule":"sta ntea"
+    },
+    {
+        "fr":"midi",
+        "litteral":"déterminer jour milieu",
+        "phono":"mea kadwa mdo",
+        "line":"mea-kadwa-mdo",
+        "molecule":"mea kadwa mdo"
+    },
+    {
+        "fr":"soir",
+        "litteral":"objet jour vieux",
+        "phono":"ptae kadwa ldo",
+        "line":"ptae-kadwa-ldo",
+        "molecule":"ptae kadwa ldo"
+    },
+    {
+        "fr":"soirée",
+        "litteral":"déterminer jour vieux",
+        "phono":"mea kadwa ldo",
+        "line":"mea-kadwa-ldo",
+        "molecule":"mea kadwa ldo"
+    },
+    {
+        "fr":"matin",
+        "litteral":"objet jour jeune",
+        "phono":"ptae kadwa 3ne",
+        "line":"ptae-kadwa-3ne",
+        "molecule":"ptae kadwa 3ne"
+    },
+    {
+        "fr":"matinal",
+        "litteral":"qualité jour jeune",
+        "phono":"kli kadwa 3ne",
+        "line":"kli-kadwa-3ne",
+        "molecule":"kli kadwa 3ne"
+    },
+    {
+        "fr":"matinée",
+        "litteral":"déterminer jour jeune",
+        "phono":"mea kadwa 3ne",
+        "line":"mea-kadwa-3ne",
+        "molecule":"mea kadwa 3ne"
+    },
+    {
         "fr":"chercher",
         "litteral":"vouloir trouver",
         "phono":"v3ai waa",
