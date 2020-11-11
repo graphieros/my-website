@@ -191,6 +191,41 @@ span.countBlue{
     font-weight:bold;
 }
 
+.foundPhono{
+    position: fixed;
+    display: flex;
+    top:36px;
+    left:18px;
+    color: white;
+    z-index:2000;
+    box-sizing: border-box;
+    padding:3px;
+    padding-right:30px;
+    background: linear-gradient(to right, black, transparent);
+    border-radius:10px 30px 0 0;
+    font-family: var(--logo);
+    height:28px;
+}
+
+.foundPhono svg{
+    margin-top:-6px;
+    margin-left:16px;
+    width:30px !important;
+    height:30px !important;
+    background: black !important;
+    border-radius:100%;
+    transition: all 0.25s ease-in-out;
+}
+
+.foundPhono svg g path{
+    stroke-width:12px !important;
+}
+
+.foundPhono svg:hover{
+    transform: scale(2,2);
+    box-shadow: 0 0 10px rgb(var(--c3)) !important;
+}
+
 @media (max-width:500px) {
     input.searchInput{
         font-size:0.8em;
