@@ -27,9 +27,21 @@ button.menu-button-landing:hover{
     animation: button 0.25s ease-in-out;
 }
 
+button.menu-button:hover{
+    background: rgb(59, 83, 126);
+}
+
 button.menu-button:hover p,
 button.menu-button-landing:hover p{
-    color: white;
+    color: rgb(255, 130, 108);
+}
+
+button.menu-button:hover svg path{
+    fill: rgb(255,130,108) !important;
+}
+
+button.menu-button:hover svg circle{
+    fill: rgb(255,130,108) !important;
 }
 
 .menu-fractal-choice,
