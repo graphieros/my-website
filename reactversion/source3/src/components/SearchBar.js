@@ -35,6 +35,10 @@ const SearchBar = (props) => {
         className: 'hidden'
     });
 
+    const [phonoState, setPhonoState] = useState({
+        className:'hidden',
+        content:''
+    });
 
     let delay = null;
 
@@ -48,7 +52,7 @@ const SearchBar = (props) => {
 
             graphieros_dictionnary.forEach((glyph, i) => {
 
-                if (searchValue.toLowerCase() === glyph.fr) {
+                if(searchValue.toLowerCase() === glyph.fr) {
 
                     setSearchResult({
                         className: 'glyphSearchReturn',
@@ -66,6 +70,24 @@ const SearchBar = (props) => {
                         [ {glyph.name.replace("_", "")} ]</div>
                         </div>
                     });
+                    setBackState({
+                        className: 'backState'
+                    });
+                }
+                if('_'+searchValue.toLowerCase() === glyph.name) {
+
+                    setPhonoState({
+                        className:'foundPhono',
+                        content: <>
+                        {`[ ${glyph.name.replace("_","")} ] : "  ${glyph.fr} "`}
+                        <Linear 
+                            sequence={glyph.name.replace("_","")}
+                            size='30'
+                            colors={[255,99,71]}
+                        />
+                        </>
+                    });
+
                     setBackState({
                         className: 'backState'
                     });
@@ -109,6 +131,10 @@ const SearchBar = (props) => {
         if (searchValue === '') {
             setBackState({
                 className: 'hidden'
+            });
+            setPhonoState({
+                className:'hidden',
+                content:''
             });
         }
 
@@ -212,6 +238,10 @@ const SearchBar = (props) => {
             setTempSearchState({
                 className: 'hidden'
             });
+            setPhonoState({
+                className:'hidden',
+                content:''
+            });
         }
     }
 
@@ -310,6 +340,7 @@ const SearchBar = (props) => {
                     glyphes: <span className="countTomato">{glyphCount}</span><br />
                     mots: <span className="countBlue">{wordCount}</span>
                 </div>
+                <div className={phonoState.className}>{phonoState.content}</div>
             </div>
             <div className={backState.className} />
         </React.Fragment>
