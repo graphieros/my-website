@@ -99,7 +99,24 @@
 
 .laby-link:hover{
     opacity:1;
-    transform: translate(-50%,40%) rotate(5deg)
+    transform: translate(-50%,40%) rotate(5deg);
+}
+
+.laby-link svg {
+    transition: all 0.25s ease-in-out;
+}
+
+.laby-link:hover svg {
+    stroke: white;
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 1000px;
+    animation: llsvg 2s infinite linear;
+}
+
+@keyframes llsvg{
+    100%{
+        stroke-dashoffset:0;
+    }
 }
 
 @keyframes menu-body {
