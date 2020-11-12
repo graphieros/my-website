@@ -1,5 +1,10 @@
 [
     {
+        "title":"Achèvement relatif",
+        "date":"mercredi 11 novembre 2020",
+        "idea":"Mon site est parvenu à un état d'achèvement relativement complet. Il est possible de faire des recherches de mots en français et d'afficher les résultats en graphieros; de rechercher une phonologie et d'afficher sa traduction en français; de rechercher une forme et d'afficher les glyphes correspondants. La liste complète des glyphes est disponible, ainsi que la Clé pour apprendre à les manier. Divers éditeurs sont disponibles pour écrire en graphieros depuis son navigateur, y compris l'éditeur 'Fractal Space', qui permet à l'utilisateur d'écrire dans le sens de la profondeur.\n\nIl manque peut-être un éditeur où en saisissant du texte en français, l'utilisateur pourrait voir s'afficher la traduction en graphieros. Il y a là quelques défis techniques intéressants, liés notamment à la conjugaison. Il faudrait en effet éliminer toutes les finales de mots pour faire une recherche dans la base, mais dans laquelle il faudrait alors disposer des variations du type 'prendre - prenne - prisse' etc. Pas une mince affaire.\n\nEnfin, il manque pour moi la possibilité de poster du contenu vers le serveur depuis une page d'authentification, mais je travaille déjà sur le sujet en arrière-plan."
+    },
+    {
         "title":"Le fil",
         "date":"mardi 3 novembre 2020",
         "idea":"En cliquant sur 'labyrinthe' dans le menu, le visiteur se retrouvera sur une page que j'ai préparée lorsque l'annonce fut proclamée du reconfinement français. Trente glyphes, reliés par leurs sommets, renvoient vers trente entrées d'un nouveau journal. Dans ce labyrinthe de mes pensées, les jours ne se suivent pas de façon linéaire. Je sélectionne chaque jour le glyphe qui semble correspondre à ce que je veux dire, ou plutôt je me laisse chochoter par celui qui vient quelque chose à écrire.\n\nPeut-être sera-t-il nécessaire d'ajouter un étage à ce labyrinthe de mes pensées, si ce reconfinement perdurait au-delà de trente jours. Architecture et politique, comme toujours, sont covalents."
