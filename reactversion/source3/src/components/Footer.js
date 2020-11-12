@@ -44,6 +44,12 @@ function Footer() {
 
                 <Link
                     className='link'
+                    to="/livre">
+                    <li>Le Livre</li>
+                </Link>
+
+                <Link
+                    className='link'
                     to='/journal.html'
                     target='_blank'>
                     <li>le cri du pangolin</li>
