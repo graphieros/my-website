@@ -1,5 +1,19 @@
 [
     {
+        "fr":"beau",
+        "litteral":"qualité bien accrocher lumière",
+        "phono":"kli keo grey hea",
+        "line":"kli-keo-grey-hea",
+        "molecule":"kli keo grey hea"
+    },
+    {
+        "fr":"univers",
+        "litteral":"lieu tout être",
+        "phono":"kio tew ma",
+        "line":"kio-tew-ma",
+        "molecule":"kio tew ma"
+    },
+    {
         "fr":"chaud",
         "litteral":"qualité température haut",
         "phono":"kli po pa",
