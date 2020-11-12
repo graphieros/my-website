@@ -226,6 +226,21 @@ span.countBlue{
     box-shadow: 0 0 10px rgb(var(--c3)) !important;
 }
 
+.combination-word-result{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index:3000;
+    background: rgba(0, 0, 0, 0.658);
+    border-radius:100%;
+    box-shadow: 0 0 20px 5px white;
+}
+
+.combination-word-result svg {
+    filter: drop-shadow(0 2px 1px black) !important;
+}
+
 @media (max-width:500px) {
     input.searchInput{
         font-size:0.8em;
