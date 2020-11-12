@@ -14,6 +14,7 @@ import Kio from './components/graphieros_subsite/Kio';
 import Pangolin from './components/Pangolin';
 import Login from './components/Login';
 import Paragraphs from './components/Paragraphs';
+import LeLivre from './components/LeLivre';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
           <Route path='/blog' exact component={Blog} />
           <Route path='/labyrinthe' exact component={Pangolin} />
           <Route path='/paragraph' exact component={Paragraphs}/>
+          <Route path='/livre' exact component={LeLivre} />
           <Route path='/cle.html' component={() => {
             window.location.href = 'https://graphieros.com/cle.html';
             return null;
