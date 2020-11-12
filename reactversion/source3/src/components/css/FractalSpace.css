@@ -86,7 +86,9 @@
     justify-items:center;
     /* overflow: hidden; */
     background: black;
+    transition: all 0.25s ease-in-out;
 }
+
 
 .fractalspace-output{
     position: absolute;
@@ -94,6 +96,16 @@
     left:50%;
     transform: translate(-49.23079%,-49.23077%);
     transition: all 0.25s ease-in-out;
+    animation: fso 0.25s ease-in-out;
+}
+
+@keyframes fso{
+  0%{
+    transform: translate(-49.23079%,-49.23077%) scale(0.1,0.1);
+  }
+  100%{
+    transform: translate(-49.23079%,-49.23077%) scale(1.05,1.05);
+  }
 }
 
 .fractalspace-output svg {
