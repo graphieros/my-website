@@ -40,6 +40,11 @@ const SearchBar = (props) => {
         content:''
     });
 
+    const [combinationRes, setCombinationRes] = useState({
+        className:'hidden',
+        content:''
+    });
+
     let delay = null;
 
     let insideSearch = (searchValue) => {
@@ -124,6 +129,31 @@ const SearchBar = (props) => {
                         className: 'backState'
                     });
                 }
+
+                if(searchValue.toLowerCase() === word.line){
+                    setPhonoState({
+                        className:'foundPhono',
+                        content: <>
+                        {`" ${word.fr} "`}
+                        </>
+                    });
+
+                    setCombinationRes({
+                        className:'combination-word-result',
+                        content:<Molecule
+                            sequence={word.molecule}
+                            size='250'
+                            colors={[255,255,255]}
+                            strokeWidth='5'
+                        />
+                    });
+
+                    setBackState({
+                        className: 'backState'
+                    });
+    
+                }
+
             })
 
         }
@@ -133,6 +163,10 @@ const SearchBar = (props) => {
                 className: 'hidden'
             });
             setPhonoState({
+                className:'hidden',
+                content:''
+            });
+            setCombinationRes({
                 className:'hidden',
                 content:''
             });
@@ -242,6 +276,10 @@ const SearchBar = (props) => {
                 className:'hidden',
                 content:''
             });
+            setCombinationRes({
+                className:'hidden',
+                content:''
+            });
         }
     }
 
@@ -341,6 +379,20 @@ const SearchBar = (props) => {
                     mots: <span className="countBlue">{wordCount}</span>
                 </div>
                 <div className={phonoState.className}>{phonoState.content}</div>
+            </div>
+            <div className={combinationRes.className}>
+                {combinationRes.content}
+                <div
+                        className="quitResult"
+                        onClick={letsQuitResult}>
+                        <Fractal
+                            sequence='zx-we'
+                            colors={[255, 255, 255]}
+                            svgSize={30}
+                            background='rgb(255,91,79)'
+                            backgroundRadius='100%'
+                        />
+                    </div>
             </div>
             <div className={backState.className} />
         </React.Fragment>
