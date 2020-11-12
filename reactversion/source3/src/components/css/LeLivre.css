@@ -1,0 +1,113 @@
+.LeLivre-body{
+    background: radial-gradient(rgb(var(--c0)),black);
+    box-sizing: border-box;
+    height:100vh;
+    width:100vw;
+    display: block;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.LeLivre-page{
+    height:400px;
+    width:300px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-40%);
+    border:1px solid white;
+    box-shadow: 0 0 30px 10px black;
+    transition: all 0.25s ease-in-out;
+    border-radius:2px;
+    background: radial-gradient(rgb(var(--c0)),rgb(19, 36, 68));
+    z-index:1;
+}
+
+.LeLivre-page div{
+    height:100%;
+    width:100%;
+}
+
+.LeLivre-page svg{
+    filter: drop-shadow(0 2px 1px black);
+    animation: pageAnim 0.25s ease-in-out;
+}
+
+@keyframes pageAnim {
+    0%{
+        opacity:0.2;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.LeLivre-page-next,
+.LeLivre-page-previous{
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    position: fixed;
+    bottom:24px;
+    left:50%;
+    width:40px;
+    height:40px;
+    background: transparent;
+    cursor: pointer;
+    transition: opacity 0.25s ease-in-out;
+    opacity:0.5;
+    z-index:3;
+}
+
+.LeLivre-page-next{
+    transform: translateX(30%);
+}
+
+.LeLivre-page-previous{
+    transform: translateX(-130%);
+}
+
+.LeLivre-page-next:hover,
+.LeLivre-page-previous:hover{
+    opacity:1;
+}
+
+p.LeLivre-page-number{
+    position: absolute;
+    right:16px;
+    bottom:0;
+    color: white;
+    font-family: var(--mono0);
+    font-size:0.7em;
+}
+
+.hea-star, .hea-star svg{
+    animation: hea-star 20s infinite linear;
+    height:40px;
+    width:40px;
+    position: fixed;
+    left:-200px;
+    bottom:100px;
+    transition: all 0.25s ease-in-out;
+}
+
+@keyframes hea-star{
+    0%{
+        transform: scale(0.5,0.5);
+        left:-200px;
+        top:400px;
+    }
+    100%{
+        transform: scale(1.2,1.2);
+        left:100%;
+        top:100px;
+    }
+}
+
+@media (max-width:500px){
+    .LeLivre-page{
+        height:350px;
+        width:280px;
+    }
+}
