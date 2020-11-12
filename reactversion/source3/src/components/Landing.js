@@ -74,7 +74,7 @@ function Landing() {
                     L'hexagone fait partie des quelques formes géométriques avec lesquelles il est possible de construire un <strong>pavage régulier</strong>, comme celui de la surface externe des alvéoles bâties par les abeilles.
                 </p>
                 <div className='abeilles'>
-                    <svg viewBox='0 0 500 450'>
+                    <svg className='abeilles-svg' viewBox='0 0 500 450'>
                     <path d="M 40,20,80,89,40,158,80,228,40,297" /><path d="M 80,89,160,89,200,20" /><path d="M 160,89,200,158,280,158,320,228,400,228,440,297" /><path d="M 200,158,160,228,80,228" /><path d="M 280,158,320,89" /><path d="M 400,228,440,158,400,89,320,89,280,20" /><path d="M 400,89,440,20" /><path d="M 160,228,200,297,280,297,320,228" /><path d="M 200,297,160,366,80,366" /><path d="M 160,366,200,435" /><path d="M 280,297,320,366" /><path d="M 520,158,440,158" /><path className='ka' d="M 220,193,260,262" /><path className='ka' d="M 220,262,240,228" /><path className='ka' d="M 200,228,260,193" /><path className='ka' d="M 280,228,280,228" /><path className='hea' d="M 100,124,100,193,160,158,100,124"/><path className='hea' d="M 80,158,120,158,140,124"/><path className='hea' d="M 140,193,120,158"/><path className='snoi' d="M 340,124,380,124,400,158"/><path className='snoi' d="M 320,158,380,124,380,193"/><path className='snoi' d="M 340,193,380,124"/>
                     </svg>
                 </div>
