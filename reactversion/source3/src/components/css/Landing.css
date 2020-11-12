@@ -210,7 +210,7 @@ span.blueSpan{
     transform: translateX(-50%);
 }
 
-.abeilles svg {
+svg.abeilles-svg {
     opacity:.8;
     stroke:rgb(184, 184, 184);
     fill:none;
@@ -218,6 +218,15 @@ span.blueSpan{
     stroke-linejoin: round;
     stroke-width:6px;
     filter: drop-shadow(0 3px 1px black);
+    stroke-dasharray: 800px;
+    stroke-dashoffset: 800px;
+    animation: abeil 4s linear infinite;
+}
+
+@keyframes abeil {
+    100%{
+        stroke-dashoffset: 0px;
+    }
 }
 
 path.ka{
