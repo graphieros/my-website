@@ -1,10 +1,297 @@
 [
     {
+        "fr":"vidage",
+        "litteral":"déterminer vider",
+        "phono":"mea vde",
+        "line":"mea-vde",
+        "molecule":"mea vde"
+    },
+    {
+        "fr":"vide",
+        "litteral":"objet vider",
+        "phono":"ptae vde",
+        "line":"ptae-vde",
+        "molecule":"ptae vde"
+    },
+    {
+        "fr":"viralité",
+        "litteral":"déterminer virus",
+        "phono":"mea vzy",
+        "line":"mea-vzy",
+        "molecule":"mea vzy"
+    },
+    {
+        "fr":"viral",
+        "litteral":"qualité virus",
+        "phono":"kli vzy",
+        "line":"kli-vzy",
+        "molecule":"kli vzy"
+    },
+    {
+        "fr":"vue",
+        "litteral":"déterminer voir",
+        "phono":"mea sta",
+        "line":"mea-sta",
+        "molecule":"mea sta"
+    },
+    {
+        "fr":"vol",
+        "litteral":"déterminer voler",
+        "phono":"mea flae",
+        "line":"mea-flae",
+        "molecule":"mea flae"
+    },
+    {
+        "fr":"utilisateur",
+        "litteral":"humain utiliser",
+        "phono":"ka ze",
+        "line":"ka-ze",
+        "molecule":"ka ze"
+    },
+    {
+        "fr":"utilisation",
+        "litteral":"déterminer utiliser",
+        "phono":"mea ze",
+        "line":"mea-ze",
+        "molecule":"mea ze"
+    },
+    {
+        "fr":"syllabique",
+        "litteral":"qualité syllabe",
+        "phono":"kli zba",
+        "line":"kli-zba",
+        "molecule":"kli zba"
+    },
+    {
+        "fr":"pétrolier",
+        "litteral":"qualité pétrole",
+        "phono":"kli gly",
+        "line":"kli-gly",
+        "molecule":"kli gly"
+    },
+    {
+        "fr":"pétrolifère",
+        "litteral":"qualité avec pétrole",
+        "phono":"kli vi gly",
+        "line":"kli-vi-gly",
+        "molecule":"kli vi gly"
+    },
+    {
+        "fr":"chaîne",
+        "litteral":"objet fonction chaîner",
+        "phono":"ptae fkai lki",
+        "line":"ptae-fkai-lki",
+        "molecule":"ptae fkai lki"
+    },
+    {
+        "fr":"hebdomadaire",
+        "litteral":"qualité semaine",
+        "phono":"kli dryksi",
+        "line":"kli-dryksi",
+        "molecule":"kli dryksi"
+    },
+    {
+        "fr":"hebdomadairement",
+        "litteral":"avec semaine",
+        "phono":"vi dryksi",
+        "line":"vi-dryksi",
+        "molecule":"vi dryksi"
+    },
+    {
+        "fr":"mensuel",
+        "litteral":"qualité mois",
+        "phono":"kli dryktu",
+        "line":"kli-dryktu",
+        "molecule":"kli dryktu"
+    },
+    {
+        "fr":"mensuellement",
+        "litteral":"avec mois",
+        "phono":"vi dryktu",
+        "line":"vi-dryktu",
+        "molecule":"vi dryktu"
+    },
+    {
+        "fr":"annuel",
+        "litteral":"qualité année",
+        "phono":"kli drydwa",
+        "line":"kli-drydwa",
+        "molecule":"kli drydwa"
+    },
+    {
+        "fr":"annuellement",
+        "litteral":"avec année",
+        "phono":"vi drydwa",
+        "line":"vi-drydwa",
+        "molecule":"vi drydwa"
+    },
+    {
+        "fr":"importance",
+        "litteral":"déterminer importer",
+        "phono":"mea pri",
+        "line":"mea-pri",
+        "molecule":"mea pri"
+    },
+    {
+        "fr":"important",
+        "litteral":"qualité importer",
+        "phono":"kli pri",
+        "line":"kli-pri",
+        "molecule":"kli pri"
+    },
+    {
+        "fr":"commande",
+        "litteral":"objet ordronner action",
+        "phono":"ptae rdo pfae",
+        "line":"ptae-rdo-pfae",
+        "molecule":"ptae rdo pfae"
+    },
+    {
+        "fr":"commandement",
+        "litteral":"déterminer ordonner action",
+        "phono":"mea rdo pfae",
+        "line":"mea-rdo-pfae",
+        "molecule":"mea rdo pfae"
+    },
+    {
+        "fr":"commander",
+        "litteral":"ordonner action",
+        "phono":"rdo pfae",
+        "line":"rdo-pfae",
+        "molecule":"rdo pfae"
+    },
+    {
+        "fr":"demande",
+        "litteral":"déterminer mettre question",
+        "phono":"mea pne wo",
+        "line":"mea-pne-wo",
+        "molecule":"mea pne wo"
+    },
+    {
+        "fr":"demander",
+        "litteral":"mettre question",
+        "phono":"pne wo",
+        "line":"pne-wo",
+        "molecule":"pne wo"
+    },
+    {
+        "fr":"demandeur",
+        "litteral":"humain mettre question",
+        "phono":"ka pne wo",
+        "line":"ka-pne-wo",
+        "molecule":"ka pne wo"
+    },
+    {
+        "fr":"récemment",
+        "litteral":"avec temps près",
+        "phono":"vi kpoile pre",
+        "line":"vi-kpoile-pre",
+        "molecule":"vi kpoile pre"
+    },
+    {
+        "fr":"récence",
+        "litteral":"déterminer temps proche",
+        "phono":"mea kpoile pre",
+        "line":"mea-kpoile-pre",
+        "molecule":"mea kpoile pre"
+    },
+    {
+        "fr":"récent",
+        "litteral":"qualité temps près",
+        "phono":"kli kpoile pre",
+        "line":"kli-kpoile-pre",
+        "molecule":"kli kpoile pre"
+    },
+    {
+        "fr":"atomique",
+        "litteral":"qualité atome",
+        "phono":"kli tmei",
+        "line":"kli-tmei",
+        "molecule":"kli tmei"
+    },
+    {
+        "fr":"moléculaire",
+        "litteral":"qualité atome connecter",
+        "phono":"kli tmei knoi",
+        "line":"kli-tmei-knoi",
+        "molecule":"kli tmei knoi"
+    },
+    {
+        "fr":"molécule",
+        "litteral":"objet atome connecter",
+        "phono":"ptae tmei knoi",
+        "line":"ptae-tmei-knoi",
+        "molecule":"ptae tmei knoi"
+    },
+    {
+        "fr":"enlaidir",
+        "litteral":"faire mal accrocher lumière",
+        "phono":"fa bwa grey hea",
+        "line":"fa-bwa-grey-hea",
+        "molecule":"fa bwa grey hea"
+    },
+    {
+        "fr":"enlaidissement",
+        "litteral":"déterminer faire mal accrocher lumière",
+        "phono":"mea fa bwa grey hea",
+        "line":"mea-fa-bwa-grey-hea",
+        "molecule":"mea fa bwa grey hea"
+    },
+    {
+        "fr":"laid",
+        "litteral":"qualité mal accrocher lumière",
+        "phono":"kli bwa grey hea",
+        "line":"kli-bwa-grey-hea",
+        "molecule":"kli bwa grey hea"
+    },
+    {
+        "fr":"laideur",
+        "litteral":"déterminer mal accrocher lumière",
+        "phono":"mea bwa grey hea",
+        "line":"mea-bwa-grey-hea",
+        "molecule":"mea bwa grey hea"
+    },
+    {
+        "fr":"embellie",
+        "litteral":"objet faire bien accrocher lumière",
+        "phono":"ptae fa keo grey hea",
+        "line":"ptae-fa-keo-grey-hea",
+        "molecule":"ptae fa keo grey hea"
+    },
+    {
+        "fr":"embellir",
+        "litteral":"faire bien accrocher lumière",
+        "phono":"fa keo grey hea",
+        "line":"fa-keo-grey-hea",
+        "molecule":"fa keo grey hea"
+    },
+    {
+        "fr":"embellissement",
+        "litteral":"déterminer faire bien accrocher lumière",
+        "phono":"mea fa keo grey hea",
+        "line":"mea-fa-keo-grey-hea",
+        "molecule":"mea fa keo grey hea"
+    },
+    {
+        "fr":"rendre",
+        "litteral":"faire évoluer",
+        "phono":"fa vlye",
+        "line":"fa-vlye",
+        "molecule":"fa-vlye"
+    },
+    {
         "fr":"beau",
         "litteral":"qualité bien accrocher lumière",
         "phono":"kli keo grey hea",
         "line":"kli-keo-grey-hea",
         "molecule":"kli keo grey hea"
+    },
+    {
+        "fr":"beauté",
+        "litteral":"déterminer bien accrocher lumière",
+        "phono":"mea keo grey hea",
+        "line":"mea-keo-grey-hea",
+        "molecule":"mea keo grey hea"
     },
     {
         "fr":"univers",
@@ -3108,24 +3395,24 @@
     },
     {
         "fr": "utile",
-        "litteral" : "qualité utiliser",
-        "phono": "kli ze",
-        "line": "kli-ze",
-        "molecule": "kli ze"
+        "litteral" : "qualité avoir utiliser",
+        "phono": "kli go ze",
+        "line": "kli-go-ze",
+        "molecule": "kli go ze"
     },
     {
         "fr": "utilité",
-        "litteral" : "déterminer utiliser",
-        "phono": "mea ze",
-        "line": "mea-ze",
-        "molecule": "mea ze"
+        "litteral" : "déterminer avoir utiliser",
+        "phono": "mea go ze",
+        "line": "mea-go-ze",
+        "molecule": "mea go ze"
     },
     {
         "fr": "inutilité",
-        "litteral" : "déterminer non utiliser",
-        "phono": "mea nia ze",
-        "line": "mea-nia-ze",
-        "molecule": "mea nia ze"
+        "litteral" : "déterminer non avoir utiliser",
+        "phono": "mea nia go ze",
+        "line": "mea-nia-go-ze",
+        "molecule": "mea nia go ze"
     },
     {
         "fr": "fatiguer",
