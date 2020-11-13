@@ -241,6 +241,21 @@ span.countBlue{
     filter: drop-shadow(0 2px 1px black) !important;
 }
 
+.fancy-light{
+    position: fixed;
+    height:210px;
+    width:210px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border-radius:100%;
+    background: radial-gradient(at top left, transparent, transparent, transparent, rgba(255, 255, 255, 0.411), white), radial-gradient(at top left, black, transparent, transparent);
+    z-index:-1;
+    border-top:1px solid white;
+    box-shadow: 3px 3px 10px black, -3px -3px 10px white;
+    box-sizing: border-box;
+}
+
 @media (max-width:500px) {
     input.searchInput{
         font-size:0.8em;
