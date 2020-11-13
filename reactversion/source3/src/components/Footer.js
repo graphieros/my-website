@@ -76,16 +76,8 @@ function Footer() {
 
                 <Link
                     className='link'
-                    to='/kio'>
-                    <li className='li-graphieros'>
-                        <Fractal
-                            className='fractal-small-link'
-                            sequence='zw-wx-xe-ez-zq-qd-de zq-qw-ws-sx-xd-de'
-                            svgSize='30'
-                            colors={[75, 106, 160]}
-                        />
-                    </li>
-
+                    to='/faq'>
+                    <li>FAQ</li>
                 </Link>
 
             </div>
