@@ -36,13 +36,13 @@ const SearchBar = (props) => {
     });
 
     const [phonoState, setPhonoState] = useState({
-        className:'hidden',
-        content:''
+        className: 'hidden',
+        content: ''
     });
 
     const [combinationRes, setCombinationRes] = useState({
-        className:'hidden',
-        content:''
+        className: 'hidden',
+        content: ''
     });
 
     let delay = null;
@@ -57,7 +57,7 @@ const SearchBar = (props) => {
 
             graphieros_dictionnary.forEach((glyph, i) => {
 
-                if(searchValue.toLowerCase() === glyph.fr) {
+                if (searchValue.toLowerCase() === glyph.fr) {
 
                     setSearchResult({
                         className: 'glyphSearchReturn',
@@ -79,17 +79,17 @@ const SearchBar = (props) => {
                         className: 'backState'
                     });
                 }
-                if('_'+searchValue.toLowerCase() === glyph.name) {
+                if ('_' + searchValue.toLowerCase() === glyph.name) {
 
                     setPhonoState({
-                        className:'foundPhono',
+                        className: 'foundPhono',
                         content: <>
-                        {`[ ${glyph.name.replace("_","")} ] : "  ${glyph.fr} "`}
-                        <Linear 
-                            sequence={glyph.name.replace("_","")}
-                            size='30'
-                            colors={[255,99,71]}
-                        />
+                            {`[ ${glyph.name.replace("_", "")} ] : "  ${glyph.fr} "`}
+                            <Linear
+                                sequence={glyph.name.replace("_", "")}
+                                size='30'
+                                colors={[255, 99, 71]}
+                            />
                         </>
                     });
 
@@ -130,20 +130,20 @@ const SearchBar = (props) => {
                     });
                 }
 
-                if(searchValue.toLowerCase() === word.line){
+                if (searchValue.toLowerCase() === word.line) {
                     setPhonoState({
-                        className:'foundPhono',
+                        className: 'foundPhono',
                         content: <>
-                        {`" ${word.fr} "`}
+                            {`" ${word.fr} "`}
                         </>
                     });
 
                     setCombinationRes({
-                        className:'combination-word-result',
-                        content:<Molecule
+                        className: 'combination-word-result',
+                        content: <Molecule
                             sequence={word.molecule}
                             size='250'
-                            colors={[255,255,255]}
+                            colors={[255, 255, 255]}
                             strokeWidth='5'
                         />
                     });
@@ -151,7 +151,7 @@ const SearchBar = (props) => {
                     setBackState({
                         className: 'backState'
                     });
-    
+
                 }
 
             })
@@ -163,12 +163,12 @@ const SearchBar = (props) => {
                 className: 'hidden'
             });
             setPhonoState({
-                className:'hidden',
-                content:''
+                className: 'hidden',
+                content: ''
             });
             setCombinationRes({
-                className:'hidden',
-                content:''
+                className: 'hidden',
+                content: ''
             });
         }
 
@@ -273,12 +273,12 @@ const SearchBar = (props) => {
                 className: 'hidden'
             });
             setPhonoState({
-                className:'hidden',
-                content:''
+                className: 'hidden',
+                content: ''
             });
             setCombinationRes({
-                className:'hidden',
-                content:''
+                className: 'hidden',
+                content: ''
             });
         }
     }
@@ -383,16 +383,17 @@ const SearchBar = (props) => {
             <div className={combinationRes.className}>
                 {combinationRes.content}
                 <div
-                        className="quitResult"
-                        onClick={letsQuitResult}>
-                        <Fractal
-                            sequence='zx-we'
-                            colors={[255, 255, 255]}
-                            svgSize={30}
-                            background='rgb(255,91,79)'
-                            backgroundRadius='100%'
-                        />
-                    </div>
+                    className="quitResult"
+                    onClick={letsQuitResult}>
+                    <Fractal
+                        sequence='zx-we'
+                        colors={[255, 255, 255]}
+                        svgSize={30}
+                        background='rgb(255,91,79)'
+                        backgroundRadius='100%'
+                    />
+                </div>
+                <div className="fancy-light"></div>
             </div>
             <div className={backState.className} />
         </React.Fragment>
