@@ -221,7 +221,7 @@ svg.abeilles-svg {
     stroke-dasharray: 800px;
     stroke-dashoffset: 800px;
     animation: abeil 4s linear infinite;
-}
+} 
 
 @keyframes abeil {
     100%{
@@ -299,6 +299,72 @@ button.other-haiku:hover{
     animation: other-haiku 1s infinite linear;
 }
 
+.link-LeLivre-wrapper{
+    background: white;
+    margin-top:-2px;
+}
+
+.link-LeLivre{
+    background: radial-gradient(at top left, black, rgb(var(--c0)));
+    border-radius:200px 0 0 0;
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items:center;
+    justify-items:center;
+    box-sizing: border-box;
+    padding-top:48px;
+    padding-bottom:48px;
+    transition: all 0.25s ease-in-out;
+    cursor:pointer;
+}
+
+.link-LeLivre svg {
+    transition: all 0.25s ease-in-out;
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+.link-LeLivre-fractal{
+    grid-column: 3;
+}
+
+p.link-LeLivre-description{
+    grid-column:2;
+    grid-row:1;
+    color: rgb(var(--c2));
+    font-family: var(--logo);
+    text-align:right;
+}
+
+p.link-LeLivre-description span{
+    font-size:2em;
+    color:rgb(var(--c3));
+}
+
+p.link-LeLivre-description{
+    transition: all 0.25s ease-in-out;
+}
+
+.link-LeLivre:hover p{
+    transform: scale(1.1,1.1);
+}
+
+.link-LeLivre:hover .link-LeLivre-fractal svg{
+    animation: llf 1.61803398875s infinite linear;
+}
+
+@keyframes llf {
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.1,1.1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
 @keyframes other-haiku{
     0%{
         transform: translateX(-50%) scale(1,1);
@@ -318,5 +384,19 @@ button.other-haiku:hover{
     .landing-links{
         display: block;
         font-size: 0.9em;
+    }
+    .link-LeLivre{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .link-LeLivre svg {
+        height:200px;
+        width:200px;
+    }
+    .link-LeLivre-fractal,
+    p.link-LeLivre-description{
+        grid-column: 1;
+    }
+    p.link-LeLivre-description{
+        text-align:right;
     }
 }
