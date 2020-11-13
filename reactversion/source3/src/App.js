@@ -15,6 +15,7 @@ import Pangolin from './components/Pangolin';
 import Login from './components/Login';
 import Paragraphs from './components/Paragraphs';
 import LeLivre from './components/LeLivre';
+import FAQ from './components/FAQ';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           <Route path='/labyrinthe' exact component={Pangolin} />
           <Route path='/paragraph' exact component={Paragraphs}/>
           <Route path='/livre' exact component={LeLivre} />
+          <Route path='/faq' exact component={FAQ} />
           <Route path='/cle.html' component={() => {
             window.location.href = 'https://graphieros.com/cle.html';
             return null;
