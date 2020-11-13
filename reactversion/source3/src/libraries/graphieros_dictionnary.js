@@ -14,7 +14,7 @@ let r = 218; //x_right
 let graphieros_dictionnary = [
     {
         name:'_pri',
-        fr:'important',
+        fr:'importer',
         path:[[l,q,rm,a,rm,w],[lm,w,rm,a],[lm,a,lm,a],[r,q,r,q]],
         fractal:'qe-ex-we',
         shapes:['PIC_tr'],
