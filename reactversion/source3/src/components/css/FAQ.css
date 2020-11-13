@@ -1,0 +1,119 @@
+.FAQ-body{
+    height:500vh;
+    width:100vw;
+    font-family: var(--logo);
+    margin-top:100px;
+    box-sizing: border-box;
+    padding-top:48px;
+    padding-bottom: 60px;
+    display: grid;
+    align-items:center;
+    justify-items:center;
+    color: rgb(var(--c1));
+    background: radial-gradient(at top right, black, rgb(var(--c0)));
+    font-size:2em;
+}
+
+.FAQ-body p {
+    position: absolute;
+    top:200px;
+    left:50%;
+    transform: translateX(-50%);
+    line-height:20px;
+    text-align:right;
+    box-sizing: border-box;
+}
+
+span.FAQ-highlight{
+    display: inline-block;
+    color: rgb(var(--c3));
+    font-size: calc(1em/1.618);
+}
+
+.FAQ-title-deco{
+    left:0;
+    height:164px;
+    position: absolute;
+    border-right:1px solid rgb(var(--c1));
+    box-sizing: border-box;
+}
+
+.FAQ-questions{
+    box-sizing:border-box;
+    width:100vw;
+    margin-top:180px;
+    display: grid;
+    position: absolute;
+    left:0;
+    grid-template-columns: auto auto;
+    align-items:center;
+    justify-items:center;
+    justify-content:space-evenly;
+    grid-gap:48px;
+    padding-top:100px;
+    border-radius:400px 0 0 0;
+    border-left: 1px solid rgb(var(--c1));
+    transition: all 0.25s ease-in-out;
+}
+
+.FAQ-question-left,
+.FAQ-question-right{
+    max-width:248px;
+    height:100px;
+    font-size:.618em;
+    transition: all 0.25s ease-in-out;
+    box-sizing: border-box;
+}
+
+.FAQ-question-left{
+    text-align:right;
+}
+
+
+span.question-light{
+    color: rgb(var(--c3));
+}
+
+.video-wrapper-left,
+.video-wrapper-right{
+    width:100%;
+    text-align:center;
+}
+
+
+video.FAQ-video,
+video.FAQ-video{
+      max-width:300px;
+      border-radius:10px;
+      box-shadow: 10px 10px 20px -10px black, -10px -10px 20px -10px rgb(var(--c2));
+      cursor: pointer;
+      transition: all 0.25s ease-in-out;
+}
+
+video.FAQ-video:hover,
+video.FAQ-video:hover{
+    transform: scale(1.05,1.05);
+}
+
+@media (max-width:700px){
+    .FAQ-body{
+        height:660vh;
+    }
+    .FAQ-body p {
+        text-align:left;
+    }
+    .FAQ-questions{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .video-wrapper-left,
+    .video-wrapper-right{
+        grid-column:1;
+    }
+    .FAQ-question-left,
+    .FAQ-question-right{
+        margin-left:50%;
+        transform: translateX(-50%);
+        grid-column:1;
+    }
+}
+
