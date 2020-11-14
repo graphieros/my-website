@@ -9,6 +9,7 @@ import KioIdea from './graphieros_subsite/KioIdea';
 import './graphieros_subsite/css/KioIdea.css';
 import ideas_library from './graphieros_subsite/subsite_library/ideas_library.json';
 import Footer from './Footer';
+import StarExplosion from './StarExplosion';
 
 
 function Landing() {
@@ -49,9 +50,17 @@ function Landing() {
             }
             return () => clearInterval(interval);
         }, 1618);
-    }, [])
+    }, []);
 
+    const [starEx, starExState] = useState({
+        className:'StarExplosion-body'
+    });
 
+    setTimeout(() => {
+        starExState({
+            className:'hidden'
+        });
+    },1000);
 
     return (
         <div className='landing-body-wrapper'>
@@ -62,6 +71,7 @@ function Landing() {
             </div>
             </div>
             <div className='graphieros-physics'>
+                <StarExplosion className={starEx.className}/>
                 <Fractal
                     className='landing-fractal'
                     sequence={landSeqState.sequence}
