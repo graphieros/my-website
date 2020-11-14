@@ -81,6 +81,14 @@ const LeLivre = () => {
                     light={true}
                 />
             </div>
+            <div className="hea-star2">
+                <Fractal
+                    sequence='zw-wd-dz-qs-se-xs zw-wd-dz-qs-se-xs zw-wd-dz-qs-se-xs zw-wd-dz-qs-se-xs'
+                    svgSize='40'
+                    colors={[50, 168, 162]} 
+                    light={true}
+                />
+            </div>
         </div>
     )
 }
