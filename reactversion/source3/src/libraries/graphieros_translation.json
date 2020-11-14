@@ -1,5 +1,19 @@
 [
     {
+        "fr":"défloraison",
+        "litteral":"déterminer perdre fleur",
+        "phono":"mea lse blea",
+        "line":"mea-lse-blea",
+        "molecule":"mea lse blea"
+    },
+    {
+        "fr":"déflorer",
+        "litteral":"perdre fleur",
+        "phono":"lse blea",
+        "line":"lse-blea",
+        "molecule":"lse blea"
+    },
+    {
         "fr":"vidage",
         "litteral":"déterminer vider",
         "phono":"mea vde",
