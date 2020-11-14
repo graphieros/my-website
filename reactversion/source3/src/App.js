@@ -8,7 +8,6 @@ import GlyphList from './components/GlyphList';
 import Gallery from './components/Gallery';
 import Blog from './components/Blog';
 import Alp from './components/Alp';
-import Words from './components/Words';
 import FractalSpace from './components/FractalSpace';
 import Kio from './components/graphieros_subsite/Kio';
 import Pangolin from './components/Pangolin';
@@ -36,7 +35,6 @@ function App() {
           <Route path='/fractalspace' exact component={FractalSpace} />
           <Route path='/alp' exact component={Alp} />
           <Route path='/' exact component={Landing} />
-          <Route path='/mots' exact component={Words} />
           <Route path='/glyphes' exact component={GlyphList} />
           <Route path='/galerie' exact component={Gallery} />
           <Route path='/blog' exact component={Blog} />
