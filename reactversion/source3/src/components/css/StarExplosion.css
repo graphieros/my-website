@@ -1,0 +1,124 @@
+.StarExplosion-body{
+    position: fixed;
+    left:50%;
+    transform: translateX(-50%);
+    width:100vw;
+    height:300px;
+    margin-top:-280px;
+    z-index:1;
+}
+
+.starExplode-0,
+.starExplode-1,
+.starExplode-2,
+.starExplode-3,
+.starExplode-4,
+.starExplode-5{
+    opacity:0;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.starExplode-0{
+    animation: sex-0 1s ease-in-out;
+}
+
+@keyframes sex-0{
+    0%{
+        transform: translate(-50%,-50%);
+        opacity:1;
+    }
+    100%{
+        transform: scale(0.5,0.5);
+        left:-50px;
+        top:150%;
+        opacity:0;
+    }
+}
+
+.starExplode-1{
+    animation: sex-1 1s ease-in-out;
+    animation-delay:0.2s;
+}
+
+@keyframes sex-1{
+    0%{
+        transform: translate(-50%,-50%) rotate(-360deg);
+        opacity:1;
+    }
+    100%{
+        transform: scale(0.2,0.2) rotate(360deg);
+        left:100%;
+        top:0;
+        opacity:0;
+    }
+}
+
+.starExplode-2 {
+    animation: sex-2 0.8s ease-in-out;
+}
+
+@keyframes sex-2{
+    0%{
+        transform: translate(-50%,-50%) rotate(-360deg);
+        opacity:1;
+    }
+    100%{
+        transform: scale(0.2,0.2) rotate(360deg);
+        top:-200px;
+        opacity:0;
+    }
+}
+
+.starExplode-3 {
+    animation: sex-3 1s ease-in-out;
+}
+
+@keyframes sex-3{
+    0%{
+        transform: translate(-50%,-50%) rotate(-360deg);
+        opacity:1;
+    }
+    100%{
+        transform: scale(0.2,0.2) rotate(360deg);
+        top:-200px;
+        left:10px;
+        opacity:0;
+    }
+}
+
+.starExplode-4 {
+    animation: sex-4 1.4s ease-in-out;
+}
+
+@keyframes sex-4{
+    0%{
+        transform: translate(-50%,-50%) rotate(-360deg);
+        opacity:1;
+    }
+    100%{
+        transform: scale(0.2,0.2) rotate(360deg);
+        left:-100px;
+        top:50px;
+        opacity:0;
+    }
+}
+
+.starExplode-5 {
+    animation: sex-5 1.4s ease-in-out;
+}
+
+@keyframes sex-5{
+    0%{
+        transform: translate(-50%,-50%) rotate(-360deg);
+        opacity:1;
+    }
+    100%{
+        transform: scale(0.2,0.2) rotate(360deg);
+        left:100%;
+        top:300px;
+        opacity:0;
+    }
+}
