@@ -105,6 +105,30 @@ p.LeLivre-page-number{
     }
 }
 
+.hea-star2, .hea-star2 svg {
+    animation: hea-star2 18s infinite linear;
+    height:40px;
+    width:40px;
+    position: fixed;
+    left: 100%;
+    bottom:150px;
+    top:600px;
+    transition: all 0.25s ease-in-out;
+}
+
+@keyframes hea-star2{
+    0%{
+        transform: scale(0.1,0.1) rotate(360deg);
+        right:100%;
+        top:600px;
+    }
+    100%{
+        transform: scale(1.5,1.5) rotate(-360deg);
+        left:-10%;
+        top:100px;
+    }
+}
+
 @media (max-width:500px){
     .LeLivre-page{
         height:350px;
