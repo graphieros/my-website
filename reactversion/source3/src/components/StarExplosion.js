@@ -45,4 +45,4 @@ const StarExplosion = (props) => {
     )
 }
 
-export default StarExplosion;
+export default React.memo(StarExplosion);
