@@ -222,7 +222,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_ldo',
-        fr: 'vieux',
+        fr: 'vieillir',
         path: [[lm, a, m, q, r, q, lm, w, m, q, rm, w], [l, q, l, q], [rm, a, rm, a]],
         fractal:'zx-ws-sd-dw',
         shapes:['TRI_in_br'],
@@ -2094,7 +2094,7 @@ let graphieros_dictionnary = [
     },
     {
         name: '_3ne',
-        fr: 'jeune',
+        fr: 'jeunir',
         path: [[m, q, l, q, rm, a, m, q], [lm, a, rm, w], [lm, w, lm, w], [r, q, r, q]],
         fractal:'zx-qs-se-eq',
         shapes:['TRI_in_tl'],
