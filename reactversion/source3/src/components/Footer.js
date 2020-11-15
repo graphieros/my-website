@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './css/Footer.css';
-import Fractal from './graphieros/Fractal';
 
 function Footer() {
     return (
