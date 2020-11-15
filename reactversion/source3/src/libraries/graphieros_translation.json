@@ -1,5 +1,530 @@
 [
     {
+        "fr":"sexuel",
+        "litteral":"qualité sexe",
+        "phono":"kli skwa",
+        "line":"kli-skwa",
+        "molecule":"kli skwa"
+    },
+    {
+        "fr":"sexuellement",
+        "litteral":"avec sexe",
+        "phono":"vi skwa",
+        "line":"vi-skwa",
+        "molecule":"vi skwa"
+    },
+    {
+        "fr":"simple",
+        "litteral":"qualité simplifier",
+        "phono":"kli snea",
+        "line":"kli-snea",
+        "molecule":"kli snea"
+    },
+    {
+        "fr":"simplificateur",
+        "litteral":"humain simplifier",
+        "phono":"ka snea",
+        "line":"ka-snea",
+        "molecule":"ka snea"
+    },
+    {
+        "fr":"simplification",
+        "litteral":"déterminer simplifier",
+        "phono":"mea snea",
+        "line":"mea-snea",
+        "molecule":"mea snea"
+    },
+    {
+        "fr":"soumis",
+        "litteral":"qualité soumettre",
+        "phono":"kli 3nu",
+        "line":"kli-3nu",
+        "molecule":"kli 3nu"
+    },
+    {
+        "fr":"soumission",
+        "litteral":"déterminer soumettre",
+        "phono":"mea 3nu",
+        "line":"mea-3nu",
+        "molecule":"mea 3nu"
+    },
+    {
+        "fr":"souplesse",
+        "litteral":"déterminer souple",
+        "phono":"mea sple",
+        "line":"mea-sple",
+        "molecule":"mea sple"
+    },
+    {
+        "fr":"sucre",
+        "litteral":"matière sucrer",
+        "phono":"mtai ske",
+        "line":"mtai-ske",
+        "molecule":"mtai ske"
+    },
+    {
+        "fr":"sucré",
+        "litteral":"qualité sucrer",
+        "phono":"kli ske",
+        "line":"kli-ske",
+        "molecule":"kli ske"
+    },
+    {
+        "fr":"suite",
+        "litteral":"déterminer suivre",
+        "phono":"mea flo",
+        "line":"mea-flo",
+        "molecule":"mea flo"
+    },
+    {
+        "fr":"suiveur",
+        "litteral":"humain suivre",
+        "phono":"ka flo",
+        "line":"ka-flo",
+        "molecule":"ka flo"
+    },
+    {
+        "fr":"symbole",
+        "litteral":"objet symboliser",
+        "phono":"ptae sbo",
+        "line":"ptae-sbo",
+        "molecule":"ptae sbo"
+    },
+    {
+        "fr":"symbolique",
+        "litteral":"qualité symboliser",
+        "phono":"kli sbo",
+        "line":"kli-sbo",
+        "molecule":"kli sbo"
+    },
+    {
+        "fr":"symboliquement",
+        "litteral":"avec symboliser",
+        "phono":"vi sbo",
+        "line":"vi-sbo",
+        "molecule":"vi sbo"
+    },
+    {
+        "fr":"symbolisation",
+        "litteral":"déterminer symboliser",
+        "phono":"mea sbo",
+        "line":"mea-sbo",
+        "molecule":"mea sbo"
+    },
+    {
+        "fr":"synthèse",
+        "litteral":"déterminer synthétiser",
+        "phono":"mea stu",
+        "line":"mea-stu",
+        "molecule":"mea stu"
+    },
+    {
+        "fr":"synthétique",
+        "litteral":"déterminer synthétiser",
+        "phono":"mea stu",
+        "line":"mea-stu",
+        "molecule":"mea stu"
+    },
+    {
+        "fr":"synthétiquement",
+        "litteral":"avec synthèse",
+        "phono":"vi stu",
+        "line":"vi-stu",
+        "molecule":"vi stu"
+    },
+    {
+        "fr":"téléphone",
+        "litteral":"objet fonctionner téléphoner",
+        "phono":"ptae fkai tle",
+        "line":"ptae-fkai-tle",
+        "molecule":"ptae fkai tle"
+    },
+    {
+        "fr":"téléphonie",
+        "litteral":"déterminer téléphoner",
+        "phono":"mea tle",
+        "line":"mea-tle",
+        "molecule":"mea tle"
+    },
+    {
+        "fr":"temporalité",
+        "litteral":"déterminer temps",
+        "phono":"mea kpoile",
+        "line":"mea-kpoile",
+        "molecule":"mea kpoile"
+    },
+    {
+        "fr":"temporel",
+        "litteral":"qualité temps",
+        "phono":"kli kpoile",
+        "line":"kli-kpoile",
+        "molecule":"kli kpoile"
+    },
+    {
+        "fr":"temporellement",
+        "litteral":"avec temps",
+        "phono":"vi kpoile",
+        "line":"vi-kpoile",
+        "molecule":"vi kpoile"
+    },
+    {
+        "fr":"déterrement",
+        "litteral":"déterminer retirer depuis terre",
+        "phono":"mea lvoi fmai trea",
+        "line":"mea-lvoi-fmai-trea",
+        "molecule":"mea lvoi fmai trea"
+    },
+    {
+        "fr":"déterrer",
+        "litteral":"retirer depuis terre",
+        "phono":"lvoi fmai trea",
+        "line":"lvoi-fmai-trea",
+        "molecule":"lvoi fmai trea"
+    },
+    {
+        "fr":"enterrement",
+        "litteral":"déterminer mettre sous terre",
+        "phono":"mea pne nde trea",
+        "line":"mea-pne-nde-trea",
+        "molecule":"mea pne nde trea"
+    },
+    {
+        "fr":"enterrer",
+        "litteral":"mettre sous terre",
+        "phono":"pne nde trea",
+        "line":"pne-nde-trea",
+        "molecule":"pne nde trea"
+    },
+    {
+        "fr":"test",
+        "litteral":"déterminer tester",
+        "phono":"mea ste",
+        "line":"mea-ste",
+        "molecule":"mea ste"
+    },
+    {
+        "fr":"testeur",
+        "litteral":"humain tester",
+        "phono":"ka ste",
+        "line":"ka-ste",
+        "molecule":"ka ste"
+    },
+    {
+        "fr":"textuel",
+        "litteral":"qualité texte",
+        "phono":"kli toi",
+        "line":"kli-toi",
+        "molecule":"kli toi"
+    },
+    {
+        "fr":"textuellement",
+        "litteral":"avec texte",
+        "phono":"vi toi",
+        "line":"vi-toi",
+        "molecule":"vi toi"
+    },
+    {
+        "fr":"transition",
+        "litteral":"déterminer transitionner",
+        "phono":"mea zit",
+        "line":"mea-zit",
+        "molecule":"mea zit"
+    },
+    {
+        "fr":"transitionnel",
+        "litteral":"qualité transitionner",
+        "phono":"kli zit",
+        "line":"kli-zit",
+        "molecule":"kli zit"
+    },
+    {
+        "fr":"transitionnellement",
+        "litteral":"avec transitionner",
+        "phono":"vi zit",
+        "line":"vi-zit",
+        "molecule":"vi zit"
+    },
+    {
+        "fr":"travail",
+        "litteral":"déterminer travailler",
+        "phono":"mea tvai",
+        "line":"mea-tvai",
+        "molecule":"mea tvai"
+    },
+    {
+        "fr":"travailleur",
+        "litteral":"humain travailler",
+        "phono":"ka tvai",
+        "line":"ka-tvai",
+        "molecule":"ka tvai"
+    },
+    {
+        "fr":"traversée",
+        "litteral":"déterminer traverser",
+        "phono":"mea tie",
+        "line":"mea-tie",
+        "molecule":"mea tie"
+    },
+    {
+        "fr":"trouvaille",
+        "litteral":"déterminer trouver",
+        "phono":"mea waa",
+        "line":"mea-waa",
+        "molecule":"mea waa"
+    },
+    {
+        "fr":"trouveur",
+        "litteral":"humain trouver",
+        "phono":"ka waa",
+        "line":"ka-waa",
+        "molecule":"ka waa"
+    },
+    {
+        "fr":"victoire",
+        "litteral":"déterminer vaincre",
+        "phono":"mea vkye",
+        "line":"mea-vkye",
+        "molecule":"mea vkye"
+    },
+    {
+        "fr":"victorieusement",
+        "litteral":"avec vaincre",
+        "phono":"vi vkye",
+        "line":"vi-vkye",
+        "molecule":"vi vkye"
+    },
+    {
+        "fr":"victorieux",
+        "litteral":"qualité vaincre",
+        "phono":"kli vkye",
+        "line":"kli-vkye",
+        "molecule":"kli vkye"
+    },
+    {
+        "fr":"valeur",
+        "litteral":"objet valoriser",
+        "phono":"ptae vlia",
+        "line":"ptae-vlia",
+        "molecule":"ptae vlia"
+    },
+    {
+        "fr":"valorisation",
+        "litteral":"déterminer valoriser",
+        "phono":"mea vlia",
+        "line":"mea-vlia",
+        "molecule":"mea vlia"
+    },
+    {
+        "fr":"variable",
+        "litteral":"qualité varier",
+        "phono":"kli vnia",
+        "line":"kli-vnia",
+        "molecule":"kli vnia"
+    },
+    {
+        "fr":"variation",
+        "litteral":"déterminer varier",
+        "phono":"mea vnia",
+        "line":"mea-vnia",
+        "molecule":"mea vnia"
+    },
+    {
+        "fr":"vendeur",
+        "litteral":"humain vendre",
+        "phono":"ka sloi",
+        "line":"ka-sloi",
+        "molecule":"ka sloi"
+    },
+    {
+        "fr":"vente",
+        "litteral":"déterminer vendre",
+        "phono":"mea sloi",
+        "line":"mea-sloi",
+        "molecule":"mea sloi"
+    },
+    {
+        "fr":"vertueusement",
+        "litteral":"avec vertu",
+        "phono":"vi vry",
+        "line":"vi-vry",
+        "molecule":"vi vry"
+    },
+    {
+        "fr":"vertueux",
+        "litteral":"qualité vertu",
+        "phono":"kli vry",
+        "line":"kli-vry",
+        "molecule":"kli vry"
+    },
+    {
+        "fr":"vibration",
+        "litteral":"déterminer vibrer",
+        "phono":"mea vba",
+        "line":"mea-vba",
+        "molecule":"mea vba"
+    },
+    {
+        "fr":"vibratoire",
+        "litteral":"qualité vibrer",
+        "phono":"kli vba",
+        "line":"kli-vba",
+        "molecule":"kli vba"
+    },
+    {
+        "fr":"vicieusement",
+        "litteral":"avec vice",
+        "phono":"vi vzey",
+        "line":"vi-vzey",
+        "molecule":"vi vzey"
+    },
+    {
+        "fr":"vicieux",
+        "litteral":"qualité vice",
+        "phono":"kli vzey",
+        "line":"kli-vzey",
+        "molecule":"kli vzey"
+    },
+    {
+        "fr":"jeune",
+        "litteral":"qualité jeunir",
+        "phono":"kli 3ne",
+        "line":"kli-3ne",
+        "molecule":"kli 3ne"
+    },
+    {
+        "fr":"vieux",
+        "litteral":"qualité vieillir",
+        "phono":"kli ldo",
+        "line":"kli-ldo",
+        "molecule":"kli ldo"
+    },
+    {
+        "fr":"dévisager",
+        "litteral":"voir visage",
+        "phono":"sta vzi",
+        "line":"sta-vzi",
+        "molecule":"sta vzi"
+    },
+    {
+        "fr":"incapable",
+        "litteral":"qualité non garder pouvoir",
+        "phono":"kli nia kpae frya",
+        "line":"kli-nia-kpae-frya",
+        "molecule":"kli nia kpae frya"
+    },
+    {
+        "fr":"incapacité",
+        "litteral":"déterminer non garder pouvoir",
+        "phono":"mea nia kpae frya",
+        "line":"mea-nia-kpae-frya",
+        "molecule":"mea nia kpae frya"
+    },
+    {
+        "fr":"potent",
+        "litteral":"qualité garder énergie",
+        "phono":"kli kpae 3ia",
+        "line":"kli-kpae-3ia",
+        "molecule":"kli kpae 3ia"
+    },
+    {
+        "fr":"potentialité",
+        "litteral":"déterminer garder énergie",
+        "phono":"mea kpae 3ia",
+        "line":"mea-kpae-3ia",
+        "molecule":"mea kpae 3ia"
+    },
+    {
+        "fr":"potentiel",
+        "litteral":"objet garder énergie",
+        "phono":"ptae kpae 3ia",
+        "line":"ptae-kpae-3ia",
+        "molecule":"ptae kpae 3ia"
+    },
+    {
+        "fr":"potentiellement",
+        "litteral":"avec garder énergie",
+        "phono":"vi kpae 3ia",
+        "line":"vi-kpae-3ia",
+        "molecule":"vi kpae 3ia"
+    },
+    {
+        "fr":"capable",
+        "litteral":"qualité garder pouvoir",
+        "phono":"kli kpae frya",
+        "line":"kli-kpae-frya",
+        "molecule":"kli kpae frya"
+    },
+    {
+        "fr":"capacité",
+        "litteral":"déterminer garder pouvoir",
+        "phono":"mea kpae frya",
+        "line":"mea-kpae-frya",
+        "molecule":"mea kpae frya"
+    },
+    {
+        "fr":"invisibilité",
+        "litteral":"déterminer non pouvoir voir",
+        "phono":"mea nia frya sta",
+        "line":"mea-nia-frya-sta",
+        "molecule":"mea nia frya sta"
+    },
+    {
+        "fr":"invisible",
+        "litteral":"qualité non pouvoir voir",
+        "phono":"kli nia frya sta",
+        "line":"kli-nia-frya-sta",
+        "molecule":"kli nia frya sta"
+    },
+    {
+        "fr":"visibilité",
+        "litteral":"déterminer pouvoir voir",
+        "phono":"mea frya sta",
+        "line":"mea-frya-sta",
+        "molecule":"mea frya sta"
+    },
+    {
+        "fr":"visible",
+        "litteral":"qualité pouvoir voir",
+        "phono":"kli frya sta",
+        "line":"kli-frya-sta",
+        "molecule":"kli frya sta"
+    },
+    {
+        "fr":"visiblement",
+        "litteral":"avec pouvoir voir",
+        "phono":"vi frya sta",
+        "line":"vi-frya-sta",
+        "molecule":"vi frya sta"
+    },
+    {
+        "fr":"vision",
+        "litteral":"déterminer voir",
+        "phono":"mea sta",
+        "line":"mea-sta",
+        "molecule":"mea sta"
+    },
+    {
+        "fr":"pauvre",
+        "litteral":"qualité non avoir objet",
+        "phono":"kli nia go ptae",
+        "line":"kli-nia-go-ptae",
+        "molecule":"kli nia go ptae"
+    },
+    {
+        "fr":"pauvrement",
+        "litteral":"avec non avoir objet",
+        "phono":"vi nia go ptae",
+        "line":"vi-nia-go-ptae",
+        "molecule":"vi nia go ptae"
+    },
+    {
+        "fr":"pauvreté",
+        "litteral":"déterminer non avoir objet",
+        "phono":"mea nia go ptae",
+        "line":"mea-nia-go-ptae",
+        "molecule":"mea nia go ptae"
+    },
+    {
         "fr":"défloraison",
         "litteral":"déterminer perdre fleur",
         "phono":"mea lse blea",
