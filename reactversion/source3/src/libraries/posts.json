@@ -1,5 +1,10 @@
 [
     {
+        "title":"Du nuage à l'océan",
+        "date":"lundi 16 novembre 2020",
+        "idea":"Personne ne peut programmer durablement sans posséder une soif d'apprendre sans cesse renouvelée. En constante mutation, les technologies disponibles ouvrent constamment de nouvelles salles de classe, et proposent au toxicomane de l'apprentissage cette sensation renouvelée de se plonger dans un nouveau pays pour apprendre une langue nouvelle, une culture étonnante, des pratiques inhabituelles."
+    },
+    {
         "title":"Achèvement relatif",
         "date":"mercredi 11 novembre 2020",
         "idea":"Mon site est parvenu à un état d'achèvement relativement complet. Il est possible de faire des recherches de mots en français et d'afficher les résultats en graphieros; de rechercher une phonologie et d'afficher sa traduction en français; de rechercher une forme et d'afficher les glyphes correspondants. La liste complète des glyphes est disponible, ainsi que la Clé pour apprendre à les manier. Divers éditeurs sont disponibles pour écrire en graphieros depuis son navigateur, y compris l'éditeur 'Fractal Space', qui permet à l'utilisateur d'écrire dans le sens de la profondeur.\n\nIl manque peut-être un éditeur où en saisissant du texte en français, l'utilisateur pourrait voir s'afficher la traduction en graphieros. Il y a là quelques défis techniques intéressants, liés notamment à la conjugaison. Il faudrait en effet éliminer toutes les finales de mots pour faire une recherche dans la base, mais dans laquelle il faudrait alors disposer des variations du type 'prendre - prenne - prisse' etc. Pas une mince affaire.\n\nEnfin, il manque pour moi la possibilité de poster du contenu vers le serveur depuis une page d'authentification, mais je travaille déjà sur le sujet en arrière-plan."
