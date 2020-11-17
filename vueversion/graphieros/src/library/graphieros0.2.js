@@ -341,7 +341,7 @@ function molecular({
     red = red || 200;
     green = green || 200;
     blue = blue || 200;
-    strokeWidth = strokeWidth || 8;
+    strokeWidth = Number(strokeWidth) || 8;
     background = `rgb(${background})` || "transparent";
     borderRadius = borderRadius || 0;
     border = border || '0px solid transparent';
