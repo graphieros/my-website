@@ -713,7 +713,7 @@ function fractal({
 export { fractal };
 
 
-function fastLine({
+function linear({
     sequence,
     width,
     colors
@@ -863,4 +863,4 @@ function fastLine({
     return svg_wrapper.innerHTML;
 }
 
-export { fastLine };
+export { linear };
