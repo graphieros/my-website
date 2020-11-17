@@ -101,7 +101,7 @@ function molecular({
     });
 
     if (final_array.length === 1) {
-        final_array.forEach((side_glyph, i) => {
+        final_array.forEach((side_glyph) => {
             glyph_database.forEach(glyph => {
                 if (glyph.name === side_glyph) {
                     let g = document.createElementNS(xmlns, "g");
@@ -788,7 +788,7 @@ function fastLine({
     const buildLinks = (array, incrX, oddIncr) => {
         const output = [];
         let Y = 328;
-        array.forEach((el, i) => {
+        array.forEach((el) => {
             if (el > 1) {
                 output.push([X + incrX, Y + oddIncr, X + incrX, Y + oddIncr + (((el - 1) * GLYPH_HEIGHT)) + (((el - 1) * SPACE))]);
                 Y += (((el) * GLYPH_HEIGHT)) + (((el) * SPACE));
