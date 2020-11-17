@@ -16,6 +16,13 @@
       svgSize="100"
       size="60"
     />
+    <Fractal
+      class="fractal-logo3"
+      sequence="wz-zd-dw-qs-se-xs"
+      colors="29,55,104"
+      svgSize="50"
+      size="60"
+    />
   </div>
 </template>
 
@@ -59,6 +66,20 @@ export default defineComponent({
 @keyframes fractal-logo2 {
   100% {
     transform: translateX(-50%) rotate(-360deg);
+  }
+}
+.fractal-logo3 {
+  animation: fractal-logo3 6s infinite linear;
+  position: absolute;
+  top: 125px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50px;
+  width: 50px;
+}
+@keyframes fractal-logo3 {
+  100% {
+    transform: translateX(-50%) rotate(360deg);
   }
 }
 </style>
