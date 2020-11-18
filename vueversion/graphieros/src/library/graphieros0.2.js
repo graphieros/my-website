@@ -7,7 +7,7 @@ created by Alec Lloyd Probert
 Special thanx to Thundree, friend & mentor
 */
 
-import { a, q, w, l, lm, m, rm, r, graphieros_dictionnary } from './graphieros_dictionnary.js';
+import { a, q, w, l, lm, m, rm, r, graphierosDictionnary } from './graphierosDictionnary.js';
 
 function molecular({
     // section,
@@ -51,7 +51,7 @@ function molecular({
     svg.style.fill = "none";
     // svg.id = `molecular_${section}`;
 
-    let glyph_database = graphieros_dictionnary.slice(0);
+    let glyph_database = graphierosDictionnary.slice(0);
 
     const molecule_data = sequence;
     let molecule_array = molecule_data.split(" ");
@@ -716,7 +716,8 @@ export { fractal };
 function linear({
     sequence,
     width,
-    colors
+    colors,
+    glyphWidth
 }) {
 
     //globals
@@ -732,6 +733,7 @@ function linear({
     let INCR = 200;
     let SPACE = 44;
     let X = 128;
+    glyphWidth = glyphWidth || "100%";
 
 
     // almost pure functions
@@ -806,7 +808,7 @@ function linear({
     const DOM_lines = mySplit(sequence, ' / ');
 
     const renderGlyphs = (seq, incrX, oddIncr) => {
-        const DOM_render_glyphs = getAllCords(convertString(seq, ' ', '-', '_'), graphieros_dictionnary, incrX, oddIncr);
+        const DOM_render_glyphs = getAllCords(convertString(seq, ' ', '-', '_'), graphierosDictionnary, incrX, oddIncr);
         let DOM_links = [];
 
         DOM_links = buildLinks(getWordCountAndLength(seq), incrX, oddIncr);
@@ -846,8 +848,8 @@ function linear({
 
     // SVG styling
     SVG.setAttributeNS(null, 'viewBox', `0 0 ${(SVG_WIDTH - 70) * DOM_lines.length} ${maxHeight * (GLYPH_HEIGHT + SPACE) + 550}`);
-    SVG.setAttributeNS(null, 'height', '100%');
-    SVG.setAttributeNS(null, 'width', '100%'); // adapt width to number of lines
+    SVG.setAttributeNS(null, 'height', glyphWidth);
+    SVG.setAttributeNS(null, 'width', glyphWidth); // adapt width to number of lines
     G.setAttributeNS(null, 'fill', 'none');
     G.setAttributeNS(null, 'stroke-linejoin', 'round');
     G.setAttributeNS(null, 'stroke-linecap', 'round');
