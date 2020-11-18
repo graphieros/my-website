@@ -4,7 +4,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { fastLine } from "../library/graphieros0.2";
+import { linear } from "../library/graphieros0.2";
 
 export default defineComponent({
   name: "Linear",
@@ -12,15 +12,17 @@ export default defineComponent({
     class: String,
     sequence: String,
     colors: String,
-    size: String
+    size: String,
+    glyphWidth: String
   },
   data() {
     return {
-      line: fastLine({
+      line: linear({
         class: this.class,
         sequence: this.sequence,
         colors: this.colors.split(","),
-        size: this.size
+        size: this.size,
+        glyphWidth: this.glyphWidth
       })
     };
   }
