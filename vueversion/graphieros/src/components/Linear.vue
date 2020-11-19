@@ -13,7 +13,8 @@ export default defineComponent({
     sequence: String,
     colors: String,
     size: String,
-    glyphWidth: String
+    glyphWidth: String,
+    strokeWidth: String
   },
   data() {
     return {
@@ -22,7 +23,8 @@ export default defineComponent({
         sequence: this.sequence,
         colors: this.colors.split(","),
         size: this.size,
-        glyphWidth: this.glyphWidth
+        glyphWidth: this.glyphWidth,
+        width: this.strokeWidth
       })
     };
   }
