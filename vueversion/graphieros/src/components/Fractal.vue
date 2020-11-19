@@ -4,7 +4,7 @@
 
 <script>
 import { defineComponent } from "vue";
-import { callifractal } from "../library/graphieros0.2";
+import { fractal } from "../library/graphieros0.2";
 
 export default defineComponent({
   name: "Fractal",
@@ -18,7 +18,7 @@ export default defineComponent({
   },
   data() {
     return {
-      frac: callifractal({
+      frac: fractal({
         sequence: this.sequence,
         colors: this.colors.split(","),
         svgSize: this.svgSize,
