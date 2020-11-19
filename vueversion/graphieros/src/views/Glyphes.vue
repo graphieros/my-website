@@ -15,16 +15,16 @@
           v-bind:sequence="item.name.replace('_', '')"
           colors="29, 55, 104"
           size="50"
-          glyphWidth="100"
+          strokeWidth="15"
         />
         <span className="span-fr">{{ item.fr }}</span>
-        <span className="span-name">[ {{ item.name.replace("_","") }} ]</span>
+        <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
       </div>
     </div>
   </div>
 </template>
 
-<script lang="js">
+<script lang="js"> //add a v-lazy loading plugin
 import { defineComponent } from "vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
 import Linear from "@/components/Linear.vue";
@@ -63,6 +63,11 @@ h1 {
   border-radius: 3px;
   box-shadow: 5px 5px 10px -5px grey, -5px -5px 10px -5px white,
     -5px -5px 10px -5px white inset, 5px 5px 10px -5px grey inset;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05, 1.05);
+  }
 }
 .glyph-line {
   height: 100px;
@@ -75,6 +80,7 @@ h1 {
   align-items: center;
   justify-items: center;
   grid-gap: 12px;
+  transition: all 0.25s ease-in-out;
 }
 .glyph-wrap {
   height: 100px;
@@ -96,5 +102,30 @@ span.span-name {
   font-family: var(--logo);
   font-size: 0.8em;
   color: RGB(var(--c1));
+}
+@media (max-width: 700px) {
+  .glyph-list {
+    grid-template-columns: repeat(5, 100px);
+  }
+}
+@media (max-width: 600px) {
+  .glyph-list {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
+@media (max-width: 500px) {
+  .glyph-list {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
+@media (max-width: 400px) {
+  .glyph-list {
+    grid-template-columns: repeat(3, 100px);
+  }
+}
+@media (max-width: 350px) {
+  .glyph-list {
+    grid-template-columns: repeat(2, 100px);
+  }
 }
 </style>
