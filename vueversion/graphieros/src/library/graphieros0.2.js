@@ -853,8 +853,8 @@ function linear({
     G.setAttributeNS(null, 'fill', 'none');
     G.setAttributeNS(null, 'stroke-linejoin', 'round');
     G.setAttributeNS(null, 'stroke-linecap', 'round');
-    G.setAttributeNS(null, 'stroke-width', STROKE_WIDTH)// set width according to final size ?
-    G.setAttributeNS(null, 'stroke', `rgb(${colors})`) // set color in parameter
+    G.setAttributeNS(null, 'stroke-width', STROKE_WIDTH);
+    G.setAttributeNS(null, 'stroke', `rgb(${colors})`);
 
     // final mounting
     G.innerHTML = DOM_paths;
