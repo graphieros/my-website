@@ -1,5 +1,5 @@
 <template>
-  <div v-html="line" />
+  <div v-html="lin" />
 </template>
 
 <script>
@@ -16,17 +16,17 @@ export default defineComponent({
     glyphWidth: String,
     strokeWidth: String
   },
-  data() {
-    return {
-      line: linear({
+  computed: {
+    lin() {
+      return linear({
         class: this.class,
         sequence: this.sequence,
         colors: this.colors.split(","),
         size: this.size,
         glyphWidth: this.glyphWidth,
         width: this.strokeWidth
-      })
-    };
+      });
+    }
   }
 });
 </script>
