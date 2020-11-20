@@ -5,6 +5,7 @@
     </div>
     <h1>Graphieros</h1>
     <search :inputFunc="inputFunction" />
+
     <div class="searchResult-wrapper" v-show="searchResult !== ''">
       <span>{{ textResFrac }}</span>
       <Fractal :sequence="fractalRes" svgSize="100" colors="29, 55, 104" />
@@ -18,6 +19,37 @@
         />
       </div>
     </div>
+
+    <div class="progressive-results" v-show="wordMatchesSize > 0">
+      <span v-if="wordMatchesSize > 1">{{ wordMatchesSize }} words found</span>
+      <span v-else>{{ wordMatchesSize }} word found</span>
+      <ul>
+        <li
+          v-for="(word, index) in wordMatches"
+          v-bind:word="word"
+          v-bind:index="index"
+          v-bind:key="word.fr"
+          v-bind:fr="word.fr"
+        >
+          {{ word.fr }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="searchResult-wrapper" v-show="phonoRes !== 'ss'">
+      <span>{{ textPhonoRes }}</span>
+      <Fractal :sequence="phonoRes" svgSize="100" colors="29, 55, 104" />
+      <span><span>[ </span>{{ phono }}<span> ]</span></span>
+      <div class="close-search" v-on:click="closeModal">
+        <Fractal
+          className="close-search-fractal"
+          sequence="zx-we"
+          svgSize="30"
+          colors="255,255,255"
+        />
+      </div>
+    </div>
+
     <div class="lineRes-wrapper" v-show="lineRes !== ''">
       <div class="lineRes-svg-wrapper">
         <p>{{ textResLine }}</p>
@@ -33,6 +65,23 @@
         />
       </div>
     </div>
+
+    <div class="lineRes-wrapper" v-show="phonoWordRes !== ''">
+      <div class="lineRes-svg-wrapper">
+        <p>{{ textPhonoWordRes }}</p>
+        <Linear :sequence="phonoWordRes" size="10" colors="29,55,104" />
+      </div>
+      <span>[ {{ phonoWordRes }} ]</span>
+      <div class="close-search" v-on:click="closeModal">
+        <Fractal
+          className="close-search-fractal"
+          sequence="zx-we"
+          svgSize="30"
+          colors="255,255,255"
+        />
+      </div>
+    </div>
+
     <div class="fractal-watermark0">
       <fractal
         sequence="zw-wd-dz-qs-se-xs"
@@ -40,7 +89,6 @@
         svgSize="100%"
       />
     </div>
-
   </div>
 </template>
 
@@ -66,8 +114,15 @@ export default defineComponent({
       searchResult: "",
       fractalRes: "ss",
       textResFrac: "",
+      textPhonoRes: "",
+      textPhonoWordRes: "",
       textResLine: "",
+      phonoRes: "ss",
+      phonoWordRes: "",
       lineRes: "",
+      phono: "",
+      wordMatches: {},
+      wordMatchesSize: 0,
       time: 0
     };
   },
@@ -82,31 +137,56 @@ export default defineComponent({
               this.fractalRes = entry.fractal;
               this.textResFrac = entry.fr;
             }
+            if (entry.name.replace("_", "") === input) {
+              this.phonoRes = entry.fractal;
+              this.textPhonoRes = entry.fr;
+              this.phono = entry.name.replace("_", "");
+            }
           }
         );
+
+        //return progressive matches during user input
+        const findMatches = graphierosTranslation.filter((entry) => {
+          const regex = new RegExp(`^${input}`, "gi");
+          return entry.fr.match(regex);
+        });
+
+        this.wordMatches = findMatches;
+
+        this.wordMatchesSize = Object.keys(findMatches).length;
+
         if (input === "") {
           this.searchResult = "";
           this.lineRes = "";
+          this.phonoRes = "ss";
+          this.phonoWordRes = "";
+          this.wordMatches = {};
+          this.wordMatchesSize = 0;
         }
         graphierosTranslation.forEach((entry: { fr: string; line: string }) => {
           if (entry.fr === input) {
             this.lineRes = entry.line;
             this.textResLine = entry.fr;
           }
+          if (entry.line === input) {
+            this.phonoWordRes = entry.line;
+            this.textPhonoWordRes = entry.fr;
+          }
         });
       }, 255);
     },
     closeModal() {
       this.searchResult = "";
+      this.phonoRes = "ss";
+      this.phonoWordRes = "";
       this.lineRes = "";
     }
   }
 });
 </script>
 <style lang="scss" scoped>
-
-.home-logo-wrapper{
-  margin-top:280px;
+.home-logo-wrapper {
+  margin-top: 280px;
 }
 h1 {
   margin-top: 250px;
@@ -218,7 +298,57 @@ h1::after {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
+  opacity: 0.5;
   animation: fwm 96s infinite linear;
+}
+
+.progressive-results {
+  width: 80%;
+  max-width: 370px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  max-height: 150px;
+  overflow: scroll;
+  border-radius: 0 0 30px 30px;
+  background: white;
+  box-shadow: 0px 10px 20px -10px RGBA(var(--c1), 0.5);
+  span {
+    display: block;
+    position: sticky;
+    top: 0;
+    max-width: 370px;
+    text-align: center;
+    background: white;
+    font-family: var(--logo);
+    color: RGB(var(--c2));
+  }
+  ul {
+    display: block;
+    position: relative;
+    margin-left: calc(50% - 20px);
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  ul,
+  li {
+    box-sizing: border-box;
+    list-style-type: none;
+    text-align: left;
+    font-family: var(--logo);
+    color: RGB(var(--c1));
+  }
+  li {
+    cursor: pointer;
+    border-radius: 2px 0 0 2px;
+    padding-left: 3px;
+    &:hover {
+      background: linear-gradient(to right, RGB(var(--c2)), white);
+      color: RGB(var(--c0));
+    }
+  }
+}
+.progressive-results::-webkit-scrollbar {
+  width: 0px;
 }
 
 @keyframes fwm {
