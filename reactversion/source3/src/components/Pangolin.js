@@ -15,6 +15,11 @@ function Pangolin() {
         sequence: 'ss'
     });
 
+    const [whatDay, whatDayState] = useState({
+        className: "hidden",
+        content: ""
+    });
+
     const handleModal = (post) => {
         setDayState({
             className: "visible-day",
@@ -23,6 +28,9 @@ function Pangolin() {
             content: post.cypher,
             sequence: post.sequence
         });
+        whatDayState({
+            className:"hidden;"
+        })
     }
 
     const handleQuit = () => {
@@ -35,15 +43,29 @@ function Pangolin() {
         });
     }
 
+    const handleDay = (day) => {
+        whatDayState({
+            className: "whatDay",
+            content: day.date
+        });
+    }
+
+    const handleShutDay = () => {
+        whatDayState({
+            className:"hidden",
+            content:""
+        });
+    }
+
     const week0 = labyrinth_posts.map((post, i) => {
         if (i < 5) {
             return (
-                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)} onMouseOver={() => handleDay(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
                         colors={post.colors}
-                        svgSize= {size}
+                        svgSize={size}
                         light={post.light}
                     />
                 </div>
@@ -57,7 +79,7 @@ function Pangolin() {
     const week1 = labyrinth_posts.map((post, i) => {
         if (i >= 5 && i < 10) {
             return (
-                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)} onMouseOver={() => handleDay(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -74,7 +96,7 @@ function Pangolin() {
     const week2 = labyrinth_posts.map((post, i) => {
         if (i >= 10 && i < 15) {
             return (
-                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)} onMouseOver={() => handleDay(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -91,7 +113,7 @@ function Pangolin() {
     const week3 = labyrinth_posts.map((post, i) => {
         if (i >= 15 && i < 20) {
             return (
-                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)} onMouseOver={() => handleDay(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -108,7 +130,7 @@ function Pangolin() {
     const week4 = labyrinth_posts.map((post, i) => {
         if (i >= 20 && i < 25) {
             return (
-                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)} onMouseOver={() => handleDay(post)} >
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -125,7 +147,7 @@ function Pangolin() {
     const week5 = labyrinth_posts.map((post, i) => {
         if (i >= 25 && i < 30) {
             return (
-                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)}>
+                <div id={`lab-${i}`} key={i} onClick={() => handleModal(post)} onMouseOver={() => handleDay(post)}>
                     <Fractal
                         className='fractal-labyrinth'
                         sequence={post.sequence}
@@ -142,7 +164,7 @@ function Pangolin() {
     return (
         <div className='pangolin-body'>
 
-            <div className='labyrinth-grid'>
+            <div className='labyrinth-grid' onMouseOut={handleShutDay}>
                 <div className="labyrinth-name">labyrinthe</div>
                 <div className='labyrinth-week-odd'>
                     {week0}
@@ -162,6 +184,9 @@ function Pangolin() {
                 <div className='labyrinth-week-even'>
                     {week5}
                 </div>
+            </div>
+            <div className={whatDay.className} >
+                {whatDay.content}
             </div>
 
             <div className={dayState.className}>
@@ -192,7 +217,6 @@ function Pangolin() {
                 <div className='textDay'>
                     {dayState.content}
                 </div>
-
             </div>
 
         </div>
