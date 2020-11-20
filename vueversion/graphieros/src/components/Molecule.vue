@@ -1,5 +1,5 @@
 <template>
-  <div v-html="line" />
+  <div v-html="mole" />
 </template>
 
 <script>
@@ -15,16 +15,16 @@ export default defineComponent({
     size: String,
     strokeWidth: String
   },
-  data() {
-    return {
-      line: molecular({
+  computed: {
+    mole() {
+      return molecular({
         class: this.class,
         sequence: this.sequence,
         colors: this.colors.split(","),
         size: this.size,
         strokeWidth: Number(this.strokeWidth)
-      })
-    };
+      });
+    }
   }
 });
 </script>
