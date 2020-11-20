@@ -1,17 +1,20 @@
 <template>
-  <div className="search-body">
-    <input
-      type="text"
-      @focus="$event.target.select()"
-      placeholder="...search a word"
-      @input="inputFunc($event.target.value)"
-    />
-    <Fractal
-      className="fractal-icon"
-      sequence="eq-xq-dq-zs-sw"
-      svgSize="25"
-      colors="122,161,216"
-    />
+  <div>
+    <div class="search-body">
+      <input
+        ref="searchField"
+        type="text"
+        @focus="$event.target.select()"
+        placeholder="...search a word"
+        @input="inputFunc($event.target.value)"
+      />
+      <Fractal
+        className="fractal-icon"
+        sequence="eq-xq-dq-zs-sw"
+        svgSize="25"
+        colors="122,161,216"
+      />
+    </div>
   </div>
 </template>
 
