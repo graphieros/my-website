@@ -16,17 +16,17 @@ export default defineComponent({
     light: Boolean,
     size: String
   },
-  data() {
-    return {
-      frac: fractal({
+  computed: {
+    frac() {
+      return fractal({
         sequence: this.sequence,
         colors: this.colors.split(","),
         svgSize: this.svgSize,
         intensity: this.intensity,
-        light: Boolean(this.light), //weird hack
+        light: Boolean(this.light),
         size: this.size
-      })
-    };
+      });
+    }
   }
 });
 </script>
