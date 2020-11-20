@@ -284,6 +284,29 @@ span.labySpanDate{
     animation-delay:12s;
 }
 
+.whatDay{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-550%);
+    font-family: var(--mono0);
+    color: tomato;
+    text-shadow: 0 1px 1px white;
+    transition: all 0.25s ease-in-out;
+    animation: whatDay 0.25s ease-in-out;
+}
+
+@keyframes whatDay {
+    0%{
+        opacity:0;
+        transform: translate(-50%,-550%) scale(0,0);
+    }
+    100%{
+        opacity:1;
+        transform: translate(-50%,-550%) scale(1,1);
+    }
+}
+
 @keyframes lab {
     0%{
         stroke: white;
