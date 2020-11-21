@@ -18,6 +18,7 @@ let graphierosDictionnary = [
     {
         name:'_pri',
         fr:'importer',
+        en:'',
         path:[[l,q,rm,a,rm,w],[lm,w,rm,a],[lm,a,lm,a],[r,q,r,q]],
         fractal:'qe-ex-we',
         shapes:['PIC_tr'],
@@ -27,6 +28,7 @@ let graphierosDictionnary = [
     {
         name:'_vlai',
         fr:'volaille',
+        en:'',
         path:[[rm,a,lm,a,r,q,l,q],[m,q,rm,w],[lm,w,lm,w]],
         fractal:'ez-zd-dq-sx',
         shapes:['DASH'],
@@ -36,6 +38,7 @@ let graphierosDictionnary = [
     {
         name:'_drydwa',
         fr:'année',
+        en:'',
         path:[[rm,a,lm,a,l,q,lm,w,rm,w,r,q,m,q],[lm,a,r,q,lm,w,m,q,lm,a]],
         fractal:'ez-zq-qw-wx-xd-ds-sw-wd-dz-zs',
         shapes: ['C_l','X_plur'],
@@ -45,6 +48,7 @@ let graphierosDictionnary = [
     {
         name:'_dryktu',
         fr:'mois',
+        en:'',
         path:[[lm,a,r,q,lm,w,m,q,lm,a,rm,a,rm,w,lm,w,lm,a],[l,q,l,q]],
         fractal:'zs-sw-wz-zd-dw-wx-xe-ez',
         shapes:['RECT', 'TRI_0'],
@@ -54,6 +58,7 @@ let graphierosDictionnary = [
     {
         name:'_dryksi',
         fr:'semaine',
+        en:'',
         path:[[lm,a,r,q,lm,w,m,q,lm,a,rm,a,r,q,rm,w,lm,w,l,q,lm,a]],
         fractal:'zd-dw-ws-sz-ze-ed-dx-xw-wq-qz',
         shapes:['HEX', 'LOS_l'],
@@ -63,6 +68,7 @@ let graphierosDictionnary = [
     {
         name:'_lki',
         fr: 'chaîner',
+        en:'',
         path: [[l, q, rm, a, r, q, rm, w, l, q, lm, a, r, q, lm, w, l, q], [m, q, m, q]],
         fractal:'qz-zd-dw-wq-qe-ed-dx-xq',
         shapes:['HI'],
@@ -72,6 +78,7 @@ let graphierosDictionnary = [
     {
         name: '_gly',
         fr: 'pétrole',
+        en:'',
         path: [[l, q, lm, w, m, q, rm, w, r, q],[lm, a, lm, w],[rm, a, rm, w]],
         fractal:'qw-ws-sx-xd-zw-ex',
         shapes:['PIPE','W'],
@@ -81,6 +88,7 @@ let graphierosDictionnary = [
     {
         name: '_zba',
         fr: 'syllabe',
+        en:'',
         path: [[rm, a, l, q, r, q, lm, w], [lm, a, lm, a], [rm, w, rm, w]],
         fractal:'eq-qd-dw',
         shapes:['N_rrev'],
@@ -90,6 +98,7 @@ let graphierosDictionnary = [
     {
         name: '_nmo',
         fr: 'nommer',
+        en:'',
         path: [[lm, a, r, q, rm, w, lm, w, l, q, lm, a, rm, a, r, q], [lm, w, rm, a], [m, q, rm, w]],
         fractal:'ew-xs-zd-ze-ed-dx-xw-wq-qz',
         shapes:['HEX'],
@@ -99,6 +108,7 @@ let graphierosDictionnary = [
     {
         name: '_sola',
         fr: 'son',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, m, q, rm, a, r, q]],
         fractal:'zq-qw-wx-xs-se-ed',
         shapes:['ARR_db_l'],
@@ -108,6 +118,7 @@ let graphierosDictionnary = [
     {
         name: '_sota',
         fr: 'ton',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, m, q, rm, a, r, q, m, q]],
         fractal:'zq-qw-wx-xs-se-ed-ds',
         shapes:['ARR_db_l','tri_tr'],
@@ -118,6 +129,7 @@ let graphierosDictionnary = [
     {
         name: '_kwi',
         fr: 'qui',
+        en:'',
         path: [[lm, a, l, q, lm, w], [l, q, rm, w, rm, a], [m, q, m, q], [r, q, r, q]],
         fractal:'zq-qw-qx-xe',
         shapes:['PIC_br'],
@@ -127,6 +139,7 @@ let graphierosDictionnary = [
     {
         name: '_ze',
         fr: 'utiliser',
+        en:'',
         path: [[l, q, lm, w, rm, w, r, q], [lm, w, lm, a, rm, a, rm, w], [lm, a, rm, w], [rm, a, lm, w]],
         fractal:'ze-ex-xw-wz-zx-we-qw-dx',
         shapes:['X','RECT'],
@@ -136,6 +149,7 @@ let graphierosDictionnary = [
     {
         name: '_vrea',
         fr: 'vrai',
+        en:'',
         path: [[l, q, lm, w, rm, a], [lm, a, lm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'qw-we',
         shapes:['X'],
@@ -145,6 +159,7 @@ let graphierosDictionnary = [
     {
         name: '_v3ai',
         fr: 'vouloir',
+        en:'',
         path: [[lm, a, m, q, rm, a], [l, q, lm, w, rm, w, r, q]],
         fractal:'zs-se-qw-wx-xd',
         shapes:['COL_b'],
@@ -154,6 +169,7 @@ let graphierosDictionnary = [
     {
         name: '_flae',
         fr: 'voler',
+        en:'',
         path: [[lm, a, rm, a, r, q], [lm, w, rm, a], [l, q, l, q], [rm, w, rm, w]],
         fractal:'we-ze-ed',
         shapes:['ARR_r'],
@@ -163,6 +179,7 @@ let graphierosDictionnary = [
     {
         name: '_vloi',
         fr: 'volume',
+        en:'',
         path: [[lm, a, rm, a, r, q], [rm, a, lm, w], [l, q, lm, w, rm, w]],
         fractal:'ze-ed-qw-wx-we',
         shapes:['MA'],
@@ -172,6 +189,7 @@ let graphierosDictionnary = [
     {
         name: '_sta',
         fr: 'voir',
+        en:'',
         path: [[rm, a, l, q, rm, w], [l, q, r, q], [lm, a, m, q, lm, w]],
         fractal:'eq-qx-dq-zs-sw',
         shapes:['POINT_l',],
@@ -181,6 +199,7 @@ let graphierosDictionnary = [
     {
         name: '_ko',
         fr: 'voici',
+        en:'',
         path: [[lm, a, lm, a], [rm, a, rm, a], [m, q, m, q], [m,q, l, q, lm, w, rm, w, r, q]],
         fractal:'sq-qw-wx-xd',
         shapes:['COL_b'],
@@ -190,6 +209,7 @@ let graphierosDictionnary = [
     {
         name: '_vlo',
         fr: 'vitesse',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [rm, a, m, q, rm, w], [l, q, m, q]],
         fractal:'ze-ed-dx-xw-es-sx-qs',
         shapes:['LOS_r'],
@@ -199,6 +219,7 @@ let graphierosDictionnary = [
     {
         name: '_vzi',
         fr: 'visage',
+        en:'',
         path: [[lm, a, lm, a], [m, q, m, q], [l, q, rm, a, r, q, rm, w, lm, w, l, q]],
         fractal:'qe-ed-dx-xw-wq',
         shapes:['PENTA_l'],
@@ -208,6 +229,7 @@ let graphierosDictionnary = [
     {
         name: '_vzy',
         fr: 'virus',
+        en:'',
         path: [[m, q, rm, a, rm, w, lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a]],
         fractal:'zx-xe-es-ze-ed-dx-xw-wq-qz',
         shapes:['HEX'],
@@ -217,6 +239,7 @@ let graphierosDictionnary = [
     {
         name: '_vle',
         fr: 'violet',
+        en:'',
         path: [[l, q, lm, w, rm, w], [lm, a, lm, a], [rm, a, rm, a], [m, q, m, q], [r, q, r, q]],
         fractal:'qw-wx',
         shapes:['MA'],
@@ -226,6 +249,7 @@ let graphierosDictionnary = [
     {
         name: '_ldo',
         fr: 'vieillir',
+        en:'',
         path: [[lm, a, m, q, r, q, lm, w, m, q, rm, w], [l, q, l, q], [rm, a, rm, a]],
         fractal:'zx-ws-sd-dw',
         shapes:['TRI_in_br'],
@@ -235,6 +259,7 @@ let graphierosDictionnary = [
     {
         name: '_vey',
         fr: 'vieillard',
+        en:'',
         path: [[l, q, rm, a, r, q], [lm, a, rm, w], [lm, w, m, q]],
         fractal:'zx-ws-qe-ed',
         shapes:['KA'],
@@ -244,6 +269,7 @@ let graphierosDictionnary = [
     {
         name: '_vde',
         fr: 'vider',
+        en:'',
         path: [[l, q, r, q, rm, a, m, q], [rm, a, rm, w], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qd-de-es-xe',
         shapes:['tri_tr'],
@@ -253,6 +279,7 @@ let graphierosDictionnary = [
     {
         name: '_vzey',
         fr: 'vice',
+        en:'',
         path: [[lm, w, lm, w], [l, q, lm, a, rm, w, l, q], [rm, a, r, q]],
         fractal:'zx-xq-qz-ed',
         shapes:['TREC_tl'],
@@ -262,6 +289,7 @@ let graphierosDictionnary = [
     {
         name: '_vba',
         fr: 'vibrer',
+        en:'',
         path: [[r, q, lm, a, rm, a, m, q, rm, w, lm, w, r, q, m, q], [l, q, l, q]],
         fractal:'ze-es-sd-dw-wx-xs-zd',
         shapes:['POINT_r','HI','E_rev'],
@@ -271,6 +299,7 @@ let graphierosDictionnary = [
     {
         name: '_vry',
         fr: 'vertu',
+        en:'',
         path: [[lm, a, lm, a], [l, q, rm, a, lm, w, l, q], [r, q, rm, w]],
         fractal:'qe-ew-wq-xd',
         shapes:['TREC_bl'],
@@ -280,6 +309,7 @@ let graphierosDictionnary = [
     {
         name: '_vrae',
         fr: 'vert',
+        en:'',
         path: [[l, q, l, q], [lm, a, lm, a], [lm, w, lm, w], [m, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'ed-dx',
         shapes:['MA'],
@@ -289,6 +319,7 @@ let graphierosDictionnary = [
     {
         name: '_kto',
         fr: 'vers',
+        en:'',
         path: [[l, q, r, q], [rm, a, r, q, rm, w], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qd-ed-dx',
         shapes:['ARR_r'],
@@ -298,6 +329,7 @@ let graphierosDictionnary = [
     {
         name: '_rmye',
         fr: 'ver',
+        en:'',
         path: [[l, q, lm, w, m, q, rm, w, r, q, lm, a, rm, a]],
         fractal:'qw-ws-sx-xd-dz-ze',
         shapes:['W'],
@@ -307,6 +339,7 @@ let graphierosDictionnary = [
     {
         name: '_sloi',
         fr: 'vendre',
+        en:'',
         path: [[lm, a, rm, a], [lm, w, l, q, r, q, rm, w, lm, w, m, q, rm, w]],
         fractal:'ze-qd-dx-xw-wq-ws-sx',
         shapes:['MEX_b'],
@@ -316,6 +349,7 @@ let graphierosDictionnary = [
     {
         name: '_pio',
         fr: 'végétal',
+        en:'',
         path: [[lm, a, lm, w, r, q], [l, q, rm, w], [lm, w, rm, a]],
         fractal:'zw-wd-ew-qx',
         shapes:['PIC_bl'],
@@ -325,6 +359,7 @@ let graphierosDictionnary = [
     {
         name: '_vnia',
         fr: 'varier',
+        en:'',
         path: [[l, q, rm, a, lm, a, l, q], [m, q, r, q, rm, w, m, q], [lm, w, lm, w]],
         fractal:'qz-ze-eq-sd-dx-xs',
         shapes:['TRI_out_tl','tri_br'],
@@ -334,6 +369,7 @@ let graphierosDictionnary = [
     {
         name: '_vlia',
         fr: 'valoriser',
+        en:'',
         path: [[lm, a, rm, a], [l, q, r, q, lm, w, rm, w, l, q]],
         fractal:'ze-qd-dw-wx-xq',
         shapes:['EQ','CROSS_b'],
@@ -343,6 +379,7 @@ let graphierosDictionnary = [
     {
         name: '_vkye',
         fr: 'vaincre',
+        en:'',
         path: [[rm, a, lm, w, l, q, rm, a, rm, w, rm, w, lm, w], [lm, a, r, q]],
         fractal:'zd-wq-qe-ex-xw-we',
         shapes:['TREC_bl','TREC_sbr','DIAM'],
@@ -352,6 +389,7 @@ let graphierosDictionnary = [
     {
         name: '_waa',
         fr: 'trouver',
+        en:'',
         path: [[l, q, lm, a, lm, w, rm, w, lm, a, r, q], [rm, a, rm, a]],
         fractal:'zw-wx-xz-qz-zd',
         shapes:['TREC_sbl'],
@@ -361,6 +399,7 @@ let graphierosDictionnary = [
     {
         name: '_tro',
         fr: 'trop',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, r, q, rm, a], [l, q, r, q], [lm, w, m, q, rm, w]],
         fractal:'zq-qw-wx-xd-de-qd-ws-sx',
         shapes:['C_b','MEX_b'],
@@ -370,6 +409,7 @@ let graphierosDictionnary = [
     {
         name: '_bse',
         fr: 'trébucher',
+        en:'',
         path: [[lm, a, rm, a, r, q], [l, q, rm, a], [lm, w, m, q], [rm, w, rm, w]],
         fractal:'ze-ed-qe-ws',
         shapes:['KA'],
@@ -379,6 +419,7 @@ let graphierosDictionnary = [
     {
         name: '_tie',
         fr: 'traverser',
+        en:'',
         path: [[rm, a, lm, a, lm, w, rm, w], [l, q, r, q]],
         fractal:'ez-zw-wx-qd',
         shapes:['EQ','MEC_l'],
@@ -388,6 +429,7 @@ let graphierosDictionnary = [
     {
         name: '_tvai',
         fr: 'travailler',
+        en:'',
         path: [[lm, a, lm, w], [l, q, rm, a, r, q, m, q, rm, w, r, q]],
         fractal:'zw-qe-ed-ds-sx-xd',
         shapes:['tri_br'],
@@ -397,6 +439,7 @@ let graphierosDictionnary = [
     {
         name: '_zit',
         fr: 'transitionner',
+        en:'',
         path: [[m, q, l, q, lm, a, m, q, rm, a, r, q, rm, w, lm, w, m, q], [rm, a, rm, w]],
         fractal:'qz-zs-sq-we-ed-dx-xw-xe',
         shapes:['TREC_sbr','tri_tl','tri_out_r'],
@@ -406,6 +449,7 @@ let graphierosDictionnary = [
     {
         name: '_mne',
         fr: 'transgenre',
+        en:'',
         path: [[lm, a, m, q, r, q, rm, w, lm, w, m, q], [lm, w, r, q], [l, q, rm, a]],
         fractal:'zs-sd-dx-xw-ws-wd-qe',
         shapes:['LOS_br','KA'],
@@ -415,6 +459,7 @@ let graphierosDictionnary = [
     {
         name: '_tew',
         fr: 'tout',
+        en:'',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q], [lm, w, lm, a, r, q, lm, w], [rm, a, rm, w, l, q, rm, a], [l, q, r, q], [lm, a, rm, w], [rm, a, lm, w]],
         fractal:'qz-ze-ed-dx-xw-wq-qd-zx-we-xe-eq-qx-wz-zd-dw',
         shapes:['HEX','TRI_2'],
@@ -424,6 +469,7 @@ let graphierosDictionnary = [
     {
         name: '_pko',
         fr: 'toucher',
+        en:'',
         path: [[lm, a, lm, w], [rm, a, rm, w], [l, q, lm, w, rm, w, r, q], [m, q, m, q]],
         fractal:'qw-wx-xd-zw-ex',
         shapes:['U','COL_b'],
@@ -433,6 +479,7 @@ let graphierosDictionnary = [
     {
         name: '_tnogma',
         fr: 'tonne',
+        en:'',
         path: [[rm, w, lm, a, rm, a, rm, w, lm, w, l, q, m, q, lm, w], [r, q, r, q]],
         fractal:'xz-ze-ex-xw-wq-qs-sw',
         shapes:['TREC_str','tri_bl'],
@@ -442,6 +489,7 @@ let graphierosDictionnary = [
     {
         name: '_pley',
         fr: 'tirer',
+        en:'',
         path: [[lm, a, l, q, lm, w], [rm, a, m, q, rm, w], [r, q, r, q]],
         fractal:'zq-qw-es-sx',
         shapes:['ARR_db_l'],
@@ -451,6 +499,7 @@ let graphierosDictionnary = [
     {
         name: '_tra3',
         fr: 'théâtre',
+        en:'',
         path: [[l, q, l, q], [lm, w, lm, w], [r, q, lm, a, rm, a, m, q, rm, w]],
         fractal:'xs-se-ez-zd',
         shapes:['Ê_rev'],
@@ -460,6 +509,7 @@ let graphierosDictionnary = [
     {
         name: '_toi',
         fr: 'texte',
+        en:'',
         path: [[lm, a, rm, a], [l, q, m, q], [lm, w, rm, w], [r, q, r, q]],
         fractal:'ze-qs-wx',
         shapes:['EQ'],
@@ -469,6 +519,7 @@ let graphierosDictionnary = [
     {
         name: '_tea',
         fr: 'tête',
+        en:'',
         path: [[l, q, l, q], [lm, w, lm, a, rm, a, m, q], [r, q, r, q], [rm, w, rm, w]],
         fractal:'wz-ze-es',
         shapes:['TREC_stl'],
@@ -478,6 +529,7 @@ let graphierosDictionnary = [
     {
         name: '_ste',
         fr: 'tester',
+        en:'',
         path: [[l, q, l, q], [lm, w, lm, a, rm, a, m, q, r, q], [rm, w, rm, w]],
         fractal:'wz-ze-es-sd',
         shapes:['TREC_stl'],
@@ -487,6 +539,7 @@ let graphierosDictionnary = [
     {
         name: '_trea',
         fr: 'terre',
+        en:'',
         path: [[l, q, l, q], [lm, a, rm, w, lm, w, rm, a], [r, q, r, q]],
         fractal:'zx-xw-we',
         shapes:['X'],
@@ -496,6 +549,7 @@ let graphierosDictionnary = [
     {
         name: '_kpoile',
         fr: 'temps',
+        en:'',
         path: [[l, q, r, q, rm, a, rm, w, r, q, lm, a, lm, w, r, q], [lm, a, m, q, lm, w]],
         fractal:'qd-de-ex-xd-dz-zw-wd-zs-sw',
         shapes:['TRI_0','TRI_out_r','TRI_in_l','ARR_r'],
@@ -505,6 +559,7 @@ let graphierosDictionnary = [
     {
         name: '_po',
         fr: 'température',
+        en:'',
         path: [[lm, a, lm, w, rm, w], [l, q, m, q], [rm, a, rm, a], [r, q, r, q]],
         fractal:'zw-wx-qs',
         shapes:['MEC_l'],
@@ -514,6 +569,7 @@ let graphierosDictionnary = [
     {
         name: '_tle',
         fr: 'téléphoner',
+        en:'',
         path: [[l, q, rm, w, m, q, lm, w, r, q, rm, a, lm, a, l, q, r, q], [lm, w, rm, w]],
         fractal:'qz-ze-ed-dq-qx-xs-sw-wd-wx',
         shapes:['MEX_t','CROSS_b'],
@@ -523,6 +579,7 @@ let graphierosDictionnary = [
     {
         name: '_zlae',
         fr: 'tant',
+        en:'',
         path: [[l, q, lm, a], [lm, w, rm, w, rm, a], [m, q, rm, a, r, q]],
         fractal:'qz-wx-xe-se-ed',
         shapes:['arr_t'],
@@ -532,6 +589,7 @@ let graphierosDictionnary = [
     {
         name: '_sai',
         fr: 'taille',
+        en:'',
         path: [[lm, a, l, q, r, q, rm, w], [lm, w, lm, w], [rm, a, rm, a]],
         fractal:'zq-qd-dx',
         shapes:['Z_rev'],
@@ -541,6 +599,7 @@ let graphierosDictionnary = [
     {
         name: '_stu',
         fr: 'synthétiser',
+        en:'',
         path: [[l, q, lm, a, m, q, lm, w, l, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'qz-zs-sw-wq-ex',
         shapes:['LOS_l'],
@@ -550,6 +609,7 @@ let graphierosDictionnary = [
     {
         name: '_sbo',
         fr: 'symboliser',
+        en:'',
         path: [[l, q, lm, a, lm, w], [m, q, rm, a, rm, w, r, q]],
         fractal:'qz-zw-se-ex-xd',
         shapes:['PIPE'],
@@ -559,6 +619,7 @@ let graphierosDictionnary = [
     {
         name: '_tpe',
         fr: 'sur',
+        en:'',
         path: [[lm, a, rm, a], [l, q, r, q, rm, w, lm, w, l, q]],
         fractal:'ze-qd-dx-xw-wq',
         shapes:['MEX_b'],
@@ -568,6 +629,7 @@ let graphierosDictionnary = [
     {
         name: '_flo',
         fr: 'suivre',
+        en:'',
         path: [[l, q, m, q, lm, a, lm, w, m, q], [rm, a, r, q, rm, w]],
         fractal:'ed-dx-qs-sz-zw-ws',
         shapes:['ARR_db_r','TRI_in_l'],
@@ -577,6 +639,7 @@ let graphierosDictionnary = [
     {
         name: '_pkae',
         fr: 'sujet',
+        en:'',
         path: [[lm, a, rm, w, lm, w, lm, a, rm, a, rm, w], [lm, w, m, q], [l, q, rm, a], [r, q, r, q]],
         fractal:'zx-ws-qe-ze-ex-xw-wz',
         shapes:['RECT','KA'],
@@ -586,6 +649,7 @@ let graphierosDictionnary = [
     {
         name: '_ske',
         fr: 'sucrer',
+        en:'',
         path: [[lm, a, m, q, rm, a], [l, q, r, q, lm, w, rm, w]],
         fractal:'zs-se-qd-dw-wx',
         shapes:['N_weird'],
@@ -595,6 +659,7 @@ let graphierosDictionnary = [
     {
         name: '_fi',
         fr: 'subjonctif',
+        en:'',
         path: [[rm, a, l, q, lm, w], [l, q, r, q], [lm, a, rm, w]],
         fractal:'eq-qw-dq-zx',
         shapes:['X'],
@@ -604,6 +669,7 @@ let graphierosDictionnary = [
     {
         name: '_svo',
         fr: 'souvent',
+        en:'',
         path: [[rm, w, l, q, lm, w, rm, w, lm, a, r, q, rm, a, lm, a]],
         fractal:'zd-de-ez-zx-xw-wq-qx',
         shapes:['TRI_out_tr','TRI_out_bl','N_lrev'],
@@ -613,6 +679,7 @@ let graphierosDictionnary = [
     {
         name: '_nde',
         fr: 'sous',
+        en:'',
         path: [[l, q, r, q, rm, a, lm, a, l, q], [lm, w, rm, w]],
         fractal:'wx-qd-de-ez-zq',
         shapes:['MEX_t'],
@@ -622,6 +689,7 @@ let graphierosDictionnary = [
     {
         name: '_sple',
         fr: 'souple',
+        en:'',
         path: [[lm, w, m, q, rm, w, lm, w, lm, a, r, q, rm, a, l, q, lm, a], [rm, a, rm, w]],
         fractal:'ws-sx-xw-wz-ze-ex-qz-zd-de-eq',
         shapes:['tri_b','CROSS_t'],
@@ -631,6 +699,7 @@ let graphierosDictionnary = [
     {
         name: '_3nu',
         fr: 'soumettre',
+        en:'',
         path: [[l, q, rm, a], [lm, a, rm, a, r, q], [m, q, rm, w, lm, w]],
         fractal:'ze-ed-qe-sx-xw',
         shapes:['KA'],
@@ -640,6 +709,7 @@ let graphierosDictionnary = [
     {
         name: '_soma',
         fr: 'soi',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, m, q, rm, a, r, q, rm, w], [m, q, r, q]],
         fractal:'zq-qw-wx-xs-se-ed-dx-sd',
         shapes:['ARR_db_l','tri_br','tri_tr','LOS_r'],
@@ -649,6 +719,7 @@ let graphierosDictionnary = [
     {
         name: '_mki',
         fr: 'singe',
+        en:'',
         path: [[lm, a, rm, w], [m, q, r, q], [l, q, rm, a], [lm, w, lm, w]],
         fractal:'zx-ds-qe',
         shapes:['KA'],
@@ -658,6 +729,7 @@ let graphierosDictionnary = [
     {
         name: '_snea',
         fr: 'simplifier',
+        en:'',
         path: [[lm, a, lm, w, m, q, l, q, lm, a], [rm, a, r, q, rm, w]],
         fractal:'qz-zw-ws-sq-ed-dx',
         shapes:['MA'],
@@ -667,6 +739,7 @@ let graphierosDictionnary = [
     {
         name: '_zei',
         fr: 'si',
+        en:'',
         path: [[lm, w, l, q, rm, a], [lm, a, rm, w], [r, q, r, q]],
         fractal:'eq-qw-zx',
         shapes:['RECT_r'],
@@ -676,6 +749,7 @@ let graphierosDictionnary = [
     {
         name: '_skwa',
         fr: 'sexe',
+        en:'',
         path: [[lm, a, m, q, rm, a, lm, a, l, q, lm, w, rm, w, r, q, rm, a]],
         fractal:'zs-se-ez-zq-qw-wx-xd-de',
         shapes:['HEX','tri_t'],
@@ -685,6 +759,7 @@ let graphierosDictionnary = [
     {
         name: '_lno',
         fr: 'seul',
+        en:'',
         path: [[m, q, m, q], [l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q]],
         fractal:'ze-ed-dx-xw-wq-qz',
         shapes:['HEX'],
@@ -694,6 +769,7 @@ let graphierosDictionnary = [
     {
         name: '_trey',
         fr: 'séparer',
+        en:'',
         path: [[l, q, lm, a, lm, w, l, q, r, q, rm, a, rm, w, r, q]],
         fractal:'qz-zw-wq-qd-de-ex-xd',
         shapes:['MA','ARR_l','ARR_r','TRI_out_l','TRI_out_r'],
@@ -703,6 +779,7 @@ let graphierosDictionnary = [
     {
         name: '_smu',
         fr: 'sentir',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, r, q], [m, q, rm, a]],
         fractal:'zq-qw-wx-xd-es',
         shapes:['C_l'],
@@ -712,6 +789,7 @@ let graphierosDictionnary = [
     {
         name: '_vye',
         fr: 'sens',
+        en:'',
         path: [[l, q, m, q], [r, q, lm, a, rm, a, r, q, rm, w, lm, w, r, q]],
         fractal:'dz-ze-ed-dx-xw-wd-qs',
         shapes:['POINT_r','TRI_out_tr','TRI_out_br'],
@@ -721,6 +799,7 @@ let graphierosDictionnary = [
     {
         name: '_sge',
         fr: 'segmenter',
+        en:'',
         path: [[l, q, l, q], [lm, a, lm, a], [lm, w, m, q], [rm, w, rm, w], [rm, a, r, q]],
         fractal:'ws-ed',
         shapes:['DASH'],
@@ -730,6 +809,7 @@ let graphierosDictionnary = [
     {
         name: '_sky',
         fr: 'sécuriser',
+        en:'',
         path: [[lm, w, lm, a, r, q, lm, w], [l, q, l, q], [rm, a, rm, a], [m, q, rm, w]],
         fractal:'wd-dz-zw-xs',
         shapes:['TRI_0'],
@@ -739,6 +819,7 @@ let graphierosDictionnary = [
     {
         name: '_d3y',
         fr: 'seconde',
+        en:'',
         path: [[l, q, l, q], [r, q, r, q], [rm, a, lm, a, rm, w, lm, w]],
         fractal:'ez-zx-xw',
         shapes:['Z_rev'],
@@ -748,6 +829,7 @@ let graphierosDictionnary = [
     {
         name: '_so',
         fr: 'se',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, m, q, rm, a], [m, q, r, q, rm, w]],
         fractal:'zq-qw-wx-xs-se-sd-dx',
         shapes:['ARR_db_l','tri_br'],
@@ -757,6 +839,7 @@ let graphierosDictionnary = [
     {
         name: '_sle',
         fr: 'saler',
+        en:'',
         path: [[l, q, m, q, lm, a, lm, w, rm, w, rm, a, m, q, r, q]],
         fractal:'qd-sz-zw-wx-xe-es',
         shapes:['U'],
@@ -766,6 +849,7 @@ let graphierosDictionnary = [
     {
         name: '_rgo',
         fr: 'rouge',
+        en:'',
         path: [[lm, a, l, q, lm, w], [m, q, m, q], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'zq-qw',
         shapes:['MA'],
@@ -775,6 +859,7 @@ let graphierosDictionnary = [
     {
         name: '_rwe',
         fr: 'roue',
+        en:'',
         path: [[r, q, m, q, lm, a, l, q, lm, w, m, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'ds-sz-zq-qw-ws',
         shapes:['LOS_l'],
@@ -784,6 +869,7 @@ let graphierosDictionnary = [
     {
         name: '_rgya',
         fr: 'rongeur',
+        en:'',
         path: [[lm, a, lm, a], [rm, a, rm, a], [l, q, r, q, rm, w, m, q, lm, w, l, q]],
         fractal:'qd-dx-xs-sw-wq',
         shapes:['W','tri_br','tri_bl'],
@@ -793,6 +879,7 @@ let graphierosDictionnary = [
     {
         name: '_lfaw',
         fr: 'rire',
+        en:'',
         path: [[l, q, lm, w, m, q, lm, a], [lm, w, r, q, rm, a, rm, w]],
         fractal:'qw-ws-sz-wd-de-ex',
         shapes:['RECT_r'],
@@ -802,6 +889,7 @@ let graphierosDictionnary = [
     {
         name: '_rgi',
         fr: 'rigide',
+        en:'',
         path: [[lm, a, m, q, rm, a, lm, a, lm, w, r, q, rm, w, l, q, lm, w, r, q], [rm, a, rm, w]],
         fractal:'zs-se-ez-zw-wx-xe-wq-qx-xd-dw',
         shapes:['U_rev','tri_t'],
@@ -811,6 +899,7 @@ let graphierosDictionnary = [
     {
         name: '_ne',
         fr: 'rien',
+        en:'',
         path: [[lm, a, lm, a], [rm, a, rm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'ss',
         shapes:['NE'],
@@ -820,6 +909,7 @@ let graphierosDictionnary = [
     {
         name: '_swo',
         fr: 'revenir',
+        en:'',
         path: [[l, q, lm, a, lm, w, l, q, m, q, rm, a, rm, w, m, q, r, q]],
         fractal:'dq-qz-zw-wq-se-ex-xs',
         shapes:['ARR_db_l','ARR_l','TRI_out_l','TRI_in_r'],
@@ -829,6 +919,7 @@ let graphierosDictionnary = [
     {
         name: '_rve',
         fr: 'réveiller',
+        en:'',
         path: [[m, q, lm, w, lm, a, r, q, l, q, rm, a, rm, w, m, q]],
         fractal:'wz-zd-dq-qe-ex-xs-sw',
         shapes:['PIC_tl','PIC_tr'],
@@ -838,6 +929,7 @@ let graphierosDictionnary = [
     {
         name: '_rto',
         fr: 'retourner',
+        en:'',
         path: [[rm, w, rm, a, lm, a, lm, w], [l, q, lm, w, m, q], [r, q, r, q]],
         fractal:'qw-ws-wz-ze-ex',
         shapes:['arr_b'],
@@ -847,6 +939,7 @@ let graphierosDictionnary = [
     {
         name: '_lvoi',
         fr: 'retirer',
+        en:'',
         path: [[lm, a, lm, w, m, q, l, q, lm, w], [rm, a, r, q, rm, w]],
         fractal:'zw-ws-sq-qw-ed-dx',
         shapes:['arr_b','MA','tri_bl'],
@@ -856,6 +949,7 @@ let graphierosDictionnary = [
     {
         name: '_zle',
         fr: 'résulter',
+        en:'',
         path: [[l, q, m, q], [lm, a, lm, a], [lm, w, lm, w], [rm, a, rm, w], [r, q, r, q]],
         fractal:'qs-ex',
         shapes:['DASH'],
@@ -865,6 +959,7 @@ let graphierosDictionnary = [
     {
         name: '_pta',
         fr: 'reptile',
+        en:'',
         path: [[lm, w, rm, w, l, q, r, q, lm, a], [m, q, rm, a]],
         fractal:'wx-xq-qd-dz-se',
         shapes:['N_l'],
@@ -874,6 +969,7 @@ let graphierosDictionnary = [
     {
         name: '_rpie',
         fr: 'répéter',
+        en:'',
         path: [[r, q, l, q, lm, a, lm, w], [rm, w, rm, a, m, q]],
         fractal:'dq-qz-zw-xe-es',
         shapes:['PIPE'],
@@ -883,6 +979,7 @@ let graphierosDictionnary = [
     {
         name: '_fksi',
         fr: 'réparer',
+        en:'',
         path: [[r, q, lm, a, m, q, l, q, lm, w, m, q], [rm, a, rm, w]],
         fractal:'xe-dz-zs-sq-qw-ws',
         shapes:['tri_bl'],
@@ -892,6 +989,7 @@ let graphierosDictionnary = [
     {
         name: '_floi',
         fr: 'remplir',
+        en:'',
         path: [[l, q, r, q, rm, w, m, q], [rm, a, rm, w], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qd-dx-xs-ex',
         shapes:['arr_b','tri_br'],
@@ -901,6 +999,7 @@ let graphierosDictionnary = [
     {
         name: '_rdai',
         fr: 'refaire',
+        en:'',
         path: [[m, q, lm, a, rm, a, m, q, r, q, lm, w, rm, w, l, q, m, q]],
         fractal:'sz-ze-es-qd-dw-wx-xq',
         shapes:['tri_t','CROSS_b'],
@@ -910,6 +1009,7 @@ let graphierosDictionnary = [
     {
         name: '_tba',
         fr: 'récipient',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, r, q, rm, a], [m, q, m, q]],
         fractal:'zq-qw-wx-xd-de',
         shapes:['C_b'],
@@ -919,6 +1019,7 @@ let graphierosDictionnary = [
     {
         name: '_rsea',
         fr: 'recevoir',
+        en:'',
         path: [[l, q, rm, w, m, q, lm, w, r, q], [lm, a, rm, a]],
         fractal:'ze-qx-xs-sw-wd',
         shapes:['CROSS_b'],
@@ -928,6 +1029,7 @@ let graphierosDictionnary = [
     {
         name: '_rbae',
         fr: 'rebondir',
+        en:'',
         path: [[l, q, lm, a, rm, w, rm, a], [lm, w, r, q]],
         fractal:'qz-zx-xe-wd',
         shapes:['N'],
@@ -937,6 +1039,7 @@ let graphierosDictionnary = [
     {
         name: '_snoi',
         fr: 'rayonner',
+        en:'',
         path: [[lm, a, rm, a, r, q], [l, q, rm, a, rm, w], [lm, w, rm, a]],
         fractal:'ze-ed-eq-ex-ew',
         shapes:['PIC_tr'],
@@ -946,6 +1049,7 @@ let graphierosDictionnary = [
     {
         name: '_groi',
         fr: 'ramper',
+        en:'',
         path: [[lm, w, rm, a, rm, w, r, q, l, q, lm, a, m, q]],
         fractal:'sz-zq-qd-dx-xe-ew',
         shapes:['tri_tl'],
@@ -955,6 +1059,7 @@ let graphierosDictionnary = [
     {
         name: '_rma',
         fr: 'ramasser',
+        en:'',
         path: [[l, q, rm, a, r, q], [lm, a, lm, w, m, q], [rm, w, rm, w]],
         fractal:'zw-ws-qe-ed',
         shapes:['TRI_in_l','TREC_htr'],
@@ -964,6 +1069,7 @@ let graphierosDictionnary = [
     {
         name: '_slo',
         fr: 'ralentir',
+        en:'',
         path: [[r, q, l, q], [lm, a, l, q, lm, w], [rm, a, m, q, rm, w]],
         fractal:'dq-zq-qw-es-sx',
         shapes:['ARR_db_l','ARR_l'],
@@ -973,6 +1079,7 @@ let graphierosDictionnary = [
     {
         name: '_wo',
         fr: 'questionner',
+        en:'',
         path: [[lm, a, rm, a, l, q, rm, w], [lm, w, lm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-eq-qx',
         shapes:['POINT_l'],
@@ -982,6 +1089,7 @@ let graphierosDictionnary = [
     {
         name: '_kwa',
         fr: 'que',
+        en:'',
         path: [[lm, a, l, q, lm, w], [l, q, rm, a, rm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'zq-qw-qe-ex',
         shapes:['PIC_tr'],
@@ -991,6 +1099,7 @@ let graphierosDictionnary = [
     {
         name: '_kta',
         fr: 'quantité',
+        en:'',
         path: [[r, q, m, q, rm, w, lm, w, lm, a, rm, a, rm, w], [l, q, l, q]],
         fractal:'ds-sx-xe-ez-zw-wx',
         shapes:['RECT'],
@@ -1000,6 +1109,7 @@ let graphierosDictionnary = [
     {
         name: '_fkwe',
         fr: 'quand',
+        en:'',
         path: [[rm, a, lm, a, lm, w, r, q, m, q], [l, q, l, q], [rm, w, rm, w]],
         fractal:'sd-dw-wz-ze',
         shapes:['MEC_l'],
@@ -1009,6 +1119,7 @@ let graphierosDictionnary = [
     {
         name: '_3e',
         fr: 'protéger',
+        en:'',
         path: [[lm, w, l, q, lm, a, rm, a, r, q, rm, w], [m, q, m, q]],
         fractal:'wq-qz-ze-ed-dx',
         shapes:['C_t'],
@@ -1018,6 +1129,7 @@ let graphierosDictionnary = [
     {
         name: '_prai',
         fr: 'proportionner',
+        en:'',
         path: [[r, q, m, q, rm, w, r, q, lm, a, lm, w, r, q], [l, q, l, q], [rm, a, rm, a]],
         fractal:'ds-sx-xd-dz-zw-wd',
         shapes:['TRI_0','tri_br'],
@@ -1027,6 +1139,7 @@ let graphierosDictionnary = [
     {
         name: '_prio',
         fr: 'programmer',
+        en:'',
         path: [[lm, a, m, q, rm, a, lm, a, lm, w, rm, w, rm, a], [l, q, l, q], [r, q, r, q]],
         fractal:'zs-se-ez-zw-wx-xe',
         shapes:['RECT','tri_t'],
@@ -1036,6 +1149,7 @@ let graphierosDictionnary = [
     {
         name: '_tpia',
         fr: 'profond',
+        en:'',
         path: [[lm, w, lm, a, l, q, lm, w, rm, w, r, q, l, q], [rm, a, rm, a]],
         fractal:'wz-zq-qw-wx-xd-dq',
         shapes:['TRI_out_l','MEX_b'],
@@ -1045,6 +1159,7 @@ let graphierosDictionnary = [
     {
         name: '_pre',
         fr: 'près',
+        en:'',
         path: [[lm, w, lm, a, r, q], [l, q, m, q, rm, a, l, q], [rm, w, rm, w]],
         fractal:'wz-zd-qs-se-eq',
         shapes:['TRI_in_tl','PIC_tl'],
@@ -1054,6 +1169,7 @@ let graphierosDictionnary = [
     {
         name: '_ra',
         fr: 'prendre',
+        en:'',
         path: [[lm, w, l, q, m, q, lm, a, rm, a, m, q, r, q, rm, w]],
         fractal:'se-ez-zs-wq-qd-dx',
         shapes:['MEX_b','tri_t'],
@@ -1063,6 +1179,7 @@ let graphierosDictionnary = [
     {
         name: '_frya',
         fr: 'pouvoir',
+        en:'',
         path: [[lm, w, m, q, rm, w], [l, q, lm, a, rm, a, r, q]],
         fractal:'ws-sx-qz-ze-ed',
         shapes:['tri_b','COL_t'],
@@ -1072,6 +1189,7 @@ let graphierosDictionnary = [
     {
         name: '_psie',
         fr: 'pousser',
+        en:'',
         path: [[l, q, l, q], [lm, a, m, q, lm, w], [rm, a, r, q, rm, w]],
         fractal:'zs-sw-ed-dx',
         shapes:['ARR_dbl_r'],
@@ -1081,6 +1199,7 @@ let graphierosDictionnary = [
     {
         name: '_vwa',
         fr: 'pourquoi',
+        en:'',
         path: [[lm, a, rm, a, l, q, rm, w], [lm, w, r, q], [m, q, m, q]],
         fractal:'ze-eq-qx-wd',
         shapes:['CROSS_b'],
@@ -1090,6 +1209,7 @@ let graphierosDictionnary = [
     {
         name: '_psu',
         fr: 'positionner',
+        en:'',
         path: [[l, q, m, q, lm, w, lm, a, rm, a, lm, w], [r, q, rm, w]],
         fractal:'wz-ze-ew-qs-xd',
         shapes:['TREC_stl'],
@@ -1099,6 +1219,7 @@ let graphierosDictionnary = [
     {
         name: '_ptoi',
         fr: 'porter',
+        en:'',
         path: [[lm, w, rm, a, r, q, lm, a, rm, a], [m, q, rm, w], [l, q, l, q]],
         fractal:'we-xs-zd-de-ez',
         shapes:['TRI_out_tr'],
@@ -1108,6 +1229,7 @@ let graphierosDictionnary = [
     {
         name: '_lbay',
         fr: 'porcin',
+        en:'',
         path: [[m, q, lm, w, l, q, lm, a, rm, a, r, q, rm, w, rm, a]],
         fractal:'sw-wq-qz-ze-ed-dx-xe',
         shapes:['TRI_out_r','C_t'],
@@ -1117,6 +1239,7 @@ let graphierosDictionnary = [
     {
         name: '_ptea',
         fr: 'poitriner',
+        en:'',
         path: [[lm, w, m, q, l, q, rm, a, m, q, rm, w], [lm, a, lm, a], [r, q, r, q]],
         fractal:'xs-we-eq-qs',
         shapes:['TRI_in_tl'],
@@ -1126,6 +1249,7 @@ let graphierosDictionnary = [
     {
         name: '_psaw',
         fr: 'poisson',
+        en:'',
         path: [[l, q, rm, a, rm, w, r, q, lm, w, l, q], [lm, a, lm, a], [m, q, m, q]],
         fractal:'wq-qe-ex-xd-dw',
         shapes:['RECT_r'],
@@ -1135,6 +1259,7 @@ let graphierosDictionnary = [
     {
         name: '_fky',
         fr: 'pointer',
+        en:'',
         path: [[l, q, rm, w, rm, a], [lm, a, lm, a], [m, q, m, q], [lm, w, lm, w], [r, q, r, q]],
         fractal:'qx-xe',
         shapes:['PIC_br'],
@@ -1144,6 +1269,7 @@ let graphierosDictionnary = [
     {
         name: '_ploi',
         fr: 'poil',
+        en:'',
         path: [[l, q, lm, w], [lm, a, m, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'qw-sz-ex',
         shapes:['DASH'],
@@ -1153,6 +1279,7 @@ let graphierosDictionnary = [
     {
         name: '_vdio',
         fr: 'plus',
+        en:'',
         path: [[lm, a, lm, w], [l, q, m, q], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'zw-qs',
         shapes:['DASH'],
@@ -1162,6 +1289,7 @@ let graphierosDictionnary = [
     {
         name: '_tsi',
         fr: 'pluriel',
+        en:'',
         path: [[lm, a, m, q, r, q], [lm, w, m, q], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'zs-sd-ws',
         shapes:['X_plur'],
@@ -1171,6 +1299,7 @@ let graphierosDictionnary = [
     {
         name: '_plwe',
         fr: 'plume',
+        en:'',
         path: [[lm, a, lm, a], [rm, a, rm, a], [l, q, r, q, rm, w, l, q], [lm, w, lm, w]],
         fractal:'qd-dx-xq',
         shapes:['TREC_hbr'],
@@ -1180,6 +1309,7 @@ let graphierosDictionnary = [
     {
         name: '_pli',
         fr: 'plier',
+        en:'',
         path: [[lm, a, rm, a, r, q, l, q, lm, w, rm, w]],
         fractal:'ze-ed-dq-qw-wx',
         shapes:['Z'],
@@ -1189,6 +1319,7 @@ let graphierosDictionnary = [
     {
         name: '_pto',
         fr: 'pleuvoir',
+        en:'',
         path: [[l, q, lm, w, m, q, rm, w, r, q], [lm, a, lm, a], [rm, a, rm, a]],
         fractal:'qw-ws-sx-xd',
         shapes:['W'],
@@ -1198,6 +1329,7 @@ let graphierosDictionnary = [
     {
         name: '_pla',
         fr: 'planifier',
+        en:'',
         path: [[lm, w, lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a], [rm, a, rm, w], [r, q, l, q]],
         fractal:'dq-qz-ze-ed-dx-xw-wq-zw-xe',
         shapes:['HEX'],
@@ -1207,6 +1339,7 @@ let graphierosDictionnary = [
     {
         name: '_pnae',
         fr: 'planète',
+        en:'',
         path: [[lm, w, lm, a, r, q, lm, w, l, q, lm, a, rm, a, r, q, rm, w, lm, w], [rm, a, rm, w, l, q, rm, a], [m, q, m, q]],
         fractal:'qz-ze-ed-dx-xw-wq-qx-xe-eq-wz-zd-dw',
         shapes:['HEX','TRI_2'],
@@ -1216,6 +1349,7 @@ let graphierosDictionnary = [
     {
         name: '_aria',
         fr: 'planer',
+        en:'',
         path: [[lm, a, m, q, rm, a, r, q, lm, a, l, q, rm, a, m, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'eq-qz-zs-se-ed-dz',
         shapes:['CROSS_t'],
@@ -1225,6 +1359,7 @@ let graphierosDictionnary = [
     {
         name: '_ueoa',
         fr: 'plaisir',
+        en:'',
         path: [[m, q, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q]],
         fractal:'sz-zq-qw-wx-xd-de-es',
         shapes:['C_b','M'],
@@ -1234,6 +1369,7 @@ let graphierosDictionnary = [
     {
         name: '_pvo',
         fr: 'pivoter',
+        en:'',
         path: [[lm, w, lm, a, m, q, lm, w, r, q, rm, w, lm, w], [l, q, l, q], [rm, a, rm, a]],
         fractal:'ws-sz-zw-wx-xd-dw',
         shapes:['TRI_in_l'],
@@ -1243,6 +1379,7 @@ let graphierosDictionnary = [
     {
         name: '_vdibwa',
         fr: 'pire',
+        en:'',
         path: [[m, q, l, q, lm, a, rm, w], [lm, w, lm, a], [rm, a, r, q]],
         fractal:'xz-zq-qs-wz-ed',
         shapes:['arr_t','tri_tl'],
@@ -1252,6 +1389,7 @@ let graphierosDictionnary = [
     {
         name: '_pke',
         fr: 'piquant',
+        en:'',
         path: [[lm, w, lm, a, m, q, rm, a, rm, w, lm, w, l, q, r, q, rm, w]],
         fractal:'wz-zs-se-ex-xw-wq-qd-dx',
         shapes:['MEX_b'],
@@ -1261,6 +1399,7 @@ let graphierosDictionnary = [
     {
         name: '_gwi',
         fr: 'pingouin',
+        en:'',
         path: [[lm, a, rm, a, l, q, lm, w, rm, w, rm, a, r, q], [m, q, m, q]],
         fractal:'ze-eq-qw-wx-xe-ed',
         shapes:['DIAM'],
@@ -1270,6 +1409,7 @@ let graphierosDictionnary = [
     {
         name: '_trai',
         fr: 'piéger',
+        en:'',
         path: [[lm, w, lm, a, l, q, r, q, rm, a, lm, a], [rm, w, rm, w]],
         fractal:'wz-zq-qd-de-ez',
         shapes:['MEX_t'],
@@ -1279,6 +1419,7 @@ let graphierosDictionnary = [
     {
         name: '_fti',
         fr: 'pied',
+        en:'',
         path: [[l, q, m, q, lm, w, lm, a, rm, a, rm, a, rm, w, m, q, r, q]],
         fractal:'sw-wz-ze-ex-xs-qd',
         shapes:['RECT'],
@@ -1288,6 +1429,7 @@ let graphierosDictionnary = [
     {
         name: '_sfi',
         fr: 'peur',
+        en:'',
         path: [[lm, a, rm, w], [m, q, r, q, rm, a], [l, q, l, q], [lm, w, lm, w]],
         fractal:'zx-sd-de',
         shapes:['DASH'],
@@ -1297,6 +1439,7 @@ let graphierosDictionnary = [
     {
         name: '_psia',
         fr: 'peser',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, m, q, rm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'ze-ex-xw-ws-sx',
         shapes:['MEC_r','tri_b'],
@@ -1306,6 +1449,7 @@ let graphierosDictionnary = [
     {
         name: '_lse',
         fr: 'perdre',
+        en:'',
         path: [[rm, w, lm, a, rm, a, rm, w], [l, q, rm, w, r, q], [lm, w, lm, w]],
         fractal:'xz-ze-ex-qx-xd',
         shapes:['TREC_str'],
@@ -1315,6 +1459,7 @@ let graphierosDictionnary = [
     {
         name: '_dri',
         fr: 'percer',
+        en:'',
         path: [[r, q, rm, a, m, q, rm, w, r, q, lm, a, l, q, lm, w, r, q, l, q]],
         fractal:'de-es-sx-xd-dz-zq-qw-wd-dq',
         shapes:['LOS_r','ARR_r','POINT_r'],
@@ -1324,6 +1469,7 @@ let graphierosDictionnary = [
     {
         name: '_hia',
         fr: 'penser',
+        en:'',
         path: [[m, q, l, q, lm, a, rm, a, r, q, m, q, rm, w, lm, w, m, q]],
         fractal:'ws-sx-xw-qd-de-ez-zq',
         shapes:['MEX_t','tri_b'],
@@ -1333,6 +1479,7 @@ let graphierosDictionnary = [
     {
         name: '_pda',
         fr: 'pendant',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [l, q, r, q], [rm, a, rm, w]],
         fractal:'ze-ed-dx-xw-qd-xe',
         shapes:['ARR_r','TRI_out_r','C_l','EQ'],
@@ -1342,6 +1489,7 @@ let graphierosDictionnary = [
     {
         name: '_prye',
         fr: 'part',
+        en:'',
         path: [[m, q, rm, w, lm, w, m, q], [l, q, l, q], [lm, a, lm, a], [rm, a, rm, a], [r, q, r, q]],
         fractal:'ws-sx-xw',
         shapes:['tri_b'],
@@ -1351,6 +1499,7 @@ let graphierosDictionnary = [
     {
         name: '_psoi',
         fr: 'passer',
+        en:'',
         path: [[r, q, l, q], [rm, a, l, q, rm, w], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'eq-qx-dq',
         shapes:['POINT_l'],
@@ -1360,6 +1509,7 @@ let graphierosDictionnary = [
     {
         name: '_pmi',
         fr: 'parmi',
+        en:'',
         path: [[lm, a, rm, a, r, q, l, q, lm, a, rm, w, lm, w, rm, a]],
         fractal:'we-ed-dq-qz-zx-xw-ze',
         shapes:['tri_tl','tri_t','tri_tr','tri_b','X'],
@@ -1369,6 +1519,7 @@ let graphierosDictionnary = [
     {
         name: '_vga',
         fr: 'parfumer',
+        en:'',
         path: [[lm, a, l, q, rm, a, rm, w, r, q], [l, q, lm, w, rm, w], [m, q, rm, a]],
         fractal:'zq-qw-wx-xd-qe-ex-es',
         shapes:['C_l','PIC_tr'],
@@ -1378,6 +1529,7 @@ let graphierosDictionnary = [
     {
         name: '_smai',
         fr: 'parfois',
+        en:'',
         path: [[l, q, lm, a, m, q], [lm, w, rm, w, r, q], [rm, a, rm, a]],
         fractal:'qz-zs-wx-xd',
         shapes:['DASH'],
@@ -1387,6 +1539,7 @@ let graphierosDictionnary = [
     {
         name: '_prae',
         fr: 'parcourir',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, r, q, m, q]],
         fractal:'ez-zq-qw-wx-xd-ds',
         shapes:['C_l'],
@@ -1396,6 +1549,7 @@ let graphierosDictionnary = [
     {
         name: '_ba',
         fr: 'par',
+        en:'',
         path: [[lm, a, lm, a], [rm, a, rm, a], [l, q, l, q], [m, q, rm, w], [lm, w, rm, w, r, q]],
         fractal:'wx-xd-xs',
         shapes:['MA'],
@@ -1405,6 +1559,7 @@ let graphierosDictionnary = [
     {
         name: '_mriy',
         fr: 'papillon',
+        en:'',
         path: [[lm, w, lm, a, rm, a, lm, w], [l, q, r, q, rm, w, l, q]],
         fractal:'wz-ze-ew-qd-dx-xq',
         shapes:['TREC_stl','TREC_hbr'],
@@ -1414,6 +1569,7 @@ let graphierosDictionnary = [
     {
         name: '_sra',
         fr: 'pacifier',
+        en:'',
         path: [[l, q, lm, w, rm, a, lm, a, rm, w, r, q]],
         fractal:'qw-we-ez-zx-xd',
         shapes:['X','tri_t'],
@@ -1423,6 +1579,7 @@ let graphierosDictionnary = [
     {
         name: '_pno',
         fr: 'ouvrir',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [l, q, m, q]],
         fractal:'ze-ed-dx-xw-qs',
         shapes:['C_l'],
@@ -1432,6 +1589,7 @@ let graphierosDictionnary = [
     {
         name: '_he',
         fr: 'oui',
+        en:'',
         path: [[l, q, l, q], [lm, a, lm, w, m, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'zw-ws-ex',
         shapes:['PIPE'],
@@ -1441,6 +1599,7 @@ let graphierosDictionnary = [
     {
         name: '_roi',
         fr: 'ou',
+        en:'',
         path: [[lm, a, rm, a, lm, w, rm, w, lm, a], [l, q, l, q], [r, q, r, q]],
         fractal:'ze-ew-wx-xz',
         shapes:['X'],
@@ -1450,6 +1609,7 @@ let graphierosDictionnary = [
     {
         name: '_sdey',
         fr: 'où',
+        en:'',
         path: [[lm, a, rm, w], [lm, w, rm, w, r, q], [l, q, l, q], [rm, a, rm, a]],
         fractal:'zx-wx-xd',
         shapes:['ARR_r'],
@@ -1459,6 +1619,7 @@ let graphierosDictionnary = [
     {
         name: '_bnio',
         fr: 'os',
+        en:'',
         path: [[lm, a, rm, w, rm, a, l, q, m, q, rm, a, lm, a, l, q, lm, w, rm, w], [r, q, r, q]],
         fractal:'qz-ze-es-sq-qe-zx-xw-wq-ex',
         shapes:['LOS_tl','LOS_bl','TRI_in_r','TREC_str'],
@@ -1468,6 +1629,7 @@ let graphierosDictionnary = [
     {
         name: '_via',
         fr: 'originer',
+        en:'',
         path: [[l, q, lm, w, lm, a, rm, a], [m, q, r, q, rm, w, m, q]],
         fractal:'qw-wz-ze-sd-dx-xs',
         shapes:['tri_br'],
@@ -1477,6 +1639,7 @@ let graphierosDictionnary = [
     {
         name: '_rgia',
         fr: 'organe',
+        en:'',
         path: [[rm, a, l, q, m, q, lm, w, rm, w, lm, a], [lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
         fractal:'-zx-ws-sq-qe-ez-zq-qw-wx-xd-de',
         shapes:['KA','HEX'],
@@ -1486,6 +1649,7 @@ let graphierosDictionnary = [
     {
         name: '_rdo',
         fr: 'ordonner',
+        en:'',
         path: [[lm, w, lm, a, rm, a, rm, w], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'wz-ze-ex',
         shapes:['U_rev'],
@@ -1495,6 +1659,7 @@ let graphierosDictionnary = [
     {
         name: '_r3y',
         fr: 'orange',
+        en:'',
         path: [[l, q, lm, a, rm, a], [m, q, m, q], [r, q, r, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'qz-ze',
         shapes:['MA'],
@@ -1504,6 +1669,7 @@ let graphierosDictionnary = [
     {
         name: '_vroi',
         fr: 'or',
+        en:'',
         path: [[l, q, m, q], [lm, a, m, q, lm, w], [r, q, rm, a, rm, w, r, q]],
         fractal:'qs-zs-sw-xe-ed-dx',
         shapes:['TRI_out_r','ARR_dbl_r'],
@@ -1513,6 +1679,7 @@ let graphierosDictionnary = [
     {
         name: '_gnae',
         fr: 'onde',
+        en:'',
         path: [[l, q, lm, w], [lm, a, rm, w], [rm, a, r, q]],
         fractal:'qw-xz-ed',
         shapes:['EQ'],
@@ -1522,6 +1689,7 @@ let graphierosDictionnary = [
     {
         name: '_broi',
         fr: 'ombre',
+        en:'',
         path: [[l, q, rm, a, rm, w, lm, w], [lm, a, m, q], [r, q, r, q]],
         fractal:'qe-ex-xw-zs',
         shapes:['PIC_tr'],
@@ -1531,6 +1699,7 @@ let graphierosDictionnary = [
     {
         name: '_zo',
         fr: 'oiseau',
+        en:'',
         path: [[m, q, l, q, lm, w, rm, a], [lm, a, rm, a, r, q], [rm, w, rm, w]],
         fractal:'sq-qw-we-ze-ed',
         shapes:['ARR_r','tri_bl'],
@@ -1540,6 +1709,7 @@ let graphierosDictionnary = [
     {
         name: '_gwa',
         fr: 'oeuf',
+        en:'',
         path: [[l, q, lm, a, m, q, lm, w, l, q], [rm, a, r, q, rm, w]],
         fractal:'sz-zq-qw-ws-ed-dx',
         shapes:['LOS_l'],
@@ -1549,6 +1719,7 @@ let graphierosDictionnary = [
     {
         name: '_ptae',
         fr: 'objet',
+        en:'',
         path: [[lm, w, m, q, rm, w, lm, w, lm, a, rm, a, rm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'ws-sx-xw-wz-ze-ex',
         shapes:['RECT','tri_b'],
@@ -1558,6 +1729,7 @@ let graphierosDictionnary = [
     {
         name: '_ney',
         fr: 'nouveau',
+        en:'',
         path: [[lm, a, l, q, lm, w, m, q, rm, w, r, q, rm, a]],
         fractal:'zq-qw-ws-sx-xd-de',
         shapes:['MA','W'],
@@ -1567,6 +1739,7 @@ let graphierosDictionnary = [
     {
         name: '_fdu',
         fr: 'nourrir',
+        en:'',
         path: [[l, q, lm, w, lm, a, rm, a, r, q, rm, w, l, q], [m, q, m, q]],
         fractal:'qw-wz-ze-ed-dx-xq',
         shapes:['CROSS_b'],
@@ -1576,6 +1749,7 @@ let graphierosDictionnary = [
     {
         name: '_nia',
         fr: 'non',
+        en:'',
         path: [[lm, a, rm, w], [rm, a, lm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'zx-we',
         shapes:['X'],
@@ -1585,6 +1759,7 @@ let graphierosDictionnary = [
     {
         name: '_na',
         fr: 'ni',
+        en:'',
         path: [[l, q, m, q], [lm, a, rm, w, r, q], [lm, w, rm, a]],
         fractal:'zx-xd-we-qs',
         shapes:['X'],
@@ -1594,6 +1769,7 @@ let graphierosDictionnary = [
     {
         name: '_nsio',
         fr: 'nécessiter',
+        en:'',
         path: [[lm, a, l, q, m, q, rm, a, r, q], [m, q, rm, w, lm, w]],
         fractal:'zq-qs-se-ed-sx-xw',
         shapes:['X_plur'],
@@ -1603,6 +1779,7 @@ let graphierosDictionnary = [
     {
         name: '_zmi',
         fr: 'musique',
+        en:'',
         path: [[l, q, lm, w, lm, a, rm, a, r, q], [lm, w, rm, w, m, q, rm, a]],
         fractal:'qw-wz-ze-ed-es-sx-xw',
         shapes:['E_rev'],
@@ -1612,6 +1789,7 @@ let graphierosDictionnary = [
     {
         name: '_mso',
         fr: 'muscler',
+        en:'',
         path: [[lm, a, rm, a, rm, w, l, q, m, q, rm, w], [lm, w, lm, w], [r, q, r, q]],
         fractal:'ze-ex-xq-qs-sx',
         shapes:['TRI_in_bl'],
@@ -1621,6 +1799,7 @@ let graphierosDictionnary = [
     {
         name: '_mksi',
         fr: 'multiplier',
+        en:'',
         path: [[lm, a, lm, a], [rm, a, rm, a], [m, q, m, q], [l, q, lm, w, rm, w, r, q]],
         fractal:'qw-wx-xd',
         shapes:['COL_b'],
@@ -1630,6 +1809,7 @@ let graphierosDictionnary = [
     {
         name: '_ftey',
         fr: 'mou',
+        en:'',
         path: [[l, q, lm, a, lm, w, rm, w, rm, a, r, q], [lm, w, m, q, rm, w]],
         fractal:'qz-zw-wx-xe-ed-ws-sx',
         shapes:['U','tri_b'],
@@ -1639,6 +1819,7 @@ let graphierosDictionnary = [
     {
         name: '_mtu',
         fr: 'montagne',
+        en:'',
         path: [[l, q, lm, a, m, q, rm, a, r, q], [lm, w, rm, w]],
         fractal:'qz-zs-se-ed-wx',
         shapes:['M'],
@@ -1648,6 +1829,7 @@ let graphierosDictionnary = [
     {
         name: '_mu',
         fr: 'mollusque',
+        en:'',
         path: [[l, q, m, q, lm, a, l, q, lm, w, rm, w, r, q, rm, a], [lm, a, lm, w, r, q]],
         fractal:'qs-sz-zq-qw-wx-xd-de-dw-wz',
         shapes:['C_b','tri_tl','TRI_out_l','TRI_out_br'],
@@ -1657,6 +1839,7 @@ let graphierosDictionnary = [
     {
         name: '_mni',
         fr: 'moins',
+        en:'',
         path: [[l, q, m, q], [lm, a, lm, a], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w], [lm, w, lm, w]],
         fractal:'qs',
         shapes:['DASH'],
@@ -1666,6 +1849,7 @@ let graphierosDictionnary = [
     {
         name: '_d3io',
         fr: 'minute',
+        en:'',
         path: [[l, q, l, q], [lm, w, lm, a, m, q, rm, a, rm, w], [r, q, r, q]],
         fractal:'wz-zs-se-ex',
         shapes:['M'],
@@ -1675,6 +1859,7 @@ let graphierosDictionnary = [
     {
         name: '_mina',
         fr: 'minéral',
+        en:'',
         path: [[lm, w, lm, a, m, q, rm, a, rm, w, lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
         fractal:'wz-zs-se-ex-xw-wq-qz-ze-ed-dx',
         shapes:['HEX'],
@@ -1684,6 +1869,7 @@ let graphierosDictionnary = [
     {
         name: '_mlimza',
         fr: 'millimètre',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [l, q, l, q], [m, q, m, q]],
         fractal:'ze-ed-dx-xw',
         shapes:['C_l'],
@@ -1693,6 +1879,7 @@ let graphierosDictionnary = [
     {
         name: '_mligma',
         fr: 'milligramme',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-ex-xw',
         shapes:['MEC_r'],
@@ -1702,6 +1889,7 @@ let graphierosDictionnary = [
     {
         name: '_mdo',
         fr: 'milieu',
+        en:'',
         path: [[l, q, r, q], [lm, a, lm, a], [rm, a, rm, a], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'qd',
         shapes:['DASH'],
@@ -1711,6 +1899,7 @@ let graphierosDictionnary = [
     {
         name: '_vdikeo',
         fr: 'mieux',
+        en:'',
         path: [[m, q, l, q, lm, w, rm, a], [lm, a, lm, w], [rm, w, r, q]],
         fractal:'sq-qw-we-zw-xd',
         shapes:['arr_b','tri_bl'],
@@ -1720,6 +1909,7 @@ let graphierosDictionnary = [
     {
         name: '_pne',
         fr: 'mettre',
+        en:'',
         path: [[lm, w, lm, a, l, q, m, q, lm, a], [rm, a, r, q, rm, w]],
         fractal:'wz-zs-sq-qz-ed-dx',
         shapes:['tri_tl','arr_t'],
@@ -1729,6 +1919,7 @@ let graphierosDictionnary = [
     {
         name: '_mza',
         fr: 'mètre',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, m, q, lm, w]],
         fractal:'ze-ed-dx-xw-wq-qs-sw',
         shapes:['C_l','tri_bl'],
@@ -1738,6 +1929,7 @@ let graphierosDictionnary = [
     {
         name: '_mto',
         fr: 'métal',
+        en:'',
         path: [[lm, w, lm, a, rm, w, rm, a, r, q, lm, w, l, q, rm, a]],
         fractal:'wz-zx-xe-ed-dw-wq-qe',
         shapes:['N','RECT_r'],
@@ -1747,6 +1939,7 @@ let graphierosDictionnary = [
     {
         name: '_bwa',
         fr: 'mauvais',
+        en:'',
         path: [[l, q, lm, a, rm, w], [rm, a, r, q], [lm, w, lm, w]],
         fractal:'qz-zx-ed',
         shapes:['DASH'],
@@ -1756,6 +1949,7 @@ let graphierosDictionnary = [
     {
         name: '_mtai',
         fr: 'matière',
+        en:'',
         path: [[lm, a, lm, w, rm, a, rm, w, lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
         fractal:'zw-we-ex-xw-wq-qz-ze-ed-dx',
         shapes:['N_rev','HEX'],
@@ -1765,6 +1959,7 @@ let graphierosDictionnary = [
     {
         name: '_lfe',
         fr: 'mastodonte',
+        en:'',
         path: [[l, q, l, q], [lm, w, lm, a, rm, a, r, q, rm, w, lm, a]],
         fractal:'wz-ze-ed-dx-xz',
         shapes:['MEX_tr'],
@@ -1774,6 +1969,7 @@ let graphierosDictionnary = [
     {
         name: '_chka',
         fr: 'masquer',
+        en:'',
         path: [[lm, a, rm, a], [m, q, m, q], [l, q, rm, w, r, q, lm, w, l, q]],
         fractal:'wq-qx-xd-dw-ze',
         shapes:['CROSS_b'],
@@ -1783,6 +1979,7 @@ let graphierosDictionnary = [
     {
         name: '_msy',
         fr: 'marsupial',
+        en:'',
         path: [[l, q, lm, a], [m, q, rm, a], [r, q, rm, w, rm, a, lm, a, lm, w, rm, w]],
         fractal:'qz-se-dx-xw-wz-ze-ex',
         shapes:['RECT'],
@@ -1792,6 +1989,7 @@ let graphierosDictionnary = [
     {
         name: '_mrai',
         fr: 'marquer',
+        en:'',
         path: [[l, q, r, q], [lm, a, m, q, lm, w], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'qd-zs-sw',
         shapes:['X_plur'],
@@ -1801,6 +1999,7 @@ let graphierosDictionnary = [
     {
         name: '_mno',
         fr: 'mâle',
+        en:'',
         path: [[lm, a, rm, w], [lm, w, m, q, r, q], [l, q, rm, a]],
         fractal:'zx-ws-sd-qe',
         shapes:['KA'],
@@ -1810,6 +2009,7 @@ let graphierosDictionnary = [
     {
         name: '_nfea',
         fr: 'maladie',
+        en:'',
         path: [[lm, a, lm, a], [l, q, m, q, rm, a], [m, q, rm, w], [lm, w, r, q]],
         fractal:'qs-se-xs-wd',
         shapes:['KA','X_plur'],
@@ -1819,6 +2019,7 @@ let graphierosDictionnary = [
     {
         name: '_pro',
         fr: 'mais',
+        en:'',
         path: [[l, q, m, q], [lm, a, m, q, lm, w], [rm, a, rm, w], [r, q, r, q]],
         fractal:'zs-sw-qs-ex',
         shapes:['PIPE'],
@@ -1828,6 +2029,7 @@ let graphierosDictionnary = [
     {
         name: '_sna',
         fr: 'maigrir',
+        en:'',
         path: [[r, q, rm, w, rm, a, r, q, l, q, lm, a, m, q, lm, w, l, q]],
         fractal:'de-ex-xd-dq-qz-zs-sw-wq',
         shapes:['LOS_l','TRI_out_r','ARR_r'],
@@ -1837,6 +2039,7 @@ let graphierosDictionnary = [
     {
         name: '_lya',
         fr: 'lune',
+        en:'',
         path: [[lm, w, lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a], [m, q, m, q]],
         fractal:'zw-wq-qz-ze-ed-dx-xw',
         shapes:['HEX','TRI_out_l'],
@@ -1846,6 +2049,7 @@ let graphierosDictionnary = [
     {
         name: '_hea',
         fr: 'lumière',
+        en:'',
         path: [[lm, a, r, q, lm, w, lm, a], [l, q, m, q, rm, a], [m, q, rm, w]],
         fractal:'wz-zd-dw-qs-se-xs',
         shapes:['TRI_0','X_plur'],
@@ -1855,6 +2059,7 @@ let graphierosDictionnary = [
     {
         name: '_lro',
         fr: 'lourd',
+        en:'',
         path: [[lm, a, m, q, rm, a], [l, q, l, q], [r, q, r, q], [lm, w, rm, w]],
         fractal:'zs-se-wx',
         shapes:['DASH'],
@@ -1864,6 +2069,7 @@ let graphierosDictionnary = [
     {
         name: '_lgya',
         fr: 'long',
+        en:'',
         path: [[l, q, lm, w, r, q, rm, w, m, q, rm, a, lm, a]],
         fractal:'qw-wd-dx-xs-se-ez',
         shapes:['DASH','E_rev'],
@@ -1873,6 +2079,7 @@ let graphierosDictionnary = [
     {
         name: '_fra',
         fr: 'loin',
+        en:'',
         path: [[l, q, rm, w, rm, a], [lm, w, m, q, r, q, lm, w], [lm, a, lm, a]],
         fractal:'qx-xe-ws-sd-dw',
         shapes:['TRI_in_br','PIC_br'],
@@ -1882,6 +2089,7 @@ let graphierosDictionnary = [
     {
         name: '_sti',
         fr: 'lister',
+        en:'',
         path: [[rm, w, lm, a, l, q, rm, w, rm, a, lm, a], [l, q, lm, w, rm, w, r, q, rm, a]],
         fractal:'xq-xz-xe-xw-wq-qz-ze-ed-dx',
         shapes:['HEX','PIC_br'],
@@ -1891,6 +2099,7 @@ let graphierosDictionnary = [
     {
         name: '_lpae',
         fr: 'lèvre',
+        en:'',
         path: [[lm, a, m, q, rm, a], [l, q, r, q], [lm, w, rm, w]],
         fractal:'zs-se-qd-wx',
         shapes:['EQ'],
@@ -1900,6 +2109,7 @@ let graphierosDictionnary = [
     {
         name: '_lgy',
         fr: 'légume',
+        en:'',
         path: [[lm, a, rm, w, lm, w, rm, a], [l, q, r, q]],
         fractal:'zx-xw-we-qd',
         shapes:['X','tri_b','X_all'],
@@ -1909,6 +2119,7 @@ let graphierosDictionnary = [
     {
         name: '_lgio',
         fr: 'langage',
+        en:'',
         path: [[l, q, lm, w, lm, a], [m, q, rm, w, rm, a], [r, q, r, q]],
         fractal:'qw-wz-sx-xe',
         shapes:['PIPE'],
@@ -1918,6 +2129,7 @@ let graphierosDictionnary = [
     {
         name: '_ska',
         fr: 'lancer',
+        en:'',
         path: [[l, q, r, q, rm, w, m, q], [lm, a, lm, w], [rm, a, rm, a]],
         fractal:'zw-qd-dx-xs',
         shapes:['tri_br'],
@@ -1927,6 +2139,7 @@ let graphierosDictionnary = [
     {
         name: '_klotogma',
         fr: 'kilotonne',
+        en:'',
         path: [[rm, w, lm, a, rm, a, rm, w, lm, w, l, q, lm, a], [l, q, m, q, lm, w], [r, q, r, q]],
         fractal:'zx-xe-ez-zq-qw-wx-qs-sw',
         shapes:['TREC_str','PENTA_1','MEX_bl'],
@@ -1936,6 +2149,7 @@ let graphierosDictionnary = [
     {
         name: '_klomza',
         fr: 'kilomètre',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, m, q, rm, w], [lm, w, m, q]],
         fractal:'ze-ed-dx-xw-wq-qs-sx-ws',
         shapes:['C_l','LOS_bl','tri_b','tri_bl'],
@@ -1945,6 +2159,7 @@ let graphierosDictionnary = [
     {
         name: '_klogma',
         fr: 'kilogramme',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, l, q, m, q, rm, w], [lm, w, m, q], [r, q, r, q]],
         fractal:'ze-ex-xw-wq-qs-sx-sw',
         shapes:['MEC_r','LOS_bl','tri_b','tri_bl'],
@@ -1954,6 +2169,7 @@ let graphierosDictionnary = [
     {
         name: '_tli',
         fr: 'jusque',
+        en:'',
         path: [[l, q, lm, a, lm, w, m, q, r, q], [rm, a, r, q, rm, w]],
         fractal:'qz-zw-ws-sd-ed-dx',
         shapes:['ARR_r'],
@@ -1963,6 +2179,7 @@ let graphierosDictionnary = [
     {
         name: '_kadwa',
         fr: 'jour',
+        en:'',
         path: [[lm, a, rm, w], [l, q, rm, a, lm, a, l, q, lm, w, rm, w, r, q, m, q, lm, w]],
         fractal:'zx-qe-ez-zq-qw-wx-xd-ds-sw',
         shapes:['KA','LOS_br','TRI_out_tl'],
@@ -1972,6 +2189,7 @@ let graphierosDictionnary = [
     {
         name: '_3go',
         fr: 'jouer',
+        en:'',
         path: [[lm, a, lm, a], [l, q, rm, a], [lm, w, m, q, rm, w], [r, q, r, q]],
         fractal:'qe-ws-sx',
         shapes:['KA','DASH'],
@@ -1981,6 +2199,7 @@ let graphierosDictionnary = [
     {
         name: '_ntew',
         fr: 'interrompre',
+        en:'',
         path: [[l, q, m, q, lm, a, lm, w, m, q, r, q, rm, a, rm, w]],
         fractal:'sz-zw-ws-qd-de-ex',
         shapes:['ARR_dbl_r','PIPE','TRI_in_l'],
@@ -1990,6 +2209,7 @@ let graphierosDictionnary = [
     {
         name: '_nsa',
         fr: 'intérieur',
+        en:'',
         path: [[lm, a, rm, a, m, q, rm, w, lm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'ze-es-sx-xw',
         shapes:['E_rev'],
@@ -1999,6 +2219,7 @@ let graphierosDictionnary = [
     {
         name: '_kea',
         fr: 'intelligence',
+        en:'',
         path: [[lm, a, rm, w], [lm, w, rm, a, l, q, m, q, rm, a], [lm, a, r, q, lm, w, lm, a]],
         fractal:'zx-we-eq-qs-wz-zd-dw',
         shapes:['KA','X','TRI_0'],
@@ -2008,6 +2229,7 @@ let graphierosDictionnary = [
     {
         name: '_chra',
         fr: 'insulter',
+        en:'',
         path: [[l, q, rm, a, rm, w, lm, a], [lm, w, lm, w], [r, q, r, q]],
         fractal:'qe-ex-xz',
         shapes:['PIC_tr'],
@@ -2017,6 +2239,7 @@ let graphierosDictionnary = [
     {
         name: '_pse',
         fr: 'insuffire',
+        en:'',
         path: [[lm, w, l, q, lm, a, rm, a, r, q, rm, w], [l, q, r, q], [lm, a, m, q, rm, a]],
         fractal:'wq-qz-ze-ed-dx-qd-zs-se',
         shapes:['C_t','MEX_t'],
@@ -2026,6 +2249,7 @@ let graphierosDictionnary = [
     {
         name: '_skew',
         fr: 'insecte',
+        en:'',
         path: [[m, q, l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q], [rm, a, rm, w]],
         fractal:'sq-qz-ze-ed-dx-xw-wq-ex',
         shapes:['HEX','TRI_out_r'],
@@ -2035,6 +2259,7 @@ let graphierosDictionnary = [
     {
         name: '_nfo',
         fr: 'informer',
+        en:'',
         path: [[l, q, lm, a, rm, w, r, q], [lm, w, lm, w], [rm, a, rm, a]],
         fractal:'qz-zx-xd',
         shapes:['Z'],
@@ -2044,6 +2269,7 @@ let graphierosDictionnary = [
     {
         name: '_ngla',
         fr: 'inégaler',
+        en:'',
         path: [[lm, a, rm, a, lm, w, rm, w], [l, q, r, q]],
         fractal:'ze-ew-wx-qd',
         shapes:['Z','EQ'],
@@ -2053,6 +2279,7 @@ let graphierosDictionnary = [
     {
         name: '_tso',
         fr: 'indiquer',
+        en:'',
         path: [[lm, a, m, q, rm, a, lm, a, lm, w], [l, q, l, q], [r, q, r, q], [rm, w, rm, w]],
         fractal:'wz-ze-es-sz',
         shapes:['tri_t'],
@@ -2062,6 +2289,7 @@ let graphierosDictionnary = [
     {
         name: '_knea',
         fr: 'incliner',
+        en:'',
         path: [[m, q, l, q, lm, a, rm, a, r, q], [rm, a, rm, w], [lm, w, lm, w]],
         fractal:'de-ez-zq-qs-xe',
         shapes:['MEX_t'],
@@ -2071,6 +2299,7 @@ let graphierosDictionnary = [
     {
         name: '_kpie',
         fr: 'inachever',
+        en:'',
         path: [[l, q, lm, w, rm, a, r, q, rm, w, lm, a]],
         fractal:'qw-we-ed-dx-xz',
         shapes:['X','LOS_r'],
@@ -2080,6 +2309,7 @@ let graphierosDictionnary = [
     {
         name: '_fo',
         fr: 'impératif',
+        en:'',
         path: [[rm, w, rm, a, lm, a, lm, w, r, q, lm, a], [l, q, l, q], [m, q, m, q]],
         fractal:'zw-wd-dz-ze-ex',
         shapes:['TRI_0'],
@@ -2089,6 +2319,7 @@ let graphierosDictionnary = [
     {
         name: '_stoia',
         fr: 'imaginer',
+        en:'',
         path: [[r, q, l, q, rm, a, rm, w, l, q], [lm, a, m, q, lm, w]],
         fractal:'dq-qe-ex-xq-zs-sw',
         shapes:['TRI_1','X_plur'],
@@ -2098,6 +2329,7 @@ let graphierosDictionnary = [
     {
         name: '_3ne',
         fr: 'jeunir',
+        en:'',
         path: [[m, q, l, q, rm, a, m, q], [lm, a, rm, w], [lm, w, lm, w], [r, q, r, q]],
         fractal:'zx-qs-se-eq',
         shapes:['TRI_in_tl'],
@@ -2107,6 +2339,7 @@ let graphierosDictionnary = [
     {
         name: '_dea',
         fr: 'idée',
+        en:'',
         path: [[m, q, l, q, rm, a, m, q, rm, w], [lm, w, r, q], [lm, a, lm, a]],
         fractal:'sq-qe-es-sx-wd',
         shapes:['TRI_in_tl','X_plur'],
@@ -2116,6 +2349,7 @@ let graphierosDictionnary = [
     {
         name: '_si',
         fr: 'ici',
+        en:'',
         path: [[lm, w, l, q, lm, a, rm, a, rm, w], [m, q, rm, w, r, q]],
         fractal:'wq-qz-ze-ex-sx-xd',
         shapes:['arr_b'],
@@ -2125,6 +2359,7 @@ let graphierosDictionnary = [
     {
         name: '_r3a',
         fr: 'jaune',
+        en:'',
         path: [[lm, a, rm, a, r, q], [l, q, l, q], [m, q, m, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'ze-ed',
         shapes:['MA'],
@@ -2134,6 +2369,7 @@ let graphierosDictionnary = [
     {
         name: '_lgae',
         fr: 'jambe',
+        en:'',
         path: [[lm, w, lm, a, r, q, m, q, lm, w], [l, q, rm, a], [rm, w, rm, w]],
         fractal:'ws-sd-dz-zw-qe',
         shapes:['PIC_tl'],
@@ -2143,6 +2379,7 @@ let graphierosDictionnary = [
     {
         name: '_fwo',
         fr: 'hors',
+        en:'',
         path: [[lm, w, rm, a, r, q, l, q, lm, a, rm, w]],
         fractal:'xz-zq-qd-de-ew',
         shapes:['X','X_all'],
@@ -2152,6 +2389,7 @@ let graphierosDictionnary = [
     {
         name: '_rzo',
         fr: 'horizon',
+        en:'',
         path: [[lm, w, l, q, r, q, rm, w], [lm, a, lm, a], [rm, a, rm, a]],
         fractal:'wq-qd-dx',
         shapes:['MEX_b'],
@@ -2161,6 +2399,7 @@ let graphierosDictionnary = [
     {
         name: '_hro',
         fr: 'heure',
+        en:'',
         path: [[l, q, r, q], [lm, a, lm, w], [rm, a, rm, w]],
         fractal:'zw-ex-qd',
         shapes:['PIPE'],
@@ -2170,6 +2409,7 @@ let graphierosDictionnary = [
     {
         name: '_fro',
         fr: 'hermaphrodite',
+        en:'',
         path: [[lm, a, rm, w, lm, w, m, q, r, q, rm, w], [l, q, rm, a]],
         fractal:'zx-xw-ws-sd-dx-qe',
         shapes:['KA','LOS_br'],
@@ -2179,6 +2419,7 @@ let graphierosDictionnary = [
     {
         name: '_pa',
         fr: 'haut',
+        en:'',
         path: [[lm, a, rm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'ze',
         shapes:['DASH'],
@@ -2188,6 +2429,7 @@ let graphierosDictionnary = [
     {
         name: '_kio',
         fr: 'habiter',
+        en:'',
         path: [[lm, a, lm, w, rm, w, rm, a, lm, a, l, q, r, q, rm, a]],
         fractal:'zw-wx-xe-ez-zq-qd-de',
         shapes:['RECT','MEX_t'],
@@ -2197,6 +2439,7 @@ let graphierosDictionnary = [
     {
         name: '_dvie',
         fr: 'habiller',
+        en:'',
         path: [[lm, w, lm, a, rm, a, rm, w, lm, w, l, q, r, q, rm, w]],
         fractal:'wz-ze-ex-xw-wq-qd-dx',
         shapes:['RECT','MEX_b'],
@@ -2206,6 +2449,7 @@ let graphierosDictionnary = [
     {
         name: '_kwe',
         fr: 'grouper',
+        en:'',
         path: [[l, q, rm, a, lm, w], [r, q, lm, a, rm, w]],
         fractal:'qe-ew-dz-zx',
         shapes:['X','CROSS_t'],
@@ -2215,6 +2459,7 @@ let graphierosDictionnary = [
     {
         name: '_gro',
         fr: 'grossir',
+        en:'',
         path: [[l, q, lm, a, lm, w, l, q, r, q, rm, w, m, q, rm, a, r, q]],
         fractal:'qz-zw-wq-qd-de-es-sx-xd',
         shapes:['MA','LOS_r','TRI_out_l'],
@@ -2224,6 +2469,7 @@ let graphierosDictionnary = [
     {
         name: '_gva',
         fr: 'graviter',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, r, q, m, q], [lm, a, lm, w]],
         fractal:'ez-zq-qw-wx-xd-ds-zw',
         shapes:['TRI_out_l'],
@@ -2233,6 +2479,7 @@ let graphierosDictionnary = [
     {
         name: '_gma',
         fr: 'gramme',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, l, q, m, q, lm, w], [r, q, r, q]],
         fractal:'ze-ex-xw-wq-qs-sw',
         shapes:['MEC_r','tri_bl'],
@@ -2242,6 +2489,7 @@ let graphierosDictionnary = [
     {
         name: '_gra',
         fr: 'graisser',
+        en:'',
         path: [[m, q, l, q, lm, w, rm, w, r, q, rm, a, lm, a, rm, w]],
         fractal:'sq-qw-wx-xd-de-ez-zx',
         shapes:['LOS_bl','MEX_tr'],
@@ -2251,6 +2499,7 @@ let graphierosDictionnary = [
     {
         name: '_tsae',
         fr: 'goûter',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w], [rm, a, m, q, r, q]],
         fractal:'zq-qw-wx-es-sd',
         shapes:['MEX_bl'],
@@ -2260,6 +2509,7 @@ let graphierosDictionnary = [
     {
         name: '_sla',
         fr: 'glisser',
+        en:'',
         path: [[lm, a, lm, a], [l, q, rm, a, m, q, r, q], [lm, w, rm, w]],
         fractal:'qe-es-sd-wx',
         shapes:['DASH'],
@@ -2269,6 +2519,7 @@ let graphierosDictionnary = [
     {
         name: '_gzai',
         fr: 'gaz',
+        en:'',
         path: [[lm, w, m, q, rm, w], [l, q, l, q], [lm, a, lm, a], [rm, a, rm, a], [r, q, r, q]],
         fractal:'ws-sx',
         shapes:['DASH'],
@@ -2278,6 +2529,7 @@ let graphierosDictionnary = [
     {
         name: '_dray',
         fr: 'gauche',
+        en:'',
         path: [[lm, a, lm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'zw',
         shapes:['dash','PIPE'],
@@ -2287,6 +2539,7 @@ let graphierosDictionnary = [
     {
         name: '_kpae',
         fr: 'garder',
+        en:'',
         path: [[lm, a, m, q, rm, a, lm, a, lm, w, l, q, r, q, rm, w, rm, a]],
         fractal:'zs-se-ez-zw-wq-qd-dx-xe',
         shapes:['U_rev','tri_t'],
@@ -2296,6 +2549,7 @@ let graphierosDictionnary = [
     {
         name: '_ftu',
         fr: 'futur',
+        en:'',
         path: [[l, q, r, q], [lm, a, r, q, lm, w], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'qd-zd-dw',
         shapes:['POINT_r'],
@@ -2305,6 +2559,7 @@ let graphierosDictionnary = [
     {
         name: '_fzo',
         fr: 'fusionner',
+        en:'',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q, r, q]],
         fractal:'dq-qz-ze-ed-dx-xw-wq',
         shapes:['HEX'],
@@ -2314,6 +2569,7 @@ let graphierosDictionnary = [
     {
         name: '_ray',
         fr: 'fuir',
+        en:'',
         path: [[l, q, lm, w, rm, a], [lm, a, r, q], [m, q, rm, w]],
         fractal:'qw-we-xs-zd',
         shapes:['KA'],
@@ -2323,6 +2579,7 @@ let graphierosDictionnary = [
     {
         name: '_ftae',
         fr: 'frustrer',
+        en:'',
         path: [[lm, a, rm, a, r, q], [rm, a, lm, w], [l, q, rm, w]],
         fractal:'we-ze-ed-qx',
         shapes:[''],
@@ -2332,6 +2589,7 @@ let graphierosDictionnary = [
     {
         name: '_fry',
         fr: 'fruit',
+        en:'',
         path: [[lm, w, rm, a, lm, a, rm, w], [l, q, r, q]],
         fractal:'xz-ze-ew-qd',
         shapes:['X','tri_t'],
@@ -2341,6 +2599,7 @@ let graphierosDictionnary = [
     {
         name: '_gry',
         fr: 'frapper',
+        en:'',
         path: [[lm, a, r, q, l, q], [rm, a, lm, w], [m, q, rm, w]],
         fractal:'qd-dz-ew-xs',
         shapes:['X_all','KA'],
@@ -2350,6 +2609,7 @@ let graphierosDictionnary = [
     {
         name: '_gew',
         fr: 'fort',
+        en:'',
         path: [[l, q, lm, a, m, q], [lm, a, lm, w], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'wz-qz-zs',
         shapes:['arr_t'],
@@ -2359,6 +2619,7 @@ let graphierosDictionnary = [
     {
         name: '_fai',
         fr: 'former',
+        en:'',
         path: [[rm, a, lm, a, lm, w], [l, q, m, q], [r, q, rm, w]],
         fractal:'wz-ze-qs-xd',
         shapes:['DASH'],
@@ -2368,6 +2629,7 @@ let graphierosDictionnary = [
     {
         name: '_fkai',
         fr: 'fonctionner',
+        en:'',
         path: [[lm, a, rm, w, rm, a, lm, a, lm, w, rm, w], [lm, w, rm, a], [l, q, r, q]],
         fractal:'ze-ex-xw-wz-zx-we-qd',
         shapes:['X','RECT','X_all'],
@@ -2377,6 +2639,7 @@ let graphierosDictionnary = [
     {
         name: '_blea',
         fr: 'fleurir',
+        en:'',
         path: [[lm, a, l, q, rm, w], [rm, a, r, q, lm, w], [m, q, m, q]],
         fractal:'zq-qx-ed-dw',
         shapes:[''],
@@ -2386,6 +2649,7 @@ let graphierosDictionnary = [
     {
         name: '_fni',
         fr: 'finir',
+        en:'',
         path: [[l, q, lm, a, r, q, lm, w, l, q], [rm, a, rm, w], [m, q, m, q]],
         fractal:'dz-zq-qw-wd-ex',
         shapes:['DIAM'],
@@ -2395,6 +2659,7 @@ let graphierosDictionnary = [
     {
         name: '_brea',
         fr: 'filtrer',
+        en:'',
         path: [[l, q, r, q, lm, a, lm, w, r, q], [rm, a, rm, w]],
         fractal:'ex-qd-dz-zw-wd',
         shapes:['TRI_0'],
@@ -2404,6 +2669,7 @@ let graphierosDictionnary = [
     {
         name: '_fli',
         fr: 'fil',
+        en:'',
         path: [[l, q, lm, a, lm, w, rm, a, r, q], [rm, w, rm, w]],
         fractal:'qz-zw-we-ed',
         shapes:['N','DASH'],
@@ -2413,6 +2679,7 @@ let graphierosDictionnary = [
     {
         name: '_lvia',
         fr: 'feuille',
+        en:'',
         path: [[lm, a, lm, w, r, q], [l, q, rm, w], [rm, a, m, q]],
         fractal:'zw-wd-qx-es',
         shapes:['PIC_bl'],
@@ -2422,6 +2689,7 @@ let graphierosDictionnary = [
     {
         name: '_frey',
         fr: 'feu',
+        en:'',
         path: [[lm, w, rm, w, l, q, r, q, lm, a], [rm, a, rm, a]],
         fractal:'wx-xq-qd-dz',
         shapes:['N_l'],
@@ -2431,6 +2699,7 @@ let graphierosDictionnary = [
     {
         name: '_kloi',
         fr: 'fermer',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w], [rm, a, rm, w], [l, q, m, q]],
         fractal:'ze-ed-dx-xw-ex-qs',
         shapes:['C_l','TRI_out_r'],
@@ -2440,6 +2709,7 @@ let graphierosDictionnary = [
     {
         name: '_mna',
         fr: 'femelle',
+        en:'',
         path: [[lm, a, m, q, r, q, rm, w, lm, w, m, q], [l, q, rm, a]],
         fractal:'zs-sd-dx-xw-ws-qe',
         shapes:['KA','LOS_br'],
@@ -2449,6 +2719,7 @@ let graphierosDictionnary = [
     {
         name: '_kti',
         fr: 'félin',
+        en:'',
         path: [[l, q, rm, a, m, q, lm, a, r, q, rm, w, lm, w, l, q]],
         fractal:'zs-se-eq-qw-wx-xd-dz',
         shapes:['COL_b','CROSS_t'],
@@ -2458,6 +2729,7 @@ let graphierosDictionnary = [
     {
         name: '_nrea',
         fr: 'faux',
+        en:'',
         path: [[l, q, lm, a, rm, w], [lm, w, lm, w], [rm, a, rm, a], [r, q, r, q]],
         fractal:'qz-zx',
         shapes:['DASH','TREC_tl'],
@@ -2467,6 +2739,7 @@ let graphierosDictionnary = [
     {
         name: '_sga',
         fr: 'faucher',
+        en:'',
         path: [[l, q, m, q, rm, a, r, q], [lm, a, m, q], [rm, a, rm, w], [lm, w, lm, w]],
         fractal:'zs-qs-se-ed-ex',
         shapes:['arr_t'],
@@ -2476,6 +2749,7 @@ let graphierosDictionnary = [
     {
         name: '_fa',
         fr: 'faire',
+        en:'',
         path: [[m, q, lm, a, rm, a, m, q, r, q, rm, w, lm, w, l, q, m, q]],
         fractal:'zs-se-ez-qd-dx-xw-wq',
         shapes:['MEX_b','tri_t'],
@@ -2485,6 +2759,7 @@ let graphierosDictionnary = [
     {
         name: '_vea',
         fr: 'faible',
+        en:'',
         path: [[lm, a, lm, w], [l, q, lm, w, m, q], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'zw-qw-ws',
         shapes:['arr_b'],
@@ -2494,6 +2769,7 @@ let graphierosDictionnary = [
     {
         name: '_fsa',
         fr: 'face',
+        en:'',
         path: [[l, q, rm, w, rm, a, l, q, lm, w, rm, w, r, q, rm, a, l, q], [lm, a, m, q]],
         fractal:'qe-ex-xq-qw-wx-xd-de-zs',
         shapes:['TRI_1','TRI_out_bl','TRI_out_r'],
@@ -2503,6 +2779,7 @@ let graphierosDictionnary = [
     {
         name: '_stre',
         fr: 'extrémité',
+        en:'',
         path: [[r, q, rm, a, rm, w, r, q], [lm, a, lm, a], [l, q, l, q], [m, q, m, q], [lm, w, lm, w]],
         fractal:'de-ex-xd',
         shapes:['TRI_out_r'],
@@ -2512,6 +2789,7 @@ let graphierosDictionnary = [
     {
         name: '_stra',
         fr: 'extraire',
+        en:'',
         path: [[l, q, r, q, rm, a, lm, w, l, q], [lm, a, lm, w], [rm, a, rm, w]],
         fractal:'zw-xe-qd-de-ew-wq',
         shapes:['arr_b','arr_t','PIPE'],
@@ -2521,6 +2799,7 @@ let graphierosDictionnary = [
     {
         name: '_tra',
         fr: 'extérieur',
+        en:'',
         path: [[rm, a, lm, a, m, q, lm, w, rm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'ez-zs-sw-wx',
         shapes:['E'],
@@ -2530,6 +2809,7 @@ let graphierosDictionnary = [
     {
         name: '_vlye',
         fr: 'évoluer',
+        en:'',
         path: [[l, q, l, q], [lm, a, lm, w], [rm, a, r, q, rm, w, m, q, rm, a]],
         fractal:'zw-se-ed-dx-xs',
         shapes:['LOS_r'],
@@ -2539,6 +2819,7 @@ let graphierosDictionnary = [
     {
         name: '_vne',
         fr: 'événement',
+        en:'',
         path: [[r, q, rm, a, rm, w, r, q, m, q, lm, a, lm, w, m, q, l, q], [rm, a, lm, a, l, q, lm, w, rm, w]],
         fractal:'qz-ze-ed-dx-xw-wq-qd-ex-sz-zw-ws',
         shapes:['HEX'],
@@ -2548,6 +2829,7 @@ let graphierosDictionnary = [
     {
         name: '_stea',
         fr: 'étoile',
+        en:'',
         path: [[lm, a, r, q, lm, w, lm, a], [rm, a, rm, w, l, q, rm, a], [m, q, m, q]],
         fractal:'wz-zd-dw-xe-eq-qx',
         shapes:['TRI_2'],
@@ -2557,6 +2839,7 @@ let graphierosDictionnary = [
     {
         name: '_meama',
         fr: 'étant',
+        en:'',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, l, q, lm, w, r, q]],
         fractal:'qz-zx-xd-de-eq-qw-wd',
         shapes:['MA','RECT_r'],
@@ -2566,6 +2849,7 @@ let graphierosDictionnary = [
     {
         name: '_te',
         fr: 'et',
+        en:'',
         path: [[lm, a, l, q, lm, w], [l, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zq-qw-qs-ed-dx',
         shapes:['MA'],
@@ -2575,6 +2859,7 @@ let graphierosDictionnary = [
     {
         name: '_bia',
         fr: 'équilibrer',
+        en:'',
         path: [[lm, a, rm, a], [l, q, m, q, lm, w, rm, w, m, q, r, q]],
         fractal:'ze-qd-ws-sx-xw',
         shapes:['EQ','tri_b'],
@@ -2584,6 +2869,7 @@ let graphierosDictionnary = [
     {
         name: '_kdea',
         fr: 'équidé',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, rm, a], [m, q, r, q], [l, q, l, q]],
         fractal:'ze-ex-xw-we-ds',
         shapes:['TREC_sbr','Z'],
@@ -2593,6 +2879,7 @@ let graphierosDictionnary = [
     {
         name: '_nto',
         fr: 'entre',
+        en:'',
         path: [[lm, a, rm, a, lm, w, rm, w], [l, q, rm, a], [lm, w, r, q]],
         fractal:'ze-ew-wx-qe-wd',
         shapes:['Z'],
@@ -2602,6 +2889,7 @@ let graphierosDictionnary = [
     {
         name: '_srye',
         fr: 'entourer',
+        en:'',
         path: [[m, q, m, q], [l, q, lm, a], [rm, a, r, q], [lm, w, rm, w]],
         fractal:'zq-ed-wx',
         shapes:['N_r'],
@@ -2611,6 +2899,7 @@ let graphierosDictionnary = [
     {
         name: '_sko',
         fr: 'entendre',
+        en:'',
         path: [[l, q, l, q], [r, q, m, q, rm, a, lm, a, lm, a, lm, w, rm, w, m, q]],
         fractal:'ds-se-ez-zw-wx-xs',
         shapes:['MEC_l','E_rev'],
@@ -2620,6 +2909,7 @@ let graphierosDictionnary = [
     {
         name: '_nki',
         fr: 'entailler',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, m, q], [r, q, r, q]],
         fractal:'wz-ze-ex-xw-qs',
         shapes:['RECT'],
@@ -2629,6 +2919,7 @@ let graphierosDictionnary = [
     {
         name: '_kdie',
         fr: 'enfant',
+        en:'',
         path: [[lm, w, rm, a, rm, w, lm, w], [l, q, m, q], [lm, a, r, q]],
         fractal:'we-ex-xw-qs-zd',
         shapes:['KA','TREC_sbr'],
@@ -2638,6 +2929,7 @@ let graphierosDictionnary = [
     {
         name: '_3ia',
         fr: 'énergie',
+        en:'',
         path: [[lm, a, r, q, l, q, rm, w, lm, w, rm, a]],
         fractal:'ew-wx-xq-qd-dz',
         shapes:['N_l'],
@@ -2647,6 +2939,7 @@ let graphierosDictionnary = [
     {
         name: '_ni',
         fr: 'bas',
+        en:'',
         path: [[lm, w, rm, w], [lm, a, lm, a], [rm, a, rm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'wx',
         shapes:['DASH'],
@@ -2656,6 +2949,7 @@ let graphierosDictionnary = [
     {
         name: '_nwo',
         fr: 'en',
+        en:'',
         path: [[lm, w, l, q, m, q, lm, w, lm, a, rm, a, rm, w, lm, w], [r, q, r, q]],
         fractal:'ws-sq-qw-wz-ze-ex-xw',
         shapes:['RECT','arr_b','tri_bl'],
@@ -2665,6 +2959,7 @@ let graphierosDictionnary = [
     {
         name: '_pkoi',
         fr: 'empaqueter',
+        en:'',
         path: [[l, q, rm, a, rm, w], [lm, w, l, q, lm, a, rm, a, r, q, rm, w, lm, w, m, q], [lm, a, m, q, r, q]],
         fractal:'qz-ze-ed-dx-xw-wq-qe-ex-zs-sd-ws',
         shapes:['HEX','X_plur','PIC_tr'],
@@ -2674,6 +2969,7 @@ let graphierosDictionnary = [
     {
         name: '_skoi',
         fr: 'émotion',
+        en:'',
         path: [[lm, a, rm, w, lm, w, m, q], [rm, a, l, q, lm, a, rm, a, r, q]],
         fractal:'zx-xw-ws-de-eq-qz-ze',
         shapes:['KA', 'COL_t','TRI_out_tl','tri_b'],
@@ -2683,6 +2979,7 @@ let graphierosDictionnary = [
     {
         name: '_vzu',
         fr: 'électricité',
+        en:'',
         path: [[l, q, lm, a, lm, w, rm, a, rm, w, r, q]],
         fractal:'qz-zw-we-ex-xd',
         shapes:['N_rev'],
@@ -2692,6 +2989,7 @@ let graphierosDictionnary = [
     {
         name: '_gla',
         fr: 'égaler',
+        en:'',
         path: [[lm, a, rm, a], [l, q, r, q], [lm, w, rm, w]],
         fractal:'ze-qd-wx',
         shapes:['EQ'],
@@ -2701,6 +2999,7 @@ let graphierosDictionnary = [
     {
         name: '_fke',
         fr: 'effet',
+        en:'',
         path: [[r, q, l, q, lm, a, rm, a, r, q, rm, w], [lm, a, m, q], [lm, w, lm, w]],
         fractal:'xd-de-ez-zq-qd-zs',
         shapes:['ARR_r','tri_tl','MEX_t','LOS_tr'],
@@ -2710,6 +3009,7 @@ let graphierosDictionnary = [
     {
         name: '_to',
         fr: 'eau',
+        en:'',
         path: [[lm, a, rm, a], [l, q, lm, w, m, q, rm, w, r, q]],
         fractal:'ze-qw-ws-sx-xd',
         shapes:['W'],
@@ -2719,6 +3019,7 @@ let graphierosDictionnary = [
     {
         name: '_drye',
         fr: 'durer',
+        en:'',
         path: [[m, q, lm, a, r, q, lm, w, m, q], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'dz-zs-sw-wd',
         shapes:['POINT_r'],
@@ -2728,6 +3029,7 @@ let graphierosDictionnary = [
     {
         name: '_drei',
         fr: 'dur',
+        en:'',
         path: [[l, q, lm, w, lm, a, rm, a, rm, w, r, q], [lm, a, m, q, rm, a]],
         fractal:'qw-wz-ze-ex-xd-zs-se',
         shapes:['U_rev','tri_t'],
@@ -2737,6 +3039,7 @@ let graphierosDictionnary = [
     {
         name: '_drya',
         fr: 'droite',
+        en:'',
         path: [[l, q, l, q], [lm, a, lm, a], [lm, w, lm, w], [m, q, m, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'ex',
         shapes:['PIPE','DASH'],
@@ -2746,6 +3049,7 @@ let graphierosDictionnary = [
     {
         name: '_dro',
         fr: 'droit',
+        en:'',
         path: [[l, q, l, q], [lm, a, lm, w], [m, q, m, q], [rm, a, rm, w], [r, q, r, q]],
         fractal:'zw-ex',
         shapes:['PIPE'],
@@ -2755,6 +3059,7 @@ let graphierosDictionnary = [
     {
         name: '_rdwa',
         fr: 'draper',
+        en:'',
         path: [[lm, w, l, q, lm, a, r, q, rm, w, lm, w, m, q, r, q], [rm, a, rm, a]],
         fractal:'ws-sd-dx-xw-wq-qz-zd',
         shapes:['LOS_br'],
@@ -2764,6 +3069,7 @@ let graphierosDictionnary = [
     {
         name: '_rmi',
         fr: 'dormir',
+        en:'',
         path: [[l, q, rm, a, r, q, rm, w, l, q], [m, q, lm, w, lm, a, m, q]],
         fractal:'qe-ed-dx-xq-sz-zw-ws',
         shapes:['TRI_in_l','DIAM'],
@@ -2773,6 +3079,7 @@ let graphierosDictionnary = [
     {
         name: '_glo',
         fr: 'dont',
+        en:'',
         path: [[rm, a, lm, a, lm, w, m, q, l, q], [r, q, r, q], [rm, w, rm, w]],
         fractal:'ez-zw-ws-sq',
         shapes:['arr_b','TREC_stl'],
@@ -2782,6 +3089,7 @@ let graphierosDictionnary = [
     {
         name: '_dku',
         fr: 'donc',
+        en:'',
         path: [[rm, a, lm, a, lm, w, rm, w], [m, q, r, q], [l, q, l, q]],
         fractal:'ez-zw-wx-ds',
         shapes:['MEC_l'],
@@ -2791,6 +3099,7 @@ let graphierosDictionnary = [
     {
         name: '_dvi',
         fr: 'diviser',
+        en:'',
         path: [[lm, w, rm, a], [l, q, l, q], [lm, a, lm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'ew',
         shapes:['DASH'],
@@ -2800,6 +3109,7 @@ let graphierosDictionnary = [
     {
         name: '_dme',
         fr: 'dimensionner',
+        en:'',
         path: [[lm, a, lm, w, rm, w, r, q, rm, a, lm, a], [l, q, l, q], [m, q, m, q]],
         fractal:'de-ez-zw-wx-xd',
         shapes:['PENTA_l'],
@@ -2809,6 +3119,7 @@ let graphierosDictionnary = [
     {
         name: '_dvey',
         fr: 'différer',
+        en:'',
         path: [[l, q, l, q], [lm, a, rm, w, r, q, rm, a, lm, w]],
         fractal:'zx-xd-de-ew',
         shapes:['X','LOS_r'],
@@ -2818,6 +3129,7 @@ let graphierosDictionnary = [
     {
         name: '_dvo',
         fr: 'devoir',
+        en:'',
         path: [[lm, w, lm, a, rm, a, rm, w], [lm, a, m, q, rm, a], [l, q, l, q], [r, q, r, q]],
         fractal:'wz-ze-ex-zs-se',
         shapes:['U_rev','tri_t'],
@@ -2827,6 +3139,7 @@ let graphierosDictionnary = [
     {
         name: '_dva',
         fr: 'devant',
+        en:'',
         path: [[l, q, r, q, rm, a, rm, w, r, q], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qd-de-ex-xd',
         shapes:['ARR_r','TRI_out_r'],
@@ -2836,6 +3149,7 @@ let graphierosDictionnary = [
     {
         name: '_dzye',
         fr: 'détruire',
+        en:'',
         path: [[rm, a, rm, w], [m, q, r, q, lm, a, m, q], [l, q, lm, w]],
         fractal:'xe-dz-zs-sd-qw',
         shapes:['TRI_in_tr'],
@@ -2845,6 +3159,7 @@ let graphierosDictionnary = [
     {
         name: '_nbia',
         fr: 'déséquilibrer',
+        en:'',
         path: [[lm, a, rm, a, l, q, r, q], [m, q, rm, w, lm, w, m, q]],
         fractal:'ze-eq-qd-ws-sx-xw',
         shapes:['tri_b'],
@@ -2854,6 +3169,7 @@ let graphierosDictionnary = [
     {
         name: '_dre',
         fr: 'derrière',
+        en:'',
         path: [[r, q, l, q, lm, a, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'dq-qz-zw-wq',
         shapes:['ARR_l','tri_out_l'],
@@ -2863,6 +3179,7 @@ let graphierosDictionnary = [
     {
         name: '_fmai',
         fr: 'depuis',
+        en:'',
         path: [[r, q, l, q], [lm, a, l, q, lm, w], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'zq-qw-dq',
         shapes:['ARR_l'],
@@ -2872,6 +3189,7 @@ let graphierosDictionnary = [
     {
         name: '_chna',
         fr: 'démasquer',
+        en:'',
         path: [[lm, a, l, q, lm, w, r, q], [rm, a, r, q, rm, w, l, q], [m, q, m, q]],
         fractal:'zq-qw-wd-ed-dx-xq',
         shapes:['MA','CROSS_b'],
@@ -2881,6 +3199,7 @@ let graphierosDictionnary = [
     {
         name: '_dle',
         fr: 'délicieux',
+        en:'',
         path: [[l, q, r, q, rm, a, m, q, lm, a, l, q, lm, w, rm, w, r, q]],
         fractal:'dq-qz-zs-se-ed-dx-xw-wq',
         shapes:['M','C_b','MEX_b'],
@@ -2890,6 +3209,7 @@ let graphierosDictionnary = [
     {
         name: '_d3a',
         fr: 'déjà',
+        en:'',
         path: [[lm, a, m, q, r, q, rm, a, rm, w, r, q], [lm, w, m, q], [l, q, l, q]],
         fractal:'zs-sw-sd-de-ex-xd',
         shapes:['X_plur','TRI_out_r'],
@@ -2899,6 +3219,7 @@ let graphierosDictionnary = [
     {
         name: '_klue',
         fr: 'défaut',
+        en:'',
         path: [[lm, a, r, q, rm, w, rm, a, l, q, m, q], [lm, w, lm, w]],
         fractal:'sq-qe-ex-xd-dz',
         shapes:['PIC_tr'],
@@ -2908,6 +3229,7 @@ let graphierosDictionnary = [
     {
         name: '_dfo',
         fr: 'défaire',
+        en:'',
         path: [[rm, a, lm, w, lm, a, rm, a, r, q, lm, w], [l, q, rm, w]],
         fractal:'qx-wz-ze-ed-dw-we',
         shapes:['DIAM','TREC_stl','TREC_tr'],
@@ -2917,6 +3239,7 @@ let graphierosDictionnary = [
     {
         name: '_3i',
         fr: 'découvrir',
+        en:'',
         path: [[l, q, lm, a, lm, w, l, q], [r, q, rm, w, rm, a, r, q], [m, q, m, q]],
         fractal:'wz-zq-qw-xe-ed-dx',
         shapes:['MA','TRI_out_r','TRI_out_l'],
@@ -2926,6 +3249,7 @@ let graphierosDictionnary = [
     {
         name: '_ktye',
         fr: 'découper',
+        en:'',
         path: [[lm, a, lm, w], [l, q, rm, a], [m, q, r, q, rm, w, m, q]],
         fractal:'zw-qe-sd-dx-xs',
         shapes:['tri_br'],
@@ -2935,6 +3259,7 @@ let graphierosDictionnary = [
     {
         name: '_dsimza',
         fr: 'décimètre',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, m, q, l, q]],
         fractal:'ze-ed-dx-xw-ws-sq',
         shapes:['PENTA_l'],
@@ -2944,6 +3269,7 @@ let graphierosDictionnary = [
     {
         name: '_dsigma',
         fr: 'décigramme',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, m, q, l, q], [r, q, r, q]],
         fractal:'ze-ex-xw-ws-sq',
         shapes:['MEC_r'],
@@ -2953,6 +3279,7 @@ let graphierosDictionnary = [
     {
         name: '_trie',
         fr: 'déchêt',
+        en:'',
         path: [[lm, a, rm, a, l, q], [m, q, lm, w], [r, q, rm, w]],
         fractal:'ze-eq-ws-xd',
         shapes:['DASH'],
@@ -2962,6 +3289,7 @@ let graphierosDictionnary = [
     {
         name: '_da',
         fr: 'de',
+        en:'',
         path: [[l, q, lm, a, rm, a], [lm, a, m, q], [lm, w, lm, w], [rm, w, rm, w], [r, q, r, q]],
         fractal:'qz-ze-zs',
         shapes:['MA'],
@@ -2971,6 +3299,7 @@ let graphierosDictionnary = [
     {
         name: '_dfie',
         fr: 'dauphin',
+        en:'',
         path: [[rm, a, l, q, lm, a, m, q, l, q], [lm, a, rm, a, rm, w, r, q], [lm, w, lm, w]],
         fractal:'dx-xe-ez-zq-qs-sz-eq',
         shapes:['tri_tl','TRI_out_tl'],
@@ -2980,6 +3309,7 @@ let graphierosDictionnary = [
     {
         name: '_dse',
         fr: 'danser',
+        en:'',
         path: [[l, q, rm, a, rm, w], [lm, a, r, q], [lm, w, m, q]],
         fractal:'qe-ex-ws-zd',
         shapes:['PIC_tr'],
@@ -2989,6 +3319,7 @@ let graphierosDictionnary = [
     {
         name: '_di',
         fr: 'dans',
+        en:'',
         path: [[l, q, lm, a, rm, w, lm, w, rm, a, r, q, l, q]],
         fractal:'qz-zx-xw-we-ed-dq',
         shapes:['X_all','X'],
@@ -2998,6 +3329,7 @@ let graphierosDictionnary = [
     {
         name: '_d3e',
         fr: 'danger',
+        en:'',
         path: [[m, q, lm, a, r, q, lm, w, lm, a], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'sz-zd-dw-wz',
         shapes:['TRI_0'],
@@ -3007,6 +3339,7 @@ let graphierosDictionnary = [
     {
         name: '_dwa',
         fr: 'cycle',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, r, q, m, q, lm, w]],
         fractal:'ez-zq-qw-wx-xd-ds-sw',
         shapes:['LOS_br'],
@@ -3016,6 +3349,7 @@ let graphierosDictionnary = [
     {
         name: '_kraw',
         fr: 'crustacé',
+        en:'',
         path: [[lm, a, lm, w, l, q, lm, a, rm, a, r, q, rm, w, rm, a], [m, q, m, q]],
         fractal:'zw-wq-qz-ze-ed-dx-xe',
         shapes:['U_rev','TRI_out_r','TRI_out_l'],
@@ -3025,6 +3359,7 @@ let graphierosDictionnary = [
     {
         name: '_grae',
         fr: 'croître',
+        en:'',
         path: [[l, q, lm, w, rm, w], [lm, a, lm, w, r, q], [rm, a, lm, w]],
         fractal:'qw-wx-zw-wd-ew',
         shapes:['PIC_bl'],
@@ -3034,6 +3369,7 @@ let graphierosDictionnary = [
     {
         name: '_kru',
         fr: 'croiser',
+        en:'',
         path: [[lm, a, r, q], [rm, a, l, q], [m, q, m, q], [lm, w, lm, w], [rm, w, rm, w]],
         fractal:'qe-dz',
         shapes:['CROSS_t'],
@@ -3043,6 +3379,7 @@ let graphierosDictionnary = [
     {
         name: '_kro',
         fr: 'croire',
+        en:'',
         path: [[lm, a, rm, a, l, q, rm, w, lm, w], [rm, a, m, q, rm, w], [r, q, r, q]],
         fractal:'ze-es-sx-xw-eq-qx',
         shapes:['E_rev','POINT_l'],
@@ -3052,6 +3389,7 @@ let graphierosDictionnary = [
     {
         name: '_kri',
         fr: 'crier',
+        en:'',
         path: [[lm, a, m, q], [l, q, lm, w, r, q, rm, a, rm, w]],
         fractal:'qw-wd-de-ex-zs',
         shapes:['RECT_r'],
@@ -3061,6 +3399,7 @@ let graphierosDictionnary = [
     {
         name: '_kvae',
         fr: 'couvrir',
+        en:'',
         path: [[lm, a, lm, w, rm, w, rm, a, m, q, lm, a, l, q, r, q, rm, a]],
         fractal:'zw-wx-xe-ed-dq-qz-zs-se',
         shapes:['U','M','arr_t'],
@@ -3070,6 +3409,7 @@ let graphierosDictionnary = [
     {
         name: '_kry',
         fr: 'court',
+        en:'',
         path: [[l, q, lm, w, r, q, rm, w], [lm, a, lm, a], [m, q, m, q], [rm, a, rm, a]],
         fractal:'qw-wd-dx',
         shapes:['DASH'],
@@ -3079,6 +3419,7 @@ let graphierosDictionnary = [
     {
         name: '_krye',
         fr: 'courrier',
+        en:'',
         path: [[l, q, m, q, rm, a, l, q, lm, w, r, q, rm, a], [lm, a, lm, a], [rm, w, rm, w]],
         fractal:'qw-wd-de-es-sq-qe',
         shapes:['RECT_r','TRI_in_tl'],
@@ -3088,6 +3429,7 @@ let graphierosDictionnary = [
     {
         name: '_klo',
         fr: 'colorer',
+        en:'',
         path: [[r, q, l, q, rm, a, lm, a, lm, w, rm, w, l, q]],
         fractal:'dq-qe-ez-zw-wx-xq',
         shapes:['POINT_l','MEC_l'],
@@ -3097,6 +3439,7 @@ let graphierosDictionnary = [
     {
         name: '_kte',
         fr: 'côté',
+        en:'',
         path: [[lm, w, r, q, rm, w, lm, w, l, q, rm, a, r, q], [lm, a, m, q]],
         fractal:'qw-wx-xd-de-eq-wd-zs',
         shapes:['RECT_r','TRI_out_br'],
@@ -3106,6 +3449,7 @@ let graphierosDictionnary = [
     {
         name: '_bdi',
         fr: 'corps',
+        en:'',
         path: [[l, q, lm, a, lm, w, r, q, rm, a, rm, w, l, q], [m, q, m, q]],
         fractal:'wz-zq-qx-xe-ed-dw',
         shapes:['MA','PIPE'],
@@ -3115,6 +3459,7 @@ let graphierosDictionnary = [
     {
         name: '_sno',
         fr: 'contre',
+        en:'',
         path: [[rm, a, r, q, rm, w], [l, q, m, q], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qs-ed-dx',
         shapes:['MA','DASH'],
@@ -3124,6 +3469,7 @@ let graphierosDictionnary = [
     {
         name: '_kpoi',
         fr: 'continuer',
+        en:'',
         path: [[r, q, rm, a, rm, w, r, q, m, q], [lm, a, r, q, lm, w], [l, q, l, q]],
         fractal:'de-ex-xd-ds-zd-dw',
         shapes:['POINT_r','TRI_out_r'],
@@ -3133,6 +3479,7 @@ let graphierosDictionnary = [
     {
         name: '_ksea',
         fr: 'construire',
+        en:'',
         path: [[rm, a, rm, w], [r, q, lm, a, l, q, m, q, lm, w]],
         fractal:'ex-dz-zq-qs-sw',
         shapes:['CROSS_t'],
@@ -3142,6 +3489,7 @@ let graphierosDictionnary = [
     {
         name: '_knoi',
         fr: 'connecter',
+        en:'',
         path: [[lm, a, l, q, lm, w], [l, q, r, q], [rm, a, r, q, rm, w]],
         fractal:'zq-qw-ed-dx-qd',
         shapes:['MA'],
@@ -3151,6 +3499,7 @@ let graphierosDictionnary = [
     {
         name: '_kno',
         fr: 'connaître',
+        en:'',
         path: [[m, q, lm, w, l, q, lm, a, rm, a, r, q, lm, w, rm, w]],
         fractal:'xw-wq-qz-ze-ed-dw-ws',
         shapes:['PENTA_l'],
@@ -3160,6 +3509,7 @@ let graphierosDictionnary = [
     {
         name: '_kfay',
         fr: 'confondre',
+        en:'',
         path: [[rm, a, r, q, rm, w], [l, q, r, q], [m, q, lm, a, l, q, lm, w, lm, a]],
         fractal:'zw-wq-qz-zs-qd-ed-dx',
         shapes:['MA','ARR_r','TRI_out_l'],
@@ -3169,6 +3519,7 @@ let graphierosDictionnary = [
     {
         name: '_troi',
         fr: 'conflit',
+        en:'',
         path: [[l, q, lm, w, rm, a], [r, q, rm, w, lm, a]],
         fractal:'qw-we-dx-xz',
         shapes:['X'],
@@ -3178,6 +3529,7 @@ let graphierosDictionnary = [
     {
         name: '_hi',
         fr: 'condition',
+        en:'',
         path: [[rm, a, l, q, rm, w], [lm, a, r, q, lm, w], [m, q, m, q]],
         fractal:'eq-qx-zd-dw',
         shapes:['HI'],
@@ -3187,6 +3539,7 @@ let graphierosDictionnary = [
     {
         name: '_kteu',
         fr: 'compter',
+        en:'',
         path: [[m, q, lm, a, lm, w, m, q, r, q], [l, q, rm, a, rm, w, l, q]],
         fractal:'xe-eq-qx-wz-zs-sw-ds',
         shapes:['TRI_l','TRI_in_l','X_plur'],
@@ -3196,6 +3549,7 @@ let graphierosDictionnary = [
     {
         name: '_plea',
         fr: 'complexe',
+        en:'',
         path: [[l, q, l, q], [lm, a, m, q, lm, w], [m, q, rm, a, rm, w, r, q, m, q]],
         fractal:'zs-sw-se-ex-xd-ds',
         shapes:['X_plur'],
@@ -3205,6 +3559,7 @@ let graphierosDictionnary = [
     {
         name: '_haw',
         fr: 'comment',
+        en:'',
         path: [[lm, a, rm, a, l, q, rm, w], [lm, w, rm, w, r, q], [m, q, m, q]],
         fractal:'ze-eq-qx-wx-xd',
         shapes:['POINT_l'],
@@ -3214,6 +3569,7 @@ let graphierosDictionnary = [
     {
         name: '_fta',
         fr: 'commencer',
+        en:'',
         path: [[m, q, l, q, lm, a, r, q, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'sq-qz-zd-dw-wq',
         shapes:['POINT_r','DIAM'],
@@ -3223,6 +3579,7 @@ let graphierosDictionnary = [
     {
         name: '_ki',
         fr: 'clé',
+        en:'',
         path: [[lm, a, lm, w, m, q], [l, q, r, q, rm, w], [rm, a, rm, a]],
         fractal:'zw-ws-qd-dx',
         shapes:['LOS_br'],
@@ -3232,6 +3589,7 @@ let graphierosDictionnary = [
     {
         name: '_rkai',
         fr: 'classer',
+        en:'',
         path: [[lm, a, rm, a], [l, q, l, q], [lm, w, rm, w, m, q, r, q]],
         fractal:'ze-ds-sx-xw',
         shapes:['DASH','Z_rev'],
@@ -3241,6 +3599,7 @@ let graphierosDictionnary = [
     {
         name: '_srie',
         fr: 'circuit',
+        en:'',
         path: [[l, q, lm, a, lm, w, rm, a, rm, w, r, q, l, q]],
         fractal:'qz-zw-we-ex-xd-dq',
         shapes:['N_rev'],
@@ -3250,6 +3609,7 @@ let graphierosDictionnary = [
     {
         name: '_kwo',
         fr: 'couper',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, r, q]],
         fractal:'wz-ze-ex-xw-qd',
         shapes:['RECT'],
@@ -3259,6 +3619,7 @@ let graphierosDictionnary = [
     {
         name: '_skai',
         fr: 'ciel',
+        en:'',
         path: [[lm, w, rm, a, lm, a, rm, w], [l, q, l, q], [r, q, r, q]],
         fractal:'xz-ze-ew',
         shapes:['X','tri_t'],
@@ -3268,6 +3629,7 @@ let graphierosDictionnary = [
     {
         name: '_swa',
         fr: 'choisir',
+        en:'',
         path: [[lm, a, lm, w, rm, w, rm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'zw-wx-xe',
         shapes:['U'],
@@ -3277,6 +3639,7 @@ let graphierosDictionnary = [
     {
         name: '_sdae',
         fr: 'chaque',
+        en:'',
         path: [[l, q, lm, a, m, q, l, q], [rm, w, r, q], [lm, w, lm, w], [rm, a, rm, a]],
         fractal:'qs-sz-zq-xd',
         shapes:['tri_tl'],
@@ -3286,6 +3649,7 @@ let graphierosDictionnary = [
     {
         name: '_sni',
         fr: 'chanter',
+        en:'',
         path: [[lm, a, l, q, lm, w, rm, w, r, q], [l, q, rm, w, m, q, l, q], [rm, a, rm, a]],
         fractal:'zq-qw-wx-xd-qs-sx-xq',
         shapes:['LOS_bl','TRI_out_bl','TRI_in_bl'],
@@ -3295,6 +3659,7 @@ let graphierosDictionnary = [
     {
         name: '_fgy',
         fr: 'champignon',
+        en:'',
         path: [[l, q, rm, w, rm, a, r, q, m, q, rm, a], [lm, a, lm, a], [lm, w, lm, w]],
         fractal:'qx-xe-ed-ds-se',
         shapes:['arr_t','PIC_br'],
@@ -3304,6 +3669,7 @@ let graphierosDictionnary = [
     {
         name: '_fle',
         fr: 'chair',
+        en:'',
         path: [[l, q, rm, a, m, q, rm, w, l, q, lm, a, rm, a, rm, w, lm, w, l, q], [r, q, r, q]],
         fractal:'ez-zq-qw-wx-xe-eq-qx-xs-se',
         shapes:['POINT_l','PENTA_l','TRI_out_tl','TRI_out_bl','TRI_in_r'],
@@ -3313,6 +3679,7 @@ let graphierosDictionnary = [
     {
         name: '_bzea',
         fr: 'cervidé',
+        en:'',
         path: [[lm, a, rm, w, lm, w, r, q], [l, q, m, q, rm, a]],
         fractal:'zx-xw-wd-qs-se',
         shapes:['KA'],
@@ -3322,6 +3689,7 @@ let graphierosDictionnary = [
     {
         name: '_srea',
         fr: 'céréale',
+        en:'',
         path: [[rm, w, l, q, lm, w, rm, w, r, q, rm, a, rm, w], [lm, a, m, q]],
         fractal:'xq-qw-wx-xd-de-ex-zs',
         shapes:['PIC_br','TRI_out_r','TRI_out_bl'],
@@ -3331,6 +3699,7 @@ let graphierosDictionnary = [
     {
         name: '_tru',
         fr: 'cercler',
+        en:'',
         path: [[m, q, l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q]],
         fractal:'sq-qz-ze-ed-dx-xw-wq',
         shapes:['HEX'],
@@ -3340,6 +3709,7 @@ let graphierosDictionnary = [
     {
         name: '_sye',
         fr: 'centrer',
+        en:'',
         path: [[lm, a, rm, w], [lm, w, rm, a], [l, q, r, q]],
         fractal:'zx-we-qd',
         shapes:['X_all'],
@@ -3349,6 +3719,7 @@ let graphierosDictionnary = [
     {
         name: '_stimza',
         fr: 'centimètre',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, m, q], [l, q, l, q]],
         fractal:'ze-ed-dx-xw-ws',
         shapes:['C_l'],
@@ -3358,6 +3729,7 @@ let graphierosDictionnary = [
     {
         name: '_stigma',
         fr: 'centigramme',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, m, q], [l, q, l, q], [r, q, r, q]],
         fractal:'ze-ex-xw-ws',
         shapes:['MEC_r'],
@@ -3367,6 +3739,7 @@ let graphierosDictionnary = [
     {
         name: '_sley',
         fr: 'cellule',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ez-zq-qw-wx',
         shapes:['C_l'],
@@ -3376,6 +3749,7 @@ let graphierosDictionnary = [
     {
         name: '_de',
         fr: 'ce',
+        en:'',
         path: [[lm, a, rm, a], [lm, w, rm, w], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-wx',
         shapes:['EQ','DASH'],
@@ -3385,6 +3759,7 @@ let graphierosDictionnary = [
     {
         name: '_kzo',
         fr: 'causer',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w], [l, q, r, q], [lm, a, m, q], [rm, w, rm, w]],
         fractal:'wq-qz-ze-dq-zs',
         shapes:['tri_tl','MEX_tl'],
@@ -3394,6 +3769,7 @@ let graphierosDictionnary = [
     {
         name: '_gzo',
         fr: 'car',
+        en:'',
         path: [[lm, a, r, q, lm, w, rm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a]],
         fractal:'xw-wd-dz',
         shapes:['POINT_r'],
@@ -3403,6 +3779,7 @@ let graphierosDictionnary = [
     {
         name: '_knew',
         fr: 'canonner',
+        en:'',
         path: [[lm, a, l, q, rm, w, r, q], [lm, w, m, q], [rm, a, rm, a]],
         fractal:'zq-qx-xd-ws',
         shapes:['RECT_l'],
@@ -3412,6 +3789,7 @@ let graphierosDictionnary = [
     {
         name: '_klio',
         fr: 'canin',
+        en:'',
         path: [[rm, a, lm, a, lm, w, m, q, r, q], [l, q, rm, w]],
         fractal:'ez-zw-ws-sd-qx',
         shapes:[''],
@@ -3421,6 +3799,7 @@ let graphierosDictionnary = [
     {
         name: '_rko',
         fr: 'caillou',
+        en:'',
         path: [[lm, a, rm, w, lm, w, lm, a, r, q, rm, w], [l, q, l, q], [rm, a, rm, a]],
         fractal:'xz-zw-wx-xd-dz',
         shapes:['DIAM','TREC_sbl','TREC_br'],
@@ -3430,6 +3809,7 @@ let graphierosDictionnary = [
     {
         name: '_glio',
         fr: 'but',
+        en:'',
         path: [[m, q, l, q, lm, a, rm, a, rm, w], [lm, w, rm, w, r, q]],
         fractal:'sq-qz-ze-ex-wx-xd',
         shapes:['LOS_tl'],
@@ -3439,6 +3819,7 @@ let graphierosDictionnary = [
     {
         name: '_bze',
         fr: 'business',
+        en:'',
         path: [[rm, a, lm, a, l, q, r, q, rm, w, lm, w], [lm, a, rm, w]],
         fractal:'ez-zq-qd-dx-xw-zx',
         shapes:['X','tri_tl','tri_br','Z_rev'],
@@ -3448,6 +3829,7 @@ let graphierosDictionnary = [
     {
         name: '_bra',
         fr: 'bras',
+        en:'',
         path: [[lm, w, lm, a, m, q, r, q, lm, w], [l, q, rm, w], [rm, a, rm, a]],
         fractal:'zs-sd-dw-wz-qx',
         shapes:['PIC_bl'],
@@ -3457,6 +3839,7 @@ let graphierosDictionnary = [
     {
         name: '_dvea',
         fr: 'brancher',
+        en:'',
         path: [[lm, a, rm, w], [l, q, m, q], [lm, w, rm, w, rm, a], [r, q, r, q]],
         fractal:'ex-xw-zx-qs',
         shapes:['DASH'],
@@ -3466,6 +3849,7 @@ let graphierosDictionnary = [
     {
         name: '_bo',
         fr: 'bovidé',
+        en:'',
         path: [[lm, a, rm, w], [m, q, rm, a], [lm, w, r, q], [l, q, l, q]],
         fractal:'zx-es-wd',
         shapes:['KA'],
@@ -3475,6 +3859,7 @@ let graphierosDictionnary = [
     {
         name: '_bu',
         fr: 'boucler',
+        en:'',
         path: [[l, q, m, q, rm, a, lm, a, lm, w, rm, w, r, q]],
         fractal:'qs-se-ez-zw-wx-xd',
         shapes:['DASH'],
@@ -3484,6 +3869,7 @@ let graphierosDictionnary = [
     {
         name: '_blu',
         fr: 'bleu',
+        en:'',
         path: [[lm, w, rm, w, r, q], [l, q, l, q], [lm, a, lm, a], [m, q, m, q], [rm, a, rm, a]],
         fractal:'wx-xd',
         shapes:['MA'],
@@ -3493,6 +3879,7 @@ let graphierosDictionnary = [
     {
         name: '_keo',
         fr: 'bien',
+        en:'',
         path: [[l, q, lm, w, rm, a], [rm, w, r, q], [lm, a, lm, a]],
         fractal:'qw-we-xd',
         shapes:['DASH'],
@@ -3502,6 +3889,7 @@ let graphierosDictionnary = [
     {
         name: '_bly',
         fr: 'baleine',
+        en:'',
         path: [[l, q, m, q, lm, a, l, q, lm, w, r, q, rm, w, rm, a, lm, a], [m, q, lm, w]],
         fractal:'sz-zq-qw-ws-sq-ze-ex-xd-dw',
         shapes:['LOS_l','CROSS_b','tri_tl','tri_bl'],
@@ -3511,6 +3899,7 @@ let graphierosDictionnary = [
     {
         name: '_zaw',
         fr: 'aussi',
+        en:'',
         path: [[lm, a, lm, w, l, q, lm, a, rm, w, r, q, rm, a, lm, w], [rm, a, rm, w]],
         fractal:'qz-zx-xd-de-ew-wq-zw-ex',
         shapes:['PIPE','X','LOS_l','LOS_r'],
@@ -3520,6 +3909,7 @@ let graphierosDictionnary = [
     {
         name: '_vi',
         fr: 'avec',
+        en:'',
         path: [[lm, w, lm, a, rm, w, rm, a, lm, w], [l, q, r, q]],
         fractal:'wz-zx-xe-ew-qd',
         shapes:['X','X_all','TRI_in_l','TRI_in_r'],
@@ -3529,6 +3919,7 @@ let graphierosDictionnary = [
     {
         name: '_ntea',
         fr: 'avant',
+        en:'',
         path: [[m, q, l, q, lm, a, lm, w, l, q], [rm, a, rm, a], [rm, w, rm, w], [r, q, r, q]],
         fractal:'sq-qz-zw-wq',
         shapes:['TRI_out_l'],
@@ -3538,6 +3929,7 @@ let graphierosDictionnary = [
     {
         name: '_rpa',
         fr: 'attraper',
+        en:'',
         path: [[l, q, r, q, rm, a, m, q], [lm, a, lm, w], [rm, w, rm, w]],
         fractal:'qd-de-es-zw',
         shapes:['tri_tr'],
@@ -3547,6 +3939,7 @@ let graphierosDictionnary = [
     {
         name: '_spea',
         fr: 'attendre',
+        en:'',
         path: [[l, q, lm, a, lm, w], [m, q, rm, a, rm, w], [r, q, r, q]],
         fractal:'qz-zw-se-ex',
         shapes:['PIPE'],
@@ -3556,6 +3949,7 @@ let graphierosDictionnary = [
     {
         name: '_tmei',
         fr: 'atome',
+        en:'',
         path: [[lm, w, rm, a, rm, w], [l, q, r, q], [lm, a, lm, a]],
         fractal:'we-ex-qd',
         shapes:['X'],
@@ -3565,6 +3959,7 @@ let graphierosDictionnary = [
     {
         name: '_ktea',
         fr: 'arrêter',
+        en:'',
         path: [[l, q, r, q], [lm, a, lm, w], [rm, a, r, q, rm, w]],
         fractal:'ed-dx-qd-zw',
         shapes:['ARR_r'],
@@ -3574,6 +3969,7 @@ let graphierosDictionnary = [
     {
         name: '_rkye',
         fr: 'arachnide',
+        en:'',
         path: [[l, q, lm, a, rm, a, r, q, rm, w], [m, q, rm, a], [lm, a, lm, w]],
         fractal:'qz-ze-ed-dx-es-zw',
         shapes:['DASH'],
@@ -3583,6 +3979,7 @@ let graphierosDictionnary = [
     {
         name: '_ftea',
         fr: 'après',
+        en:'',
         path: [[r, q, rm, a, rm, w, r, q, m, q], [lm, a, lm, a], [l, q, l, q], [lm, w, lm, w]],
         fractal:'sd-de-ex-xd',
         shapes:['TRI_out_r'],
@@ -3592,6 +3989,7 @@ let graphierosDictionnary = [
     {
         name: '_znie',
         fr: 'appuyer',
+        en:'',
         path: [[lm, a, lm, w, rm, w, m, q, l, q, rm, a, r, q]],
         fractal:'de-eq-qs-sx-xw-wz',
         shapes:['TREC_htr','TREC_sbl'],
@@ -3601,6 +3999,7 @@ let graphierosDictionnary = [
     {
         name: '_zai',
         fr: 'apparaître',
+        en:'',
         path: [[lm, w, m, q, rm, w, lm, w, l, q, lm, a, rm, a, r, q, rm, w]],
         fractal:'ws-sx-xw-wq-qz-ze-ed-dx',
         shapes:['HEX','tri_b'],
@@ -3610,6 +4009,7 @@ let graphierosDictionnary = [
     {
         name: '_piz',
         fr: 'apaiser',
+        en:'',
         path: [[l, q, lm, a, lm, w, m, q, r, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'qz-zw-ws-sd',
         shapes:['DASH'],
@@ -3619,6 +4019,7 @@ let graphierosDictionnary = [
     {
         name: '_kpaw',
         fr: 'antenne',
+        en:'',
         path: [[lm, a, l, q, rm, w, m, q, lm, w, r, q, rm, a]],
         fractal:'zq-qx-xs-sw-wd-de',
         shapes:['CROSS_b'],
@@ -3628,6 +4029,7 @@ let graphierosDictionnary = [
     {
         name: '_pkia',
         fr: 'animal',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, m, q, rm, a, l, q], [r, q, r, q]],
         fractal:'qe-ez-zq-qw-wx-xs-se',
         shapes:['ARR_db_l','TRI_out_tl'],
@@ -3637,6 +4039,7 @@ let graphierosDictionnary = [
     {
         name: '_glei',
         fr: 'angle',
+        en:'',
         path: [[lm, a, rm, a, rm, w], [l, q, l, q], [lm, w, lm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-ex',
         shapes:['DASH','TREC_str'],
@@ -3646,6 +4049,7 @@ let graphierosDictionnary = [
     {
         name: '_mrya',
         fr: 'amplifier',
+        en:'',
         path: [[l, q, rm, w, rm, a, r, q, lm, w, l, q, rm, a], [lm, a, m, q]],
         fractal:'qw-wd-de-eq-qx-xe-zs',
         shapes:['PIC_br','RECT_r'],
@@ -3655,6 +4059,7 @@ let graphierosDictionnary = [
     {
         name: '_mre',
         fr: 'amer',
+        en:'',
         path: [[l, q, lm, a, m, q, rm, a, r, q, l, q], [lm, w, rm, w]],
         fractal:'qd-de-es-sz-zq-wx',
         shapes:['M','tri_tl','tri_tr'],
@@ -3664,6 +4069,7 @@ let graphierosDictionnary = [
     {
         name: '_prba',
         fr: 'âme',
+        en:'',
         path: [[lm, a, r, q, lm, w, lm, a, m, q, r, q], [lm, w, m, q], [l, q, l, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'wz-zd-dw-ws-sd-zs',
         shapes:['TRI_0','X_plur'],
@@ -3673,6 +4079,7 @@ let graphierosDictionnary = [
     {
         name: '_tae',
         fr: 'alterner',
+        en:'',
         path: [[lm, a, rm, a, l, q], [m, q, m, q], [rm, w, lm, w, r, q]],
         fractal:'ze-eq-xw-wd',
         shapes:['DASH'],
@@ -3682,6 +4089,7 @@ let graphierosDictionnary = [
     {
         name: '_slio',
         fr: 'alors',
+        en:'',
         path: [[lm, a, m, q, r, q], [rm, a, r, q, rm, w], [l, q, l, q], [lm, w, lm, w]],
         fractal:'zs-sd-ed-dx',
         shapes:['ARR_r'],
@@ -3691,6 +4099,7 @@ let graphierosDictionnary = [
     {
         name: '_le',
         fr: 'aller',
+        en:'',
         path: [[r, q, rm, a, rm, w, r, q, m, q, lm, a, lm, w, m, q, l, q]],
         fractal:'qd-de-ex-xd-sz-zw-ws',
         shapes:['ARR_r','TRI_out_r','TRI_in_l'],
@@ -3700,6 +4109,7 @@ let graphierosDictionnary = [
     {
         name: '_hio',
         fr: 'alléger',
+        en:'',
         path: [[lm, a, rm, a], [l, q, l, q], [r, q, r, q], [lm, w, m, q, rm, w]],
         fractal:'ws-sx-ze',
         shapes:['DASH'],
@@ -3709,6 +4119,7 @@ let graphierosDictionnary = [
     {
         name: '_lea',
         fr: 'aléa',
+        en:'',
         path: [[l, q, r, q, lm, w], [lm, a, lm, a], [rm, a, rm, w]],
         fractal:'ex-qd-dw',
         shapes:['TREC_hbl'],
@@ -3718,6 +4129,7 @@ let graphierosDictionnary = [
     {
         name: '_fsu',
         fr: 'ajuster',
+        en:'',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, lm, w, l, q, r, q]],
         fractal:'qz-zx-xd-de-ew-wq-qd',
         shapes:['X','X_all','MA'],
@@ -3727,6 +4139,7 @@ let graphierosDictionnary = [
     {
         name: '_hae',
         fr: 'air',
+        en:'',
         path: [[lm, a, rm, a, r, q], [l, q, m, q, rm, w], [lm, w, rm, a]],
         fractal:'ze-ed-qs-sx-we',
         shapes:['ARR_dbl_r','ARR_r'],
@@ -3736,6 +4149,7 @@ let graphierosDictionnary = [
     {
         name: '_kli',
         fr: 'qualité',
+        en:'',
         path: [[rm, w, l, q, lm, a, lm, w, r, q, m, q], [rm, a, rm, a]],
         fractal:'xq-qz-zw-wd-ds',
         shapes:['PIC_bl'],
@@ -3745,6 +4159,7 @@ let graphierosDictionnary = [
     {
         name: '_nmae',
         fr: 'nombre',
+        en:'',
         path: [[lm, w, lm, a, rm, w, rm, a], [l, q, l, q], [r, q, r, q]],
         fractal:'wz-zx-xe',
         shapes:['N'],
@@ -3754,6 +4169,7 @@ let graphierosDictionnary = [
     {
         name: '_zno',
         fr: '11',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q, r, q], [m, q, lm, w, lm, a, r, q]],
         fractal:'qz-ze-ed-dx-xw-wq-wz-zd-zs-sd-ws',
         shapes:['HEX','PIC_tl'],
@@ -3763,6 +4179,7 @@ let graphierosDictionnary = [
     {
         name: '_dza',
         fr: '10',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q, r, q], [m, q, lm, w, lm, a]],
         fractal:'qz-ze-ed-dx-xw-wq-wz-zs-sd-ws',
         shapes:['HEX','X_plur'],
@@ -3772,6 +4189,7 @@ let graphierosDictionnary = [
     {
         name: '_nwa',
         fr: '9',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a, m, q, r, q], [lm, w, m, q]],
         fractal:'ze-ed-dx-xw-wq-qz-zs-sd-ws',
         shapes:['HEX','X_plur'],
@@ -3781,6 +4199,7 @@ let graphierosDictionnary = [
     {
         name: '_sme',
         fr: 'identique',
+        en:'',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, lm, w, l, q]],
         fractal:'qz-zx-xd-de-ew-wq',
         shapes:['X','LOS_l','LOS_r'],
@@ -3790,6 +4209,7 @@ let graphierosDictionnary = [
     {
         name: '_tsio',
         fr: '8',
+        en:'',
         path: [[l, q, lm, a, rm, w, r, q, rm, a, lm, w, l, q]],
         fractal:'qz-zx-xd-de-ew-wq',
         shapes:['X','LOS_l','LOS_r'],
@@ -3799,6 +4219,7 @@ let graphierosDictionnary = [
     {
         name: '_stei',
         fr: '7',
+        en:'',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q, r, q]],
         fractal:'dq-qz-ze-ed-dx-xw-wq',
         shapes:['HEX','MEX_t','MEX_b'],
@@ -3808,6 +4229,7 @@ let graphierosDictionnary = [
     {
         name: '_ksi',
         fr: '6',
+        en:'',
         path: [[l, q, lm, a, rm, a, r, q, rm, w, lm, w, l, q], [m, q, m, q]],
         fractal:'qz-ze-ed-dx-xw-wq',
         shapes:['HEX'],
@@ -3817,6 +4239,7 @@ let graphierosDictionnary = [
     {
         name: '_foi',
         fr: '5',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, r, q]],
         fractal:'ze-ex-xw-wz-qd',
         shapes:['RECT'],
@@ -3826,6 +4249,7 @@ let graphierosDictionnary = [
     {
         name: '_ktu',
         fr: '4',
+        en:'',
         path: [[lm, a, rm, a, rm, w, lm, w, lm, a], [l, q, l, q], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-ex-xw-wz',
         shapes:['RECT'],
@@ -3835,6 +4259,7 @@ let graphierosDictionnary = [
     {
         name: '_srei',
         fr: '3',
+        en:'',
         path: [[lm, w, lm, a, r, q, lm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'wz-zd-dw',
         shapes:['TRI_0'],
@@ -3844,6 +4269,7 @@ let graphierosDictionnary = [
     {
         name: '_du',
         fr: '2',
+        en:'',
         path: [[lm, w, lm, a, r, q], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [rm, w, rm, w]],
         fractal:'wz-zd',
         shapes:['PIC_tl'],
@@ -3853,6 +4279,7 @@ let graphierosDictionnary = [
     {
         name: '_kfa',
         fr: '1',
+        en:'',
         path: [[lm, a, lm, w], [l, q, l, q], [m, q, m, q], [rm, a, rm, a], [r, q, r, q], [rm, w, rm, w]],
         fractal:'wz',
         shapes:['PIPE'],
@@ -3862,6 +4289,7 @@ let graphierosDictionnary = [
     {
         name: '_sro',
         fr: '0',
+        en:'',
         path: [[lm, a, rm, w], [lm, w, rm, a], [l, q, r, q]],
         fractal:'zx-we-qd',
         shapes:['X_all'],
@@ -3871,6 +4299,7 @@ let graphierosDictionnary = [
     {
         name: '_,',
         fr: ',',
+        en:'',
         path: [[rm, a, m, q, rm, w], [lm, a, lm, a], [l, q, l, q], [lm, w, lm, w], [r, q, r, q]],
         fractal:'es-sx',
         shapes:['ARR_db,l','DASH'],
@@ -3880,6 +4309,7 @@ let graphierosDictionnary = [
     {
         name: '_!',
         fr: '!',
+        en:'',
         path: [[lm, a, m, q], [l, q, lm, w], [rm, a, r, q], [rm, w, rm, w]],
         fractal:'qw-zs-ed',
         shapes:['EQ','DASH'],
@@ -3889,6 +4319,7 @@ let graphierosDictionnary = [
     {
         name: '_?',
         fr: '?',
+        en:'',
         path: [[lm, a, rm, a, l, q, rm, w], [lm, w, lm, w], [m, q, m, q], [r, q, r, q]],
         fractal:'ze-eq-qx',
         shapes:['POINT_l'],
@@ -3898,6 +4329,7 @@ let graphierosDictionnary = [
     {
         name: '_.',
         fr: '.',
+        en:'',
         path: [[m, q, m, q], [m, q, m, q]],
         fractal:'ss',
         shapes:[''],
@@ -3907,6 +4339,7 @@ let graphierosDictionnary = [
     {
         name: '_mea',
         fr: 'déterminer',
+        en:'',
         path: [[lm, a, rm, w], [l, q, rm, a], [lm, w, r, q]],
         fractal:'zx-qe-wd',
         shapes:['X','DASH'],
@@ -3916,6 +4349,7 @@ let graphierosDictionnary = [
     {
         name: '_ma',
         fr: 'être',
+        en:'',
         path: [[lm, a, l, q, lm, w], [m, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zq-qw-ed-dx',
         shapes:['MA'],
@@ -3925,6 +4359,7 @@ let graphierosDictionnary = [
     {
         name: '_kde',
         fr: 'adolescent',
+        en:'',
         path: [[rm, a, lm, w], [m, q, rm, w], [l, q, r, q], [lm, a, lm, a]],
         fractal:'qd-we-xs',
         shapes:['KA','X'],
@@ -3934,6 +4369,7 @@ let graphierosDictionnary = [
     {
         name: '_dly',
         fr: 'adulte',
+        en:'',
         path: [[r, q, lm, a, rm, a, lm, w, lm, a], [m, q, rm, w], [l, q, l, q]],
         fractal:'we-ez-zw-xs-dz',
         shapes:['KA','TREC_stl'],
@@ -3943,6 +4379,7 @@ let graphierosDictionnary = [
     {
         name: '_pfae',
         fr: 'agir',
+        en:'',
         path: [[l, q, lm, w, lm, a, r, q, lm, w], [rm, a, lm, a], [rm, w, r, q], [m, q, m, q]],
         fractal:'qw-wz-zd-dw-ez-xd',
         shapes:['TRI_0'],
@@ -3952,6 +4389,7 @@ let graphierosDictionnary = [
     {
         name: '_dna',
         fr: 'adn',
+        en:'',
         path: [[rm, a, lm, a, l, q, lm, w, rm, w, r, q, l, q], [lm, w, rm, a, rm, w]],
         fractal:'we-ex-qd-dx-xw-wq-qz-ze',
         shapes:['LOS_tl','TREC_sbr','MEX_b'],
@@ -3961,6 +4399,7 @@ let graphierosDictionnary = [
     {
         name: '_sde',
         fr: 'acide',
+        en:'',
         path: [[lm, a, m, q, l, q, lm, w, rm, w, r, q, m, q, rm, a], [l, q, rm, w], [r, q, lm, w]],
         fractal:'zs-se-qd-dx-xw-wq-qx-wd',
         shapes:['MEX_b','CROSS_b'],
@@ -3970,6 +4409,7 @@ let graphierosDictionnary = [
     {
         name: '_bai',
         fr: 'acheter',
+        en:'',
         path: [[lm, a, m, q, rm, a, lm, a, l, q, r, q, rm, a], [lm, w, rm, w]],
         fractal:'qd-de-ez-zq-zs-se-wx',
         shapes:['MEX_t'],
@@ -3979,6 +4419,7 @@ let graphierosDictionnary = [
     {
         name: '_kmia',
         fr: 'accumuler',
+        en:'',
         path: [[lm, a, r, q, m, q, lm, a], [l, q, rm, w], [lm, w, lm, w], [rm, a, rm, a]],
         fractal:'zs-sd-dz-qx',
         shapes:['TRI_in_tr'],
@@ -3988,6 +4429,7 @@ let graphierosDictionnary = [
     {
         name: '_grey',
         fr: 'accrocher',
+        en:'',
         path: [[lm, a, rm, a, r, q, l, q], [rm, a, rm, w], [lm, w, lm, w]],
         fractal:'ze-ed-dq-ex',
         shapes:['MEX_t'],
@@ -3997,6 +4439,7 @@ let graphierosDictionnary = [
     {
         name: '_ksu',
         fr: 'accélérer',
+        en:'',
         path: [[l, q, r, q], [lm, a, m, q, lm, w], [rm, a, r, q, rm, w]],
         fractal:'zs-sw-ed-dx-qd',
         shapes:['ARR_dbl_r','ARR_r'],
@@ -4006,6 +4449,7 @@ let graphierosDictionnary = [
     {
         name: '_boi',
         fr: 'à',
+        en:'',
         path: [[lm, a, lm, w, l, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zw-wq-qs-ed-dx',
         shapes:['MA'],
@@ -4015,6 +4459,7 @@ let graphierosDictionnary = [
     {
         name: '_fya',
         fr: 'donner',
+        en:'',
         path: [[lm, a, rm, a, m, q, lm, a], [l, q, lm, w, rm, w, r, q]],
         fractal:'zs-se-ez-qw-wx-xd',
         shapes:['COL_b','tri_t'],
@@ -4024,6 +4469,7 @@ let graphierosDictionnary = [
     {
         name: '_fy',
         fr: 'refléter',
+        en:'',
         path: [[lm, a, rm, a, lm, w, rm, w, lm, a], [l, q, r, q]],
         fractal:'ze-ew-wx-xz-qd',
         shapes:['X','X_all','tri_t','tri_b'],
@@ -4033,6 +4479,7 @@ let graphierosDictionnary = [
     {
         name: '_go',
         fr: 'avoir',
+        en:'',
         path: [[lm, w, m, q, rm, w, lm, w], [l, q, lm, a, rm, a, r, q]],
         fractal:'ws-sx-xw-qz-ze-ed',
         shapes:['tri_b','COL_t'],
@@ -4042,6 +4489,7 @@ let graphierosDictionnary = [
     {
         name: '_ka',
         fr: 'humain',
+        en:'',
         path: [[lm, a, rm, w],[lm, w, m, q],[l, q, rm, a], [r, q, r, q]],
         fractal:'zx-ws-qe',
         shapes:['KA'],
@@ -4051,6 +4499,7 @@ let graphierosDictionnary = [
     {
         name: '_kme',
         fr: 'pour',
+        en:'',
         path: [[lm, a, lm, w], [l, q, m, q], [rm, a, r, q, rm, w]],
         fractal:'zw-qs-ed-dx',
         shapes:['MA'],
@@ -4060,6 +4509,7 @@ let graphierosDictionnary = [
     {
         name: '_sa',
         fr: 'vivre',
+        en:'',
         path: [[lm, a, rm, a, r, q, rm, w, lm, w, l, q, lm, a], [lm, a, rm, w], [rm, a, lm, w], [l, q, r, q]],
         fractal:'qz-ze-ed-dx-xw-wq-qd-zx-we',
         shapes:['HEX','X_all','X'],
@@ -4069,6 +4519,7 @@ let graphierosDictionnary = [
     {
         name: '_smia',
         fr: 'isme',
+        en:'',
         path: [[rm, w, l, q, r, q, lm, w, m, q, rm, w, lm, w], [lm, a, lm, a], [rm, a, rm, a]],
         fractal:'qd-dw-wx-xs-sw-wd-qx',
         shapes:['CROSS_b','tri_b'],
