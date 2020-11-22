@@ -2,10 +2,19 @@
   <div>
     <div class="search-body">
       <input
+        v-if="selectedLang === 'toggle-right'"
         ref="searchField"
         type="text"
         @focus="$event.target.select()"
-        placeholder="...search a word"
+        placeholder="...search a word. If it's a verb, use 'to...'"
+        @input="inputFunc($event.target.value)"
+      />
+      <input
+        v-else
+        ref="searchField"
+        type="text"
+        @focus="$event.target.select()"
+        placeholder="...recherchez un mot"
         @input="inputFunc($event.target.value)"
       />
       <Fractal
@@ -21,6 +30,7 @@
 <script>
 import { defineComponent } from "vue";
 import Fractal from "@/components/Fractal.vue";
+import store from "@/store/index.ts";
 
 export default defineComponent({
   name: "Search",
@@ -29,6 +39,11 @@ export default defineComponent({
   },
   props: {
     inputFunc: Function
+  },
+  computed: {
+    selectedLang() {
+      return store.getters.toggleClass;
+    }
   }
 });
 </script>
