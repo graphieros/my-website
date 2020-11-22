@@ -3,7 +3,13 @@
     <div class="home-logo-wrapper">
       <Logo />
     </div>
-    <h1>Graphieros</h1>
+    <div v-if="selectedLang === 'toggle-right'">
+    <h1 class="en">Graphieros</h1>
+    </div>
+    <div v-else>
+    <h1 class="fr">Graphieros</h1>
+    </div>
+    
 
     <div class="toggle-lang">
       <toggle />
@@ -13,6 +19,7 @@
 
     <div class="searchResult-wrapper" v-show="searchResult !== ''">
       <span>{{ textResFrac }}</span>
+
       <Fractal :sequence="fractalRes" svgSize="100" colors="29, 55, 104" />
       <span><span>[ </span>{{ searchResult }}<span> ]</span></span>
       <div class="close-search" v-on:click="closeModal">
@@ -25,7 +32,11 @@
       </div>
     </div>
 
-    <div class="progressive-results" v-show="wordMatchesSize > 0">
+    <div
+      class="progressive-results"
+      v-show="wordMatchesSize > 0"
+      v-if="selectedLang === 'toggle-right'"
+    >
       <span v-if="wordMatchesSize > 1">{{ wordMatchesSize }} words found</span>
       <span v-else>{{ wordMatchesSize }} word found</span>
       <ul>
@@ -34,10 +45,30 @@
           v-bind:word="word"
           v-bind:index="index"
           v-bind:key="word.en"
-          v-bind:fr="word.en"
+          v-bind:en="word.en"
           v-on:click="showModal($event.target.innerHTML)"
         >
           {{ word.en }}
+        </li>
+      </ul>
+    </div>
+    <div
+      class="progressive-results"
+      v-show="wordMatchesSize > 0"
+      v-if="selectedLang === 'toggle-left'"
+    >
+      <span v-if="wordMatchesSize > 1">{{ wordMatchesSize }} mots trouvés</span>
+      <span v-else>{{ wordMatchesSize }} mot trouvé</span>
+      <ul>
+        <li
+          v-for="(word, index) in allMatches"
+          v-bind:word="word"
+          v-bind:index="index"
+          v-bind:key="word.fr"
+          v-bind:fr="word.fr"
+          v-on:click="showModal($event.target.innerHTML)"
+        >
+          {{ word.fr }}
         </li>
       </ul>
     </div>
@@ -97,16 +128,27 @@
     </div>
 
     <div class="counters">
-      <p>
+      <p v-if="selectedLang === 'toggle-right'">
         glyphs: <span>{{ glyphCount }}</span>
       </p>
-      <p>
+      <p v-else>
+        glyphes: <span>{{ glyphCount }}</span>
+      </p>
+      <p v-if="selectedLang === 'toggle-right'">
         words: <span>{{ wordCount }}</span>
+      </p>
+      <p v-else>
+        mots: <span>{{ wordCount }}</span>
       </p>
     </div>
 
     <div class="credit">
-      <p>designed by <span>Alec Lloyd Probert</span> 2020</p>
+      <p v-if="selectedLang === 'toggle-right'">
+        designed by <span>Alec Lloyd Probert</span> 2020
+      </p>
+      <p v-else>
+        créé par <span>Alec Lloyd Probert</span> 2020
+      </p>
     </div>
   </div>
 </template>
@@ -119,7 +161,7 @@ import Fractal from "@/components/Fractal.vue";
 import Search from "@/components/Search.vue";
 import Toggle from "@/components/Toggle.vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary";
-import graphierosTranslation from "@/library/graphierosTranslation.json"; // wtf ?
+import graphierosTranslation from "@/library/graphierosTranslation.json";
 import store from "@/store/index.ts";
 
 export default defineComponent({
@@ -150,58 +192,122 @@ export default defineComponent({
       time: 0
     };
   },
+  computed: {
+    selectedLang() {
+      return store.getters.toggleClass;
+    }
+  },
   methods: {
     inputFunction(input: string) {
+      const language = store.getters.toggleClass;
+      console.log(language);
       clearTimeout(this.time);
-      this.time = setTimeout(() => {
-        graphierosDictionnary.forEach(
-          (entry: { name: string; fractal: string; en: string }) => {
-            if (entry.en === input) {
-              this.searchResult = entry.name.replace("_", "");
-              this.fractalRes = entry.fractal;
-              this.textResFrac = entry.en;
+
+      if (language === "toggle-right") {
+        this.time = setTimeout(() => {
+          graphierosDictionnary.forEach(
+            (entry: { name: string; fractal: string; en: string }) => {
+              if (entry.en === input) {
+                this.searchResult = entry.name.replace("_", "");
+                this.fractalRes = entry.fractal;
+                this.textResFrac = entry.en;
+              }
+              if (entry.name.replace("_", "") === input) {
+                this.phonoRes = entry.fractal;
+                this.textPhonoRes = entry.en;
+                this.phono = entry.name.replace("_", "");
+              }
             }
-            if (entry.name.replace("_", "") === input) {
-              this.phonoRes = entry.fractal;
-              this.textPhonoRes = entry.en;
-              this.phono = entry.name.replace("_", "");
+          );
+
+          //return progressive matches during user input
+          const findMatches = (source: Record<string, any>) => {
+            return source.filter((entry: any) => {
+              const regex = new RegExp(`^${input}`, "gi");
+              return entry.en.match(regex);
+            });
+          };
+
+          const findMatchesInWords = findMatches(graphierosTranslation);
+          const findMatchesInGlyphs = findMatches(graphierosDictionnary);
+
+          this.allMatches = { ...findMatchesInWords, ...findMatchesInGlyphs };
+          this.wordMatchesSize = Object.keys(this.allMatches).length;
+
+          if (input === "") {
+            this.searchResult = "";
+            this.lineRes = "";
+            this.phonoRes = "ss";
+            this.phonoWordRes = "";
+            this.allMatches = {};
+            this.wordMatchesSize = 0;
+          }
+          graphierosTranslation.forEach(
+            (entry: { en: string; line: string }) => {
+              if (entry.en === input) {
+                this.lineRes = entry.line;
+                this.textResLine = entry.en;
+              }
+              if (entry.line === input) {
+                this.phonoWordRes = entry.line;
+                this.textPhonoWordRes = entry.en;
+              }
             }
+          );
+        }, 255);
+      } else if (language === "toggle-left") {
+        this.time = setTimeout(() => {
+          graphierosDictionnary.forEach(
+            (entry: { name: string; fractal: string; fr: string }) => {
+              if (entry.fr === input) {
+                this.searchResult = entry.name.replace("_", "");
+                this.fractalRes = entry.fractal;
+                this.textResFrac = entry.fr;
+              }
+              if (entry.name.replace("_", "") === input) {
+                this.phonoRes = entry.fractal;
+                this.textPhonoRes = entry.fr;
+                this.phono = entry.name.replace("_", "");
+              }
+            }
+          );
+
+          //return progressive matches during user input
+          const findMatches = (source: Record<string, any>) => {
+            return source.filter((entry: any) => {
+              const regex = new RegExp(`^${input}`, "gi");
+              return entry.fr.match(regex);
+            });
+          };
+
+          const findMatchesInWords = findMatches(graphierosTranslation);
+          const findMatchesInGlyphs = findMatches(graphierosDictionnary);
+
+          this.allMatches = { ...findMatchesInWords, ...findMatchesInGlyphs };
+          this.wordMatchesSize = Object.keys(this.allMatches).length;
+
+          if (input === "") {
+            this.searchResult = "";
+            this.lineRes = "";
+            this.phonoRes = "ss";
+            this.phonoWordRes = "";
+            this.allMatches = {};
+            this.wordMatchesSize = 0;
           }
-        );
-
-        //return progressive matches during user input
-        const findMatches = (source: Record<string, any>) => {
-          return source.filter((entry: any) => {
-            const regex = new RegExp(`^${input}`, "gi");
-            return entry.en.match(regex);
-          });
-        };
-
-        const findMatchesInWords = findMatches(graphierosTranslation);
-        const findMatchesInGlyphs = findMatches(graphierosDictionnary);
-
-        this.allMatches = { ...findMatchesInWords, ...findMatchesInGlyphs };
-        this.wordMatchesSize = Object.keys(this.allMatches).length;
-
-        if (input === "") {
-          this.searchResult = "";
-          this.lineRes = "";
-          this.phonoRes = "ss";
-          this.phonoWordRes = "";
-          this.allMatches = {};
-          this.wordMatchesSize = 0;
-        }
-        graphierosTranslation.forEach((entry: { en: string; line: string }) => {
-          if (entry.en === input) {
-            this.lineRes = entry.line;
-            this.textResLine = entry.en;
-          }
-          if (entry.line === input) {
-            this.phonoWordRes = entry.line;
-            this.textPhonoWordRes = entry.en;
-          }
-        });
-      }, 255);
+          graphierosTranslation.forEach(
+            (entry: { fr: string; line: string }) => {
+              if (entry.fr === input) {
+                this.lineRes = entry.line;
+                this.textResLine = entry.fr;
+              }
+              if (entry.line === input) {
+                this.phonoWordRes = entry.line;
+                this.textPhonoWordRes = entry.fr;
+              }
+            }
+          );
+        }, 255);
+      }
     },
     closeModal() {
       this.searchResult = "";
@@ -210,20 +316,35 @@ export default defineComponent({
       this.lineRes = "";
     },
     showModal(el: any) {
-      console.log(el);
-      graphierosTranslation.forEach((entry) => {
-        if (entry.en === el) {
-          this.lineRes = entry.line;
-          this.textResLine = entry.en;
-        }
-      });
-      graphierosDictionnary.forEach((entry) => {
-        if (entry.en === el) {
-          this.searchResult = entry.name.replace("_", "");
-          this.fractalRes = entry.fractal;
-          this.textResFrac = entry.en;
-        }
-      });
+      if (store.getters.toggleClass === "toggle-right") {
+        graphierosTranslation.forEach((entry) => {
+          if (entry.en === el) {
+            this.lineRes = entry.line;
+            this.textResLine = entry.en;
+          }
+        });
+        graphierosDictionnary.forEach((entry) => {
+          if (entry.en === el) {
+            this.searchResult = entry.name.replace("_", "");
+            this.fractalRes = entry.fractal;
+            this.textResFrac = entry.en;
+          }
+        });
+      } else {
+        graphierosTranslation.forEach((entry) => {
+          if (entry.fr === el) {
+            this.lineRes = entry.line;
+            this.textResLine = entry.fr;
+          }
+        });
+        graphierosDictionnary.forEach((entry) => {
+          if (entry.fr === el) {
+            this.searchResult = entry.name.replace("_", "");
+            this.fractalRes = entry.fractal;
+            this.textResFrac = entry.fr;
+          }
+        });
+      }
     }
   }
 });
@@ -232,18 +353,27 @@ export default defineComponent({
 .home-logo-wrapper {
   margin-top: 280px;
 }
-h1 {
+h1.en,
+h1.fr {
   margin-top: 250px;
   font-family: var(--logo);
   color: RGB(var(--c1));
 }
-h1::after {
+h1.en::after,
+h1.fr::after{
   display: block;
-  content: "hexagonal language";
-  font-size: 0.33em;
   margin-top: -8px;
-  margin-left: 63px;
+  font-size: 0.33em;
   color: RGB(var(--c2));
+}
+h1.en::after {
+  content: "hexagonal language";
+  margin-left: 63px;
+}
+h1.fr::after {
+  content: "langue hexagonale";
+  margin-left: 71px;
+
 }
 .first-line {
   height: 300px;
