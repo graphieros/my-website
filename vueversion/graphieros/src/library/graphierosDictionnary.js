@@ -3007,7 +3007,7 @@ let graphierosDictionnary = [
         description: "La fusion des glyphes utilisés pour 'de' et 'vers'."
     },
     {
-        name: '_to',
+        name: '_wto',
         fr: 'eau',
         en:'water',
         path: [[lm, a, rm, a], [l, q, lm, w, m, q, rm, w, r, q]],
