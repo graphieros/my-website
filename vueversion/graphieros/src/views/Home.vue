@@ -4,6 +4,11 @@
       <Logo />
     </div>
     <h1>Graphieros</h1>
+
+    <div class="toggle-lang">
+      <toggle />
+    </div>
+
     <search :inputFunc="inputFunction" />
 
     <div class="searchResult-wrapper" v-show="searchResult !== ''">
@@ -25,13 +30,14 @@
       <span v-else>{{ wordMatchesSize }} word found</span>
       <ul>
         <li
-          v-for="(word, index) in wordMatches"
+          v-for="(word, index) in allMatches"
           v-bind:word="word"
           v-bind:index="index"
-          v-bind:key="word.fr"
-          v-bind:fr="word.fr"
+          v-bind:key="word.en"
+          v-bind:fr="word.en"
+          v-on:click="showModal($event.target.innerHTML)"
         >
-          {{ word.fr }}
+          {{ word.en }}
         </li>
       </ul>
     </div>
@@ -89,6 +95,19 @@
         svgSize="100%"
       />
     </div>
+
+    <div class="counters">
+      <p>
+        glyphs: <span>{{ glyphCount }}</span>
+      </p>
+      <p>
+        words: <span>{{ wordCount }}</span>
+      </p>
+    </div>
+
+    <div class="credit">
+      <p>designed by <span>Alec Lloyd Probert</span> 2020</p>
+    </div>
   </div>
 </template>
 
@@ -98,8 +117,10 @@ import Logo from "@/components/Logo.vue";
 import Linear from "@/components/Linear.vue";
 import Fractal from "@/components/Fractal.vue";
 import Search from "@/components/Search.vue";
+import Toggle from "@/components/Toggle.vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary";
 import graphierosTranslation from "@/library/graphierosTranslation.json"; // wtf ?
+import store from "@/store/index.ts";
 
 export default defineComponent({
   name: "Home",
@@ -107,10 +128,13 @@ export default defineComponent({
     Fractal,
     Linear,
     Search,
+    Toggle,
     Logo
   },
   data() {
     return {
+      wordCount: graphierosTranslation.length,
+      glyphCount: graphierosDictionnary.length,
       searchResult: "",
       fractalRes: "ss",
       textResFrac: "",
@@ -121,7 +145,7 @@ export default defineComponent({
       phonoWordRes: "",
       lineRes: "",
       phono: "",
-      wordMatches: {},
+      allMatches: {},
       wordMatchesSize: 0,
       time: 0
     };
@@ -131,46 +155,50 @@ export default defineComponent({
       clearTimeout(this.time);
       this.time = setTimeout(() => {
         graphierosDictionnary.forEach(
-          (entry: { name: string; fractal: string; fr: string }) => {
-            if (entry.fr === input) {
+          (entry: { name: string; fractal: string; en: string }) => {
+            if (entry.en === input) {
               this.searchResult = entry.name.replace("_", "");
               this.fractalRes = entry.fractal;
-              this.textResFrac = entry.fr;
+              this.textResFrac = entry.en;
             }
             if (entry.name.replace("_", "") === input) {
               this.phonoRes = entry.fractal;
-              this.textPhonoRes = entry.fr;
+              this.textPhonoRes = entry.en;
               this.phono = entry.name.replace("_", "");
             }
           }
         );
 
         //return progressive matches during user input
-        const findMatches = graphierosTranslation.filter((entry) => {
-          const regex = new RegExp(`^${input}`, "gi");
-          return entry.fr.match(regex);
-        });
+        const findMatches = (source: Record<string, any>) => {
+          return source.filter((entry: any) => {
+            const regex = new RegExp(`^${input}`, "gi");
+            return entry.en.match(regex);
+          });
+        };
 
-        this.wordMatches = findMatches;
+        const findMatchesInWords = findMatches(graphierosTranslation);
+        const findMatchesInGlyphs = findMatches(graphierosDictionnary);
 
-        this.wordMatchesSize = Object.keys(findMatches).length;
+        this.allMatches = { ...findMatchesInWords, ...findMatchesInGlyphs };
+        this.wordMatchesSize = Object.keys(this.allMatches).length;
 
         if (input === "") {
           this.searchResult = "";
           this.lineRes = "";
           this.phonoRes = "ss";
           this.phonoWordRes = "";
-          this.wordMatches = {};
+          this.allMatches = {};
           this.wordMatchesSize = 0;
         }
-        graphierosTranslation.forEach((entry: { fr: string; line: string }) => {
-          if (entry.fr === input) {
+        graphierosTranslation.forEach((entry: { en: string; line: string }) => {
+          if (entry.en === input) {
             this.lineRes = entry.line;
-            this.textResLine = entry.fr;
+            this.textResLine = entry.en;
           }
           if (entry.line === input) {
             this.phonoWordRes = entry.line;
-            this.textPhonoWordRes = entry.fr;
+            this.textPhonoWordRes = entry.en;
           }
         });
       }, 255);
@@ -180,6 +208,22 @@ export default defineComponent({
       this.phonoRes = "ss";
       this.phonoWordRes = "";
       this.lineRes = "";
+    },
+    showModal(el: any) {
+      console.log(el);
+      graphierosTranslation.forEach((entry) => {
+        if (entry.en === el) {
+          this.lineRes = entry.line;
+          this.textResLine = entry.en;
+        }
+      });
+      graphierosDictionnary.forEach((entry) => {
+        if (entry.en === el) {
+          this.searchResult = entry.name.replace("_", "");
+          this.fractalRes = entry.fractal;
+          this.textResFrac = entry.en;
+        }
+      });
     }
   }
 });
@@ -205,17 +249,19 @@ h1::after {
   height: 300px;
 }
 .searchResult-wrapper {
-  position: relative;
+  position: fixed;
   background: white;
   border: 1px solid RGB(var(--c2));
   border-radius: 30px 0 30px 30px;
   width: 170px;
   height: 195px;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   box-sizing: border-box;
   padding: 20px;
   margin-top: 24px;
+  z-index: 1;
   box-shadow: 0px 10px 20px -10px RGBA(var(--c1), 0.5),
     -10px -10px 20px -10px white, -10px -10px 20px -10px white inset;
   span {
@@ -249,10 +295,10 @@ h1::after {
 }
 
 .lineRes-wrapper {
-  margin-top: 50px;
-  position: relative;
+  top: 50%;
+  position: fixed;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: 170px;
   background: white;
   border: 1px solid RGB(var(--c2));
@@ -321,6 +367,7 @@ h1::after {
     background: white;
     font-family: var(--logo);
     color: RGB(var(--c2));
+    z-index: 1;
   }
   ul {
     display: block;
@@ -351,6 +398,54 @@ h1::after {
   width: 0px;
 }
 
+.counters {
+  font-family: var(--logo);
+  color: RGB(var(--c1));
+  font-size: 0.8em;
+  line-height: 0.5em;
+  width: 80%;
+  max-width: 370px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  p {
+    text-align: right;
+    span {
+      color: RGB(var(--c0));
+      font-size: 1.3em;
+    }
+  }
+}
+
+.credit {
+  position: fixed;
+  bottom: 0;
+  width: 80%;
+  max-width: 229px;
+  border-top: 1px solid RGB(var(--c2));
+  border-radius: 30px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--logo);
+  font-size: 0.618em;
+  color: RGB(var(--c1));
+  z-index: -1;
+  p {
+    text-align: center;
+    span {
+      color: RGB(var(--c0));
+    }
+  }
+}
+
+.toggle-lang {
+  position: relative;
+  width: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 25px;
+  margin-bottom: 12px;
+}
+
 @keyframes fwm {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
@@ -360,12 +455,12 @@ h1::after {
 @keyframes srw {
   0% {
     opacity: 0;
-    transform: translateX(-50%) scale(0, 0);
+    transform: translate(-50%, -50%) scale(0, 0);
     margin-top: -100px;
   }
   100% {
     opacity: 1;
-    transform: translateX(-50%) scale(1, 1);
+    transform: translate(-50%, -50%) scale(1, 1);
   }
 }
 </style>
