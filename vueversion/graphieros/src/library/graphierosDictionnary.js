@@ -18,7 +18,7 @@ let graphierosDictionnary = [
     {
         name:'_pri',
         fr:'importer',
-        en:'to import',
+        en:'to matter',
         path:[[l,q,rm,a,rm,w],[lm,w,rm,a],[lm,a,lm,a],[r,q,r,q]],
         fractal:'qe-ex-we',
         shapes:['PIC_tr'],
