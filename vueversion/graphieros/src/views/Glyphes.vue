@@ -1,5 +1,14 @@
 <template>
   <div v-if="selectedLang === 'toggle-right'" class="glyphes">
+    <div class="logo-position">
+      <MiniLogo
+        glyphSize="50"
+        height="60"
+        fontSize="25"
+        textColor="75,106,160"
+        glyphColor="75,106,160"
+      />
+    </div>
     <h1>graphieros <span>glyphs</span></h1>
     <p class="glyph-presentation">
       The graphieros consists of <span>{{ glyphCount }}</span> glyphs, among
@@ -30,6 +39,15 @@
     </div>
   </div>
   <div v-else class="glyphes">
+    <div class="logo-position">
+      <MiniLogo
+        glyphSize="50"
+        height="60"
+        fontSize="25"
+        textColor="75,106,160"
+        glyphColor="75,106,160"
+      />
+    </div>
     <h1>Les <span>glyphes</span> du graphieros</h1>
     <p class="glyph-presentation">
       Le graphieros est constitué de <span>{{ glyphCount }}</span> glyphes,
@@ -67,11 +85,13 @@
 import { defineComponent } from "vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
 import Linear from "@/components/Linear.vue";
+import MiniLogo from "@/components/MiniLogo.vue";
 import store from "@/store/index.ts";
 export default defineComponent({
   name: "Home",
   components: {
-    Linear
+    Linear,
+    MiniLogo
   },
   data() {
     return {
@@ -100,6 +120,13 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
+.logo-position{
+  position: fixed;
+  top:0;left:0;
+  z-index:1;
+  width:100%;
+  background: linear-gradient(to right, white, transparent, transparent);
+}
 h1 {
   font-family: var(--logo);
   color: RGB(var(--c2));
@@ -109,6 +136,7 @@ h1 {
 }
 .glyphes {
   position: absolute;
+  padding-top: 64px;
   width: 100%;
   display: grid;
   align-items: center;
