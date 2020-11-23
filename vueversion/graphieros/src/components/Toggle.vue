@@ -118,11 +118,11 @@ span.en-inactive {
 
 span.fr-active,
 span.en-active {
-  color: RGB(var(--c0));
+  color: RGB(var(--c3));
 }
 
 span.fr-inactive,
 span.en-inactive {
-  color: RGB(var(--c2));
+  color: RGB(var(--c0));
 }
 </style>
