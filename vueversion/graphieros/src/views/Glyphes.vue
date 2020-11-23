@@ -1,6 +1,44 @@
 <template>
-  <div class="glyphes">
-    <h1>Liste des glyphes du graphieros</h1>
+  <div v-if="selectedLang === 'toggle-right'" class="glyphes">
+    <h1>graphieros <span>glyphs</span></h1>
+    <p class="glyph-presentation">
+      The graphieros consists of <span>{{ glyphCount }}</span> glyphs, among
+      which <span>{{ getGlyphType.ideograms }}</span> ideograms, and
+      <span>{{ getGlyphType.pictograms }}</span> pictograms.<br /><br />
+      These glyphs represent the material from which all words can be composed,
+      by accumulation, to represent more complex objects or concepts.
+    </p>
+    <div className="glyph-list">
+      <div
+        className="glyph"
+        v-for="(item, index) in items"
+        v-bind:item="item"
+        v-bind:index="index"
+        v-bind:key="item.name"
+        v-bind:en="item.en"
+      >
+        <Linear
+          className="glyph-line"
+          v-bind:sequence="item.name.replace('_', '')"
+          colors="29, 55, 104"
+          size="50"
+          strokeWidth="12"
+        />
+        <span className="span-fr">{{ item.en }}</span>
+        <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
+      </div>
+    </div>
+  </div>
+  <div v-else class="glyphes">
+    <h1>Les <span>glyphes</span> du graphieros</h1>
+    <p class="glyph-presentation">
+      Le graphieros est constitué de <span>{{ glyphCount }}</span> glyphes,
+      parmi lesquels <span>{{ getGlyphType.ideograms }}</span> idéogrammes, et
+      <span>{{ getGlyphType.pictograms }}</span> pictogrammes.<br /><br />Ces
+      glyphes représentent la matière à partir de laquelle tous les mots peuvent
+      être composés, par accumulation, pour représenter des objets ou des
+      concepts plus complexes.
+    </p>
     <div className="glyph-list">
       <div
         className="glyph"
@@ -15,7 +53,7 @@
           v-bind:sequence="item.name.replace('_', '')"
           colors="29, 55, 104"
           size="50"
-          strokeWidth="15"
+          strokeWidth="12"
         />
         <span className="span-fr">{{ item.fr }}</span>
         <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
@@ -24,10 +62,12 @@
   </div>
 </template>
 
-<script lang="js"> //add a v-lazy loading plugin
+<script lang="js">
+//add a v-lazy loading plugin
 import { defineComponent } from "vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
 import Linear from "@/components/Linear.vue";
+import store from "@/store/index.ts";
 export default defineComponent({
   name: "Home",
   components: {
@@ -35,8 +75,26 @@ export default defineComponent({
   },
   data() {
     return {
-      items: graphierosDictionnary
+      items: graphierosDictionnary,
+      glyphCount: graphierosDictionnary.length
     };
+  },
+  computed: {
+    selectedLang() {
+      return store.getters.toggleClass;
+    },
+    getGlyphType(){
+      let ideograms = 0;
+      let pictograms = 0;
+      graphierosDictionnary.forEach(entry => {
+        if(entry.type === "ideo"){
+          ideograms += 1;
+        }else{
+          pictograms += 1;
+        }
+      });
+      return {ideograms,pictograms};
+    }
   }
 });
 </script>
@@ -44,7 +102,10 @@ export default defineComponent({
 <style scoped lang="scss">
 h1 {
   font-family: var(--logo);
-  color: RGB(var(--c1));
+  color: RGB(var(--c2));
+  span {
+    color: RGB(var(--c1));
+  }
 }
 .glyphes {
   position: absolute;
@@ -52,14 +113,13 @@ h1 {
   display: grid;
   align-items: center;
   justify-items: center;
-  background: lightgrey;
   top: 0;
   left: 0;
 }
 .glyph {
   width: 100px;
   height: 100px;
-  background: lightgrey;
+  background: radial-gradient(white, lightgrey);
   border-radius: 3px;
   box-shadow: 5px 5px 10px -5px grey, -5px -5px 10px -5px white,
     -5px -5px 10px -5px white inset, 5px 5px 10px -5px grey inset;
@@ -102,6 +162,20 @@ span.span-name {
   font-family: var(--logo);
   font-size: 0.8em;
   color: RGB(var(--c1));
+}
+
+p.glyph-presentation {
+  width: 50ch;
+  max-width: 400px;
+  text-align: left;
+  box-sizing: border-box;
+  padding-top: 24px;
+  padding-bottom: 64px;
+  font-family: var(--logo);
+  color: RGB(var(--c1));
+  span {
+    color: RGB(var(--c0));
+  }
 }
 @media (max-width: 700px) {
   .glyph-list {
