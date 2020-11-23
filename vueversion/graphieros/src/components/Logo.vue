@@ -4,7 +4,7 @@
       class="fractal-logo"
       sequence="wz-zd-dw-qs-se-xs"
       colors="122,161,216"
-      svgSize="200"
+      :svgSize="big"
       intensity="1.2"
       light=""
       size="60"
@@ -13,14 +13,14 @@
       class="fractal-logo2"
       sequence="wz-zd-dw-qs-se-xs"
       colors="75,106,160"
-      svgSize="100"
+      :svgSize="medium"
       size="60"
     />
     <Fractal
       class="fractal-logo3"
       sequence="wz-zd-dw-qs-se-xs"
       colors="29,55,104"
-      svgSize="50"
+      :svgSize="small"
       size="60"
     />
   </div>
@@ -31,8 +31,22 @@ import { defineComponent } from "vue";
 import Fractal from "./Fractal";
 export default defineComponent({
   name: "Logo",
+  props: {
+    maxSize: String
+  },
   components: {
     Fractal
+  },
+  computed: {
+    big() {
+      return `${Number(this.maxSize)}`;
+    },
+    medium() {
+      return `${Number(this.maxSize) / 2}`;
+    },
+    small() {
+      return `${Number(this.maxSize) / 4}`;
+    }
   }
 });
 </script>
