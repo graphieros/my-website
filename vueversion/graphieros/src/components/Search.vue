@@ -94,4 +94,12 @@ export default defineComponent({
 input:hover + .fractal-icon {
   transform: rotate(360deg);
 }
+
+@media (max-width: 700px) {
+  .search-body {
+    input::placeholder {
+      font-size: 0.65em;
+    }
+  }
+}
 </style>
