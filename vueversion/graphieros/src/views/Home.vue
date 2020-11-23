@@ -1,15 +1,14 @@
 <template>
   <div class="home">
     <div class="home-logo-wrapper">
-      <Logo />
+      <Logo maxSize="200"/>
     </div>
     <div v-if="selectedLang === 'toggle-right'">
-    <h1 class="en">Graphieros</h1>
+      <h1 class="en">Graphieros</h1>
     </div>
     <div v-else>
-    <h1 class="fr">Graphieros</h1>
+      <h1 class="fr">Graphieros</h1>
     </div>
-    
 
     <div class="toggle-lang">
       <toggle />
@@ -142,13 +141,15 @@
       </p>
     </div>
 
+    <div class="menu-wrapper">
+      <Menu />
+    </div>
+
     <div class="credit">
       <p v-if="selectedLang === 'toggle-right'">
         designed by <span>Alec Lloyd Probert</span> 2020
       </p>
-      <p v-else>
-        créé par <span>Alec Lloyd Probert</span> 2020
-      </p>
+      <p v-else>créé par <span>Alec Lloyd Probert</span> 2020</p>
     </div>
   </div>
 </template>
@@ -160,6 +161,7 @@ import Linear from "@/components/Linear.vue";
 import Fractal from "@/components/Fractal.vue";
 import Search from "@/components/Search.vue";
 import Toggle from "@/components/Toggle.vue";
+import Menu from "@/components/Menu.vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary";
 import graphierosTranslation from "@/library/graphierosTranslation.json";
 import store from "@/store/index.ts";
@@ -171,7 +173,8 @@ export default defineComponent({
     Linear,
     Search,
     Toggle,
-    Logo
+    Logo,
+    Menu
   },
   data() {
     return {
@@ -200,7 +203,6 @@ export default defineComponent({
   methods: {
     inputFunction(input: string) {
       const language = store.getters.toggleClass;
-      console.log(language);
       clearTimeout(this.time);
 
       if (language === "toggle-right") {
@@ -351,16 +353,17 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .home-logo-wrapper {
+  transition: all 0.25s ease-in-out;
   margin-top: 280px;
 }
 h1.en,
 h1.fr {
   margin-top: 250px;
   font-family: var(--logo);
-  color: RGB(var(--c1));
+  color: RGB(var(--c3));
 }
 h1.en::after,
-h1.fr::after{
+h1.fr::after {
   display: block;
   margin-top: -8px;
   font-size: 0.33em;
@@ -373,7 +376,6 @@ h1.en::after {
 h1.fr::after {
   content: "langue hexagonale";
   margin-left: 71px;
-
 }
 .first-line {
   height: 300px;
@@ -474,7 +476,7 @@ h1.fr::after {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: -1;
-  opacity: 0.5;
+  opacity: 0.1;
   animation: fwm 96s infinite linear;
 }
 
@@ -530,7 +532,7 @@ h1.fr::after {
 
 .counters {
   font-family: var(--logo);
-  color: RGB(var(--c1));
+  color: RGB(var(--c3));
   font-size: 0.8em;
   line-height: 0.5em;
   width: 80%;
@@ -549,9 +551,15 @@ h1.fr::after {
 .credit {
   position: fixed;
   bottom: 0;
-  width: 80%;
-  max-width: 229px;
-  border-top: 1px solid RGB(var(--c2));
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    transparent,
+    white,
+    transparent,
+    transparent
+  );
   border-radius: 30px;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -576,6 +584,16 @@ h1.fr::after {
   margin-bottom: 12px;
 }
 
+.menu-wrapper {
+  z-index: -1;
+  width: 80%;
+  max-width: 229px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  bottom: 45px;
+}
+
 @keyframes fwm {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
@@ -591,6 +609,12 @@ h1.fr::after {
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1, 1);
+  }
+}
+
+@media (max-width: 500px) {
+  .home-logo-wrapper {
+    margin-top: 250px;
   }
 }
 </style>
