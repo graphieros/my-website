@@ -1,6 +1,6 @@
 <template>
   <div class="editor-body">
-  <TriToggle />
+    <TriToggle labelTop="lin" labelLeft="frac" labelRight="mol" />
     <div class="logo-position">
       <MiniLogo
         glyphSize="50"
@@ -10,7 +10,10 @@
         glyphColor="75,106,160"
       />
     </div>
-    <div class="editor-playground">
+    <div
+      v-if="selectedGraphierosMode === 'tritog-toggle-top'"
+      class="editor-playground"
+    >
       <textarea
         v-focus
         v-if="selectedLang === 'toggle-right'"
@@ -32,6 +35,8 @@
           colors="29,55,104"
         />
       </div>
+      <p v-if="selectedLang === 'toggle-right'">Linear mode</p>
+      <p v-else>Mode linéaire</p>
     </div>
   </div>
   <div class="translation-hub" :style="showTranslation">
@@ -68,6 +73,9 @@ export default defineComponent({
   computed: {
     selectedLang() {
       return store.getters.toggleClass;
+    },
+    selectedGraphierosMode() {
+      return store.getters.tritog;
     },
     showTranslation() {
       if (this.userInput === "") {
@@ -130,7 +138,7 @@ export default defineComponent({
   height: 600px;
   margin-left: 50%;
   margin-top: 100px;
-  top:24px;
+  top: 24px;
   transform: translateX(-50%);
   transition: all 0.25s ease-in-out;
   border-radius: 15px;
@@ -148,7 +156,7 @@ export default defineComponent({
     border: none;
     box-sizing: border-box;
     padding-left: 24px;
-    padding-right:24px;
+    padding-right: 24px;
     padding-top: 10px;
     overflow: scroll;
     font-family: var(--logo);
@@ -162,6 +170,13 @@ export default defineComponent({
       width: 0px;
     }
   }
+  p {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--logo);
+  }
 }
 .editor-output-active {
   position: relative;
@@ -170,7 +185,7 @@ export default defineComponent({
   margin-left: 50%;
   transform: translateX(-50%);
   background: white;
-  border-radius:10px 10px 30px 30px;
+  border-radius: 10px 10px 30px 30px;
   box-shadow: 0 10px 20px -10px RGB(var(--c1));
   div {
     height: 100%;
@@ -178,8 +193,8 @@ export default defineComponent({
 }
 
 .translation-hub {
-  background:RGB(var(--c0));
-  margin-bottom:100px;
+  background: RGB(var(--c0));
+  margin-bottom: 100px;
   p {
     width: 100%;
     text-align: left;
