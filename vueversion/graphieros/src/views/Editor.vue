@@ -254,11 +254,7 @@ export default defineComponent({
       }
 
       const words = UI.split(" ");
-
-      //[[g,g,g],[g,g,g]]
-      const bigBox = [];
-
-
+      const finalOutput = [];
         words.forEach(word => {
         const processed = word.split("-");
         const box = [];
@@ -270,17 +266,16 @@ export default defineComponent({
           });
         });
         if(box.toString().replaceAll(","," ") != ""){
-          bigBox.push(box.toString().replaceAll(","," ")); 
+          finalOutput.push(box.toString().replaceAll(","," ")); 
         }
       });
-      
-      
-      if(bigBox.length > 0){
-        this.processedFractals = [...bigBox];
+
+      if(finalOutput.length > 0){
+        this.processedFractals = [...finalOutput];
       }
  
+      // add translation
 
-      // for each "xx xx" => ["xx","xx"] => ["ff ff"]
     },
     deleteInput(){
       this.userInput = "";
@@ -391,6 +386,12 @@ export default defineComponent({
     RGB(var(--c0)),
     black
   );
+  div {
+    &:first-child {
+      filter: drop-shadow(1px 1px 2px black)
+        drop-shadow(-1px -1px 1px RGBA(var(--c3), 0.4));
+    }
+  }
 }
 
 .translation-hub {
