@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="tritog-wrap">
-      <div v-bind:class="tritog" @click="toggle" />
+      <div v-bind:class="tritog" @click="toggle3" />
       <div class="tritog-bot">
         <div></div>
       </div>
@@ -11,30 +11,58 @@
       <div class="tritog-right">
         <div></div>
       </div>
+      <span v-bind:class="toggleTop" id="label-top">{{ labelTop }}</span>
+      <span v-bind:class="toggleLeft" id="label-left">{{ labelLeft }}</span>
+      <span v-bind:class="toggleRight" id="label-right">{{ labelRight }}</span>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="js">
 import { defineComponent } from "vue";
 import store from "@/store/index.ts";
 
 export default defineComponent({
   name: "TriToggle",
-  data() {
-    return {
-      tritog: "tritog-toggle-top"
-    };
+  props: {
+    labelTop: String,
+    labelLeft: String,
+    labelRight: String
+  },
+  computed: {
+    tritog(){
+      return store.getters.tritog;
+    },
+    toggleTop() {
+      if (this.tritog === "tritog-toggle-top") {
+        return "labels-active";
+      } else {
+        return "labels-inactive";
+      }
+    },
+    toggleLeft() {
+      if (this.tritog === "tritog-toggle-left") {
+        return "labels-active";
+      } else {
+        return "labels-inactive";
+      }
+    },
+    toggleRight() {
+      if (this.tritog === "tritog-toggle-right") {
+        return "labels-active";
+      } else {
+        return "labels-inactive";
+      }
+    }
   },
   methods: {
-    toggle() {
-      if (this.tritog === "tritog-toggle-top") {
-        return (this.tritog = "tritog-toggle-right");
-      } else if (this.tritog === "tritog-toggle-right") {
-        return (this.tritog = "tritog-toggle-left");
-      } else {
-        return (this.tritog = "tritog-toggle-top");
-      }
+    toggle3(){
+      store.commit("toggle3", {
+        tritog: "tritog-toggle-top",
+        toggleTop: "tritog-toggle-top",
+        toggleLeft: "tritog-toggle-left",
+        toggleRight: "tritog-toggle-right"
+      })
     }
   }
 });
@@ -47,11 +75,39 @@ export default defineComponent({
   top: 90px;
   left: 50%;
   transform: translateX(-50%);
+  span.labels-active,
+  span.labels-inactive {
+    color: RGB(var(--c3));
+    font-family: var(--logo);
+    font-size: 0.8em;
+    display: inline-block;
+    position: absolute;
+    &#label-top {
+      left: 50%;
+      transform: translateX(-50%);
+      top: -16px;
+    }
+    &#label-left {
+      left: -26px;
+      bottom: -12px;
+    }
+    &#label-right {
+      right: -20px;
+      bottom: -12px;
+    }
+  }
+  span.labels-active {
+    color: RGB(var(--c3));
+  }
+  span.labels-inactive {
+    color: RGB(var(--c2));
+  }
   div {
     position: absolute;
     height: 20px;
     width: 60px;
     border-radius: 20px;
+    background: RGB(var(--c0));
     div {
       position: absolute;
       top: 50%;
@@ -98,12 +154,12 @@ export default defineComponent({
     transform: translateX(-50%);
   }
   .tritog-toggle-right {
-      right:2px;
-      bottom:2px;
+    right: 2px;
+    bottom: 2px;
   }
   .tritog-toggle-left {
-      left:0px;
-      bottom:2px;
+    left: 0px;
+    bottom: 2px;
   }
 }
 </style>
