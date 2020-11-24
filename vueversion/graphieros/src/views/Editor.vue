@@ -1,5 +1,6 @@
 <template>
   <div class="editor-body">
+  <TriToggle />
     <div class="logo-position">
       <MiniLogo
         glyphSize="50"
@@ -46,6 +47,7 @@
 import { defineComponent } from "vue";
 import MiniLogo from "@/components/MiniLogo.vue";
 import Linear from "@/components/Linear.vue";
+import TriToggle from "@/components/TriToggle.vue";
 import store from "@/store/index.ts";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
 
@@ -53,7 +55,8 @@ export default defineComponent({
   name: "Editor",
   components: {
     MiniLogo,
-    Linear
+    Linear,
+    TriToggle
   },
   data() {
     return {
@@ -123,10 +126,11 @@ export default defineComponent({
   position: relative;
   width: 100%;
   max-width: 600px;
-  background: white;
+  background: radial-gradient(at top left, white, RGB(var(--c3)));
   height: 600px;
   margin-left: 50%;
   margin-top: 100px;
+  top:24px;
   transform: translateX(-50%);
   transition: all 0.25s ease-in-out;
   border-radius: 15px;
@@ -149,6 +153,7 @@ export default defineComponent({
     overflow: scroll;
     font-family: var(--logo);
     color: RGB(var(--c0));
+    background: radial-gradient(at bottom right, RGB(var(--c3)), white);
     box-shadow: 0 0 5px 1px RGB(var(--c0)) inset;
     &::placeholder {
       color: RGB(var(--c2));
@@ -164,6 +169,9 @@ export default defineComponent({
   width: 90%;
   margin-left: 50%;
   transform: translateX(-50%);
+  background: white;
+  border-radius:10px 10px 30px 30px;
+  box-shadow: 0 10px 20px -10px RGB(var(--c1));
   div {
     height: 100%;
   }
