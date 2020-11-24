@@ -13,7 +13,7 @@ export default defineComponent({
     colors: String,
     svgSize: String,
     intensity: String,
-    light: Boolean,
+    light: String,
     size: String
   },
   computed: {
