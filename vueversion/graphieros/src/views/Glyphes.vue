@@ -131,7 +131,7 @@ h1 {
   font-family: var(--logo);
   color: RGB(var(--c2));
   span {
-    color: RGB(var(--c1));
+    color: RGB(var(--c3));
   }
 }
 .glyphes {
@@ -200,9 +200,9 @@ p.glyph-presentation {
   padding-top: 24px;
   padding-bottom: 64px;
   font-family: var(--logo);
-  color: RGB(var(--c1));
+  color: RGB(var(--c3));
   span {
-    color: RGB(var(--c0));
+    color: RGB(var(--c2));
   }
 }
 @media (max-width: 700px) {
