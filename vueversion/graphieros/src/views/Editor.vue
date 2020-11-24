@@ -10,6 +10,8 @@
         glyphColor="75,106,160"
       />
     </div>
+
+    <!-- linear mode -->
     <div
       v-if="selectedGraphierosMode === 'tritog-toggle-top'"
       class="editor-playground"
@@ -18,14 +20,14 @@
         v-focus
         v-if="selectedLang === 'toggle-right'"
         v-model="userInput"
-        @input="writeGraphieros"
+        @input="writeLinear"
         placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
       />
       <textarea
         v-else
         v-focus
         v-model="userInput"
-        @input="writeGraphieros"
+        @input="writeLinear"
         placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
       />
       <div class="editor-output-active">
@@ -37,6 +39,80 @@
       </div>
       <p v-if="selectedLang === 'toggle-right'">Linear mode</p>
       <p v-else>Mode linéaire</p>
+      <div class="button-erase" @click="deleteInput">
+        <Fractal svgSize="30" sequence="zx-we" colors="255,255,255" />
+      </div>
+    </div>
+
+    <!-- molecular mode -->
+    <div
+      v-else-if="selectedGraphierosMode === 'tritog-toggle-right'"
+      class="editor-playground"
+    >
+      <textarea
+        v-focus
+        v-if="selectedLang === 'toggle-right'"
+        v-model="userInput"
+        @input="writeMolecular"
+        placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
+      />
+      <textarea
+        v-else
+        v-focus
+        v-model="userInput"
+        @input="writeMolecular"
+        placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
+      />
+      <div class="editor-output-active">
+        <div v-for="word in processedMolecules" :key="word">
+          <Molecule
+            className="editor-molecular"
+            :sequence="word"
+            colors="29,55,104"
+            size="150"
+          />
+        </div>
+      </div>
+      <p v-if="selectedLang === 'toggle-right'">Molecular mode</p>
+      <p v-else>Mode moéculaire</p>
+      <div class="button-erase" @click="deleteInput">
+        <Fractal svgSize="30" sequence="zx-we" colors="255,255,255" />
+      </div>
+    </div>
+
+    <!-- fractal mode -->
+    <div v-else class="editor-playground">
+      <textarea
+        v-focus
+        v-if="selectedLang === 'toggle-right'"
+        v-model="userInput"
+        @input="writeFractal"
+        placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
+      />
+      <textarea
+        v-else
+        v-focus
+        v-model="userInput"
+        @input="writeFractal"
+        placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
+      />
+      <div class="editor-output-active fractal-board">
+        <div v-for="word in processedFractals" :key="word">
+          <Fractal
+            className="editor-fractal"
+            :sequence="word"
+            colors="75,106,160"
+            light="yes"
+            intensity="1.25"
+            svgSize="270"
+          />
+        </div>
+      </div>
+      <p v-if="selectedLang === 'toggle-right'">Fractal mode</p>
+      <p v-else>Mode fractal</p>
+      <div class="button-erase" @click="deleteInput">
+        <Fractal svgSize="30" sequence="zx-we" colors="255,255,255" />
+      </div>
     </div>
   </div>
   <div class="translation-hub" :style="showTranslation">
@@ -52,6 +128,8 @@
 import { defineComponent } from "vue";
 import MiniLogo from "@/components/MiniLogo.vue";
 import Linear from "@/components/Linear.vue";
+import Molecule from "@/components/Molecule.vue";
+import Fractal from "@/components/Fractal.vue";
 import TriToggle from "@/components/TriToggle.vue";
 import store from "@/store/index.ts";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
@@ -61,13 +139,21 @@ export default defineComponent({
   components: {
     MiniLogo,
     Linear,
+    Molecule,
+    Fractal,
     TriToggle
   },
   data() {
     return {
       userInput: "",
       linearSequence: "hea",
-      translation: ""
+      molecularSequence: "",
+      fractalSequence:"ss",
+      translation: "",
+      processedMolecules: ["hea sta sko pko"],
+      moleculeTranslation: [],
+      processedFractals: ["qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq"],
+      fractalTranslation: []
     };
   },
   computed: {
@@ -91,7 +177,7 @@ export default defineComponent({
     }
   },
   methods: {
-    writeGraphieros() {
+    writeLinear() {
       this.translation = "";
       const UI = this.userInput;
       this.linearSequence = UI;
@@ -116,6 +202,91 @@ export default defineComponent({
           }
         });
       });
+    },
+    writeMolecular(){
+      this.translation="";
+      this.processedMolecules = [];
+      this.moleculeTranslation = [];
+      const UI = this.userInput;
+
+      if (UI === "") {
+        this.processedMolecules = ["hea sta sko pko"];
+      }
+
+      const words = UI.split(" ");
+
+      if(words.length !== 0){
+        words.forEach(word => {
+          this.processedMolecules.push(word
+            .split("-")
+            .join(" "));
+          this.moleculeTranslation.push(word.split("-"))
+        });
+      }
+
+      this.moleculeTranslation.forEach(molecule => {
+        molecule.forEach(glyph => {
+          graphierosDictionnary.forEach((entry) => {
+            if (
+              `_${glyph}` === entry.name &&
+              store.getters.toggleClass === "toggle-right"
+            ) {
+              this.translation += `${entry.en} `;
+            } else if (
+              `_${glyph}` === entry.name &&
+              store.getters.toggleClass === "toggle-left"
+            ) {
+              this.translation += `${entry.fr} `;
+            }
+          });
+        });
+      });
+
+    },
+    writeFractal(){
+      this.translation = "";
+      this.processedFractals = ["ss"];
+      this.fractalTranslation = "";
+      const UI = this.userInput;
+
+      if (UI === "") {
+        this.processedFractals = ["qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq"];
+      }
+
+      const words = UI.split(" ");
+
+      //[[g,g,g],[g,g,g]]
+      const bigBox = [];
+
+
+        words.forEach(word => {
+        const processed = word.split("-");
+        const box = [];
+        processed.forEach(glyph => {
+          graphierosDictionnary.forEach(entry => {
+            if(entry.name === `_${glyph}`){
+                box.push(entry.fractal);
+            }
+          });
+        });
+        if(box.toString().replaceAll(","," ") != ""){
+          bigBox.push(box.toString().replaceAll(","," ")); 
+        }
+      });
+      
+      
+      if(bigBox.length > 0){
+        this.processedFractals = [...bigBox];
+      }
+ 
+
+      // for each "xx xx" => ["xx","xx"] => ["ff ff"]
+    },
+    deleteInput(){
+      this.userInput = "";
+      this.linearSequence ="hea";
+      this.processedMolecules=["hea sta sko pko"];
+      this.processedFractals=["qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq"];
     }
   }
 });
@@ -179,7 +350,7 @@ export default defineComponent({
   }
 }
 .editor-output-active {
-  position: relative;
+  position: absolute;
   height: 470px;
   width: 90%;
   margin-left: 50%;
@@ -187,9 +358,39 @@ export default defineComponent({
   background: white;
   border-radius: 10px 10px 30px 30px;
   box-shadow: 0 10px 20px -10px RGB(var(--c1));
-  div {
+  overflow: scroll;
+  animation: playgroundAppear 0.5s ease-in-out;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  .editor-linear {
     height: 100%;
   }
+}
+
+@keyframes playgroundAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.editor-molecular {
+  height: 150px;
+  svg {
+    height: 100px !important;
+  }
+}
+
+.fractal-board {
+  background: radial-gradient(
+    at top left,
+    RGB(var(--c1)),
+    RGB(var(--c0)),
+    black
+  );
 }
 
 .translation-hub {
@@ -206,6 +407,23 @@ export default defineComponent({
     left: 50%;
     transform: translateX(-50%);
     color: RGB(var(--c2));
+  }
+}
+
+.button-erase {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background: var(--gradTopLeft);
+  border-radius: 100%;
+  box-shadow: 0 5px 10px -5px RGB(var(--c1));
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.25s ease-in-out;
+  &:hover {
+    opacity: 1;
   }
 }
 
