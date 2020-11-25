@@ -75,6 +75,10 @@
       </div>
       <p v-if="selectedLang === 'toggle-right'">Molecular mode</p>
       <p v-else>Mode moéculaire</p>
+      <div class="molecule-overflow" :style="showMoleculeOverflow">
+        <Fractal svgSize="50" sequence="sz-zd-dw-wz" colors="252, 109, 109" />
+        <p>{{ moleculeOverflow }}</p>
+      </div>
       <div class="button-erase" @click="deleteInput">
         <Fractal svgSize="30" sequence="zx-we" colors="255,255,255" />
       </div>
@@ -152,7 +156,8 @@ export default defineComponent({
       translation: "",
       processedMolecules: ["ne ne ne ne ne ne ne"],
       moleculeTranslation: [],
-      processedFractals: ["ss"]
+      processedFractals: ["ss"],
+      moleculeOverflow: "none"
     };
   },
   computed: {
@@ -167,6 +172,13 @@ export default defineComponent({
         return "display: none;";
       } else {
         return "display: block; position: relative; width: 100%; max-width: 600px;box-sizing: border-box; padding: 24px; font-family: var(--logo); color: RGB(var(--c3)); margin-left: 50%; margin-top: 24px; transform: translateX(-50%);border-radius: 15px; box-shadow: 0 10px 20px -10px RGBA(var(--c0), 0.5); font-size:0.8em;";
+      }
+    },
+    showMoleculeOverflow() {
+      if (this.moleculeOverflow === "none") {
+        return "display:none;";
+      } else {
+        return "display: block";
       }
     }
   },
@@ -206,6 +218,7 @@ export default defineComponent({
       this.translation="";
       this.processedMolecules = [];
       this.moleculeTranslation = [];
+      this.moleculeOverflow = "";
       const UI = this.userInput;
 
       if (UI === "") {
@@ -219,7 +232,16 @@ export default defineComponent({
           this.processedMolecules.push(word
             .split("-")
             .join(" "));
-          this.moleculeTranslation.push(word.split("-"))
+          this.moleculeTranslation.push(word.split("-"));
+          if(word.split("-").length > 7){
+            if (store.getters.toggleClass === "toggle-right") {
+              this.moleculeOverflow = "ERROR: too many glyphs for a word !";
+            } else {
+              this.moleculeOverflow = "ERREUR: trop de glyphes pour un mot !";
+            }
+          }else{
+            this.moleculeOverflow = "none";
+          }
         });
       }
 
@@ -265,7 +287,7 @@ export default defineComponent({
           });
         });
         if(temp.toString().replaceAll(","," ") != ""){
-          finalOutput.push(temp.toString().replaceAll(","," ")); 
+          finalOutput.push(temp.toString().replaceAll(","," "));
         }
       });
 
@@ -293,9 +315,10 @@ export default defineComponent({
     },
     deleteInput(){
       this.userInput = "";
-      this.linearSequence ="ne";
-      this.processedMolecules=["ne ne ne ne ne ne ne"];
-      this.processedFractals=["ss"];
+      this.linearSequence = "ne";
+      this.processedMolecules = ["ne ne ne ne ne ne ne"];
+      this.processedFractals = ["ss"];
+      this.moleculeOverflow = "none";
     }
   }
 });
@@ -390,6 +413,45 @@ export default defineComponent({
   height: 150px;
   svg {
     height: 100px !important;
+  }
+}
+
+.molecule-overflow {
+  position: absolute;
+  background: radial-gradient(at top, black, rgb(65, 47, 47));
+  color: rgb(252, 109, 109);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 144px;
+  width: 233px;
+  box-sizing: border-box;
+  padding: 3px;
+  padding-top: 12px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px -10px rgba(65, 47, 47, 0.5);
+  font-family: var(--logo);
+  p {
+    width: 200px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: 60px;
+  }
+  div {
+    animation: errorPulse 1s infinite linear;
+  }
+}
+
+@keyframes errorPulse {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }
 
