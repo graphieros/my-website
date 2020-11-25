@@ -7,7 +7,7 @@
         height="60"
         fontSize="25"
         textColor="75,106,160"
-        glyphColor="75,106,160"
+        glyphColor="255,255,255"
       />
     </div>
 
@@ -331,7 +331,12 @@ export default defineComponent({
   left: 0;
   z-index: 1;
   width: 100%;
-  background: linear-gradient(to right, white, transparent, transparent);
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.774),
+    transparent,
+    transparent
+  );
 }
 .editor-playground {
   position: relative;
@@ -441,12 +446,12 @@ export default defineComponent({
   }
 }
 
-@keyframes errorZoom{
-  0%{
-    transform: translate(-50%, -50%) scale(0,0);
+@keyframes errorZoom {
+  0% {
+    transform: translate(-50%, -50%) scale(0, 0);
   }
-  100%{
-    transform: translate(-50%, -50%) scale(1.1,1.1);
+  100% {
+    transform: translate(-50%, -50%) scale(1.1, 1.1);
   }
 }
 
@@ -510,6 +515,9 @@ export default defineComponent({
   .editor-output-active {
     height: 370px;
     width: 100%;
+  }
+  .logo-position {
+    background: linear-gradient(to right, white, transparent);
   }
 }
 @media (max-width: 400px) {
