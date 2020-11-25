@@ -146,14 +146,13 @@ export default defineComponent({
   data() {
     return {
       userInput: "",
-      linearSequence: "hea",
+      linearSequence: "ne",
       molecularSequence: "",
       fractalSequence:"ss",
       translation: "",
-      processedMolecules: ["hea sta sko pko"],
+      processedMolecules: ["ne ne ne ne ne ne ne"],
       moleculeTranslation: [],
-      processedFractals: ["qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq"],
-      fractalTranslation: []
+      processedFractals: ["ss"]
     };
   },
   computed: {
@@ -183,7 +182,7 @@ export default defineComponent({
       this.linearSequence = UI;
 
       if (UI === "") {
-        this.linearSequence = "hea";
+        this.linearSequence = "ne";
       }
       const glyphs = UI.split(/(?:\/| |-)+/);
 
@@ -210,7 +209,7 @@ export default defineComponent({
       const UI = this.userInput;
 
       if (UI === "") {
-        this.processedMolecules = ["hea sta sko pko"];
+        this.processedMolecules = ["ne ne ne ne ne ne ne"];
       }
 
       const words = UI.split(" ");
@@ -250,23 +249,23 @@ export default defineComponent({
       const UI = this.userInput;
 
       if (UI === "") {
-        this.processedFractals = ["qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq"];
+        this.processedFractals = ["ss"];
       }
 
       const words = UI.split(" ");
       const finalOutput = [];
         words.forEach(word => {
         const processed = word.split("-");
-        const box = [];
+        const temp = [];
         processed.forEach(glyph => {
           graphierosDictionnary.forEach(entry => {
             if(entry.name === `_${glyph}`){
-                box.push(entry.fractal);
+                temp.push(entry.fractal);
             }
           });
         });
-        if(box.toString().replaceAll(","," ") != ""){
-          finalOutput.push(box.toString().replaceAll(","," ")); 
+        if(temp.toString().replaceAll(","," ") != ""){
+          finalOutput.push(temp.toString().replaceAll(","," ")); 
         }
       });
 
@@ -291,17 +290,12 @@ export default defineComponent({
           }
         });
       });
-
-      
- 
-      // add translation
-
     },
     deleteInput(){
       this.userInput = "";
-      this.linearSequence ="hea";
-      this.processedMolecules=["hea sta sko pko"];
-      this.processedFractals=["qz-ze-ed-dx-xw-wq zw-wd-dz-qs-se-xs qz-ze-ed-dx-xw-wq"];
+      this.linearSequence ="ne";
+      this.processedMolecules=["ne ne ne ne ne ne ne"];
+      this.processedFractals=["ss"];
     }
   }
 });
