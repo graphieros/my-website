@@ -244,7 +244,7 @@ function molecular({
             });
         });
     } else if (final_array.length > 6) {
-        console.error(`__________________________________________________________________\n\n ERREUR: Le nombre de glyphes autorisés est dépassé: ${final_array.length} au lieu de 6\n  __________________________________________________________________`);
+        console.error(`__________________________________________________________________\n\n ERREUR: Trop de glyphes pour un mot: ${final_array.length + 1} au lieu de 7 maximum.\n ERROR : Too many glyphs for a word: ${final_array.length + 1} instead of 7 maximum. __________________________________________________________________`);
     }
 
     let backgroundDiv = document.createElement("DIV");
