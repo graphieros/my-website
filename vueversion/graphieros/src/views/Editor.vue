@@ -431,6 +431,7 @@ export default defineComponent({
   border-radius: 12px;
   box-shadow: 0 10px 20px -10px rgba(65, 47, 47, 0.5);
   font-family: var(--logo);
+  animation: errorZoom 0.25s ease-in-out;
   p {
     width: 200px;
     text-align: center;
@@ -438,20 +439,14 @@ export default defineComponent({
     position: absolute;
     top: 60px;
   }
-  div {
-    animation: errorPulse 1s infinite linear;
-  }
 }
 
-@keyframes errorPulse {
-  0% {
-    transform: scale(0.5, 0.5);
+@keyframes errorZoom{
+  0%{
+    transform: translate(-50%, -50%) scale(0,0);
   }
-  50% {
-    transform: scale(1.1, 1.1);
-  }
-  100% {
-    transform: scale(1, 1);
+  100%{
+    transform: translate(-50%, -50%) scale(1.1,1.1);
   }
 }
 
