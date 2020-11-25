@@ -273,6 +273,26 @@ export default defineComponent({
       if(finalOutput.length > 0){
         this.processedFractals = [...finalOutput];
       }
+
+      const glyphs = UI.split(/(?:\/| |-)+/);
+
+      glyphs.forEach((glyph) => {
+        graphierosDictionnary.forEach((entry) => {
+          if (
+            `_${glyph}` === entry.name &&
+            store.getters.toggleClass === "toggle-right"
+          ) {
+            this.translation += `${entry.en} `;
+          } else if (
+            `_${glyph}` === entry.name &&
+            store.getters.toggleClass === "toggle-left"
+          ) {
+            this.translation += `${entry.fr} `;
+          }
+        });
+      });
+
+      
  
       // add translation
 
