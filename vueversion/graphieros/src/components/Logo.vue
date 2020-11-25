@@ -12,14 +12,14 @@
     <Fractal
       class="fractal-logo2"
       sequence="wz-zd-dw-qs-se-xs"
-      colors="75,106,160"
+      colors="211,227,252"
       :svgSize="medium"
       size="60"
     />
     <Fractal
       class="fractal-logo3"
       sequence="wz-zd-dw-qs-se-xs"
-      colors="29,55,104"
+      colors="250,254,255"
       :svgSize="small"
       size="60"
     />
@@ -52,6 +52,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+.fractal-logo,
+.fractal-logo2,
+.fractal-logo3 {
+  filter: drop-shadow(0 2px 2px RGBA(var(--c0), 0.5));
+}
+
 .fractal-logo {
   animation: fractal-logo 24s infinite linear;
   position: absolute;
@@ -60,7 +66,6 @@ export default defineComponent({
   transform: translateX(-50%);
   height: 200px;
   width: 200px;
-  filter: drop-shadow(0 2px 2px RGBA(var(--c0), 0.5));
 }
 
 @keyframes fractal-logo {
