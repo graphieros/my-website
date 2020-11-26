@@ -39,13 +39,20 @@
       <div class="canvas-wrap">
         <div class="wtf-canvas" id="wtf-can1">
           <Linear :sequence="wtfJustHex" colors="255,255,255" />
+          <div class="wtf-ka">
+            <Fractal
+              svgSize="150"
+              :sequence="kaSequence"
+              colors="255,255,255"
+            />
+          </div>
         </div>
       </div>
 
       <div class="why-hex-explain">
-        The regular hexagon is one of the few geometric shapes with which it is
-        possible to build a regular paving, like that of the external surface of
-        cells built by bees.
+        The <span>regular hexagon</span> is one of the few geometric shapes with
+        which it is possible to build a regular paving, like that of the
+        external surface of cells built by bees.
       </div>
     </div>
   </div>
@@ -91,11 +98,12 @@
           <Linear :sequence="wtfJustHex" colors="255,255,255" />
         </div>
       </div>
-    
+
       <div class="why-hex-explain">
-        L'hexagone régulier fait partie des quelques formes géométriques avec
-        lesquelles il est possible de construire un pavage régulier, comme celui
-        de la surface externe des alvéoles bâties par les abeilles.
+        <span>L'hexagone régulier</span> fait partie des quelques formes
+        géométriques avec lesquelles il est possible de construire un pavage
+        régulier, comme celui de la surface externe des alvéoles bâties par les
+        abeilles.
       </div>
     </div>
   </div>
@@ -123,7 +131,9 @@ export default defineComponent({
       spinnerClass: "spinner-inactive",
       messageTranslationFR: "",
       messageTranslationEN: "",
-      wtfJustHex: " ksi ksi ksi / ksi ksi ksi ksi / ksi ksi ksi ksi ksi / ksi ksi ksi ksi /  ksi ksi ksi"
+      wtfJustHex:
+        " ksi ksi ksi / ksi ksi ksi ksi / ksi ksi ksi ksi ksi / ksi ksi ksi ksi /  ksi ksi ksi",
+      kaSequence: "zx-ws-qe"
     };
   },
   computed: {
@@ -216,8 +226,8 @@ export default defineComponent({
 .wtf-is-graphieros-struct {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding-left:50px;
-  padding-right:50px;
+  padding-left: 50px;
+  padding-right: 50px;
   align-items: center;
   justify-items: center;
   margin-top: 100px;
@@ -265,16 +275,35 @@ export default defineComponent({
     font-size: 0.8em;
   }
 }
-#wtf-can0{
+#wtf-can0 {
   box-sizing: border-box;
   padding-right: 10px;
 }
-#wtf-can1{
-  padding-top:10px;
+#wtf-can1 {
+  padding-top: 10px;
   background: radial-gradient(RGB(var(--c2)), RGB(var(--c1)));
+  transform: rotate(30deg);
   filter: drop-shadow(0 2px 2px black);
-  div{
+  div {
     filter: drop-shadow(0 2px 2px black);
+  }
+}
+
+.wtf-ka {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-39%, -38%) rotate(-30deg);
+  div {
+    filter: none !important;
+    animation: ka-opacity 3s infinite linear alternate;
+    opacity: 0;
+  }
+}
+
+@keyframes ka-opacity {
+  100% {
+    opacity: 1;
   }
 }
 
@@ -307,7 +336,7 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 50px;
   display: grid;
-  row-gap:24px;
+  row-gap: 24px;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
@@ -327,6 +356,9 @@ export default defineComponent({
   text-align: left;
   max-width: 40ch;
   color: RGB(var(--c0));
+  span {
+    color: RGB(var(--c3));
+  }
 }
 
 @media (max-width: 700px) {
@@ -351,14 +383,13 @@ export default defineComponent({
     padding: none;
     h1 {
       text-shadow: none;
-      margin-bottom:48px;
+      margin-bottom: 48px;
     }
   }
 
-  .why-hex-explain{
-    margin-top:48px;
-    margin-bottom:48px;
+  .why-hex-explain {
+    margin-top: 48px;
+    margin-bottom: 48px;
   }
-
 }
 </style>
