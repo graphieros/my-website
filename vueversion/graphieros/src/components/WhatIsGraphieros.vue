@@ -30,8 +30,18 @@
         </p>
       </div>
     </div>
+
     <div class="why-hex">
       <h1>why the <span>hexagon?</span></h1>
+
+      <span />
+
+      <div class="canvas-wrap">
+        <div class="wtf-canvas" id="wtf-can1">
+          <Linear :sequence="wtfJustHex" colors="255,255,255" />
+        </div>
+      </div>
+
       <div class="why-hex-explain">
         The regular hexagon is one of the few geometric shapes with which it is
         possible to build a regular paving, like that of the external surface of
@@ -70,8 +80,18 @@
         <p @click="writeGradually">{{ ctaClickFR }}</p>
       </div>
     </div>
+
     <div class="why-hex">
       <h1>pourquoi l'<span>hexagone?</span></h1>
+
+      <span />
+      
+      <div class="canvas-wrap">
+        <div class="wtf-canvas" id="wtf-can1">
+          <Linear :sequence="wtfJustHex" colors="255,255,255" />
+        </div>
+      </div>
+    
       <div class="why-hex-explain">
         L'hexagone régulier fait partie des quelques formes géométriques avec
         lesquelles il est possible de construire un pavage régulier, comme celui
@@ -102,7 +122,8 @@ export default defineComponent({
       ctaClickFR: "cliquez-moi",
       spinnerClass: "spinner-inactive",
       messageTranslationFR: "",
-      messageTranslationEN: ""
+      messageTranslationEN: "",
+      wtfJustHex: " ksi ksi ksi / ksi ksi ksi ksi / ksi ksi ksi ksi ksi / ksi ksi ksi ksi /  ksi ksi ksi"
     };
   },
   computed: {
@@ -195,6 +216,8 @@ export default defineComponent({
 .wtf-is-graphieros-struct {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  padding-left:50px;
+  padding-right:50px;
   align-items: center;
   justify-items: center;
   margin-top: 100px;
@@ -203,8 +226,6 @@ export default defineComponent({
   text-align: right;
   max-width: 40ch;
   box-sizing: border-box;
-  padding-left: 20px;
-  padding-right: 20px;
   color: RGB(var(--c3));
   text-shadow: 1px 1px RGB(var(--c0));
   span {
@@ -244,9 +265,13 @@ export default defineComponent({
     font-size: 0.8em;
   }
 }
-#wtf-can0 {
+#wtf-can0{
   box-sizing: border-box;
   padding-right: 10px;
+}
+#wtf-can1{
+  padding-top:10px;
+  background: radial-gradient(RGB(var(--c2)), RGB(var(--c1)));
 }
 
 .spinner-active {
@@ -278,6 +303,7 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 50px;
   display: grid;
+  row-gap:24px;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
@@ -307,6 +333,7 @@ export default defineComponent({
   }
   .wtf-is-graphieros-struct {
     grid-template-columns: repeat(1, 1fr);
+    padding: none;
     row-gap: 64px;
   }
   .wtf-explain {
@@ -322,5 +349,11 @@ export default defineComponent({
       text-shadow: none;
     }
   }
+
+  .why-hex-explain{
+    margin-top:24px;
+    margin-bottom:48px;
+  }
+
 }
 </style>
