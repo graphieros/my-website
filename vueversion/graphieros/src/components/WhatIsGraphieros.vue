@@ -10,12 +10,11 @@
         the geometry of the <span>hexagon</span>, of the seven points which
         constitute its vertices and its center.
       </div>
-      <div class="wtf-canvas">
-        <Linear
-          @click="writeGradually"
-          :sequence="wtfLinearStart"
-          colors="75, 106, 160"
-        />
+      <div class="canvas-wrap">
+        <div class="wtf-canvas" id="wtf-can0">
+          <Linear :sequence="wtfLinearStart" colors="75, 106, 160" />
+        </div>
+        <p @click="writeGradually">{{ ctaClickEN }}</p>
       </div>
     </div>
   </div>
@@ -32,7 +31,12 @@
         <span>l'hexagone régulier</span>, des sept points qui constituent ses
         sommets et son centre.
       </div>
-      <div class="wtf-canvas"></div>
+      <div class="canvas-wrap">
+        <div class="wtf-canvas" id="wtf-can0">
+          <Linear :sequence="wtfLinearStart" colors="75, 106, 160" />
+        </div>
+        <p @click="writeGradually">{{ ctaClickFR }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -51,7 +55,9 @@ export default defineComponent({
   data() {
     return {
       glyphCount: graphierosDictionnary.length,
-      wtfLinearStart: ""
+      wtfLinearStart: "",
+      ctaClickEN: "click me",
+      ctaClickFR: "cliquez-moi"
     };
   },
   computed: {
@@ -61,20 +67,45 @@ export default defineComponent({
   },
   methods: {
     writeGradually() {
-      const time = 1000;
+      const time = 250;
       const textAtoms: string[] = [
         "kli",
         "-",
         "keo",
-        " / ",
-        "ka",
+        " ",
+        "mea",
         "-",
-        "tae / "
+        "kadwa",
+        " / ",
+        "kio",
+        "-",
+        "tew",
+        "-",
+        "ma",
+        " !"
       ];
-      if (this.wtfLinearStart === "kli-keo / ka-tae / ") {
-        this.wtfLinearStart = "";
-        //how the fuck do I make the text write in a loop ?
-      }
+      this.wtfLinearStart = "";
+      this.ctaClickEN = "...";
+      this.ctaClickFR = "...";
+
+      //add a fractal spinner while waiting (which class is only visible during paint)
+
+      setTimeout(() => {
+        if (store.getters.toggleClass === "toggle-right") {
+          this.ctaClickEN = "again?";
+        } else {
+          this.ctaClickFR = "encore?";
+        }
+      }, time * textAtoms.length);
+
+      const doSetTimeout = (i: number) =>
+        setTimeout(() => {
+          this.wtfLinearStart += textAtoms[i];
+        }, i * time);
+
+      textAtoms.forEach((atom: string, i: number) => {
+        doSetTimeout(i);
+      });
     }
   }
 });
@@ -112,6 +143,18 @@ export default defineComponent({
     color: white;
   }
 }
+
+.canvas-wrap {
+  p {
+    cursor: pointer;
+    background: radial-gradient(at top, RGB(var(--c3)), RGB(var(--c2)));
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 3px 3px 30px 30px;
+    box-shadow: 0 10px 20px -10px RGB(var(--c1));
+  }
+}
+
 .wtf-canvas {
   height: 200px;
   width: 200px;
@@ -121,6 +164,10 @@ export default defineComponent({
   div {
     height: 100%;
   }
+}
+#wtf-can0 {
+  box-sizing: border-box;
+  padding-right: 10px;
 }
 @media (max-width: 700px) {
   .wtf-is-graphieros-struct {
