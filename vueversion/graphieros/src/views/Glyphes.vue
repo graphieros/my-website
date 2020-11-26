@@ -6,7 +6,7 @@
         height="60"
         fontSize="25"
         textColor="75,106,160"
-        glyphColor="75,106,160"
+        glyphColor="255,255,255"
       />
     </div>
     <h1>graphieros <span>glyphs</span></h1>
@@ -26,12 +26,12 @@
         v-bind:key="item.name"
         v-bind:en="item.en"
       >
-        <Linear
-          className="glyph-line"
-          v-bind:sequence="item.name.replace('_', '')"
-          colors="29, 55, 104"
-          size="50"
-          strokeWidth="12"
+        <Fractal
+          className="glyph-fractal"
+          v-bind:sequence="item.fractal"
+          colors="255,255,255"
+          svgSize="50"
+          size="30"
         />
         <span className="span-fr">{{ item.en }}</span>
         <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
@@ -45,7 +45,8 @@
         height="60"
         fontSize="25"
         textColor="75,106,160"
-        glyphColor="75,106,160"
+        glyphColor="255,255,255"
+        size="20"
       />
     </div>
     <h1>Les <span>glyphes</span> du graphieros</h1>
@@ -66,12 +67,12 @@
         v-bind:key="item.name"
         v-bind:fr="item.fr"
       >
-        <Linear
-          className="glyph-line"
-          v-bind:sequence="item.name.replace('_', '')"
-          colors="29, 55, 104"
-          size="50"
-          strokeWidth="12"
+        <Fractal
+          className="glyph-fractal"
+          v-bind:sequence="item.fractal"
+          colors="255,255,255"
+          svgSize="50"
+          size="30"
         />
         <span className="span-fr">{{ item.fr }}</span>
         <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
@@ -84,13 +85,13 @@
 //add a v-lazy loading plugin
 import { defineComponent } from "vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
-import Linear from "@/components/Linear.vue";
+import Fractal from "@/components/Fractal.vue";
 import MiniLogo from "@/components/MiniLogo.vue";
 import store from "@/store/index.ts";
 export default defineComponent({
   name: "Home",
   components: {
-    Linear,
+    Fractal,
     MiniLogo
   },
   data() {
@@ -120,11 +121,12 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-.logo-position{
+.logo-position {
   position: fixed;
-  top:0;left:0;
-  z-index:1;
-  width:100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
   background: linear-gradient(to right, white, transparent, transparent);
 }
 h1 {
@@ -147,7 +149,7 @@ h1 {
 .glyph {
   width: 100px;
   height: 100px;
-  background: radial-gradient(white, lightgrey);
+  background: radial-gradient(RGB(var(--c2)), RGB(var(--c1)));
   border-radius: 3px;
   box-shadow: 5px 5px 10px -5px grey, -5px -5px 10px -5px white,
     -5px -5px 10px -5px white inset, 5px 5px 10px -5px grey inset;
@@ -157,9 +159,11 @@ h1 {
     transform: scale(1.05, 1.05);
   }
 }
-.glyph-line {
+.glyph-fractal {
   height: 100px;
   width: 100px;
+  position: relative;
+  top: 25px;
 }
 .glyph-list {
   display: grid;
@@ -169,6 +173,11 @@ h1 {
   justify-items: center;
   grid-gap: 12px;
   transition: all 0.25s ease-in-out;
+  div {
+    div {
+      filter: drop-shadow(0 2px 2px black);
+    }
+  }
 }
 .glyph-wrap {
   height: 100px;
@@ -178,10 +187,10 @@ h1 {
 span.span-fr {
   display: block;
   position: relative;
-  top: -95px;
   font-family: var(--logo);
   font-size: 0.8em;
-  color: RGB(var(--c1));
+  top: -95px;
+  color: RGB(var(--c0));
 }
 span.span-name {
   display: block;
@@ -189,7 +198,7 @@ span.span-name {
   top: -40px;
   font-family: var(--logo);
   font-size: 0.8em;
-  color: RGB(var(--c1));
+  color: RGB(var(--c3));
 }
 
 p.glyph-presentation {
