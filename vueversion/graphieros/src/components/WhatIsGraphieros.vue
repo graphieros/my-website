@@ -85,7 +85,7 @@
       <h1>pourquoi l'<span>hexagone?</span></h1>
 
       <span />
-      
+
       <div class="canvas-wrap">
         <div class="wtf-canvas" id="wtf-can1">
           <Linear :sequence="wtfJustHex" colors="255,255,255" />
@@ -272,6 +272,10 @@ export default defineComponent({
 #wtf-can1{
   padding-top:10px;
   background: radial-gradient(RGB(var(--c2)), RGB(var(--c1)));
+  filter: drop-shadow(0 2px 2px black);
+  div{
+    filter: drop-shadow(0 2px 2px black);
+  }
 }
 
 .spinner-active {
@@ -296,7 +300,7 @@ export default defineComponent({
 .why-hex {
   margin-top: 100px;
   left: 0;
-  background: transparent;
+  background: radial-gradient(at top, RGB(var(--c2)), RGB(var(--crad)));
   border-radius: 200px 0 200px 0;
   box-shadow: 10px 10px 20px -10px RGBA(var(--c0), 0.5),
     -10px -10px 20px -10px RGB(var(--c3));
@@ -347,11 +351,12 @@ export default defineComponent({
     padding: none;
     h1 {
       text-shadow: none;
+      margin-bottom:48px;
     }
   }
 
   .why-hex-explain{
-    margin-top:24px;
+    margin-top:48px;
     margin-bottom:48px;
   }
 
