@@ -53,6 +53,7 @@
         The <span>regular hexagon</span> is one of the few geometric shapes with
         which it is possible to build a regular paving, like that of the
         external surface of cells built by bees.
+        <p @click="showGlyph">click me</p>
       </div>
     </div>
   </div>
@@ -104,6 +105,7 @@
         géométriques avec lesquelles il est possible de construire un pavage
         régulier, comme celui de la surface externe des alvéoles bâties par les
         abeilles.
+        <p @click="showGlyph">cliquez ici</p>
       </div>
     </div>
   </div>
@@ -133,7 +135,7 @@ export default defineComponent({
       messageTranslationEN: "",
       wtfJustHex:
         " ksi ksi ksi / ksi ksi ksi ksi / ksi ksi ksi ksi ksi / ksi ksi ksi ksi /  ksi ksi ksi",
-      kaSequence: "zx-ws-qe"
+      kaSequence: "zx-we-qd"
     };
   },
   computed: {
@@ -142,6 +144,11 @@ export default defineComponent({
     }
   },
   methods: {
+    showGlyph(){
+      let random = 0;
+      random = Math.floor(Math.random() * graphierosDictionnary.length);
+      this.kaSequence = graphierosDictionnary[random].fractal;
+    },
     writeGradually() {
       const time = 250;
       const textAtoms: string[] = [
@@ -166,8 +173,6 @@ export default defineComponent({
       this.messageTranslationFR = "";
       this.messageTranslationEN = "";
       this.spinnerClass = "spinner-active";
-
-      //add a fractal spinner while waiting (which class is only visible during paint)
 
       setTimeout(() => {
         if (store.getters.toggleClass === "toggle-right") {
@@ -252,6 +257,11 @@ export default defineComponent({
     border-radius: 3px 3px 30px 30px;
     box-shadow: 0 10px 20px -10px RGB(var(--c1));
     height: 44px;
+    border:1px solid transparent;
+    transition: all 0.25s ease-in-out;
+    &:hover{
+      border:1px solid white;
+    }
   }
 }
 
@@ -285,7 +295,7 @@ export default defineComponent({
   transform: rotate(30deg);
   filter: drop-shadow(0 2px 2px black);
   div {
-    filter: drop-shadow(0 2px 2px black);
+    filter: drop-shadow(0 2px 2px RGB(var(--c0)));
   }
 }
 
@@ -295,15 +305,13 @@ export default defineComponent({
   left: 50%;
   transform: translate(-39%, -38%) rotate(-30deg);
   div {
-    filter: none !important;
-    animation: ka-opacity 3s infinite linear alternate;
-    opacity: 0;
+    animation: ka-size 3s infinite linear alternate;
   }
 }
 
-@keyframes ka-opacity {
+@keyframes ka-size{
   100% {
-    opacity: 1;
+    transform: translate(-0.5%, -7%) scale(0.5,0.5);
   }
 }
 
@@ -353,13 +361,35 @@ export default defineComponent({
   }
 }
 .why-hex-explain {
+  position: relative;
   text-align: left;
   max-width: 40ch;
   color: RGB(var(--c0));
   span {
     color: RGB(var(--c3));
   }
+   p{
+    height:60px;
+    width:120px;
+    display: flex;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%) rotate(-15deg);
+    align-items:center;
+    justify-content:center;
+    background: radial-gradient(RGB(var(--c3)), RGB(var(--c2)));
+    cursor: pointer;
+    border-radius:3px;
+    box-shadow: 0 10px 20px -10px RGB(var(--c1));
+    border:1px solid transparent;
+    transition: all 0.25s ease-in-out;
+    &:hover{
+      border:1px solid white;
+      box-shadow: 0 30px 40px -20px RGB(var(--c1));
+    }
+  }
 }
+
 
 @media (max-width: 700px) {
   .wtf-is-graphieros-body {
