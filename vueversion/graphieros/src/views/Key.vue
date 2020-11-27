@@ -88,8 +88,12 @@
         >
       </div>
     </div>
+
     <div :class="page0">
       <WhatIsGraphieros />
+    </div>
+    <div :class="page1">
+      <ThreeModes />
     </div>
   </div>
 </template>
@@ -100,13 +104,15 @@ import MiniLogo from "@/components/MiniLogo.vue";
 import Fractal from "@/components/Fractal.vue";
 import store from "@/store/index.ts";
 import WhatIsGraphieros from "@/components/WhatIsGraphieros.vue";
+import ThreeModes from "@/components/ThreeModes.vue";
 
 export default defineComponent({
   name: "Key",
   components: {
     MiniLogo,
     Fractal,
-    WhatIsGraphieros
+    WhatIsGraphieros,
+    ThreeModes
   },
   data() {
     return {
@@ -353,11 +359,21 @@ export default defineComponent({
   }
 }
 
-.page-graphieros-inactive {
+.page-graphieros-inactive,
+.page-3-modes-inactive,
+.page-prefixes-inactive,
+.page-numbers-inactive,
+.page-phonology-inactive,
+.page-grammar-inactive {
   display: none;
 }
 
-.page-graphieros-active {
+.page-graphieros-active,
+.page-3-modes-active,
+.page-prefixes-active,
+.page-numbers-active,
+.page-phonology-active,
+.page-grammar-active {
   display: block;
 }
 
