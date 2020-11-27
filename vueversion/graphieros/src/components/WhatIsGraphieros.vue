@@ -65,6 +65,44 @@
         regular hexagon.
       </div>
     </div>
+
+    <div class="wtf-how-graphieros">
+      <h1>
+        <span class="wtf-how-left">how does</span> <span>graphieros</span
+        ><span class="wtf-how-right">work?</span>
+      </h1>
+
+      <div class="wtf-how-explain">
+        <span />
+        <div class="how-explain-left">
+          The {{ glyphCount }} graphieros glyphs obviously cannot on their own
+          be used as such to express our thoughts and designate objects.
+          <span>Glyph cumulation </span>comes in handy to represent everything
+          you can see or imagine.
+        </div>
+        <div class="how-explain-right">
+          Used on their own, the great majority of glyphs are infinitive verbs.
+          A set of <span>prefixes</span> turn them into adjectives or adverbs.
+          The combination of different verbs together can generate
+          <span>new words</span>, and populate the dictionary.
+        </div>
+
+        <span />
+        <span />
+
+        <div class="how-explain-left">
+          In it's common linear mode, graphieros is written
+          <span>from top to bottom and left to right.</span> There is no extra
+          space added between the glyphs. Words built from the accumulation of
+          different glyphs are distinguished by a
+          <span>vertical lign</span> joining the center of all its components.
+        </div>
+
+        <div class="canvas-how">
+          <Linear :sequence="canvasHow" colors="255,255,255" />
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- french version -->
@@ -133,6 +171,45 @@
         l'hexagone régulier.
       </div>
     </div>
+
+    <div class="wtf-how-graphieros">
+      <h1>
+        <span class="wtf-how-left">comment le</span> <span>graphieros</span
+        ><span class="wtf-how-right">fonctionne?</span>
+      </h1>
+
+      <div class="wtf-how-explain">
+        <span />
+        <div class="how-explain-left">
+          Les {{ glyphCount }} glyphes du graphieros ne peuvent évidemment pas à
+          eux seuls suffire pour exprimer nos pensées et désigner des objets.
+          <span>L'accumulation </span> de glyphes permet de représenter tout ce
+          que l'on peut connaître ou imaginer.
+        </div>
+        <div class="how-explain-right">
+          Utilisés seuls, la plupart des glyphes sont des verbes à l'infinitif.
+          Une collection de <span>préfixes</span> sont ajoutés pour les
+          substantiver. L'accumulation de différents glyphes peut générer de
+          <span>nouveaux mots</span>, et venir peupler le dictionnaire.
+        </div>
+
+        <span />
+        <span />
+
+        <div class="how-explain-left">
+          Dans son mode d'écriture le plus commun, le mode linéaire, le
+          graphieros s'écrit
+          <span>de haut en bas et de gauche à droite.</span> Ce n'est pas
+          l'espace entre les mots qui les distinguent, mais une
+          <span>barre verticale </span> qui connecte tous les glyphes d'un même
+          mot.
+        </div>
+
+        <div class="canvas-how">
+          <Linear :sequence="canvasHow" colors="255,255,255" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -162,7 +239,8 @@ export default defineComponent({
         " ksi ksi ksi / ksi ksi ksi ksi / ksi ksi ksi ksi ksi / ksi ksi ksi ksi /  ksi ksi ksi",
       kaSequence: "zx-we-qd",
       kaNameEN: "to center",
-      kaNameFR: "center"
+      kaNameFR: "center",
+      canvasHow: "ka-fy-go sta de mea-skai / te hia boi mna-fya-fy / mea-hea ma kli-keo-grey-hea / tpe ptae-vzi-sota , fkwe / ka-fy-go sta ka-fya-fy"
     };
   },
   computed: {
@@ -247,7 +325,7 @@ export default defineComponent({
       display: block;
       font-size: 1em;
       color: RGB(var(--c3));
-      margin-left: 120px;
+      margin-left: -195px;
     }
     span {
       font-size: 2em;
@@ -326,6 +404,8 @@ export default defineComponent({
     box-shadow: none;
     font-family: var(--elite);
     font-size: 0.8em;
+    border:none !important;
+    cursor: default !important;
   }
 }
 #wtf-can0 {
@@ -443,6 +523,81 @@ export default defineComponent({
   }
 }
 
+.wtf-how-graphieros {
+  margin-top: -200px;
+  box-sizing: border-box;
+  padding-top: 250px;
+  padding-bottom: 64px;
+  background: radial-gradient(at top right, black, RGB(var(--c0)));
+  position: relative;
+  z-index: -1;
+  span.wtf-how-left,
+  span.wtf-how-right {
+    font-size: 1em;
+    color: RGB(var(--c3));
+    display: block;
+  }
+  span.wtf-how-left {
+    margin-left: -145px;
+  }
+  span.wtf-how-right {
+    margin-top: -12px;
+    margin-left: 185px;
+  }
+}
+
+.wtf-how-explain {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 24px;
+  padding: 50px;
+  div {
+    color: RGB(var(--c2));
+    span {
+      color: RGB(var(--c3));
+    }
+  }
+  .how-explain-left {
+    text-align: right;
+  }
+  .how-explain-right {
+    text-align: left;
+  }
+}
+
+.canvas-how {
+  width:100%;
+  padding-top:100%;
+  position: relative;
+  border-radius:100%;
+  box-shadow: 0px 10px 20px -10px black, 0px -10px 20px -10px RGB(var(--c1));
+  animation: shadowTest 2s infinite linear;
+  div {
+    position: absolute;
+    margin-top:10px;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    filter:drop-shadow(0 2px 2px black);
+  }
+}
+
+@media (max-width: 1145px) {
+  .wtf-how-explain {
+    display: block;
+    .how-explain-left,
+    .how-explain-right {
+      width: 100%;
+      text-align: left;
+      margin-top: 24px;
+      max-width: 50ch;
+      margin-left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .wtf-is-graphieros-body {
     h1 {
@@ -468,7 +623,6 @@ export default defineComponent({
       margin-bottom: 48px;
     }
   }
-
   .why-hex-explain {
     margin-top: 48px;
     margin-bottom: 48px;
@@ -476,5 +630,13 @@ export default defineComponent({
   .why-hex-explain-wide {
     margin-top: 110px;
   }
+  .wtf-how-explain {
+    display: block;
+    padding: none;
+    max-width: 40ch;
+  }
+}
+.canvas-how{
+  margin-top: 48px;
 }
 </style>
