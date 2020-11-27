@@ -47,6 +47,7 @@
             />
           </div>
         </div>
+        <p class="wtf-hex-translation">{{ kaNameEN }}</p>
       </div>
 
       <div class="why-hex-explain">
@@ -54,6 +55,14 @@
         which it is possible to build a regular paving, like that of the
         external surface of cells built by bees.
         <p @click="showGlyph">click me</p>
+      </div>
+
+      <span />
+
+      <div class="why-hex-explain-wide">
+        All {{ glyphCount }} glyphs are structured using only
+        <span>straight lines</span> connecting two or more vertices of the
+        regular hexagon.
       </div>
     </div>
   </div>
@@ -97,7 +106,15 @@
       <div class="canvas-wrap">
         <div class="wtf-canvas" id="wtf-can1">
           <Linear :sequence="wtfJustHex" colors="255,255,255" />
+          <div class="wtf-ka">
+            <Fractal
+              svgSize="150"
+              :sequence="kaSequence"
+              colors="255,255,255"
+            />
+          </div>
         </div>
+        <p class="wtf-hex-translation">{{ kaNameFR }}</p>
       </div>
 
       <div class="why-hex-explain">
@@ -106,6 +123,14 @@
         régulier, comme celui de la surface externe des alvéoles bâties par les
         abeilles.
         <p @click="showGlyph">cliquez ici</p>
+      </div>
+
+      <span />
+
+      <div class="why-hex-explain-wide">
+        Les {{ glyphCount }} glyphes sont composés par des
+        <span> segments </span>qui connectent deux ou plusieurs des sommets de
+        l'hexagone régulier.
       </div>
     </div>
   </div>
@@ -135,7 +160,9 @@ export default defineComponent({
       messageTranslationEN: "",
       wtfJustHex:
         " ksi ksi ksi / ksi ksi ksi ksi / ksi ksi ksi ksi ksi / ksi ksi ksi ksi /  ksi ksi ksi",
-      kaSequence: "zx-we-qd"
+      kaSequence: "zx-we-qd",
+      kaNameEN: "to center",
+      kaNameFR: "center"
     };
   },
   computed: {
@@ -144,10 +171,12 @@ export default defineComponent({
     }
   },
   methods: {
-    showGlyph(){
+    showGlyph() {
       let random = 0;
       random = Math.floor(Math.random() * graphierosDictionnary.length);
       this.kaSequence = graphierosDictionnary[random].fractal;
+      this.kaNameEN = graphierosDictionnary[random].en;
+      this.kaNameFR = graphierosDictionnary[random].fr;
     },
     writeGradually() {
       const time = 250;
@@ -249,6 +278,7 @@ export default defineComponent({
 }
 
 .canvas-wrap {
+  position: relative;
   p {
     cursor: pointer;
     background: radial-gradient(at top, RGB(var(--c3)), RGB(var(--c2)));
@@ -257,11 +287,24 @@ export default defineComponent({
     border-radius: 3px 3px 30px 30px;
     box-shadow: 0 10px 20px -10px RGB(var(--c1));
     height: 44px;
-    border:1px solid transparent;
+    border: 1px solid transparent;
     transition: all 0.25s ease-in-out;
-    &:hover{
-      border:1px solid white;
+    &:hover {
+      border: 1px solid white;
     }
+  }
+  p.wtf-hex-translation {
+    background: none !important;
+    box-shadow: none !important;
+    position: absolute !important;
+    left: 95px;
+    bottom: -7px;
+    transform: rotate(-60deg);
+    width: 200px;
+    color: RGB(var(--c3));
+    text-align: left;
+    border: none;
+    cursor: default;
   }
 }
 
@@ -309,9 +352,9 @@ export default defineComponent({
   }
 }
 
-@keyframes ka-size{
+@keyframes ka-size {
   100% {
-    transform: translate(-0.5%, -7%) scale(0.5,0.5);
+    transform: translate(-0.5%, -7%) scale(0.5, 0.5);
   }
 }
 
@@ -344,7 +387,7 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 50px;
   display: grid;
-  row-gap: 24px;
+  row-gap: 48px;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
@@ -359,7 +402,17 @@ export default defineComponent({
       margin-top: -18px;
     }
   }
+  .why-hex-explain-wide {
+    grid-column: 1 / span 2;
+    max-width: 40ch;
+    text-align: left;
+    color: RGB(var(--c0));
+    span {
+      color: RGB(var(--c3));
+    }
+  }
 }
+
 .why-hex-explain {
   position: relative;
   text-align: left;
@@ -368,28 +421,27 @@ export default defineComponent({
   span {
     color: RGB(var(--c3));
   }
-   p{
-    height:60px;
-    width:120px;
+  p {
+    height: 60px;
+    width: 120px;
     display: flex;
     position: absolute;
-    left:50%;
-    transform:translateX(-50%) rotate(-15deg);
-    align-items:center;
-    justify-content:center;
+    left: 50%;
+    transform: translateX(-50%) rotate(-15deg);
+    align-items: center;
+    justify-content: center;
     background: radial-gradient(RGB(var(--c3)), RGB(var(--c2)));
     cursor: pointer;
-    border-radius:3px;
+    border-radius: 3px;
     box-shadow: 0 10px 20px -10px RGB(var(--c1));
-    border:1px solid transparent;
+    border: 1px solid transparent;
     transition: all 0.25s ease-in-out;
-    &:hover{
-      border:1px solid white;
+    &:hover {
+      border: 1px solid white;
       box-shadow: 0 30px 40px -20px RGB(var(--c1));
     }
   }
 }
-
 
 @media (max-width: 700px) {
   .wtf-is-graphieros-body {
@@ -420,6 +472,9 @@ export default defineComponent({
   .why-hex-explain {
     margin-top: 48px;
     margin-bottom: 48px;
+  }
+  .why-hex-explain-wide {
+    margin-top: 110px;
   }
 }
 </style>
