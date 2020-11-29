@@ -67,7 +67,7 @@ a {
   }
   .fractal-mini-logo {
     animation: spin 6s linear infinite;
-    filter:drop-shadow(0 2px 2px RGBA(var(--c0), 0.5));
+    filter: drop-shadow(0 2px 2px RGBA(var(--c0), 0.5));
   }
   @keyframes spin {
     100% {
