@@ -1,5 +1,5 @@
 <template>
-  <div v-if="selectedLang === 'toggle-right'" class="glyphes">
+  <div class="glyphes">
     <div class="logo-position">
       <MiniLogo
         glyphSize="50"
@@ -9,15 +9,30 @@
         glyphColor="255,255,255"
       />
     </div>
-    <h1>graphieros <span>glyphs</span></h1>
-    <p class="glyph-presentation">
+
+    <h1 v-if="selectedLang === 'toggle-right'">
+      graphieros <span>glyphs</span>
+    </h1>
+    <h1 v-else>Les <span>glyphes</span> du graphieros</h1>
+
+    <p v-if="selectedLang === 'toggle-right'" class="glyph-presentation">
       The graphieros consists of <span>{{ glyphCount }}</span> glyphs, among
       which <span>{{ getGlyphType.ideograms }}</span> ideograms, and
       <span>{{ getGlyphType.pictograms }}</span> pictograms.<br /><br />
       These glyphs represent the material from which all words can be composed,
       by accumulation, to represent more complex objects or concepts.
     </p>
-    <div className="glyph-list">
+
+    <p v-else class="glyph-presentation">
+      Le graphieros est constitué de <span>{{ glyphCount }}</span> glyphes,
+      parmi lesquels <span>{{ getGlyphType.ideograms }}</span> idéogrammes, et
+      <span>{{ getGlyphType.pictograms }}</span> pictogrammes.<br /><br />Ces
+      glyphes représentent la matière à partir de laquelle tous les mots peuvent
+      être composés, par accumulation, pour représenter des objets ou des
+      concepts plus complexes.
+    </p>
+
+    <div v-if="selectedLang === 'toggle-right'" className="glyph-list">
       <div
         className="glyph"
         v-for="(item, index) in getDictionary"
@@ -26,7 +41,6 @@
         v-bind:key="item.name"
         v-bind:en="item.en"
       >
-      <!-- stop duplicating shit dude -->
         <Fractal
           className="glyph-fractal"
           v-bind:sequence="item.fractal"
@@ -38,28 +52,8 @@
         <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
       </div>
     </div>
-  </div>
-  <div v-else class="glyphes">
-    <div class="logo-position">
-      <MiniLogo
-        glyphSize="50"
-        height="60"
-        fontSize="25"
-        textColor="75,106,160"
-        glyphColor="255,255,255"
-        size="20"
-      />
-    </div>
-    <h1>Les <span>glyphes</span> du graphieros</h1>
-    <p class="glyph-presentation">
-      Le graphieros est constitué de <span>{{ glyphCount }}</span> glyphes,
-      parmi lesquels <span>{{ getGlyphType.ideograms }}</span> idéogrammes, et
-      <span>{{ getGlyphType.pictograms }}</span> pictogrammes.<br /><br />Ces
-      glyphes représentent la matière à partir de laquelle tous les mots peuvent
-      être composés, par accumulation, pour représenter des objets ou des
-      concepts plus complexes.
-    </p>
-    <div className="glyph-list">
+
+    <div v-else className="glyph-list">
       <div
         className="glyph"
         v-for="(item, index) in getDictionary"
@@ -83,7 +77,6 @@
 </template>
 
 <script lang="js">
-//add a v-lazy loading plugin
 import { defineComponent } from "vue";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
 import Fractal from "@/components/Fractal.vue";
