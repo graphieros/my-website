@@ -220,6 +220,17 @@ import { graphierosDictionnary } from "@/library/graphierosDictionnary";
 import Linear from "@/components/Linear.vue";
 import Fractal from "@/components/Fractal.vue";
 
+interface BigDic {
+  name: string;
+  fr: string;
+  en: string;
+  path: number[][];
+  fractal: string;
+  shapes: string[];
+  type: string;
+  description: string;
+}
+
 export default defineComponent({
   name: "WhatIsGraphieros",
   components: {
@@ -228,7 +239,6 @@ export default defineComponent({
   },
   data() {
     return {
-      glyphCount: graphierosDictionnary.length,
       wtfLinearStart: "",
       ctaClickEN: "click me",
       ctaClickFR: "cliquez-moi",
@@ -240,21 +250,30 @@ export default defineComponent({
       kaSequence: "zx-we-qd",
       kaNameEN: "to center",
       kaNameFR: "center",
-      canvasHow: "ka-fy-go sta de mea-skai / te hia boi mna-fya-fy / mea-hea ma kli-keo-grey-hea / tpe ptae-vzi-sota , fkwe / ka-fy-go sta ka-fya-fy"
+      canvasHow:
+        "ka-fy-go sta de mea-skai / te hia boi mna-fya-fy / mea-hea ma kli-keo-grey-hea / tpe ptae-vzi-sota , fkwe / ka-fy-go sta ka-fya-fy"
     };
   },
   computed: {
     selectedLang() {
       return store.getters.toggleClass;
+    },
+    getDictionary(): BigDic[] {
+      //homemade lazyload based on client height and on scroll down=> slice dic
+      return graphierosDictionnary || [];
+    },
+    glyphCount() {
+      //breaks with this.getDictionary.length
+      return graphierosDictionnary.length;
     }
   },
   methods: {
     showGlyph() {
       let random = 0;
-      random = Math.floor(Math.random() * graphierosDictionnary.length);
-      this.kaSequence = graphierosDictionnary[random].fractal;
-      this.kaNameEN = graphierosDictionnary[random].en;
-      this.kaNameFR = graphierosDictionnary[random].fr;
+      random = Math.floor(Math.random() * this.glyphCount);
+      this.kaSequence = this.getDictionary[random].fractal;
+      this.kaNameEN = this.getDictionary[random].en;
+      this.kaNameFR = this.getDictionary[random].fr;
     },
     writeGradually() {
       const time = 250;
@@ -404,7 +423,7 @@ export default defineComponent({
     box-shadow: none;
     font-family: var(--elite);
     font-size: 0.8em;
-    border:none !important;
+    border: none !important;
     cursor: default !important;
   }
 }
@@ -494,6 +513,7 @@ export default defineComponent({
 }
 
 .why-hex-explain {
+  user-select: none;
   position: relative;
   text-align: left;
   max-width: 40ch;
@@ -566,20 +586,20 @@ export default defineComponent({
 }
 
 .canvas-how {
-  width:100%;
-  padding-top:100%;
+  width: 100%;
+  padding-top: 100%;
   position: relative;
-  border-radius:100%;
+  border-radius: 100%;
   box-shadow: 0px 10px 20px -10px black, 0px -10px 20px -10px RGB(var(--c1));
   animation: shadowTest 2s infinite linear;
   div {
     position: absolute;
-    margin-top:10px;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    filter:drop-shadow(0 2px 2px black);
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    filter: drop-shadow(0 2px 2px black);
   }
 }
 
@@ -636,7 +656,7 @@ export default defineComponent({
     max-width: 40ch;
   }
 }
-.canvas-how{
+.canvas-how {
   margin-top: 48px;
 }
 </style>
