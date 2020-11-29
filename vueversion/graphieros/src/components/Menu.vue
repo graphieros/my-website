@@ -8,10 +8,14 @@
     </router-link>
 
     <router-link to="/key">
-      <div v-if="selectedLang === 'toggle-right'" class="menu-link">
+      <div
+        v-if="selectedLang === 'toggle-right'"
+        class="menu-link"
+        id="center-link-key"
+      >
         the Key
       </div>
-      <div v-else class="menu-link">la Clé</div>
+      <div v-else class="menu-link" id="center-link-key">la Clé</div>
     </router-link>
 
     <router-link to="/glyphes">
@@ -44,7 +48,7 @@ export default defineComponent({
   align-items: center;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
-  div {
+  .menu-link {
     height: 60px;
     width: 60px;
     background: radial-gradient(at top, white, RGB(var(--c2)));
@@ -59,6 +63,11 @@ export default defineComponent({
     box-shadow: 0 10px 20px -10px RGB(var(--c1)), 0 -10px 20px -10px white;
     opacity: 0.9;
     transition: opacity 0.25s ease-in-out;
+    border-top:1px solid white;
+  }
+  #center-link-key{
+    background: radial-gradient(at top, RGB(var(--c2)), RGB(var(--c1)), RGB(var(--c0)));
+    color: RGB(var(--c3));
   }
   div:hover {
     opacity: 1;
@@ -68,12 +77,14 @@ export default defineComponent({
     text-decoration: none;
     color: inherit;
   }
+
+
   @keyframes menuWow {
     0% {
       transform: scale(1, 1);
     }
-    50%{
-      transform: scale(1.1,1.1)
+    50% {
+      transform: scale(1.1, 1.1);
     }
     100% {
       transform: scale(1, 1);
