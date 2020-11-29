@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="home-logo-wrapper">
-      <Logo maxSize="200"/>
+      <Logo maxSize="200" />
     </div>
     <div v-if="selectedLang === 'toggle-right'">
       <h1 class="en">Graphieros</h1>
