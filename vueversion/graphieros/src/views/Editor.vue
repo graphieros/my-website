@@ -1,6 +1,6 @@
 <template>
   <div class="editor-body">
-    <TriToggle labelTop="lin" labelLeft="frac" labelRight="mol" />
+    <TriToggle @click="setFocus" labelTop="lin" labelLeft="frac" labelRight="mol" />
     <div class="logo-position">
       <MiniLogo
         glyphSize="50"
@@ -17,15 +17,15 @@
       class="editor-playground"
     >
       <textarea
-        v-focus
         v-if="selectedLang === 'toggle-right'"
+        ref="textarea"
         v-model="userInput"
         @input="writeLinear"
         placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
       />
       <textarea
         v-else
-        v-focus
+        ref="textarea"
         v-model="userInput"
         @input="writeLinear"
         placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
@@ -50,7 +50,7 @@
       class="editor-playground"
     >
       <textarea
-        v-focus
+        ref="textarea"
         v-if="selectedLang === 'toggle-right'"
         v-model="userInput"
         @input="writeMolecular"
@@ -58,7 +58,7 @@
       />
       <textarea
         v-else
-        v-focus
+        ref="textarea"
         v-model="userInput"
         @input="writeMolecular"
         placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
@@ -87,15 +87,16 @@
     <!-- fractal mode -->
     <div v-else class="editor-playground">
       <textarea
-        v-focus
+        ref="textarea"
         v-if="selectedLang === 'toggle-right'"
         v-model="userInput"
         @input="writeFractal"
         placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
       />
+      <!--fix with dynamic variable -->
       <textarea
+        ref="textarea"
         v-else
-        v-focus
         v-model="userInput"
         @input="writeFractal"
         placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
@@ -182,12 +183,15 @@ export default defineComponent({
       }
     }
   },
-  directives: {
-    focus: {
-      inserted: (el) => el.focus()
-    }
+   mounted(){
+    this.setFocus();
   },
   methods: {
+    setFocus() {
+      setTimeout(() => {
+      this.$refs.textarea.focus();
+    },200);
+    },
     writeLinear() {
       this.translation = "";
       const UI = this.userInput;
