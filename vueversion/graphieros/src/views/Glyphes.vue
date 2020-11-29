@@ -20,12 +20,13 @@
     <div className="glyph-list">
       <div
         className="glyph"
-        v-for="(item, index) in items"
+        v-for="(item, index) in getDictionary"
         v-bind:item="item"
         v-bind:index="index"
         v-bind:key="item.name"
         v-bind:en="item.en"
       >
+      <!-- stop duplicating shit dude -->
         <Fractal
           className="glyph-fractal"
           v-bind:sequence="item.fractal"
@@ -61,7 +62,7 @@
     <div className="glyph-list">
       <div
         className="glyph"
-        v-for="(item, index) in items"
+        v-for="(item, index) in getDictionary"
         v-bind:item="item"
         v-bind:index="index"
         v-bind:key="item.name"
@@ -94,13 +95,14 @@ export default defineComponent({
     Fractal,
     MiniLogo
   },
-  data() {
-    return {
-      items: graphierosDictionnary,
-      glyphCount: graphierosDictionnary.length
-    };
-  },
   computed: {
+    getDictionary(){
+      //homemade lazyload based on client height and on scroll down=> slice dic
+      return graphierosDictionnary || [];
+    },
+     glyphCount(){
+      return this.getDictionary.length;
+    },
     selectedLang() {
       return store.getters.toggleClass;
     },
