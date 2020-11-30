@@ -139,13 +139,23 @@
       </div>
 
       <p v-if="selectedLang === 'toggle-right'">
-        The fractal mode of graphieros proposes a new way to read in the <span>direction of depth.</span><br><br>
-        Glyphs are disposed centrally <span>on top of each other</span>, and their size decreases by half on each iteration.<br><br>
-        The reader should be allowed to travel through the glyphs as would a space traveller through unknown stellar territories.
+        The fractal mode of graphieros proposes a new way to read in the
+        <span>direction of depth.</span><br /><br />
+        Glyphs are disposed centrally <span>on top of each other</span>, and
+        their size decreases by half on each iteration.<br /><br />
+        The reader should be allowed to travel through the glyphs as would a
+        space traveller through unknown stellar territories.
       </p>
 
-      <p v-else></p>
-
+      <p v-else>
+        Le mode fractal du graphieros propose une nouvelle façon de lire dans le
+        sens <span>de la profondeur.</span><br /><br />
+        Les glyphes sont disposés les uns sur les autres autour d'un point
+        central, et <span>leur taille diminue de moitié</span> à chaque
+        itération.<br /><br />
+        Le lecteur est invité à circuler dans les glyphes comme un voyageur de
+        l'espace le ferait dans des territoires stellaires inexplorés.
+      </p>
     </div>
   </div>
 </template>
@@ -350,8 +360,8 @@ export default defineComponent({
 .fractal-wrap {
   background: radial-gradient(RGB(var(--c0)), black);
   border-radius: 3px;
-  div{
-    filter:drop-shadow(0 2px 2px black);
+  div {
+    filter: drop-shadow(0 2px 2px black);
   }
 }
 
