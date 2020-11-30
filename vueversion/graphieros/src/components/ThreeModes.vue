@@ -90,31 +90,64 @@
       </h1>
       <h1 v-else>mode <span>moléculaire</span></h1>
       <div class="molecular-wrap">
-        <div v-for="(mol,index) in generateMolecules" :key="`mol_${index}`" :id="`mol_${index}`">
+        <div
+          v-for="(mol, index) in generateMolecules"
+          :key="`mol_${index}`"
+          :id="`mol_${index}`"
+        >
           <Molecule :sequence="mol" size="200" colors="255,255,255" />
         </div>
       </div>
 
       <p v-if="selectedLang === 'toggle-right'">
-        The molecular mode is perfect for aphorisms, poetry, or any type of <span>short
-        expression.</span><br><br>
-        A maximum of <span>7 glyphs</span> can be used on a molecule. <br><br>
-        The center glyph represents the start of the word. Reading then proceeds from top left and <span>clockwise.</span>
+        The molecular mode is perfect for aphorisms, poetry, or any type of
+        <span>short expression.</span><br /><br />
+        A maximum of <span>7 glyphs</span> can be used on a molecule.
+        <br /><br />
+        The center glyph represents the start of the word. Reading then proceeds
+        from top left and <span>clockwise.</span>
       </p>
       <p v-else>
-        Le mode moléculaire est parfaitement adapté pour écrire des aphorismes, des poèmes, ou tout type <span>d'expression condensée.</span><br><br>
-        Un maximum de <span>7 glyphes</span> peuvent être utilisés sur une molécule. <br><br>
-        Le glyphe central représente le point de départ du mot. La lecture se poursuit dans le sens des aiguilles d'une montre, en partant du glyphe supérieur gauche.
+        Le mode moléculaire est parfaitement adapté pour écrire des aphorismes,
+        des poèmes, ou tout type <span>d'expression condensée.</span
+        ><br /><br />
+        Un maximum de <span>7 glyphes</span> peuvent être utilisés sur une
+        molécule. <br /><br />
+        Le glyphe central représente le point de départ du mot. La lecture se
+        poursuit dans le sens des aiguilles d'une montre, en partant du glyphe
+        supérieur gauche.
       </p>
     </div>
-  </div>
 
-  <div class="mode-focus-fractal">
-    <h1 v-if="selectedLang === 'toggle-right'">
-    </h1>
-    <h1 v-else></h1>
-  </div>
+    <div class="mode-focus-fractal">
+      <h1 v-if="selectedLang === 'toggle-right'">mode <span>fractal</span></h1>
+      <h1 v-else>Le mode <span>fractal</span></h1>
+      <div class="fractal-wrap">
+        <div
+          v-for="(frac, index) in generateFractals"
+          :key="`frac_${index}`"
+          :id="`frac_${index}`"
+        >
+          <Fractal
+            svgSize="200"
+            :sequence="frac"
+            colors="122,161,216"
+            light="true"
+            intensity="1.16"
+          />
+        </div>
+      </div>
 
+      <p v-if="selectedLang === 'toggle-right'">
+        The fractal mode of graphieros proposes a new way to read in the <span>direction of depth.</span><br><br>
+        Glyphs are disposed centrally <span>on top of each other</span>, and their size decreases by half on each iteration.<br><br>
+        The reader should be allowed to travel through the glyphs as would a space traveller through unknown stellar territories.
+      </p>
+
+      <p v-else></p>
+
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -147,6 +180,14 @@ export default defineComponent({
         "kno haw spea hea",
       ];
       return molecules;
+    },
+    generateFractals() {
+      const fractals: string[] = [
+        "eq-xq-dq-zs-sw qz-zx-xw-we-ed-dq zx-xw-we wz-zq-qw-wx-xd-dq",
+        "ws-sq-qz-ze-ed-ds-sx-xw qz-zx-xd-de-ew-wq ws-sx-xw-wq-qz-ze-ed-dx zw-wd-ew-qx",
+        "sw-wq-qz-ze-ed-dw-wx ze-eq-qx-wx-xd qz-zw-se-ex wz-zd-dw-qs-se-xs",
+      ];
+      return fractals;
     },
   },
 });
@@ -252,6 +293,7 @@ export default defineComponent({
 .mode-focus-linear,
 .mode-focus-molecular,
 .mode-focus-fractal {
+  font-family: var(--logo);
   padding: 50px;
   box-sizing: border-box;
   display: grid;
@@ -281,7 +323,7 @@ export default defineComponent({
 
 .mode-focus-molecular {
   background: radial-gradient(at top left, black, RGB(var(--c0)));
-  p{
+  p {
     color: RGB(var(--c2));
     span {
       color: RGB(var(--c3));
@@ -289,19 +331,32 @@ export default defineComponent({
   }
 }
 
-
-.molecular-wrap{
-  width:100%;
+.molecular-wrap,
+.fractal-wrap {
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  grid-template-rows: repeat(2,1fr);
-  align-items:center;
-  justify-items:center;
-  max-width:400px;
-  #mol_2{
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  max-width: 400px;
+  #mol_2,
+  #frac_2 {
     grid-column: 2;
     grid-row: 1 / span 2;
   }
+}
+
+.fractal-wrap {
+  background: radial-gradient(RGB(var(--c0)), black);
+  border-radius: 3px;
+  div{
+    filter:drop-shadow(0 2px 2px black);
+  }
+}
+
+.mode-focus-fractal {
+  background: radial-gradient(at top, RGB(var(--c2)), RGB(var(--c1)));
 }
 
 @media (max-width: 700px) {
@@ -334,7 +389,8 @@ export default defineComponent({
       margin-top: -30px;
     }
   }
-  .molecular-wrap{
+  .molecular-wrap,
+  .fractal-wrap {
     display: block;
   }
 }
