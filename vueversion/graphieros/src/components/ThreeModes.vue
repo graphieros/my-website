@@ -58,14 +58,63 @@
       </div>
     </div>
 
-    <div class="mode-focus">
+    <div class="mode-focus-linear">
+      <h1 v-if="selectedLang === 'toggle-right'">mode <span>linear</span></h1>
+      <h1 v-else>le mode<span>linéaire</span></h1>
+      <div class="linear-wrap">
+        <Linear colors="29,55,104" :sequence="graphierosBook[2].text" />
+      </div>
+
+      <p v-if="selectedLang === 'toggle-right'">
+        In its structure, the linear mode assumes that each glyph must be part
+        of a hexagonal mesh <span>without space between words.</span> Spaces
+        between paragraphs are accepted.<br /><br />A
+        <span>straight line</span> connects the center points of each glyphs of
+        a given word, to distinguish words from one another without the use of
+        blank space.
+      </p>
+      <p v-else>
+        Dans sa structuration, le mode linéaire part du principe que chaque
+        glyphe doit faire partie d'un maillage hexagonal
+        <span>sans espace entre les mots.</span> Les espaces entre les
+        paragraphes sont acceptés. <br /><br />Pour distinguer les mots les uns
+        des autres sans utiliser d'espace, un
+        <span>segment vertical</span> relie les points centraux des glyphes d'un
+        même mot.
+      </p>
+    </div>
+
+    <div class="mode-focus-molecular">
       <h1 v-if="selectedLang === 'toggle-right'">
-        Le mode <span>linéaire</span>
+        mode <span>molecular</span>
       </h1>
-      <h1 v-else>mode <span>linear</span></h1>
-      <Linear colors="29,55,104" :sequence="graphierosBook[2].text" />
+      <h1 v-else>mode <span>moléculaire</span></h1>
+      <div class="molecular-wrap">
+        <div v-for="(mol,index) in generateMolecules" :key="`mol_${index}`" :id="`mol_${index}`">
+          <Molecule :sequence="mol" size="200" colors="255,255,255" />
+        </div>
+      </div>
+
+      <p v-if="selectedLang === 'toggle-right'">
+        The molecular mode is perfect for aphorisms, poetry, or any type of <span>short
+        expression.</span><br><br>
+        A maximum of <span>7 glyphs</span> can be used on a molecule. <br><br>
+        The center glyph represents the start of the word. Reading then proceeds from top left and <span>clockwise.</span>
+      </p>
+      <p v-else>
+        Le mode moléculaire est parfaitement adapté pour écrire des aphorismes, des poèmes, ou tout type <span>d'expression condensée.</span><br><br>
+        Un maximum de <span>7 glyphes</span> peuvent être utilisés sur une molécule. <br><br>
+        Le glyphe central représente le point de départ du mot. La lecture se poursuit dans le sens des aiguilles d'une montre, en partant du glyphe supérieur gauche.
+      </p>
     </div>
   </div>
+
+  <div class="mode-focus-fractal">
+    <h1 v-if="selectedLang === 'toggle-right'">
+    </h1>
+    <h1 v-else></h1>
+  </div>
+
 </template>
 
 <script lang="ts">
@@ -90,6 +139,14 @@ export default defineComponent({
     },
     graphierosBook() {
       return LeLivrePages;
+    },
+    generateMolecules() {
+      const molecules: string[] = [
+        "sta di trea tpia",
+        "hia sme zai pio",
+        "kno haw spea hea",
+      ];
+      return molecules;
     },
   },
 });
@@ -192,14 +249,15 @@ export default defineComponent({
   }
 }
 
-.mode-focus {
+.mode-focus-linear,
+.mode-focus-molecular,
+.mode-focus-fractal {
   padding: 50px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
-  background: radial-gradient(at top, RGB(var(--c2)), RGB(var(--crad)));
   h1 {
     color: RGB(var(--c1));
     grid-column: 1 / span 2;
@@ -207,12 +265,77 @@ export default defineComponent({
       color: white !important;
     }
   }
+  p {
+    text-align: left;
+    color: RGB(var(--c0));
+    max-width: 40ch;
+    span {
+      color: white;
+    }
+  }
+}
+
+.mode-focus-linear {
+  background: radial-gradient(at top, RGB(var(--c3)), RGB(var(--crad)));
+}
+
+.mode-focus-molecular {
+  background: radial-gradient(at top left, black, RGB(var(--c0)));
+  p{
+    color: RGB(var(--c2));
+    span {
+      color: RGB(var(--c3));
+    }
+  }
+}
+
+
+.molecular-wrap{
+  width:100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  align-items:center;
+  justify-items:center;
+  max-width:400px;
+  #mol_2{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
 }
 
 @media (max-width: 700px) {
-  .three-modes-showcase,
-  .mode-focus {
+  .three-modes-showcase {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .mode-focus-linear,
+  .mode-focus-molecular,
+  .mode-focus-fractal {
+    display: block;
+    width: 100%;
+    h1 {
+      font-size: 0.9em;
+      span {
+        margin-top: -10px;
+      }
+    }
+  }
+  .mode-focus-linear {
+    div.linear-wrap {
+      display: block;
+      height: 400px;
+      width: 100%;
+      div {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    p {
+      margin-top: -30px;
+    }
+  }
+  .molecular-wrap{
+    display: block;
   }
 }
 </style>
