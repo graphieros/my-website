@@ -95,6 +95,9 @@
     <div :class="page1">
       <ThreeModes />
     </div>
+    <div :class="page2">
+      <Prefixes />
+    </div>
   </div>
 </template>
 
@@ -105,6 +108,7 @@ import Fractal from "@/components/Fractal.vue";
 import store from "@/store/index.ts";
 import WhatIsGraphieros from "@/components/WhatIsGraphieros.vue";
 import ThreeModes from "@/components/ThreeModes.vue";
+import Prefixes from "@/components/Prefixes.vue";
 
 export default defineComponent({
   name: "Key",
@@ -112,7 +116,8 @@ export default defineComponent({
     MiniLogo,
     Fractal,
     WhatIsGraphieros,
-    ThreeModes
+    ThreeModes,
+    Prefixes
   },
   data() {
     return {
