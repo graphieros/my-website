@@ -75,8 +75,8 @@ export default defineComponent({
         name: "",
         fr: "",
         en: "",
-        explEn:"",
-        explFr:""
+        explEn: "",
+        explFr: "",
       },
     };
   },
@@ -91,7 +91,7 @@ export default defineComponent({
         fr: pref.fr,
         en: pref.en,
         explEn: pref.explainEn,
-        explFr: pref.explainFr
+        explFr: pref.explainFr,
       });
     },
     closeModal() {
@@ -119,119 +119,148 @@ export default defineComponent({
           frac: "zx-ws-qe",
           explainFr:
             "Placé devant un verbe, le glyphe [ka] désigne la personne qui produit l'action. 'Donner' devient 'donneur', par exemple. Ce glyphe est de genre neutre. Il peut être remplacé par un glyphe de genre, avec la même fonction.",
-          explainEn: "Placed in front of a verb, the glyph [ka] designates the person who produces the action. 'To give' becomes 'giver', for example. This glyph is gender neutral. It can be replaced by a gender glyph, with the same function.",
+          explainEn:
+            "Placed in front of a verb, the glyph [ka] designates the person who produces the action. 'To give' becomes 'giver', for example. This glyph is gender neutral. It can be replaced by a gender glyph, with the same function.",
         },
         {
           name: "mea",
           fr: "déterminer",
           en: "to determine",
           frac: "zx-qe-wd",
-          explainFr: "Placé devant un verbe, le glyphe [mea] change celui-ci en nom. Par exemple, le verbe 'agir' devient 'action'.",
-          explainEn: "Placed in front of a verb, the glyph [mea] changes it into a noun. For example, the verb 'to act' becomes 'action'.",
+          explainFr:
+            "Placé devant un verbe, le glyphe [mea] change celui-ci en nom. Par exemple, le verbe 'agir' devient 'action'.",
+          explainEn:
+            "Placed in front of a verb, the glyph [mea] changes it into a noun. For example, the verb 'to act' becomes 'action'.",
         },
         {
           name: "pkae",
           fr: "sujet",
           en: "subject",
           frac: "zx-ws-qe-ez-zw-wx-xe",
-          explainFr: "Construit à partir de [ka] (être humain), le glyphe [pka.e] indique la personne ou la chose qui subit une action. Il est plus fréquemment utilisé pour transcrire ce que le français résout par le participe passé. Par exemple, pour dire 'j'ai pris', il faudrait dire 'je sujet-de action'.",
-          explainEn: "Constructed from [ka] (to be human), the glyph [pkae] indicates the person or thing undergoing an action. It is more frequently used to transcribe what English resolves by the past participle. For example, to say 'I was taken', one should say 'I was subject-of taking'.",
+          explainFr:
+            "Construit à partir de [ka] (être humain), le glyphe [pka.e] indique la personne ou la chose qui subit une action. Il est plus fréquemment utilisé pour transcrire ce que le français résout par le participe passé. Par exemple, pour dire 'j'ai pris', il faudrait dire 'je sujet-de action'.",
+          explainEn:
+            "Constructed from [ka] (to be human), the glyph [pkae] indicates the person or thing undergoing an action. It is more frequently used to transcribe what English resolves by the past participle. For example, to say 'I was taken', one should say 'I was subject-of taking'.",
         },
         {
           name: "ptae",
           fr: "objet",
           en: "object",
           frac: "ws-sx-xw-wz-ze-ex",
-          explainFr: "Ce préfixe permet de distinguer du substantif la possibilité de l’action de. Par exemple, on utilisera le préfixe [mea] pour changer le verbe 'accéder' en 'accession', mais [ptae] pour le changer en 'accès'; ou encore [mea] pour changer 'cadrer' en 'cadrage', et [ptae] pour le changer en 'cadre'.",
-          explainEn: "This prefix distinguishes the possibility of the action-of from the substantive. For example, we will use the prefix [mea] to change the verb 'to access' to 'accession', but [ptae] to change it to 'access'; or [mea] to change 'to frame' to 'framing', and [ptae] to change it to 'a frame'.",
+          explainFr:
+            "Ce préfixe permet de distinguer du substantif la possibilité de l’action de. Par exemple, on utilisera le préfixe [mea] pour changer le verbe 'accéder' en 'accession', mais [ptae] pour le changer en 'accès'; ou encore [mea] pour changer 'cadrer' en 'cadrage', et [ptae] pour le changer en 'cadre'.",
+          explainEn:
+            "This prefix distinguishes the possibility of the action-of from the substantive. For example, we will use the prefix [mea] to change the verb 'to access' to 'accession', but [ptae] to change it to 'access'; or [mea] to change 'to frame' to 'framing', and [ptae] to change it to 'a frame'.",
         },
         {
           name: "kio",
           fr: "habiter",
           en: "to inhabit",
           frac: "zw-wx-xe-ez-zq-qd-de",
-          explainFr: "Le glyphe [kio], permet de désigner un lieu lorsqu’il est placé en préfixe. Utilisé seul en préfixe, il ne désigne jamais un lieu qui serait le produit d’une transformation humaine. Ainsi, la Terre ou la Lune sont-ils des lieux préfixés par [kio], mais pas un pont, ni une maison. Un lac naturel, mais pas un étang artificiel.",
-          explainEn: "The glyph [kio] is used to designate a place when it is placed as a prefix. Used alone as a prefix, it never designates a place that is the product of human transformation. Thus, the Earth or the Moon are places prefixed by [kio], but not a bridge, nor a house. A natural lake, but not an artificial pond.",
+          explainFr:
+            "Le glyphe [kio], permet de désigner un lieu lorsqu’il est placé en préfixe. Utilisé seul en préfixe, il ne désigne jamais un lieu qui serait le produit d’une transformation humaine. Ainsi, la Terre ou la Lune sont-ils des lieux préfixés par [kio], mais pas un pont, ni une maison. Un lac naturel, mais pas un étang artificiel.",
+          explainEn:
+            "The glyph [kio] is used to designate a place when it is placed as a prefix. Used alone as a prefix, it never designates a place that is the product of human transformation. Thus, the Earth or the Moon are places prefixed by [kio], but not a bridge, nor a house. A natural lake, but not an artificial pond.",
         },
         {
           name: "meama",
           fr: "étant",
           en: "being",
           frac: "qz-zx-xd-de-eq-qw-wd",
-          explainFr: "Le résultat graphique de la fusion du préfixe [mea] (déterminer) et du verbe [ma] (être), est le préfixe [mea – ma], indiquant le gérondif. 'Imaginer' devient 'imaginant'.",
-          explainEn: "The graphic result of the fusion of the prefix [mea] (determine) and the verb [ma] (to be), is the prefix [mea - ma], indicating the gerund. 'To imagine' becomes 'imagining'.",
+          explainFr:
+            "Le résultat graphique de la fusion du préfixe [mea] (déterminer) et du verbe [ma] (être), est le préfixe [mea – ma], indiquant le gérondif. 'Imaginer' devient 'imaginant'.",
+          explainEn:
+            "The graphic result of the fusion of the prefix [mea] (determine) and the verb [ma] (to be), is the prefix [mea - ma], indicating the gerund. 'To imagine' becomes 'imagining'.",
         },
         {
           name: "vi",
           fr: "avec",
           en: "with",
           frac: "wz-zx-xe-ew-qd",
-          explainFr: "Placé devant un verbe, un nom ou un adjectif, le préfixe [vi] change celui-ci en adverbe. 'Obstiner' devient 'obstinément', 'particularité' devient 'particulièrement'.",
-          explainEn: "Placed in front of a verb, a noun or an adjective, the prefix [vi] changes it into an adverb. 'Obstinate' becomes 'obstinately', 'particularity' becomes 'particularly'.",
+          explainFr:
+            "Placé devant un verbe, un nom ou un adjectif, le préfixe [vi] change celui-ci en adverbe. 'Obstiner' devient 'obstinément', 'particularité' devient 'particulièrement'.",
+          explainEn:
+            "Placed in front of a verb, a noun or an adjective, the prefix [vi] changes it into an adverb. 'Obstinate' becomes 'obstinately', 'particularity' becomes 'particularly'.",
         },
         {
           name: "pkia",
           fr: "animal",
           en: "animal",
           frac: "qe-ez-zq-qw-wx-xs-se",
-          explainFr: "Le glyphe [pkia] est placé en préfixe de tout nom d'animal, en considérant que tout vivant qui n'est ni minéral ni végétal fait partie de cette catégorie.",
-          explainEn: "The glyph [pkia] is used for any animal name, considering that any living thing that is neither mineral nor plant belongs to this category.",
+          explainFr:
+            "Le glyphe [pkia] est placé en préfixe de tout nom d'animal, en considérant que tout vivant qui n'est ni minéral ni végétal fait partie de cette catégorie.",
+          explainEn:
+            "The glyph [pkia] is used for any animal name, considering that any living thing that is neither mineral nor plant belongs to this category.",
         },
         {
           name: "pio",
           fr: "végétal",
           en: "vegetal",
           frac: "zw-wd-ew-qx",
-          explainFr: "Le glyphe [pio] est placé en préfixe de tout nom de végétal.",
-          explainEn: "The glyph [pio} is used as a prefix for any vegetal name.",
+          explainFr:
+            "Le glyphe [pio] est placé en préfixe de tout nom de végétal.",
+          explainEn:
+            "The glyph [pio} is used as a prefix for any vegetal name.",
         },
         {
           name: "mina",
           fr: "minéral",
           en: "mineral",
           frac: "wz-zs-se-ex-xw-wq-qz-ze-ed-dx",
-          explainFr: "Le glyphe [mina] est placé en préfixe de tout nom de minéral.",
-          explainEn: "The glyph [mina] is used as a prefix for any mineral name.",
+          explainFr:
+            "Le glyphe [mina] est placé en préfixe de tout nom de minéral.",
+          explainEn:
+            "The glyph [mina] is used as a prefix for any mineral name.",
         },
         {
           name: "psoi",
           fr: "passé",
           en: "past",
           frac: "eq-xq-dq",
-          explainFr: "Le glyphe [psoi] est utilisé en préfixe pour conjuguer les verbes au passé.",
-          explainEn: "The glyph [psoi] is used as a prefix to conjugate verbs in the past tense.",
+          explainFr:
+            "Le glyphe [psoi] est utilisé en préfixe pour conjuguer les verbes au passé.",
+          explainEn:
+            "The glyph [psoi] is used as a prefix to conjugate verbs in the past tense.",
         },
         {
           name: "ftu",
           fr: "futur",
           en: "future",
           frac: "qd-zd-dw",
-          explainFr: "Le glyphe [ftu] est utilisé en préfixe pour conjuguer les verbes au futur.",
-          explainEn: "The glyph [ftu] is used as a prefix to conjugate verbs in the future tense.",
+          explainFr:
+            "Le glyphe [ftu] est utilisé en préfixe pour conjuguer les verbes au futur.",
+          explainEn:
+            "The glyph [ftu] is used as a prefix to conjugate verbs in the future tense.",
         },
         {
           name: "fo",
           fr: "impératif",
           en: "imperative",
           frac: "zd-dw-wz-ze-ex",
-          explainFr: "Le glyphe [fo] est utilisé en préfixe pour utiliser un verbe à l'impératif.",
-          explainEn: "The glyph [fo] is used as a prefix to use an imperative verb.",
+          explainFr:
+            "Le glyphe [fo] est utilisé en préfixe pour utiliser un verbe à l'impératif.",
+          explainEn:
+            "The glyph [fo] is used as a prefix to use an imperative verb.",
         },
         {
           name: "hi",
           fr: "conditionnel",
           en: "conditional",
           frac: "zd-dw-xq-qe",
-          explainFr: "Le glyphe [hi] est utilisé en préfixe pour utiliser un verbe au conditionnel.",
-          explainEn: "The glyyph [hi] is used as a prefix to use a verb in the conditional.",
+          explainFr:
+            "Le glyphe [hi] est utilisé en préfixe pour utiliser un verbe au conditionnel.",
+          explainEn:
+            "The glyyph [hi] is used as a prefix to use a verb in the conditional.",
         },
         {
           name: "fi",
           fr: "subjonctif",
           en: "subjonctive",
           frac: "eq-qw-dq-zx",
-          explainFr: "Le glyphe [fi] est utilisé en préfixe pour utiliser un verbe au subjoncitf.",
-          explainEn: "The glyyph [hi] is used as a prefix to use a verb in the subjonctive.",
+          explainFr:
+            "Le glyphe [fi] est utilisé en préfixe pour utiliser un verbe au subjoncitf.",
+          explainEn:
+            "The glyyph [hi] is used as a prefix to use a verb in the subjonctive.",
         },
       ];
       return prefixes;
@@ -413,11 +442,11 @@ h2 {
       margin-top: -20px;
       color: RGB(var(--c1));
     }
-    p{
+    p {
       font-family: var(--inter);
       color: RGB(var(--c3));
-      text-align:left;
-      padding:20px;
+      text-align: left;
+      padding: 20px;
     }
   }
 }
@@ -436,9 +465,9 @@ h2 {
     .modal-inside {
       height: calc(100% - 20px);
       width: calc(100% - 20px);
-      p{
-        margin-top:-20px;
-        font-size:0.8em;
+      p {
+        margin-top: -20px;
+        font-size: 0.8em;
       }
     }
   }
