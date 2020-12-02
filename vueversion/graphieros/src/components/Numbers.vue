@@ -9,10 +9,27 @@
     <br />
     <button v-if="selectedLang === 'toggle-right'" @click="getNumbers">COUNT</button>
     <button v-else @click="getNumbers">COMPTER</button>
+    <p v-if="selectedLang === 'toggle-right'">Graphieros has a duodecimal numeric system.</p>
+    <p v-else>Le système numérique du graphieros est duodécimal.</p>
     <div class="num-list-wrapper">
       <div class="num-list" v-for="(num, index) in numberBase" :key="`num_${index}`">
         <Linear :sequence="num.name" colors="255,255,255" />
         <span> {{ num.name }}</span>
+      </div>
+    </div>
+    <div class="number-converter">
+      <label v-if="selectedLang === 'toggle-right'">Convert an integer to numeral graphieros:</label>
+      <label v-else>Convertissez un entier en graphieros numérique:</label>
+      <input v-if="selectedLang === 'toggle-right'" v-model="userInput" @input="() => playWithNumbers(userInput)" placeholder="input a number..." />
+      <input v-else v-model="userInput" @input="() => playWithNumbers(userInput)" placeholder="entrez un nombre..." />
+      <span v-if="selectedLang === 'toggle-right'" class="converted-number"
+        >in duodécimal: <span>{{ userOutput }}</span></span
+      >
+      <span v-else class="converted-number"
+        >en duodécimal: <span>{{ userOutput }}</span></span
+      >
+      <div class="user-line">
+        <Linear :sequence="userSequence" colors="255,255,255" />
       </div>
     </div>
   </div>
@@ -36,6 +53,9 @@ export default defineComponent({
       currentNum: "",
       count: 0,
       classSelect: "inactive",
+      userInput: "",
+      userSequence: "nmae",
+      userOutput: "...",
     };
   },
   computed: {
@@ -101,12 +121,12 @@ export default defineComponent({
         {
           name: "dza",
           frac: "qz-ze-ed-dx-xw-wq-ws-sz-ds-zw",
-          num: "10",
+          num: "A",
         },
         {
           name: "zno",
           frac: "qz-ze-ed-dx-xw-wq-ws-sz-ds-zw-zd",
-          num: "11",
+          num: "B",
         },
       ];
       return numbers;
@@ -120,6 +140,25 @@ export default defineComponent({
       this.currentFrac = this.numberBase[this.count].frac;
       this.currentNum = this.numberBase[this.count].num;
       this.count += 1;
+    },
+    playWithNumbers(el: string) {
+      const toBase12 = parseInt(el, 10).toString(12);
+      if (el === "") {
+        this.userOutput = "...";
+      } else {
+        this.userOutput = toBase12;
+      }
+
+      const convertedCollection = toBase12.split("");
+      let output: string[];
+      this.userSequence = "nmae";
+      convertedCollection.forEach((num) => {
+        this.numberBase.forEach((entry) => {
+          if (num.toUpperCase() === entry.num) {
+            this.userSequence += `-${entry.name}`;
+          }
+        });
+      });
     },
   },
 });
@@ -144,7 +183,7 @@ export default defineComponent({
     }
   }
   p {
-    text-align: left;
+    text-align: center;
     max-width: 60ch;
     margin-left: 50%;
     transform: translateX(-50%);
@@ -189,6 +228,43 @@ export default defineComponent({
     span {
       display: block;
       margin-top: -30px;
+    }
+  }
+}
+.user-line {
+  height: 300px;
+  div {
+    height: 100%;
+  }
+}
+
+.number-converter {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  background: radial-gradient(at top right, black, RGB(var(--c0)));
+  label {
+    display: block;
+    box-sizing: border-box;
+    padding: 6px;
+    color: RGB(var(--c1));
+  }
+  input {
+    font-family: var(--mono0);
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 1.2em;
+    background: radial-gradient(at top left, white, RGB(var(--c2)));
+    border: none;
+    border-radius: 3px;
+  }
+  span {
+    display: block;
+    margin-top: 24px;
+    color: RGB(var(--c1));
+    span {
+      color: RGB(var(--c2));
+      font-family: var(--mono0);
+      font-weight: bold;
     }
   }
 }
