@@ -104,6 +104,9 @@
     <div :class="page4">
       <Phonology />
     </div>
+    <div :class="page5">
+      <Grammar />
+    </div>
   </div>
 </template>
 
@@ -117,6 +120,7 @@ import ThreeModes from "@/components/ThreeModes.vue";
 import Prefixes from "@/components/Prefixes.vue";
 import Numbers from "@/components/Numbers.vue";
 import Phonology from "@/components/Phonology.vue";
+import Grammar from "@/components/Grammar.vue";
 
 export default defineComponent({
   name: "Key",
@@ -128,6 +132,7 @@ export default defineComponent({
     Prefixes,
     Numbers,
     Phonology,
+    Grammar,
   },
   data() {
     return {
