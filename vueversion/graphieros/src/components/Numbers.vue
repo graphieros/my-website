@@ -172,7 +172,6 @@ export default defineComponent({
       }
 
       const convertedCollection = toBase12.split("");
-      let output: string[];
       this.userSequence = "nmae";
       convertedCollection.forEach((num) => {
         this.numberBase.forEach((entry) => {
