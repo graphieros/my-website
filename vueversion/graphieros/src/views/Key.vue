@@ -101,6 +101,9 @@
     <div :class="page3">
       <Numbers />
     </div>
+    <div :class="page4">
+      <Phonology />
+    </div>
   </div>
 </template>
 
@@ -113,6 +116,7 @@ import WhatIsGraphieros from "@/components/WhatIsGraphieros.vue";
 import ThreeModes from "@/components/ThreeModes.vue";
 import Prefixes from "@/components/Prefixes.vue";
 import Numbers from "@/components/Numbers.vue";
+import Phonology from "@/components/Phonology.vue";
 
 export default defineComponent({
   name: "Key",
@@ -122,7 +126,8 @@ export default defineComponent({
     WhatIsGraphieros,
     ThreeModes,
     Prefixes,
-    Numbers
+    Numbers,
+    Phonology,
   },
   data() {
     return {
@@ -135,13 +140,13 @@ export default defineComponent({
       page2: "page-prefixes-inactive",
       page3: "page-numbers-inactive",
       page4: "page-phonology-inactive",
-      page5: "page-grammar-inactive"
+      page5: "page-grammar-inactive",
     };
   },
   computed: {
     selectedLang() {
       return store.getters.toggleClass;
-    }
+    },
   },
   methods: {
     displayMenuFractal(position: number) {
@@ -151,7 +156,7 @@ export default defineComponent({
         "qw-wz-sx-xe we-xe-qd wz-zq-qw-sq dq-zs-sw",
         "wz-ze-ex-xw-ws-sx wz-zx-xe zs-sd-sw",
         "qw-zx-ed se-ez-zw-wx-xs-sd zs-se-qd-wx",
-        "zw-ex qw-wz-sx-xe dq-zs-sw"
+        "zw-ex qw-wz-sx-xe dq-zs-sw",
       ];
       this.menuFracSequence = sequences[position];
     },
@@ -162,7 +167,7 @@ export default defineComponent({
         "page-prefixes",
         "page-numbers",
         "page-phonology",
-        "page-grammar"
+        "page-grammar",
       ];
 
       switch (page) {
@@ -204,8 +209,8 @@ export default defineComponent({
       this.page3 = "page-numbers-inactive";
       this.page4 = "page-phonology-inactive";
       this.page5 = "page-grammar-inactive";
-    }
-  }
+    },
+  },
 });
 </script>
 
