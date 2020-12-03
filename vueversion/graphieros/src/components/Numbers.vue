@@ -7,21 +7,43 @@
     </div>
     <span class="current-num">{{ currentNum }}</span>
     <br />
-    <button v-if="selectedLang === 'toggle-right'" @click="getNumbers">COUNT</button>
+    <button v-if="selectedLang === 'toggle-right'" @click="getNumbers">
+      COUNT
+    </button>
     <button v-else @click="getNumbers">COMPTER</button>
-    <p v-if="selectedLang === 'toggle-right'">Graphieros has a duodecimal numeric system.</p>
+    <p v-if="selectedLang === 'toggle-right'">
+      Graphieros has a duodecimal numeric system.
+    </p>
     <p v-else>Le système numérique du graphieros est duodécimal.</p>
     <div class="num-list-wrapper">
-      <div class="num-list" v-for="(num, index) in numberBase" :key="`num_${index}`">
+      <div
+        class="num-list"
+        v-for="(num, index) in numberBase"
+        :key="`num_${index}`"
+      >
         <Linear :sequence="num.name" colors="255,255,255" />
         <span> {{ num.name }}</span>
       </div>
     </div>
     <div class="number-converter">
-      <label v-if="selectedLang === 'toggle-right'">Convert an integer to numeral graphieros:</label>
+      <label v-if="selectedLang === 'toggle-right'"
+        >Convert an integer to numeral graphieros:</label
+      >
       <label v-else>Convertissez un entier en graphieros numérique:</label>
-      <input v-if="selectedLang === 'toggle-right'" v-model="userInput" @input="() => playWithNumbers(userInput)" placeholder="input a number..." />
-      <input v-else v-model="userInput" @input="() => playWithNumbers(userInput)" placeholder="entrez un nombre..." />
+      <input
+        type="number"
+        v-if="selectedLang === 'toggle-right'"
+        v-model="userInput"
+        @input="() => playWithNumbers(userInput)"
+        placeholder="input a number..."
+      />
+      <input
+        type="number"
+        v-else
+        v-model="userInput"
+        @input="() => playWithNumbers(userInput)"
+        placeholder="entrez un nombre..."
+      />
       <span v-if="selectedLang === 'toggle-right'" class="converted-number"
         >in duodécimal: <span>{{ userOutput }}</span></span
       >
@@ -249,6 +271,7 @@ export default defineComponent({
     color: RGB(var(--c1));
   }
   input {
+    margin-top: 10px;
     font-family: var(--mono0);
     box-sizing: border-box;
     padding: 10px;
@@ -256,6 +279,11 @@ export default defineComponent({
     background: radial-gradient(at top left, white, RGB(var(--c2)));
     border: none;
     border-radius: 3px;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
   }
   span {
     display: block;
