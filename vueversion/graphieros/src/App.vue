@@ -7,11 +7,27 @@
   -->
   <div class="main-bg" />
   <router-view />
+  <ToTopButton />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import ToTopButton from "@/components/atoms/ToTopButton.vue";
+
+export default defineComponent({
+  name: "App",
+  components: {
+    ToTopButton,
+  },
+});
+</script>
 
 <style lang="scss">
 body {
   overflow-y: scroll;
+}
+html {
+  scroll-behavior: smooth;
 }
 body,
 html {
