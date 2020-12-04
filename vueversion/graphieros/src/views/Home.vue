@@ -174,7 +174,7 @@ export default defineComponent({
     Search,
     Toggle,
     Logo,
-    Menu
+    Menu,
   },
   data() {
     return {
@@ -192,13 +192,13 @@ export default defineComponent({
       phono: "",
       allMatches: {},
       wordMatchesSize: 0,
-      time: 0
+      time: 0,
     };
   },
   computed: {
     selectedLang() {
       return store.getters.toggleClass;
-    }
+    },
   },
   methods: {
     inputFunction(input: string) {
@@ -347,8 +347,8 @@ export default defineComponent({
           }
         });
       }
-    }
-  }
+    },
+  },
 });
 </script>
 <style lang="scss" scoped>
