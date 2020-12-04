@@ -235,7 +235,7 @@ export default defineComponent({
   name: "WhatIsGraphieros",
   components: {
     Linear,
-    Fractal
+    Fractal,
   },
   data() {
     return {
@@ -251,7 +251,7 @@ export default defineComponent({
       kaNameEN: "to center",
       kaNameFR: "center",
       canvasHow:
-        "ka-fy-go sta de mea-skai / te hia boi mna-fya-fy / mea-hea ma kli-keo-grey-hea / tpe ptae-vzi-sota , fkwe / ka-fy-go sta ka-fya-fy"
+        "ka-fy-go sta de mea-skai / te hia boi mna-fya-fy / mea-hea ma kli-keo-grey-hea / tpe ptae-vzi-sota , fkwe / ka-fy-go sta ka-fya-fy",
     };
   },
   computed: {
@@ -265,7 +265,7 @@ export default defineComponent({
     glyphCount() {
       //breaks with this.getDictionary.length
       return graphierosDictionnary.length;
-    }
+    },
   },
   methods: {
     showGlyph() {
@@ -291,7 +291,7 @@ export default defineComponent({
         "tew",
         "-",
         "ma",
-        " !"
+        " !",
       ];
       this.wtfLinearStart = "";
       this.ctaClickEN = "";
@@ -319,8 +319,8 @@ export default defineComponent({
       textAtoms.forEach((atom: string, i: number) => {
         doSetTimeout(i);
       });
-    }
-  }
+    },
+  },
 });
 </script>
 
