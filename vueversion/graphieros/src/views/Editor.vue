@@ -1,6 +1,11 @@
 <template>
   <div class="editor-body">
-    <TriToggle @click="setFocus" labelTop="lin" labelLeft="frac" labelRight="mol" />
+    <TriToggle
+      @click="setFocus"
+      labelTop="lin"
+      labelLeft="frac"
+      labelRight="mol"
+    />
     <div class="logo-position">
       <MiniLogo
         glyphSize="50"
@@ -138,6 +143,7 @@ import Fractal from "@/components/Fractal.vue";
 import TriToggle from "@/components/TriToggle.vue";
 import store from "@/store/index.ts";
 import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
+// import { SVG, extend as SVGextend, Element as SVGElement } from '@svgdotjs/svg.js'
 
 export default defineComponent({
   name: "Editor",
