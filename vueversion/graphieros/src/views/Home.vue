@@ -551,5 +551,8 @@ h1.fr::after {
   .home-logo-wrapper {
     margin-top: 250px;
   }
+  .progressive-results {
+    max-width: 230px;
+  }
 }
 </style>
