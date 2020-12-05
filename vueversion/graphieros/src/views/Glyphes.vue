@@ -73,7 +73,6 @@
         <span className="span-name">[ {{ item.name.replace("_", "") }} ]</span>
       </div>
     </div>
-    <ToTopButton />
   </div>
 </template>
 
@@ -83,13 +82,11 @@ import { graphierosDictionnary } from "@/library/graphierosDictionnary.js";
 import Fractal from "@/components/Fractal.vue";
 import MiniLogo from "@/components/MiniLogo.vue";
 import store from "@/store/index.ts";
-import ToTopButton from "@/components/atoms/ToTopButton.vue";
 export default defineComponent({
   name: "Home",
   components: {
     Fractal,
     MiniLogo,
-    ToTopButton
   },
   computed: {
     getDictionary(){
