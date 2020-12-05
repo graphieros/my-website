@@ -270,7 +270,8 @@ function fractal({
     dropShadow,
     wrapperBackground,
     backgroundRadius,
-    fit
+    fit,
+    strokeWidth
 }) {
 
     // let [red, green, blue] = colors;
@@ -292,12 +293,13 @@ function fractal({
     dropShadow = `drop-shadow(${dropShadow})` || 'none';
     wrapperBackground = wrapperBackground || 'transparent';
     backgroundRadius = backgroundRadius || '0px';
+    strokeWidth = strokeWidth || "0px";
 
     // const SECTION = document.getElementById(section);
     const coordinates = sequence;
 
     const xmlns = "http://www.w3.org/2000/svg";
-    const _p = `<path style="stroke-width:2px;stroke-linecap:round;stroke-linejoin:round;" d="M `;
+    const _p = `<path style="stroke-width:${strokeWidth};stroke-linecap:round;stroke-linejoin:round;" d="M `;
     const p_ = '"/>';
 
     const SVG = document.createElementNS(xmlns, "svg");
@@ -569,42 +571,49 @@ function fractal({
                 circle0.setAttributeNS(null, "cy", d0[1]);
                 circle0.setAttributeNS(null, "r", radius);
                 circle0.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle0.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
 
 
                 circle1.setAttributeNS(null, "cx", d1[0]);
                 circle1.setAttributeNS(null, "cy", d1[1]);
                 circle1.setAttributeNS(null, "r", radius);
                 circle1.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle1.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
 
 
                 circle2.setAttributeNS(null, "cx", d2[0]);
                 circle2.setAttributeNS(null, "cy", d2[1]);
                 circle2.setAttributeNS(null, "r", radius);
                 circle2.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle2.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
 
 
                 circle3.setAttributeNS(null, "cx", d3[0]);
                 circle3.setAttributeNS(null, "cy", d3[1]);
                 circle3.setAttributeNS(null, "r", radius);
                 circle3.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle3.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
 
 
                 circle4.setAttributeNS(null, "cx", d4[0]);
                 circle4.setAttributeNS(null, "cy", d4[1]);
                 circle4.setAttributeNS(null, "r", radius);
                 circle4.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle4.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
 
 
                 circle5.setAttributeNS(null, "cx", d5[0]);
                 circle5.setAttributeNS(null, "cy", d5[1]);
                 circle5.setAttributeNS(null, "r", radius);
                 circle5.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle5.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
 
 
                 circle6.setAttributeNS(null, "cx", d6[0]);
                 circle6.setAttributeNS(null, "cy", d6[1]);
                 circle6.setAttributeNS(null, "r", radius);
                 circle6.setAttributeNS(null, "fill", `rgb(${colors})`);
+                circle6.setAttributeNS(null, "stroke-width", `${strokeWidth}`);
             }());
 
             let plots = line.split("-");
