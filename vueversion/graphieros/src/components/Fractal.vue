@@ -14,7 +14,8 @@ export default defineComponent({
     svgSize: String,
     intensity: String,
     light: String,
-    size: String
+    size: String,
+    strokeWidth: String,
   },
   computed: {
     frac() {
@@ -24,10 +25,11 @@ export default defineComponent({
         svgSize: this.svgSize,
         intensity: this.intensity,
         light: Boolean(this.light),
-        size: this.size
+        size: this.size,
+        strokeWidth: this.strokeWidth,
       });
-    }
-  }
+    },
+  },
 });
 </script>
 <style lang="scss" scoped></style>
