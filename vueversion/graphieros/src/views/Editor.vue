@@ -1,46 +1,16 @@
 <template>
   <div class="editor-body">
-    <TriToggle
-      @click="setFocus"
-      labelTop="lin"
-      labelLeft="frac"
-      labelRight="mol"
-    />
+    <TriToggle @click="setFocus" labelTop="lin" labelLeft="frac" labelRight="mol" />
     <div class="logo-position">
-      <MiniLogo
-        glyphSize="50"
-        height="60"
-        fontSize="25"
-        textColor="75,106,160"
-        glyphColor="255,255,255"
-      />
+      <MiniLogo glyphSize="50" height="60" fontSize="25" textColor="75,106,160" glyphColor="255,255,255" />
     </div>
 
     <!-- linear mode -->
-    <div
-      v-if="selectedGraphierosMode === 'tritog-toggle-top'"
-      class="editor-playground"
-    >
-      <textarea
-        v-if="selectedLang === 'toggle-right'"
-        ref="textarea"
-        v-model="userInput"
-        @input="writeLinear"
-        placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
-      />
-      <textarea
-        v-else
-        ref="textarea"
-        v-model="userInput"
-        @input="writeLinear"
-        placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
-      />
+    <div v-if="selectedGraphierosMode === 'tritog-toggle-top'" class="editor-playground">
+      <textarea v-if="selectedLang === 'toggle-right'" ref="textarea" v-model="userInput" @input="writeLinear" placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !" />
+      <textarea v-else ref="textarea" v-model="userInput" @input="writeLinear" placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !" />
       <div class="editor-output-active">
-        <Linear
-          className="editor-linear"
-          :sequence="linearSequence"
-          colors="29,55,104"
-        />
+        <Linear className="editor-linear" :sequence="linearSequence" colors="29,55,104" />
       </div>
       <p v-if="selectedLang === 'toggle-right'">Linear mode</p>
       <p v-else>Mode linéaire</p>
@@ -50,32 +20,12 @@
     </div>
 
     <!-- molecular mode -->
-    <div
-      v-else-if="selectedGraphierosMode === 'tritog-toggle-right'"
-      class="editor-playground"
-    >
-      <textarea
-        ref="textarea"
-        v-if="selectedLang === 'toggle-right'"
-        v-model="userInput"
-        @input="writeMolecular"
-        placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
-      />
-      <textarea
-        v-else
-        ref="textarea"
-        v-model="userInput"
-        @input="writeMolecular"
-        placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
-      />
+    <div v-else-if="selectedGraphierosMode === 'tritog-toggle-right'" class="editor-playground">
+      <textarea ref="textarea" v-if="selectedLang === 'toggle-right'" v-model="userInput" @input="writeMolecular" placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !" />
+      <textarea v-else ref="textarea" v-model="userInput" @input="writeMolecular" placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !" />
       <div class="editor-output-active">
         <div v-for="word in processedMolecules" :key="word">
-          <Molecule
-            className="editor-molecular"
-            :sequence="word"
-            colors="29,55,104"
-            size="150"
-          />
+          <Molecule className="editor-molecular" :sequence="word" colors="29,55,104" size="150" />
         </div>
       </div>
       <p v-if="selectedLang === 'toggle-right'">Molecular mode</p>
@@ -91,31 +41,12 @@
 
     <!-- fractal mode -->
     <div v-else class="editor-playground">
-      <textarea
-        ref="textarea"
-        v-if="selectedLang === 'toggle-right'"
-        v-model="userInput"
-        @input="writeFractal"
-        placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !"
-      />
+      <textarea ref="textarea" v-if="selectedLang === 'toggle-right'" v-model="userInput" @input="writeFractal" placeholder="input graphieros phonology here, for example: kli-keo mea-kadwa / kio-tew-ma !" />
       <!--fix with dynamic variable -->
-      <textarea
-        ref="textarea"
-        v-else
-        v-model="userInput"
-        @input="writeFractal"
-        placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !"
-      />
+      <textarea ref="textarea" v-else v-model="userInput" @input="writeFractal" placeholder="écrivez ici en graphieros phonologique, par exemple: kli-keo mea-kadwa / kio-tew-ma !" />
       <div class="editor-output-active fractal-board">
         <div v-for="word in processedFractals" :key="word">
-          <Fractal
-            className="editor-fractal"
-            :sequence="word"
-            colors="75,106,160"
-            light="yes"
-            intensity="1.25"
-            svgSize="270"
-          />
+          <Fractal className="editor-fractal" :sequence="word" colors="75,106,160" light="yes" intensity="1.25" svgSize="270" />
         </div>
       </div>
       <p v-if="selectedLang === 'toggle-right'">Fractal mode</p>
@@ -126,9 +57,7 @@
     </div>
   </div>
   <div class="translation-hub" :style="showTranslation">
-    <span class="explain" v-if="selectedLang === 'toggle-right'"
-      >Litteral translation</span
-    >
+    <span class="explain" v-if="selectedLang === 'toggle-right'">Litteral translation</span>
     <span class="explain" v-else>Traduction littérale</span>
     <p class="explain">{{ translation }}</p>
   </div>
@@ -200,7 +129,7 @@ export default defineComponent({
     },
     writeLinear() {
       this.translation = "";
-      const UI = this.userInput;
+      const UI = this.userInput.toLowerCase();
       this.linearSequence = UI;
 
       if (UI === "") {
@@ -341,12 +270,7 @@ export default defineComponent({
   left: 0;
   z-index: 1;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0.774),
-    transparent,
-    transparent
-  );
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.774), transparent, transparent);
 }
 .editor-playground {
   position: relative;
@@ -466,16 +390,10 @@ export default defineComponent({
 }
 
 .fractal-board {
-  background: radial-gradient(
-    at top left,
-    RGB(var(--c1)),
-    RGB(var(--c0)),
-    black
-  );
+  background: radial-gradient(at top left, RGB(var(--c1)), RGB(var(--c0)), black);
   div {
     &:first-child {
-      filter: drop-shadow(1px 1px 2px black)
-        drop-shadow(-1px -1px 1px RGBA(var(--c3), 0.4));
+      filter: drop-shadow(1px 1px 2px black) drop-shadow(-1px -1px 1px RGBA(var(--c3), 0.4));
     }
   }
 }
