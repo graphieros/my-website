@@ -22,51 +22,24 @@
       <Fractal :sequence="fractalRes" svgSize="100" colors="29, 55, 104" />
       <span><span>[ </span>{{ searchResult }}<span> ]</span></span>
       <div class="close-search" v-on:click="closeModal">
-        <Fractal
-          className="close-search-fractal"
-          sequence="zx-we"
-          svgSize="30"
-          colors="255,255,255"
-        />
+        <Fractal className="close-search-fractal" sequence="zx-we" svgSize="30" colors="255,255,255" />
       </div>
     </div>
 
-    <div
-      class="progressive-results"
-      v-show="wordMatchesSize > 0"
-      v-if="selectedLang === 'toggle-right'"
-    >
+    <div class="progressive-results" v-show="wordMatchesSize > 0" v-if="selectedLang === 'toggle-right'">
       <span v-if="wordMatchesSize > 1">{{ wordMatchesSize }} words found</span>
       <span v-else>{{ wordMatchesSize }} word found</span>
       <ul>
-        <li
-          v-for="(word, index) in allMatches"
-          v-bind:word="word"
-          v-bind:index="index"
-          v-bind:key="word.en"
-          v-bind:en="word.en"
-          v-on:click="showModal($event.target.innerHTML)"
-        >
+        <li v-for="(word, index) in allMatches" v-bind:word="word" v-bind:index="index" v-bind:key="word.en" v-bind:en="word.en" v-on:click="showModal($event.target.innerHTML)">
           {{ word.en }}
         </li>
       </ul>
     </div>
-    <div
-      class="progressive-results"
-      v-show="wordMatchesSize > 0"
-      v-if="selectedLang === 'toggle-left'"
-    >
+    <div class="progressive-results" v-show="wordMatchesSize > 0" v-if="selectedLang === 'toggle-left'">
       <span v-if="wordMatchesSize > 1">{{ wordMatchesSize }} mots trouvés</span>
       <span v-else>{{ wordMatchesSize }} mot trouvé</span>
       <ul>
-        <li
-          v-for="(word, index) in allMatches"
-          v-bind:word="word"
-          v-bind:index="index"
-          v-bind:key="word.fr"
-          v-bind:fr="word.fr"
-          v-on:click="showModal($event.target.innerHTML)"
-        >
+        <li v-for="(word, index) in allMatches" v-bind:word="word" v-bind:index="index" v-bind:key="word.fr" v-bind:fr="word.fr" v-on:click="showModal($event.target.innerHTML)">
           {{ word.fr }}
         </li>
       </ul>
@@ -77,12 +50,7 @@
       <Fractal :sequence="phonoRes" svgSize="100" colors="29, 55, 104" />
       <span><span>[ </span>{{ phono }}<span> ]</span></span>
       <div class="close-search" v-on:click="closeModal">
-        <Fractal
-          className="close-search-fractal"
-          sequence="zx-we"
-          svgSize="30"
-          colors="255,255,255"
-        />
+        <Fractal className="close-search-fractal" sequence="zx-we" svgSize="30" colors="255,255,255" />
       </div>
     </div>
 
@@ -93,12 +61,7 @@
       </div>
       <span>[ {{ lineRes }} ]</span>
       <div class="close-search" v-on:click="closeModal">
-        <Fractal
-          className="close-search-fractal"
-          sequence="zx-we"
-          svgSize="30"
-          colors="255,255,255"
-        />
+        <Fractal className="close-search-fractal" sequence="zx-we" svgSize="30" colors="255,255,255" />
       </div>
     </div>
 
@@ -109,21 +72,12 @@
       </div>
       <span>[ {{ phonoWordRes }} ]</span>
       <div class="close-search" v-on:click="closeModal">
-        <Fractal
-          className="close-search-fractal"
-          sequence="zx-we"
-          svgSize="30"
-          colors="255,255,255"
-        />
+        <Fractal className="close-search-fractal" sequence="zx-we" svgSize="30" colors="255,255,255" />
       </div>
     </div>
 
     <div class="fractal-watermark0">
-      <fractal
-        sequence="zw-wd-dz-qs-se-xs"
-        colors="255,255,255"
-        svgSize="100%"
-      />
+      <fractal sequence="zw-wd-dz-qs-se-xs" colors="255,255,255" svgSize="100%" />
     </div>
 
     <div class="counters">
@@ -146,9 +100,7 @@
     </div>
 
     <div class="credit">
-      <p v-if="selectedLang === 'toggle-right'">
-        designed by <span>Alec Lloyd Probert</span> 2020
-      </p>
+      <p v-if="selectedLang === 'toggle-right'">designed by <span>Alec Lloyd Probert</span> 2020</p>
       <p v-else>créé par <span>Alec Lloyd Probert</span> 2020</p>
     </div>
   </div>
@@ -207,25 +159,23 @@ export default defineComponent({
 
       if (language === "toggle-right") {
         this.time = setTimeout(() => {
-          graphierosDictionnary.forEach(
-            (entry: { name: string; fractal: string; en: string }) => {
-              if (entry.en === input) {
-                this.searchResult = entry.name.replace("_", "");
-                this.fractalRes = entry.fractal;
-                this.textResFrac = entry.en;
-              }
-              if (entry.name.replace("_", "") === input) {
-                this.phonoRes = entry.fractal;
-                this.textPhonoRes = entry.en;
-                this.phono = entry.name.replace("_", "");
-              }
+          graphierosDictionnary.forEach((entry: { name: string; fractal: string; en: string }) => {
+            if (entry.en === input.toLowerCase()) {
+              this.searchResult = entry.name.replace("_", "");
+              this.fractalRes = entry.fractal;
+              this.textResFrac = entry.en;
             }
-          );
+            if (entry.name.replace("_", "") === input.toLowerCase()) {
+              this.phonoRes = entry.fractal;
+              this.textPhonoRes = entry.en;
+              this.phono = entry.name.replace("_", "");
+            }
+          });
 
           //return progressive matches during user input
           const findMatches = (source: Record<string, any>) => {
             return source.filter((entry: any) => {
-              const regex = new RegExp(`^${input}`, "gi");
+              const regex = new RegExp(`^${input.toLowerCase()}`, "gi");
               return entry.en.match(regex);
             });
           };
@@ -244,40 +194,36 @@ export default defineComponent({
             this.allMatches = {};
             this.wordMatchesSize = 0;
           }
-          graphierosTranslation.forEach(
-            (entry: { en: string; line: string }) => {
-              if (entry.en === input) {
-                this.lineRes = entry.line;
-                this.textResLine = entry.en;
-              }
-              if (entry.line === input) {
-                this.phonoWordRes = entry.line;
-                this.textPhonoWordRes = entry.en;
-              }
+          graphierosTranslation.forEach((entry: { en: string; line: string }) => {
+            if (entry.en === input.toLowerCase()) {
+              this.lineRes = entry.line;
+              this.textResLine = entry.en;
             }
-          );
+            if (entry.line === input.toLowerCase()) {
+              this.phonoWordRes = entry.line;
+              this.textPhonoWordRes = entry.en;
+            }
+          });
         }, 255);
       } else if (language === "toggle-left") {
         this.time = setTimeout(() => {
-          graphierosDictionnary.forEach(
-            (entry: { name: string; fractal: string; fr: string }) => {
-              if (entry.fr === input) {
-                this.searchResult = entry.name.replace("_", "");
-                this.fractalRes = entry.fractal;
-                this.textResFrac = entry.fr;
-              }
-              if (entry.name.replace("_", "") === input) {
-                this.phonoRes = entry.fractal;
-                this.textPhonoRes = entry.fr;
-                this.phono = entry.name.replace("_", "");
-              }
+          graphierosDictionnary.forEach((entry: { name: string; fractal: string; fr: string }) => {
+            if (entry.fr === input.toLowerCase()) {
+              this.searchResult = entry.name.replace("_", "");
+              this.fractalRes = entry.fractal;
+              this.textResFrac = entry.fr;
             }
-          );
+            if (entry.name.replace("_", "") === input.toLowerCase()) {
+              this.phonoRes = entry.fractal;
+              this.textPhonoRes = entry.fr;
+              this.phono = entry.name.replace("_", "");
+            }
+          });
 
           //return progressive matches during user input
           const findMatches = (source: Record<string, any>) => {
             return source.filter((entry: any) => {
-              const regex = new RegExp(`^${input}`, "gi");
+              const regex = new RegExp(`^${input.toLowerCase()}`, "gi");
               return entry.fr.match(regex);
             });
           };
@@ -296,18 +242,16 @@ export default defineComponent({
             this.allMatches = {};
             this.wordMatchesSize = 0;
           }
-          graphierosTranslation.forEach(
-            (entry: { fr: string; line: string }) => {
-              if (entry.fr === input) {
-                this.lineRes = entry.line;
-                this.textResLine = entry.fr;
-              }
-              if (entry.line === input) {
-                this.phonoWordRes = entry.line;
-                this.textPhonoWordRes = entry.fr;
-              }
+          graphierosTranslation.forEach((entry: { fr: string; line: string }) => {
+            if (entry.fr === input.toLowerCase()) {
+              this.lineRes = entry.line;
+              this.textResLine = entry.fr;
             }
-          );
+            if (entry.line === input.toLowerCase()) {
+              this.phonoWordRes = entry.line;
+              this.textPhonoWordRes = entry.fr;
+            }
+          });
         }, 255);
       }
     },
@@ -394,8 +338,7 @@ h1.fr::after {
   padding: 20px;
   margin-top: 24px;
   z-index: 1;
-  box-shadow: 0px 10px 20px -10px RGBA(var(--c1), 0.5),
-    -10px -10px 20px -10px white, -10px -10px 20px -10px white inset;
+  box-shadow: 0px 10px 20px -10px RGBA(var(--c1), 0.5), -10px -10px 20px -10px white, -10px -10px 20px -10px white inset;
   span {
     font-family: var(--logo);
     color: RGB(var(--c2));
@@ -437,8 +380,7 @@ h1.fr::after {
   border-radius: 30px 0 30px 30px;
   box-sizing: border-box;
   padding-bottom: 15px;
-  box-shadow: 0px 10px 20px -10px RGBA(var(--c1), 0.5),
-    -10px -10px 20px -10px white, -10px -10px 20px -10px white inset;
+  box-shadow: 0px 10px 20px -10px RGBA(var(--c1), 0.5), -10px -10px 20px -10px white, -10px -10px 20px -10px white inset;
   p {
     display: inline-block;
     position: absolute;
@@ -552,14 +494,7 @@ h1.fr::after {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    transparent,
-    transparent,
-    white,
-    transparent,
-    transparent
-  );
+  background: linear-gradient(to right, transparent, transparent, white, transparent, transparent);
   border-radius: 30px;
   margin-left: 50%;
   transform: translateX(-50%);
